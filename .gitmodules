@@ -1,0 +1,15 @@
+[submodule "Submodules/catppuccin/yazi"]
+	path = Submodules/catppuccin/yazi
+	url = https://github.com/catppuccin/yazi
+[submodule "Submodules/catppuccin/zen-browser"]
+	path = Submodules/catppuccin/zen-browser
+	url = https://github.com/catppuccin/zen-browser
+[submodule "Submodules/catppuccin/btop"]
+	path = Submodules/catppuccin/btop
+	url = https://github.com/catppuccin/btop
+[submodule "Submodules/catppuccin/ghostty-shaders"]
+	path = Submodules/catppuccin/ghostty-shaders
+	url = https://github.com/hackr-sh/ghostty-shaders.git
+[submodule "Submodules/ghostty-shaders"]
+	path = Submodules/ghostty-shaders
+	url = https://github.com/hackr-sh/ghostty-shaders.git

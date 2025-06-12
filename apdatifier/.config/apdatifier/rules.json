@@ -1,0 +1,494 @@
+[
+  {
+    "type": "group",
+    "value": "plasma",
+    "icon": "kde",
+    "excluded": false
+  },
+  {
+    "type": "group",
+    "value": "kde-applications",
+    "icon": "kde",
+    "excluded": false
+  },
+  {
+    "type": "group",
+    "value": "kf6",
+    "icon": "kde-frameworks",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "qt",
+    "icon": "qt",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "linux",
+    "icon": "preferences-system-linux",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "kitty",
+    "icon": "kitty",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "ghostty",
+    "icon": "/home/claymorwan/Priv-dotfiles/img/ghostty-catppuccin-mocha.icns",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "git",
+    "icon": "git",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "github",
+    "icon": "github-desktop",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "python",
+    "icon": "python",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "android",
+    "icon": "distributor-logo-android",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "tuned",
+    "icon": "tuned",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "plasma",
+    "icon": "plasma",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "ttf",
+    "icon": "kfontview",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "font",
+    "icon": "kfontview",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "tablet",
+    "icon": "input-tablet",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "amd",
+    "icon": "amd",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "intel",
+    "icon": "intel",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "electron",
+    "icon": "electron",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "wine",
+    "icon": "wine",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "v4l",
+    "icon": "camera",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "lib",
+    "icon": "bookreader",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "jdk",
+    "icon": "java-jdk",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "java",
+    "icon": "java",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "dotnet",
+    "icon": "/home/claymorwan/Priv-dotfiles/img/dotnet-logo.svg",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "keyring",
+    "icon": "keyring-manager",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "archlinux",
+    "icon": "distributor-logo-archlinux",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "cmake",
+    "icon": "cmake",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "libreoffice",
+    "icon": "libreoffice",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "wayland",
+    "icon": "wayland",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "wire",
+    "icon": "org.pipewire.Helvum",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "haskell",
+    "icon": "applications-haskell",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "dart",
+    "icon": "application-dart",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "flutter",
+    "icon": "/home/claymorwan/Priv-dotfiles/img/flutter.svg",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "shijima",
+    "icon": "/usr/share/icons/shijima-qt.png",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "adwaita",
+    "icon": "org.gnome.Adwaita1.Demo-symbolic",
+    "excluded": false
+  },
+  {
+    "type": "match",
+    "value": "gtk",
+    "icon": "gtk4-demo",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "zen-browser-bin",
+    "icon": "zen-browser",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "firefox-developer-edition",
+    "icon": "firefox-developer-edition",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "betterbird-bin",
+    "icon": "betterbird",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "lutris",
+    "icon": "lutris",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "mission-center",
+    "icon": "io.missioncenter.MissionCenter",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "steam",
+    "icon": "steam-icon",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "blockbench",
+    "icon": "blockbench",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "vesktop",
+    "icon": "vesktop",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "visual-studio-code-bin",
+    "icon": "visual-studio-code",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "neovim",
+    "icon": "io.neovim.nvim",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "unityhub",
+    "icon": "unityhub",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "godot-mono",
+    "icon": "godot",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "stardrop",
+    "icon": "stardrop",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "r2modman-bin",
+    "icon": "r2modman",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "prismlauncher",
+    "icon": "org.prismlauncher.PrismLauncher",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "proton-mail",
+    "icon": "proton-mail",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "proton-vpn-gtk-app",
+    "icon": "proton-vpn-logo",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "proton-pass",
+    "icon": "/usr/share/pixmaps/proton-pass.svg",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "vlc",
+    "icon": "vlc",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "tenacity",
+    "icon": "tenacity",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "waydroid",
+    "icon": "waydroid",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "plasma6-wallpapers-wallpaper-engine-git",
+    "icon": "lutris_wallpaper-engine",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "qalculate-gtk",
+    "icon": "qalculate",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "jetbrains-toolbox",
+    "icon": "jetbrains-toolbox",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "yt-dlp",
+    "icon": "appimagekit-youtube-dl-gui",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "osu-lazer-bin",
+    "icon": "osu!",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "networkmanager",
+    "icon": "applications-network",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "krita",
+    "icon": "krita",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "inkscape",
+    "icon": "inkscape",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "spotify",
+    "icon": "spotify",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "cavalier",
+    "icon": "org.nickvision.cavalier",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "megasync-bin",
+    "icon": "mega",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "uv",
+    "icon": "/home/claymorwan/Priv-dotfiles/img/uv.svg",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "obsidian",
+    "icon": "obsidian",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "iriunwebcam-bin",
+    "icon": "/usr/share/pixmaps/iriunwebcam.png",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "asset-ripper-bin",
+    "icon": "/usr/share/icons/asset-ripper.png",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "nexusmods-app-bin",
+    "icon": "com.nexusmods.app",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "yazi",
+    "icon": "yazi",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "vinegar",
+    "icon": "io.github.vinegarhq.Vinegar",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "protonplus",
+    "icon": "com.vysp3r.ProtonPlus",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "firefoxpwa",
+    "icon": "si.filips.FirefoxPWA",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "btrfs-progs",
+    "icon": "btrfs-assistant",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "rclone",
+    "icon": "rclone-browser",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "localsend",
+    "icon": "/usr/share/pixmaps/localsend.png",
+    "excluded": false
+  },
+  {
+    "type": "name",
+    "value": "mangohud",
+    "icon": "io.github.flightlessmango.mangohud",
+    "excluded": false
+  }
+]
