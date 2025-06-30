@@ -1,7 +1,7 @@
 [[plugin.deps]]
 use = "boydaihungst/mediainfo"
-rev = "a7d1aa6"
-hash = "844133c7247cda086819d63a9ca5e457"
+rev = "b74b7b8"
+hash = "4b6ac1a6fd7ba02a945070ad39fc1999"
 
 [[plugin.deps]]
 use = "ndtoan96/ouch"
@@ -10,12 +10,12 @@ hash = "63679f3daf8551ff8755be38b5ced0f"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "aeca767"
-hash = "d0ad0c1946b46a30c8489735fe8de41c"
+rev = "2ad42fa"
+hash = "1adc12c2b2b025411ab61eb8f0879574"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "aeca767"
+rev = "2ad42fa"
 hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
@@ -35,8 +35,8 @@ hash = "7cc42012a7c2099f80064d228feb8d44"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "aeca767"
-hash = "bf6f074cd41ee33c3360341d168f9733"
+rev = "2ad42fa"
+hash = "e01006bfb38951ea89031bd918b20dbb"
 
 [[plugin.deps]]
 use = "AnirudhG07/archivemount"
@@ -45,8 +45,8 @@ hash = "28caf2541e627582e75add7a9f98a32a"
 
 [[plugin.deps]]
 use = "boydaihungst/fuse-archive"
-rev = "597389b"
-hash = "60893d2b430cc9c4e6ce4388a0e32eb3"
+rev = "51c7c90"
+hash = "75e217039957b20eba6f3d1872941231"
 
 [[plugin.deps]]
 use = "macydnah/office"
@@ -60,8 +60,8 @@ hash = "3af52f1d5ba79a7dd9cbc1d2918feab5"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "aeca767"
-hash = "d5d4f3527592da5fbe77fd6f51815f80"
+rev = "2ad42fa"
+hash = "d6f60c24d8c0cf57a855bf46115b2502"
 
 [[plugin.deps]]
 use = "claymorwan/yazi-plugins:shell"
@@ -75,8 +75,8 @@ hash = "b1f106ff80b4d7d3c5c17a6e47f2ee21"
 
 [[plugin.deps]]
 use = "boydaihungst/gvfs"
-rev = "b5c1545"
-hash = "d0b2de71d498980e35cb130627276892"
+rev = "058cd24"
+hash = "885e3ab32c34087113b6d470a76a46bd"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"

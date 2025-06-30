@@ -1,4 +1,4 @@
 git pull github
-git submodule update --init --recursive
+git submodule update --recursive --remote
 ya pkg upgrade
 echo meow | lolcat

@@ -13,3 +13,9 @@
 [submodule "Submodules/ghostty-shaders"]
 	path = Submodules/ghostty-shaders
 	url = https://github.com/hackr-sh/ghostty-shaders.git
+[submodule "Submodules/catppuccin/adw"]
+	path = Submodules/catppuccin/adw
+	url = https://github.com/claymorwan/adw-catppuccin.git
+[submodule "Submodules/catppuccin/lazygit"]
+	path = Submodules/catppuccin/lazygit
+	url = https://github.com/catppuccin/lazygit.git

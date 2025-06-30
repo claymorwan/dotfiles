@@ -1,0 +1,6 @@
+pkg_managers = [ "pacman", "flatpak" ]
+aur_helper = "yay"
+sudobin = "usr/bin/sudo-rs"
+args_pacman = "--noconfirm"
+args_flatpak = "-y"
+post_install_script = "~/.config/ecdysys/post.sh"
