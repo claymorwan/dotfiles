@@ -19,3 +19,6 @@
 [submodule "Submodules/catppuccin/lazygit"]
 	path = Submodules/catppuccin/lazygit
 	url = https://github.com/catppuccin/lazygit.git
+[submodule "Submodules/catppuccin/monorepo"]
+	path = Submodules/catppuccin/monorepo
+	url = https://github.com/claymorwan/catppuccin.git
