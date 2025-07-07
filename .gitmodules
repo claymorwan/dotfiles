@@ -22,3 +22,6 @@
 [submodule "Submodules/catppuccin/monorepo"]
 	path = Submodules/catppuccin/monorepo
 	url = https://github.com/claymorwan/catppuccin.git
+[submodule "Submodules/catppuccin/kvantum"]
+	path = Submodules/catppuccin/kvantum
+	url = https://github.com/catppuccin/Kvantum.git

@@ -1,0 +1,30 @@
+[
+  {
+    "title": "KDE Community",
+    "article": "KDE Plasma 6.4.1, Bugfix Release for June",
+    "date": "24.06.2025 | 00:00",
+    "link": "https://kde.org/announcements/plasma/6/6.4.1/",
+    "removed": false
+  },
+  {
+    "title": "Arch Linux: Recent news updates",
+    "article": "linux-firmware >= 20250613.12fe085f-5 upgrade requires manual intervention",
+    "date": "21.06.2025 | 23:09",
+    "link": "https://archlinux.org/news/linux-firmware-2025061312fe085f-5-upgrade-requires-manual-intervention/",
+    "removed": false
+  },
+  {
+    "title": "This Week in Plasma on KDE Blogs",
+    "article": "This Week in Plasma: Plasma 6.4 has arrived!",
+    "date": "21.06.2025 | 01:00",
+    "link": "https://blogs.kde.org/2025/06/21/this-week-in-plasma-plasma-6.4-has-arrived/",
+    "removed": false
+  },
+  {
+    "title": "This Week in KDE Apps on KDE Blogs",
+    "article": "This Week in KDE Apps",
+    "date": "08.06.2025 | 13:43",
+    "link": "https://blogs.kde.org/2025/06/08/this-week-in-kde-apps/",
+    "removed": false
+  }
+]
