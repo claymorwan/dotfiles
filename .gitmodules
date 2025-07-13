@@ -25,3 +25,6 @@
 [submodule "Submodules/catppuccin/kvantum"]
 	path = Submodules/catppuccin/kvantum
 	url = https://github.com/catppuccin/Kvantum.git
+[submodule "Submodules/end-4"]
+	path = Submodules/end-4
+	url = https://github.com/end-4/dots-hyprland.git

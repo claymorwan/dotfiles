@@ -5,8 +5,8 @@ hash = "b92e44ad5004f1b45e5c3d717a60ed24"
 
 [[plugin.deps]]
 use = "ndtoan96/ouch"
-rev = "1ee69a5"
-hash = "63679f3daf8551ff8755be38b5ced0f"
+rev = "bb941c4"
+hash = "956b02fe8213e7b92e21a941b9abe764"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
@@ -55,8 +55,8 @@ hash = "9c68763dd4f2799f7cfee1e9c3e819a9"
 
 [[plugin.deps]]
 use = "DreamMaoMao/clipboard"
-rev = "93b73d4"
-hash = "3af52f1d5ba79a7dd9cbc1d2918feab5"
+rev = "f3a5da3"
+hash = "eb57bbd6329886a8b7fff886d3c72847"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
@@ -75,20 +75,20 @@ hash = "b1f106ff80b4d7d3c5c17a6e47f2ee21"
 
 [[plugin.deps]]
 use = "boydaihungst/gvfs"
-rev = "fba3345"
-hash = "3e5cb689140c5eb0ca58eb0d7b150417"
+rev = "1e72117"
+hash = "c96b0ab2934e3add629832d2ee02f177"
 
 [[plugin.deps]]
 use = "Rolv-Apneseth/starship"
-rev = "6a0f3f7"
-hash = "d5a74d95c2e8194ac352c5e10e81e64f"
+rev = "a63550b"
+hash = "c2021386289a0cbb3e152a052f67c177"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "d04a298"
+rev = "d3fd3a5"
 hash = "288a0dedd5d13b28605cf82c05326dcd"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-latte"
-rev = "d04a298"
+rev = "d3fd3a5"
 hash = "a4d508772dc7b20d739a2f9a1d2d396f"
