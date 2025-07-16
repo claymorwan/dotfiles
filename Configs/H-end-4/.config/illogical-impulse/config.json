@@ -8,7 +8,12 @@
         "palette": {
             "type": "auto"
         },
-        "transparency": true
+        "transparency": false,
+        "wallpaperTheming": {
+            "enableAppsAndShell": false,
+            "enableQtApps": false,
+            "enableTerminal": false
+        }
     },
     "apps": {
         "bluetooth": "kcmshell6 kcm_bluetooth",
@@ -27,10 +32,16 @@
     "background": {
         "clockX": -500,
         "clockY": -500,
-        "fixedClockPosition": false
+        "fixedClockPosition": false,
+        "parallax": {
+            "enableSidebar": true,
+            "enableWorkspace": true,
+            "workspaceZoom": 1.07
+        },
+        "wallpaperPath": "/home/claymorwan/Pictures/Wallpapers/roaring_knight.jpg"
     },
     "bar": {
-        "borderless": true,
+        "borderless": false,
         "bottom": false,
         "cornerStyle": 0,
         "resources": {
@@ -78,10 +89,10 @@
         "height": 60,
         "hoverRegionHeight": 2,
         "hoverToReveal": true,
-        "monochromeIcons": true,
+        "monochromeIcons": false,
         "pinnedApps": [
-            "org.kde.dolphin",
-            "ghostty"
+            "zen-twilight",
+            "com.mitchellh.ghostty"
         ],
         "pinnedOnStartup": false
     },
