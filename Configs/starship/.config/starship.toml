@@ -1,7 +1,7 @@
 # Don't print a new line at the start of the prompt
 add_newline = false
 # Pipes ╰─ ╭─
-# Powerline symbols                                    
+# Powerline symbols                                     
 # Wedges 🭧🭒 🭣🭧🭓
 # Random noise 🬖🬥🬔🬗
 # Cool stuff 󰜥   
@@ -11,41 +11,8 @@ add_newline = false
 # $character
 # """
 format = """
-$os$username$hostname 󰜥 $directory \
-󰜥 $cmd_duration$status$c$dotnet$haxe$lua$rust$zig$dart$golang$nodejs$php$java$kotlin$haskell$python$docker_context[](fg:prev_bg)\
-$git_branch
-$character
-"""
-
-palette = 'catppuccin_mocha'
-
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
+$cmd_duration 󰜥 $directory $git_branch
+$character"""
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
@@ -57,11 +24,11 @@ error_symbol = "[   ](bold fg:red)"
 disabled = true
 
 [git_branch]
-style = "bg: sky"
+style = "bg: cyan"
 symbol = "󰘬"
 truncation_length = 12
 truncation_symbol = ""
-format = " 󰜥 [](bold fg:sky)[$symbol $branch(:$remote_branch)](fg:crust bg:sky)[ ](bold fg:sky)"
+format = "󰜥 [](bold fg:cyan)[$symbol $branch(:$remote_branch)](fg:black bg:cyan)[ ](bold fg:cyan)"
 
 [git_commit]
 commit_hash_length = 4
@@ -83,6 +50,12 @@ staged = '[++\($count\)](green)'
 renamed = " ✍️ "
 deleted = " 🗑 "
 
+[hostname]
+ssh_only = false
+format =  "[•$hostname](bg:cyan bold fg:black)[](bold fg:cyan)"
+trim_at = ".companyname.com"
+disabled = false
+
 [line_break]
 disabled = false
 
@@ -98,25 +71,20 @@ format = '🕙[\[ $time \]]($style) '
 time_format = "%T"
 
 [username]
-style_user = "sky"
-style_root = "red"
-format = "[](fg:prev_bg bg:$style)[ $user](bold fg:crust bg:$style)"
+style_user = "bold bg:cyan fg:black"
+style_root = "red bold"
+format = "[](bold fg:cyan)[$user]($style)"
 disabled = false
 show_always = true
-
-[hostname]
-ssh_only = false
-format =  "[•$hostname](bold bg:prev_bg fg:crust)[](fg:prev_bg)"
-trim_at = ".companyname.com"
-disabled = false
 
 [directory]
 home_symbol = "  "
 read_only = "  "
-style = "bg:green fg:crust"
-truncation_length = 3
+style = "bg:green fg:black"
+truncation_length = 6
 truncation_symbol = " ••/"
-format = '[](bold fg:green)(bold fg:green)[󰉋 $path]($style)[](bold fg:green)'
+format = '[](bold fg:green)[󰉋 $path]($style)[](bold fg:green)'
+
 
 [directory.substitutions]
 "Desktop" = "  "
@@ -129,136 +97,4 @@ format = '[](bold fg:green)(bold fg:green)[󰉋 $path]($style)[](bold fg:g
 
 [cmd_duration]
 min_time = 0
-format = '[](bold fg:yellow)[󰪢 $duration](bold bg:yellow fg:crust)'
-
-[status]
-disabled = false
-style = "yellow"
-symbol = " "
-failure_style = "red"
-success_symbol = " "
-success_style = "green"
-not_executable_symbol = " "
-not_found_symbol = " "
-format = "[](fg:prev_bg bg:$style)[ $symbol](fg:crust bg:$style)"
-
-[os]
-disabled = false
-style = "surface0"
-format = "[]($style)[$symbol](fg:text bg:$style)"
-
-[os.symbols]
-AlmaLinux = " "
-Alpine = " "
-Amazon = " "
-Android = " "
-Arch = "󰣇 "
-Artix = " "
-CentOS = " "
-Debian = "󰣚 "
-EndeavourOS = " "
-Fedora = "󰣛 "
-FreeBSD = " "
-Garuda = " "
-Gentoo = "󰣨 "
-Illumos = " "
-Kali = " "
-Linux = "󰌽 "
-Macos = "󰀵 "
-Manjaro = " "
-Mint = "󰣭 "
-NixOS = " "
-Nobara = " "
-OpenBSD = " "
-OracleLinux = " "
-Pop = " "
-Raspbian = " "
-Redhat = "󱄛 "
-RedHatEnterprise = "󱄛 "
-RockyLinux = " "
-Solus = " "
-SUSE = " "
-Ubuntu = "󰕈 "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
-
-[bun]
-symbol = " "
-style = "rosewater"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[nodejs]
-symbol = ""
-style = "green"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[c]
-symbol = " "
-style = "lavender"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[dotnet]
-symbol = " "
-style = "mauve"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[haxe]
-symbol = " "
-style = "peach"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[lua]
-symbol = " "
-style = "blue"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[zig]
-symbol = " "
-style = "yellow"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[dart]
-symbol = " "
-style = "sky"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[rust]
-symbol = ""
-style = "red"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[golang]
-symbol = ""
-style = "blue"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[php]
-symbol = " "
-style = "mauve"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[java]
-symbol = " "
-style = "peach"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[kotlin]
-symbol = ""
-style = "mauve"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[haskell]
-symbol = ""
-style = "mauve"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[python]
-symbol = " "
-style = "green"
-format = '[](fg:prev_bg bg:$style)[ $symbol($version)](fg:crust bg:$style)[](fg:$style bg:$style)'
-
-[docker_context]
-symbol = ""
-style = "blue"
-format = '[](fg:prev_bg bg:$style)[ $symbol($context)](fg:crust bg:$style)[](fg:$style bg:$style)'
+format = '[](bold fg:yellow)[󰪢 $duration](bold bg:yellow fg:black)[](bold fg:yellow)'

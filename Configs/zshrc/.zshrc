@@ -4,14 +4,12 @@ alias fzfb='fzf --preview="bat --color=always {}"'
 alias nfzf='nvim $(fzf --preview="bat --color=always {}"'
 alias equicord='clear;sh -c "$(curl -sS https://raw.githubusercontent.com/Equicord/Equicord/refs/heads/main/misc/install.sh)")"'
 alias pacfix='sudo rm /var/lib/pacman/db.lck; echo "pacman fixed :3" | lolcat'
-alias update='~/Priv-dotfiles/Scripts/updater.sh'
 alias reload='source ~/.zshrc'
 alias vtube='/mnt/media/SteamLibrary/steamapps/common/VTube\ Studio/vtube.sh'
 alias replasma='systemctl --user restart plasma-plasmashell.service'
-alias dotpush='cd ~/Priv-dotfiles/; ~/Priv-dotfiles/Scripts/push.sh; cd ~'
-alias dotpull='cd ~/Priv-dotfiles/; ~/Priv-dotfiles/Scripts/pull.sh; cd ~'
-alias rsync='rsync --progress -r'
-alias gicon='gsettings set org.gnome.desktop.interface icon-theme MoreWaita'
+alias dotpush='cd ~/.dotfiles/; ~/.dotfiles/Scripts/push.sh; cd ~'
+alias dotpull='cd ~/.dotfiles/; ~/.dotfiles/Scripts/pull.sh; cd ~'
+alias rsync='rsync --progress'
 alias aurpub='makepkg --printsrcinfo > .SRCINFO;git add PKGBUILD .SRCINFO; git commit; git push'
 alias fl-studio-integrator='~/.local/share/applications/fl-studio-integrator'
 alias fl-studio-integrator-elm='~/.local/share/applications/fl-studio-integrator-elm'
@@ -20,6 +18,7 @@ alias shimejis='~/Priv-dotfiles/Scripts/shimeji.sh'
 alias lazygit='lazygit --use-config-file="/home/$USER/.config/lazygit/config.yml,/home/$USER/.config/lazygit/mauve.yml"'
 alias sudo='sudo-rs'
 alias cls='clear'
+alias end4-upd='~/.dotfiles/Submodules/end-4/update.sh'
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -76,8 +75,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Env variables
-export EDITOR=nvim
-export GTK_USE_PORTAL=1
+# export GTK_USE_PORTAL=1
 
 
 # Completion

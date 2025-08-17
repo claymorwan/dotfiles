@@ -2,16 +2,19 @@
 
 <!--toc:start-->
 
-- [fuse-archive.yazi](#fuse-archiveyazi)
+- [fuse-archive.yazi (Fork)](#fuse-archiveyazi-fork)
   - [What news with this fork](#what-news-with-this-fork)
     - [Keep the file mount](#keep-the-file-mount)
     - [Support multiple deep mount](#support-multiple-deep-mount)
+    - [Support mountoptions](#support-mountoptions)
+    - [Exclude extensions](#exclude-extensions)
+    - [Support MacOS](#support-macos)
   - [Requirements](#requirements)
   - [Installation](#installation)
     - [Dependencies:](#dependencies)
     - [fuse-archive.yazi:](#fuse-archiveyazi)
-    - [Options](#options)
-  - [Usage](#usage)
+    - [Setup options](#setup-options)
+  - [Key mapping](#key-mapping)
   <!--toc:end-->
 
 <!--toc:start-->
@@ -57,14 +60,26 @@ it will still prompt you to enter a password. You only need to enter the passwor
     - Grandchild_2.zip (with another password)
       - GranGrandchild_3.zip (with another password)
 
+### Support mountoptions
+
+You can use `plugin fuse-archive -- mount` with mount options. Add `mount_options` option to `setup()` function.
+
+### Exclude extensions
+
+Using `excluded_extensions` option, you can exclude some extensions from mounting.
+
+### Support MacOS
+
+This plugin supports MacOS, but you need to install `macfuse` instead of `fuse3`.
+
 ## Requirements
 
 1. [yazi](https://github.com/sxyazi/yazi).
 
-2. This plugin only supports Linux, and requires having
-   [fuse-archive](https://github.com/google/fuse-archive), [xxHash](https://github.com/Cyan4973/xxHash) and `fuse3`
-   installed. This fork requires you to build and install fuse-archive with latest
-   source from github (because the latest release is too old, 2020).
+2. This plugin only supports Linux and MacOS, and requires having latest
+   [fuse-archive](https://github.com/google/fuse-archive), [xxHash](https://github.com/Cyan4973/xxHash) and `fuse3` for linux, and [macfuse](https://github.com/macfuse/macfuse/releases) for macOS installed.
+   This fork requires you to build and install fuse-archive with latest
+   source from github (because the latest released version in some distros is too old, 2020).
 
 ## Installation
 
@@ -100,6 +115,19 @@ it will still prompt you to enter a password. You only need to enter the passwor
 
 - For other distros, it's better to use ChatGPT for dependencies. Prompt: `install fuse-archive YOUR_DISTRO_NAME`.
 
+- For macOS (only for fuse-archive >= v1.14):
+
+  - You can install `macfuse` and `xxhash` with `brew install macfuse xxhash`.
+  - Then install `fuse-archive`:
+
+  ```sh
+  git clone https://github.com/google/fuse-archive
+  cd "fuse-archive"
+  sudo CXXFLAGS=-DFUSE_DARWIN_ENABLE_EXTENSIONS=0 make STD=gnu++20a install
+  ```
+
+- Fuse-archive also relies on the availability of the following filter programs: `base64`, `brotli`, `compress`, `lrzip`, `lzop` and `grzip` for supporting those compression formats.
+
 ### fuse-archive.yazi:
 
 ```sh
@@ -112,43 +140,44 @@ Modify your `~/.config/yazi/init.lua` to include:
 require("fuse-archive"):setup()
 ```
 
-Install this shell script if you want yazi auto un-mount all mounted archives after closed the `last`
-yazi instance:
-
-- For `fish` shell: add this command to `~/.config/fish/config.fish` file:
-
-  ```fish
-  test -f ~/.config/yazi/plugins/fuse-archive.yazi/assets/yazi_fuse.fish; and source ~/.config/yazi/plugins/fuse-archive.yazi/assets/yazi_fuse.fish
-  ```
-
-- For `bash` shell: add this command to `~/.bashrc` file:
-
-  ```sh
-  [[ -f ~/.config/yazi/plugins/fuse-archive.yazi/assets/yazi_fuse.sh ]] && . ~/.config/yazi/plugins/fuse-archive.yazi/assets/yazi_fuse.sh
-  ```
-
-### Options
+### Setup options
 
 The plugin supports the following options, which can be assigned during setup:
 
-1. `smart_enter`: If `true`, when _entering_ a file it will be _opened_, while
+1. (optional) `smart_enter`: If `true`, when _entering_ a file it will be _opened_, while
    directories will always be _entered_. The default value is `false`.
+
+2. (optional) `excluded_extensions`: A list of extensions that will be excluded from mounting.
+
+3. (optional) `extra_extensions`: A list of extensions to add to the supported mount list.
+   This is useful if you want to mount an archive format that I may have missed or unawared it is supported by fuse-archive.
+
+4. (optional) `mount_options`: String of mount options to be used when mounting the archive, separated by comma or space.
+   List of options: `fuse-archive -h`
+
+5. (optional) `mount_root_dir`: Full path of the directory where you want to mount the archive. Default is `/tmp`.
 
 ```lua
 require("fuse-archive"):setup({
   smart_enter = true,
+  excluded_extensions = { "deb", "apk", "rpm" },
+  extra_extensions = { "xyz" },
+  mount_options = "nocache,nosymlinks",
+  mount_root_dir = os.getenv("HOME") .. "/abc_folder",
 })
 ```
 
-## Usage
+## Key mapping
 
 The plugin works transparently, so for the best effect, remap your navigation
 keys assigned to `enter` and `leave` to the plugin. This way you will be able
 to "navigate" compressed archives as if they were part of the file system.
 
 When you _enter_ an archive, the plugin mounts it and takes you to the mounted
-directory, and when you _leave_, it unmounts the archive and takes you back to
-the original location of the archive.
+directory, and when you _leave_, it won't unmount the archive but takes you back to
+the original location of the archive. Normally it will unmount all mounted archive files
+when you use yazi >= 25.6.11 and use `quit` command to exit yazi. Or you can use a key mapping  
+of `-- unmount` action to unmount.
 
 Add this to your `~/.config/yazi/keymap.toml`:
 
@@ -159,17 +188,16 @@ prepend_keymap = [
     { on   = [ "<Left>" ], run = "plugin fuse-archive -- leave", desc = "Leave selected archive without unmount it" },
     { on   = [ "l" ], run = "plugin fuse-archive -- mount", desc = "Enter or Mount selected archive" },
     { on   = [ "h" ], run = "plugin fuse-archive -- leave", desc = "Leave selected archive without unmount it" },
+
+    # Over quit command for yazi <= v25.5.31 to unmount on quit. For nightly yazi, you don't need to add these lines.
+    { on   = [ "q" ], run = ["plugin fuse-archive -- unmount", "quit"], desc = "Quit the process" },
+    { on   = [ "Q" ], run = ["plugin fuse-archive -- unmount", "quit --no-cwd-file"], desc = "Quit without outputting cwd-file" },
+
+    # Or if you use project.yazi or other plugin that call quit command internally, just keep in mind to add unmount command before quit command.
+    # Even with nightly yazi
+    { on   = [ "q" ], run = ["plugin fuse-archive -- unmount", "plugin projects -- quit"], desc = "Quit the process" },
 ]
 ```
-
-> [!IMPORTANT]
-> BREAKING CHANGE from this fork: `plugin fuse-archive -- unmount` in
-> keymap.toml should changed to `plugin fuse-archive -- leave`
-> to make multiple deep mount work. the
-> `unmount` still there if you want to unmount after leave the folder
-> (this won't let you copy/move files/folders to other place without create another
-> tab). But the downside of `leave` command is that the zip file won't unmount
-> itself after exit yazi, unless you use the fish or bash script which is mentioned in the #installation section.
 
 When the current file is not a supported archive type, the plugin simply calls
 _enter_, and when there is nothing to unmount, it calls _leave_, so it works
@@ -177,6 +205,8 @@ transparently.
 
 In case you run into any problems and need to unmount something manually, or
 delete any temporary directories, the location of the mounts is one of the
-following three in order of preference:
+following:
 
-1. `/tmp/yazi/fuse-archive/...`
+1. `/tmp/yazi/fuse-archive/...` by default.
+2. Or if you set `mount_root_dir` option in `setup()` function, it will be
+   `mount_root_dir/yazi/fuse-archive/...` in your `mount_root_dir` directory.

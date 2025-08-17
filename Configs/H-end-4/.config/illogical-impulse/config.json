@@ -1,6 +1,21 @@
 {
     "ai": {
-        "systemPrompt": "## Style\n- Use casual tone, don't be formal! Make sure you answer precisely without hallucination and prefer bullet points over walls of text. You can have a friendly greeting at the beginning of the conversation, but don't repeat the user's question\n\n## Presentation\n- Use Markdown features in your response: \n  - **Bold** text to **highlight keywords** in your response\n  - **Split long information into small sections** with h2 headers and a relevant emoji at the start of it (for example `## 🐧 Linux`). Bullet points are preferred over long paragraphs, unless you're offering writing support or instructed otherwise by the user.\n- Asked to compare different options? You should firstly use a table to compare the main aspects, then elaborate or include relevant comments from online forums *after* the table. Make sure to provide a final recommendation for the user's use case!\n- Use LaTeX formatting for mathematical and scientific notations whenever appropriate. Enclose all LaTeX '$$' delimiters. NEVER generate LaTeX code in a latex block unless the user explicitly asks for it. DO NOT use LaTeX for regular documents (resumes, letters, essays, CVs, etc.).\n\nThanks!\n\n## Tools\nMay or may not be available depending on the user's settings. If they're available, follow these guidelines:\n\n### Search\n- When user asks for information that might benefit from up-to-date information, use this to get search access\n\n### Shell configuration\n- Always fetch the config options to see the available keys before setting\n- Avoid unnecessarily asking the user to confirm the changes they explicitly asked for, just do it\n"
+        "extraModels": [
+            {
+                "api_format": "openai",
+                "description": "This is a custom model. Edit the config to add more! | Anyway, this is DeepSeek R1 Distill LLaMA 70B",
+                "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+                "homepage": "https://openrouter.ai/deepseek/deepseek-r1-distill-llama-70b:free",
+                "icon": "spark-symbolic",
+                "key_get_link": "https://openrouter.ai/settings/keys",
+                "key_id": "openrouter",
+                "model": "deepseek/deepseek-r1-distill-llama-70b:free",
+                "name": "Custom: DS R1 Dstl. LLaMA 70B",
+                "requires_key": true
+            }
+        ],
+        "systemPrompt": "## Style\n- Use casual tone, don't be formal! Make sure you answer precisely without hallucination and prefer bullet points over walls of text. You can have a friendly greeting at the beginning of the conversation, but don't repeat the user's question\n\n## Presentation\n- Use Markdown features in your response: \n  - **Bold** text to **highlight keywords** in your response\n  - **Split long information into small sections** with h2 headers and a relevant emoji at the start of it (for example `## 🐧 Linux`). Bullet points are preferred over long paragraphs, unless you're offering writing support or instructed otherwise by the user.\n- Asked to compare different options? You should firstly use a table to compare the main aspects, then elaborate or include relevant comments from online forums *after* the table. Make sure to provide a final recommendation for the user's use case!\n- Use LaTeX formatting for mathematical and scientific notations whenever appropriate. Enclose all LaTeX '$$' delimiters. NEVER generate LaTeX code in a latex block unless the user explicitly asks for it. DO NOT use LaTeX for regular documents (resumes, letters, essays, CVs, etc.).\n\nThanks!\n\n## Tools\nMay or may not be available depending on the user's settings. If they're available, follow these guidelines:\n\n### Search\n- When user asks for information that might benefit from up-to-date information, use this to get search access\n\n### Shell configuration\n- Always fetch the config options to see the available keys before setting\n- Avoid unnecessarily asking the user to confirm the changes they explicitly asked for, just do it\n",
+        "tool": "functions"
     },
     "appearance": {
         "extraBackgroundTint": true,
@@ -8,7 +23,12 @@
         "palette": {
             "type": "auto"
         },
-        "transparency": false,
+        "transparency": {
+            "automatic": true,
+            "backgroundTransparency": 0.11,
+            "contentTransparency": 0.57,
+            "enable": false
+        },
         "wallpaperTheming": {
             "enableAppsAndShell": false,
             "enableQtApps": false,
@@ -16,10 +36,10 @@
         }
     },
     "apps": {
-        "bluetooth": "kcmshell6 kcm_bluetooth",
-        "network": "plasmawindowed org.kde.plasma.networkmanagement",
+        "bluetooth": "better-control --bluetooth",
+        "network": "better-control --wifi",
         "networkEthernet": "kcmshell6 kcm_networkmanagement",
-        "taskManager": "plasma-systemmonitor --page-name Processes",
+        "taskManager": "ghostty -e btop",
         "terminal": "ghostty -1"
     },
     "audio": {
@@ -38,9 +58,18 @@
             "enableWorkspace": true,
             "workspaceZoom": 1.07
         },
+        "thumbnailPath": "/home/claymorwan/.config/hypr/custom/scripts/mpvpaper_thumbnails/taski.mp4.jpg",
         "wallpaperPath": "/home/claymorwan/Pictures/Wallpapers/roaring_knight.jpg"
     },
     "bar": {
+        "autoHide": {
+            "enable": false,
+            "pushWindows": false,
+            "showWhenPressingSuper": {
+                "delay": 140,
+                "enable": true
+            }
+        },
         "borderless": false,
         "bottom": false,
         "cornerStyle": 0,
@@ -60,6 +89,7 @@
             "showDarkModeToggle": false,
             "showKeyboardToggle": true,
             "showMicToggle": true,
+            "showPerformanceProfileToggle": false,
             "showScreenSnip": true
         },
         "verbose": true,
@@ -89,6 +119,8 @@
         "height": 60,
         "hoverRegionHeight": 2,
         "hoverToReveal": true,
+        "ignoredAppRegexes": [
+        ],
         "monochromeIcons": false,
         "pinnedApps": [
             "zen-twilight",
@@ -99,12 +131,31 @@
     "hacks": {
         "arbitraryRaceConditionDelay": 20
     },
+    "interactions": {
+        "scrolling": {
+            "fasterTouchpadScroll": true,
+            "mouseScrollDeltaThreshold": 120,
+            "mouseScrollFactor": 120,
+            "touchpadScrollFactor": 450
+        }
+    },
     "language": {
         "translator": {
             "engine": "auto",
             "sourceLanguage": "auto",
             "targetLanguage": "Español"
         }
+    },
+    "light": {
+        "night": {
+            "automatic": true,
+            "colorTemperature": 5000,
+            "from": "19:00",
+            "to": "06:30"
+        }
+    },
+    "media": {
+        "filterDuplicatePlayers": true
     },
     "networking": {
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
@@ -113,11 +164,12 @@
         "timeout": 1000
     },
     "osk": {
-        "layout": "qwerty_full",
+        "layout": "French",
         "pinnedOnStartup": false
     },
     "overview": {
         "columns": 5,
+        "enable": true,
         "rows": 2,
         "scale": 0.18
     },
@@ -132,7 +184,7 @@
         "showContentRegions": true
     },
     "search": {
-        "engineBaseUrl": "https://www.google.com/search?q=",
+        "engineBaseUrl": "https://www.ecosia.org/search?q=",
         "excludedSites": [
             "quora.com"
         ],
@@ -153,13 +205,21 @@
                 "username": "[unset]"
             }
         },
+        "keepRightSidebarLoaded": true,
         "translator": {
             "delay": 300
         }
     },
     "time": {
         "dateFormat": "dddd, dd/MM",
-        "format": "hh:mm"
+        "format": "hh:mm",
+        "pomodoro": {
+            "alertSound": "",
+            "breakTime": 300,
+            "cyclesBeforeLongBreak": 4,
+            "focus": 1500,
+            "longBreak": 900
+        }
     },
     "windows": {
         "centerTitle": true,

@@ -20,7 +20,7 @@ You need to install corresponding packages to use them.
 Tested: MTP, Hard disk/drive (Encrypted and Unencrypted), GPhoto2 (PTP), DAV, SFTP, FTP, SMB, NFSv4, Google Drive, One Drive. You may need to unlock and turn screen on to mount some devices (Android MTP, etc.)
 
 By default, `mount` will automatically shows devices which have one of these protocals (MTP, GPhoto2, AFC, Hard disk/drive, google drive, one drive, fstab with x-gvfs-show) or list of added mount URIs.
-For other protocols (smb, ftp, sftp, etc), use `add-mount` action with [Schemes URI format](<https://wiki.gnome.org/Projects(2f)gvfs(2f)schemes.html>).
+For other protocols (smb, ftp, sftp, etc), use `add-mount` command to add [Schemes URI format](<https://wiki.gnome.org/Projects(2f)gvfs(2f)schemes.html>).
 
 > [!NOTE]
 >
@@ -30,12 +30,16 @@ For other protocols (smb, ftp, sftp, etc), use `add-mount` action with [Schemes 
 > - Put files in Trash bin won't work on some protocols (Android MTP), use permanently delete instead.
 > - Scheme/Mount URIs shouldn't contain password, because they are saved as plain text in `yazi/config/gvfs.private`.
 > - MTP, GPhoto2, AFC, Hard disk/drive are listed automatically. So you also don't need to add them via `add-mount`
-> - Google Drive, One drive are mounted automatically via GNOME Online Accounts (GOA). So you don't need to add them via `add-mount`.
+> - Google Drive, One drive are created via GNOME Online Accounts (GOA). So you don't need to add them via `add-mount`.
 >   Guide to setup [GNOME_ONLINE_ACCOUNTS_GOA.md](./GNOME_ONLINE_ACCOUNTS_GOA.md)
 
 ## Preview
 
 https://github.com/user-attachments/assets/6aad98f7-081a-4e06-b398-5f7e8ca4ab39
+
+Google-drive:
+
+https://github.com/user-attachments/assets/fb74a710-5f05-4bf4-b95f-10f40583c5a0
 
 ## Features
 
@@ -171,14 +175,21 @@ prepend_keymap = [
 
     # Jump
     { on = [ "g", "m" ], run = "plugin gvfs -- jump-to-device", desc = "Select device then jump to its mount point" },
+    # If you use `x-systemd.automount` in /etc/fstab or manually added automount unit, you can use `--automount` to automount device automatically
+    { on = [ "g", "m" ], run = "plugin gvfs -- jump-to-device --automount", desc = "Automount then select device to jump to its mount point" },
     { on = [ "`", "`" ], run = "plugin gvfs -- jump-back-prev-cwd", desc = "Jump back to the position before jumped to device" },
 ]
 ```
 
 It's highly recommended to add these lines to your `~/.config/yazi/yazi.toml`,
 because GVFS is slow that can make yazi freeze when it preloads or previews a large number of files.
+Especially when you use `Google-drive` or `One-drive`.
 Replace `1000` with your real user id (run `id -u` to get user id).
 Replace `USER_NAME` with your real user name (run `whoami` to get username).
+
+> [!IMPORTANT]
+>
+> For yazi nightly replace `name` with `url`
 
 ```toml
 [plugin]
@@ -208,10 +219,39 @@ prepend_previewers = [
 
 ## Note for mounting using fstab
 
-If you are using fstab to mount, you need to add `x-gvfs-show` to the mount options. And with tis you can only use `jump-to-device` and `jump-back-prev-cwd` actions.
+If you are using fstab to mount, you need to add `x-gvfs-show` to the mount options. And with it you can only use `jump-to-device` and `jump-back-prev-cwd` actions.
 
-For example:
+- Example `/etc/fstab`:
 
-```
-//192.168.1.10/hdd  /mnt/myshare  cifs  credentials=/etc/samba/credentials,x-gvfs-show,iocharset=utf8,uid=1000,gid=1000,file_mode=0660,dir_mode=0770,nofail  0  0
-```
+  - Mount on demand (manually mount):
+
+    ```
+    192.168.1.10/hdd  /mnt/myshare  cifs  noauto,credentials=/etc/samba/credentials,x-gvfs-show,iocharset=utf8,uid=1000,gid=1000,file_mode=0660,dir_mode=0770,nofail  0 0
+    UUID=XXXX-XXXX  /mnt/myshare2  exfat  noauto,defaults,x-gvfs-show  0 0
+    ```
+
+  - Mount on access, add `x-systemd-automount` to the mount options:
+
+    Use `jump-to-device --automount`.
+    This will auto mount all mount entries that have `x-systemd-automount`, before jump to.
+
+  - Mount at boot, remove `noauto` from the mount options
+
+  Reload fstab:
+
+  ```sh
+  sudo systemctl daemon-reload && sudo systemctl restart local-fs.target && sudo mount -a
+  ```
+
+  If you changed mount options (like uid=, gid=, umask=, exfat, ntfs, etc.), already-mounted filesystems won't update unless you unmount and remount them.
+  You can manually remount a specific entry using:
+
+  ```sh
+  sudo umount /mnt/myshare
+  ```
+
+  And then:
+
+  ```sh
+  sudo mount -a
+  ```

@@ -40,124 +40,6 @@ local YA_INPUT_EVENT = {
 	VALUE_CHANGED = 3,
 }
 
-local VALID_EXTENSIONS = {
-	["7z"] = true,
-	["7zip"] = true,
-	a = true,
-	ar = true,
-	cab = true,
-	cpio = true,
-	iso = true,
-	iso9660 = true,
-	jar = true,
-	mtree = true,
-	rar = true,
-	rpm = true,
-	tar = true,
-	warc = true,
-	xar = true,
-	zip = true,
-	zipx = true,
-	crx = true,
-	odf = true,
-	odg = true,
-	odp = true,
-	ods = true,
-	odt = true,
-	docx = true,
-	ppsx = true,
-	pptx = true,
-	xlsx = true,
-	tb2 = true,
-	tbz = true,
-	tbz2 = true,
-	tz2 = true,
-	tgz = true,
-	tlz4 = true,
-	tlz = true,
-	tlzma = true,
-	txz = true,
-	tz = true,
-	taz = true,
-	tzst = true,
-	br = true,
-	brotli = true,
-	bz2 = true,
-	bzip2 = true,
-	grz = true,
-	grzip = true,
-	gz = true,
-	gzip = true,
-	lha = true,
-	lrz = true,
-	lrzip = true,
-	lz4 = true,
-	lz = true,
-	lzip = true,
-	lzma = true,
-	lzo = true,
-	lzop = true,
-	xz = true,
-	z = true,
-	zst = true,
-	zstd = true,
-	b64 = true,
-	base64 = true,
-	uu = true,
-}
-
----@enum Command.PIPED
----@enum Command.NULL
----@enum Command.INHERIT
-
----@type Command
-local Command = _G.Command
-
----@class (exact) Command
----@overload fun(cmd: string): self
----@field PIPED Command.PIPED
----@field NULL Command.NULL
----@field INHERIT Command.INHERIT
----@field arg fun(self: Command, arg: string): self
----@field args fun(self: Command, args: string[]): self
----@field cwd fun(self: Command, dir: string): self
----@field env fun(self: Command, key: string, value: string): self
----@field stdin fun(self: Command, cfg: Command.PIPED | Command.NULL | Command.INHERIT| STD_STREAM): self
----@field stdout fun(self: Command, cfg: Command.PIPED | Command.NULL | Command.INHERIT| STD_STREAM): self
----@field stderr fun(self: Command, cfg: Command.PIPED | Command.NULL | Command.INHERIT| STD_STREAM): self
----@field spawn fun(self: Command): Child|nil, unknown
----@field output fun(self: Command): Output|nil, unknown
----@field status fun(self: Command): Status|nil, unknown
-
----@alias STD_STREAM unknown
-
----@class (exact) Child
----@field read fun(self: Child, len: string): string, 1|0
----@field read_line fun(self: Child): string, 1|0
----@field read_line_with fun(self: Child, opts: {timeout: integer}): string, 1|2|3
----@field wait fun(self: Child): Status|nil, unknown
----@field wait_with_output fun(self: Child): Output|nil, unknown
----@field start_kill fun(self: Child): boolean, unknown
---- stdin(Command.PIPED) is set
----@field take_stdin fun(self: Child): STD_STREAM|nil, unknown
---- stdin(Command.PIPED) is set
----@field take_stdout fun(self: Child): STD_STREAM|nil, unknown
---- stdin(Command.PIPED) is set
----@field take_stderr fun(self: Child): STD_STREAM|nil, unknown
---- stdin(Command.PIPED) is set
---- take_stdin() has never been called
----@field write_all fun(self: Child, src: string): STD_STREAM|nil, unknown
----@field flush fun(self: Child): STD_STREAM|nil, unknown
-
----@class (exact) Output The Output of the command if successful; otherwise, nil
----@field status Status The Status of the child process
----@field stdout string The stdout of the child process, which is a string
----@field stderr string The stderr of the child process, which is a string
-
----@class (exact) Status The Status of the child process
----@field success boolean whether the child process exited successfully, which is a boolean.
----@field code integer the exit code of the child process, which is an integer if any
-
 local function error(s, ...)
 	ya.notify({ title = "fuse-archive", content = string.format(s, ...), timeout = 3, level = "error" })
 end
@@ -183,22 +65,40 @@ local get_state = ya.sync(function(state, archive, key)
 	end
 end)
 
+local function is_literal_string(str)
+	return str and str:gsub("([%^%$%(%)%%%.%[%]%*%+%-%?])", "%%%1")
+end
+
 local function path_quote(path)
+	if not path or path == "" then
+		return path
+	end
 	local result = "'" .. string.gsub(tostring(path), "'", "'\\''") .. "'"
 	return result
+end
+
+local function path_remove_trailing_slash(path)
+	if path == "/" then
+		return path
+	end
+	return (path:gsub("/$", ""))
 end
 
 local is_mount_point = ya.sync(function(state)
 	local dir = cx.active.current.cwd.name
 	local cwd = tostring(cx.active.current.cwd)
+	local mount_root_dir = get_state("global", "mount_root_dir")
+	local match_pattern = "^" .. is_literal_string(mount_root_dir .. "/yazi/fuse-archive") .. "/[^/]+%.tmp%.[^/]+$"
+
 	for archive, _ in pairs(state) do
-		if archive == dir and string.match(cwd, "^/tmp/yazi/fuse%-archive/[^/]+%.tmp%.[^/]+$") then
+		if archive == dir and string.match(cwd, match_pattern) then
 			return true
 		end
 	end
 	return false
 end)
 
+---@return Url|nil, boolean|nil
 local current_file = ya.sync(function()
 	local h = cx.active.current.hovered
 	if not h then
@@ -234,9 +134,9 @@ end
 ---@return integer|nil, Output|nil
 local function run_command(cmd, args, _stdin)
 	local cwd = current_dir()
-	local stdin = _stdin or Command.INHERIT
+	local stdin = _stdin or Command.PIPED
 	local child, cmd_err =
-		Command(cmd):arg(args):cwd(cwd):stdin(stdin):stdout(Command.PIPED):stderr(Command.INHERIT):spawn()
+		Command(cmd):arg(args):cwd(cwd):stdin(stdin):stdout(Command.PIPED):stderr(Command.PIPED):spawn()
 
 	if not child then
 		error("Failed to start `%s` failed with error: %s", cmd, cmd_err)
@@ -264,13 +164,22 @@ end
 ---Get the fuse mount point
 ---@return string|nil
 local fuse_dir = function()
-	local fuse_mount_point = "/tmp" .. "/yazi/fuse-archive"
+	local mount_root_dir = get_state("global", "mount_root_dir")
+	local fuse_mount_point = mount_root_dir .. "/yazi/fuse-archive"
 	local _, _, exit_code = os.execute("mkdir -p " .. ya.quote(fuse_mount_point))
 	if exit_code ~= 0 then
 		error("Cannot create mount point %s", fuse_mount_point)
 		return
 	end
 	return fuse_mount_point
+end
+
+local function split_by_space_or_comma(input)
+	local result = {}
+	for word in string.gmatch(input, "[^%s,]+") do
+		table.insert(result, word)
+	end
+	return result
 end
 
 --- return a string array with unique value
@@ -288,6 +197,36 @@ local function tbl_unique_strings(tbl)
 	end
 
 	return unique_table
+end
+
+local function tbl_to_set(t1)
+	local set = {}
+
+	for _, v in ipairs(t1) do
+		set[v] = true
+	end
+
+	return set
+end
+
+local function remove_from_set(set, t2)
+	if not set then
+		set = {}
+	end
+	for _, v in ipairs(t2) do
+		set[v] = nil
+	end
+	return set
+end
+
+local function add_to_set(set, t2)
+	if not set then
+		set = {}
+	end
+	for _, v in ipairs(t2) do
+		set[v] = true
+	end
+	return set
 end
 
 ---
@@ -315,7 +254,7 @@ local function show_ask_pw_dialog()
 		realtime = true,
 	})
 
-	while true do
+	while true and input_pw do
 		---@type string, YA_INPUT_EVENT
 		local value, ev = input_pw:recv()
 		if ev == YA_INPUT_EVENT.CONFIRMED then
@@ -330,13 +269,36 @@ local function show_ask_pw_dialog()
 	return cancelled, passphrase
 end
 
+local redirect_mounted_tab_to_home = ya.sync(function(state, _)
+	local mount_root_dir = get_state("global", "mount_root_dir")
+	local match_pattern = "^" .. is_literal_string(mount_root_dir .. "/yazi/fuse-archive") .. "/[^/]+%.tmp%.[^/]+$"
+	local HOME = os.getenv("HOME")
+
+	for _, tab in ipairs(cx.tabs) do
+		local dir = tab.current.cwd.name
+		local cwd = tostring(tab.current.cwd)
+
+		for archive, _ in pairs(state) do
+			if archive == dir and string.match(cwd, match_pattern) then
+				ya.emit("cd", {
+					HOME,
+					tab = (type(tab.id) == "number" or type(tab.id) == "string") and tab.id or tab.id.value,
+					raw = true,
+				})
+				goto continue
+			end
+		end
+		::continue::
+	end
+end)
+
 ---mount fuse
----@param opts {archive_path: Url, fuse_mount_point: Url, mount_opts: string[], passphrase?: string, max_retry?: integer, retries?: integer}
+---@param opts {archive_path: Url, fuse_mount_point: Url, mount_options: string[], passphrase?: string, max_retry?: integer, retries?: integer}
 ---@return boolean
 local function mount_fuse(opts)
 	local archive_path = opts.archive_path
 	local fuse_mount_point = opts.fuse_mount_point
-	local mount_opts = opts.mount_opts
+	local mount_options = opts.mount_options or {}
 	local passphrase = opts.passphrase
 	local max_retry = opts.max_retry or 3
 	local retries = opts.retries or 0
@@ -346,14 +308,14 @@ local function mount_fuse(opts)
 	if is_mounted(opts.fuse_mount_point) then
 		return true
 	end
-	mount_opts = tbl_unique_strings({ "auto_unmount", table.unpack(mount_opts or {}) })
+	local _mount_opts = tbl_unique_strings({ "auto_unmount", table.unpack(mount_options) })
 
 	local res, _ = Command(shell)
 		:arg({
 			"-c",
 			(passphrase and "printf '%s\n' " .. path_quote(passphrase) .. " | " or "")
 				.. " fuse-archive -o "
-				.. table.concat(mount_opts, ",")
+				.. table.concat(_mount_opts, ",")
 				.. " "
 				.. path_quote(archive_path)
 				.. " "
@@ -385,7 +347,7 @@ local function mount_fuse(opts)
 		or fuse_mount_res_code == FUSE_ARCHIVE_RETURN_CODE.CREATE_CACHE_FILE_FAILED
 	then
 		-- disable cache
-		table.insert(mount_opts, "nocache")
+		table.insert(mount_options, "nocache")
 	elseif
 		fuse_mount_res_code == FUSE_ARCHIVE_RETURN_CODE.ENCRYPTED_FILE_BUT_NOT_PASSWORD
 		or fuse_mount_res_code == FUSE_ARCHIVE_RETURN_CODE.ENCRYPTED_FILE_BUT_WRONG_PASSWORD
@@ -428,7 +390,7 @@ local function mount_fuse(opts)
 	return mount_fuse({
 		archive_path = archive_path,
 		fuse_mount_point = fuse_mount_point,
-		mount_opts = mount_opts,
+		mount_options = mount_options,
 		passphrase = passphrase,
 		retries = retries,
 		max_retry = max_retry,
@@ -436,8 +398,7 @@ local function mount_fuse(opts)
 end
 
 ---Mount path using inode (unique for each files)
----e.g. /tmp/yazi/fuse-archive/test.zip.tmp.11675995
----@param file_url string
+---@param file_url Url
 ---@return string|nil
 local function tmp_file_name(file_url)
 	local fname = file_url.name
@@ -450,10 +411,93 @@ local function tmp_file_name(file_url)
 	return fname .. ".tmp." .. hashed_name
 end
 
+local function unmount_on_quit()
+	redirect_mounted_tab_to_home()
+	local mount_root_dir = get_state("global", "mount_root_dir")
+	local unmount_script =
+		path_quote(os.getenv("HOME") .. "/.config/yazi/plugins/fuse-archive.yazi/assets/unmount_on_quit.sh")
+	os.execute("chmod +x " .. unmount_script)
+	os.execute(unmount_script .. " " .. path_quote(mount_root_dir))
+end
+
 local function setup(_, opts)
+	set_state(
+		"global",
+		"mount_root_dir",
+		opts
+				and opts.mount_root_dir
+				and type(opts.mount_root_dir) == "string"
+				and path_remove_trailing_slash(opts.mount_root_dir)
+			or "/tmp"
+	)
 	local fuse = fuse_dir()
 	set_state("global", "fuse_dir", fuse)
 	set_state("global", "smart_enter", opts and opts.smart_enter)
+	local mount_options = {}
+	if opts and opts.mount_options then
+		if type(opts.mount_options) == "string" then
+			mount_options = split_by_space_or_comma(opts.mount_options)
+		else
+			error("mount_options option in setup() must be a string separated by space or comma")
+		end
+	end
+	set_state("global", "mount_options", mount_options)
+
+	-- stylua: ignore
+	local ORIGINAL_SUPPORTED_EXTENSIONS = {
+		"7z",       "7zip",     "a",        "aia",      "apk",
+		"ar",       "b64",      "base64",   "br",       "brotli",
+		"bz2",      "bzip2",    "cab",      "cpio",     "crx",
+		"deb",      "docx",     "grz",      "grzip",    "gz",
+		"gzip",     "iso",      "iso9660",  "jar",      "lha",
+		"lrz",      "lrzip",    "lz",       "lz4",      "lzip",
+		"lzma",     "lzo",      "lzop",     "mtree",    "odf",
+		"odg",      "odp",      "ods",      "odt",      "ppsx",
+		"pptx",     "rar",      "rpm",      "tar",      "tar.br",
+		"tar.brotli","tar.bz2", "tar.bzip2","tar.grz",  "tar.grzip",
+		"tar.gz",   "tar.gzip", "tar.lha",  "tar.lrz",  "tar.lrzip",
+		"tar.lz",   "tar.lz4",  "tar.lzip", "tar.lzma", "tar.lzo",
+		"tar.lzop", "tar.xz",   "tar.z",    "tar.zst",  "tar.zstd",
+		"taz",      "tb2",      "tbr",      "tbz",      "tbz2",
+		"tgz",      "tlz",      "tlz4",     "tlzip",    "tlzma",
+		"txz",      "tz",       "tz2",      "tzs",      "tzst",
+		"tzstd",    "uu",       "warc",     "xar",      "xlsx",
+		"xz",       "z",        "zip",      "zipx",     "zst",
+		"zstd",
+	}
+
+	local SET_ALLOWED_EXTENSIONS = tbl_to_set(ORIGINAL_SUPPORTED_EXTENSIONS)
+
+	if opts and opts.extra_extensions then
+		if type(opts.extra_extensions) == "table" then
+			SET_ALLOWED_EXTENSIONS = add_to_set(SET_ALLOWED_EXTENSIONS, opts.extra_extensions)
+		else
+			error("extra_extensions option in setup() must be a table of string")
+		end
+	end
+
+	if opts and opts.excluded_extensions then
+		if type(opts.excluded_extensions) == "table" then
+			SET_ALLOWED_EXTENSIONS = remove_from_set(SET_ALLOWED_EXTENSIONS, opts.excluded_extensions)
+		else
+			error("excluded_extensions option in setup() must be a table of string")
+		end
+	end
+	set_state("global", "valid_extensions", SET_ALLOWED_EXTENSIONS)
+
+	-- trigger unmount on quit
+	ps.sub("key-quit", function(args)
+		unmount_on_quit()
+		return args
+	end)
+	ps.sub("emit-quit", function(args)
+		unmount_on_quit()
+		return args
+	end)
+	ps.sub("emit-ind-quit", function(args)
+		unmount_on_quit()
+		return args
+	end)
 end
 
 return {
@@ -468,6 +512,7 @@ return {
 			if hovered_url == nil then
 				return
 			end
+			local VALID_EXTENSIONS = get_state("global", "valid_extensions")
 			if is_dir or is_dir == nil or (is_dir == false and not VALID_EXTENSIONS[hovered_url.ext]) then
 				enter(hovered_url, is_dir)
 				return
@@ -482,6 +527,7 @@ return {
 				local success = mount_fuse({
 					archive_path = hovered_url,
 					fuse_mount_point = tmp_file_url,
+					mount_options = get_state("global", "mount_options"),
 				})
 				if success then
 					set_state(tmp_fname, "cwd", current_dir())
@@ -499,19 +545,7 @@ return {
 			ya.emit("cd", { get_state(file, "cwd"), raw = true })
 			return
 		elseif action == "unmount" then
-			if not is_mount_point() then
-				ya.emit("leave", {})
-				return
-			end
-			local file = current_dir_name()
-			local tmp_file = get_state(file, "tmp")
-			ya.emit("cd", { get_state(file, "cwd"), raw = true })
-
-			local cmd_err_code, res = run_command(shell, { "-c", "fusermount -u " .. path_quote(tmp_file) })
-			if cmd_err_code or res and not res.status.success then
-				error("Unable to unmount %s", tmp_file)
-			end
-			return
+			unmount_on_quit()
 		end
 	end,
 	setup = setup,

@@ -28,3 +28,9 @@
 [submodule "Submodules/end-4"]
 	path = Submodules/end-4
 	url = https://github.com/end-4/dots-hyprland.git
+[submodule "Submodules/caelestia"]
+	path = Submodules/caelestia
+	url = https://github.com/caelestia-dots/caelestia.git
+[submodule "Submodules/catppuccin/helix"]
+	path = Submodules/catppuccin/helix
+	url = https://github.com/catppuccin/helix.git
