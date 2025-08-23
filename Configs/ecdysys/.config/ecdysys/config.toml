@@ -1,5 +1,5 @@
 pkg_managers = [ "pacman", "flatpak" ]
-aur_helper = "yay"
+aur_helper = "paru"
 sudobin = "usr/bin/sudo-rs"
 args_pacman = "--noconfirm"
 args_flatpak = "-y"
