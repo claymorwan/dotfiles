@@ -16,7 +16,6 @@ alias fl-studio-integrator-elm='~/.local/share/applications/fl-studio-integrator
 alias fl-studio-integrator-reg='~/.local/share/applications/fl-studio-integrator-reg'
 alias shimejis='~/Priv-dotfiles/Scripts/shimeji.sh'
 alias lazygit='lazygit --use-config-file="/home/$USER/.config/lazygit/config.yml,/home/$USER/.config/lazygit/mauve.yml"'
-alias sudo='sudo-rs'
 alias cls='clear'
 alias end4-upd='~/.dotfiles/Submodules/end-4/update.sh'
 
@@ -49,7 +48,7 @@ plugins=(
 	zsh-syntax-highlighting
 	fast-syntax-highlighting
 	zsh-autocomplete
-	zsh-eza
+	eza
 	archlinux
 )
 

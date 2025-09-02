@@ -34,3 +34,6 @@
 [submodule "Submodules/catppuccin/helix"]
 	path = Submodules/catppuccin/helix
 	url = https://github.com/catppuccin/helix.git
+[submodule "Submodules/catppuccin/obs"]
+	path = Submodules/catppuccin/obs
+	url = https://github.com/catppuccin/obs.git
