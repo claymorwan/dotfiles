@@ -32,7 +32,12 @@
         "wallpaperTheming": {
             "enableAppsAndShell": false,
             "enableQtApps": false,
-            "enableTerminal": false
+            "enableTerminal": false,
+            "terminalGenerationProps": {
+                "harmonizeThreshold": 100,
+                "harmony": 0.8,
+                "termFgBoost": 0.35
+            }
         }
     },
     "apps": {
