@@ -126,6 +126,7 @@ keymap = [
 	# Goto
 	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go home" },
 	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Goto ~/.config" },
+	{ on = [ "g", "l" ],       run = "cd ~/.local",     desc = "Goto ~/.local" },	
 	{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Goto ~/Downloads" },
 	{ on = [ "g", "p" ],       run = "cd ~/Pictures",   desc = "Goto ~/Pictures" },
 	{ on = [ "g", "v" ],       run = "cd ~/Videos",   desc = "Goto ~/Videos" },
@@ -151,7 +152,7 @@ keymap = [
 	{ on = "}", run = "tab_swap 1",  desc = "Swap current tab with next tab" },
 
 	# Tasks
-	{ on = "w", run = "tasks_show", desc = "Show task manager" },
+	{ on = "w", run = "tasks:show", desc = "Show task manager" },
 
 	# Help
 	{ on = "~",    run = "help", desc = "Open help" },
