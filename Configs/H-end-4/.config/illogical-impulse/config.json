@@ -27,7 +27,7 @@
             "automatic": true,
             "backgroundTransparency": 0.11,
             "contentTransparency": 0.57,
-            "enable": true
+            "enable": false
         },
         "wallpaperTheming": {
             "enableAppsAndShell": false,
@@ -68,8 +68,8 @@
         },
         "quote": "ts so hypr",
         "showClock": true,
-        "thumbnailPath": "/home/claymorwan/.config/hypr/custom/scripts/mpvpaper_thumbnails/taski.mp4.jpg",
-        "wallpaperPath": "/home/claymorwan/Pictures/Wallpapers/roaring_knight.jpg"
+        "thumbnailPath": "",
+        "wallpaperPath": ""
     },
     "bar": {
         "autoHide": {
@@ -204,7 +204,7 @@
         "scale": 0.18
     },
     "policies": {
-        "ai": 0,
+        "ai": 1,
         "weeb": 1
     },
     "resources": {
