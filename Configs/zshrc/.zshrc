@@ -18,6 +18,7 @@ alias shimejis='~/Priv-dotfiles/Scripts/shimeji.sh'
 alias lazygit='lazygit --use-config-file="/home/$USER/.config/lazygit/config.yml,/home/$USER/.config/lazygit/mauve.yml"'
 alias cls='clear'
 alias end4-upd='~/.dotfiles/Submodules/end-4/update.sh'
+alias ip='ip -c'
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
