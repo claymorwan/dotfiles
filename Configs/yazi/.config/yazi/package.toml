@@ -45,8 +45,8 @@ hash = "28caf2541e627582e75add7a9f98a32a"
 
 [[plugin.deps]]
 use = "boydaihungst/fuse-archive"
-rev = "754a544"
-hash = "faf90560ebe4b65b7e435a8dc43cc3d8"
+rev = "5f72801"
+hash = "2b496dd4dcba137e2423783c3c31a823"
 
 [[plugin.deps]]
 use = "macydnah/office"
@@ -75,8 +75,8 @@ hash = "b1f106ff80b4d7d3c5c17a6e47f2ee21"
 
 [[plugin.deps]]
 use = "boydaihungst/gvfs"
-rev = "b58c305"
-hash = "92dc8bdc3d9cbb36e03111b4cad231fc"
+rev = "8303bed"
+hash = "31e756780ae132be185497cb07c003ba"
 
 [[plugin.deps]]
 use = "Rolv-Apneseth/starship"
@@ -85,10 +85,10 @@ hash = "c2021386289a0cbb3e152a052f67c177"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "9cd2ac4"
-hash = "f54b45bdd33f607ddde47f0afad96142"
+rev = "3e6da98"
+hash = "deff42490f77b222e9d3a84dc16a76c5"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-latte"
-rev = "9cd2ac4"
-hash = "e03f3cc1dc61e84a501134784ca4ba57"
+rev = "3e6da98"
+hash = "509055ecc7e6315cb574be36da7a4495"
