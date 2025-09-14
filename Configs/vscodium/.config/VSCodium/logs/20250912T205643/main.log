@@ -1,0 +1,5 @@
+2025-09-12 20:56:43.888 [info] update#setState disabled
+2025-09-12 20:56:43.888 [info] update#ctor - updates are disabled as there is no update URL
+2025-09-12 20:56:44.830 [error] Blocked vscode-webview request vscode-webview://007kc0dubkm5ba8f8u4iecb56kk0cq766v02c0u7unvilu0mq3at/index.html?id=352f4150-c88c-4d70-aca7-17df04dd9b58&parentId=1&origin=352f4150-c88c-4d70-aca7-17df04dd9b58&swVersion=4&extensionId=&platform=electron&vscode-resource-base-authority=vscode-resource.vscode-cdn.net&parentOrigin=vscode-file%3A%2F%2Fvscode-app
+2025-09-12 20:57:39.214 [info] Extension host with pid 111682 exited with code: 0, signal: unknown.
+2025-09-12 20:57:39.266 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 111681]: crashed with code 15 and reason 'killed'

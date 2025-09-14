@@ -1,0 +1,4 @@
+2025-09-12 20:56:34.542 [info] Started local extension host with pid 111326.
+2025-09-12 20:56:34.587 [info] Started initializing default profile extensions in extensions installation folder. file:///home/claymorwan/.local/share/codium/extensions
+2025-09-12 20:56:34.762 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/claymorwan/.local/share/codium/extensions
+2025-09-12 20:56:34.933 [info] ChatSessionStore: Migrating 0 chat sessions from storage service to file system

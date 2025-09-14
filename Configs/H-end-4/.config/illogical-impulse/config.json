@@ -96,8 +96,8 @@
         "showBackground": true,
         "topLeftIcon": "spark",
         "tray": {
-            "invertPinnedItems": false,
-            "monochromeIcons": true,
+            "invertPinnedItems": true,
+            "monochromeIcons": false,
             "pinnedItems": [
                 "Fcitx"
             ],
@@ -163,6 +163,9 @@
         "arbitraryRaceConditionDelay": 20
     },
     "interactions": {
+        "deadPixelWorkaround": {
+            "enable": true
+        },
         "scrolling": {
             "fasterTouchpadScroll": true,
             "mouseScrollDeltaThreshold": 120,
@@ -173,7 +176,7 @@
     "language": {
         "translator": {
             "engine": "auto",
-            "sourceLanguage": "auto",
+            "sourceLanguage": "Français",
             "targetLanguage": "Español"
         },
         "ui": "auto"
