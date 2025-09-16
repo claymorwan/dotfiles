@@ -56,6 +56,13 @@
         }
     },
     "background": {
+        "blur": {
+            "centerClock": true,
+            "enable": true,
+            "extraZoom": 1.1,
+            "radius": 100,
+            "showLockedText": true
+        },
         "clockX": 500,
         "clockY": 500,
         "fixedClockPosition": false,
