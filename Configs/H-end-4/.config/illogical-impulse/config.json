@@ -156,7 +156,7 @@
             "useUSCS": false
         },
         "workspaces": {
-            "alwaysShowNumbers": true,
+            "alwaysShowNumbers": false,
             "monochromeIcons": true,
             "numberMap": [
                 "1",
