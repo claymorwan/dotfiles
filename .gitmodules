@@ -11,7 +11,7 @@
 	path = Submodules/catppuccin/ghostty-shaders
 	url = https://github.com/hackr-sh/ghostty-shaders.git
 [submodule "Submodules/ghostty-shaders"]
-	path = Submodules/ghostty-shaders
+	path = Submodules/ghostty/hackr-sh
 	url = https://github.com/hackr-sh/ghostty-shaders.git
 [submodule "Submodules/catppuccin/adw"]
 	path = Submodules/catppuccin/adw
@@ -28,9 +28,6 @@
 [submodule "Submodules/end-4"]
 	path = Submodules/end-4
 	url = https://github.com/end-4/dots-hyprland.git
-[submodule "Submodules/caelestia"]
-	path = Submodules/caelestia
-	url = https://github.com/caelestia-dots/caelestia.git
 [submodule "Submodules/catppuccin/helix"]
 	path = Submodules/catppuccin/helix
 	url = https://github.com/catppuccin/helix.git
@@ -40,3 +37,6 @@
 [submodule "Submodules/catppuccin/ghostty"]
 	path = Submodules/catppuccin/ghostty
 	url = https://github.com/catppuccin/ghostty.git
+[submodule "Submodules/ghostty/shader-playground"]
+	path = Submodules/ghostty/shader-playground
+	url = https://github.com/KroneCorylus/ghostty-shader-playground.git

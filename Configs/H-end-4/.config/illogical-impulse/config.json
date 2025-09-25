@@ -58,19 +58,13 @@
     "background": {
         "clock": {
             "fixedPosition": false,
+            "scale": 1,
             "show": true,
             "style": "cookie",
             "x": -500,
             "y": -500
         },
         "hideWhenFullscreen": true,
-        "lockBlur": {
-            "centerClock": true,
-            "enable": true,
-            "extraZoom": 1.1,
-            "radius": 100,
-            "showLockedText": true
-        },
         "parallax": {
             "autoVertical": false,
             "enableSidebar": true,
@@ -226,6 +220,15 @@
             "from": "19:00",
             "to": "06:30"
         }
+    },
+    "lock": {
+        "blur": {
+            "enable": false,
+            "extraZoom": 1.1,
+            "radius": 100
+        },
+        "centerClock": true,
+        "showLockedText": true
     },
     "media": {
         "filterDuplicatePlayers": true
