@@ -208,8 +208,8 @@
     "language": {
         "translator": {
             "engine": "auto",
-            "sourceLanguage": "Français",
-            "targetLanguage": "English"
+            "sourceLanguage": "English",
+            "targetLanguage": "Français"
         },
         "ui": "auto"
     },
