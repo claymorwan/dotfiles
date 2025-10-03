@@ -1,2 +1,3 @@
-2025/09/12-20:56:33.009 1b235 Creating DB /home/claymorwan/.config/VSCodium/Local Storage/leveldb since it was missing.
-2025/09/12-20:56:33.019 1b235 Reusing MANIFEST /home/claymorwan/.config/VSCodium/Local Storage/leveldb/MANIFEST-000001
+2025/10/02-16:03:21.111 262b Reusing MANIFEST /home/claymorwan/.config/VSCodium/Local Storage/leveldb/MANIFEST-000001
+2025/10/02-16:03:21.116 262b Recovering log #3
+2025/10/02-16:03:21.116 262b Reusing old log /home/claymorwan/.config/VSCodium/Local Storage/leveldb/000003.log 

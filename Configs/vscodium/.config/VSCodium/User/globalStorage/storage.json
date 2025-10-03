@@ -7,7 +7,10 @@
         "folders": [],
         "emptyWindows": [
             {
-                "backupFolder": "1757710594004"
+                "backupFolder": "1759241742080"
+            },
+            {
+                "backupFolder": "1759421002467"
             }
         ]
     },
@@ -15,7 +18,9 @@
     "profileAssociations": {
         "workspaces": {},
         "emptyWindows": {
-            "1757710594004": "__default__profile__"
+            "1757710594004": "__default__profile__",
+            "1759241742080": "__default__profile__",
+            "1759421002467": "__default__profile__"
         }
     },
     "theme": "vs-dark",
@@ -43,21 +48,21 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 300,
-            "auxiliaryBarWidth": 300,
+            "sideBarWidth": 0,
+            "auxiliaryBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/claymorwan/.config/VSCodium/Backups/1757710594004",
+            "backupPath": "/home/claymorwan/.config/VSCodium/Backups/1759421002467",
             "uiState": {
                 "mode": 0,
                 "x": 0,
                 "y": 0,
-                "width": 1920,
-                "height": 1080
+                "width": 960,
+                "height": 520
             }
         },
         "openedWindows": []

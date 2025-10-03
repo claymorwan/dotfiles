@@ -74,31 +74,7 @@
         },
         "quote": "ts so hypr",
         "thumbnailPath": "",
-        "wallpaperPath": "/home/claymorwan/Pictures/Wallpapers/transparent.png",
-        "wallpaperSafety": {
-            "enable": true,
-            "triggerCondition": {
-                "networkNameKeywords": [
-                    "guest",
-                    "public",
-                    "free",
-                    "airport"
-                ],
-                "wallpaperKeywords": [
-                    "anime",
-                    "ecchi",
-                    "hentai",
-                    "yande.re",
-                    "konachan",
-                    "breast",
-                    "nipples",
-                    "pussy",
-                    "nsfw",
-                    "spoiler",
-                    "girl"
-                ]
-            }
-        }
+        "wallpaperPath": "/home/claymorwan/Pictures/Wallpapers/transparent.png"
     },
     "bar": {
         "autoHide": {
@@ -228,6 +204,11 @@
             "radius": 100
         },
         "centerClock": true,
+        "launchOnStartup": false,
+        "security": {
+            "requirePasswordToPower": false,
+            "unlockKeyring": true
+        },
         "showLockedText": true
     },
     "media": {
@@ -320,5 +301,48 @@
     "windows": {
         "centerTitle": true,
         "showTitlebar": true
+    },
+    "workSafety": {
+        "enable": {
+            "clipboard": true,
+            "wallpaper": true
+        },
+        "triggerCondition": {
+            "fileKeywords": [
+                "anime",
+                "ecchi",
+                "hentai",
+                "yande.re",
+                "konachan",
+                "breast",
+                "nipples",
+                "pussy",
+                "nsfw",
+                "spoiler",
+                "girl"
+            ],
+            "linkKeywords": [
+                "hentai",
+                "porn",
+                "sukebei",
+                "hitomi.la",
+                "rule34",
+                "gelbooru",
+                "fanbox",
+                "dlsite"
+            ],
+            "networkNameKeywords": [
+                "airport",
+                "cafe",
+                "college",
+                "company",
+                "eduroam",
+                "free",
+                "guest",
+                "public",
+                "school",
+                "university"
+            ]
+        }
     }
 }
