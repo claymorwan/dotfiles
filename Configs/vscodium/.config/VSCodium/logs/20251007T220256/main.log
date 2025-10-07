@@ -1,0 +1,3 @@
+2025-10-07 22:02:56.890 [info] update#setState disabled
+2025-10-07 22:02:56.890 [info] update#ctor - updates are disabled as there is no update URL
+2025-10-07 22:02:57.657 [error] Blocked vscode-file request vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/code/electron-browser/workbench/workbench.js

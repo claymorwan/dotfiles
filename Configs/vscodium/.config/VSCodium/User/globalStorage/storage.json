@@ -7,10 +7,10 @@
         "folders": [],
         "emptyWindows": [
             {
-                "backupFolder": "1759421002467"
+                "backupFolder": "1759525289534"
             },
             {
-                "backupFolder": "1759525289534"
+                "backupFolder": "1759874578574"
             }
         ]
     },
@@ -21,7 +21,8 @@
             "1757710594004": "__default__profile__",
             "1759241742080": "__default__profile__",
             "1759421002467": "__default__profile__",
-            "1759525289534": "__default__profile__"
+            "1759525289534": "__default__profile__",
+            "1759874578574": "__default__profile__"
         }
     },
     "theme": "vs-dark",
@@ -60,10 +61,10 @@
             "backupPath": "/home/claymorwan/.config/VSCodium/Backups/1759525289534",
             "uiState": {
                 "mode": 0,
-                "x": 2280,
-                "y": 140,
-                "width": 1200,
-                "height": 800
+                "x": 0,
+                "y": 0,
+                "width": 960,
+                "height": 1040
             }
         },
         "openedWindows": []
