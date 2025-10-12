@@ -47,6 +47,8 @@ local NOTIFY_MSG = {
 	SAVE_PASSWORD_SUCCESS = "Saved password to secret vault",
 	SAVE_PASSWORD_FAILED = "Save password failed: %s",
 	SECRET_VAULT_LOCKED = "Secret vault is locked%s",
+	PASS_INIT_GPG_ID = 'Please run "pass init <KEY_ID>" to initialize your GPG key first. \nCheck SECURE_SAVED_PASSWORD.md for the fix',
+	MISSING_PUBLIC_KEY_GPG_KEY = "GPG key is missing public key\nCheck SECURE_SAVED_PASSWORD.md for the fix",
 }
 
 ---@enum PASSWORD_VAULT
@@ -98,6 +100,7 @@ local STATE_KEY = {
 	INPUT_POSITION = "INPUT_POSITION",
 	TASKS_LOAD_GDRIVE_FOLDER = "TASKS_LOAD_GDRIVE_FOLDER",
 	TASKS_LOAD_GDRIVE_FOLDER_RUNNING = "TASKS_LOAD_GDRIVE_FOLDER_RUNNING",
+	BLACKLIST_DEVICES = "BLACKLIST_DEVICES",
 }
 
 ---@enum ACTION
@@ -157,6 +160,7 @@ local ACTION = {
 ---@field can_unmount "1"|"0"
 ---@field can_eject "1"|"0"
 ---@field should_automount "1"|"0"
+---@field remote_path string?
 
 ---@class (exact) Mount
 ---@field name string
@@ -497,6 +501,19 @@ local function is_secret_vault_available_gpg(unlock_vault_dialog, is_second_run)
 					:stderr(Command.PIPED)
 					:stdout(Command.PIPED)
 					:output()
+				if res and res.stderr:match("Error: You must run:") and res.stderr:match("pass init your%-gpg%-id") then
+					error(NOTIFY_MSG.PASS_INIT_GPG_ID)
+					return false
+				end
+				if
+					res
+					and res.stderr:match("encryption failed: No public key")
+					and res.stderr:match("Password encryption aborted")
+				then
+					error(NOTIFY_MSG.MISSING_PUBLIC_KEY_GPG_KEY)
+					return false
+				end
+
 				if is_second_run or err or (res and res.status and not res.status.success) then
 					return false
 				end
@@ -923,12 +940,23 @@ local function display_virtual_children(cwd, children_folder_info)
 					or (gdrive_mountpoint_info.type == "shortcut" and 4 or 16)
 				)
 
+			-- Fix for Google AI Studio using max unsigned 64-bit integer value
+			if gdrive_mountpoint_info.attributes.access == "18446744073709551615" then
+				gdrive_mountpoint_info.attributes.access = nil
+			end
+			if gdrive_mountpoint_info.attributes.modified == "18446744073709551615" then
+				gdrive_mountpoint_info.attributes.modified = nil
+			end
+			if gdrive_mountpoint_info.attributes.created == "18446744073709551615" then
+				gdrive_mountpoint_info.attributes.created = nil
+			end
 			table.insert(
 				files,
 				File({
 					url = url,
 					cha = Cha({
 						kind = kind,
+						mode = tonumber(kind == 1 and "40700" or "100644", 8),
 						len = tonumber(gdrive_mountpoint_info.attributes.size or "0"),
 						atime = gdrive_mountpoint_info.attributes.access,
 						mtime = gdrive_mountpoint_info.attributes.modified,
@@ -948,6 +976,7 @@ local function parse_devices(raw_input)
 	local volumes = {}
 	local mounts = {}
 	local predefined_mounts = tbl_deep_clone(get_state(STATE_KEY.MOUNTS)) or {}
+	local blacklist_devices = get_state(STATE_KEY.BLACKLIST_DEVICES) or {}
 	---@type Device?
 	local current_volume = nil
 	---@type Mount?
@@ -955,13 +984,25 @@ local function parse_devices(raw_input)
 
 	for m = #predefined_mounts, 1, -1 do
 		local pm = predefined_mounts[m]
-		if pm.scheme == SCHEME.SSH then
-			pm.scheme = SCHEME.SFTP
-			-- Replace ssh:// with sftp:// and remove sub folder
-			pm.uri = pm.uri:gsub("^ssh://", "sftp://"):gsub("^(%a+://[^/]+).*", "%1")
-		elseif pm.scheme == SCHEME.SFTP then
-			-- Remove sub folder
-			pm.uri = pm.uri:gsub("^(%a+://[^/]+).*", "%1")
+		if pm.uri then
+			-- replace ssh:// with sftp://
+			if pm.scheme == SCHEME.SSH then
+				pm.scheme = SCHEME.SFTP
+				pm.uri = pm.uri:gsub("^ssh://", "sftp://")
+			end
+			-- keep remote path, for jumping. Only scheme that doesn't support remote path
+			if
+				pm.scheme == SCHEME.SFTP
+				or pm.scheme == SCHEME.FTP
+				or pm.scheme == SCHEME.FTPS
+				or pm.scheme == SCHEME.FTPIS
+				or pm.scheme == SCHEME.DNS_SD
+				or pm.scheme == SCHEME.AFC
+			then
+				pm.remote_path = pm.uri:match("^[%w+]+://[^/]+/(.+)$") or ""
+				-- Remove remote path
+				pm.uri = pm.uri:gsub("^(%a+://[^/]+).*", "%1")
+			end
 		end
 	end
 
@@ -1080,7 +1121,7 @@ local function parse_devices(raw_input)
 			end
 		end
 		-- NOTE: Remove volumes without scheme (fstab)
-		if not v.scheme then
+		if volumes[i] and not v.scheme then
 			table.remove(volumes, i)
 		end
 
@@ -1103,6 +1144,24 @@ local function parse_devices(raw_input)
 	for _, m in ipairs(predefined_mounts) do
 		m.mounts = { tbl_deep_clone(m) }
 		table.insert(volumes, m)
+	end
+	if #blacklist_devices > 0 then
+		for i = #volumes, 1, -1 do
+			local v = volumes[i]
+			for _, bl_device in pairs(blacklist_devices) do
+				if type(bl_device) == "string" and v.name == bl_device then
+					table.remove(volumes, i)
+				elseif type(bl_device) == "table" then
+					for bl_device_prop, bl_device_value in pairs(bl_device) do
+						if v[bl_device_prop] ~= bl_device_value then
+							goto skip_bl_device
+						end
+					end
+					table.remove(volumes, i)
+				end
+				::skip_bl_device::
+			end
+		end
 	end
 	return volumes
 end
@@ -1292,7 +1351,7 @@ local function mount_device(opts)
 			then
 				if username ~= opts.username or (username == nil and is_pw_saved == nil) then
 					-- Prevent showing gpg passphrase twice
-					if not is_secret_vault_available(true) then
+					if not skipped_secret_vault and not is_secret_vault_available(true) then
 						skipped_secret_vault = true
 					end
 					if not skipped_secret_vault then
@@ -1521,7 +1580,14 @@ local function jump_to_device_mountpoint_action(device, retry, automount)
 	end
 	if not device then
 		local list_devices = list_gvfs_device_by_status(DEVICE_CONNECT_STATUS.MOUNTED)
-		device = #list_devices == 1 and list_devices[1] or list_devices[select_device_which_key(list_devices)]
+		device = #list_devices == 1 and list_devices[1] or nil
+		if not device then
+			local selected_device_idx = select_device_which_key(list_devices)
+			if not selected_device_idx then
+				return
+			end
+			device = list_devices[selected_device_idx]
+		end
 	end
 	if not device then
 		info(NOTIFY_MSG.LIST_DEVICES_EMPTY)
@@ -1542,6 +1608,9 @@ local function jump_to_device_mountpoint_action(device, retry, automount)
 
 	if mnt_path then
 		set_state(STATE_KEY.PREV_CWD, current_dir())
+		if device.remote_path then
+			mnt_path = pathJoin(mnt_path, device.remote_path)
+		end
 		ya.emit("cd", { mnt_path, raw = true })
 	else
 		error(NOTIFY_MSG.DEVICE_IS_DISCONNECTED)
@@ -1572,7 +1641,14 @@ local function mount_action(opts)
 			return true
 		end)
 		-- NOTE: Automatically select the first device if there is only one device
-		selected_device = #list_devices == 1 and list_devices[1] or list_devices[select_device_which_key(list_devices)]
+		selected_device = #list_devices == 1 and list_devices[1] or nil
+		if not selected_device then
+			local selected_device_idx = select_device_which_key(list_devices)
+			if not selected_device_idx then
+				return
+			end
+			selected_device = list_devices[selected_device_idx]
+		end
 
 		if #list_devices == 0 then
 			-- If every devices are mounted, then jump to the first one
@@ -1695,7 +1771,15 @@ local function unmount_action(device, eject, force)
 			return true
 		end)
 		-- NOTE: Automatically select the first device if there is only one device
-		selected_device = #list_devices == 1 and list_devices[1] or list_devices[select_device_which_key(list_devices)]
+		selected_device = #list_devices == 1 and list_devices[1] or nil
+		if not selected_device then
+			local selected_device_idx = select_device_which_key(list_devices)
+			if not selected_device_idx then
+				return
+			end
+			selected_device = list_devices[selected_device_idx]
+		end
+
 		if not selected_device and #list_devices == 0 then
 			info(NOTIFY_MSG.LIST_DEVICES_EMPTY)
 			return
@@ -1845,6 +1929,7 @@ local function add_or_edit_mount_action(is_edit)
 	end
 
 	mount.uri, _ = show_input("Enter mount URI:", false, mount.uri)
+	mount.uri = mount.uri:gsub("^%s*(.-)%s*$", "%1")
 	if mount.uri == nil then
 		return
 	elseif mount.uri == "" then
@@ -1973,6 +2058,10 @@ local function remove_mount_action()
 	end
 
 	local selected_idx = select_device_which_key(mounts)
+	if not selected_idx then
+		return
+	end
+
 	local mount = mounts[selected_idx]
 	if not mount then
 		return
@@ -2042,6 +2131,10 @@ function M:setup(opts)
 	else
 		set_state(STATE_KEY.ROOT_MOUNTPOINT, GVFS_ROOT_MOUNTPOINT)
 	end
+	set_state(
+		STATE_KEY.BLACKLIST_DEVICES,
+		(opts and opts.blacklist_devices and type(opts.blacklist_devices) == "table") and opts.blacklist_devices or {}
+	)
 	set_state(STATE_KEY.MOUNTS, read_mounts_from_saved_file(get_state(STATE_KEY.SAVE_PATH)))
 
 	ps.sub(PUBSUB_KIND.cd, function()

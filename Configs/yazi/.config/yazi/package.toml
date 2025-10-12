@@ -75,8 +75,8 @@ hash = "b1f106ff80b4d7d3c5c17a6e47f2ee21"
 
 [[plugin.deps]]
 use = "boydaihungst/gvfs"
-rev = "f07b496"
-hash = "162bf7326809fb2b831d7fac7525b067"
+rev = "3da616f"
+hash = "579fb316335d6ec565913ca09f4bc799"
 
 [[plugin.deps]]
 use = "Rolv-Apneseth/starship"

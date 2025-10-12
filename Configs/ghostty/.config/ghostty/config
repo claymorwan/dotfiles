@@ -10,5 +10,5 @@ gtk-tabs-location = bottom
 # Shaders
 custom-shader = ~/.dotfiles/Submodules/ghostty/hackr-sh/gears-and-belts.glsl
 # Cursor
-custom-shader = ~/.dotfiles/Submodules/ghostty/shader-playground/shaders/cursor_smear.glsl
+custom-shader = ~/.dotfiles/Submodules/ghostty/shader-playground/public/shaders/cursor_smear.glsl
 

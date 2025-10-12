@@ -40,3 +40,9 @@
 [submodule "Submodules/ghostty/shader-playground"]
 	path = Submodules/ghostty/shader-playground
 	url = https://github.com/KroneCorylus/ghostty-shader-playground.git
+[submodule "Submodules/dms/plugins"]
+	path = Submodules/dms/plugins
+	url = https://github.com/AvengeMedia/dms-plugin-registry.git
+[submodule "Submodules/dms/dms-plugins"]
+	path = Submodules/dms/dms-plugins
+	url = https://github.com/AvengeMedia/dms-plugins.git
