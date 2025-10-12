@@ -205,7 +205,7 @@
   "dockGroupByApp": true,
   "dockOpenOnOverview": false,
   "dockPosition": 1,
-  "dockSpacing": 20,
+  "dockSpacing": 10,
   "dockBottomGap": 0,
   "cornerRadius": 14,
   "notificationOverlayEnabled": false,
