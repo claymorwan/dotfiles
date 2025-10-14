@@ -1,5 +1,19 @@
 {
   "dankPomodoroTimer": {
     "enabled": true
+  },
+  "exampleEmojiPlugin": {
+    "enabled": true
+  },
+  "calculator": {
+    "enabled": true,
+    "noTrigger": true,
+    "trigger": "="
+  },
+  "worldClock": {
+    "enabled": true
+  },
+  "powerUsagePlugin": {
+    "enabled": true
   }
 }
