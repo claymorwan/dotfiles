@@ -10,12 +10,12 @@ hash = "2bd799b42b8e42b8ef100310be71f8d1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "9a52857"
+rev = "8f1d971"
 hash = "8ad3e90b079190b4905f24a44f4ca06b"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "9a52857"
+rev = "8f1d971"
 hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
@@ -25,8 +25,8 @@ hash = "ee71543790f0ce3951161045a3787abd"
 
 [[plugin.deps]]
 use = "AnirudhG07/rich-preview"
-rev = "843c3fa"
-hash = "b4040931f0d2f9670ddb4923e55cd881"
+rev = "831234e"
+hash = "ed3363e256e210593f0f8e4cec3e36a9"
 
 [[plugin.deps]]
 use = "h-hg/yamb"
@@ -35,7 +35,7 @@ hash = "7cc42012a7c2099f80064d228feb8d44"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "9a52857"
+rev = "8f1d971"
 hash = "63b6c222bf2103b3023389dde5e2ecfe"
 
 [[plugin.deps]]
@@ -60,7 +60,7 @@ hash = "eb57bbd6329886a8b7fff886d3c72847"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "9a52857"
+rev = "8f1d971"
 hash = "8a7c58225816a163a6e8730c0adafbc8"
 
 [[plugin.deps]]
@@ -75,8 +75,8 @@ hash = "b1f106ff80b4d7d3c5c17a6e47f2ee21"
 
 [[plugin.deps]]
 use = "boydaihungst/gvfs"
-rev = "3da616f"
-hash = "579fb316335d6ec565913ca09f4bc799"
+rev = "6db0c60"
+hash = "4351334ef72ea0fb3bbafc6eec8738cf"
 
 [[plugin.deps]]
 use = "Rolv-Apneseth/starship"
@@ -85,10 +85,10 @@ hash = "c2021386289a0cbb3e152a052f67c177"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "2d73b79"
-hash = "d4c41d713b325710a9dd5ae86c3f8a5f"
+rev = "f6b425a"
+hash = "14b111562c00eb1917fe3ca3ae9bb771"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-latte"
-rev = "2d73b79"
-hash = "9e789c612c34f941a2afd42e7ded39f"
+rev = "f6b425a"
+hash = "31f2ba594080bfc2a68d054101cdc5f1"

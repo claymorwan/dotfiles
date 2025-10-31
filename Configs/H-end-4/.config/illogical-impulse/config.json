@@ -46,7 +46,8 @@
         "network": "better-control --wifi",
         "networkEthernet": "kcmshell6 kcm_networkmanagement",
         "taskManager": "ghostty -e btop",
-        "terminal": "ghostty -1"
+        "terminal": "ghostty -1",
+        "volumeMixer": "~/.config/hypr/hyprland/scripts/launch_first_available.sh \"pavucontrol-qt\" \"pavucontrol\""
     },
     "audio": {
         "protection": {
@@ -57,22 +58,37 @@
     },
     "background": {
         "clock": {
-            "fixedPosition": false,
+            "cookie": {
+                "aiStyling": false,
+                "constantlyRotate": true,
+                "dateInClock": true,
+                "dateStyle": "bubble",
+                "dialNumberStyle": "full",
+                "hourHandStyle": "hollow",
+                "hourMarks": false,
+                "minuteHandStyle": "medium",
+                "secondHandStyle": "dot",
+                "sides": 14,
+                "timeIndicators": true
+            },
+            "fixedPosition": true,
             "scale": 1,
             "show": true,
             "style": "cookie",
-            "x": -500,
-            "y": -500
+            "x": 150,
+            "y": 200
         },
         "hideWhenFullscreen": true,
         "parallax": {
             "autoVertical": false,
+            "clockFactor": 1.2,
             "enableSidebar": true,
             "enableWorkspace": true,
             "vertical": false,
             "workspaceZoom": 1.07
         },
         "quote": "ts so hypr",
+        "showQuote": true,
         "thumbnailPath": "",
         "wallpaperPath": "/home/claymorwan/Pictures/Wallpapers/transparent.png"
     },
@@ -89,6 +105,11 @@
         "borderless": false,
         "bottom": false,
         "cornerStyle": 0,
+        "indicators": {
+            "notifications": {
+                "showUnreadCount": false
+            }
+        },
         "resources": {
             "alwaysShowCpu": false,
             "alwaysShowSwap": true,
@@ -101,6 +122,7 @@
         "showBackground": true,
         "topLeftIcon": "spark",
         "tray": {
+            "filterPassive": true,
             "invertPinnedItems": true,
             "monochromeIcons": false,
             "pinnedItems": [
@@ -114,6 +136,7 @@
             "showKeyboardToggle": true,
             "showMicToggle": true,
             "showPerformanceProfileToggle": true,
+            "showScreenRecord": false,
             "showScreenSnip": true
         },
         "verbose": true,
@@ -130,7 +153,15 @@
             "monochromeIcons": true,
             "numberMap": [
                 "1",
-                "2"
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
             ],
             "showAppIcons": false,
             "showNumberDelay": 300,
@@ -141,6 +172,7 @@
     "battery": {
         "automaticSuspend": true,
         "critical": 5,
+        "full": 101,
         "low": 20,
         "suspend": 3
     },
@@ -190,6 +222,9 @@
         "ui": "auto"
     },
     "light": {
+        "antiFlashbang": {
+            "enable": false
+        },
         "night": {
             "automatic": false,
             "colorTemperature": 5000,
@@ -199,7 +234,7 @@
     },
     "lock": {
         "blur": {
-            "enable": false,
+            "enable": true,
             "extraZoom": 1.1,
             "radius": 100
         },
@@ -209,7 +244,8 @@
             "requirePasswordToPower": false,
             "unlockKeyring": true
         },
-        "showLockedText": true
+        "showLockedText": true,
+        "useHyprlock": false
     },
     "media": {
         "filterDuplicatePlayers": true
@@ -237,20 +273,39 @@
         "ai": 0,
         "weeb": 1
     },
+    "regionSelector": {
+        "circle": {
+            "padding": 10,
+            "strokeWidth": 6
+        },
+        "rect": {
+            "showAimLines": true
+        },
+        "targetRegions": {
+            "content": true,
+            "contentRegionOpacity": 0.8,
+            "layers": true,
+            "opacity": 0.3,
+            "showLabel": false,
+            "windows": true
+        }
+    },
     "resources": {
         "updateInterval": 3000
-    },
-    "screenshotTool": {
-        "showContentRegions": true
     },
     "search": {
         "engineBaseUrl": "https://www.ecosia.org/search?q=",
         "excludedSites": [
             "quora.com"
         ],
+        "imageSearch": {
+            "imageSearchEngineBaseUrl": "https://lens.google.com/uploadbyurl?url=",
+            "useCircleSelection": false
+        },
         "nonAppResultDelay": 30,
         "prefix": {
             "action": "/",
+            "app": ">",
             "clipboard": ";",
             "emojis": ":",
             "math": "=",
@@ -261,6 +316,9 @@
         "sloppy": false
     },
     "sidebar": {
+        "ai": {
+            "textFadeIn": true
+        },
         "booru": {
             "allowNsfw": false,
             "defaultProvider": "yandere",
@@ -272,6 +330,7 @@
         "cornerOpen": {
             "bottom": false,
             "clickless": true,
+            "clicklessCornerEnd": true,
             "cornerRegionHeight": 2,
             "cornerRegionWidth": 60,
             "enable": true,
@@ -279,20 +338,64 @@
             "visualize": false
         },
         "keepRightSidebarLoaded": true,
+        "quickSliders": {
+            "enable": true,
+            "showBrightness": true,
+            "showMic": false,
+            "showVolume": true
+        },
+        "quickToggles": {
+            "android": {
+                "columns": 5,
+                "toggles": [
+                    {
+                        "size": 2,
+                        "type": "network"
+                    },
+                    {
+                        "size": 2,
+                        "type": "bluetooth"
+                    },
+                    {
+                        "size": 1,
+                        "type": "idleInhibitor"
+                    },
+                    {
+                        "size": 1,
+                        "type": "mic"
+                    },
+                    {
+                        "size": 2,
+                        "type": "audio"
+                    },
+                    {
+                        "size": 2,
+                        "type": "nightLight"
+                    }
+                ]
+            },
+            "style": "android"
+        },
         "translator": {
-            "delay": 300
+            "delay": 300,
+            "enable": false
         }
+    },
+    "sounds": {
+        "battery": false,
+        "pomodoro": false,
+        "theme": "freedesktop"
     },
     "time": {
         "dateFormat": "dddd, dd/MM",
         "format": "hh:mm",
         "pomodoro": {
-            "alertSound": "",
             "breakTime": 300,
             "cyclesBeforeLongBreak": 4,
             "focus": 1500,
             "longBreak": 900
         },
+        "secondPrecision": false,
         "shortDateFormat": "dd/MM"
     },
     "wallpaperSelector": {

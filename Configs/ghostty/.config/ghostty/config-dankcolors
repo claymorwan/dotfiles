@@ -1,3 +1,20 @@
+palette = 0=#171118
+palette = 1=#d65555
+palette = 2=#338f31
+palette = 3=#a27750
+palette = 4=#1b8f86
+palette = 5=#65a19a
+palette = 6=#74d7cc
+palette = 7=#abb2bf
+palette = 8=#5c6370
+palette = 9=#e57e7e
+palette = 10=#3d783c
+palette = 11=#80654c
+palette = 12=#69ecdd
+palette = 13=#206d59
+palette = 14=#2c6b6f
+palette = 15=#ffffff
+
 background = #171118
 foreground = #ebdfe9
 cursor-color = #74d7cc

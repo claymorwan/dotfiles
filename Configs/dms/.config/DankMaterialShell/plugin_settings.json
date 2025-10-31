@@ -1,6 +1,8 @@
 {
   "dankPomodoroTimer": {
-    "enabled": true
+    "enabled": true,
+    "autoStartBreaks": true,
+    "autoStartPomodoros": true
   },
   "exampleEmojiPlugin": {
     "enabled": true
@@ -14,6 +16,22 @@
     "enabled": true
   },
   "powerUsagePlugin": {
+    "enabled": true
+  },
+  "dankHooks": {
+    "enabled": true
+  },
+  "emojiLauncher": {
+    "enabled": true
+  },
+  "webSearch": {
+    "enabled": true,
+    "defaultEngine": "duckduckgo",
+    "noTrigger": false,
+    "trigger": "?",
+    "searchEngines": []
+  },
+  "grimblast": {
     "enabled": true
   }
 }

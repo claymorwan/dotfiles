@@ -43,6 +43,6 @@
 [submodule "Submodules/dms/plugins"]
 	path = Submodules/dms/plugins
 	url = https://github.com/AvengeMedia/dms-plugin-registry.git
-[submodule "Submodules/dms/dms-plugins"]
-	path = Submodules/dms/dms-plugins
-	url = https://github.com/AvengeMedia/dms-plugins.git
+[submodule "Submodules/catppuccin/mangohud"]
+	path = Submodules/catppuccin/mangohud
+	url = https://github.com/catppuccin/mangohud.git

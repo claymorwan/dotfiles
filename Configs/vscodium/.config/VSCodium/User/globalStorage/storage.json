@@ -8,9 +8,6 @@
         "emptyWindows": [
             {
                 "backupFolder": "1759525289534"
-            },
-            {
-                "backupFolder": "1759874578574"
             }
         ]
     },
@@ -18,11 +15,7 @@
     "profileAssociations": {
         "workspaces": {},
         "emptyWindows": {
-            "1757710594004": "__default__profile__",
-            "1759241742080": "__default__profile__",
-            "1759421002467": "__default__profile__",
-            "1759525289534": "__default__profile__",
-            "1759874578574": "__default__profile__"
+            "1759525289534": "__default__profile__"
         }
     },
     "theme": "vs-dark",
@@ -63,8 +56,8 @@
                 "mode": 0,
                 "x": 0,
                 "y": 0,
-                "width": 960,
-                "height": 1040
+                "width": 1920,
+                "height": 1080
             }
         },
         "openedWindows": []

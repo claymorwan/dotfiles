@@ -2,12 +2,14 @@
   "currentThemeName": "custom",
   "customThemeFile": "/home/claymorwan/colors-mauve.json",
   "matugenScheme": "scheme-tonal-spot",
-  "runUserMatugenTemplates": true,
+  "runUserMatugenTemplates": false,
+  "matugenTargetMonitor": "",
   "dankBarTransparency": 1,
   "dankBarWidgetTransparency": 1,
   "popupTransparency": 1,
   "dockTransparency": 1,
   "use24HourClock": true,
+  "showSeconds": false,
   "useFahrenheit": false,
   "nightModeEnabled": false,
   "weatherLocation": "New York, NY",
@@ -43,7 +45,8 @@
     {
       "id": "brightnessSlider",
       "enabled": true,
-      "width": 50
+      "width": 50,
+      "deviceName": "ddc-1"
     },
     {
       "id": "inputVolumeSlider",
@@ -97,6 +100,7 @@
     }
   ],
   "showWorkspaceIndex": false,
+  "workspaceScrolling": false,
   "showWorkspacePadding": true,
   "showWorkspaceApps": true,
   "maxWorkspaceIcons": 3,
@@ -106,7 +110,9 @@
   "clockCompactMode": false,
   "focusedWindowCompactMode": false,
   "runningAppsCompactMode": true,
+  "keyboardLayoutNameCompactMode": true,
   "runningAppsCurrentWorkspace": false,
+  "runningAppsGroupByApp": false,
   "clockDateFormat": "",
   "lockDateFormat": "",
   "mediaSize": 1,
@@ -126,6 +132,11 @@
   ],
   "dankBarCenterWidgets": [
     {
+      "id": "spacer",
+      "enabled": true,
+      "size": 25
+    },
+    {
       "id": "colorPicker",
       "enabled": true
     },
@@ -134,7 +145,15 @@
       "enabled": true
     },
     {
+      "id": "separator",
+      "enabled": true
+    },
+    {
       "id": "workspaceSwitcher",
+      "enabled": true
+    },
+    {
+      "id": "separator",
       "enabled": true
     },
     {
@@ -144,9 +163,17 @@
     {
       "id": "weather",
       "enabled": true
+    },
+    {
+      "id": "grimblast",
+      "enabled": true
     }
   ],
   "dankBarRightWidgets": [
+    {
+      "id": "systemUpdate",
+      "enabled": true
+    },
     {
       "id": "cpuUsage",
       "enabled": true
@@ -174,15 +201,12 @@
     {
       "id": "controlCenterButton",
       "enabled": true
-    },
-    {
-      "id": "powerUsagePlugin",
-      "enabled": true
     }
   ],
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
-  "networkPreference": "auto",
+  "sortAppsAlphabetically": false,
+  "networkPreference": "wifi",
   "iconTheme": "System Default",
   "launcherLogoMode": "os",
   "launcherLogoCustomPath": "",
@@ -202,8 +226,14 @@
   "notepadShowLineNumbers": false,
   "notepadTransparencyOverride": -1,
   "notepadLastCustomTransparency": 0.7,
+  "soundsEnabled": true,
+  "useSystemSoundTheme": true,
+  "soundNewNotification": true,
+  "soundVolumeChanged": true,
+  "soundPluggedIn": true,
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
+  "syncModeWithPortal": true,
   "showDock": true,
   "dockAutoHide": true,
   "dockGroupByApp": true,
@@ -211,6 +241,8 @@
   "dockPosition": 1,
   "dockSpacing": 10,
   "dockBottomGap": 0,
+  "dockIconSize": 40,
+  "dockIndicatorStyle": "line",
   "cornerRadius": 14,
   "notificationOverlayEnabled": false,
   "dankBarAutoHide": false,
@@ -230,17 +262,44 @@
   "popupGapsManual": 4,
   "dankBarPosition": 0,
   "lockScreenShowPowerActions": true,
+  "enableFprint": false,
+  "maxFprintTries": 3,
   "hideBrightnessSlider": false,
   "widgetBackgroundColor": "sch",
   "surfaceBase": "s",
+  "wallpaperFillMode": "Fill",
+  "blurredWallpaperLayer": false,
+  "blurWallpaperOnOverview": false,
   "notificationTimeoutLow": 5000,
   "notificationTimeoutNormal": 5000,
   "notificationTimeoutCritical": 0,
   "notificationPopupPosition": 0,
   "osdAlwaysShowValue": true,
-  "updaterUseCustomCommand": false,
-  "updaterCustomCommand": "",
+  "powerActionConfirm": true,
+  "customPowerActionLock": "",
+  "customPowerActionLogout": "",
+  "customPowerActionSuspend": "",
+  "customPowerActionHibernate": "",
+  "customPowerActionReboot": "",
+  "customPowerActionPowerOff": "",
+  "updaterUseCustomCommand": true,
+  "updaterCustomCommand": "ecdysys -u",
   "updaterTerminalAdditionalParams": "",
   "screenPreferences": {},
-  "animationSpeed": 2
+  "showOnLastDisplay": {},
+  "animationSpeed": 2,
+  "customAnimationDuration": 500,
+  "acMonitorTimeout": 0,
+  "acLockTimeout": 0,
+  "acSuspendTimeout": 0,
+  "acHibernateTimeout": 0,
+  "batteryMonitorTimeout": 0,
+  "batteryLockTimeout": 0,
+  "batterySuspendTimeout": 0,
+  "batteryHibernateTimeout": 0,
+  "lockBeforeSuspend": true,
+  "loginctlLockIntegration": true,
+  "launchPrefix": "app2unit --",
+  "brightnessDevicePins": {},
+  "configVersion": 1
 }

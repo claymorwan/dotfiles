@@ -19,6 +19,7 @@ alias lazygit='lazygit --use-config-file="/home/$USER/.config/lazygit/config.yml
 alias cls='clear'
 alias end4-upd='~/.dotfiles/Submodules/end-4/update.sh'
 alias ip='ip -c'
+alias hyprlockrepair="hyprctl --instance 0 'keyword misc:allow_restore_session_lock 1'; hyprctl --instance 0 'disatch exec hyprlock'"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
