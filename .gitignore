@@ -1,10 +1,10 @@
 apdatifier/.config/apdatifier/updates.json*
 apdatifier/.config/apdatifier/news.json
 
-yazi/.config/yazi/plugins/
-yazi/.config/yazi/flavors/
+Configs/yazi/.config/yazi/plugins/
+Configs/yazi/.config/yazi/flavors/
 
 hypr/.config/hypr/hypridle.conf*
 hypr/.config/hypr/hyprlock.conf*
 
-Configs/dms/.config/DankMaterialShell/plugins/*
+Configs/dms/.config/DankMaterialShell/plugins/

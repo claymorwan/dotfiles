@@ -28,5 +28,11 @@
   "webSearch": {
     "enabled": true,
     "searchEngines": []
+  },
+  "linuxWallpaperEngine": {
+    "enabled": true,
+    "monitorScenes": {
+      "eDP-1": "1987155227"
+    }
   }
 }
