@@ -1,8 +1,6 @@
 {
   "dankPomodoroTimer": {
-    "enabled": true,
-    "autoStartBreaks": true,
-    "autoStartPomodoros": true
+    "enabled": true
   },
   "exampleEmojiPlugin": {
     "enabled": true
@@ -10,7 +8,7 @@
   "calculator": {
     "enabled": true,
     "noTrigger": true,
-    "trigger": "="
+    "trigger": ""
   },
   "worldClock": {
     "enabled": true
@@ -18,20 +16,17 @@
   "powerUsagePlugin": {
     "enabled": true
   },
-  "dankHooks": {
+  "dankBatteryAlerts": {
     "enabled": true
   },
   "emojiLauncher": {
     "enabled": true
   },
-  "webSearch": {
-    "enabled": true,
-    "defaultEngine": "duckduckgo",
-    "noTrigger": false,
-    "trigger": "?",
-    "searchEngines": []
-  },
   "grimblast": {
     "enabled": true
+  },
+  "webSearch": {
+    "enabled": true,
+    "searchEngines": []
   }
 }
