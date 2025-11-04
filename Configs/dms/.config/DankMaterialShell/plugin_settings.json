@@ -8,7 +8,7 @@
   "calculator": {
     "enabled": true,
     "noTrigger": true,
-    "trigger": ""
+    "trigger": "="
   },
   "worldClock": {
     "enabled": true
@@ -32,7 +32,12 @@
   "linuxWallpaperEngine": {
     "enabled": true,
     "monitorScenes": {
-      "eDP-1": "1987155227"
+      "DP-1": "1987155227"
+    },
+    "sceneSettings": {
+      "1987155227": {
+        "fps": 29
+      }
     }
   }
 }
