@@ -14,7 +14,8 @@
     "enabled": true
   },
   "powerUsagePlugin": {
-    "enabled": true
+    "enabled": true,
+    "selectedPopout": "battery"
   },
   "dankBatteryAlerts": {
     "enabled": true
@@ -37,7 +38,7 @@
     },
     "sceneSettings": {
       "1987155227": {
-        "fps": 29
+        "fps": 10
       }
     }
   }
