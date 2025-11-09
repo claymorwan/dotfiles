@@ -4,19 +4,24 @@
     "telemetry.devDeviceId": "1cad295d-3c81-4ec1-a769-d9cf216a5803",
     "backupWorkspaces": {
         "workspaces": [],
-        "folders": [],
-        "emptyWindows": [
+        "folders": [
             {
-                "backupFolder": "1759525289534"
+                "folderUri": "file:///mnt/media/Programmation/Docs/DankLinux-Docs"
+            },
+            {
+                "folderUri": "file:///mnt/media/Programmation/Cursors/Akita-Neru"
             }
-        ]
+        ],
+        "emptyWindows": []
     },
     "windowControlHeight": 35,
     "profileAssociations": {
-        "workspaces": {},
-        "emptyWindows": {
-            "1759525289534": "__default__profile__"
-        }
+        "workspaces": {
+            "file:///mnt/media/Programmation/Qml/DankMaterialShell": "__default__profile__",
+            "file:///mnt/media/Programmation/Docs/DankLinux-Docs": "__default__profile__",
+            "file:///mnt/media/Programmation/Cursors/Akita-Neru": "__default__profile__"
+        },
+        "emptyWindows": {}
     },
     "theme": "vs-dark",
     "themeBackground": "#1e1e2e",
@@ -35,15 +40,14 @@
             "sideBarBorder": "rgba(0, 0, 0, 0)",
             "statusBarBackground": "#11111b",
             "statusBarBorder": "rgba(0, 0, 0, 0)",
-            "statusBarNoFolderBackground": "#11111b",
-            "windowBorder": "rgba(0, 0, 0, 0)"
+            "statusBarNoFolderBackground": "#11111b"
         },
         "layoutInfo": {
             "sideBarSide": "left",
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 0,
+            "sideBarWidth": 301,
             "auxiliaryBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
@@ -51,15 +55,40 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/claymorwan/.config/VSCodium/Backups/1759525289534",
+            "folder": "file:///mnt/media/Programmation/Docs/DankLinux-Docs",
+            "backupPath": "/home/claymorwan/.config/VSCodium/Backups/99ba2df2e13f14cc52f458ce6266b215",
             "uiState": {
                 "mode": 0,
-                "x": 0,
+                "x": 1920,
                 "y": 0,
                 "width": 1920,
                 "height": 1080
             }
         },
         "openedWindows": []
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 301,
+            "auxiliaryBarWidth": 300,
+            "workspaces": {
+                "690d9ee16a8e1a9c918926ffbd185ff7": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "135e020b499ae5214bbd1a040ae4055b": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "f0d97e3da230485391c78414c15caad4": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "a4161e986be6693b93e33e2a7cb53c40": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                }
+            }
+        }
     }
 }

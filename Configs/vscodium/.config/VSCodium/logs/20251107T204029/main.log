@@ -1,0 +1,15 @@
+2025-11-07 20:40:29.352 [info] update#setState disabled
+2025-11-07 20:40:29.352 [info] update#ctor - updates are disabled as there is no update URL
+2025-11-07 20:40:54.824 [info] Extension host with pid 6421 exited with code: 0, signal: unknown.
+2025-11-07 21:05:23.566 [info] Extension host with pid 6810 exited with code: 0, signal: unknown.
+2025-11-07 21:05:23.621 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 6796]: crashed with code 15 and reason 'killed'
+2025-11-07 22:04:28.314 [error] CodeWindow: failed to load (reason: <unknown>, code: -3)
+2025-11-07 22:05:00.117 [error] CodeWindow: failed to load (reason: <unknown>, code: -3)
+2025-11-07 22:11:55.688 [error] CodeWindow: failed to load (reason: <unknown>, code: -3)
+2025-11-07 22:45:40.957 [error] CodeWindow: failed to load (reason: <unknown>, code: -3)
+2025-11-07 23:54:31.998 [error] [UtilityProcess type: shared-process, pid: 6435]: crashed with code 15 and reason 'killed'
+2025-11-07 23:54:32.014 [info] Extension host with pid 36747 exited with code: 15, signal: unknown.
+2025-11-07 23:54:32.015 [error] [UtilityProcess id: 3, type: extensionHost, pid: 36747]: crashed with code 15 and reason 'killed'
+2025-11-07 23:54:32.045 [error] [UtilityProcessWorker]: terminated unexpectedly with code 15, signal: unknown
+2025-11-07 23:54:32.045 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 36734]: crashed with code 15 and reason 'killed'
+2025-11-07 23:54:32.049 [error] CodeWindow: renderer process gone (reason: clean-exit, code: <unknown>)

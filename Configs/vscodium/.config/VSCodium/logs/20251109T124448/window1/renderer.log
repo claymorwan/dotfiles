@@ -1,0 +1,17 @@
+2025-11-09 12:44:49.356 [info] Started local extension host with pid 131364.
+2025-11-09 12:44:50.671 [error] Cannot read properties of undefined (reading 'extensionId'): TypeError: Cannot read properties of undefined (reading 'extensionId')
+    at t (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:2745)
+    at tIt.recommendRemoteExtensionIfNeeded (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:3495)
+2025-11-09 12:44:52.181 [info] [perf] Render performance baseline is 40ms
+2025-11-09 12:46:31.963 [warning] [backup tracker] suspended, ignoring unregister event file:///mnt/media/Programmation/Docs/DankLinux-Docs/package.json 
+2025-11-09 12:46:32.693 [info] Started local extension host with pid 132542.
+2025-11-09 12:46:34.335 [error] Cannot read properties of undefined (reading 'extensionId'): TypeError: Cannot read properties of undefined (reading 'extensionId')
+    at t (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:2745)
+    at tIt.recommendRemoteExtensionIfNeeded (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:3495)
+2025-11-09 12:46:35.790 [info] [perf] Render performance baseline is 26ms
+2025-11-09 12:47:53.976 [info] Started local extension host with pid 133365.
+2025-11-09 12:47:55.232 [error] Cannot read properties of undefined (reading 'extensionId'): TypeError: Cannot read properties of undefined (reading 'extensionId')
+    at t (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:2745)
+    at tIt.recommendRemoteExtensionIfNeeded (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:3495)
+2025-11-09 12:47:56.961 [info] [perf] Render performance baseline is 63ms
+2025-11-09 12:48:33.934 [warning] [backup tracker] suspended, ignoring unregister event file:///mnt/media/Programmation/Docs/DankLinux-Docs/package.json 

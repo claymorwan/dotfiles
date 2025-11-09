@@ -1,0 +1,6 @@
+2025-11-07 20:40:56.862 [info] [project] Creating project:/mnt/media/Programmation/Qml/DankMaterialShell
+2025-11-07 20:40:56.862 [info] [qmlls] Fetching release information
+2025-11-07 20:40:57.560 [info] [qmlls] Status Check: Not Installed
+2025-11-07 21:05:23.560 [info] [extension] Deactivating qt-qml
+2025-11-07 21:05:23.560 [info] [project] Disposing project:/mnt/media/Programmation/Qml/DankMaterialShell
+2025-11-07 21:05:23.561 [warning] [qmlls] Canceled

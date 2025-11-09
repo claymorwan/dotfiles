@@ -1,0 +1,52 @@
+2025-11-09 12:56:06.277 [info] Extension host with pid 144939 started
+2025-11-09 12:56:06.277 [info] Skipping acquiring lock for /home/claymorwan/.config/VSCodium/User/workspaceStorage/f0d97e3da230485391c78414c15caad4.
+2025-11-09 12:56:06.587 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-11-09 12:56:06.618 [info] ExtensionService#_doActivateExtension unifiedjs.vscode-mdx, startup: false, activationEvent: 'onLanguage:mdx'
+2025-11-09 12:56:06.668 [info] ExtensionService#_doActivateExtension xyc.vscode-mdx-preview, startup: false, activationEvent: 'onLanguage:mdx'
+2025-11-09 12:56:07.474 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-11-09 12:56:07.477 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'api', root cause: unifiedjs.vscode-mdx
+2025-11-09 12:56:07.562 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2025-11-09 12:56:07.670 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-11-09 12:56:07.726 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-11-09 12:56:07.945 [info] Eager extensions activated
+2025-11-09 12:56:07.984 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-11-09 12:56:07.987 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-11-09 12:56:08.020 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2025-11-09 12:56:08.029 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc-icons, startup: false, activationEvent: 'onStartupFinished'
+2025-11-09 12:56:08.565 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-11-09 12:56:08.590 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-11-09 12:56:09.158 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-11-09 12:56:12.842 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-11-09 12:56:54.845 [info] Extension host terminating: renderer closed the MessagePort
+2025-11-09 12:56:54.868 [info] Extension host with pid 144939 exiting with code 0
+2025-11-09 12:56:56.046 [info] Extension host with pid 145727 started
+2025-11-09 12:56:56.046 [info] Skipping acquiring lock for /home/claymorwan/.config/VSCodium/User/workspaceStorage/a4161e986be6693b93e33e2a7cb53c40.
+2025-11-09 12:56:56.084 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2025-11-09 12:56:56.157 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-11-09 12:56:56.237 [info] Eager extensions activated
+2025-11-09 12:56:56.240 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-11-09 12:56:56.243 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-11-09 12:56:56.267 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2025-11-09 12:56:59.577 [info] Extension host terminating: renderer closed the MessagePort
+2025-11-09 12:56:59.582 [info] Extension host with pid 145727 exiting with code 0
+2025-11-09 12:57:00.644 [info] Extension host with pid 145869 started
+2025-11-09 12:57:00.644 [info] Skipping acquiring lock for /home/claymorwan/.config/VSCodium/User/workspaceStorage/f0d97e3da230485391c78414c15caad4.
+2025-11-09 12:57:00.685 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-11-09 12:57:00.690 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2025-11-09 12:57:00.735 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-11-09 12:57:00.798 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-11-09 12:57:01.014 [info] Eager extensions activated
+2025-11-09 12:57:01.018 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-11-09 12:57:01.052 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-11-09 12:57:01.054 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-11-09 12:57:01.075 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2025-11-09 12:57:01.082 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc-icons, startup: false, activationEvent: 'onStartupFinished'
+2025-11-09 12:57:01.312 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-11-09 12:57:01.322 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-11-09 12:57:01.384 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-11-09 12:57:01.640 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-11-09 12:57:03.042 [info] ExtensionService#_doActivateExtension unifiedjs.vscode-mdx, startup: false, activationEvent: 'onLanguage:mdx'
+2025-11-09 12:57:03.106 [info] ExtensionService#_doActivateExtension xyc.vscode-mdx-preview, startup: false, activationEvent: 'onLanguage:mdx'
+2025-11-09 12:57:06.513 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-11-09 13:06:01.555 [info] Extension host terminating: renderer closed the MessagePort
+2025-11-09 13:06:01.586 [info] Extension host with pid 145869 exiting with code 0

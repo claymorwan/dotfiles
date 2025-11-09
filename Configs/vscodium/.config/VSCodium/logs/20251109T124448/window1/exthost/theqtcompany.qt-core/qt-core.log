@@ -1,0 +1,10 @@
+2025-11-09 12:46:34.106 [info] [extension] Activating theqtcompany.qt-core
+2025-11-09 12:46:34.106 [info] [project] Creating project:"/mnt/media/Programmation/Qml/DankMaterialShell"
+2025-11-09 12:46:34.106 [info] [vcpkg] vcpkg is not installed
+2025-11-09 12:46:34.106 [info] [qtpaths] Found qtpaths in PATH: /usr/bin/qtpaths
+2025-11-09 12:46:34.106 [info] [qtpaths] /usr/bin/qtpaths already exists in the settings
+2025-11-09 12:46:34.106 [info] [project] Setting Qt installation root for /mnt/media/Programmation/Qml/DankMaterialShell to: 
+2025-11-09 12:46:34.106 [info] [project] Setting additional Qt paths for /mnt/media/Programmation/Qml/DankMaterialShell to: 
+2025-11-09 12:46:34.106 [info] [project] Config values initialized for:/mnt/media/Programmation/Qml/DankMaterialShell
+2025-11-09 12:47:53.195 [info] [extension] Deactivating qt-core
+2025-11-09 12:47:53.195 [info] [project] Disposing project:/mnt/media/Programmation/Qml/DankMaterialShell
