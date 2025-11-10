@@ -1,0 +1,5 @@
+2025-11-10 22:06:27.560 [info] Log level: Info
+2025-11-10 22:06:28.153 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-10 22:07:25.555 [info] Log level: Info
+2025-11-10 22:07:28.663 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-10 22:09:08.183 [warning] [GitHubSourceControlHistoryItemDetailsProvider][_loadAssignableUsers] Failed to load assignable user(s) for claymorwan/floaty-ui: Error: No GitHub authentication session available.
