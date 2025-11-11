@@ -113,10 +113,10 @@
   "waveProgressEnabled": true,
   "clockCompactMode": false,
   "focusedWindowCompactMode": false,
-  "runningAppsCompactMode": true,
+  "runningAppsCompactMode": false,
   "keyboardLayoutNameCompactMode": true,
   "runningAppsCurrentWorkspace": false,
-  "runningAppsGroupByApp": false,
+  "runningAppsGroupByApp": true,
   "clockDateFormat": "",
   "lockDateFormat": "",
   "mediaSize": 1,
@@ -127,10 +127,6 @@
     },
     {
       "id": "focusedWindow",
-      "enabled": true
-    },
-    {
-      "id": "dankPomodoroTimer",
       "enabled": true
     }
   ],
@@ -250,6 +246,7 @@
   "batterySuspendTimeout": 300,
   "batterySuspendBehavior": 0,
   "lockBeforeSuspend": true,
+  "preventIdleForMedia": false,
   "loginctlLockIntegration": true,
   "launchPrefix": "app2unit --",
   "brightnessDevicePins": {},

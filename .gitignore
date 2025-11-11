@@ -8,3 +8,16 @@ hypr/.config/hypr/hypridle.conf*
 hypr/.config/hypr/hyprlock.conf*
 
 Configs/dms/.config/DankMaterialShell/plugins/
+
+# vscodium
+Configs/vscodium/.config/VSCodium/Cache/
+Configs/vscodium/.config/VSCodium/CacheData/
+Configs/vscodium/.config/VSCodium/Code Cache/
+Configs/vscodium/.config/VSCodium/DawnGraphiteCache/
+Configs/vscodium/.config/VSCodium/DawnWebGPUCache/
+Configs/vscodium/.config/VSCodium/GPUCache/
+Configs/vscodium/.config/VSCodium/Local Storage/
+Configs/vscodium/.config/VSCodium/Service Worker/
+Configs/vscodium/.config/VSCodium/Session Storage/
+Configs/vscodium/.config/VSCodium/Shared Dictionary/
+Configs/vscodium/.config/VSCodium/User/History/

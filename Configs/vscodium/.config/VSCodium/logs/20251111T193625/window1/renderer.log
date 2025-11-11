@@ -1,0 +1,11 @@
+2025-11-11 19:36:26.727 [info] Started local extension host with pid 128583.
+2025-11-11 19:36:28.302 [error] Cannot read properties of undefined (reading 'extensionId'): TypeError: Cannot read properties of undefined (reading 'extensionId')
+    at t (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:2745)
+    at tIt.recommendRemoteExtensionIfNeeded (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:3495)
+2025-11-11 19:36:29.543 [info] [perf] Render performance baseline is 40ms
+2025-11-11 19:37:11.915 [warning] [backup tracker] suspended, ignoring unregister event file:///mnt/media/Programmation/Docs/DankLinux-Docs/package.json 
+2025-11-11 19:37:12.508 [info] Started local extension host with pid 129030.
+2025-11-11 19:37:15.342 [error] Cannot read properties of undefined (reading 'extensionId'): TypeError: Cannot read properties of undefined (reading 'extensionId')
+    at t (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:2745)
+    at tIt.recommendRemoteExtensionIfNeeded (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:3495)
+2025-11-11 19:37:17.167 [info] [perf] Render performance baseline is 26ms
