@@ -1,6 +1,6 @@
 {
   "currentThemeName": "custom",
-  "customThemeFile": "/home/claymorwan/colors-mauve.json",
+  "customThemeFile": "/home/claymorwan/.dotfiles/Submodules/catppuccin/monorepo/dank-material-shell/themes/mocha-latte/colors-mauve.json",
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "",
@@ -11,7 +11,7 @@
   "widgetBackgroundColor": "sch",
   "cornerRadius": 14,
   "use24HourClock": true,
-  "showSeconds": false,
+  "showSeconds": true,
   "useFahrenheit": false,
   "nightModeEnabled": false,
   "animationSpeed": 0,
@@ -113,10 +113,10 @@
   "waveProgressEnabled": true,
   "clockCompactMode": false,
   "focusedWindowCompactMode": false,
-  "runningAppsCompactMode": false,
+  "runningAppsCompactMode": true,
   "keyboardLayoutNameCompactMode": true,
   "runningAppsCurrentWorkspace": false,
-  "runningAppsGroupByApp": true,
+  "runningAppsGroupByApp": false,
   "clockDateFormat": "",
   "lockDateFormat": "",
   "mediaSize": 1,
@@ -127,6 +127,10 @@
     },
     {
       "id": "focusedWindow",
+      "enabled": true
+    },
+    {
+      "id": "dankPomodoroTimer",
       "enabled": true
     }
   ],
