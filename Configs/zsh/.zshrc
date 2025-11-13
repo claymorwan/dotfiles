@@ -38,9 +38,7 @@ ZSH_THEME="alanpeabody"
 plugins=(
 	git
 	git-lfs
-	gh
 	python
-	dotnet
 	paru
 	flatpak
 	bun
@@ -52,6 +50,9 @@ plugins=(
 	zsh-autocomplete
 	eza
 	archlinux
+	gh
+	dotnet
+	zoxide
 )
 
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
@@ -86,11 +87,10 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 [ -s "/home/claymorwan/.bun/_bun" ] && source "/home/claymorwan/.bun/_bun"
 
 
-
+eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 if [[ "$YAZI_SHELL_SKIP_CMD" != true ]]; then
 	ghosttime -t 3 -c brightmagenta
 	fetch
 fi
 
-## [/Completion]

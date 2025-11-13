@@ -72,8 +72,8 @@ keymap = [
 	{ on = "<C-->",     run = "hardlink",                    desc = "Hardlink yanked files" },
 	{ on = "Y",         run = "unyank",                      desc = "Cancel the yank status" },
 	{ on = "X",         run = "unyank",                      desc = "Cancel the yank status" },
-	{ on = "d",         run = "remove",                      desc = "Trash selected files" },
-	{ on = "D",         run = "remove --permanently",        desc = "Permanently delete selected files" },
+	{ on = ["d", "d"],         run = "remove",                      desc = "Trash selected files" },
+	{ on = ["d", "D"],         run = "remove --permanently",        desc = "Permanently delete selected files" },
 	{ on = "a",         run = "create",                      desc = "Create a file (ends with / for directories)" },
 	{ on = "r",         run = "rename --cursor=before_ext",  desc = "Rename selected file(s)" },
 	{ on = ";",         run = "shell --interactive",         desc = "Run a shell command" },
@@ -236,6 +236,21 @@ prepend_keymap = [
     # Jump
     { on = [ "g", "m" ], run = "plugin gvfs -- jump-to-device", desc = "Select device then jump to its mount point" },
     { on = [ "`", "`" ], run = "plugin gvfs -- jump-back-prev-cwd", desc = "Jump back to the position before jumped to device" },
+
+		# { on = "u", run = "plugin restore", desc = "Restore last deleted files/folders" },
+    # or use "d + u" like me
+    { on = ["d", "u"], run = "plugin restore", desc = "Restore last deleted files/folders" },
+
+    # Select files/folders to restore. Input item index or range separated by comma:
+    # - Restore a trashed file:
+    #      What file to restore [0..4]: 4
+    # - Restore multiple trashed files separated by comma, also support range:
+    #      What file to restore [0..3]: 0-2, 3
+
+    # This will throw error when there is existed file/folder
+    { on = [ "d", "U" ], run = "plugin restore -- --interactive", desc = "Restore deleted files/folders (Interactive)" },
+    # Or auto overwrite existed file/folder
+    # { on = [ "d", "U" ], run = "plugin restore -- --interactive --interactive-overwrite", desc = "Restore deleted files/folders (Interactive overwrite)" },
 ]
 
 

@@ -57,22 +57,22 @@
       "width": 50
     },
     {
-      "id": "bluetooth",
+      "id": "audioOutput",
       "enabled": true,
       "width": 50
     },
     {
       "id": "wifi",
       "enabled": true,
-      "width": 50
+      "width": 25
     },
     {
       "id": "builtin_vpn",
       "enabled": true,
-      "width": 50
+      "width": 25
     },
     {
-      "id": "audioOutput",
+      "id": "bluetooth",
       "enabled": true,
       "width": 50
     },
@@ -84,12 +84,12 @@
     {
       "id": "nightMode",
       "enabled": true,
-      "width": 50
+      "width": 25
     },
     {
       "id": "darkMode",
       "enabled": true,
-      "width": 50
+      "width": 25
     },
     {
       "id": "idleInhibitor",
