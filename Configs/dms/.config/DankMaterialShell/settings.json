@@ -257,6 +257,7 @@
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
+  "terminalsAlwaysDark": false,
   "showDock": true,
   "dockAutoHide": true,
   "dockGroupByApp": true,
@@ -297,6 +298,15 @@
   "notificationPopupPosition": 0,
   "osdAlwaysShowValue": true,
   "powerActionConfirm": true,
+  "powerMenuActions": [
+    "reboot",
+    "logout",
+    "poweroff",
+    "lock",
+    "suspend",
+    "restart"
+  ],
+  "powerMenuDefaultAction": "logout",
   "customPowerActionLock": "",
   "customPowerActionLogout": "",
   "customPowerActionSuspend": "",
