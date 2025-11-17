@@ -1,55 +1,35 @@
 {
-  "dankPomodoroTimer": {
-    "enabled": true
-  },
-  "exampleEmojiPlugin": {
-    "enabled": true
-  },
   "calculator": {
     "enabled": true,
     "noTrigger": true,
     "trigger": "="
   },
-  "worldClock": {
+  "dankPomodoroTimer": {
     "enabled": true
   },
-  "powerUsagePlugin": {
+  "dockerManager": {
     "enabled": true,
-    "selectedPopout": "battery"
-  },
-  "dankBatteryAlerts": {
-    "enabled": true
+    "terminalApp": "ghostty -e",
+    "groupByCompose": true
   },
   "emojiLauncher": {
     "enabled": true
   },
-  "grimblast": {
-    "enabled": true
-  },
-  "webSearch": {
-    "enabled": true,
-    "searchEngines": [
-      {
-        "id": "startpage",
-        "name": "Startpage",
-        "icon": "material:travel_explore",
-        "url": "https://www.startpage.com/do/dsearch?q=%s",
-        "keywords": [
-          "st"
-        ]
-      }
-    ]
-  },
   "linuxWallpaperEngine": {
     "enabled": true,
     "monitorScenes": {
-      "DP-1": "1987155227",
-      "eDP-1": "2807194539"
-    },
-    "sceneSettings": {
-      "1987155227": {
-        "fps": 30
-      }
+      "DP-1": "2807194539"
     }
+  },
+  "screenshot": {
+    "enabled": true,
+    "screenshotCmd": "grimblast",
+    "argArea": "area"
+  },
+  "webSearch": {
+    "enabled": true
+  },
+  "grimblast": {
+    "enabled": true
   }
 }

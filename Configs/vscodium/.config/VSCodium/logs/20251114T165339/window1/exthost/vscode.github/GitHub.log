@@ -1,0 +1,19 @@
+2025-11-14 16:53:42.369 [info] Log level: Info
+2025-11-14 16:53:44.003 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-14 16:56:51.512 [warning] [GitHubSourceControlHistoryItemDetailsProvider][_loadAssignableUsers] Failed to load assignable user(s) for claymorwan/DankMaterialShell: Error: No GitHub authentication session available.
+2025-11-14 17:26:56.988 [info] Log level: Info
+2025-11-14 17:26:57.366 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-14 18:38:34.170 [warning] [GitHubSourceControlHistoryItemDetailsProvider][_loadAssignableUsers] Failed to load assignable user(s) for claymorwan/DankLinux-Docs: Error: No GitHub authentication session available.
+2025-11-14 18:41:44.457 [info] Log level: Info
+2025-11-14 18:41:44.796 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-14 18:53:18.835 [info] Log level: Info
+2025-11-14 18:53:19.265 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-14 18:56:28.047 [info] Log level: Info
+2025-11-14 18:56:42.669 [info] Log level: Info
+2025-11-14 18:56:43.123 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-14 18:58:34.655 [info] Log level: Info
+2025-11-14 18:58:34.980 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-14 18:58:36.608 [warning] [GitHubSourceControlHistoryItemDetailsProvider][_loadAssignableUsers] Failed to load assignable user(s) for claymorwan/DankMaterialShell: Error: No GitHub authentication session available.
+2025-11-14 18:59:28.958 [info] Log level: Info
+2025-11-14 18:59:29.464 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-14 18:59:30.153 [warning] [GitHubSourceControlHistoryItemDetailsProvider][_loadAssignableUsers] Failed to load assignable user(s) for claymorwan/DankLinux-Docs: Error: No GitHub authentication session available.

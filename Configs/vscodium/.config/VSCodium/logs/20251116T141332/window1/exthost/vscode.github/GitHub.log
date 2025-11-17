@@ -1,0 +1,15 @@
+2025-11-16 14:13:36.031 [info] Log level: Info
+2025-11-16 14:13:36.233 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-16 14:13:47.527 [info] Log level: Info
+2025-11-16 14:13:47.825 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-16 17:05:46.704 [warning] [GitHubSourceControlHistoryItemDetailsProvider][_loadAssignableUsers] Failed to load assignable user(s) for claymorwan/DankMaterialShell: Error: No GitHub authentication session available.
+2025-11-16 17:07:08.639 [info] Log level: Info
+2025-11-16 17:07:09.506 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-16 17:07:47.386 [warning] [GitHubSourceControlHistoryItemDetailsProvider][_loadAssignableUsers] Failed to load assignable user(s) for claymorwan/DankLinux-Docs: Error: No GitHub authentication session available.
+2025-11-16 17:14:18.650 [info] Log level: Info
+2025-11-16 17:14:30.352 [info] Log level: Info
+2025-11-16 17:14:30.654 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-16 17:14:31.564 [warning] [GitHubSourceControlHistoryItemDetailsProvider][_loadAssignableUsers] Failed to load assignable user(s) for claymorwan/DankMaterialShell: Error: No GitHub authentication session available.
+2025-11-16 17:14:50.196 [info] Log level: Info
+2025-11-16 17:14:50.536 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-11-16 17:14:50.564 [warning] [GitHubSourceControlHistoryItemDetailsProvider][_loadAssignableUsers] Failed to load assignable user(s) for claymorwan/DankLinux-Docs: Error: No GitHub authentication session available.

@@ -7,9 +7,6 @@
         "folders": [
             {
                 "folderUri": "file:///mnt/media/Programmation/Docs/DankLinux-Docs"
-            },
-            {
-                "folderUri": "file:///mnt/media/Programmation/Qml/DankMaterialShell"
             }
         ],
         "emptyWindows": []
@@ -20,7 +17,8 @@
             "file:///mnt/media/Programmation/Qml/DankMaterialShell": "__default__profile__",
             "file:///mnt/media/Programmation/Docs/DankLinux-Docs": "__default__profile__",
             "file:///mnt/media/Programmation/Cursors/Akita-Neru": "__default__profile__",
-            "file:///mnt/media/Programmation/Webdev/Zen%20mods/floaty-ui": "__default__profile__"
+            "file:///mnt/media/Programmation/Webdev/Zen%20mods/floaty-ui": "__default__profile__",
+            "file:///mnt/media/Programmation/Docs": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -56,8 +54,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///mnt/media/Programmation/Qml/DankMaterialShell",
-            "backupPath": "/home/claymorwan/.config/VSCodium/Backups/434f6e103bb4c67d1cdf5ee4e0ce183a",
+            "folder": "file:///mnt/media/Programmation/Docs/DankLinux-Docs",
+            "backupPath": "/home/claymorwan/.config/VSCodium/Backups/99ba2df2e13f14cc52f458ce6266b215",
             "uiState": {
                 "mode": 0,
                 "x": 1920,
@@ -90,6 +88,10 @@
                     "auxiliaryBarVisible": false
                 },
                 "defab8fcb2b0789abd3ae76c0acae356": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "8b14be3629ffd029a789775c5a40acfe": {
                     "sideBarVisible": true,
                     "auxiliaryBarVisible": false
                 }

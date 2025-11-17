@@ -1,6 +1,6 @@
 {
   "currentThemeName": "custom",
-  "customThemeFile": "/home/claymorwan/.dotfiles/Submodules/catppuccin/monorepo/dank-material-shell/themes/mocha-latte/colors-mauve.json",
+  "customThemeFile": "/home/claymorwan/colors-mauve.json",
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "",
@@ -36,9 +36,14 @@
   "showNotificationButton": true,
   "showBattery": true,
   "showControlCenterButton": true,
+  "showCapsLockIndicator": true,
   "controlCenterShowNetworkIcon": true,
   "controlCenterShowBluetoothIcon": true,
   "controlCenterShowAudioIcon": true,
+  "showPrivacyButton": true,
+  "privacyShowMicIcon": false,
+  "privacyShowCameraIcon": false,
+  "privacyShowScreenShareIcon": false,
   "controlCenterWidgets": [
     {
       "id": "volumeSlider",
@@ -132,6 +137,14 @@
     {
       "id": "dankPomodoroTimer",
       "enabled": true
+    },
+    {
+      "id": "dockerManager",
+      "enabled": true
+    },
+    {
+      "id": "volume-mixer",
+      "enabled": true
     }
   ],
   "dankBarCenterWidgets": [
@@ -211,6 +224,7 @@
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
   "sortAppsAlphabetically": false,
+  "appLauncherGridColumns": 4,
   "weatherLocation": "New York, NY",
   "weatherCoordinates": "40.7128,-74.0060",
   "useAutoLocation": true,
@@ -254,6 +268,12 @@
   "loginctlLockIntegration": true,
   "launchPrefix": "app2unit --",
   "brightnessDevicePins": {},
+  "wifiNetworkPins": {
+    "preferredWifi": "Ackdar family couloir"
+  },
+  "bluetoothDevicePins": {},
+  "audioInputDevicePins": {},
+  "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
@@ -270,6 +290,7 @@
   "dockIndicatorStyle": "line",
   "notificationOverlayEnabled": false,
   "dankBarAutoHide": false,
+  "dankBarAutoHideDelay": 250,
   "dankBarOpenOnOverview": false,
   "dankBarVisible": true,
   "dankBarSpacing": 0,
@@ -297,6 +318,12 @@
   "notificationTimeoutCritical": 0,
   "notificationPopupPosition": 0,
   "osdAlwaysShowValue": true,
+  "osdVolumeEnabled": true,
+  "osdBrightnessEnabled": true,
+  "osdIdleInhibitorEnabled": true,
+  "osdMicMuteEnabled": true,
+  "osdCapsLockEnabled": true,
+  "osdPowerProfileEnabled": true,
   "powerActionConfirm": true,
   "powerMenuActions": [
     "reboot",
@@ -306,7 +333,8 @@
     "suspend",
     "restart"
   ],
-  "powerMenuDefaultAction": "logout",
+  "powerMenuDefaultAction": "suspend",
+  "powerMenuGridLayout": true,
   "customPowerActionLock": "",
   "customPowerActionLogout": "",
   "customPowerActionSuspend": "",
