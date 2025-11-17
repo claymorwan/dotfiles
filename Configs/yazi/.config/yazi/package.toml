@@ -1,7 +1,7 @@
 [[plugin.deps]]
 use = "boydaihungst/mediainfo"
-rev = "482be55"
-hash = "3e683a36cb7a5a565c6129404a0e7b8a"
+rev = "1099409"
+hash = "77e78e16578e8f5a37475c04d8324619"
 
 [[plugin.deps]]
 use = "ndtoan96/ouch"
