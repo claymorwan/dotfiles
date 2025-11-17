@@ -18,7 +18,8 @@
   "linuxWallpaperEngine": {
     "enabled": true,
     "monitorScenes": {
-      "DP-1": "2807194539"
+      "DP-1": "2807194539",
+      "eDP-1": "2858592399"
     }
   },
   "screenshot": {
@@ -30,6 +31,9 @@
     "enabled": true
   },
   "grimblast": {
+    "enabled": true
+  },
+  "hyprshot": {
     "enabled": true
   }
 }

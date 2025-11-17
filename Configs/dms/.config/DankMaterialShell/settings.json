@@ -1,6 +1,6 @@
 {
   "currentThemeName": "custom",
-  "customThemeFile": "/home/claymorwan/colors-mauve.json",
+  "customThemeFile": "/home/claymorwan/.dotfiles/Submodules/catppuccin/monorepo/dank-material-shell/themes/mocha-latte/colors-mauve.json",
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "",
@@ -182,7 +182,7 @@
       "enabled": true
     },
     {
-      "id": "grimblast",
+      "id": "hyprshot",
       "enabled": true
     }
   ],
@@ -318,12 +318,6 @@
   "notificationTimeoutCritical": 0,
   "notificationPopupPosition": 0,
   "osdAlwaysShowValue": true,
-  "osdVolumeEnabled": true,
-  "osdBrightnessEnabled": true,
-  "osdIdleInhibitorEnabled": true,
-  "osdMicMuteEnabled": true,
-  "osdCapsLockEnabled": true,
-  "osdPowerProfileEnabled": true,
   "powerActionConfirm": true,
   "powerMenuActions": [
     "reboot",
@@ -344,7 +338,20 @@
   "updaterUseCustomCommand": true,
   "updaterCustomCommand": "ecdysys -u",
   "updaterTerminalAdditionalParams": "",
-  "screenPreferences": {},
-  "showOnLastDisplay": {},
+  "screenPreferences": {
+    "dankBar": [
+      "all"
+    ],
+    "osd": [
+      "all"
+    ],
+    "notepad": [
+      "all"
+    ]
+  },
+  "showOnLastDisplay": {
+    "dankBar": true,
+    "osd": true
+  },
   "configVersion": 1
 }
