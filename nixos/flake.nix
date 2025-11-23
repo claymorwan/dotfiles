@@ -1,0 +1,59 @@
+{
+  description = "NixOS configuration";
+
+  inputs = {
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+    # home-manager, used for managing user configuration
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      # The `follows` keyword in inputs is used for inheritance.
+      # Here, `inputs.nixpkgs` of home-manager is kept consistent with
+      # the `inputs.nixpkgs` of the current flake,
+      # to avoid problems caused by different versions of nixpkgs.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    catppuccin.url = "github:catppuccin/nix";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
+    dgop = {
+      url = "github:AvengeMedia/dgop";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    dankMaterialShell = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.dgop.follows = "dgop";
+    };
+    
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+  };
+
+  outputs = inputs@{ nixpkgs, catppuccin, home-manager, nix-flatpak, zen-browser, ... }: {
+    nixosConfigurations = {
+      nixos = let
+        username = "claymorwan";
+        host = "nixos";
+        system = "x86_64-linux";
+	specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit host;
+          inherit system;
+        };
+      in
+        nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs username host system; }; # very important
+
+	  modules = [
+            nix-flatpak.nixosModules.nix-flatpak
+            ./hosts/${host}/configuration.nix
+	    #./modules/system
+            catppuccin.nixosModules.catppuccin
+            
+          ];
+        };
+      };
+    };
+}
