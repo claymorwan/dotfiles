@@ -28,7 +28,9 @@
     shellAliases = {
       sv = "sudo nvim";
       cls = "clear";
-      fetch = "clear; fastfetch; blahaj";
+      fetch = "clear; fastfetch;  blahaj -s -c trans";
+      nreload = "sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#$(hostname) --log-format bar-with-logs";
+      nupd = "sudo nixos-rebuild switch --recreate-lock-file --flake ~/.dotfiles/nixos#$(hostname) --log-format bar-with-logs";
     };
 
   };

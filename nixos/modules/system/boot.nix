@@ -25,6 +25,7 @@
             halt
           }
         '';
+	configurationLimit = 10;
       };
     };
 

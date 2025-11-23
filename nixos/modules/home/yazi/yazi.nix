@@ -1,6 +1,6 @@
 {
-  settings = {
-    manager = {
+  #settings = {
+    mgr = {
       ratio = [ 1 4 3 ];
       sort_by = "alphabetical";
       sort_sensitive = false;
@@ -284,5 +284,5 @@
       sort_reverse = false;
       sort_translit = false;
     };
-  };
+  #};
 }

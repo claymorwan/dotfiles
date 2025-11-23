@@ -30,30 +30,29 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
-  outputs = inputs@{ nixpkgs, catppuccin, home-manager, nix-flatpak, zen-browser, ... }: {
-    nixosConfigurations = {
-      nixos = let
-        username = "claymorwan";
-        host = "nixos";
-        system = "x86_64-linux";
-	specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit system;
-        };
-      in
-        nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs username host system; }; # very important
-
-	  modules = [
-            nix-flatpak.nixosModules.nix-flatpak
-            ./hosts/${host}/configuration.nix
-	    #./modules/system
-            catppuccin.nixosModules.catppuccin
-            
-          ];
-        };
+  outputs = inputs@{ nixpkgs, catppuccin, home-manager, nix-flatpak, zen-browser, ... }:
+    let
+      username = "claymorwan";
+      system = "x86_64-linux";
+      
+      mkNixosConfig = host: nixpkgs.lib.nixosSystem {
+        specialArgs = {
+	  inherit inputs;
+	  inherit username;
+	  inherit host;
+	  inherit system;
+	};
+	modules = [
+	  nix-flatpak.nixosModules.nix-flatpak
+	  ./hosts/${host}#/configuration.nix
+	  catppuccin.nixosModules.catppuccin
+	];
+      };
+    in
+    {
+      nixosConfigurations = {
+        nixos = mkNixosConfig "nixos";
+	nixos-laptop = mkNixosConfig "nixos-laptop";
       };
     };
 }

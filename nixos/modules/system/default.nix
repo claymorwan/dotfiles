@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./catppuccin.nix
     ./boot.nix
     ./dmsgreeter.nix
     ./flatpak.nix
