@@ -104,7 +104,7 @@
 	"animation fade, dms:(modal|confirm-modal|polkit|keybinds|power-menu|notification-center-modal|color-picker|clipboard|spotlight|settings|process-list-modal)"
 
 	# Blur
-	"blur, dms:(polkit|keybinds|notification-center-modal|workspace-overview|color-picker|clipboard|spotlight|settings|process-list-modal)"
+	"blur, dms:(polkit|keybinds|notification-center-modal|workspace-overview|color-picker|clipboard|spotlight|settings|process-list-modal):background"
 
 	"noscreenshare, dms:(notification-.*)"
       ];
