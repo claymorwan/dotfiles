@@ -6,6 +6,8 @@
     yazi
     speedtest-cli
 
+    equibop
+
     #adw-gtk3
     adwsteamgtk
     #papirus-icon-theme

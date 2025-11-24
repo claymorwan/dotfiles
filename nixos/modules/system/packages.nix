@@ -17,7 +17,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    neovim
+    #neovim
     bat
     fastfetch
     blahaj
@@ -29,6 +29,8 @@
     wget
     wl-clipboard
     app2unit
+    gnumake
+    gcc
   ];
 
 }

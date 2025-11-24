@@ -10,4 +10,5 @@
 
   # Dirs
   screenshot_dir = "$HOME/Pictures/Screenshots";
+  submodules_dir = "$HOME/.dotfiles/Submodules";
 }

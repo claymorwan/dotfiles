@@ -11,6 +11,7 @@
     ./ghostty.nix
     ./gtk.nix
     ./hyprland
+    ./neovim
     ./packages.nix
     ./qt.nix
     ./starship.nix

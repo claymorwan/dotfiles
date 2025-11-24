@@ -20,7 +20,7 @@ in
     # ###### app2unit Integration ######
     export APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice'
 
-    export EDITOR=nvim
+    #export EDITOR=nvim
   '';
 
   home.file.".config/uwsm/env-hyprland".text = ''
