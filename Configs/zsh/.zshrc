@@ -44,15 +44,15 @@ plugins=(
 	bun
 	rust
 	deno
-	zsh-autosuggestions
 	zsh-syntax-highlighting
 	fast-syntax-highlighting
-	zsh-autocomplete
 	eza
 	archlinux
 	gh
 	dotnet
 	zoxide
+	zsh-autosuggestions
+	zsh-autocomplete
 )
 
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
