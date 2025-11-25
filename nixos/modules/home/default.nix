@@ -4,7 +4,7 @@
   imports = [
     ./catppuccin.nix
     ./cursors
-    ./dms.nix
+    ./dms
     ./fastfetch
     #./flatpak.nix
     ./git.nix

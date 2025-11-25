@@ -2,8 +2,9 @@
 
 {
   imports = [
-    ./catppuccin.nix
     ./boot.nix
+    ./catppuccin.nix
+    ./clamav.nix
     ./dmsgreeter.nix
     ./flatpak.nix
     ./fonts.nix

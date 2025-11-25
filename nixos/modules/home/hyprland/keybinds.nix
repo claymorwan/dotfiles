@@ -35,8 +35,8 @@ in
 
       # Screenshots
       ", Print, exec, hyprshot -z -m output -o ${screenshot_dir} -- gradia"
-      "Ctrl, Print, exec, hyprshot -z -m output -o ${screenshot_dir} -- gradia"
-      "${mainMod}, Print, exec, hyprshot -z -m output -o ${screenshot_dir} -- gradia"
+      "Ctrl, Print, exec, hyprshot -z -m region -o ${screenshot_dir} -- gradia"
+      "${mainMod}, Print, exec, hyprshot -z -m window -o ${screenshot_dir} -- gradia"
 
      ];
    };

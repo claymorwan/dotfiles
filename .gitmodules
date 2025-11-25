@@ -46,3 +46,9 @@
 [submodule "Submodules/catppuccin/mangohud"]
 	path = Submodules/catppuccin/mangohud
 	url = https://github.com/catppuccin/mangohud.git
+[submodule "Submodules/dms/plugins/dms-wallpaperengine"]
+	path = Submodules/dms/plugins/dms-wallpaperengine
+	url = https://github.com/sgtaziz/dms-wallpaperengine
+[submodule "nixos/modules/home/dms/dms/plugins/dms-wallpaperengine"]
+	path = nixos/modules/home/dms/dms/plugins/dms-wallpaperengine
+	url = https://github.com/sgtaziz/dms-wallpaperengine

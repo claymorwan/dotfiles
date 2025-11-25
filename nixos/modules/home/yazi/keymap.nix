@@ -553,6 +553,16 @@
         run = "plugin smart-enter";
         desc = "Enter the child directory, or open the file";
       }
+
+      # Yamb
+      { on = [ "u" "a" ]; run = "plugin yamb save"; desc = "Add bookmark"; }
+      { on = [ "u" "g" ]; run = "plugin yamb jump_by_key"; desc = "Jump bookmark by key"; }
+      { on = [ "u" "G" ]; run = "plugin yamb jump_by_fzf"; desc = "Jump bookmark by fzf"; }
+      { on = [ "u" "d" ]; run = "plugin yamb delete_by_key"; desc = "Delete bookmark by key"; }
+      { on = [ "u" "D" ]; run = "plugin yamb delete_by_fzf"; desc = "Delete bookmark by fzf"; }
+      { on = [ "u" "A" ]; run = "plugin yamb delete_all"; desc = "Delete all bookmarks"; }
+      { on = [ "u" "r" ]; run = "plugin yamb rename_by_key"; desc = "Rename bookmark by key"; }
+      { on = [ "u" "R" ]; run = "plugin yamb rename_by_fzf"; desc = "Rename bookmark by fzf"; }
     ];
   };
   tasks = {

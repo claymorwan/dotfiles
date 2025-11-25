@@ -18,7 +18,7 @@
   "linuxWallpaperEngine": {
     "enabled": true,
     "monitorScenes": {
-      "DP-1": "2873539769"
+      "DP-1": "2216519976"
     }
   },
   "screenshot": {
@@ -27,7 +27,8 @@
     "argArea": "area"
   },
   "webSearch": {
-    "enabled": true
+    "enabled": true,
+    "searchEngines": []
   },
   "grimblast": {
     "enabled": true

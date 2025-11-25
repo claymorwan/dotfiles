@@ -9,6 +9,6 @@
   browser = "zen";
 
   # Dirs
-  screenshot_dir = "$HOME/Pictures/Screenshots";
-  submodules_dir = "$HOME/.dotfiles/Submodules";
+  screenshot_dir = "/home/claymorwan/Pictures/Screenshots";
+  submodules_dir = "/home/claymorwan/.dotfiles/Submodules";
 }

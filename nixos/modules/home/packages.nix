@@ -2,12 +2,12 @@
 
 {
   home.packages = with pkgs; [
-    ghostty
-    yazi
+    #ghostty
+    #yazi
     speedtest-cli
 
     equibop
-
+    gradia
     #adw-gtk3
     adwsteamgtk
     #papirus-icon-theme

@@ -29,8 +29,14 @@
     wget
     wl-clipboard
     app2unit
+    nurl
+
+    unzip
+
     gnumake
     gcc
+    python3
+    lua
   ];
 
 }
