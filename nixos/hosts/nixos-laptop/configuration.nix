@@ -13,9 +13,6 @@
     ];
 
   boot.initrd.luks.devices."luks-1cedacd2-a824-4e50-82b4-ebf194c70d2d".device = "/dev/disk/by-uuid/1cedacd2-a824-4e50-82b4-ebf194c70d2d";
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
