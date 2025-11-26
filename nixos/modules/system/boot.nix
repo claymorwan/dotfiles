@@ -30,7 +30,7 @@
     };
 
     kernelPackages = pkgs.linuxPackages_latest;
-    initrd.luks.devices."luks-d350cbe5-5f3e-4b16-96d2-3b4ecc608855".device = "/dev/disk/by-uuid/d350cbe5-5f3e-4b16-96d2-3b4ecc608855";
+    #initrd.luks.devices."luks-d350cbe5-5f3e-4b16-96d2-3b4ecc608855".device = "/dev/disk/by-uuid/d350cbe5-5f3e-4b16-96d2-3b4ecc608855";
 
     plymouth.enable = true;
   };

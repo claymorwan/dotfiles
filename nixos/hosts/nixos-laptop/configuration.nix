@@ -12,7 +12,7 @@
       ./../../modules/system
     ];
 
-  boot.initrd.luks.devices."luks-d350cbe5-5f3e-4b16-96d2-3b4ecc608855".device = "/dev/disk/by-uuid/d350cbe5-5f3e-4b16-96d2-3b4ecc608855";
+  boot.initrd.luks.devices."luks-1cedacd2-a824-4e50-82b4-ebf194c70d2d".device = "/dev/disk/by-uuid/1cedacd2-a824-4e50-82b4-ebf194c70d2d";
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;

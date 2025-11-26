@@ -24,6 +24,8 @@
 
     settings = {
 
+    monitor = ", preferred, auto, 1";
+
     general = {
       layout = "scrolling";
       gaps_in = 4;
