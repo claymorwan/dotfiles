@@ -31,6 +31,8 @@
     wget
     wl-clipboard
     app2unit
+    btop
+
     nurl
 
     unzip
@@ -41,7 +43,8 @@
     lua
 
     wineWowPackages.staging
-    # lutris
+    
+    vlc
   ];
 
 }

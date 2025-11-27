@@ -33,7 +33,27 @@
   },
   "webSearch": {
     "enabled": true,
-    "searchEngines": []
+    "searchEngines": [
+      {
+        "id": "nixpkgs",
+        "name": "Nixpkgs",
+        "icon": "unicode:",
+        "url": "https://search.nixos.org/packages?channel=unstable&query=%s",
+        "keywords": [
+          "nix"
+        ]
+      },
+      {
+        "id": "flathub",
+        "name": "Flathub",
+        "icon": "unicode:",
+        "url": "https://flathub.org/apps/search?q=%s",
+        "keywords": [
+          "fl"
+        ]
+      }
+    ],
+    "defaultEngine": "duckduckgo"
   },
   "grimblast": {
     "enabled": true

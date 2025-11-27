@@ -1,11 +1,6 @@
 { pkgs, ... }: 
 
 {
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
-    configPackages = [ pkgs.hyprland ];
-  };
   services = {
     flatpak = {
       enable = true;
@@ -14,7 +9,10 @@
       # Use the official Flatpak application ID (e.g., from flathub.org)
       # Examples:
       packages = [
+        "com.github.tchx84.Flatseal"
         "org.vinegarhq.Sober"
+        "app.zen_browser.zen"
+        # "net.lutris.Lutris"
         #"com.github.tchx84.Flatseal" #Manage flatpak permissions - should always have this
         #"com.rtosta.zapzap"              # WhatsApp client
         #"io.github.flattool.Warehouse"   # Manage flatpaks, clean data, remove flatpaks and deps

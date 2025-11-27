@@ -39,6 +39,11 @@
   "controlCenterShowNetworkIcon": true,
   "controlCenterShowBluetoothIcon": true,
   "controlCenterShowAudioIcon": true,
+  "controlCenterShowVpnIcon": false,
+  "controlCenterShowBrightnessIcon": false,
+  "controlCenterShowMicIcon": false,
+  "controlCenterShowBatteryIcon": false,
+  "controlCenterShowPrinterIcon": false,
   "showPrivacyButton": true,
   "privacyShowMicIcon": false,
   "privacyShowCameraIcon": false,
@@ -175,11 +180,15 @@
   "launchPrefix": "app2unit --",
   "brightnessDevicePins": {},
   "wifiNetworkPins": {
-    "preferredWifi": "FORMATION LFJM"
+    "preferredWifi": "Ackdar family couloir"
   },
   "bluetoothDevicePins": {},
-  "audioInputDevicePins": {},
-  "audioOutputDevicePins": {},
+  "audioInputDevicePins": {
+    "preferredInput": "alsa_input.usb-Razer_Razer_Kraken_V3_HyperSense_000000000001-00.analog-stereo"
+  },
+  "audioOutputDevicePins": {
+    "preferredOutput": "alsa_output.usb-Razer_Razer_Kraken_V3_HyperSense_000000000001-00.analog-stereo"
+  },
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
@@ -214,6 +223,7 @@
   "osdCapsLockEnabled": true,
   "osdPowerProfileEnabled": false,
   "powerActionConfirm": true,
+  "powerActionHoldDuration": 1,
   "powerMenuActions": [
     "reboot",
     "logout",
@@ -278,6 +288,10 @@
         },
         {
           "id": "volume-mixer",
+          "enabled": true
+        },
+        {
+          "id": "network_speed_monitor",
           "enabled": true
         }
       ],

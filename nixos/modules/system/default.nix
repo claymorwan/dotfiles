@@ -9,6 +9,7 @@
     ./flatpak.nix
     ./fonts.nix
     ./networking.nix
+    ./nh.nix
     ./packages.nix
     ./printing.nix
     ./service.nix
