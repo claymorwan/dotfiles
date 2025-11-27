@@ -12,11 +12,11 @@
       ./../../modules/system
     ];
 
-  boot.initrd.luks.devices."luks-9f016025-97b5-4c03-abea-d3ed5b8ad2b4".device = "/dev/disk/by-uuid/9f016025-97b5-4c03-abea-d3ed5b8ad2b4";
+  boot.initrd.luks.devices."luks-d350cbe5-5f3e-4b16-96d2-3b4ecc608855".device = "/dev/disk/by-uuid/d350cbe5-5f3e-4b16-96d2-3b4ecc608855";
   
   # Enable the KDE Plasma Desktop Environment.
-  #services.displayManager.sddm.enable = true;
-  #services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

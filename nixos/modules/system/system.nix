@@ -1,4 +1,4 @@
-{ host, ... }:
+{ host, pkgs, options, ... }:
 
 {
   nix = {
@@ -13,11 +13,19 @@
     };
   };
 
-  programs.nh = {
-    enable = true;
-    clean.enable = false;
-    clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "~/.dotfiles/nixos#${host}"; # sets NH_OS_FLAKE variable for you
+  programs = {
+    nh = {
+      enable = true;
+      clean.enable = false;
+      clean.extraArgs = "--keep-since 4d --keep 3";
+      # flake = "~/.dotfiles/nixos#${host}"; # sets NH_OS_FLAKE variable for you
+    };
+    nix-ld = {
+      enable = true;
+
+      libraries = [(pkgs.runCommand "steamrun-lib" {}
+  "mkdir $out; ln -s ${pkgs.steam-run.fhsenv}/usr/lib64 $out/lib")];
+    };
   };
 
   time.timeZone = "Africa/Dakar";

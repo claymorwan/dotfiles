@@ -3,6 +3,9 @@
 {
   wayland.windowManager.hyprland = {
     settings = {
+
+    	"$blur_modal" = "dms:(polkit|keybinds|notification-center-modal|workspace-overview|color-picker|clipboard|spotlight|settings|process-list-modal):background";
+
       windowrule = [
         # Tile
 				"tile, class:Godot, initialTitle:Godot"
@@ -31,7 +34,7 @@
 				"float, class:be.alexandervanhee.gradia"
 				"float, class:qalculate-gtk"
 				"float, class:com-abdownloadmanager-desktop-AppKt, title:Add Download"
-
+				"float, class:org.quickshell, title:Settings"
 				# Float and resize
 				"float, class:org\.gnome\.Settings"
 				"size 70% 80%, class:org\.gnome\.Settings"
@@ -103,7 +106,8 @@
 				"animation fade, dms:(modal|confirm-modal|polkit|keybinds|power-menu|notification-center-modal|color-picker|clipboard|spotlight|settings|process-list-modal)"
 
 				# Blur
-				"blur, dms:(polkit|keybinds|notification-center-modal|workspace-overview|color-picker|clipboard|spotlight|settings|process-list-modal):background"
+				"blur, $blur_modal"
+				"animation fade, $blur_modal"
 
 				"noscreenshare, dms:(notification-.*)"
 

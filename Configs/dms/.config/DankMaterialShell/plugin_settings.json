@@ -18,7 +18,12 @@
   "linuxWallpaperEngine": {
     "enabled": true,
     "monitorScenes": {
-      "DP-1": "2216519976"
+      "DP-1": "2873539769"
+    },
+    "sceneSettings": {
+      "2873539769": {
+        "fps": 30
+      }
     }
   },
   "screenshot": {

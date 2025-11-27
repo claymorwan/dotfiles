@@ -18,6 +18,7 @@
     lutris
     gamemode
     mangohud
+    # umu-launcher
     prismlauncher
 
     linux-wallpaperengine

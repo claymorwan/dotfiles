@@ -39,6 +39,9 @@
     gcc
     python3
     lua
+
+    wineWowPackages.staging
+    # lutris
   ];
 
 }

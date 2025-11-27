@@ -10,6 +10,7 @@
 
     gamescope = {
       enable = true;
+
       capSysNice = true;
       args = [
         "--rt"
