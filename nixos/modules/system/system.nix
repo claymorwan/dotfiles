@@ -1,4 +1,4 @@
-{ host, pkgs, options, ... }:
+{ host, pkgs, options, username, ... }:
 
 {
   nix = {
@@ -7,7 +7,7 @@
       auto-optimise-store = true;
     };
     gc = {
-      automatic = true;
+      automatic = false;
       dates = "weekly";
       options = "--delete-older-than 1w";
     };
@@ -16,15 +16,22 @@
   programs = {
     nh = {
       enable = true;
-      clean.enable = false;
+      clean.enable = true;
       clean.extraArgs = "--keep-since 4d --keep 3";
-      # flake = "~/.dotfiles/nixos#${host}"; # sets NH_OS_FLAKE variable for you
+      flake = "/home/${username}/.dotfiles/nixos"; # sets NH_OS_FLAKE variable for you
     };
     nix-ld = {
       enable = true;
 
-      libraries = [(pkgs.runCommand "steamrun-lib" {}
-  "mkdir $out; ln -s ${pkgs.steam-run.fhsenv}/usr/lib64 $out/lib")];
+      libraries = pkgs.steam-run.args.multiPkgs pkgs ++ ( with pkgs; [
+        # libunarr
+        # kdePackages.qtbase
+        # kdePackages.qtmultimedia
+        # libx11
+        # wayland
+      ]);
+      #[(pkgs.runCommand "steamrun-lib" {}
+  #"mkdir $out; ln -s ${pkgs.steam-run.fhsenv}/usr/lib64 $out/lib")];
     };
   };
 

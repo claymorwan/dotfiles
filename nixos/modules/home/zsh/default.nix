@@ -43,6 +43,8 @@
       sv = "sudo nvim";
       cls = "clear";
       fetch = "clear; fastfetch;  blahaj -s -c trans";
+
+      # nreload = "nh os switch -H ${host}"
       nreload = "sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#${host} --log-format bar-with-logs";
       nupd = "sudo nixos-rebuild switch --recreate-lock-file --flake ~/.dotfiles/nixos#${host} --log-format bar-with-logs";
     };

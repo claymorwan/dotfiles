@@ -21,6 +21,8 @@
     # umu-launcher
     prismlauncher
 
+    obsidian
+
     linux-wallpaperengine
   ];
 }
