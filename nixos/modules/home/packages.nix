@@ -9,6 +9,7 @@
     #ghostty
     #yazi
     speedtest-cli
+    scrcpy
 
     equibop
     gradia
