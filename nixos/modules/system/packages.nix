@@ -25,7 +25,8 @@
     blahaj
     tuckr
     eza
-    ffmpeg
+    fd
+    ffmpeg-full
     uwsm
     v4l-utils
     wget
@@ -34,12 +35,14 @@
     btop
 
     nurl
+    update-nix-fetchgit
 
     unzip
 
     gnumake
     gcc
     python3
+    uv
     lua
 
     wineWowPackages.staging

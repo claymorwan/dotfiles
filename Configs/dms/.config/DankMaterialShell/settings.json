@@ -230,7 +230,8 @@
     "poweroff",
     "lock",
     "suspend",
-    "restart"
+    "restart",
+    "hibernate"
   ],
   "powerMenuDefaultAction": "suspend",
   "powerMenuGridLayout": true,

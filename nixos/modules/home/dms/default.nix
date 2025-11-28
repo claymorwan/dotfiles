@@ -70,10 +70,10 @@ in
       dms-emoji-launcher = {
         enable = true;
         src = pkgs.fetchFromGitHub {
-          owner = "rochacbruno";
-          repo = "DankCalculator";
-          rev = "de6dbd59b7630e897a50e107f704c1cd4a131128";
-          hash = "sha256-Vq+E2F2Ym5JdzjpCusRMDXd6uuAhhjAehyD/tO3omdY=";
+          owner = "devnullvoid";
+          repo = "dms-emoji-launcher";
+          rev = "2951ec7f823c983c11b6b231403581a386a7c9f6";
+          hash = "sha256-aub5pXRMlMs7dxiv5P+/Rz/dA4weojr+SGZAItmbOvo=";
         };
       };
 

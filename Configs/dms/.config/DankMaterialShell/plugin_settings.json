@@ -18,7 +18,8 @@
   "linuxWallpaperEngine": {
     "enabled": true,
     "monitorScenes": {
-      "DP-1": "2873539769"
+      "DP-1": "2873539769",
+      "eDP-1": "2858592399"
     },
     "sceneSettings": {
       "2873539769": {
@@ -37,7 +38,7 @@
       {
         "id": "nixpkgs",
         "name": "Nixpkgs",
-        "icon": "unicode:",
+        "icon": "unicode:",
         "url": "https://search.nixos.org/packages?channel=unstable&query=%s",
         "keywords": [
           "nix"
