@@ -34,7 +34,8 @@
 				"float, class:be.alexandervanhee.gradia"
 				"float, class:qalculate-gtk"
 				"float, class:com-abdownloadmanager-desktop-AppKt, title:Add Download"
-				"float, class:org.quickshell, title:Settings"
+				"float, class:org.quickshell"
+				"float, title:Select what to share"
 				# Float and resize
 				"float, class:org\.gnome\.Settings"
 				"size 70% 80%, class:org\.gnome\.Settings"

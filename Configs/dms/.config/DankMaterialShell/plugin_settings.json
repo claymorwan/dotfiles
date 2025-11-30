@@ -19,7 +19,8 @@
     "enabled": true,
     "monitorScenes": {
       "DP-1": "2873539769",
-      "eDP-1": "2858592399"
+      "eDP-1": "2858592399",
+      "HDMI-A-1": "2497747884"
     },
     "sceneSettings": {
       "2873539769": {
@@ -51,6 +52,15 @@
         "url": "https://flathub.org/apps/search?q=%s",
         "keywords": [
           "fl"
+        ]
+      },
+      {
+        "id": "hmopt",
+        "name": "Home Manager options",
+        "icon": "unicode:",
+        "url": "https://home-manager-options.extranix.com/?query=%s&release=master",
+        "keywords": [
+          "hm"
         ]
       }
     ],

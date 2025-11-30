@@ -286,14 +286,6 @@
         {
           "id": "dockerManager",
           "enabled": true
-        },
-        {
-          "id": "volume-mixer",
-          "enabled": true
-        },
-        {
-          "id": "network_speed_monitor",
-          "enabled": true
         }
       ],
       "centerWidgets": [
@@ -337,16 +329,13 @@
       ],
       "rightWidgets": [
         {
-          "id": "systemUpdate",
-          "enabled": true
-        },
-        {
           "id": "cpuUsage",
           "enabled": true
         },
         {
           "id": "memUsage",
-          "enabled": true
+          "enabled": true,
+          "showSwap": true
         },
         {
           "id": "keyboard_layout_name",

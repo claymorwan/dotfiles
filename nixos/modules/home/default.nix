@@ -6,7 +6,8 @@
     ./cursors
     ./dms
     ./fastfetch
-    #./flatpak.nix
+    ./flatpak.nix
+    ./gaming
     ./git.nix
     ./ghostty.nix
     ./gtk.nix
@@ -17,7 +18,7 @@
     ./qt.nix
     ./starship.nix
     ./uwsm.nix
-    ./xdg.nix
+    ./xdg
     ./yazi
     ./zen.nix
     ./zsh

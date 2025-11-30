@@ -8,10 +8,39 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ config.boot.kernelPackages.linux_6_17.rtl88x2bu ];
+  boot = {
+
+  blacklistedKernelModules = [ "rtw88_8822bu" "rtw88_usb" "rtw88_core" ];
+  kernelModules = [ "kvm-amd" ];
+
+    initrd = {
+      availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
+      kernelModules = [ ];
+    };
+
+    extraModulePackages = [ 
+      # config.boot.kernelPackages.rtl88x2bu
+      (config.boot.kernelPackages.callPackage ./../../packages/rtl88x2bu.nix {})
+    ];
+
+    # extraModulePackages = let
+    #   rtl88x2bu-git = config.boot.kernelPackages.rtl88x2bu.overrideAttrs (old: {
+    #     pname = "rtl88x2bu-git";
+    #     version = "unstable-master";
+    #     src = pkgs.fetchFromGitHub {
+    #       owner = "RinCat";
+    #       repo = "RTL88x2BU-Linux-Driver";
+    #       rev = "master";
+    #       hash = "sha256-P6MnpkWInsOwn9RhPmH7QbGqK7ezJlzp84q7GBoI41g=";
+    #     };
+    #     meta = old.meta // { broken = false; };
+    #   });
+    # in [ rtl88x2bu-git ];
+
+    extraModprobeConfig = ''
+      options 88x2bu rtw_switch_usb_mode=1
+    '';
+  };
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/af302a1e-651a-43b6-8fd8-bbae3ea37366";

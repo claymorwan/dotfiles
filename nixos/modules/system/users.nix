@@ -9,8 +9,8 @@
     users.${username} = {
       imports = [
         ./../home
-	#inputs.nix-flatpak.nixosModules.nix-flatpak
-	inputs.catppuccin.homeModules.catppuccin
+	      inputs.nix-flatpak.homeManagerModules.nix-flatpak
+	      inputs.catppuccin.homeModules.catppuccin
       ];
       home = {
         username = "${username}";

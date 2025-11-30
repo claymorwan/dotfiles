@@ -1,6 +1,12 @@
 {
   mgr = {
     keymap = [
+      # dragon-drop
+      { on = [ "<C-n>" ]; run = ''shell 'dragon-drop -x -i -T "$1"' --confirm''; }
+      
+      # chmod
+      { on = ["c" "m" ]; run = "plugin chmod"; desc = "Chmod on selected files"; }
+
       {
         on = "<Esc>";
         run = "escape";
@@ -553,6 +559,13 @@
         run = "plugin smart-enter";
         desc = "Enter the child directory, or open the file";
       }
+
+      # Compress
+      { on = [ "c" "a" "a" ]; run = "plugin compress"; desc = "Archive selected files"; }
+      { on = [ "c" "a" "p" ]; run = "plugin compress -p"; desc = "Archive selected files (password)"; }
+      { on = [ "c" "a" "h" ]; run = "plugin compress -ph"; desc = "Archive selected files (password+header)"; }
+      { on = [ "c" "a" "l" ]; run = "plugin compress -l"; desc = "Archive selected files (compression level)"; }
+      { on = [ "c" "a" "u" ]; run = "plugin compress -phl"; desc = "Archive selected files (password+header+level)"; }
 
       # Yamb
       { on = [ "u" "a" ]; run = "plugin yamb save"; desc = "Add bookmark"; }

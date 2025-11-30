@@ -10,7 +10,6 @@
       # Examples:
       packages = [
         "com.github.tchx84.Flatseal"
-        "org.vinegarhq.Sober"
         "app.zen_browser.zen"
         # "net.lutris.Lutris"
         #"com.github.tchx84.Flatseal" #Manage flatpak permissions - should always have this
@@ -25,7 +24,17 @@
         # Add other Flatpak IDs here, e.g., "org.mozilla.firefox"
       ];
 
-      # Optional: Automatically update Flatpaks when you run nixos-rebuild swit ch
+      overrides = {
+        global = {
+          Context = {
+            filesystems = [
+              "xdg-config/gtk-3.0"
+              "xdg-config/gtk-4.0"
+            ];
+          };
+        };
+      };
+
       update.onActivation = true;
     };
   };
