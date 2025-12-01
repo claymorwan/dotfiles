@@ -109,6 +109,20 @@
       "id": "doNotDisturb",
       "enabled": true,
       "width": 50
+    },
+    {
+      "id": "diskUsage",
+      "enabled": true,
+      "width": 50,
+      "instanceId": "min0rbzw031tlm9bf1e7xtdoeb91yh9",
+      "mountPath": "/"
+    },
+    {
+      "id": "diskUsage",
+      "enabled": true,
+      "width": 50,
+      "instanceId": "min0sid5jj3fhb7o20vsg9gstgha4te",
+      "mountPath": "/mnt/media"
     }
   ],
   "showWorkspaceIndex": false,

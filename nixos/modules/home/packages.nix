@@ -4,6 +4,8 @@
 
   programs = {
     firefox.enable = true;
+    btop.enable = true;
+    quickshell.enable = true;
   };
   home.packages = with pkgs; [
     speedtest-cli

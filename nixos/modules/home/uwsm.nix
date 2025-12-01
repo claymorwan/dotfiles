@@ -24,19 +24,19 @@ in
   '';
 
   home.file.".config/uwsm/env-hyprland".text = ''
-  # ######## Toolkit backends ########
-  export GDK_BACKEND='wayland,x11'
-  export QT_QPA_PLATFORM='wayland;xcb'
-  export SDL_VIDEODRIVER='wayland,x11'
-  export CLUTTER_BACKEND='wayland'
-  export ELECTRON_OZONE_PLATFORM_HINT='auto'
+    # ######## Toolkit backends ########
+    export GDK_BACKEND='wayland,x11'
+    export QT_QPA_PLATFORM='wayland;xcb'
+    export SDL_VIDEODRIVER='wayland,x11'
+    export CLUTTER_BACKEND='wayland'
+    export ELECTRON_OZONE_PLATFORM_HINT='auto'
 
-  # ####### XDG specifications #######
-  export XDG_CURRENT_DESKTOP=Hyprland
-  export XDG_SESSION_TYPE=wayland
-  export XDG_SESSION_DESKTOP=Hyprland
+    # ####### XDG specifications #######
+    export XDG_CURRENT_DESKTOP=Hyprland
+    export XDG_SESSION_TYPE=wayland
+    export XDG_SESSION_DESKTOP=Hyprland
 
-  # ############# Others #############
-  export _JAVA_AWT_WM_NONREPARENTING=1
+    # ############# Others #############
+    export _JAVA_AWT_WM_NONREPARENTING=1
   '';
 }

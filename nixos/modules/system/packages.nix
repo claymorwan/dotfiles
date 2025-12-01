@@ -32,7 +32,6 @@
     wget
     wl-clipboard
     app2unit
-    btop
 
     nurl
     update-nix-fetchgit

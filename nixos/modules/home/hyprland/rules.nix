@@ -45,7 +45,7 @@
 				"center 1, class:org\.pulseaudio\.pavucontrol|yad-icon-browser"
 				"float, class:nwg.*"
 				"size 50% 60%, class:nwg.*"
-				"float,  class:scrcpy"
+				"float,  class:.*scrcpy.*"
 				"size 302 673, class:scrcpy"
 				"keepaspectratio, class:scrcpy"
 				"float, title:terminal-filechooser"
