@@ -6,7 +6,6 @@ let
     mouse_cursor
     ;
 in
-
 {
   wayland.windowManager.hyprland.settings = {
     exec-once = [
@@ -17,8 +16,8 @@ in
       "bash -c 'wl-paste --watch cliphist store &'"
 
       # Cursors
-      "hyprctl setcursor ${mouse_cursor}-H 24"
-      "gsettings set org.gnome.desktop.interface cursor-theme ${mouse_cursor}-X"
+      # "hyprctl setcursor ${mouse_cursor}-H 24"
+      # "gsettings set org.gnome.desktop.interface cursor-theme ${mouse_cursor}-X"
       
       # Location provider and night light
       "/usr/lib/geoclue-2.0/demos/agent"

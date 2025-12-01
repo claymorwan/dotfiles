@@ -32,6 +32,7 @@
     wget
     wl-clipboard
     app2unit
+    rar
 
     nurl
     update-nix-fetchgit

@@ -1,7 +1,7 @@
 {
   mainMod = "SUPER";
   
-  mouse_cursor = "Akita-Neru";
+  mouse_cursor = "akita-neru";
 
   # Apps
   launch_prefix = "app2unit --";

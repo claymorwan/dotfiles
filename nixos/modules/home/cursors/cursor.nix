@@ -1,22 +1,25 @@
-{ lib, stdenvNoCC }:
+{ stdenvNoCC }:
 
+let
+  inherit
+    (import ./../../../variables/variables.nix)
+    mouse_cursor
+    ;
+in
 stdenvNoCC.mkDerivation {
-  pname = "akita-neru";
+  pname = "${mouse_cursor}";
   version = "0-unstable-2025-12-30";
 
-  src = ./.icons/Akita-Neru-X/cursors;
+  src = ./cursors/${mouse_cursor};
 
   installPhase = ''
     runHook preInstall
-    mkdir -p $out/share/icons/Akita-Neru/cursors
-    cp -r dist/* $out/share/icons/Akita-Neru/cursors
+    mkdir -p $out/share/icons/${mouse_cursor}
+    cp -r ./* $out/share/icons/${mouse_cursor}
     runHook postInstall
   '';
 
   meta = {
     description = "Cursor yayyy";
-    # homepage = "";
-    # license = ;
-    # maintainers = with lib.maintainers; [  ];
   };
 }

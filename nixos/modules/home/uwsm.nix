@@ -14,8 +14,8 @@ in
     # export QT_STYLE_OVERRIDE='kvantum'
     export QT_WAYLAND_DISABLE_WINDOWDECORATION='1'
     export QT_AUTO_SCREEN_SCALE_FACTOR='1'
-    export XCURSOR_THEME='${mouse_cursor}-X'
-    export XCURSOR_SIZE='24'
+    # export XCURSOR_THEME='${mouse_cursor}-X'
+    # export XCURSOR_SIZE='24'
 
     # ###### app2unit Integration ######
     export APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice'

@@ -1,22 +1,28 @@
 { pkgs, ... }:
 
+let
+  inherit
+    (import ./../../../variables/variables.nix)
+    mouse_cursor
+    ;
+in
 {
 
-  # home.pointerCursor = {
-  #   enable = true;
-  #
-  #   name = "WhiteSur Cursors";
-  #   package = pkgs.whitesur-cursors;
-  #
-  #   hyprcursor = { 
-  #     enable = true;
-  #     size = 24;
-  #   };
-  #   gtk.enable = true;
-  #   x11.enable = true;
-  # };
-  home.file.".icons" = {
-    source = ./.icons;
-    recursive = true;
+  home.pointerCursor = {
+    enable = true;
+
+    name = "${mouse_cursor}";
+    package = (pkgs.callPackage ./cursor.nix {});
+
+    hyprcursor = { 
+      enable = true;
+      size = 24;
+    };
+    gtk.enable = true;
+    x11.enable = true;
   };
+  # home.file.".icons" = {
+  #   source = ./.icons;
+  #   recursive = true;
+  # };
 }
