@@ -29,6 +29,8 @@
 
     linux-wallpaperengine
 
+    jetbrains.pycharm-professional
+
     kdePackages.gwenview
     kdePackages.kdenlive
     kdePackages.plasma-browser-integration

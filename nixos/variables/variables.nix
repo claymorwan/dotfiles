@@ -1,4 +1,10 @@
+let
+  username = "claymorwan";
+  home = "/home/${username}";
+  dotfiles = "${home}/.dotfiles";
+in
 {
+  username = "${username}";
   mainMod = "SUPER";
   
   mouse_cursor = "akita-neru";
@@ -9,6 +15,9 @@
   browser = "zen";
 
   # Dirs
-  screenshot_dir = "/home/claymorwan/Pictures/Screenshots";
-  submodules_dir = "/home/claymorwan/.dotfiles/Submodules";
+  home_dir = "${home}";
+  dotfiles_dir = "${dotfiles}";
+  flake_dir = "${dotfiles}/nixos";
+  screenshot_dir = "${home}/Pictures/Screenshots";
+  submodules_dir = "${dotfiles}/Submodules";
 }

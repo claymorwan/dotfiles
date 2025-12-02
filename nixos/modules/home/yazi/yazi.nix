@@ -142,6 +142,9 @@
           run = "font";
         }
       ];
+      prepend_previewers = [
+        { mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}"; run = "ouch --archive-icon=' ' --show-file-icons"; }
+      ];
       previewers = [
         {
           name = "*/";

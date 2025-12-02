@@ -576,6 +576,19 @@
       { on = [ "u" "A" ]; run = "plugin yamb delete_all"; desc = "Delete all bookmarks"; }
       { on = [ "u" "r" ]; run = "plugin yamb rename_by_key"; desc = "Rename bookmark by key"; }
       { on = [ "u" "R" ]; run = "plugin yamb rename_by_fzf"; desc = "Rename bookmark by fzf"; }
+      
+      # Clipboard
+      { on = "<C-y>"; run = "plugin wl-clipboard"; desc = "Copy selected"; }
+
+      # Lutris
+      { on = [ "L" "m" ]; run = "plugin lutris make"; desc = "Makes an install script"; }
+	    { on = [ "L" "i" ]; run = "plugin lutris install"; desc = "Install a Lutris install script"; }
+	    { on = [ "L" "a" ]; run = "plugin lutris add"; desc = "Makes and installs script"; }
+
+	    # Shell
+	    { on = ":"; run = "plugin shell block"; desc = "Run a shell command with your shell (block until finishes)"; }
+	    { on = ";"; run = "plugin shell noblock"; desc = "Run a shell command with your shell"; }
+	    { on = "!"; run = "plugin shell noskip"; desc = "Run a shell command with your shell (block until finishes and when return key is pressed)"; }
     ];
   };
   tasks = {

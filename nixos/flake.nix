@@ -11,6 +11,7 @@
 
     catppuccin.url = "github:catppuccin/nix";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    # nix-output-monitor.url = "github:maralorn/nix-output-monitor";
 
     dgop = {
       url = "github:AvengeMedia/dgop";
@@ -39,22 +40,23 @@
       
       mkNixosConfig = host: nixpkgs.lib.nixosSystem {
         specialArgs = {
-	  inherit inputs;
-	  inherit username;
-	  inherit host;
-	  inherit system;
-	};
-	modules = [
-	  nix-flatpak.nixosModules.nix-flatpak
-	  ./hosts/${host}#/configuration.nix
-	  catppuccin.nixosModules.catppuccin
-	];
+	        inherit inputs;
+	        inherit username;
+	        inherit host;
+	        inherit system;
+	      };
+
+	      modules = [
+	        nix-flatpak.nixosModules.nix-flatpak
+	        ./hosts/${host}
+	        catppuccin.nixosModules.catppuccin
+	      ];
       };
     in
     {
       nixosConfigurations = {
         nixos = mkNixosConfig "nixos";
-	nixos-laptop = mkNixosConfig "nixos-laptop";
+	      nixos-laptop = mkNixosConfig "nixos-laptop";
       };
     };
 }

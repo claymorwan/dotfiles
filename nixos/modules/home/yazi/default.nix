@@ -4,6 +4,13 @@ let
   settings = import ./yazi.nix;
   keymap = import ./keymap.nix;
   #theme = import ./theme.nix;
+  claymorwan-plugin = pkgs.fetchFromGitea {
+    domain = "codeberg.org";
+    owner = "claymorwan";
+    repo = "yazi-plugins";
+    rev = "49b134d972ace3a3144e34465b7e153412116255";
+    hash = "sha256-6Rb9IIiCl3NuO91jsWqZcAKMzP0Qo+fNq3WuglHejnk=";
+  };
 in
 {
   programs.yazi = {
@@ -15,6 +22,8 @@ in
     settings = settings;
     keymap = keymap;
     #theme = theme;
+    initLua = ./init.lua;
+
     plugins = {
       lazygit = pkgs.yaziPlugins.lazygit;
       full-border = pkgs.yaziPlugins.full-border;
@@ -22,6 +31,10 @@ in
       chmod = pkgs.yaziPlugins.chmod;
       starship = pkgs.yaziPlugins.starship;
       compress = pkgs.yaziPlugins.compress;
+      wl-clipboard = pkgs.yaziPlugins.wl-clipboard;
+      ouch = pkgs.yaziPlugins.ouch;
+      lutris = "${claymorwan-plugin}/lutris.yazi";
+      shell = "${claymorwan-plugin}/shell.yazi";
       yamb = pkgs.fetchFromGitHub {
         owner = "h-hg";
         repo = "yamb.yazi";
@@ -29,6 +42,10 @@ in
         hash = "sha256-NMxZ8/7HQgs+BsZeH4nEglWsRH2ibAzq7hRSyrtFDTA=";
       };
     };
-    initLua = ./init.lua;
   };
+  
+  # Packages for plugins
+  home.packages = with pkgs; [
+    ouch
+  ];
 }
