@@ -33,7 +33,7 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, catppuccin, home-manager, nix-flatpak, zen-browser, ... }:
+  outputs = inputs@{ nixpkgs, catppuccin, home-manager, nix-flatpak, ... }:
     let
       username = "claymorwan";
       system = "x86_64-linux";

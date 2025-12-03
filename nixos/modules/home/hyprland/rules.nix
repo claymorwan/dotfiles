@@ -107,7 +107,8 @@
 				"animation fade, dms:(modal|confirm-modal|polkit|keybinds|power-menu|notification-center-modal|color-picker|clipboard|spotlight|settings|process-list-modal)"
 
 				# Blur
-				# "blur, $blur_modal"
+				# "blur, dms:modal:background"
+				# "animation fade, dms:modal:background"
 				"animation fade, $blur_modal"
 
 				"noscreenshare, dms:(notification-.*)"
