@@ -34,5 +34,7 @@
     kdePackages.gwenview
     kdePackages.kdenlive
     kdePackages.plasma-browser-integration
+
+    intiface-central
   ];
 }

@@ -14,5 +14,6 @@
     # wine-discord-ipc-bridge
 
     # osu-lazer-bin
+    sm64coopdx
   ];
 }

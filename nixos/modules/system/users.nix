@@ -32,4 +32,5 @@
     ignoreShellProgramCheck = true;
   };
   nix.settings.allowed-users = [ "${username}" ];
+  services.accounts-daemon.enable = true;
 }

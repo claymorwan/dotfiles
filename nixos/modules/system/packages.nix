@@ -13,6 +13,12 @@
     };
 
     kdeconnect.enable = true;
+
+    # Apparently they already work so idk if i need this
+    # appimage = {
+    #   enable = true;
+    #   binfmt = true;
+    # };
   };
 
   # Allow unfree pkg

@@ -1,4 +1,4 @@
-{ pkgs, username, ... }:
+{ pkgs, username, inputs, system, ... }:
 
 let
   inherit
@@ -9,13 +9,17 @@ in
 {
   programs.nh = {
     enable = true;
+    package = pkgs.nh.overrideAttrs (_: {
+      runtimeDeps = [
+        inputs.nix-output-monitor.packages.${system}.default 
+      ];
+    });
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
     flake = "${flake_dir}"; # sets NH_OS_FLAKE variable for you
   };
 
   environment.systemPackages = with pkgs; [
-    # inputs.nix-output-monitor.packages.${pkgs.system}.default
-    nix-output-monitor
+    # nix-output-monitor
   ];
 }

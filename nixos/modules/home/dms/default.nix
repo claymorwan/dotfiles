@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, system, ... }:
 
 {
   imports = [
@@ -9,6 +9,8 @@
   # DMS
   programs.dankMaterialShell = {
     enable = true;
+
+    quickshell.package = inputs.quickshell.packages.${system}.default;
 
     systemd = {
       enable = true;             # Systemd service for auto-start

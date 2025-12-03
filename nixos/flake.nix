@@ -11,7 +11,16 @@
 
     catppuccin.url = "github:catppuccin/nix";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    # nix-output-monitor.url = "github:maralorn/nix-output-monitor";
+    nix-output-monitor.url = "github:maralorn/nix-output-monitor";
+
+    quickshell = {
+      # add ?ref=<tag> to track a tag
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+
+      # THIS IS IMPORTANT
+      # Mismatched system dependencies will lead to crashes and other issues.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     dgop = {
       url = "github:AvengeMedia/dgop";
@@ -25,7 +34,7 @@
     };
     
     zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake"; #/fix/add-alsa-and-pipewire-to-runtime-deps";
+      url = "github:0xc000022070/zen-browser-flake";
       inputs = {
         home-manager.follows = "home-manager";
         nixpkgs.follows = "nixpkgs";

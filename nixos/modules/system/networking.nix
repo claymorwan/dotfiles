@@ -52,6 +52,8 @@
         services = [
           "kdeconnect"
           "localsend"
+          "http"
+          "https"
         ];
       };
     };
