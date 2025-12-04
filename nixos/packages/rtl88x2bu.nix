@@ -14,8 +14,8 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "RinCat";
     repo = "RTL88x2BU-Linux-Driver";
-    rev = "471877314bd3e4b4a02896a8ffa98fb09559c72f";
-    hash = "sha256-P6MnpkWInsOwn9RhPmH7QbGqK7ezJlzp84q7GBoI41g=";
+    rev = "825556e195ecde9ce8f5f4cbad9953f398c8598e";
+    hash = "sha256-MkvVCWyMOCBzCRufbKMuaaFOPhokZdFnXHYnrAwBe6M=";
   };
 
   hardeningDisable = [ "pic" ];

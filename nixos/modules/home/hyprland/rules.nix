@@ -5,7 +5,6 @@
     settings = {
 
     	"$blur_modal" = "dms:(polkit|keybinds|notification-center-modal|workspace-overview|color-picker|clipboard|spotlight|settings|process-list-modal)";
-
       windowrule = [
         # Tile
 				"tile, class:Godot, initialTitle:Godot"
@@ -107,8 +106,8 @@
 				"animation fade, dms:(modal|confirm-modal|polkit|keybinds|power-menu|notification-center-modal|color-picker|clipboard|spotlight|settings|process-list-modal)"
 
 				# Blur
-				# "blur, dms:modal:background"
-				# "animation fade, dms:modal:background"
+				"blur, $blur_modal:background"
+				"animation fade, $blur_modal:background"
 				"animation fade, $blur_modal"
 
 				"noscreenshare, dms:(notification-.*)"
