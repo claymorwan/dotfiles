@@ -442,26 +442,15 @@
         run = "sort random --reverse=no";
         desc = "Sort randomly";
       }
-      {
-        on = [ "g" "h" ];
-        run = "cd ~";
-        desc = "Go home";
-      }
-      {
-        on = [ "g" "c" ];
-        run = "cd ~/.config";
-        desc = "Goto ~/.config";
-      }
-      {
-        on = [ "g" "d" ];
-        run = "cd ~/Downloads";
-        desc = "Goto ~/Downloads";
-      }
-      {
-        on = [ "g" "<Space>" ];
-        run = "cd --interactive";
-        desc = "Jump interactively";
-      }
+
+      { on = [ "g" "h" ]; run = "cd ~"; desc = "Go home"; }
+      { on = [ "g" "c" ]; run = "cd ~/.config"; desc = "Goto ~/.config"; }
+      { on = [ "g" "l" ]; run = "cd ~/.local"; desc = "Goto ~/.local"; }
+      { on = [ "g" "d" ]; run = "cd ~/Downloads"; desc = "Goto ~/Downloads"; }
+      { on = [ "g" "p" ]; run = "cd ~/Pictures"; desc = "Goto ~/Pictures"; }
+      { on = [ "g" "v" ]; run = "cd ~/Videos"; desc = "Goto ~/Videos "; }
+      { on = [ "g" "<Space>" ]; run = "cd --interactive"; desc = "Jump interactively"; }
+
       {
         on = "t";
         run = "tab_create --current";

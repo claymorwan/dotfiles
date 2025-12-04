@@ -1,13 +1,20 @@
+let
+  inherit
+    (import ./../../../variables/variables.nix)
+    flake_dir
+    ;
+in
 {
   programs.fastfetch = {
     enable = true;
 
     settings = {
-    #   logo = {
-    #     type = "kitty";
-				# source = "./NixOS.png";
-				# height = 17;
-    #   };
+      logo = {
+        type = "kitty";
+				source = "${flake_dir}/modules/home/fastfetch/NixOS.png";
+				height = 20;
+				# preserve-aspect-ratio = true;
+      };
 
       display = {
         separator = " 󰅂 ";

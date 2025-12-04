@@ -1,0 +1,43 @@
+{ stdenv, lib
+, fetchurl
+, alsaLib
+, openssl
+, zlib
+, pulseaudio
+, autoPatchelfHook
+}:
+
+stdenv.mkDerivation rec {
+  pname = "shijima-qt";
+  version = "0.2.0-alpha1a";
+
+  src = fetchurl {
+    url = "https://download.studio.link/releases/v${version}-stable/linux/studio-link-standalone-v${version}.tar.gz";
+    hash = "sha256-4CkijAlenhht8tyk3nBULaBPE0GBf6DVII699/RmmWI=";
+  };
+
+  nativeBuildInputs = [
+    autoPatchelfHook
+  ];
+
+  buildInputs = [
+    alsaLib
+    openssl
+    zlib
+    pulseaudio
+  ];
+
+  sourceRoot = ".";
+
+  installPhase = ''
+    runHook preInstall
+    install -m755 -D studio-link-standalone-v${version} $out/bin/studio-link
+    runHook postInstall
+  '';
+
+  meta = with lib; {
+    homepage = "https://studio-link.com";
+    description = "Voip transfer";
+    platforms = platforms.linux;
+  };
+}

@@ -36,5 +36,8 @@
     kdePackages.plasma-browser-integration
 
     intiface-central
+
+    # (pkgs.callPackage ../../packages/shiru.nix {})
+    # (pkgs.callPackage ../../packages/shijima-qt.nix {})
   ];
 }
