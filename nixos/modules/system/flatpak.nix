@@ -10,7 +10,6 @@
       # Examples:
       packages = [
         "com.github.tchx84.Flatseal"
-        "app.zen_browser.zen"
         # "com.valvesoftware.Steam"
         # "net.lutris.Lutris"
         #"com.github.tchx84.Flatseal" #Manage flatpak permissions - should always have this

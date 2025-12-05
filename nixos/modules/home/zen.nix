@@ -28,6 +28,7 @@ in
       DisableTelemetry = true;
       DontCheckDefaultBrowser = true;
       NoDefaultBookmarks = true;
+      enablePlasmaBrowserIntegration = true;
       EnableTrackingProtection = {
         Value = true;
         Locked = true;
