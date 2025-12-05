@@ -4,8 +4,8 @@ let
   official_plugins = pkgs.fetchFromGitHub {
     owner = "AvengeMedia";
     repo = "dms-plugins";
-    rev = "3bc66f186a8184cb8eca5fdfc0699cb4a828cd90";
-    hash = "sha256-KtOu12NVLdyho9T4EXJaReNhFO98nAXpemkb6yeOvwE=";
+    rev = "8715ca35b61d7c6275a300fa4992e2b0490f70f7";
+    hash = "sha256-6ScuVcvSaXc35Sf1iwtCy8aM/pFID3+0G4NRMw8aBcM=";
   };
 in
 

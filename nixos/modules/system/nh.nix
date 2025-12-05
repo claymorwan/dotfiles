@@ -21,5 +21,6 @@ in
 
   environment.systemPackages = with pkgs; [
     # nix-output-monitor
+    # inputs.nix-output-monitor.packages.${system}.default 
   ];
 }

@@ -104,11 +104,11 @@
 				"animation slide top, dms:workspace-overview"
 				"animation fade, dms:tooltip"
 				"animation fade, dms:(modal|confirm-modal|polkit|keybinds|power-menu|notification-center-modal|color-picker|clipboard|spotlight|settings|process-list-modal)"
-
+				"animation slide, dms-plugin:(plugin)"
 				# Blur
 				"blur, $blur_modal:background"
 				"animation fade, $blur_modal:background"
-				"animation fade, $blur_modal"
+				"animation popin, $blur_modal"
 
 				"noscreenshare, dms:(notification-.*)"
 

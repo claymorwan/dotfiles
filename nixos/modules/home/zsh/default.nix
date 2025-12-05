@@ -1,5 +1,8 @@
 { pkgs, lib, host, ... }:
 
+let
+  fetch_cmd = "clear; fastfetch;  blahaj -s -c trans";
+in 
 {
   programs.zsh = {
     enable = true;
@@ -42,7 +45,7 @@
     shellAliases = {
       sv = "sudo nvim";
       cls = "clear";
-      fetch = "clear; fastfetch;  blahaj -s -c trans";
+      fetch = "${fetch_cmd}";
 
       nreload = "nh os switch --hostname ${host}";
       nupd = "nh os switch --update --hostname ${host}";
@@ -51,9 +54,7 @@
     };
 
     initContent = ''
-      clear; fastfetch;  blahaj -s -c trans
+      ${fetch_cmd}
     '';
-
-
   };
 }

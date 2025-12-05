@@ -185,10 +185,12 @@
   "acLockTimeout": 0,
   "acSuspendTimeout": 0,
   "acSuspendBehavior": 0,
+  "acProfileName": "",
   "batteryMonitorTimeout": 120,
   "batteryLockTimeout": 60,
   "batterySuspendTimeout": 300,
   "batterySuspendBehavior": 0,
+  "batteryProfileName": "",
   "lockBeforeSuspend": true,
   "preventIdleForMedia": false,
   "loginctlLockIntegration": true,
@@ -221,7 +223,7 @@
   "dockIconSize": 40,
   "dockIndicatorStyle": "line",
   "dockBorderEnabled": false,
-  "dockBorderColor": "surfaceText",
+  "dockBorderColor": "primary",
   "dockBorderOpacity": 1,
   "dockBorderThickness": 1,
   "notificationOverlayEnabled": false,
@@ -229,6 +231,8 @@
   "lockScreenShowPowerActions": true,
   "enableFprint": false,
   "maxFprintTries": 3,
+  "lockScreenActiveMonitor": "all",
+  "lockScreenInactiveColor": "#000000",
   "hideBrightnessSlider": false,
   "notificationTimeoutLow": 5000,
   "notificationTimeoutNormal": 5000,
@@ -243,6 +247,7 @@
   "osdMicMuteEnabled": true,
   "osdCapsLockEnabled": true,
   "osdPowerProfileEnabled": false,
+  "osdAudioOutputEnabled": true,
   "powerActionConfirm": true,
   "powerActionHoldDuration": 1,
   "powerMenuActions": [
@@ -399,7 +404,8 @@
       "openOnOverview": false,
       "visible": true,
       "popupGapsAuto": true,
-      "popupGapsManual": 4
+      "popupGapsManual": 4,
+      "widgetOutlineEnabled": false
     }
   ],
   "configVersion": 2
