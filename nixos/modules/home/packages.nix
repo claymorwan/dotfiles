@@ -5,7 +5,13 @@
   programs = {
     firefox.enable = true;
     btop.enable = true;
-    quickshell.enable = true;
+    # quickshell.enable = true;
+
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
+      nix-direnv.enable = true;
+    };
   };
   home.packages = with pkgs; [
     speedtest-cli

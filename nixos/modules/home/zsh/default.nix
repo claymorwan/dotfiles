@@ -39,22 +39,27 @@ in
         "git"
         "python"
         "man"
+        "eza"
       ];
     };
 
     shellAliases = {
+      rl = "source ~/.zshrc";
+      nv = "nvim";
       sv = "sudo nvim";
       cls = "clear";
       fetch = "${fetch_cmd}";
 
-      nreload = "nh os switch --hostname ${host}";
+      nrl = "nh os switch --hostname ${host}";
       nupd = "nh os switch --update --hostname ${host}";
       # nreload = "sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#${host} --log-format bar-with-logs";
       # nupd = "sudo nixos-rebuild switch --recreate-lock-file --flake ~/.dotfiles/nixos#${host} --log-format bar-with-logs";
     };
 
     initContent = ''
-      ${fetch_cmd}
+      if [[ "$YAZI_SHELL_SKIP_CMD" != true ]]; then
+        ${fetch_cmd}
+      fi
     '';
   };
 }
