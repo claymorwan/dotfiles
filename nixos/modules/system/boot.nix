@@ -31,6 +31,7 @@
 
     kernelPackages = pkgs.linuxPackages_latest;
     #initrd.luks.devices."luks-d350cbe5-5f3e-4b16-96d2-3b4ecc608855".device = "/dev/disk/by-uuid/d350cbe5-5f3e-4b16-96d2-3b4ecc608855";
+    # extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
 
     plymouth.enable = true;
     # kernelParams = [ "quiet" ];

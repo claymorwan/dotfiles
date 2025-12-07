@@ -10,6 +10,7 @@
 				"tile, class:Godot, initialTitle:Godot"
 				"tile, class:jetbrains-.*, initialTitle:^$"
 				"tile, class:Aseprite"
+				"tile, title:Pizza Oven"
 				
 				# Float
 				"float, class:guifetch"
@@ -68,10 +69,15 @@
 				"float, title:Library"
 
 				# Picture in picture
-				"move 100%-w-2% 100%-w-3%, title:Picture(-| )in(-| )[Pp]icture"
+				"move 100%-w-2% 100%-w-3%, title:(Picture(-| )in(-| )[Pp]icture"
 				"keepaspectratio, title:Picture(-| )in(-| )[Pp]icture"
 				"float, title:Picture(-| )in(-| )[Pp]icture"
 				"pin, title:Picture(-| )in(-| )[Pp]icture"
+
+				"move 100%-w-2% 100%-w-3%, initialTitle:(Discord Popout)"
+				"keepaspectratio, initialTitle:(Discord Popout)"
+				"float, initialTitle:(Discord Popout)"
+				"pin, initialTitle:(Discord Popout)"
 
 				# Steam
 				"rounding 10, title:, class:steam"
@@ -88,6 +94,7 @@
 				"plugin:hyprbars:nobar, class:(com-abdownloadmanager-desktop-AppKt|floorp|codium|ONLYOFFICE|org.vinegarhq.Sober|hyprpolkitagent|scrcpy|dragon-drop|Blockbench|hyprland-share-picker|obsidian|gale|shiru|zen.*|steam||org.kde.plasmawindowed|localsend|swayimg.*|nz.co.mega.megasync|org.quickshell)"
 				"plugin:hyprbars:nobar, class:(.*gnome.*|xdg-desktop-portal-gtk|be.alexandervanhee.gradia|.*[Kk]ooha|.*bottles|io.github.giantpinkrobots.varia|com.mitchellh.ghostty|GTK Application|net.lutris.Lutris|com.vysp3r.ProtonPlus|de.haeckerfelix.Fragments)"
         "plugin:hyprbars:nobar, class:(jetbrains-.*), initialTitle:^(?:(?! ).)*$ #title:(splash|win.*|Third-Party Plugins Notice)"
+        "plugin:hyprbars:nobar, initialTitle:Discord Popout"
 				
 				# Swayimg
 				"noblur, class:^(swayimg.*)"

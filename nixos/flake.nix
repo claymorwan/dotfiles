@@ -12,6 +12,7 @@
     catppuccin.url = "github:catppuccin/nix";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     nix-output-monitor.url = "github:maralorn/nix-output-monitor";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
     quickshell = {
       # add ?ref=<tag> to track a tag
@@ -31,6 +32,11 @@
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.dgop.follows = "dgop";
+    };
+
+    dsearch = {
+      url = "github:AvengeMedia/danksearch";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     
     zen-browser = {

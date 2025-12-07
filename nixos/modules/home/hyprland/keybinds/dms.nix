@@ -15,7 +15,7 @@ in
       "${mainMod}, P, exec, dms ipc call notepad toggle" # Notepad
       "${mainMod} + ALT, L, exec, dms ipc call lock lock" # Lock
       "${mainMod}, X, exec, dms ipc call powermenu toggle" # Power menu
-      "${mainMod}, S, exec, dms ipc call control-center toggle" # Control center
+      "${mainMod} SHIFT, S, exec, dms ipc call control-center toggle" # Control center
       "${mainMod}, TAB, exec, dms ipc call hypr toggleOverview" # Workspace overview
       #"${mainMod}, KP_Divide, exec, dms ipc call keybinds toggleWithPath hyprland ~/.config/hyprdots/hypr/keybinds"
 

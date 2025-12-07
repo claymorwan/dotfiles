@@ -1,7 +1,6 @@
 { pkgs, system, inputs, ... }:
 
 {
-
   programs = {
     firefox.enable = true;
     btop.enable = true;
@@ -13,8 +12,10 @@
       nix-direnv.enable = true;
     };
   };
+
   home.packages = with pkgs; [
-    speedtest-cli
+    ookla-speedtest
+    # speedtest-cli
     dragon-drop
     scrcpy
     yt-dlp-light
@@ -30,9 +31,11 @@
 
     kooha
 
+    bottles
+
     obsidian
     krita
-
+    
     linux-wallpaperengine
 
     jetbrains.pycharm-professional

@@ -3,6 +3,7 @@
 {
   imports = [
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+    ./dsearch.nix
     ./plugins.nix
   ];
 

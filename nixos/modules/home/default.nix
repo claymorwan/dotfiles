@@ -17,6 +17,7 @@
     ./packages.nix
     ./qt.nix
     ./starship.nix
+    ./spotify.nix
     ./uwsm.nix
     ./xdg
     ./yazi

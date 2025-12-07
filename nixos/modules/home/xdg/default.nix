@@ -9,6 +9,7 @@
       extraPortals = with pkgs; [
         xdg-desktop-portal-hyprland
         xdg-desktop-portal-termfilechooser
+        xdg-desktop-portal-gtk
       ];
       # configPackages = [ pkgs.hyprland ];
     };
@@ -44,14 +45,4 @@
       source = ./yazi-wrapper.sh;
     };
   };
-
-  # xdg.dataFile."sounds/UNDERTUNE" = {
-  #   recursive = true;
-  #   source = pkgs.fetchzip {
-  #     url = "https://ocs-dl.fra1.cdn.digitaloceanspaces.com/data/files/1758812335/UNDERTUNES.zip";
-  #     hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-  #   };
-  # };
-
-
 }
