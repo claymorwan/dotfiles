@@ -21,6 +21,7 @@
     scrcpy
     yt-dlp-light
     kittysay
+    sl
 
     equibop
     gradia
