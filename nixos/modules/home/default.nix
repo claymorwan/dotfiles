@@ -5,6 +5,7 @@
     ./catppuccin.nix
     ./cursors
     ./dms
+    ./editors
     ./fastfetch
     ./flatpak.nix
     ./gaming
@@ -12,7 +13,6 @@
     ./ghostty.nix
     ./gtk.nix
     ./hyprland
-    ./neovim
     ./obs-studio.nix
     ./packages.nix
     ./qt.nix

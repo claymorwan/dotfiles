@@ -14,11 +14,13 @@
   };
 
   home.packages = with pkgs; [
+    # CLIs
     ookla-speedtest
     # speedtest-cli
     dragon-drop
     scrcpy
     yt-dlp-light
+    kittysay
 
     equibop
     gradia
@@ -38,8 +40,7 @@
     
     linux-wallpaperengine
 
-    jetbrains.pycharm-professional
-
+    # Kde stuff
     kdePackages.gwenview
     kdePackages.kdenlive
     kdePackages.plasma-browser-integration

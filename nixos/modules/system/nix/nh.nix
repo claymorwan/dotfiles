@@ -2,18 +2,16 @@
 
 let
   inherit
-    (import ./../../variables/variables.nix)
+    (import ../../../variables/variables.nix)
     flake_dir
     ;
 in
 {
   programs.nh = {
     enable = true;
-    package = pkgs.nh.overrideAttrs (_: {
-      runtimeDeps = [
-        inputs.nix-output-monitor.packages.${system}.default 
-      ];
-    });
+    package = pkgs.nh.override {
+      nix-output-monitor = inputs.nix-output-monitor.packages.${system}.default; 
+    };
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
     flake = "${flake_dir}"; # sets NH_OS_FLAKE variable for you

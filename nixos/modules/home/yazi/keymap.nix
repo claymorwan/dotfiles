@@ -449,6 +449,7 @@
       { on = [ "g" "d" ]; run = "cd ~/Downloads"; desc = "Goto ~/Downloads"; }
       { on = [ "g" "p" ]; run = "cd ~/Pictures"; desc = "Goto ~/Pictures"; }
       { on = [ "g" "v" ]; run = "cd ~/Videos"; desc = "Goto ~/Videos "; }
+      { on = [ "g" "D" ]; run = "cd ~/Documents/"; desc = "Goto ~/Documents "; }
       { on = [ "g" "<Space>" ]; run = "cd --interactive"; desc = "Jump interactively"; }
 
       {

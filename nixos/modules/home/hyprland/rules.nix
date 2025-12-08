@@ -4,7 +4,6 @@
   wayland.windowManager.hyprland = {
     settings = {
 
-    	"$blur_modal" = "dms:(polkit|keybinds|notification-center-modal|workspace-overview|color-picker|clipboard|spotlight|settings|process-list-modal)";
       windowrule = [
         # Tile
 				"tile, class:Godot, initialTitle:Godot"
@@ -101,6 +100,7 @@
 				"noborder, class:^(swayimg.*)"
       ];
 
+      "$blur_modal" = "dms:(modal|polkit|keybinds|notification-center-modal|workspace-overview|color-picker|clipboard|spotlight|settings|process-list-modal)";
       layerrule = [
 				# Animation
 				"noanim, dms:color-picker"
