@@ -13,9 +13,8 @@
     };
 
     kdeconnect.enable = true;
-    # droidcam.enable = true;
+    droidcam.enable = true;
 
-    # Apparently they already work so idk if i need this
     appimage = {
       enable = true;
       binfmt = true;

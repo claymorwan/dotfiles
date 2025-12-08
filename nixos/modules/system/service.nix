@@ -21,9 +21,8 @@
     power-profiles-daemon = {
       enable = true;
     };
+    
+    openssh.enable = true;
+    blueman.enable = true;
   };
-
-  hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
-  security.rtkit.enable = true;
 }

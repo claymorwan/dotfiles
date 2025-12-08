@@ -13,6 +13,7 @@
     ./packages.nix
     ./printing.nix
     ./service.nix
+    ./security.nix
     ./steam.nix
     ./system.nix
     ./users.nix

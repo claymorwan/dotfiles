@@ -68,7 +68,7 @@
 				"float, title:Library"
 
 				# Picture in picture
-				"move 100%-w-2% 100%-w-3%, title:(Picture(-| )in(-| )[Pp]icture"
+				"move 100%-w-2% 100%-w-3%, title:Picture(-| )in(-| )[Pp]icture"
 				"keepaspectratio, title:Picture(-| )in(-| )[Pp]icture"
 				"float, title:Picture(-| )in(-| )[Pp]icture"
 				"pin, title:Picture(-| )in(-| )[Pp]icture"
