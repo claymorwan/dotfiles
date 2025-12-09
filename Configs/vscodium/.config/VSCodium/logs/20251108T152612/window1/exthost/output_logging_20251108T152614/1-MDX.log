@@ -1,2 +1,0 @@
-(node:12734) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-(Use `codium --trace-deprecation ...` to show where the warning was created)

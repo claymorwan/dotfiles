@@ -1,4 +1,0 @@
-2025-11-16 17:43:19.079 [info] Extension host with pid 157307 started
-2025-11-16 17:43:19.079 [info] Skipping acquiring lock for /home/claymorwan/.config/VSCodium/User/workspaceStorage/f0d97e3da230485391c78414c15caad4.
-2025-11-16 17:43:19.246 [info] Extension host terminating: renderer closed the MessagePort
-2025-11-16 17:43:19.247 [info] Extension host with pid 157307 exiting with code 0

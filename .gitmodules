@@ -52,3 +52,12 @@
 [submodule "nixos/modules/home/dms/dms/plugins/dms-wallpaperengine"]
 	path = nixos/modules/home/dms/dms/plugins/dms-wallpaperengine
 	url = https://github.com/sgtaziz/dms-wallpaperengine
+[submodule "Submodules/ghostty/shaders/0xhckr"]
+	path = Submodules/ghostty/shaders/0xhckr
+	url = https://github.com/0xhckr/ghostty-shaders
+[submodule "Submodules/ghostty/cursors"]
+	path = Submodules/ghostty/cursors
+	url = https://github.com/KroneCorylus/ghostty-shader-playground
+[submodule "Submodules/ghostty/shaders/cursors"]
+	path = Submodules/ghostty/shaders/cursors
+	url = https://github.com/KroneCorylus/ghostty-shader-playground
