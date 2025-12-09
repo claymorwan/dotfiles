@@ -7,6 +7,8 @@
   ];
 
   home.packages = with pkgs; [
+    sqlitebrowser
+
     jetbrains.pycharm-professional
 
   ];

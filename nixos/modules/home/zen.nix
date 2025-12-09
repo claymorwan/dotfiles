@@ -39,8 +39,9 @@ in
       Preferences = mkLockedAttrs {
         "widget.use-xdg-desktop-portal.file-picker" = 1;
         # Sidebar and toolbar
-        "zen.view.use-single-toolbar" = false;
-        # and so on...
+        # "zen.view.use-single-toolbar" = false;
+        # 
+        # "zen.urlbar.replace-newtab" = false;
       };
     };
   };
