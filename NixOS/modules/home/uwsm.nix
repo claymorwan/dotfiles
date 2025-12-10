@@ -17,6 +17,9 @@ in
     # export XCURSOR_THEME='${mouse_cursor}-X'
     # export XCURSOR_SIZE='24'
 
+    export GDK_DEBUG=portals
+    export GTK_USE_PORTAL=1
+
     # ###### app2unit Integration ######
     export APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice'
 

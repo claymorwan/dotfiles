@@ -35,9 +35,13 @@ in
       "${mainMod}, C, hyprexpo:expo, toggle"
 
       # Screenshots
-      ", Print, exec, hyprshot -z -m output -o ${screenshot_dir} -- gradia"
-      "Ctrl, Print, exec, hyprshot -z -m region -o ${screenshot_dir} -- gradia"
-      "${mainMod}, Print, exec, hyprshot -z -m window -o ${screenshot_dir} -- gradia"
+      ", Print, exec, dms screenshot full --stdout | gradia"
+      "Ctrl, Print, exec, dms screenshot --stdout | gradia"
+      "${mainMod}, Print, exec, dms screenshot window --stdout | gradia"
+
+      # ", Print, exec, hyprshot -z -m output -o ${screenshot_dir} -- gradia"
+      # "Ctrl, Print, exec, hyprshot -z -m region -o ${screenshot_dir} -- gradia"
+      # "${mainMod}, Print, exec, hyprshot -z -m window -o ${screenshot_dir} -- gradia"
 
      ];
    };

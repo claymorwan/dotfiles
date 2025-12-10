@@ -22,6 +22,7 @@
     yt-dlp-light
     kittysay
     sl
+    zenity
 
     equibop
     gradia

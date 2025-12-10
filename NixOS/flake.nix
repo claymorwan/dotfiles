@@ -13,6 +13,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     nix-output-monitor.url = "github:maralorn/nix-output-monitor";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    xdp-termfilepickers.url = "github:Guekka/xdg-desktop-portal-termfilepickers";
 
     quickshell = {
       # add ?ref=<tag> to track a tag

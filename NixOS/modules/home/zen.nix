@@ -12,9 +12,9 @@ in
     # or inputs.zen-browser.homeModules.twilight-official
   ];
 
-  # programs.zen-browser = {
-  #   enable = true;
-  #
+  programs.zen-browser = {
+    enable = true;
+
   #   profiles = {
   #     default = {
   #       id = 0;
@@ -30,8 +30,6 @@ in
   #     
   #   };
   # };
-  programs.zen-browser = {
-    enable = true;
 
     policies = let
       mkLockedAttrs = builtins.mapAttrs (_: value: {
