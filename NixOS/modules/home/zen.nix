@@ -12,9 +12,27 @@ in
     # or inputs.zen-browser.homeModules.twilight-official
   ];
 
+  # programs.zen-browser = {
+  #   enable = true;
+  #
+  #   profiles = {
+  #     default = {
+  #       id = 0;
+  #       name = "default";
+  #       isDefault = true;
+  #       settings = {
+  #         "widget.use-xdg-desktop-portal.file-picker" = 1;
+  #         "zen.view.use-single-toolbar" = false;
+  #         "zen.urlbar.replace-newtab" = false;
+  #
+  #       };
+  #     };
+  #     
+  #   };
+  # };
   programs.zen-browser = {
     enable = true;
-  
+
     policies = let
       mkLockedAttrs = builtins.mapAttrs (_: value: {
         Value = value;
