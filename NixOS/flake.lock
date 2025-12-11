@@ -476,15 +476,16 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1756390784,
-        "narHash": "sha256-2WpiPTJp3hgSzViiZmp8k405xDl7m70fQ8TsZykSr+I=",
+        "lastModified": 1765445670,
+        "narHash": "sha256-gIAI2A3GUBYU1Pe4QlRv06gbxpwbJlQL3ACAkOP12xk=",
         "owner": "Guekka",
         "repo": "xdg-desktop-portal-termfilepickers",
-        "rev": "195ba6bb4a4f0224b0e749f2198fc88696be6383",
+        "rev": "58b14da3560ccdd09a353534f0e3e3abc69b75c2",
         "type": "github"
       },
       "original": {
         "owner": "Guekka",
+        "ref": "copilot/fix-file-picker-issue",
         "repo": "xdg-desktop-portal-termfilepickers",
         "type": "github"
       }

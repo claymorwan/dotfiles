@@ -2,7 +2,7 @@
 
 let
   inherit
-    (import ./../../variables/variables.nix)
+    (import ../../variables/variables.nix)
     submodules_dir
     ;
 in
@@ -12,7 +12,7 @@ in
     package = pkgs.ghostty;
 
     settings = {
-      theme = "Catppuccin Mocha";
+      # theme = "Catppuccin Mocha";
       clipboard-read = "allow";
       cursor-style = "bar";
       font-family = "JetBrainsMono NF";
@@ -20,8 +20,8 @@ in
       gtk-tabs-location = "bottom";
       window-decoration = "client";
       custom-shader = [
-        "~/.dotfiles/Submodules/ghostty/shaders/0xhckr/gears-and-belts.glsl"
-        "~/.dotfiles/Submodules/ghostty/shaders/cursors/public/shaders/cursor_smear_rainbow.glsl"
+        "${submodules_dir}/ghostty/shaders/0xhckr/gears-and-belts.glsl"
+        "${submodules_dir}/ghostty/shaders/cursors/public/shaders/cursor_smear.glsl"
       ];
     };
   };
