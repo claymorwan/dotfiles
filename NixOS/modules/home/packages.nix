@@ -20,6 +20,7 @@
     dragon-drop
     scrcpy
     yt-dlp-light
+    lolcat
     kittysay
     sl
     zenity

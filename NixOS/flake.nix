@@ -70,6 +70,7 @@
       };
     in
     {
+      templates = import ./dev-shells;
       nixosConfigurations = {
         nixos = mkNixosConfig "nixos";
 	      nixos-laptop = mkNixosConfig "nixos-laptop";
