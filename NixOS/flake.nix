@@ -13,7 +13,17 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     nix-output-monitor.url = "github:maralorn/nix-output-monitor";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    xdp-termfilepickers.url = "github:Guekka/xdg-desktop-portal-termfilepickers/copilot/fix-file-picker-issue";
+    xdp-termfilepickers.url = "github:Guekka/xdg-desktop-portal-termfilepickers"; #/copilot/fix-file-picker-issue";
+
+    nix-yazi-plugins = {
+      url = "github:lordkekz/nix-yazi-plugins?ref=yazi-v0.2.5";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    steam-config-nix = {
+      url = "github:different-name/steam-config-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     quickshell = {
       # add ?ref=<tag> to track a tag

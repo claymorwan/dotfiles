@@ -30,6 +30,7 @@
     };
 
     kernelPackages = pkgs.linuxPackages_latest;
+    kernelModules = [ "ntsync" ];
     extraModulePackages = with config.boot.kernelPackages; [
       v4l2loopback
     ];

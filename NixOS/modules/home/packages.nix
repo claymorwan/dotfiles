@@ -35,7 +35,7 @@
     gnome-disk-utility
 
     kooha
-
+  
     bottles
 
     obsidian

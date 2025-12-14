@@ -4,6 +4,7 @@
   imports = [
     ./lutris.nix
     ./mangohud.nix
+    ./steam.nix
   ];
 
   home.packages = with pkgs; [

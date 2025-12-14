@@ -579,6 +579,12 @@
 	    { on = ":"; run = "plugin shell block"; desc = "Run a shell command with your shell (block until finishes)"; }
 	    { on = ";"; run = "plugin shell noblock"; desc = "Run a shell command with your shell"; }
 	    { on = "!"; run = "plugin shell noskip"; desc = "Run a shell command with your shell (block until finishes and when return key is pressed)"; }
+      
+      # Toggle pane
+      { on = "T"; run = "plugin toggle-pane max-preview"; desc = "Maximize or restore the preview pane"; }
+
+      # Mount
+      { on = "M"; run = "plugin mount"; desc = "Open mount menu"; }
     ];
   };
   tasks = {

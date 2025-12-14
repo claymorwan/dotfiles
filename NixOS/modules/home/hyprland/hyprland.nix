@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     hyprpicker
     hyprshot
+    # hyprpwcenter
   ];
 
   systemd.user.targets.hyprland-session.Unit.Wants = [
