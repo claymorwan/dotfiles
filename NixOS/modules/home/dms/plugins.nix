@@ -4,8 +4,15 @@ let
   official_plugins = pkgs.fetchFromGitHub {
     owner = "AvengeMedia";
     repo = "dms-plugins";
-    rev = "8715ca35b61d7c6275a300fa4992e2b0490f70f7";
-    hash = "sha256-6ScuVcvSaXc35Sf1iwtCy8aM/pFID3+0G4NRMw8aBcM=";
+    rev = "cf0efeb8311bf59f9f4caec06689100ee5f1aa35";
+    hash = "sha256-vEoax/uZ3VPe4zw6761dHiPMbYacYlg1hPyORiljWKc=";
+  };
+
+  lucyfire-plugins = pkgs.fetchFromGitHub {
+    owner = "lucyfire";
+    repo = "dms-plugins";
+    rev = "c463cf2364567bf77ded1e52dbf09c5cf0b9d28e";
+    hash = "sha256-SQFflM/xWFAgqgn0WUVh4eADyT+UO03jncu7RiilMb0=";
   };
 in
 
@@ -72,6 +79,16 @@ in
       DankPomodoroTimer = {
         enable = true;
         src = "${official_plugins}/DankPomodoroTimer";
+      };
+
+      alarmClock = {
+        enable = true;
+        src = "${lucyfire-plugins}/alarmClock";
+      };
+
+      displaySettings = {
+        enable = true;
+        src = "${lucyfire-plugins}/displaySettings";
       };
     };
   };

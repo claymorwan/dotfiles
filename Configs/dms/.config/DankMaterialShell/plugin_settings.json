@@ -68,5 +68,12 @@
   },
   "grimblast": {
     "enabled": true
+  },
+  "alarmClock": {
+    "enabled": true,
+    "notificationUrgency": "critical"
+  },
+  "displaySettings": {
+    "enabled": true
   }
 }
