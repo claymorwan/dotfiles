@@ -42,7 +42,6 @@
     wl-clipboard
     app2unit
     rar
-    devenv
     unzip
 
     gnumake
@@ -50,6 +49,7 @@
     python3
     uv
     lua
+    luajitPackages.luarocks
 
     wineWowPackages.staging
     
