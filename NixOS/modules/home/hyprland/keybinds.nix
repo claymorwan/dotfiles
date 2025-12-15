@@ -1,8 +1,7 @@
 { ... }:
 
 let
-  inherit
-    (import ./../../../variables/variables.nix)
+  inherit (import ./../../../variables/variables.nix)
     mainMod
     launch_prefix
     terminal
@@ -11,11 +10,11 @@ let
     ;
 in
 {
-   
+
   imports = [
     ./keybinds/dms.nix
     ./keybinds/hyprscrolling.nix
-    ./keybinds/workspaces.nix     
+    ./keybinds/workspaces.nix
   ];
   wayland.windowManager.hyprland.settings = {
     exec = "hyprctl dispatch submap global";
@@ -30,7 +29,7 @@ in
       "${mainMod}, D, exec, ${launch_prefix} equibop" # Discord
       "${mainMod}, S, exec, ${launch_prefix} spotify" # Spotify
       "${mainMod}, E, exec, ${launch_prefix} ${terminal} -e yazi" # file explorer
-      
+
       # Plugins
       "${mainMod}, C, hyprexpo:expo, toggle"
 
@@ -43,6 +42,6 @@ in
       # "Ctrl, Print, exec, hyprshot -z -m region -o ${screenshot_dir} -- gradia"
       # "${mainMod}, Print, exec, hyprshot -z -m window -o ${screenshot_dir} -- gradia"
 
-     ];
-   };
+    ];
+  };
 }

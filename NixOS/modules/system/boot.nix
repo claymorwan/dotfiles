@@ -14,7 +14,7 @@
         enable = true;
         efiSupport = true;
         efiInstallAsRemovable = true; # Otherwise /boot/EFI/BOOT/BOOTX64.EFI isn't generated
-        devices = ["nodev"];
+        devices = [ "nodev" ];
         useOSProber = true;
         extraEntriesBeforeNixOS = false;
         extraEntries = ''
@@ -25,7 +25,7 @@
             halt
           }
         '';
-	      configurationLimit = 10;
+        configurationLimit = 10;
       };
     };
 

@@ -52,7 +52,7 @@
     luajitPackages.luarocks
 
     wineWowPackages.staging
-    
+
     vlc
   ];
 

@@ -5,6 +5,6 @@
     enable = true;
 
     defaultWinePackage = pkgs.proton-ge-bin;
-    protonPackages = [ pkgs.proton-ge-bin ]; #config.programs.steam.extraCompatPackages;
+    protonPackages = [ pkgs.proton-ge-bin ]; # config.programs.steam.extraCompatPackages;
   };
 }

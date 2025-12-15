@@ -57,7 +57,7 @@ in
     #   };
     # };
   };
-  
+
   # Packages for plugins
   home.packages = with pkgs; [
     ouch

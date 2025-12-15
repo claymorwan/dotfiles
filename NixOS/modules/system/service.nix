@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  
+
   services = {
     # Enable sound with pipewire.
     pulseaudio.enable = false;
@@ -21,7 +21,7 @@
     power-profiles-daemon = {
       enable = true;
     };
-    
+
     openssh.enable = true;
     blueman.enable = true;
   };

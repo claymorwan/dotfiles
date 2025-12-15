@@ -1,21 +1,35 @@
-{ inputs, pkgs, username, host, system, ... }:
+{
+  inputs,
+  pkgs,
+  username,
+  host,
+  system,
+  ...
+}:
 
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
-    extraSpecialArgs = { inherit inputs username host system; };
+    extraSpecialArgs = {
+      inherit
+        inputs
+        username
+        host
+        system
+        ;
+    };
     users.${username} = {
       imports = [
         ./../home
-	      inputs.nix-flatpak.homeManagerModules.nix-flatpak
-	      inputs.catppuccin.homeModules.catppuccin
+        inputs.nix-flatpak.homeManagerModules.nix-flatpak
+        inputs.catppuccin.homeModules.catppuccin
       ];
       home = {
         username = "${username}";
-	homeDirectory = "/home/${username}";
-	stateVersion = "25.05";
+        homeDirectory = "/home/${username}";
+        stateVersion = "25.05";
       };
     };
   };

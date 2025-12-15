@@ -16,7 +16,7 @@
         xdg-desktop-portal-gtk
       ];
       # configPackages = [ pkgs.hyprland ];
-      config = { 
+      config = {
         # common = {
         #   "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
         # };

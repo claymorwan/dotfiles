@@ -1,4 +1,9 @@
-{ pkgs, config, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 
 with lib;
 let
@@ -22,13 +27,13 @@ in
 
   # qt5ct
   home.file.".config/qt5ct/qt5ct.conf" = {
-  #  target = "qt5ct/qt5ct.conf";
+    #  target = "qt5ct/qt5ct.conf";
     text = qtCtAppearanceConfig;
   };
 
   # qt6ct
   home.file.".config/qt6ct/qt6ct.conf" = {
-  #  target = "qt6ct/qt6ct.conf";
-  text = qtCtAppearanceConfig;
+    #  target = "qt6ct/qt6ct.conf";
+    text = qtCtAppearanceConfig;
   };
 }

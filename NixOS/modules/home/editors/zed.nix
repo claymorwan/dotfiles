@@ -1,11 +1,10 @@
 { ... }:
 
 let
-  inherit
-    (import ../../../variables/variables.nix)
+  inherit (import ../../../variables/variables.nix)
     font_family
     ;
-in 
+in
 {
   programs.zed-editor = {
     enable = true;
@@ -21,7 +20,7 @@ in
       auto_install_extensions = {
         catppuccin-icons = true;
       };
-      
+
       buffer_font_family = font_family;
 
       icon_theme = "Catppuccin Mocha";

@@ -1,8 +1,7 @@
 { ... }:
 
 let
-  inherit
-    (import ./../../../../variables/variables.nix)
+  inherit (import ./../../../../variables/variables.nix)
     mainMod
     ;
 in
@@ -42,10 +41,10 @@ in
       "Ctrl+${mainMod}, Backslash, centerwindow, 1"
       "Ctrl+${mainMod}+Alt, Backslash, resizeactive, exact 55% 70%"
       "Ctrl+${mainMod}+Alt, Backslash, centerwindow, 1"
-      "${mainMod}+Alt, Backslash, exec, caelestia pip"  # Move window to picture-in-picture mode
+      "${mainMod}+Alt, Backslash, exec, caelestia pip" # Move window to picture-in-picture mode
       "${mainMod}, P, pin"
       "${mainMod}, F, fullscreen, 0"
-      "${mainMod}+Alt, F, fullscreen, 1"  # Fullscreen with borders
+      "${mainMod}+Alt, F, fullscreen, 1" # Fullscreen with borders
       "${mainMod}+Alt, Space, togglefloating,"
       "${mainMod}, Q, killactive,"
     ];

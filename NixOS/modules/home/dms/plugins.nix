@@ -26,8 +26,8 @@ in
         src = pkgs.fetchFromGitHub {
           owner = "sgtaziz";
           repo = "dms-wallpaperengine";
-          rev = "0a8796637d0dd2089610b3ea7033d53df09617cb";
-          hash = "sha256-pHHSFBggN05HyE8ig5tetqLLEjk4DpnehzDRK9pMwH8=";
+          rev = "295686215ba65103e20385d3e86801db074dfc01";
+          hash = "sha256-HmqIAXNougNJScAQXS33CRl/+ypR9LNjGFhBOVwu5z0=";
         };
       };
 

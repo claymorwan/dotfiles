@@ -2,10 +2,20 @@
   mgr = {
     keymap = [
       # dragon-drop
-      { on = [ "<C-n>" ]; run = ''shell 'dragon-drop -x -i -T "$1"' --confirm''; }
-      
+      {
+        on = [ "<C-n>" ];
+        run = ''shell 'dragon-drop -x -i -T "$1"' --confirm'';
+      }
+
       # chmod
-      { on = ["c" "m" ]; run = "plugin chmod"; desc = "Chmod on selected files"; }
+      {
+        on = [
+          "c"
+          "m"
+        ];
+        run = "plugin chmod";
+        desc = "Chmod on selected files";
+      }
 
       {
         on = "<Esc>";
@@ -98,7 +108,10 @@
         desc = "Move cursor down one page";
       }
       {
-        on = [ "g" "g" ];
+        on = [
+          "g"
+          "g"
+        ];
         run = "arrow top";
         desc = "Move cursor to the top";
       }
@@ -139,7 +152,10 @@
       }
       {
         on = "<Space>";
-        run = [ "toggle" "arrow 1" ];
+        run = [
+          "toggle"
+          "arrow 1"
+        ];
         desc = "Toggle the current selection state";
       }
       {
@@ -303,52 +319,82 @@
         desc = "Jump to a file/directory via fzf";
       }
       {
-        on = [ "m" "s" ];
+        on = [
+          "m"
+          "s"
+        ];
         run = "linemode size";
         desc = "Linemode: size";
       }
       {
-        on = [ "m" "p" ];
+        on = [
+          "m"
+          "p"
+        ];
         run = "linemode permissions";
         desc = "Linemode: permissions";
       }
       {
-        on = [ "m" "b" ];
+        on = [
+          "m"
+          "b"
+        ];
         run = "linemode btime";
         desc = "Linemode: btime";
       }
       {
-        on = [ "m" "m" ];
+        on = [
+          "m"
+          "m"
+        ];
         run = "linemode mtime";
         desc = "Linemode: mtime";
       }
       {
-        on = [ "m" "o" ];
+        on = [
+          "m"
+          "o"
+        ];
         run = "linemode owner";
         desc = "Linemode: owner";
       }
       {
-        on = [ "m" "n" ];
+        on = [
+          "m"
+          "n"
+        ];
         run = "linemode none";
         desc = "Linemode: none";
       }
       {
-        on = [ "c" "c" ];
+        on = [
+          "c"
+          "c"
+        ];
         run = "copy path";
         desc = "Copy the file path";
       }
       {
-        on = [ "c" "d" ];
+        on = [
+          "c"
+          "d"
+        ];
         run = "copy dirname";
         desc = "Copy the directory path";
       }
       {
-        on = [ "c" "f" ];
+        on = [
+          "c"
+          "f"
+        ];
         run = "copy filename";
         desc = "Copy the filename";
       }
       {
-        on = [ "c" "n" ];
+        on = [
+          "c"
+          "n"
+        ];
         run = "copy name_without_ext";
         desc = "Copy the filename without extension";
       }
@@ -378,79 +424,192 @@
         desc = "Goto the previous found";
       }
       {
-        on = [ "," "m" ];
-        run = [ "sort mtime --reverse=no" "linemode mtime" ];
+        on = [
+          ","
+          "m"
+        ];
+        run = [
+          "sort mtime --reverse=no"
+          "linemode mtime"
+        ];
         desc = "Sort by modified time";
       }
       {
-        on = [ "," "M" ];
-        run = [ "sort mtime --reverse" "linemode mtime" ];
+        on = [
+          ","
+          "M"
+        ];
+        run = [
+          "sort mtime --reverse"
+          "linemode mtime"
+        ];
         desc = "Sort by modified time (reverse)";
       }
       {
-        on = [ "," "b" ];
-        run = [ "sort btime --reverse=no" "linemode btime" ];
+        on = [
+          ","
+          "b"
+        ];
+        run = [
+          "sort btime --reverse=no"
+          "linemode btime"
+        ];
         desc = "Sort by birth time";
       }
       {
-        on = [ "," "B" ];
-        run = [ "sort btime --reverse" "linemode btime" ];
+        on = [
+          ","
+          "B"
+        ];
+        run = [
+          "sort btime --reverse"
+          "linemode btime"
+        ];
         desc = "Sort by birth time (reverse)";
       }
       {
-        on = [ "," "e" ];
+        on = [
+          ","
+          "e"
+        ];
         run = "sort extension --reverse=no";
         desc = "Sort by extension";
       }
       {
-        on = [ "," "E" ];
+        on = [
+          ","
+          "E"
+        ];
         run = "sort extension --reverse";
         desc = "Sort by extension (reverse)";
       }
       {
-        on = [ "," "a" ];
+        on = [
+          ","
+          "a"
+        ];
         run = "sort alphabetical --reverse=no";
         desc = "Sort alphabetically";
       }
       {
-        on = [ "," "A" ];
+        on = [
+          ","
+          "A"
+        ];
         run = "sort alphabetical --reverse";
         desc = "Sort alphabetically (reverse)";
       }
       {
-        on = [ "," "n" ];
+        on = [
+          ","
+          "n"
+        ];
         run = "sort natural --reverse=no";
         desc = "Sort naturally";
       }
       {
-        on = [ "," "N" ];
+        on = [
+          ","
+          "N"
+        ];
         run = "sort natural --reverse";
         desc = "Sort naturally (reverse)";
       }
       {
-        on = [ "," "s" ];
-        run = [ "sort size --reverse=no" "linemode size" ];
+        on = [
+          ","
+          "s"
+        ];
+        run = [
+          "sort size --reverse=no"
+          "linemode size"
+        ];
         desc = "Sort by size";
       }
       {
-        on = [ "," "S" ];
-        run = [ "sort size --reverse" "linemode size" ];
+        on = [
+          ","
+          "S"
+        ];
+        run = [
+          "sort size --reverse"
+          "linemode size"
+        ];
         desc = "Sort by size (reverse)";
       }
       {
-        on = [ "," "r" ];
+        on = [
+          ","
+          "r"
+        ];
         run = "sort random --reverse=no";
         desc = "Sort randomly";
       }
 
-      { on = [ "g" "h" ]; run = "cd ~"; desc = "Go home"; }
-      { on = [ "g" "c" ]; run = "cd ~/.config"; desc = "Goto ~/.config"; }
-      { on = [ "g" "l" ]; run = "cd ~/.local"; desc = "Goto ~/.local"; }
-      { on = [ "g" "d" ]; run = "cd ~/Downloads"; desc = "Goto ~/Downloads"; }
-      { on = [ "g" "p" ]; run = "cd ~/Pictures"; desc = "Goto ~/Pictures"; }
-      { on = [ "g" "v" ]; run = "cd ~/Videos"; desc = "Goto ~/Videos "; }
-      { on = [ "g" "D" ]; run = "cd ~/Documents/"; desc = "Goto ~/Documents "; }
-      { on = [ "g" "<Space>" ]; run = "cd --interactive"; desc = "Jump interactively"; }
+      {
+        on = [
+          "g"
+          "h"
+        ];
+        run = "cd ~";
+        desc = "Go home";
+      }
+      {
+        on = [
+          "g"
+          "c"
+        ];
+        run = "cd ~/.config";
+        desc = "Goto ~/.config";
+      }
+      {
+        on = [
+          "g"
+          "l"
+        ];
+        run = "cd ~/.local";
+        desc = "Goto ~/.local";
+      }
+      {
+        on = [
+          "g"
+          "d"
+        ];
+        run = "cd ~/Downloads";
+        desc = "Goto ~/Downloads";
+      }
+      {
+        on = [
+          "g"
+          "p"
+        ];
+        run = "cd ~/Pictures";
+        desc = "Goto ~/Pictures";
+      }
+      {
+        on = [
+          "g"
+          "v"
+        ];
+        run = "cd ~/Videos";
+        desc = "Goto ~/Videos ";
+      }
+      {
+        on = [
+          "g"
+          "D"
+        ];
+        run = "cd ~/Documents/";
+        desc = "Goto ~/Documents ";
+      }
+      {
+        on = [
+          "g"
+          "<Space>"
+        ];
+        run = "cd --interactive";
+        desc = "Jump interactively";
+      }
 
       {
         on = "t";
@@ -540,7 +699,10 @@
     ];
     prepend_keymap = [
       {
-        on = [ "g" "i" ];
+        on = [
+          "g"
+          "i"
+        ];
         run = "plugin lazygit";
         desc = "run lazygit";
       }
@@ -551,40 +713,181 @@
       }
 
       # Compress
-      { on = [ "c" "a" "a" ]; run = "plugin compress"; desc = "Archive selected files"; }
-      { on = [ "c" "a" "p" ]; run = "plugin compress -p"; desc = "Archive selected files (password)"; }
-      { on = [ "c" "a" "h" ]; run = "plugin compress -ph"; desc = "Archive selected files (password+header)"; }
-      { on = [ "c" "a" "l" ]; run = "plugin compress -l"; desc = "Archive selected files (compression level)"; }
-      { on = [ "c" "a" "u" ]; run = "plugin compress -phl"; desc = "Archive selected files (password+header+level)"; }
+      {
+        on = [
+          "c"
+          "a"
+          "a"
+        ];
+        run = "plugin compress";
+        desc = "Archive selected files";
+      }
+      {
+        on = [
+          "c"
+          "a"
+          "p"
+        ];
+        run = "plugin compress -p";
+        desc = "Archive selected files (password)";
+      }
+      {
+        on = [
+          "c"
+          "a"
+          "h"
+        ];
+        run = "plugin compress -ph";
+        desc = "Archive selected files (password+header)";
+      }
+      {
+        on = [
+          "c"
+          "a"
+          "l"
+        ];
+        run = "plugin compress -l";
+        desc = "Archive selected files (compression level)";
+      }
+      {
+        on = [
+          "c"
+          "a"
+          "u"
+        ];
+        run = "plugin compress -phl";
+        desc = "Archive selected files (password+header+level)";
+      }
 
       # Yamb
-      { on = [ "u" "a" ]; run = "plugin yamb save"; desc = "Add bookmark"; }
-      { on = [ "u" "g" ]; run = "plugin yamb jump_by_key"; desc = "Jump bookmark by key"; }
-      { on = [ "u" "G" ]; run = "plugin yamb jump_by_fzf"; desc = "Jump bookmark by fzf"; }
-      { on = [ "u" "d" ]; run = "plugin yamb delete_by_key"; desc = "Delete bookmark by key"; }
-      { on = [ "u" "D" ]; run = "plugin yamb delete_by_fzf"; desc = "Delete bookmark by fzf"; }
-      { on = [ "u" "A" ]; run = "plugin yamb delete_all"; desc = "Delete all bookmarks"; }
-      { on = [ "u" "r" ]; run = "plugin yamb rename_by_key"; desc = "Rename bookmark by key"; }
-      { on = [ "u" "R" ]; run = "plugin yamb rename_by_fzf"; desc = "Rename bookmark by fzf"; }
-      
+      {
+        on = [
+          "u"
+          "a"
+        ];
+        run = "plugin yamb save";
+        desc = "Add bookmark";
+      }
+      {
+        on = [
+          "u"
+          "g"
+        ];
+        run = "plugin yamb jump_by_key";
+        desc = "Jump bookmark by key";
+      }
+      {
+        on = [
+          "u"
+          "G"
+        ];
+        run = "plugin yamb jump_by_fzf";
+        desc = "Jump bookmark by fzf";
+      }
+      {
+        on = [
+          "u"
+          "d"
+        ];
+        run = "plugin yamb delete_by_key";
+        desc = "Delete bookmark by key";
+      }
+      {
+        on = [
+          "u"
+          "D"
+        ];
+        run = "plugin yamb delete_by_fzf";
+        desc = "Delete bookmark by fzf";
+      }
+      {
+        on = [
+          "u"
+          "A"
+        ];
+        run = "plugin yamb delete_all";
+        desc = "Delete all bookmarks";
+      }
+      {
+        on = [
+          "u"
+          "r"
+        ];
+        run = "plugin yamb rename_by_key";
+        desc = "Rename bookmark by key";
+      }
+      {
+        on = [
+          "u"
+          "R"
+        ];
+        run = "plugin yamb rename_by_fzf";
+        desc = "Rename bookmark by fzf";
+      }
+
       # Clipboard
-      { on = "<C-y>"; run = "plugin wl-clipboard"; desc = "Copy selected"; }
+      {
+        on = "<C-y>";
+        run = "plugin wl-clipboard";
+        desc = "Copy selected";
+      }
 
       # Lutris
-      { on = [ "L" "m" ]; run = "plugin lutris make"; desc = "Makes an install script"; }
-	    { on = [ "L" "i" ]; run = "plugin lutris install"; desc = "Install a Lutris install script"; }
-	    { on = [ "L" "a" ]; run = "plugin lutris add"; desc = "Makes and installs script"; }
+      {
+        on = [
+          "L"
+          "m"
+        ];
+        run = "plugin lutris make";
+        desc = "Makes an install script";
+      }
+      {
+        on = [
+          "L"
+          "i"
+        ];
+        run = "plugin lutris install";
+        desc = "Install a Lutris install script";
+      }
+      {
+        on = [
+          "L"
+          "a"
+        ];
+        run = "plugin lutris add";
+        desc = "Makes and installs script";
+      }
 
-	    # Shell
-	    { on = ":"; run = "plugin shell block"; desc = "Run a shell command with your shell (block until finishes)"; }
-	    { on = ";"; run = "plugin shell noblock"; desc = "Run a shell command with your shell"; }
-	    { on = "!"; run = "plugin shell noskip"; desc = "Run a shell command with your shell (block until finishes and when return key is pressed)"; }
-      
+      # Shell
+      {
+        on = ":";
+        run = "plugin shell block";
+        desc = "Run a shell command with your shell (block until finishes)";
+      }
+      {
+        on = ";";
+        run = "plugin shell noblock";
+        desc = "Run a shell command with your shell";
+      }
+      {
+        on = "!";
+        run = "plugin shell noskip";
+        desc = "Run a shell command with your shell (block until finishes and when return key is pressed)";
+      }
+
       # Toggle pane
-      { on = "T"; run = "plugin toggle-pane max-preview"; desc = "Maximize or restore the preview pane"; }
+      {
+        on = "T";
+        run = "plugin toggle-pane max-preview";
+        desc = "Maximize or restore the preview pane";
+      }
 
       # Mount
-      { on = "M"; run = "plugin mount"; desc = "Open mount menu"; }
+      {
+        on = "M";
+        run = "plugin mount";
+        desc = "Open mount menu";
+      }
     ];
   };
   tasks = {
@@ -714,7 +1017,10 @@
         desc = "Swipe to the previous file";
       }
       {
-        on = [ "c" "c" ];
+        on = [
+          "c"
+          "c"
+        ];
         run = "copy cell";
         desc = "Copy selected cell";
       }
@@ -813,7 +1119,10 @@
       }
       {
         on = "I";
-        run = [ "move first-char" "insert" ];
+        run = [
+          "move first-char"
+          "insert"
+        ];
         desc = "Move to the BOL, and enter insert mode";
       }
       {
@@ -823,7 +1132,10 @@
       }
       {
         on = "A";
-        run = [ "move eol" "insert --append" ];
+        run = [
+          "move eol"
+          "insert --append"
+        ];
         desc = "Move to the EOL, and enter append mode";
       }
       {
@@ -838,17 +1150,29 @@
       }
       {
         on = "V";
-        run = [ "move bol" "visual" "move eol" ];
+        run = [
+          "move bol"
+          "visual"
+          "move eol"
+        ];
         desc = "Select from BOL to EOL";
       }
       {
         on = "<C-A>";
-        run = [ "move eol" "visual" "move bol" ];
+        run = [
+          "move eol"
+          "visual"
+          "move bol"
+        ];
         desc = "Select from EOL to BOL";
       }
       {
         on = "<C-E>";
-        run = [ "move bol" "visual" "move eol" ];
+        run = [
+          "move bol"
+          "visual"
+          "move eol"
+        ];
         desc = "Select from BOL to EOL";
       }
       {
@@ -1008,7 +1332,10 @@
       }
       {
         on = "D";
-        run = [ "delete --cut" "move eol" ];
+        run = [
+          "delete --cut"
+          "move eol"
+        ];
         desc = "Cut until the EOL";
       }
       {
@@ -1018,12 +1345,18 @@
       }
       {
         on = "C";
-        run = [ "delete --cut --insert" "move eol" ];
+        run = [
+          "delete --cut --insert"
+          "move eol"
+        ];
         desc = "Cut until the EOL, and enter insert mode";
       }
       {
         on = "x";
-        run = [ "delete --cut" "move 1 --in-operating" ];
+        run = [
+          "delete --cut"
+          "move 1 --in-operating"
+        ];
         desc = "Cut the current character";
       }
       {
@@ -1141,7 +1474,10 @@
       }
       {
         on = "<Enter>";
-        run = [ "close --submit" "close_input --submit" ];
+        run = [
+          "close --submit"
+          "close_input --submit"
+        ];
         desc = "Submit the completion and input";
       }
       {
@@ -1231,4 +1567,3 @@
     ];
   };
 }
-

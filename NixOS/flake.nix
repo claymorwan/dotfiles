@@ -13,7 +13,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     nix-output-monitor.url = "github:maralorn/nix-output-monitor";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    xdp-termfilepickers.url = "github:Guekka/xdg-desktop-portal-termfilepickers"; #/copilot/fix-file-picker-issue";
+    xdp-termfilepickers.url = "github:Guekka/xdg-desktop-portal-termfilepickers"; # /copilot/fix-file-picker-issue";
 
     nix-yazi-plugins = {
       url = "github:lordkekz/nix-yazi-plugins?ref=yazi-v0.2.5";
@@ -49,7 +49,7 @@
       url = "github:AvengeMedia/danksearch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs = {
@@ -59,31 +59,41 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, catppuccin, home-manager, nix-flatpak, ... }:
+  outputs =
+    inputs@{
+      nixpkgs,
+      catppuccin,
+      home-manager,
+      nix-flatpak,
+      ...
+    }:
     let
       username = "claymorwan";
       system = "x86_64-linux";
-      
-      mkNixosConfig = host: nixpkgs.lib.nixosSystem {
-        specialArgs = {
-	        inherit inputs;
-	        inherit username;
-	        inherit host;
-	        inherit system;
-	      };
 
-	      modules = [
-	        nix-flatpak.nixosModules.nix-flatpak
-	        ./hosts/${host}
-	        catppuccin.nixosModules.catppuccin
-	      ];
-      };
+      mkNixosConfig =
+        host:
+        nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+            inherit username;
+            inherit host;
+            inherit system;
+          };
+
+          modules = [
+            nix-flatpak.nixosModules.nix-flatpak
+            ./hosts/${host}
+            catppuccin.nixosModules.catppuccin
+          ];
+        };
     in
     {
       templates = import ./dev-shells;
+      formatter.x86_64-linux = nixpkgs.legacyPackages.${system}.nixfmt-tree;
       nixosConfigurations = {
         nixos = mkNixosConfig "nixos";
-	      nixos-laptop = mkNixosConfig "nixos-laptop";
+        nixos-laptop = mkNixosConfig "nixos-laptop";
       };
     };
 }

@@ -3,7 +3,7 @@
 let
   launch_opt = "mangohud gamemoderun %command%";
   compat = "GE-Proton";
-in 
+in
 {
   imports = [
     inputs.steam-config-nix.homeModules.default
@@ -14,13 +14,13 @@ in
     closeSteam = true; # See 'Important' note at beginning of this readme
 
     apps = {
-      
+
       # Geometry dash
       "322170" = {
         compatTool = compat;
         launchOptions = "WINEDLLOVERRIDES=\"xinput1_4=n,b\" ${launch_opt}";
       };
-      
+
       # Titanfall 2
       "1237970" = {
         compatTool = compat;

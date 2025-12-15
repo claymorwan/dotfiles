@@ -7,15 +7,16 @@
 
     plugins = with pkgs.vimPlugins; [
       lazy-nvim
-      
+
       astrocore
       astroui
       astrolsp
     ];
 
-    extraLuaPackages = luaPkgs: with luaPkgs; [
-      # luarocks
-    ];
+    extraLuaPackages =
+      luaPkgs: with luaPkgs; [
+        # luarocks
+      ];
 
     # extraLuaConfig = ''
     #  require("lazy").setup({

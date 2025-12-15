@@ -3,12 +3,13 @@
     enable = true;
 
     settings = {
-      format = "$os$username$hostname 󰜥 $directory 󰜥 [](bold fg:yellow)$cmd_duration$status"
+      format =
+        "$os$username$hostname 󰜥 $directory 󰜥 [](bold fg:yellow)$cmd_duration$status"
         + "$c$dotnet$haxe$lua$rust$zig$dart$golang$nodejs$php$java$kotlin$haskell$python$docker_context[](fg:prev_bg)"
-        +''
-        $git_branch
-        $character
-      '';
+        + ''
+          $git_branch
+          $character
+        '';
 
       character = {
         success_symbol = "[  ](bold fg:blue)";
@@ -49,8 +50,8 @@
         renamed = " ✍️ ";
         deleted = " 🗑 ";
       };
-      
-      line_break ={
+
+      line_break = {
         disabled = false;
       };
 
@@ -77,7 +78,7 @@
 
       hostname = {
         ssh_only = false;
-        format =  "[•$hostname](bg:cyan bold fg:black)[](bold fg:cyan)";
+        format = "[•$hostname](bg:cyan bold fg:black)[](bold fg:cyan)";
         trim_at = ".companyname.com";
         disabled = false;
       };
@@ -103,7 +104,7 @@
 
       cmd_duration = {
         min_time = 0;
-        format = "[󰪢 $duration](bold bg:yellow fg:black)"; #[](bold fg:yellow)";
+        format = "[󰪢 $duration](bold bg:yellow fg:black)"; # [](bold fg:yellow)";
       };
 
       status = {

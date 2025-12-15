@@ -1,8 +1,13 @@
-{ pkgs, lib, host, ... }:
+{
+  pkgs,
+  lib,
+  host,
+  ...
+}:
 
 let
   fetch_cmd = "clear; fastfetch;  blahaj -s -c trans";
-in 
+in
 {
   programs.zsh = {
     enable = true;
@@ -11,10 +16,17 @@ in
     autosuggestion.enable = true;
     syntaxHighlighting = {
       enable = true;
-      highlighters = [ "main" "brackets" "pattern" "regexp" "root" "line" ];
+      highlighters = [
+        "main"
+        "brackets"
+        "pattern"
+        "regexp"
+        "root"
+        "line"
+      ];
     };
     historySubstringSearch.enable = true;
-    
+
     plugins = [
       {
         name = "zsh-autocomplete";

@@ -1,4 +1,9 @@
-{ pkgs, system, inputs, ... }:
+{
+  pkgs,
+  system,
+  inputs,
+  ...
+}:
 
 {
   programs = {
@@ -35,12 +40,12 @@
     gnome-disk-utility
 
     kooha
-  
+
     bottles
 
     obsidian
     krita
-    
+
     linux-wallpaperengine
 
     # Kde stuff

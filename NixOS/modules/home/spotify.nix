@@ -6,7 +6,7 @@ in
 {
   imports = [
     # Example for NixOS
-      inputs.spicetify-nix.homeManagerModules.spicetify 
+    inputs.spicetify-nix.homeManagerModules.spicetify
   ];
   programs.spicetify = {
     enable = true;

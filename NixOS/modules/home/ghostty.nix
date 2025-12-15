@@ -1,8 +1,7 @@
 { pkgs, ... }:
 
 let
-  inherit
-    (import ../../variables/variables.nix)
+  inherit (import ../../variables/variables.nix)
     submodules_dir
     font_family
     ;
@@ -16,7 +15,7 @@ in
       # theme = "Catppuccin Mocha";
       clipboard-read = "allow";
       cursor-style = "bar";
-      font-family = font_family; #"JetBrainsMono NF";
+      font-family = font_family; # "JetBrainsMono NF";
       gtk-titlebar = true;
       gtk-tabs-location = "bottom";
       window-decoration = "client";

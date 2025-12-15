@@ -1,8 +1,7 @@
 { pkgs, ... }:
 
 let
-  inherit
-    (import ./../../../variables/variables.nix)
+  inherit (import ./../../../variables/variables.nix)
     mouse_cursor
     ;
 in
@@ -12,9 +11,9 @@ in
     enable = true;
 
     name = "${mouse_cursor}";
-    package = (pkgs.callPackage ./cursor.nix {});
+    package = (pkgs.callPackage ./cursor.nix { });
 
-    hyprcursor = { 
+    hyprcursor = {
       enable = true;
       size = 24;
     };

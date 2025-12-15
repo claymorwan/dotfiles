@@ -1,8 +1,7 @@
 { ... }:
 
 let
-  inherit
-    (import ./../../../variables/variables.nix)
+  inherit (import ./../../../variables/variables.nix)
     mouse_cursor
     ;
 in
@@ -18,7 +17,7 @@ in
       # Cursors
       # "hyprctl setcursor ${mouse_cursor}-H 24"
       # "gsettings set org.gnome.desktop.interface cursor-theme ${mouse_cursor}-X"
-      
+
       # Location provider and night light
       "/usr/lib/geoclue-2.0/demos/agent"
       "sleep 1 && gammastep"

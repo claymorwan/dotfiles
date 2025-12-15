@@ -1,8 +1,13 @@
-{ pkgs, username, inputs, system, ... }:
+{
+  pkgs,
+  username,
+  inputs,
+  system,
+  ...
+}:
 
 let
-  inherit
-    (import ../../../variables/variables.nix)
+  inherit (import ../../../variables/variables.nix)
     flake_dir
     ;
 in
@@ -10,7 +15,7 @@ in
   programs.nh = {
     enable = true;
     package = pkgs.nh.override {
-      nix-output-monitor = inputs.nix-output-monitor.packages.${system}.default; 
+      nix-output-monitor = inputs.nix-output-monitor.packages.${system}.default;
     };
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";

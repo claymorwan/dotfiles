@@ -1,6 +1,5 @@
 let
-  inherit
-    (import ./../../../../variables/variables.nix)
+  inherit (import ./../../../../variables/variables.nix)
     mainMod
     ;
 in
@@ -32,7 +31,6 @@ in
       # Brightness control
       ", XF86MonBrightnessUp, exec, dms ipc call brightness increment 5 ''" # Brightness up
       ", XF86MonBrightnessDown, exec, dms ipc call brightness decrement 5 ''" # Brightness down
-
 
     ];
   };
