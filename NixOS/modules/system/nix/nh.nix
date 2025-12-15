@@ -16,9 +16,4 @@ in
     clean.extraArgs = "--keep-since 4d --keep 3";
     flake = "${flake_dir}"; # sets NH_OS_FLAKE variable for you
   };
-
-  environment.systemPackages = with pkgs; [
-    # nix-output-monitor
-    # inputs.nix-output-monitor.packages.${system}.default 
-  ];
 }
