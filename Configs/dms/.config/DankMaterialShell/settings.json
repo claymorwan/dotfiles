@@ -342,7 +342,8 @@
         },
         {
           "id": "music",
-          "enabled": true
+          "enabled": true,
+          "mediaSize": 1
         },
         {
           "id": "separator",

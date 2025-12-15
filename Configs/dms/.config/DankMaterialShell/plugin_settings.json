@@ -10,7 +10,8 @@
   "dockerManager": {
     "enabled": true,
     "terminalApp": "ghostty -e",
-    "groupByCompose": false
+    "groupByCompose": false,
+    "shellPath": "/bin/sh"
   },
   "emojiLauncher": {
     "enabled": true
@@ -24,6 +25,9 @@
     },
     "sceneSettings": {
       "2873539769": {
+        "fps": 30
+      },
+      "3371368351": {
         "fps": 30
       }
     }

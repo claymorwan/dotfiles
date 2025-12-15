@@ -5,7 +5,7 @@
     ./boot.nix
     ./catppuccin.nix
     ./clamav.nix
-    ./dmsgreeter.nix
+    ./dms.nix
     ./flatpak.nix
     ./fonts.nix
     ./networking.nix

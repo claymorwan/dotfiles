@@ -1,5 +1,11 @@
 { pkgs, ... }:
 
+let
+  inherit
+    (import ../../../variables/variables.nix)
+    font_family
+    ;
+in
 {
   wayland.windowManager.hyprland = {
     plugins = with pkgs.hyprlandPlugins; [
@@ -30,7 +36,7 @@
 	      hyprexpo = {
           columns = 3;
           gap_size = 5;
-          bg_col = "rgb(111111)";
+          bg_col = "$mantle";
           workspace_method = "center current"; # [center/first] [workspace] e.g. first 1 or center m+1
 
           enable_gesture = true; # laptop touchpad
@@ -44,7 +50,7 @@
 	      };
 
 	      hyprbars = {
-          bar_text_font = "JetBrainsMono Nerd Font, Rubik, Geist, AR One Sans, Reddit Sans, Inter, Roboto, Ubuntu, Noto Sans, sans-serif";
+          bar_text_font = font_family;
 	        bar_height = 30;
 	        bar_padding = 15;
 

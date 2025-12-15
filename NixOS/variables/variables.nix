@@ -6,7 +6,8 @@ in
 {
   username = "${username}";
   mainMod = "SUPER";
-  
+
+  font_family = "JetBrainsMono Nerd Font";
   mouse_cursor = "akita-neru";
 
   # Apps
