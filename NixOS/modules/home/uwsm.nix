@@ -23,6 +23,7 @@ in
     export APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice'
 
     #export EDITOR=nvim
+    export MOZ_LEGACY_PROFILES=1
   '';
 
   home.file.".config/uwsm/env-hyprland".text = ''

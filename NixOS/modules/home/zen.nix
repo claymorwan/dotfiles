@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   system,
   ...
 }:
@@ -8,9 +9,17 @@
 let
   version = "beta";
   # inherit version;
+  ctp_zen = pkgs.fetchFromGitHub {
+    owner = "catppuccin";
+    repo = "zen-browser";
+    rev = "c855685442c6040c4dda9c8d3ddc7b708de1cbaa";
+    hash = "sha256-5A57Lyctq497SSph7B+ucuEyF1gGVTsuI3zuBItGfg4=";
+  };
+  inherit (import ../../variables/variables.nix)
+    submodules_dir
+    ;
 in
 {
-  # home.nix
   imports = [
     inputs.zen-browser.homeModules.${version}
     # or inputs.zen-browser.homeModules.twilight
@@ -29,53 +38,76 @@ in
       ];
     };
 
-    #   profiles = {
-    #     default = {
-    #       id = 0;
-    #       name = "default";
-    #       isDefault = true;
-    #       settings = {
-    #         "widget.use-xdg-desktop-portal.file-picker" = 1;
-    #         "zen.view.use-single-toolbar" = false;
-    #         "zen.urlbar.replace-newtab" = false;
-    #
-    #       };
-    #     };
-    #   };
-    # };
+    nativeMessagingHosts = with pkgs; [
+      kdePackages.plasma-browser-integration
+    ];
 
-    policies =
-      let
-        mkLockedAttrs = builtins.mapAttrs (
-          _: value: {
-            Value = value;
-            Status = "locked";
-          }
-        );
-      in
-      {
-        DisableAppUpdate = true;
-        DisableFirefoxStudies = true;
-        DisablePocket = true;
-        DisableTelemetry = true;
-        DontCheckDefaultBrowser = true;
-        NoDefaultBookmarks = true;
-        enablePlasmaBrowserIntegration = true;
-        EnableTrackingProtection = {
-          Value = true;
-          Locked = true;
-          Cryptomining = true;
-          Fingerprinting = true;
-        };
-
-        Preferences = mkLockedAttrs {
+    profiles = {
+      default = {
+        id = 0;
+        name = "default";
+        isDefault = true;
+        settings = {
           "widget.use-xdg-desktop-portal.file-picker" = 1;
-          # Sidebar and toolbar
-          # "zen.view.use-single-toolbar" = false;
-          #
-          # "zen.urlbar.replace-newtab" = false;
+          "services.sync.prefs.sync.browser.uiCustomization.state" = true;
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+          "browser.toolbars.bookmarks.visibility" = "always";
+
+          "zen.view.use-single-toolbar" = false;
+          "zen.urlbar.replace-newtab" = false;
+          "zen.view.compact.hide-tabbar" = true;
+          "zen.view.compact.hide-toolbar" = true;
         };
       };
+    };
+
+    # policies =
+    #   let
+    #     mkLockedAttrs = builtins.mapAttrs (
+    #       _: value: {
+    #         Value = value;
+    #         Status = "locked";
+    #       }
+    #     );
+    #   in
+    #   {
+    #     DisableAppUpdate = true;
+    #     DisableFirefoxStudies = true;
+    #     DisablePocket = true;
+    #     DisableTelemetry = true;
+    #     DontCheckDefaultBrowser = true;
+    #     NoDefaultBookmarks = true;
+    #     enablePlasmaBrowserIntegration = true;
+    #     EnableTrackingProtection = {
+    #       Value = true;
+    #       Locked = true;
+    #       Cryptomining = true;
+    #       Fingerprinting = true;
+    #     };
+    #
+    #     Preferences = mkLockedAttrs {
+    #       "widget.use-xdg-desktop-portal.file-picker" = 1;
+    #       # Sidebar and toolbar
+    #       # "zen.view.use-single-toolbar" = false;
+    #       #
+    #       # "zen.urlbar.replace-newtab" = false;
+    #     };
+    #   };
+  };
+
+  home.file = {
+    ".zen/default/chrome/userChrome.css" = {
+      enable = true;
+      source = "${ctp_zen}/themes/Mocha/Mauve/userChrome.css";
+    };
+    ".zen/default/chrome/userContent.css" = {
+      enable = true;
+      source = "${ctp_zen}/themes/Mocha/Mauve/userContent.css";
+    };
+    ".zen/default/chrome/zen-logo-mocha.svg" = {
+      enable = true;
+      source = "${ctp_zen}/themes/Mocha/Mauve/zen-logo-mocha.svg";
+    };
   };
 
   xdg.mimeApps =

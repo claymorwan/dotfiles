@@ -1,9 +1,15 @@
 { inputs, ... }:
 
+let
+  inherit (import ../../variables/variables.nix)
+    ctp_flavor
+    ctp_accent
+    ;
+in
 {
   catppuccin = {
     enable = true;
-    flavor = "mocha";
-    accent = "mauve";
+    flavor = ctp_flavor;
+    accent = ctp_accent;
   };
 }

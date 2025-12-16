@@ -7,6 +7,9 @@ in
   username = "${username}";
   mainMod = "SUPER";
 
+  # Theming
+  ctp_flavor = "mocha";
+  ctp_accent = "mauve";
   font_family = "JetBrainsMono Nerd Font";
   mouse_cursor = "akita-neru";
 
