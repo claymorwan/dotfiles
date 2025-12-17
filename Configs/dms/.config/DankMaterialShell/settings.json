@@ -288,6 +288,7 @@
   "customPowerActionHibernate": "",
   "customPowerActionReboot": "",
   "customPowerActionPowerOff": "",
+  "updaterHideWidget": false,
   "updaterUseCustomCommand": true,
   "updaterCustomCommand": "ecdysys -u",
   "updaterTerminalAdditionalParams": "",

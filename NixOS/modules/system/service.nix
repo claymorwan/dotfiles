@@ -24,5 +24,6 @@
 
     openssh.enable = true;
     blueman.enable = true;
+    upower.enable = true;
   };
 }

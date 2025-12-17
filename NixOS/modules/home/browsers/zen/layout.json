@@ -1,0 +1,107 @@
+{
+  "placements": {
+    "widget-overflow-fixed-list": [],
+    "unified-extensions-area": [
+      "sponsorblocker_ajay_app-browser-action",
+      "moz-addon_7tv_app-browser-action",
+      "_a6c4a591-f1b2-4f03-b3ff-767e5bedf4e7_-browser-action",
+      "_cb31ec5d-c49a-4e5a-b240-16c767444f62_-browser-action",
+      "_c84d89d9-a826-4015-957b-affebd9eb603_-browser-action",
+      "yeah_dimden_dev-browser-action",
+      "addon_protondb-community-extension_com-browser-action",
+      "firefox-extension_deepl_com-browser-action",
+      "firefoxcolor_mozilla_com-browser-action",
+      "control-panel-for-youtube_jbscript_dev-browser-action",
+      "dontfuckwithpaste_raim_ist-browser-action",
+      "youtube-anti-translate-mv3_namakeingo_co_uk-browser-action",
+      "firefox-addon_pronoundb_org-browser-action",
+      "librezam_librezam-browser-action",
+      "plasma-browser-integration_kde_org-browser-action",
+      "syrup_extension-browser-action",
+      "_4f391a9e-8717-4ba6-a5b1-488a34931fcb_-browser-action",
+      "_bf9e77ee-c405-4dd7-9bed-2f55e448d19a_-browser-action",
+      "_5cce4ab5-3d47-41b9-af5e-8203eea05245_-browser-action",
+      "_bbb880ce-43c9-47ae-b746-c3e0096c5b76_-browser-action",
+      "firefox_tampermonkey_net-browser-action"
+    ],
+    "nav-bar": [
+      "back-button",
+      "forward-button",
+      "stop-reload-button",
+      "customizableui-special-spring1",
+      "vertical-spacer",
+      "urlbar-container",
+      "customizableui-special-spring2",
+      "addon_darkreader_org-browser-action",
+      "unified-extensions-button",
+      "ublock0_raymondhill_net-browser-action",
+      "_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action",
+      "78272b6fa58f4a1abaac99321d503a20_proton_me-browser-action"
+    ],
+    "toolbar-menubar": [
+      "menubar-items"
+    ],
+    "TabsToolbar": [
+      "tabbrowser-tabs"
+    ],
+    "vertical-tabs": [],
+    "PersonalToolbar": [
+      "personal-bookmarks"
+    ],
+    "zen-sidebar-top-buttons": [
+      "fxa-toolbar-menu-button",
+      "zen-toggle-compact-mode",
+      "customizableui-special-spring4",
+      "preferences-button",
+      "customizableui-special-spring5",
+      "jid0-adyhmvsp91nuo8prv0mn2vkeb84_jetpack-browser-action"
+    ],
+    "zen-sidebar-foot-buttons": [
+      "downloads-button",
+      "zen-workspaces-button",
+      "zen-create-new-button"
+    ]
+  },
+  "seen": [
+    "developer-button",
+    "screenshot-button",
+    "_a6c4a591-f1b2-4f03-b3ff-767e5bedf4e7_-browser-action",
+    "_cb31ec5d-c49a-4e5a-b240-16c767444f62_-browser-action",
+    "_c84d89d9-a826-4015-957b-affebd9eb603_-browser-action",
+    "yeah_dimden_dev-browser-action",
+    "addon_protondb-community-extension_com-browser-action",
+    "firefox-extension_deepl_com-browser-action",
+    "firefoxcolor_mozilla_com-browser-action",
+    "control-panel-for-youtube_jbscript_dev-browser-action",
+    "dontfuckwithpaste_raim_ist-browser-action",
+    "youtube-anti-translate-mv3_namakeingo_co_uk-browser-action",
+    "firefox-addon_pronoundb_org-browser-action",
+    "librezam_librezam-browser-action",
+    "ublock0_raymondhill_net-browser-action",
+    "jid0-adyhmvsp91nuo8prv0mn2vkeb84_jetpack-browser-action",
+    "plasma-browser-integration_kde_org-browser-action",
+    "_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action",
+    "syrup_extension-browser-action",
+    "addon_darkreader_org-browser-action",
+    "_4f391a9e-8717-4ba6-a5b1-488a34931fcb_-browser-action",
+    "78272b6fa58f4a1abaac99321d503a20_proton_me-browser-action",
+    "_bf9e77ee-c405-4dd7-9bed-2f55e448d19a_-browser-action",
+    "moz-addon_7tv_app-browser-action",
+    "_5cce4ab5-3d47-41b9-af5e-8203eea05245_-browser-action",
+    "_bbb880ce-43c9-47ae-b746-c3e0096c5b76_-browser-action",
+    "sponsorblocker_ajay_app-browser-action",
+    "firefox_tampermonkey_net-browser-action"
+  ],
+  "dirtyAreaCache": [
+    "nav-bar",
+    "vertical-tabs",
+    "zen-sidebar-foot-buttons",
+    "PersonalToolbar",
+    "unified-extensions-area",
+    "zen-sidebar-top-buttons",
+    "toolbar-menubar",
+    "TabsToolbar"
+  ],
+  "currentVersion": 23,
+  "newElementCount": 6
+}

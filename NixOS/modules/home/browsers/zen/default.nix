@@ -29,14 +29,12 @@ in
   programs.zen-browser = {
     enable = true;
 
-    package = inputs.zen-browser.packages."${system}".default.override {
-      extraPrefsFiles = [
-        (builtins.fetchurl {
-          url = "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/program/config.js";
-          sha256 = "1mx679fbc4d9x4bnqajqx5a95y1lfasvf90pbqkh9sm3ch945p40";
-        })
-      ];
-    };
+    extraPrefsFiles = [
+      (builtins.fetchurl {
+        url = "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/program/config.js";
+        sha256 = "1mx679fbc4d9x4bnqajqx5a95y1lfasvf90pbqkh9sm3ch945p40";
+      })
+    ];
 
     nativeMessagingHosts = with pkgs; [
       kdePackages.plasma-browser-integration
@@ -52,11 +50,13 @@ in
           "services.sync.prefs.sync.browser.uiCustomization.state" = true;
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "browser.toolbars.bookmarks.visibility" = "always";
+          "browser.uiCustomization.state" = builtins.readFile ./layout.json;
 
           "zen.view.use-single-toolbar" = false;
           "zen.urlbar.replace-newtab" = false;
           "zen.view.compact.hide-tabbar" = true;
           "zen.view.compact.hide-toolbar" = true;
+          "zen.view.compact.enable-at-startup" = true;
         };
       };
     };

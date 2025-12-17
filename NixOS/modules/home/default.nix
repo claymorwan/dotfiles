@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./browsers
     ./catppuccin.nix
     ./cursors
     ./dms
@@ -21,7 +22,6 @@
     ./uwsm.nix
     ./xdg
     ./yazi
-    ./zen.nix
     ./zsh
   ];
 }
