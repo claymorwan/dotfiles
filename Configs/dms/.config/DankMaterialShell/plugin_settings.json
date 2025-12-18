@@ -82,10 +82,10 @@
   },
   "dankDesktopWeather": {
     "enabled": true,
-    "desktopX_eDP-1": 1495,
-    "desktopY_eDP-1": 70,
-    "desktopWidth_eDP-1": 400,
-    "desktopHeight_eDP-1": 550,
+    "desktopX_eDP-1": 1531,
+    "desktopY_eDP-1": 58.75390625,
+    "desktopWidth_eDP-1": 368.59375,
+    "desktopHeight_eDP-1": 483.28515625,
     "showPressure": true,
     "backgroundOpacity": 100,
     "showHourlyForecast": true,
@@ -93,15 +93,16 @@
     "viewMode": "detailed",
     "showSunTimes": true,
     "showForecast": true,
-    "forecastDays": 7
+    "forecastDays": 7,
+    "colorMode": "primary"
   },
   "exampleDesktopClock": {
-    "enabled": false,
-    "backgroundOpacity": 100,
+    "enabled": true,
+    "backgroundOpacity": 0,
     "clockStyle": "analog",
     "desktopWidth_eDP-1": 200,
     "desktopHeight_eDP-1": 200,
-    "desktopX_eDP-1": 200,
-    "desktopY_eDP-1": 440
+    "desktopX_eDP-1": 1290,
+    "desktopY_eDP-1": 60
   }
 }

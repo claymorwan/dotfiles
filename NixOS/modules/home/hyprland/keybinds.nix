@@ -21,22 +21,22 @@ in
     submap = "global";
 
     bind = [
-      "Alt, F4, killactive, " # [hidden] Close (Windows)
+      "Alt, F4, killactive, # [hidden]" # Close (Windows)
 
       # Applications
       "${mainMod}, Return, exec, ${launch_prefix} ${terminal} # Terminal"
-      "${mainMod}, W, exec, ${launch_prefix} ${browser}" # Browser
-      "${mainMod}, D, exec, ${launch_prefix} equibop" # Discord
-      "${mainMod}, S, exec, ${launch_prefix} spotify" # Spotify
-      "${mainMod}, E, exec, ${launch_prefix} ${terminal} -e yazi" # file explorer
+      "${mainMod}, W, exec, ${launch_prefix} ${browser} # Browser"
+      "${mainMod}, D, exec, ${launch_prefix} equibop # Discord"
+      "${mainMod}, S, exec, ${launch_prefix} spotify # Spotify"
+      "${mainMod}, E, exec, ${launch_prefix} ${terminal} -e yazi # File explorer"
 
       # Plugins
-      "${mainMod}, C, hyprexpo:expo, toggle"
+      "${mainMod}, C, hyprexpo:expo, toggle # Hyprexpo"
 
       # Screenshots
-      ", Print, exec, dms screenshot full --stdout | gradia"
-      "Ctrl, Print, exec, dms screenshot --stdout | gradia"
-      "${mainMod}, Print, exec, dms screenshot window --stdout | gradia"
+      ", Print, exec, dms screenshot full --stdout | gradia # Screenshot (full)"
+      "Ctrl, Print, exec, dms screenshot --stdout | gradia # Screenshot (region)"
+      "${mainMod}, Print, exec, dms screenshot window --stdout | gradia # Screenshot (window)"
 
       # ", Print, exec, hyprshot -z -m output -o ${screenshot_dir} -- gradia"
       # "Ctrl, Print, exec, hyprshot -z -m region -o ${screenshot_dir} -- gradia"
