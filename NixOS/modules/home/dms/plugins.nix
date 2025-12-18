@@ -4,8 +4,8 @@ let
   official_plugins = pkgs.fetchFromGitHub {
     owner = "AvengeMedia";
     repo = "dms-plugins";
-    rev = "cf0efeb8311bf59f9f4caec06689100ee5f1aa35";
-    hash = "sha256-vEoax/uZ3VPe4zw6761dHiPMbYacYlg1hPyORiljWKc=";
+    rev = "1e3dad105581d2a1aed39bc478ab955a5a70fa0f";
+    hash = "sha256-QaES61lAxUGpzXEgAcidOsi332Ee/2uBOFoXcCsDW88=";
   };
 
   lucyfire-plugins = pkgs.fetchFromGitHub {
@@ -17,7 +17,7 @@ let
 in
 
 {
-  programs.dankMaterialShell = {
+  programs.dank-material-shell = {
     plugins = {
 
       # Wallpaper engine
@@ -79,6 +79,12 @@ in
       DankPomodoroTimer = {
         enable = true;
         src = "${official_plugins}/DankPomodoroTimer";
+      };
+
+      # Weather desktop
+      DankDesktopWeather = {
+        enable = true;
+        src = "${official_plugins}/DankDesktopWeather";
       };
 
       alarmClock = {

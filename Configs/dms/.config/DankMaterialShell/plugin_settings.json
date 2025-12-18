@@ -79,5 +79,29 @@
   },
   "displaySettings": {
     "enabled": true
+  },
+  "dankDesktopWeather": {
+    "enabled": true,
+    "desktopX_eDP-1": 1495,
+    "desktopY_eDP-1": 70,
+    "desktopWidth_eDP-1": 400,
+    "desktopHeight_eDP-1": 550,
+    "showPressure": true,
+    "backgroundOpacity": 100,
+    "showHourlyForecast": true,
+    "displayPreferences": [],
+    "viewMode": "detailed",
+    "showSunTimes": true,
+    "showForecast": true,
+    "forecastDays": 7
+  },
+  "exampleDesktopClock": {
+    "enabled": false,
+    "backgroundOpacity": 100,
+    "clockStyle": "analog",
+    "desktopWidth_eDP-1": 200,
+    "desktopHeight_eDP-1": 200,
+    "desktopX_eDP-1": 200,
+    "desktopY_eDP-1": 440
   }
 }

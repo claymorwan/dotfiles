@@ -16,7 +16,7 @@ in
       "${mainMod}, X, exec, dms ipc call powermenu toggle" # Power menu
       "${mainMod} SHIFT, S, exec, dms ipc call control-center toggle" # Control center
       "${mainMod}, TAB, exec, dms ipc call hypr toggleOverview" # Workspace overview
-      #"${mainMod}, KP_Divide, exec, dms ipc call keybinds toggleWithPath hyprland ~/.config/hyprdots/hypr/keybinds"
+      "${mainMod}, KP_Divide, exec, dms ipc call keybinds toggle hyprland"
 
       "${mainMod} + SHIFT, N, exec, dms ipc call night toggle" # Night mode
     ];

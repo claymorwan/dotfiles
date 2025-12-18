@@ -24,7 +24,7 @@ in
       "Alt, F4, killactive, " # [hidden] Close (Windows)
 
       # Applications
-      "${mainMod}, Return, exec, ${launch_prefix} ${terminal}" # Terminal
+      "${mainMod}, Return, exec, ${launch_prefix} ${terminal} # Terminal"
       "${mainMod}, W, exec, ${launch_prefix} ${browser}" # Browser
       "${mainMod}, D, exec, ${launch_prefix} equibop" # Discord
       "${mainMod}, S, exec, ${launch_prefix} spotify" # Spotify

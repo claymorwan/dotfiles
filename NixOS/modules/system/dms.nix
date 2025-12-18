@@ -17,7 +17,7 @@ in
     inputs.dankMaterialShell.nixosModules.greeter
   ];
 
-  programs.dankMaterialShell = {
+  programs.dank-material-shell = {
     #   enable = true;
     #
     #   quickshell.package = inputs.quickshell.packages.${system}.default;

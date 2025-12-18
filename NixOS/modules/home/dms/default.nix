@@ -7,13 +7,13 @@
 
 {
   imports = [
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+    inputs.dankMaterialShell.homeModules.dank-material-shell#.default
     ./dsearch.nix
     ./plugins.nix
   ];
 
   # DMS
-  programs.dankMaterialShell = {
+  programs.dank-material-shell = {
     enable = true;
 
     quickshell.package = inputs.quickshell.packages.${system}.default;
