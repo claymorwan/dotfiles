@@ -1,8 +1,20 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  lib,
+  ...
+}:
 
 let
-  launch_opt = "mangohud gamemoderun %command%";
-  compat = "GE-Proton";
+  gameOptions.launchOptions.wrappers = [
+    (lib.getExe' pkgs.mangohud "mangohud")
+    pkgs.gamemode
+  ];
+
+  winGameOptions = gameOptions // {
+    compatTool = "GE-Proton";
+  };
+
 in
 {
   imports = [
@@ -16,50 +28,52 @@ in
     apps = {
 
       # Geometry dash
-      "322170" = {
-        compatTool = compat;
-        launchOptions = "WINEDLLOVERRIDES=\"xinput1_4=n,b\" ${launch_opt}";
+      geometry-dash = lib.recursiveUpdate winGameOptions {
+        id = 322170;
+        launchOptions = {
+          env.WINEDLLOVERRIDES = "xinput1_4=n,b";
+        };
       };
 
       # Titanfall 2
-      "1237970" = {
-        compatTool = compat;
-        launchOptions = launch_opt;
+      titanfall-2 = winGameOptions // {
+        id = 1237970;
       };
 
       # Subnautica
-      "264710" = {
-        compatTool = compat;
-        launchOptions = "WINEDLLOVERRIDES=\"winhttp=n,b\" ${launch_opt}";
+      subnautica = lib.recursiveUpdate winGameOptions {
+        id = 264710;
+        launchOptions = {
+          env.WINEDLLOVERRIDES = "winhttp=n,b";
+        };
       };
 
       # Subnautica: Below Zero
-      "848450" = {
-        compatTool = compat;
-        launchOptions = "WINEDLLOVERRIDES=\"winhttp=n,b\" ${launch_opt}";
+      subnautica-bz = lib.recursiveUpdate winGameOptions {
+        id = 848450;
+        launchOptions = {
+          env.WINEDLLOVERRIDES = "winhttp=n,b";
+        };
       };
 
       # Spelunky 2
-      "418530" = {
-        compatTool = compat;
-        launchOptions = launch_opt;
+      spelunky-2 = winGameOptions // {
+        id = 418530;
       };
 
       # Peak
-      "3527290" = {
-        compatTool = compat;
-        launchOptions = launch_opt;
+      peak = winGameOptions // {
+        id = 3527290;
       };
 
       # Waterpark simulator
-      "3293260" = {
-        compatTool = compat;
-        launchOptions = launch_opt;
+      waterpark-simulator = winGameOptions // {
+        id = 3293260;
       };
 
       # Portal 2
-      "620" = {
-        launchOptions = launch_opt;
+      portal-2 = gameOptions // {
+        id = 620;
       };
 
     };
