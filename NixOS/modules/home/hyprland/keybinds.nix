@@ -22,6 +22,7 @@ in
 
     bind = [
       "Alt, F4, killactive, # [hidden]" # Close (Windows)
+      "${mainMod}, Space, exec, hyprctl switchxkblayout # Switch keyboard layout"
 
       # Applications
       "${mainMod}, Return, exec, ${launch_prefix} ${terminal} # Terminal"

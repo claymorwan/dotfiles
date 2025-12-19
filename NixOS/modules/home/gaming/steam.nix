@@ -76,6 +76,9 @@ in
         id = 620;
       };
 
+      "1962890" = lib.recursiveUpdate gameOptions {
+        launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
+      };
     };
   };
 }

@@ -94,7 +94,11 @@
     "showSunTimes": true,
     "showForecast": true,
     "forecastDays": 7,
-    "colorMode": "primary"
+    "colorMode": "primary",
+    "desktopX_DP-1": 1578.9375,
+    "desktopY_DP-1": 57.734375,
+    "desktopWidth_DP-1": 327.73046875,
+    "desktopHeight_DP-1": 519.23046875
   },
   "exampleDesktopClock": {
     "enabled": true,

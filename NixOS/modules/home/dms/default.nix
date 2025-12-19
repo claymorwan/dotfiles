@@ -7,7 +7,7 @@
 
 {
   imports = [
-    inputs.dankMaterialShell.homeModules.dank-material-shell # .default
+    inputs.dms.homeModules.dank-material-shell # .default
     ./dsearch.nix
     ./plugins.nix
   ];

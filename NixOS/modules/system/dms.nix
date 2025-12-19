@@ -14,7 +14,7 @@ in
 {
   imports = [
     # inputs.dankMaterialShell.nixosModules.dankMaterialShell
-    inputs.dankMaterialShell.nixosModules.greeter
+    inputs.dms.nixosModules.greeter
   ];
 
   programs.dank-material-shell = {
