@@ -82,8 +82,8 @@
   },
   "dankDesktopWeather": {
     "enabled": true,
-    "desktopX_eDP-1": 1531,
-    "desktopY_eDP-1": 58.75390625,
+    "desktopX_eDP-1": 1536.47265625,
+    "desktopY_eDP-1": 63.25,
     "desktopWidth_eDP-1": 368.59375,
     "desktopHeight_eDP-1": 483.28515625,
     "showPressure": true,
@@ -106,7 +106,7 @@
     "clockStyle": "analog",
     "desktopWidth_eDP-1": 200,
     "desktopHeight_eDP-1": 200,
-    "desktopX_eDP-1": 1290,
-    "desktopY_eDP-1": 60
+    "desktopX_eDP-1": 843,
+    "desktopY_eDP-1": 441
   }
 }
