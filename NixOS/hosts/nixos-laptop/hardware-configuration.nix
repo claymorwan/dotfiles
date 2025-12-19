@@ -26,15 +26,15 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/feabfee1-03c7-4626-9722-6ac5d0cca35d";
+    device = "/dev/disk/by-uuid/023f9a73-3b12-42ba-b4a0-ee77e1c68af0";
     fsType = "ext4";
   };
 
-  boot.initrd.luks.devices."luks-e58d55e9-95c1-4d57-abbb-a87d6ec50866".device =
-    "/dev/disk/by-uuid/e58d55e9-95c1-4d57-abbb-a87d6ec50866";
+  boot.initrd.luks.devices."luks-e0b30e42-8f37-4f62-99ca-49e87e5c12d4".device =
+    "/dev/disk/by-uuid/e0b30e42-8f37-4f62-99ca-49e87e5c12d4";
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/F18C-ED25";
+    device = "/dev/disk/by-uuid/96F1-47F3";
     fsType = "vfat";
     options = [
       "fmask=0077"
@@ -48,7 +48,7 @@
   };
 
   swapDevices = [
-    { device = "/dev/disk/by-uuid/e032046f-4f18-475a-aa24-edde1bedfb72"; }
+    { device = "/dev/disk/by-uuid/acf06be6-323c-4b76-ad1e-2df9642c14e1"; }
   ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -59,8 +59,5 @@
   # networking.interfaces.wlp1s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware = {
-    cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-    amdgpu.initrd.enable = true;
-  };
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
