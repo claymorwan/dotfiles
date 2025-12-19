@@ -9,11 +9,27 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    catppuccin.url = "github:catppuccin/nix";
+    catppuccin = {
+      url = "github:catppuccin/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    nix-output-monitor.url = "github:maralorn/nix-output-monitor";
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    xdp-termfilepickers.url = "github:Guekka/xdg-desktop-portal-termfilepickers"; # /copilot/fix-file-picker-issue";
+
+    nix-output-monitor = {
+      url = "github:maralorn/nix-output-monitor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    xdp-termfilepickers = {
+      url = "github:Guekka/xdg-desktop-portal-termfilepickers"; # /copilot/fix-file-picker-issue";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nix-yazi-plugins = {
       url = "github:lordkekz/nix-yazi-plugins?ref=yazi-v0.2.5";
