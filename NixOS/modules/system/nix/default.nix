@@ -39,5 +39,6 @@
   environment.systemPackages = with pkgs; [
     nurl
     update-nix-fetchgit
+    nixpkgs-review
   ];
 }

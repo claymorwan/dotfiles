@@ -36,9 +36,7 @@ in
       };
 
       # Titanfall 2
-      titanfall-2 = winGameOptions // {
-        id = 1237970;
-      };
+      "1237970" = winGameOptions;
 
       # Subnautica
       subnautica = lib.recursiveUpdate winGameOptions {
@@ -57,28 +55,26 @@ in
       };
 
       # Spelunky 2
-      spelunky-2 = winGameOptions // {
-        id = 418530;
-      };
+      " 418530" = winGameOptions;
 
       # Peak
-      peak = winGameOptions // {
-        id = 3527290;
-      };
+      "3527290" = winGameOptions;
 
       # Waterpark simulator
-      waterpark-simulator = winGameOptions // {
-        id = 3293260;
-      };
+      "3293260" = winGameOptions;
 
       # Portal 2
-      portal-2 = gameOptions // {
-        id = 620;
-      };
+      "620" = winGameOptions;
+
+      # R.E.P.0
+      "3241660" = winGameOptions;
 
       "1962890" = lib.recursiveUpdate gameOptions {
         launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
       };
+
+      # Overcooked 2
+      "728880" = winGameOptions;
     };
   };
 }

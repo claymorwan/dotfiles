@@ -1,5 +1,5 @@
 {
-  "currentThemeName": "cat-mauve",
+  "currentThemeName": "custom",
   "customThemeFile": "/home/claymorwan/.dotfiles/Submodules/catppuccin/monorepo/dank-material-shell/themes/mocha-latte/colors-mauve.json",
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": false,
@@ -224,6 +224,7 @@
   "matugenTemplateKitty": true,
   "matugenTemplateFoot": true,
   "matugenTemplateAlacritty": true,
+  "matugenTemplateNeovim": true,
   "matugenTemplateWezterm": true,
   "matugenTemplateDgop": true,
   "matugenTemplateKcolorscheme": true,
@@ -431,9 +432,9 @@
       "widgetOutlineThickness": 2
     }
   ],
-  "desktopClockEnabled": false,
+  "desktopClockEnabled": true,
   "desktopClockStyle": "analog",
-  "desktopClockTransparency": 0.8,
+  "desktopClockTransparency": 1,
   "desktopClockColorMode": "primary",
   "desktopClockCustomColor": {
     "r": 1,
@@ -458,9 +459,9 @@
   "desktopClockDisplayPreferences": [
     "all"
   ],
-  "systemMonitorEnabled": false,
+  "systemMonitorEnabled": true,
   "systemMonitorShowHeader": true,
-  "systemMonitorTransparency": 0.8,
+  "systemMonitorTransparency": 1,
   "systemMonitorColorMode": "primary",
   "systemMonitorCustomColor": {
     "r": 1,
@@ -478,15 +479,15 @@
   "systemMonitorShowCpu": true,
   "systemMonitorShowCpuGraph": true,
   "systemMonitorShowCpuTemp": true,
-  "systemMonitorShowGpuTemp": false,
+  "systemMonitorShowGpuTemp": true,
   "systemMonitorGpuPciId": "",
   "systemMonitorShowMemory": true,
   "systemMonitorShowMemoryGraph": true,
   "systemMonitorShowNetwork": true,
   "systemMonitorShowNetworkGraph": true,
   "systemMonitorShowDisk": true,
-  "systemMonitorShowTopProcesses": false,
-  "systemMonitorTopProcessCount": 3,
+  "systemMonitorShowTopProcesses": true,
+  "systemMonitorTopProcessCount": 5,
   "systemMonitorTopProcessSortBy": "cpu",
   "systemMonitorGraphInterval": 60,
   "systemMonitorX": -1,
@@ -497,6 +498,42 @@
     "all"
   ],
   "systemMonitorVariants": [],
-  "desktopWidgetPositions": {},
+  "desktopWidgetPositions": {
+    "systemMonitor": {
+      "DP-1": {
+        "x": 30,
+        "y": 60,
+        "width": 450,
+        "height": 480
+      },
+      "HDMI-A-1": {
+        "x": 40,
+        "y": 80
+      }
+    },
+    "desktopClock": {
+      "DP-1": {
+        "x": 810,
+        "y": 450,
+        "width": 270,
+        "height": 270
+      },
+      "HDMI-A-1": {
+        "x": 840,
+        "y": 400,
+        "width": 240,
+        "height": 240
+      }
+    }
+  },
+  "desktopWidgetGridSettings": {
+    "DP-1": {
+      "size": 30,
+      "enabled": true
+    },
+    "HDMI-A-1": {
+      "enabled": true
+    }
+  },
   "configVersion": 3
 }

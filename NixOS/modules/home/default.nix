@@ -7,8 +7,8 @@
     ./cursors
     ./dms
     ./editors
-    ./fastfetch
     ./flatpak.nix
+    ./fetchs
     ./gaming
     ./git.nix
     ./ghostty.nix
@@ -19,6 +19,7 @@
     ./qt.nix
     ./starship.nix
     ./spotify.nix
+    ./ssh.nix
     ./uwsm.nix
     ./xdg
     ./yazi

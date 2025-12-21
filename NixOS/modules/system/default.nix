@@ -12,7 +12,7 @@
     ./nix
     ./packages.nix
     ./printing.nix
-    ./service.nix
+    ./services.nix
     ./security.nix
     ./steam.nix
     ./system.nix

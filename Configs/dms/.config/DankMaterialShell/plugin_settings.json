@@ -95,10 +95,14 @@
     "showForecast": true,
     "forecastDays": 7,
     "colorMode": "primary",
-    "desktopX_DP-1": 1578.9375,
-    "desktopY_DP-1": 57.734375,
-    "desktopWidth_DP-1": 327.73046875,
-    "desktopHeight_DP-1": 519.23046875
+    "desktopX_DP-1": 1530,
+    "desktopY_DP-1": 60,
+    "desktopWidth_DP-1": 360,
+    "desktopHeight_DP-1": 540,
+    "desktopX_HDMI-A-1": 1480,
+    "desktopY_HDMI-A-1": 80,
+    "desktopWidth_HDMI-A-1": 400,
+    "desktopHeight_HDMI-A-1": 440
   },
   "exampleDesktopClock": {
     "enabled": true,

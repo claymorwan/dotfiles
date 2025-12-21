@@ -43,6 +43,8 @@
     app2unit
     rar
     unzip
+    efibootmgr
+    imagemagick
 
     gnumake
     gcc

@@ -16,6 +16,7 @@ in
     # export XCURSOR_THEME='${mouse_cursor}-X'
     # export XCURSOR_SIZE='24'
 
+    export XDG_DESKTOP_PORTAL_DIR=/etc/profiles/per-user/claymorwan/share/xdg-desktop-portal/portals
     export GDK_DEBUG=portals
     export GTK_USE_PORTAL=1
 

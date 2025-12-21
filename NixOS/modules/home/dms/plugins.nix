@@ -83,7 +83,7 @@ in
 
       # Weather desktop
       DankDesktopWeather = {
-        enable = true;
+        enable = false;
         src = "${official_plugins}/DankDesktopWeather";
       };
 

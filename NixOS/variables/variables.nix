@@ -1,10 +1,5 @@
-let
+rec {
   username = "claymorwan";
-  home = "/home/${username}";
-  dotfiles = "${home}/.dotfiles";
-in
-{
-  username = "${username}";
   mainMod = "SUPER";
 
   # Theming
@@ -19,9 +14,9 @@ in
   browser = "zen";
 
   # Dirs
-  home_dir = "${home}";
-  dotfiles_dir = "${dotfiles}";
-  flake_dir = "${dotfiles}/NixOS";
-  screenshot_dir = "${home}/Pictures/Screenshots";
-  submodules_dir = "${dotfiles}/Submodules";
+  home_dir = "/home/${username}";
+  dotfiles_dir = "${home_dir}/.dotfiles";
+  flake_dir = "${dotfiles_dir}/NixOS";
+  screenshot_dir = "${home_dir}/Pictures/Screenshots";
+  submodules_dir = "${dotfiles_dir}/Submodules";
 }

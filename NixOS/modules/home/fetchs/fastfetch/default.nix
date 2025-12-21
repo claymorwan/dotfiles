@@ -1,5 +1,5 @@
 let
-  inherit (import ./../../../variables/variables.nix)
+  inherit (import ../../../../variables/variables.nix)
     flake_dir
     ;
 in
@@ -8,12 +8,12 @@ in
     enable = true;
 
     settings = {
-      logo = {
-        type = "kitty";
-        source = "${flake_dir}/modules/home/fastfetch/NixOS.png";
-        height = 20;
-        # preserve-aspect-ratio = true;
-      };
+      # logo = {
+      #   type = "kitty";
+      #   source = "${flake_dir}/modules/home/fastfetch/NixOS.png";
+      #   height = 20;
+      #   # preserve-aspect-ratio = true;
+      # };
 
       display = {
         separator = " 󰅂 ";

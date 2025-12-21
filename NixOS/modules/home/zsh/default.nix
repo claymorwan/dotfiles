@@ -6,7 +6,7 @@
 }:
 
 let
-  fetch_cmd = "clear; fastfetch;  blahaj -s -c trans";
+  fetch_cmd = "clear; hyfetch;  blahaj -s -c trans";
 in
 {
   programs.zsh = {

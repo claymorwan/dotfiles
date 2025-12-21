@@ -12,9 +12,11 @@
     prismlauncher
     protonplus
     limo
+    gale
     # wine-discord-ipc-bridge
 
     # osu-lazer-bin
-    sm64coopdx
+    # sm64coopdx
+    (pkgs.callPackage ../../../packages/sm64coopdx/package.nix { })
   ];
 }
