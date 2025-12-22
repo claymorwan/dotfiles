@@ -37,8 +37,16 @@
     };
 
     steam-config-nix = {
-      url = "github:different-name/steam-config-nix";
+      url = "github:different-name/steam-config-nix?rev=5efbe97c61a4b1375887ca1f45a6e81ad6a11735";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        home-manager.follows = "home-manager";
+        nixpkgs.follows = "nixpkgs";
+      };
     };
 
     quickshell = {
@@ -66,12 +74,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs = {
-        home-manager.follows = "home-manager";
-        nixpkgs.follows = "nixpkgs";
-      };
+    dms-plugins-official = {
+      url = "github:AvengeMedia/dms-plugins";
+      flake = false;
+    };
+
+    dms-lucyfire-plugins = {
+      url = "github:lucyfire/dms-plugins";
+      flake = false;
     };
   };
 

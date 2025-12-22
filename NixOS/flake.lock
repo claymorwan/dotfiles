@@ -51,16 +51,48 @@
         "quickshell": "quickshell"
       },
       "locked": {
-        "lastModified": 1766242681,
-        "narHash": "sha256-yiZxxOu9Way4MqjoFoFu9RW242do7c7/KXfVbYkibuA=",
+        "lastModified": 1766356940,
+        "narHash": "sha256-WfjWtfKTmhI3MUeCnge1pXpa1Jxg//sZs6G/o4Y6ZJg=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "dca07a70f8269e3cb598095cf0b22e65e1c72082",
+        "rev": "524d9677454db86416fdfdc257086a597c6b2673",
         "type": "github"
       },
       "original": {
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
+        "type": "github"
+      }
+    },
+    "dms-lucyfire-plugins": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1765626908,
+        "narHash": "sha256-SQFflM/xWFAgqgn0WUVh4eADyT+UO03jncu7RiilMb0=",
+        "owner": "lucyfire",
+        "repo": "dms-plugins",
+        "rev": "c463cf2364567bf77ded1e52dbf09c5cf0b9d28e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lucyfire",
+        "repo": "dms-plugins",
+        "type": "github"
+      }
+    },
+    "dms-plugins-official": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1766092383,
+        "narHash": "sha256-0RXRgUXXoX+C0q+drsShjx2rCTdmqFzOCR/1rGB/W2E=",
+        "owner": "AvengeMedia",
+        "repo": "dms-plugins",
+        "rev": "8fa7c5286171c66a209dd74e9a47d6e72ccfdad6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "dms-plugins",
         "type": "github"
       }
     },
@@ -253,11 +285,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1766171975,
-        "narHash": "sha256-47Ee0bTidhF/3/sHuYnWRuxcCrrm0mBNDxBkOTd3wWQ=",
+        "lastModified": 1766282146,
+        "narHash": "sha256-0V/nKU93KdYGi+5LB/MVo355obBJw/2z9b2xS3bPJxY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "bb35f07cc95a73aacbaf1f7f46bb8a3f40f265b5",
+        "rev": "61fcc9de76b88e55578eb5d79fc80f2b236df707",
         "type": "github"
       },
       "original": {
@@ -422,6 +454,8 @@
         "catppuccin": "catppuccin",
         "dgop": "dgop",
         "dms": "dms",
+        "dms-lucyfire-plugins": "dms-lucyfire-plugins",
+        "dms-plugins-official": "dms-plugins-official",
         "dsearch": "dsearch",
         "home-manager": "home-manager",
         "nix-flatpak": "nix-flatpak",
@@ -443,11 +477,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1765687197,
-        "narHash": "sha256-5aJgT+lEC7ypuAGE3DQLj3LzYDQ+kRG6MnkVr3ZF9RU=",
+        "lastModified": 1766292025,
+        "narHash": "sha256-dZ9SSqRXfb+WU9MLl5c/ktdRWYZ42uxBPB7rQYuDaJs=",
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "rev": "fa6a5dde9d95bf7b8f075ff5aceeb1d97fa9043a",
+        "rev": "73031a3c9359c6c0ab82098793573d0c0951e372",
         "type": "github"
       },
       "original": {
@@ -464,16 +498,17 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1766151691,
-        "narHash": "sha256-KimD5r5y1ewce8A7S8oFJD2eb4jK6eGcs7jZrWzFiYc=",
+        "lastModified": 1766346417,
+        "narHash": "sha256-gY9aLSp/+on+vhmiyJRjdlBTeQUo9OYEq/YvbovUe60=",
         "owner": "different-name",
         "repo": "steam-config-nix",
-        "rev": "4a65930248b09444d638a08472d1ab5fa6b80da9",
+        "rev": "5efbe97c61a4b1375887ca1f45a6e81ad6a11735",
         "type": "github"
       },
       "original": {
         "owner": "different-name",
         "repo": "steam-config-nix",
+        "rev": "5efbe97c61a4b1375887ca1f45a6e81ad6a11735",
         "type": "github"
       }
     },
@@ -587,11 +622,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1766204826,
-        "narHash": "sha256-NccmxYNOUHLLehsBLaeZ3QtVlDfIW1FDBe3W/kIDwa0=",
+        "lastModified": 1766359145,
+        "narHash": "sha256-/HbtppVEx4kkyNWHE+4yQXwx413qNam4Tix4WiJakog=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "4563d0ffdf586368f1bec1a39cc20c9b12b73884",
+        "rev": "5a0d4afa5a67a4e6df8116f97e27c10c9d47de6b",
         "type": "github"
       },
       "original": {

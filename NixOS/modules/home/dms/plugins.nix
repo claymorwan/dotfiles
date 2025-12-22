@@ -1,19 +1,21 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 let
-  official_plugins = pkgs.fetchFromGitHub {
-    owner = "AvengeMedia";
-    repo = "dms-plugins";
-    rev = "1e3dad105581d2a1aed39bc478ab955a5a70fa0f";
-    hash = "sha256-QaES61lAxUGpzXEgAcidOsi332Ee/2uBOFoXcCsDW88=";
-  };
+  official_plugins = inputs.dms-plugins-official;
+  # pkgs.fetchFromGitHub {
+  #   owner = "AvengeMedia";
+  #   repo = "dms-plugins";
+  #   rev = "1e3dad105581d2a1aed39bc478ab955a5a70fa0f";
+  #   hash = "sha256-QaES61lAxUGpzXEgAcidOsi332Ee/2uBOFoXcCsDW88=";
+  # };
 
-  lucyfire-plugins = pkgs.fetchFromGitHub {
-    owner = "lucyfire";
-    repo = "dms-plugins";
-    rev = "c463cf2364567bf77ded1e52dbf09c5cf0b9d28e";
-    hash = "sha256-SQFflM/xWFAgqgn0WUVh4eADyT+UO03jncu7RiilMb0=";
-  };
+  lucyfire-plugins = inputs.dms-lucyfire-plugins;
+  # pkgs.fetchFromGitHub {
+  #   owner = "lucyfire";
+  #   repo = "dms-plugins";
+  #   rev = "c463cf2364567bf77ded1e52dbf09c5cf0b9d28e";
+  #   hash = "sha256-SQFflM/xWFAgqgn0WUVh4eADyT+UO03jncu7RiilMb0=";
+  # };
 in
 
 {

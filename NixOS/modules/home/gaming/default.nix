@@ -13,6 +13,7 @@
     protonplus
     limo
     gale
+    olympus
     # wine-discord-ipc-bridge
 
     # osu-lazer-bin

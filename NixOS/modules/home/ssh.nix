@@ -1,14 +1,17 @@
 {
   programs.ssh = {
     enable = true;
-
-    extraConfig = ''
-      Host codeberg.org
-	      IdentityFile ~/.ssh/codeberg
-	      User git
-      Host github.com
-	      IdentityFile ~/.ssh/github
-	      User git     
-    '';
+    enableDefaultConfig = false;
+    
+    matchBlocks = {
+      "codeberg.org" = {
+        identityFile = "~/.ssh/codeberg";
+        user = "git";
+      };
+      "github.com" = {
+        identityFile = "~/.ssh/github";
+        user = "git";
+      };
+    };
   };
 }

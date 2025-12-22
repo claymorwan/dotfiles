@@ -75,6 +75,9 @@ in
 
       # Overcooked 2
       "728880" = winGameOptions;
+
+      # Slime Rancher
+      "433340" = winGameOptions;
     };
   };
 }
