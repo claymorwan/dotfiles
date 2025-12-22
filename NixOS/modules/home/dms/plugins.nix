@@ -19,6 +19,20 @@ let
 in
 
 {
+
+  imports = [
+    inputs.nix-monitor.homeManagerModules.default
+  ];
+
+  programs.nix-monitor = {
+    enable = true;
+          
+    # Required: customize for your setup
+    rebuildCommand = [ 
+      "zsh" "-c" 
+      "nrl"
+    ];
+  };
   programs.dank-material-shell = {
     plugins = {
 

@@ -16,6 +16,11 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
+    nix-monitor = {
+      url = "github:antonjah/nix-monitor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-output-monitor = {
       url = "github:maralorn/nix-output-monitor";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,7 +42,7 @@
     };
 
     steam-config-nix = {
-      url = "github:different-name/steam-config-nix?rev=5efbe97c61a4b1375887ca1f45a6e81ad6a11735";
+      url = "github:different-name/steam-config-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

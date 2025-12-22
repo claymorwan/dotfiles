@@ -112,5 +112,8 @@
     "desktopHeight_eDP-1": 200,
     "desktopX_eDP-1": 843,
     "desktopY_eDP-1": 441
+  },
+  "nixMonitor": {
+    "enabled": true
   }
 }

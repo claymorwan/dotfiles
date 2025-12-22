@@ -381,11 +381,14 @@
         },
         {
           "id": "memUsage",
-          "enabled": true,
-          "showSwap": true
+          "enabled": true
         },
         {
           "id": "keyboard_layout_name",
+          "enabled": true
+        },
+        {
+          "id": "nixMonitor",
           "enabled": true
         },
         {
