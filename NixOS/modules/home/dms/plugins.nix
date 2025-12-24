@@ -1,21 +1,12 @@
 { pkgs, inputs, host, ... }:
 
 let
-  official_plugins = inputs.dms-plugins-official;
-  # pkgs.fetchFromGitHub {
-  #   owner = "AvengeMedia";
-  #   repo = "dms-plugins";
-  #   rev = "1e3dad105581d2a1aed39bc478ab955a5a70fa0f";
-  #   hash = "sha256-QaES61lAxUGpzXEgAcidOsi332Ee/2uBOFoXcCsDW88=";
-  # };
+  inherit (import ../../../variables/variables.nix)
+    flake_dir
+    ;
 
+  official_plugins = inputs.dms-plugins-official;
   lucyfire-plugins = inputs.dms-lucyfire-plugins;
-  # pkgs.fetchFromGitHub {
-  #   owner = "lucyfire";
-  #   repo = "dms-plugins";
-  #   rev = "c463cf2364567bf77ded1e52dbf09c5cf0b9d28e";
-  #   hash = "sha256-SQFflM/xWFAgqgn0WUVh4eADyT+UO03jncu7RiilMb0=";
-  # };
 in
 
 {
@@ -30,9 +21,8 @@ in
             
       # Required: customize for your setup
       rebuildCommand = [ 
-        "ghostty" "-e"
-        "nh os switch --hostname ${host}"
-        "read"
+        "zsh" "-c"
+        "sudo ${pkgs.nh}/bin/nh os switch ${flake_dir} --hostname ${host} --no-nom --bypass-root-check"
       ];
       
       gcCommand = [
@@ -47,12 +37,7 @@ in
         # Wallpaper engine
         dms-wallpaperengine = {
           enable = true;
-          src = pkgs.fetchFromGitHub {
-            owner = "sgtaziz";
-            repo = "dms-wallpaperengine";
-            rev = "295686215ba65103e20385d3e86801db074dfc01";
-            hash = "sha256-HmqIAXNougNJScAQXS33CRl/+ypR9LNjGFhBOVwu5z0=";
-          };
+          src = inputs.dms-wallpaper-engine;
         };
 
         # Web search
@@ -123,7 +108,7 @@ in
 
         appShortcut = {
           enable = true;
-          src = "${inputs.dms-app-shortcut}";
+          src = inputs.dms-app-shortcut;
         };
       };
     };

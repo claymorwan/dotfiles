@@ -66,6 +66,9 @@ in
       # Portal 2
       "620" = winGameOptions;
 
+      # Portal Revolution
+      "601360" = winGameOptions;
+
       # R.E.P.0
       "3241660" = winGameOptions;
 

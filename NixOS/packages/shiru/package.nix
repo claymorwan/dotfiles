@@ -3,10 +3,13 @@
   lib,
   stdenv,
   pnpm,
+  pnpmConfigHook,
+  fetchPnpmDeps,
   nodejs,
   fetchFromGitHub,
   python3,
   electron_39,
+  copyDesktopItems,
   makeDesktopItem,
   makeBinaryWrapper,
 }:
@@ -33,12 +36,14 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [
     nodejs
-    pnpm.configHook
+    pnpm
+    pnpmConfigHook
     python3
     makeBinaryWrapper
+    copyDesktopItems
   ];
 
-  pnpmDeps = pnpm.fetchDeps {
+  pnpmDeps = fetchPnpmDeps {
     inherit pname version src;
     prePnpmInstall = ''
       cd electron

@@ -84,6 +84,11 @@
       flake = false;
     };
 
+    dms-wallpaper-engine = {
+      url = "github:sgtaziz/dms-wallpaperengine";
+      flake = false;
+    };
+
     dms-app-shortcut = {
       url = "github:oabragh/AppShortcut";
       flake = false;

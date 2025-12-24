@@ -112,6 +112,22 @@
         "type": "github"
       }
     },
+    "dms-wallpaper-engine": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1766253908,
+        "narHash": "sha256-wkNqJ8B5JoAp+XC9eXgHpmM5QJCEwEhNsHBCTVV0mPY=",
+        "owner": "sgtaziz",
+        "repo": "dms-wallpaperengine",
+        "rev": "4adeeb31a94a81c4ab402cb8c2fa79e8d57e0fe9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sgtaziz",
+        "repo": "dms-wallpaperengine",
+        "type": "github"
+      }
+    },
     "dsearch": {
       "inputs": {
         "nixpkgs": [
@@ -419,6 +435,7 @@
         "dms-app-shortcut": "dms-app-shortcut",
         "dms-lucyfire-plugins": "dms-lucyfire-plugins",
         "dms-plugins-official": "dms-plugins-official",
+        "dms-wallpaper-engine": "dms-wallpaper-engine",
         "dsearch": "dsearch",
         "home-manager": "home-manager",
         "nix-flatpak": "nix-flatpak",
