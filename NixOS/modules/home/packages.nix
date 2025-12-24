@@ -16,6 +16,7 @@
       enableZshIntegration = true;
       nix-direnv.enable = true;
     };
+    onlyoffice.enable = true;
   };
 
   home.packages = with pkgs; [
@@ -35,6 +36,7 @@
     #adw-gtk3
     adwsteamgtk
     #papirus-icon-theme
+    (pkgs.callPackage ../../packages/shiru/package.nix { })
 
     gnome-font-viewer
     gnome-disk-utility

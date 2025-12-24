@@ -115,5 +115,8 @@
   },
   "nixMonitor": {
     "enabled": true
+  },
+  "appShortcut": {
+    "enabled": true
   }
 }

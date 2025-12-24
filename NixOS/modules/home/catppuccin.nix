@@ -12,5 +12,6 @@ in
     flavor = ctp_flavor;
     accent = ctp_accent;
     nvim.enable = false;
+    # gtk.icon.enable = false;
   };
 }

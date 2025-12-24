@@ -1,6 +1,7 @@
 {
   "currentThemeName": "custom",
-  "customThemeFile": "/home/claymorwan/.dotfiles/Submodules/catppuccin/monorepo/dank-material-shell/themes/mocha-latte/colors-mauve.json",
+  "currentThemeCategory": "custom",
+  "customThemeFile": "/home/claymorwan/colors-mauve.json",
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "",
@@ -219,7 +220,8 @@
   "matugenTemplateQt6ct": false,
   "matugenTemplateFirefox": false,
   "matugenTemplatePywalfox": false,
-  "matugenTemplateVesktop": true,
+  "matugenTemplateVesktop": false,
+  "matugenTemplateEquibop": true,
   "matugenTemplateGhostty": false,
   "matugenTemplateKitty": false,
   "matugenTemplateFoot": false,
@@ -243,8 +245,8 @@
   "dockBorderColor": "primary",
   "dockBorderOpacity": 1,
   "dockBorderThickness": 1,
+  "dockIsolateDisplays": false,
   "notificationOverlayEnabled": false,
-  "modalDarkenBackground": false,
   "lockScreenShowPowerActions": true,
   "lockScreenShowSystemIcons": true,
   "lockScreenShowTime": true,
@@ -494,6 +496,7 @@
   "systemMonitorTopProcessCount": 5,
   "systemMonitorTopProcessSortBy": "cpu",
   "systemMonitorGraphInterval": 60,
+  "systemMonitorLayoutMode": "auto",
   "systemMonitorX": -1,
   "systemMonitorY": -1,
   "systemMonitorWidth": 320,
@@ -539,5 +542,211 @@
       "enabled": true
     }
   },
-  "configVersion": 3
+  "desktopWidgetInstances": [
+    {
+      "id": "dw_clock_primary",
+      "widgetType": "desktopClock",
+      "name": "Desktop Clock",
+      "enabled": true,
+      "config": {
+        "style": "analog",
+        "transparency": 1,
+        "colorMode": "primary",
+        "customColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1,
+          "hsvHue": -1,
+          "hsvSaturation": 0,
+          "hsvValue": 1,
+          "hslHue": -1,
+          "hslSaturation": 0,
+          "hslLightness": 1,
+          "valid": true
+        },
+        "showDate": true,
+        "showAnalogNumbers": false,
+        "showAnalogSeconds": true,
+        "displayPreferences": [
+          "all"
+        ]
+      },
+      "positions": {
+        "DP-1": {
+          "x": 840,
+          "y": 420,
+          "width": 240,
+          "height": 240
+        }
+      }
+    },
+    {
+      "id": "dw_sysmon_primary",
+      "widgetType": "systemMonitor",
+      "name": "System Monitor",
+      "enabled": true,
+      "config": {
+        "showHeader": true,
+        "transparency": 1,
+        "colorMode": "primary",
+        "customColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1,
+          "hsvHue": -1,
+          "hsvSaturation": 0,
+          "hsvValue": 1,
+          "hslHue": -1,
+          "hslSaturation": 0,
+          "hslLightness": 1,
+          "valid": true
+        },
+        "showCpu": true,
+        "showCpuGraph": true,
+        "showCpuTemp": true,
+        "showGpuTemp": true,
+        "gpuPciId": "",
+        "showMemory": true,
+        "showMemoryGraph": true,
+        "showNetwork": true,
+        "showNetworkGraph": true,
+        "showDisk": true,
+        "showTopProcesses": true,
+        "topProcessCount": 5,
+        "topProcessSortBy": "cpu",
+        "layoutMode": "auto",
+        "graphInterval": 60,
+        "displayPreferences": [
+          "all"
+        ],
+        "showOnOverlay": false
+      },
+      "positions": {
+        "DP-1": {
+          "x": 30,
+          "y": 60,
+          "width": 420,
+          "height": 510
+        }
+      }
+    },
+    {
+      "id": "dw_1766459074974_1lyjj2d9u",
+      "widgetType": "dankDesktopWeather",
+      "name": "Dank Desktop Weather",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "viewMode": "detailed",
+        "backgroundOpacity": 100,
+        "forecastDays": 7,
+        "showOnOverlay": false
+      },
+      "positions": {
+        "DP-1": {
+          "x": 1560,
+          "y": 60,
+          "width": 330,
+          "height": 450
+        }
+      }
+    },
+    {
+      "id": "dw_1766536827586_2vq4mmpuh",
+      "widgetType": "appShortcut",
+      "name": "Application Shortcut: Lutris",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "shortcutApp": "net.lutris.Lutris",
+        "backgroundOpacity": 100,
+        "drawOutlines": false,
+        "drawBorder": true,
+        "followTheme": true,
+        "showOnOverlay": false
+      },
+      "positions": {
+        "DP-1": {
+          "x": 1290,
+          "y": 180,
+          "width": 120,
+          "height": 120
+        }
+      }
+    },
+    {
+      "id": "dw_1766536893596_tvy0enyux",
+      "widgetType": "appShortcut",
+      "name": "Application Shortcut: Zen",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "shortcutApp": "zen-beta",
+        "backgroundOpacity": 100,
+        "followTheme": true,
+        "drawOutlines": false
+      },
+      "positions": {
+        "DP-1": {
+          "x": 1290,
+          "y": 60,
+          "width": 120,
+          "height": 120
+        }
+      }
+    },
+    {
+      "id": "dw_1766536968316_mgter55a3",
+      "widgetType": "appShortcut",
+      "name": "Application Shortcut: Ghostty",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "shortcutApp": "com.mitchellh.ghostty",
+        "backgroundOpacity": 100,
+        "followTheme": true
+      },
+      "positions": {
+        "DP-1": {
+          "x": 1410,
+          "y": 60,
+          "width": 120,
+          "height": 120
+        }
+      }
+    },
+    {
+      "id": "dw_1766537033256_0zmk3wdt2",
+      "widgetType": "appShortcut",
+      "name": "Application Shortcut: Steam",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "shortcutApp": "steam",
+        "followTheme": true,
+        "backgroundOpacity": 100
+      },
+      "positions": {
+        "DP-1": {
+          "x": 1410,
+          "y": 180,
+          "width": 120,
+          "height": 120
+        }
+      }
+    }
+  ],
+  "configVersion": 4
 }

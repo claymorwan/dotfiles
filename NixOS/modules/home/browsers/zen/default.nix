@@ -2,7 +2,8 @@
   pkgs,
   inputs,
   config,
-  system,
+  stdenv,
+  # system,
   ...
 }:
 
@@ -114,7 +115,7 @@ in
     let
       value =
         let
-          zen-browser = inputs.zen-browser.packages.${system}.${version}; # or twilight
+          zen-browser = inputs.zen-browser.packages.${stdenv.hostPlatform.system}.${version}; # or twilight
         in
         zen-browser.meta.desktopFileName;
 

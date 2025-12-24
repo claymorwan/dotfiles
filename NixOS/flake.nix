@@ -16,11 +16,6 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
-    nix-monitor = {
-      url = "github:antonjah/nix-monitor";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-output-monitor = {
       url = "github:maralorn/nix-output-monitor";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,11 +28,6 @@
 
     xdp-termfilepickers = {
       url = "github:Guekka/xdg-desktop-portal-termfilepickers"; # /copilot/fix-file-picker-issue";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nix-yazi-plugins = {
-      url = "github:lordkekz/nix-yazi-plugins?ref=yazi-v0.2.5";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -54,6 +44,7 @@
       };
     };
 
+    # DMS related stuff
     quickshell = {
       # add ?ref=<tag> to track a tag
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
@@ -70,14 +61,18 @@
 
     dms = {
       url = "github:AvengeMedia/DankMaterialShell";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.dgop.follows = "dgop";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        dgop.follows = "dgop";
+      };
     };
 
     dsearch = {
       url = "github:AvengeMedia/danksearch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-monitor.url = "github:antonjah/nix-monitor";
 
     dms-plugins-official = {
       url = "github:AvengeMedia/dms-plugins";
@@ -86,6 +81,11 @@
 
     dms-lucyfire-plugins = {
       url = "github:lucyfire/dms-plugins";
+      flake = false;
+    };
+
+    dms-app-shortcut = {
+      url = "github:oabragh/AppShortcut";
       flake = false;
     };
   };

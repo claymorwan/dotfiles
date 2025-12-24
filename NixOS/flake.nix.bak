@@ -1,0 +1,43 @@
+{
+  description = "NixOS configuration";
+
+  inputs = import ./inputs/nix.nix;
+
+  outputs =
+    inputs@{
+      nixpkgs,
+      catppuccin,
+      home-manager,
+      nix-flatpak,
+      ...
+    }:
+    let
+      username = "claymorwan";
+      system = "x86_64-linux";
+
+      mkNixosConfig =
+        host:
+        nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+            inherit username;
+            inherit host;
+            inherit system;
+          };
+
+          modules = [
+            nix-flatpak.nixosModules.nix-flatpak
+            ./hosts/${host}
+            catppuccin.nixosModules.catppuccin
+          ];
+        };
+    in
+    {
+      templates = import ./dev-shells;
+      formatter.x86_64-linux = nixpkgs.legacyPackages.${system}.nixfmt-tree;
+      nixosConfigurations = {
+        nixos = mkNixosConfig "nixos";
+        nixos-laptop = mkNixosConfig "nixos-laptop";
+      };
+    };
+}
