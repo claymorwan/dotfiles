@@ -10,6 +10,8 @@
   "widgetBackgroundColor": "sch",
   "widgetColorMode": "default",
   "cornerRadius": 7,
+  "niriLayoutGapsOverride": -1,
+  "niriLayoutRadiusOverride": -1,
   "use24HourClock": true,
   "showSeconds": true,
   "useFahrenheit": false,
@@ -40,9 +42,12 @@
   "controlCenterShowNetworkIcon": true,
   "controlCenterShowBluetoothIcon": true,
   "controlCenterShowAudioIcon": true,
+  "controlCenterShowAudioPercent": false,
   "controlCenterShowVpnIcon": false,
   "controlCenterShowBrightnessIcon": false,
+  "controlCenterShowBrightnessPercent": false,
   "controlCenterShowMicIcon": false,
+  "controlCenterShowMicPercent": false,
   "controlCenterShowBatteryIcon": false,
   "controlCenterShowPrinterIcon": false,
   "showPrivacyButton": true,
@@ -193,6 +198,7 @@
   "batterySuspendTimeout": 300,
   "batterySuspendBehavior": 0,
   "batteryProfileName": "",
+  "batteryChargeLimit": 100,
   "lockBeforeSuspend": true,
   "loginctlLockIntegration": true,
   "fadeToLockEnabled": false,
@@ -247,6 +253,7 @@
   "dockBorderThickness": 1,
   "dockIsolateDisplays": false,
   "notificationOverlayEnabled": false,
+  "modalDarkenBackground": false,
   "lockScreenShowPowerActions": true,
   "lockScreenShowSystemIcons": true,
   "lockScreenShowTime": true,
@@ -744,6 +751,25 @@
           "y": 180,
           "width": 120,
           "height": 120
+        }
+      }
+    },
+    {
+      "id": "dw_1766721738480_s95zd87na",
+      "widgetType": "mediaPlayer",
+      "name": "Media Player",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [],
+        "backgroundOpacity": 100,
+        "showOnOverlay": false
+      },
+      "positions": {
+        "DP-1": {
+          "x": 30,
+          "y": 870,
+          "width": 480,
+          "height": 180
         }
       }
     }

@@ -13,7 +13,7 @@
 
   home.packages = with pkgs; [
     sqlitebrowser
-    
+
     jetbrains.idea
     jetbrains.pycharm
   ];

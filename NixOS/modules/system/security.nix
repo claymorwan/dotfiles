@@ -7,15 +7,17 @@
 
     sudo = {
       enable = true;
-      extraRules = [{
-        commands = [
-          {
-            command = "${pkgs.nh}/bin/nh";
-            options = [ "NOPASSWD" ];
-          }
-        ];
-        groups = [ "wheel" ];
-      }];
+      extraRules = [
+        {
+          commands = [
+            {
+              command = "${pkgs.nh}/bin/nh";
+              options = [ "NOPASSWD" ];
+            }
+          ];
+          groups = [ "wheel" ];
+        }
+      ];
       # extraConfig = with pkgs; ''
       #   Defaults:picloud secure_path="${lib.makeBinPath [
       #     systemd

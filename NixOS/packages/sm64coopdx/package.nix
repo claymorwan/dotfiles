@@ -51,7 +51,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   patches = [ ./no-update-check.patch ];
 
-  nativeBuildInputs = [ makeWrapper copyDesktopItems imagemagick ];
+  nativeBuildInputs = [
+    makeWrapper
+    copyDesktopItems
+    imagemagick
+  ];
 
   buildInputs = [
     curl

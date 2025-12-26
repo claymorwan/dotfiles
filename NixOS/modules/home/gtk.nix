@@ -13,7 +13,7 @@ in
       package = pkgs.adw-gtk3;
     };
     iconTheme = {
-      name = "Papirus-Dark"; #"Neuwaita";
+      name = "Papirus-Dark"; # "Neuwaita";
       # package = (pkgs.callPackage ../../packages/neuwaita/package.nix { });
     };
     gtk3.extraConfig = {

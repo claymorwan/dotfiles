@@ -1,4 +1,9 @@
-{ pkgs, inputs, host, ... }:
+{
+  pkgs,
+  inputs,
+  host,
+  ...
+}:
 
 let
   inherit (import ../../../variables/variables.nix)
@@ -18,15 +23,17 @@ in
   programs = {
     nix-monitor = {
       enable = true;
-            
+
       # Required: customize for your setup
-      rebuildCommand = [ 
-        "zsh" "-c"
+      rebuildCommand = [
+        "zsh"
+        "-c"
         "sudo ${pkgs.nh}/bin/nh os switch ${flake_dir} --hostname ${host} --no-nom --bypass-root-check"
       ];
-      
+
       gcCommand = [
-        "zsh" "-c"
+        "zsh"
+        "-c"
         "sudo ${pkgs.nh}/bin/nh clean all"
       ];
     };
@@ -109,6 +116,11 @@ in
         appShortcut = {
           enable = true;
           src = inputs.dms-app-shortcut;
+        };
+
+        mediaPlayer = {
+          enable = true;
+          src = inputs.dms-media-player;
         };
       };
     };

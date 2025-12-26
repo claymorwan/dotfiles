@@ -81,6 +81,9 @@ in
 
       # Slime Rancher
       "433340" = winGameOptions;
+
+      # The Beginner's Guide
+      "303210" = gameOptions;
     };
   };
 }

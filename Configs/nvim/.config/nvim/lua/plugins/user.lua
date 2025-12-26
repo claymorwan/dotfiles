@@ -51,6 +51,27 @@ return {
       hijack_file_patterns = { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp", "*.avif" }, -- render image files as images when opened
     }) end
   },
+  -- {
+  --   "chipsenkbeil/org-roam.nvim",
+  --   tag = "0.2.0",
+  --   dependencies = {
+  --     {
+  --       "nvim-orgmode/orgmode",
+  --       tag = "0.7.0",
+  --     },
+  --   },
+  --   config = function()
+  --     require("org-roam").setup({
+  --       directory = "~/org_roam_files",
+  --       -- optional
+  --       org_files = {
+  --         "~/another_org_dir",
+  --         "~/some/folder/*.org",
+  --         "~/a/single/org_file.org",
+  --       }
+  --     })
+  --   end
+  -- },
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",

@@ -72,10 +72,12 @@
               }
 
               venvVersionWarn
+              uv init --bare
             '';
 
             packages = with python.pkgs; [
               venvShellHook
+              uv
               pip
 
               # Add whatever else you'd like here.

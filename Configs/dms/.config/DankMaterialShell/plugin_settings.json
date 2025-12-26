@@ -30,7 +30,8 @@
       "3371368351": {
         "fps": 30
       }
-    }
+    },
+    "generateStaticWallpaper": false
   },
   "screenshot": {
     "enabled": true,
@@ -117,6 +118,9 @@
     "enabled": true
   },
   "appShortcut": {
+    "enabled": true
+  },
+  "mediaPlayer": {
     "enabled": true
   }
 }

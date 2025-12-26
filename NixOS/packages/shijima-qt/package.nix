@@ -5,6 +5,7 @@
   pkg-config,
   wayland-protocols,
   wayland,
+  zip,
 }:
 
 stdenv.mkDerivation {
@@ -14,8 +15,9 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "claymorwan";
     repo = "Shijima-Qt";
-    rev = "a022c957d9b18fac579d9ca344b56df1ac41420f";
-    hash = "sha256-j89gmQMWvX7iukkTkOMZ46WXoUtWHNC+bht7mAeXWPE=";
+    rev = "fix/use-https-for-submodules";
+    hash = "sha256-ein4esc3h1Rl4p0XEglonYY4LroA/PZRKLj0m3IbbbE=";
+    fetchSubmodules = true;
   };
 
   buildInputs = [
@@ -26,6 +28,9 @@ stdenv.mkDerivation {
     qt6.wrapQtAppsHook
     pkg-config
     wayland-protocols
+    zip
   ];
+
+  makeFlags = [ "CONFIG=release" ];
 
 }
