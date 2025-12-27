@@ -755,21 +755,22 @@
       }
     },
     {
-      "id": "dw_1766721738480_s95zd87na",
+      "id": "dw_1766722143485_14jkl7g83",
       "widgetType": "mediaPlayer",
       "name": "Media Player",
       "enabled": true,
       "config": {
-        "displayPreferences": [],
-        "backgroundOpacity": 100,
-        "showOnOverlay": false
+        "displayPreferences": [
+          "all"
+        ],
+        "backgroundOpacity": 100
       },
       "positions": {
         "DP-1": {
           "x": 30,
-          "y": 870,
-          "width": 480,
-          "height": 180
+          "y": 840,
+          "width": 420,
+          "height": 210
         }
       }
     }

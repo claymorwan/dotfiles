@@ -13,6 +13,8 @@
 
   home.packages = with pkgs; [
     sqlitebrowser
+    distrobox
+    boxbuddy
 
     jetbrains.idea
     jetbrains.pycharm

@@ -6,6 +6,7 @@
     ./catppuccin.nix
     ./clamav.nix
     ./dms.nix
+    ./virtualisation.nix
     ./flatpak.nix
     ./fonts.nix
     ./networking.nix
