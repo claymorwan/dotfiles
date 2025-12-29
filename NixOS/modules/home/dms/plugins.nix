@@ -24,11 +24,16 @@ in
     nix-monitor = {
       enable = true;
 
-      # Required: customize for your setup
       rebuildCommand = [
         "zsh"
         "-c"
         "sudo ${pkgs.nh}/bin/nh os switch ${flake_dir} --hostname ${host} --no-nom --bypass-root-check"
+      ];
+
+      # ts pisses me off im using a script now
+      generationsCommand = [
+        "sh"
+        "${flake_dir}/modules/home/dms/nix-monitor-gen.sh"
       ];
 
       gcCommand = [

@@ -2,6 +2,12 @@
   "currentThemeName": "custom",
   "currentThemeCategory": "custom",
   "customThemeFile": "/home/claymorwan/colors-mauve.json",
+  "registryThemeVariants": {
+    "catppuccin": {
+      "flavor": "mocha",
+      "accent": "mauve"
+    }
+  },
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "",
@@ -138,11 +144,13 @@
   "maxWorkspaceIcons": 3,
   "workspacesPerMonitor": true,
   "showOccupiedWorkspacesOnly": false,
+  "reverseScrolling": false,
   "dwlShowAllTags": false,
   "workspaceNameIcons": {},
   "waveProgressEnabled": true,
   "scrollTitleEnabled": true,
   "audioVisualizerEnabled": true,
+  "audioScrollEnabled": true,
   "clockCompactMode": false,
   "focusedWindowCompactMode": false,
   "runningAppsCompactMode": true,
@@ -226,6 +234,7 @@
   "matugenTemplateQt6ct": false,
   "matugenTemplateFirefox": false,
   "matugenTemplatePywalfox": false,
+  "matugenTemplateZenBrowser": true,
   "matugenTemplateVesktop": false,
   "matugenTemplateEquibop": true,
   "matugenTemplateGhostty": false,

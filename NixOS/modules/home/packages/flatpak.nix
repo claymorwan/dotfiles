@@ -16,5 +16,6 @@
         ];
       };
     };
+    update.onActivation = true;
   };
 }

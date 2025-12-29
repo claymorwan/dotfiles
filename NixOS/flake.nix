@@ -27,8 +27,11 @@
     };
 
     xdp-termfilepickers = {
-      url = "github:Guekka/xdg-desktop-portal-termfilepickers"; # /copilot/fix-file-picker-issue";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:Guekka/xdg-desktop-portal-termfilepickers";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
+      };
     };
 
     steam-config-nix = {
@@ -63,7 +66,8 @@
       url = "github:AvengeMedia/DankMaterialShell";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        dgop.follows = "dgop";
+        # dgop.follows = "dgop";
+        quickshell.follows = "quickshell";
       };
     };
 

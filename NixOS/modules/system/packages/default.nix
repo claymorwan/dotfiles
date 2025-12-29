@@ -1,6 +1,9 @@
 { pkgs, inputs, ... }:
 
 {
+  imports = [
+    ./flatpak.nix
+  ];
 
   nixpkgs.config.allowBroken = true;
 

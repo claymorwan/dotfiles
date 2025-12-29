@@ -7,11 +7,10 @@
     ./clamav.nix
     ./dms.nix
     ./virtualisation.nix
-    ./flatpak.nix
     ./fonts.nix
     ./networking.nix
     ./nix
-    ./packages.nix
+    ./packages
     ./printing.nix
     ./services.nix
     ./security.nix

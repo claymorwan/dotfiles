@@ -6,6 +6,10 @@
 }:
 
 {
+  imports = [
+    ./flatpak.nix
+  ];
+
   programs = {
     firefox.enable = true;
     btop.enable = true;
@@ -36,7 +40,7 @@
     #adw-gtk3
     adwsteamgtk
     #papirus-icon-theme
-    (pkgs.callPackage ../../packages/shiru/package.nix { })
+    (pkgs.callPackage ../../../packages/shiru/package.nix { })
 
     gnome-font-viewer
     gnome-disk-utility
@@ -56,8 +60,5 @@
     kdePackages.plasma-browser-integration
 
     intiface-central
-
-    # (pkgs.callPackage ../../packages/shiru.nix {})
-    # (pkgs.callPackage ../../packages/shijima-qt.nix {})
   ];
 }

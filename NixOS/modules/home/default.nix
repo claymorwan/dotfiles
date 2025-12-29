@@ -7,7 +7,6 @@
     ./cursors
     ./dms
     ./editors
-    ./flatpak.nix
     ./fetchs
     ./gaming
     ./git.nix
@@ -15,7 +14,7 @@
     ./gtk.nix
     ./hyprland
     ./obs-studio.nix
-    ./packages.nix
+    ./packages
     ./qt.nix
     ./starship.nix
     ./spotify.nix

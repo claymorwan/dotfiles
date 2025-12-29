@@ -19,6 +19,8 @@ in
       "${mainMod}, KP_Divide, exec, dms ipc call keybinds toggle hyprland # Cheat sheet"
 
       "${mainMod} + SHIFT, N, exec, dms ipc call night toggle # Night mode"
+
+      "${mainMod}, A, exec, dms ipc call desktopWidget toggleOverlay dw_sysmon_primary # Wiget overlay"
     ];
 
     bindl = [
