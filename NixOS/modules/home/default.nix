@@ -8,6 +8,7 @@
     ./cursors
     ./dms
     ./editors
+    # ./env.nix
     ./fetchs
     ./gaming
     ./git.nix
