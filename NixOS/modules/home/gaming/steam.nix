@@ -84,6 +84,9 @@ in
 
       # The Beginner's Guide
       "303210" = winGameOptions;
+
+      # Wasteland bites demo
+      "3820720" = gameOptions;
     };
   };
 }

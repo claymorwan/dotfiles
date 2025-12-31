@@ -585,7 +585,10 @@
         "showAnalogNumbers": false,
         "showAnalogSeconds": true,
         "displayPreferences": [
-          "all"
+          {
+            "name": "DP-1",
+            "model": "PLX2283H"
+          }
         ]
       },
       "positions": {
@@ -635,7 +638,10 @@
         "layoutMode": "auto",
         "graphInterval": 60,
         "displayPreferences": [
-          "all"
+          {
+            "name": "DP-1",
+            "model": "PLX2283H"
+          }
         ],
         "showOnOverlay": false
       },
@@ -655,7 +661,10 @@
       "enabled": true,
       "config": {
         "displayPreferences": [
-          "all"
+          {
+            "name": "DP-1",
+            "model": "PLX2283H"
+          }
         ],
         "viewMode": "detailed",
         "backgroundOpacity": 100,
@@ -678,7 +687,10 @@
       "enabled": true,
       "config": {
         "displayPreferences": [
-          "all"
+          {
+            "name": "DP-1",
+            "model": "PLX2283H"
+          }
         ],
         "shortcutApp": "net.lutris.Lutris",
         "backgroundOpacity": 100,
@@ -703,7 +715,10 @@
       "enabled": true,
       "config": {
         "displayPreferences": [
-          "all"
+          {
+            "name": "DP-1",
+            "model": "PLX2283H"
+          }
         ],
         "shortcutApp": "zen-beta",
         "backgroundOpacity": 100,
@@ -726,7 +741,10 @@
       "enabled": true,
       "config": {
         "displayPreferences": [
-          "all"
+          {
+            "name": "DP-1",
+            "model": "PLX2283H"
+          }
         ],
         "shortcutApp": "com.mitchellh.ghostty",
         "backgroundOpacity": 100,
@@ -748,7 +766,10 @@
       "enabled": true,
       "config": {
         "displayPreferences": [
-          "all"
+          {
+            "name": "DP-1",
+            "model": "PLX2283H"
+          }
         ],
         "shortcutApp": "steam",
         "followTheme": true,
@@ -770,9 +791,13 @@
       "enabled": true,
       "config": {
         "displayPreferences": [
-          "all"
+          {
+            "name": "DP-1",
+            "model": "PLX2283H"
+          }
         ],
-        "backgroundOpacity": 100
+        "backgroundOpacity": 100,
+        "showOnOverlay": false
       },
       "positions": {
         "DP-1": {

@@ -50,7 +50,6 @@
     bottles
 
     obsidian
-    krita
 
     linux-wallpaperengine
 

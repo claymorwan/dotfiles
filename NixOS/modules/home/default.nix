@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./art
     ./browsers
     ./catppuccin.nix
     ./cursors
