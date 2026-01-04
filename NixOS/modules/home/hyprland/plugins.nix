@@ -9,7 +9,7 @@ in
   wayland.windowManager.hyprland = {
     plugins = with pkgs.hyprlandPlugins; [
       hyprscrolling
-      hypr-dynamic-cursors
+      # hypr-dynamic-cursors
       hyprexpo
       hyprbars
     ];

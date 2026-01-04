@@ -17,6 +17,6 @@
     boxbuddy
 
     jetbrains.idea
-    jetbrains.pycharm
+    # jetbrains.pycharm
   ];
 }

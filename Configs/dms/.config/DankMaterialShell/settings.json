@@ -1,7 +1,7 @@
 {
   "currentThemeName": "custom",
   "currentThemeCategory": "custom",
-  "customThemeFile": "/home/claymorwan/colors-mauve.json",
+  "customThemeFile": "/home/claymorwan/.dotfiles/Submodules/catppuccin/monorepo/dank-material-shell/themes/mocha-latte/colors-mauve.json",
   "registryThemeVariants": {
     "catppuccin": {
       "flavor": "mocha",
@@ -167,8 +167,6 @@
   "appLauncherGridColumns": 4,
   "spotlightCloseNiriOverview": true,
   "niriOverviewOverlayEnabled": true,
-  "weatherLocation": "New York, NY",
-  "weatherCoordinates": "40.7128,-74.0060",
   "useAutoLocation": true,
   "weatherEnabled": true,
   "networkPreference": "wifi",
@@ -809,5 +807,5 @@
       }
     }
   ],
-  "configVersion": 4
+  "configVersion": 5
 }
