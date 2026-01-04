@@ -57,6 +57,7 @@
     luajitPackages.luarocks
     go
     dotnetCorePackages.sdk_9_0_1xx-bin
+    nimble
 
     wineWowPackages.staging
 

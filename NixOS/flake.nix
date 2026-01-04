@@ -39,6 +39,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    millennium = {
+      url = "github:Trivaris/Millennium?dir=packages/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs = {
