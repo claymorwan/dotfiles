@@ -112,7 +112,7 @@
         animate_mouse_windowdragging = false;
         enable_swallow = false;
         swallow_regex = "(ghostty|foot|kitty|allacritty|Alacritty)";
-        new_window_takes_over_fullscreen = 2;
+        on_focus_under_fullscreen = 2;
         session_lock_xray = true;
         initial_workspace_tracking = false;
         focus_on_activate = true;
