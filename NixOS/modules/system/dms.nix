@@ -20,7 +20,7 @@ in
   programs = {
     dank-material-shell = {
       greeter = {
-        # enable = true;
+        enable = true;
         compositor.name = "hyprland"; # Or "hyprland" or "sway"
 
         configHome = "${home_dir}";
