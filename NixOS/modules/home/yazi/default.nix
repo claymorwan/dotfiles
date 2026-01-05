@@ -45,8 +45,8 @@ in
       yamb = pkgs.fetchFromGitHub {
         owner = "h-hg";
         repo = "yamb.yazi";
-        rev = "22af0033be18eead7b04c2768767d38ccfbaa05b";
-        hash = "sha256-NMxZ8/7HQgs+BsZeH4nEglWsRH2ibAzq7hRSyrtFDTA=";
+        rev = "5f2e22e784dd5fc830cd85885a6d1d6690b52298";
+        hash = "sha256-3Cp3+v0laSVsDdTyG26EOh2xt18ER8P9Nla9vtRuj9k=";
       };
     };
 
