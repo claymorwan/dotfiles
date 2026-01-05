@@ -10,6 +10,7 @@
     ./fonts.nix
     ./networking.nix
     ./nix
+    ./overlays.nix
     ./packages
     ./printing.nix
     ./services.nix

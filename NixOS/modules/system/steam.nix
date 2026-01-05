@@ -4,14 +4,7 @@
   programs = {
     steam = {
       enable = true;
-      # package = let
-      #   pkgs = import inputs.nixpkgs {
-      #     system = "x86_64-linux";
-      #     overlays = [ inputs.millennium.overlays.default ];
-      #     config.allowUnfree = true; # Add this if you are overriding inputs.nixpkgs for the millennium input
-      #   };
-      # in
-      # pkgs.millennium-steam;
+      package = pkgs.millennium-steam;
 
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
