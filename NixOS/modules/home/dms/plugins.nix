@@ -127,6 +127,11 @@ in
           enable = true;
           src = inputs.dms-media-player;
         };
+
+        desktopCommand = {
+          enable = true;
+          src = inputs.dms-desktop-cmd;
+        };
       };
     };
   };

@@ -171,7 +171,7 @@
   "niriOverviewOverlayEnabled": true,
   "useAutoLocation": true,
   "weatherEnabled": true,
-  "networkPreference": "ethernet",
+  "networkPreference": "wifi",
   "vpnLastConnected": "",
   "iconTheme": "System Default",
   "launcherLogoMode": "os",
@@ -813,6 +813,32 @@
           "y": 840,
           "width": 420,
           "height": 210
+        }
+      }
+    },
+    {
+      "id": "dw_1767706327125_38dly7mqi",
+      "widgetType": "desktopCommand",
+      "name": "Desktop Command",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "command": "nix run nixpkgs#pipes",
+        "autoRefresh": false,
+        "commandTimeout": "1",
+        "refreshInterval": "60",
+        "useDank16": true,
+        "backgroundOpacity": 100,
+        "fontSize": 21
+      },
+      "positions": {
+        "DP-1": {
+          "x": 1410,
+          "y": 750,
+          "width": 480,
+          "height": 300
         }
       }
     }

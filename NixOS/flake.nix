@@ -106,6 +106,11 @@
       url = "github:arrifat346afs/mediaPlayer";
       flake = false;
     };
+
+    dms-desktop-cmd = {
+      url = "github:yayuuu/desktopCommand";
+      flake = false;
+    };
   };
 
   outputs =
