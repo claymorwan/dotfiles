@@ -56,7 +56,7 @@
       };
 
       input = {
-        kb_layout = [ "fr" ];
+        kb_layout = "fr, us";
         kb_options = "grp:win_space_toggle";
         numlock_by_default = true;
         repeat_delay = 250;
