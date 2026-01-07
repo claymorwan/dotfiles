@@ -27,6 +27,7 @@
 
       source = [
         "./dms/outputs.conf"
+        "./test.conf"
       ];
 
       monitor = [
