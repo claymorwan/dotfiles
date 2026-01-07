@@ -89,19 +89,10 @@ in
 
   };
 
-  home.file = {
-    ".zen/default/chrome/userChrome.css" = {
-      enable = true;
-      source = "${ctp_zen}/themes/Mocha/Mauve/userChrome.css";
-    };
-    ".zen/default/chrome/userContent.css" = {
-      enable = true;
-      source = "${ctp_zen}/themes/Mocha/Mauve/userContent.css";
-    };
-    ".zen/default/chrome/zen-logo-mocha.svg" = {
-      enable = true;
-      source = "${ctp_zen}/themes/Mocha/Mauve/zen-logo-mocha.svg";
-    };
+  home.file.".zen/default/chrome" = {
+    enable = true;
+    source = "${ctp_zen}/themes/Mocha/Mauve";
+    recursive = true;
   };
 
   xdg.mimeApps =

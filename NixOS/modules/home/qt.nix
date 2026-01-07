@@ -1,39 +1,31 @@
 {
   pkgs,
   config,
-  lib,
   ...
 }:
 
-with lib;
 let
-  qtCtAppearanceConfig = generators.toINI { } {
+  qtctSettings = {
     Appearance = {
       icon_theme = config.gtk.iconTheme.name;
     };
   };
 in
 {
-  home.packages = [
-    pkgs.libsForQt5.qtstyleplugin-kvantum
-    pkgs.libsForQt5.qt5ct
+  home.packages = with pkgs; [
+    kdePackages.qtstyleplugin-kvantum
+    libsForQt5.qtstyleplugin-kvantum
   ];
 
   qt = {
     enable = true;
     platformTheme.name = "qtct";
-    style.name = "kvantum";
-  };
+    style = {
+      name = "kvantum";
+      package = pkgs.darkly;
+    };
 
-  # qt5ct
-  home.file.".config/qt5ct/qt5ct.conf" = {
-    #  target = "qt5ct/qt5ct.conf";
-    text = qtCtAppearanceConfig;
-  };
-
-  # qt6ct
-  home.file.".config/qt6ct/qt6ct.conf" = {
-    #  target = "qt6ct/qt6ct.conf";
-    text = qtCtAppearanceConfig;
+    qt5ctSettings = qtctSettings;
+    qt6ctSettings = qtctSettings;
   };
 }
