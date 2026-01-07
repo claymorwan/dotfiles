@@ -34,6 +34,7 @@
     kittysay
     sl
     zenity
+    pipes
 
     gradia
     (pkgs.callPackage ../../../packages/shiru/package.nix { })

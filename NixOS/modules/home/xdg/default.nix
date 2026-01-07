@@ -32,7 +32,7 @@
     };
 
     configFile."xdg-desktop-portal-termfilechooser/config" = {
-      enable = true;
+      # enable = false;
       text = ''
         [filechooser]
         cmd=${pkgs.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh

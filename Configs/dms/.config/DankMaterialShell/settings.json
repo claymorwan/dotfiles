@@ -181,6 +181,22 @@
   "networkPreference": "wifi",
   "vpnLastConnected": "",
   "iconTheme": "System Default",
+  "cursorSettings": {
+    "theme": "System Default",
+    "size": 24,
+    "niri": {
+      "hideWhenTyping": false,
+      "hideAfterInactiveMs": 0
+    },
+    "hyprland": {
+      "hideOnKeyPress": false,
+      "hideOnTouch": false,
+      "inactiveTimeout": 0
+    },
+    "dwl": {
+      "cursorHideTimeout": 0
+    }
+  },
   "launcherLogoMode": "os",
   "launcherLogoCustomPath": "",
   "launcherLogoColorOverride": "primary",
@@ -835,9 +851,9 @@
         "displayPreferences": [
           "all"
         ],
-        "command": "nix run nixpkgs#pipes",
+        "command": "pipes",
         "autoRefresh": false,
-        "commandTimeout": "1",
+        "commandTimeout": "10",
         "refreshInterval": "60",
         "useDank16": true,
         "backgroundOpacity": 100,

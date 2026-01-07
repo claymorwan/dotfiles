@@ -26,12 +26,12 @@ in
         "hyprland"
       ];
       config = {
-        # open_file_script_path = "${home_dir}/.config/xdg-desktop-portal-termfilepickers/yazi-open-file.nu";
-        # save_file_script_path = "${home_dir}/.config/xdg-desktop-portal-termfilepickers/yazi-save-file.nu";
-        # save_files_script_path = "${home_dir}/.config/xdg-desktop-portal-termfilepickers/yazi-save-file.nu";
+        # open_file_script_path = "${inputs.xdp-termfilepickers}/data/share/wrappers/yazi-open-file.nu";
+        # save_file_script_path = "${inputs.xdp-termfilepickers}/data/share/wrappers/yazi-save-file.nu";
+        # save_files_script_path = "${inputs.xdp-termfilepickers}/data/share/wrappers/yazi-save-file.nu";
         terminal_command = [
           (lib.getExe pkgs.ghostty)
-          "--title=terminal-filechooser"
+          "--title=terminal-filepicker"
           "-e"
         ];
       };

@@ -87,6 +87,9 @@ in
 
       # Wasteland bites demo
       "3820720" = gameOptions;
+
+      # ULTRAKILL
+      "1229490" = winGameOptions;
     };
   };
 }

@@ -54,8 +54,8 @@ in
         #match:class .*scrcpy.*, "size 100%-w-10% 100%-w-10%"
         #match:class .*scrcpy.*, "move 2023 240"
         "match:class .*scrcpy.*, keep_aspect_ratio on"
-        "match:title terminal-filechooser, float on"
-        # "match:title terminal-filechooser, size 75% 61%"
+        "match:title terminal-(filechooser|filepicker), float on"
+        "match:title terminal-(filechooser|filepicker), size (monitor_w*0.65) (monitor_h*0.61)"
         "match:class net.lutris.Lutris, match:title ^(Log for.*), float on"
 
         # Special workspace

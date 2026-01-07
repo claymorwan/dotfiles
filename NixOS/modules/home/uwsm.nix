@@ -25,6 +25,7 @@ in
 
     #export EDITOR=nvim
     export MOZ_LEGACY_PROFILES=1
+    export KRITA_NO_STYLE_OVERRIDE=1
   '';
 
   home.file.".config/uwsm/env-hyprland".text = ''

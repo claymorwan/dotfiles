@@ -22,7 +22,7 @@ in
     platformTheme.name = "qtct";
     style = {
       name = "kvantum";
-      package = pkgs.darkly;
+      # package = pkgs.darkly;
     };
 
     qt5ctSettings = qtctSettings;
