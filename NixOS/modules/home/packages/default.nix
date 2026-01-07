@@ -35,11 +35,7 @@
     sl
     zenity
 
-    equibop
     gradia
-    #adw-gtk3
-    adwsteamgtk
-    #papirus-icon-theme
     (pkgs.callPackage ../../../packages/shiru/package.nix { })
 
     gnome-font-viewer

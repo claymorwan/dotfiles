@@ -1,13 +1,14 @@
 { ... }:
 let
-  hyprbar = "("
-  + "com-abdownloadmanager-desktop-AppKt|floorp|codium|ONLYOFFICE|org.vinegarhq.Sober|hyprpolkitagent|scrcpy|dragon-drop|Blockbench|hyprland-share-picker|obsidian|gale|shiru|zen.*|steam||org.kde.plasmawindowed|localsend|swayimg.*|nz.co.mega.megasync|org.quickshell|"
-  + ".*gnome.*|xdg-desktop-portal-gtk|be.alexandervanhee.gradia|.*[Kk]ooha|.*bottles|io.github.giantpinkrobots.varia|com.mitchellh.ghostty|GTK Application|net.lutris.Lutris|com.vysp3r.ProtonPlus|de.haeckerfelix.Fragments"
-  + ")";
+  hyprbar =
+    "com-abdownloadmanager-desktop-AppKt|floorp|codium|ONLYOFFICE|org.vinegarhq.Sober|hyprpolkitagent|scrcpy|dragon-drop|Blockbench|hyprland-share-picker|obsidian|gale|shiru|zen.*|steam||org.kde.plasmawindowed|localsend|swayimg.*|nz.co.mega.megasync|org.quickshell|"
+    + ".*gnome.*|xdg-desktop-portal-gtk|be.alexandervanhee.gradia|.*[Kk]ooha|.*bottles|io.github.giantpinkrobots.varia|com.mitchellh.ghostty|GTK Application|net.lutris.Lutris|com.vysp3r.ProtonPlus|de.haeckerfelix.Fragments";
 in
 {
   wayland.windowManager.hyprland = {
     settings = {
+      
+      "$pip_coord" = "(monitor_w*0.75) (monitor_h*0.75)";
 
       windowrule = [
         # Tile
@@ -74,12 +75,12 @@ in
         "match:title Library, float on"
 
         # Picture in picture
-        "match:title Picture(-| )in(-| )[Pp]icture, move 100%-w-2% 100%-w-3%,"
+        "match:title Picture(-| )in(-| )[Pp]icture, move $pip_coord"
         "match:title Picture(-| )in(-| )[Pp]icture, keep_aspect_ratio on"
         "match:title Picture(-| )in(-| )[Pp]icture, float on"
         "match:title Picture(-| )in(-| )[Pp]icture, pin on"
 
-        "match:initial_title (Discord Popout), move 100%-w-2% 100%-w-3%"
+        "match:initial_title (Discord Popout), move $pip_coord"
         "match:initial_title (Discord Popout), keep_aspect_ratio on"
         "match:initial_title (Discord Popout), float on"
         "match:initial_title (Discord Popout), pin on"

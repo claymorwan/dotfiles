@@ -42,7 +42,7 @@
   opener = {
     edit = [
       {
-        run = ''${"$EDITOR"} "$@"'';
+        run = "\${EDITOR:-vi} %s";
         desc = "$EDITOR";
         block = true;
         for = "unix";
@@ -146,14 +146,16 @@
 
   open = {
     rules = [
+      # Folder
       {
-        name = "*/";
+        url = "*/";
         use = [
           "edit"
           "open"
           "reveal"
         ];
       }
+      # Text
       {
         mime = "text/*";
         use = [
@@ -161,6 +163,7 @@
           "reveal"
         ];
       }
+      # Image
       {
         mime = "image/*";
         use = [
@@ -168,6 +171,7 @@
           "reveal"
         ];
       }
+      # Media
       {
         mime = "{audio,video}/*";
         use = [
@@ -175,6 +179,7 @@
           "reveal"
         ];
       }
+      # Archive
       {
         mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}";
         use = [
@@ -182,6 +187,7 @@
           "reveal"
         ];
       }
+      # JSON
       {
         mime = "application/{json,ndjson}";
         use = [
@@ -196,6 +202,7 @@
           "reveal"
         ];
       }
+      # Empty file
       {
         mime = "inode/empty";
         use = [
@@ -203,8 +210,11 @@
           "reveal"
         ];
       }
+      # Virtual file system
+      { mime = "vfs/{absent,stale}"; use = "download"; }
+      # Fallback
       {
-        name = "*";
+        url = "*";
         use = [
           "open"
           "reveal"
@@ -225,18 +235,32 @@
   };
   plugin = {
     fetchers = [
+      # Mymetypes
       {
         id = "mime";
-        name = "*";
-        run = "mime";
+        url = "*/";
+        run = "mime.dir";
+        prio = "high";
+      }
+      {
+        id = "mime";
+        url = "local://*";
+        run = "mime.local";
+        prio = "high";
+      }
+      {
+        id = "mime";
+        url = "remote://*";
+        run = "mime.remote";
         prio = "high";
       }
     ];
     spotters = [
       {
-        name = "*/";
+        url = "*/";
         run = "folder";
       }
+      # Code
       {
         mime = "text/*";
         run = "code";
@@ -245,6 +269,7 @@
         mime = "application/{mbox,javascript,wine-extension-ini}";
         run = "code";
       }
+      # Image
       {
         mime = "image/{avif,hei?,jxl,svg+xml}";
         run = "magick";
@@ -253,32 +278,52 @@
         mime = "image/*";
         run = "image";
       }
+      # Video
       {
         mime = "video/*";
         run = "video";
       }
+      # Virtual file system
       {
-        name = "*";
+        mime = "vfs/*";
+        run = "vfs";
+      }
+      # Error
+      {
+        mime = "null/*";
+        run = "null";
+      }
+      # Fallback
+      {
+        url = "*";
         run = "file";
       }
     ];
     preloaders = [
+      # Image
       {
-        mime = "image/{avif,hei?,jxl,svg+xml}";
+        mime = "image/{avif,hei?,jxl}";
         run = "magick";
+      }
+      {
+        mime = "image/svg+xml";
+        run = "svg";
       }
       {
         mime = "image/*";
         run = "image";
       }
+      # Video
       {
         mime = "video/*";
         run = "video";
       }
+      # PDF
       {
         mime = "application/pdf";
         run = "pdf";
       }
+      # Font
       {
         mime = "font/*";
         run = "font";
@@ -296,10 +341,11 @@
     ];
     previewers = [
       {
-        name = "*/";
+        url = "*/";
         run = "folder";
         sync = true;
       }
+      # Code
       {
         mime = "text/*";
         run = "code";
@@ -308,26 +354,35 @@
         mime = "application/{mbox,javascript,wine-extension-ini}";
         run = "code";
       }
+      # JSON
       {
         mime = "application/{json,ndjson}";
         run = "json";
       }
+      # Image
       {
-        mime = "image/{avif,hei?,jxl,svg+xml}";
+        mime = "image/{avif,hei?,jxl}";
         run = "magick";
+      }
+      {
+        mime = "image/svg+xml";
+        run = "svg";
       }
       {
         mime = "image/*";
         run = "image";
       }
+      # Video
       {
         mime = "video/*";
         run = "video";
       }
+      # PDF
       {
         mime = "application/pdf";
         run = "pdf";
       }
+      # Archive
       {
         mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}";
         run = "archive";
@@ -337,9 +392,10 @@
         run = "archive";
       }
       {
-        name = "*.{AppImage,appimage}";
+        url = "*.{AppImage,appimage}";
         run = "archive";
       }
+      # Virtual Disk / Disk Image
       {
         mime = "application/{iso9660-image,qemu-disk,ms-wim,apple-diskimage}";
         run = "archive";
@@ -349,9 +405,10 @@
         run = "archive";
       }
       {
-        name = "*.{img,fat,ext,ext2,ext3,ext4,squashfs,ntfs,hfs,hfsx}";
+        url = "*.{img,fat,ext,ext2,ext3,ext4,squashfs,ntfs,hfs,hfsx}";
         run = "archive";
       }
+      # Font
       {
         mime = "font/*";
         run = "font";
@@ -360,30 +417,40 @@
         mime = "application/ms-opentype";
         run = "font";
       }
+      # Empty file
       {
         mime = "inode/empty";
         run = "empty";
       }
+      # Error
       {
-        name = "*";
+        mime = "null/*";
+        run = "null";
+      }
+      # Fallback
+      {
+        url = "*";
         run = "file";
       }
     ];
     prepend_fetchers = [
+      # Git plugin
       {
         id = "git";
-        name = "*";
+        url = "*";
         run = "git";
       }
       {
         id = "git";
-        name = "*/";
+        url = "*/";
         run = "git";
       }
     ];
   };
   input = {
     cursor_blink = false;
+
+    # cd
     cd_title = "Change directory:";
     cd_origin = "top-center";
     cd_offset = [
@@ -392,6 +459,8 @@
       50
       3
     ];
+
+    # create
     create_title = [
       "Create:"
       "Create (dir):"
@@ -403,6 +472,8 @@
       50
       3
     ];
+
+    # rename
     rename_title = "Rename:";
     rename_origin = "hovered";
     rename_offset = [
@@ -411,6 +482,8 @@
       50
       3
     ];
+
+    # filter
     filter_title = "Filter:";
     filter_origin = "top-center";
     filter_offset = [
@@ -419,6 +492,8 @@
       50
       3
     ];
+
+    # find
     find_title = [
       "Find next:"
       "Find previous:"
@@ -430,6 +505,8 @@
       50
       3
     ];
+
+    # search
     search_title = "Search via {n}:";
     search_origin = "top-center";
     search_offset = [
@@ -438,6 +515,8 @@
       50
       3
     ];
+
+    # shell
     shell_title = [
       "Shell:"
       "Shell (block):"
@@ -450,7 +529,9 @@
       3
     ];
   };
+
   confirm = {
+    # trash
     trash_title = "Trash {n} selected file{s}?";
     trash_origin = "center";
     trash_offset = [
@@ -459,6 +540,8 @@
       70
       20
     ];
+
+    # delete
     delete_title = "Permanently delete {n} selected file{s}?";
     delete_origin = "center";
     delete_offset = [
@@ -467,6 +550,8 @@
       70
       20
     ];
+
+    # overwrite
     overwrite_title = "Overwrite file?";
     overwrite_content = "Will overwrite the following file:";
     overwrite_origin = "center";
@@ -476,6 +561,8 @@
       50
       15
     ];
+
+    # quit
     quit_title = "Quit?";
     quit_content = "The following tasks are still running, are you sure you want to quit?";
     quit_origin = "center";
@@ -486,6 +573,7 @@
       15
     ];
   };
+
   pick = {
     open_title = "Open with:";
     open_origin = "hovered";
@@ -496,6 +584,7 @@
       7
     ];
   };
+
   which = {
     sort_by = "none";
     sort_sensitive = false;

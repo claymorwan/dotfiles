@@ -6,6 +6,7 @@
     ./browsers
     ./catppuccin.nix
     ./cursors
+    ./discord.nix
     ./dms
     ./editors
     # ./env.nix

@@ -18,6 +18,13 @@
   "cornerRadius": 7,
   "niriLayoutGapsOverride": -1,
   "niriLayoutRadiusOverride": -1,
+  "niriLayoutBorderSize": -1,
+  "hyprlandLayoutGapsOverride": -1,
+  "hyprlandLayoutRadiusOverride": -1,
+  "hyprlandLayoutBorderSize": -1,
+  "mangoLayoutGapsOverride": -1,
+  "mangoLayoutRadiusOverride": -1,
+  "mangoLayoutBorderSize": -1,
   "use24HourClock": true,
   "showSeconds": true,
   "useFahrenheit": false,
@@ -232,6 +239,8 @@
   "runDmsMatugenTemplates": true,
   "matugenTemplateGtk": false,
   "matugenTemplateNiri": false,
+  "matugenTemplateHyprland": true,
+  "matugenTemplateMangowc": true,
   "matugenTemplateQt5ct": false,
   "matugenTemplateQt6ct": false,
   "matugenTemplateFirefox": false,
@@ -275,6 +284,7 @@
   "maxFprintTries": 3,
   "lockScreenActiveMonitor": "all",
   "lockScreenInactiveColor": "#000000",
+  "lockScreenNotificationMode": 0,
   "hideBrightnessSlider": false,
   "notificationTimeoutLow": 5000,
   "notificationTimeoutNormal": 5000,
@@ -843,5 +853,6 @@
       }
     }
   ],
+  "builtInPluginSettings": {},
   "configVersion": 5
 }

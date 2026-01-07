@@ -8,7 +8,7 @@
     GTK_USE_PORTAL = 1;
 
     APP2UNIT_SLICES = "a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice";
-    
+
     MOZ_LEGACY_PROFILES = 1;
 
     # Hyprland

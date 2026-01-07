@@ -69,7 +69,9 @@
         ]
       }
     ],
-    "defaultEngine": "duckduckgo"
+    "defaultEngine": "duckduckgo",
+    "noTrigger": true,
+    "trigger": "?"
   },
   "grimblast": {
     "enabled": true

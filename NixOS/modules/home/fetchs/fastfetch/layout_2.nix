@@ -7,10 +7,10 @@
 
       modules = [
         {
-          type = "custom"; 
+          type = "custom";
           format = "╭──┤ System├──╮";
         }
-        
+
         {
           type = "custom";
           format = "├────┤{#red}󰌢 OS{#}├────┤";

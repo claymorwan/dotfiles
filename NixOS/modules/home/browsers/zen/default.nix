@@ -17,7 +17,7 @@ let
   };
   inherit (import ../../variables/variables.nix)
     submodules_dir
-    ; 
+    ;
 in
 {
   imports = [
@@ -52,7 +52,7 @@ in
     #         cp "${configpref}" "$out/lib/${libName}/defaults/pref/config-pref.js"
     #       '';
     #   });
-    # in 
+    # in
     # (config.lib.nixGL.wrap ((pkgs.wrapFirefox) custom-zen {}));
 
     # extraPrefsFiles = [
