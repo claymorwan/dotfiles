@@ -70,8 +70,8 @@
       }
     ],
     "defaultEngine": "duckduckgo",
-    "noTrigger": true,
-    "trigger": "?"
+    "noTrigger": false,
+    "trigger": ";"
   },
   "grimblast": {
     "enabled": true

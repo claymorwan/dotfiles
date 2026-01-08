@@ -17,7 +17,6 @@
     # wine-discord-ipc-bridge
 
     # osu-lazer-bin
-    # sm64coopdx
-    (pkgs.callPackage ../../../packages/sm64coopdx/package.nix { })
+    sm64coopdx
   ];
 }

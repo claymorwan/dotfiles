@@ -590,6 +590,9 @@
     },
     "HDMI-A-1": {
       "enabled": true
+    },
+    "eDP-1": {
+      "enabled": true
     }
   },
   "desktopWidgetInstances": [
@@ -622,11 +625,21 @@
           {
             "name": "DP-1",
             "model": "PLX2283H"
+          },
+          {
+            "name": "eDP-1",
+            "model": "0x07F1"
           }
         ]
       },
       "positions": {
         "DP-1": {
+          "x": 870,
+          "y": 450,
+          "width": 240,
+          "height": 240
+        },
+        "eDP-1": {
           "x": 870,
           "y": 450,
           "width": 240,
@@ -675,12 +688,22 @@
           {
             "name": "DP-1",
             "model": "PLX2283H"
+          },
+          {
+            "name": "eDP-1",
+            "model": "0x07F1"
           }
         ],
         "showOnOverlay": false
       },
       "positions": {
         "DP-1": {
+          "x": 30,
+          "y": 60,
+          "width": 420,
+          "height": 510
+        },
+        "eDP-1": {
           "x": 30,
           "y": 60,
           "width": 420,
@@ -698,6 +721,10 @@
           {
             "name": "DP-1",
             "model": "PLX2283H"
+          },
+          {
+            "name": "eDP-1",
+            "model": "0x07F1"
           }
         ],
         "viewMode": "detailed",
@@ -707,6 +734,12 @@
       },
       "positions": {
         "DP-1": {
+          "x": 1560,
+          "y": 60,
+          "width": 330,
+          "height": 510
+        },
+        "eDP-1": {
           "x": 1560,
           "y": 60,
           "width": 330,
@@ -724,6 +757,10 @@
           {
             "name": "DP-1",
             "model": "PLX2283H"
+          },
+          {
+            "name": "eDP-1",
+            "model": "0x07F1"
           }
         ],
         "shortcutApp": "net.lutris.Lutris",
@@ -735,6 +772,12 @@
       },
       "positions": {
         "DP-1": {
+          "x": 1290,
+          "y": 180,
+          "width": 120,
+          "height": 120
+        },
+        "eDP-1": {
           "x": 1290,
           "y": 180,
           "width": 120,
@@ -752,6 +795,10 @@
           {
             "name": "DP-1",
             "model": "PLX2283H"
+          },
+          {
+            "name": "eDP-1",
+            "model": "0x07F1"
           }
         ],
         "shortcutApp": "zen-beta",
@@ -761,6 +808,12 @@
       },
       "positions": {
         "DP-1": {
+          "x": 1290,
+          "y": 60,
+          "width": 120,
+          "height": 120
+        },
+        "eDP-1": {
           "x": 1290,
           "y": 60,
           "width": 120,
@@ -778,6 +831,10 @@
           {
             "name": "DP-1",
             "model": "PLX2283H"
+          },
+          {
+            "name": "eDP-1",
+            "model": "0x07F1"
           }
         ],
         "shortcutApp": "com.mitchellh.ghostty",
@@ -786,6 +843,12 @@
       },
       "positions": {
         "DP-1": {
+          "x": 1410,
+          "y": 60,
+          "width": 120,
+          "height": 120
+        },
+        "eDP-1": {
           "x": 1410,
           "y": 60,
           "width": 120,
@@ -803,6 +866,10 @@
           {
             "name": "DP-1",
             "model": "PLX2283H"
+          },
+          {
+            "name": "eDP-1",
+            "model": "0x07F1"
           }
         ],
         "shortcutApp": "steam",
@@ -811,6 +878,12 @@
       },
       "positions": {
         "DP-1": {
+          "x": 1410,
+          "y": 180,
+          "width": 120,
+          "height": 120
+        },
+        "eDP-1": {
           "x": 1410,
           "y": 180,
           "width": 120,
@@ -828,6 +901,10 @@
           {
             "name": "DP-1",
             "model": "PLX2283H"
+          },
+          {
+            "name": "eDP-1",
+            "model": "0x07F1"
           }
         ],
         "backgroundOpacity": 100,
@@ -835,6 +912,12 @@
       },
       "positions": {
         "DP-1": {
+          "x": 30,
+          "y": 840,
+          "width": 420,
+          "height": 210
+        },
+        "eDP-1": {
           "x": 30,
           "y": 840,
           "width": 420,
@@ -849,11 +932,14 @@
       "enabled": true,
       "config": {
         "displayPreferences": [
-          "all"
+          {
+            "name": "eDP-1",
+            "model": "0x07F1"
+          }
         ],
         "command": "pipes",
         "autoRefresh": false,
-        "commandTimeout": "10",
+        "commandTimeout": "1",
         "refreshInterval": "60",
         "useDank16": true,
         "backgroundOpacity": 100,
@@ -861,6 +947,12 @@
       },
       "positions": {
         "DP-1": {
+          "x": 1410,
+          "y": 750,
+          "width": 480,
+          "height": 300
+        },
+        "eDP-1": {
           "x": 1410,
           "y": 750,
           "width": 480,
