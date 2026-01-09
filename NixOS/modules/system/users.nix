@@ -3,7 +3,7 @@
   pkgs,
   username,
   host,
-  system,
+  # system,
   ...
 }:
 
@@ -17,7 +17,7 @@
         inputs
         username
         host
-        system
+        # system
         ;
     };
     users.${username} = {
@@ -26,6 +26,7 @@
         inputs.nix-flatpak.homeManagerModules.nix-flatpak
         inputs.catppuccin.homeModules.catppuccin
       ];
+
       home = {
         username = "${username}";
         homeDirectory = "/home/${username}";

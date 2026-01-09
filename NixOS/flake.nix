@@ -129,7 +129,7 @@
     }:
     let
       username = "claymorwan";
-      system = "x86_64-linux";
+      # system = "x86_64-linux";
 
       mkNixosConfig =
         host:
@@ -138,7 +138,7 @@
             inherit inputs;
             inherit username;
             inherit host;
-            inherit system;
+            # inherit system;
           };
 
           modules = [
