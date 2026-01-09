@@ -6,6 +6,7 @@
     ./browsers
     ./catppuccin.nix
     ./cursors
+    ./Desktops
     ./discord.nix
     ./dms
     ./editors
@@ -15,7 +16,6 @@
     ./git.nix
     ./ghostty.nix
     ./gtk.nix
-    ./hyprland
     ./obs-studio.nix
     ./packages
     ./qt.nix

@@ -17,17 +17,18 @@ in
     inputs.dms.nixosModules.greeter
   ];
 
-  programs = {
-    dank-material-shell = {
-      greeter = {
+  # programs = {
+  #   dank-material-shell = {
+  services.displayManager.dms-greeter = {
+      # greeter = {
         enable = true;
-        compositor.name = "hyprland"; # Or "hyprland" or "sway"
+        compositor.name = "niri"; # Or "hyprland" or "sway"
 
         configHome = "${home_dir}";
         configFiles = [
           "${dotfiles_dir}/Configs/dms/.config/DankMaterialShell/settings.json"
         ];
-      };
-    };
+      # };
+    # };
   };
 }

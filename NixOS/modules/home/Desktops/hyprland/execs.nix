@@ -1,7 +1,7 @@
 { ... }:
 
 let
-  inherit (import ./../../../variables/variables.nix)
+  inherit (import ../../../../variables/variables.nix)
     mouse_cursor
     ;
 in
@@ -29,7 +29,7 @@ in
       "mpris-proxy"
 
       # Autostart
-      "sleep 3; app2unit -- equibop --start-minimized"
+      "equibop --start-minimized"
     ];
   };
 }

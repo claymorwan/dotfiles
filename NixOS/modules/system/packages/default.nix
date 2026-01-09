@@ -2,6 +2,7 @@
 
 {
   imports = [
+    inputs.niri.nixosModules.niri
     ./flatpak.nix
   ];
 
@@ -13,6 +14,11 @@
       # withUWSM = true;
     };
     hyprlock.enable = true;
+
+    niri = {
+      enable = true;
+      package = pkgs.niri;
+    };
 
     gnupg.agent = {
       enable = true;

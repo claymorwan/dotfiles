@@ -2,7 +2,7 @@
 
 {
   imports = [
-    # ./termfilepickers.nix
+    ./termfilepickers.nix
   ];
   xdg = {
     enable = true;
@@ -14,11 +14,11 @@
         xdg-desktop-portal-hyprland
         xdg-desktop-portal-termfilechooser
         xdg-desktop-portal-gtk
+        xdg-desktop-portal-gnome
       ];
-      # configPackages = [ pkgs.hyprland ];
       config = {
         common = {
-          "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
+          # "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
         };
 
         hyprland = {
@@ -26,13 +26,13 @@
             "hyprland"
             "gtk"
           ];
-          "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
+          # "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
         };
       };
     };
 
     configFile."xdg-desktop-portal-termfilechooser/config" = {
-      # enable = false;
+      enable = false;
       text = ''
         [filechooser]
         cmd=${pkgs.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh
@@ -42,22 +42,5 @@
         save_mode=last
       '';
     };
-    # configFile = {
-    #   "xdg-desktop-portal-termfilechooser/config" = {
-    #     force = true;
-    #     text = ''
-    #       [filechooser]
-    #       cmd=yazi-wrapper.sh
-    #       default_dir=$HOME
-    #       env=TERMCMD=ghostty --title="terminal-filechooser" -e
-    #       open_mode = suggested
-    #       save_mode = last
-    #     '';
-    #   };
-    #
-    #   "xdg-desktop-portal-termfilechooser/yazi-wrapper.sh" = {
-    #     source = ./yazi-wrapper.sh;
-    #   };
-    # };
   };
 }

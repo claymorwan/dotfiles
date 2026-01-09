@@ -14,7 +14,7 @@
     KRITA_NO_STYLE_OVERRIDE = 1;
 
     # Hyprland
-    GDK_BACKEND = "wayland,x11";
+    # GDK_BACKEND = "wayland,x11";
     SDL_VIDEODRIVER = "wayland,x11";
     CLUTTER_BACKEND = "wayland";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
