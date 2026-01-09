@@ -20,8 +20,4 @@ in
     gtk.enable = true;
     x11.enable = true;
   };
-  # home.file.".icons" = {
-  #   source = ./.icons;
-  #   recursive = true;
-  # };
 }

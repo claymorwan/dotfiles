@@ -25,6 +25,7 @@
     openssh.enable = true;
     blueman.enable = true;
     upower.enable = true;
+    fwupd.enable = true;
 
     # displayManager.ly.enable = true;
   };
