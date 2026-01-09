@@ -24,10 +24,13 @@ in
     };
   };
 
-  xdg.configFile."gtk-3.0/gtk.css".text = ''
-    @import url("${submodules_dir}/catppuccin/monorepo/adw/themes/mocha/catppuccin-mocha-mauve.css");
-  '';
-  xdg.configFile."gtk-4.0/gtk.css".text = ''
-    @import url("${submodules_dir}/catppuccin/monorepo/adw/themes/mocha/catppuccin-mocha-mauve.css");
-  '';
+  xdg.configFile = {
+    "gtk-3.0/gtk.css".text = ''
+      @import url("${submodules_dir}/catppuccin/monorepo/adw/themes/mocha/catppuccin-mocha-mauve.css");
+    '';
+
+    "gtk-4.0/gtk.css".text = ''
+      @import url("${submodules_dir}/catppuccin/monorepo/adw/themes/mocha/catppuccin-mocha-mauve.css");
+    '';
+  };
 }

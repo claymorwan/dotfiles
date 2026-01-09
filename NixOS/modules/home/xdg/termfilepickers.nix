@@ -2,7 +2,6 @@
   inputs,
   lib,
   pkgs,
-  system,
   ...
 }:
 
@@ -16,7 +15,7 @@ in
 
   services.xdg-desktop-portal-termfilepickers =
     let
-      termfilepickers = inputs.xdp-termfilepickers.packages.${system}.default;
+      termfilepickers = inputs.xdp-termfilepickers.packages.${pkgs.stdenv.hostPlatform.system}.default;
     in
     {
       enable = true;

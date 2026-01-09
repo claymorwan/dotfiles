@@ -211,7 +211,10 @@
         ];
       }
       # Virtual file system
-      { mime = "vfs/{absent,stale}"; use = "download"; }
+      {
+        mime = "vfs/{absent,stale}";
+        use = "download";
+      }
       # Fallback
       {
         url = "*";

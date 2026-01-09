@@ -150,7 +150,7 @@
     in
     {
       templates = import ./dev-shells;
-      formatter.x86_64-linux = nixpkgs.legacyPackages.${system}.nixfmt-tree;
+      formatter.x86_64-linux = nixpkgs.legacyPackages."x86_64-linux".nixfmt-tree;
       nixosConfigurations = {
         nixos = mkNixosConfig "nixos";
         nixos-laptop = mkNixosConfig "nixos-laptop";

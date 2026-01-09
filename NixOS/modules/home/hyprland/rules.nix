@@ -7,7 +7,7 @@ in
 {
   wayland.windowManager.hyprland = {
     settings = {
-      
+
       "$pip_coord" = "(monitor_w*0.75) (monitor_h*0.75)";
 
       windowrule = [
