@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   stdenv,
+  config,
   ...
 }:
 
@@ -26,6 +27,13 @@ in
 
   programs.zen-browser = {
     enable = true;
+
+    # package = let   
+    #   custom-zen = inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.beta-unwrapped.overrideAttrs (oldAttrs: rec {
+    #     makeDesktopItem = oldAttrs.exec // "${oldAttrs.binaryName} -p default %u";
+    #   });
+    # in 
+    # (config.lib.nixGL.wrap ((pkgs.wrapFirefox) custom-zen {}));
 
     nativeMessagingHosts = with pkgs; [
       kdePackages.plasma-browser-integration

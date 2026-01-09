@@ -10,9 +10,10 @@
   programs = {
     hyprland = {
       enable = true;
-      withUWSM = true;
+      # withUWSM = true;
     };
     hyprlock.enable = true;
+
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
@@ -31,6 +32,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    kitty
     #neovim
     bat
     fastfetch

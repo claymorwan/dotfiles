@@ -26,7 +26,7 @@ in
 
       # Applications
       "${mainMod}, Return, exec, ${launch_prefix} ${terminal} # Terminal"
-      "${mainMod}, W, exec, ${launch_prefix} ${browser} # Browser"
+      "${mainMod}, W, exec, ${browser} # Browser"
       "${mainMod}, D, exec, ${launch_prefix} equibop # Discord"
       "${mainMod}, S, exec, ${launch_prefix} spotify # Spotify"
       "${mainMod}, E, exec, ${launch_prefix} ${terminal} -e yazi # File explorer"

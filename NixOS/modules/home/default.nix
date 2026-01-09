@@ -9,7 +9,7 @@
     ./discord.nix
     ./dms
     ./editors
-    # ./env.nix
+    ./env.nix
     ./fetchs
     ./gaming
     ./git.nix
@@ -22,7 +22,7 @@
     ./starship.nix
     ./spotify.nix
     ./ssh.nix
-    ./uwsm.nix
+    # ./uwsm.nix
     ./xdg
     ./yazi
     ./zsh

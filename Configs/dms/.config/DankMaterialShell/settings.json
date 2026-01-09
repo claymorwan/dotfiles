@@ -236,7 +236,7 @@
   "fadeToLockGracePeriod": 5,
   "fadeToDpmsEnabled": false,
   "fadeToDpmsGracePeriod": 5,
-  "launchPrefix": "app2unit --",
+  "launchPrefix": "",
   "brightnessDevicePins": {},
   "wifiNetworkPins": {
     "preferredWifi": "Ackdar family couloir"
@@ -884,8 +884,8 @@
           "height": 120
         },
         "eDP-1": {
-          "x": 1410,
-          "y": 180,
+          "x": 1400,
+          "y": 200,
           "width": 120,
           "height": 120
         }
@@ -959,8 +959,33 @@
           "height": 300
         }
       }
+    },
+    {
+      "id": "dw_1767964332395_ikt7mkyl5",
+      "widgetType": "appShortcut",
+      "name": "Application Shortcut",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "backgroundOpacity": 45,
+        "shortcutApp": "kitty"
+      },
+      "positions": {
+        "eDP-1": {
+          "x": 1360,
+          "y": 320,
+          "width": 120,
+          "height": 120
+        }
+      }
     }
   ],
-  "builtInPluginSettings": {},
+  "builtInPluginSettings": {
+    "dms_settings_search": {
+      "trigger": "?"
+    }
+  },
   "configVersion": 5
 }
