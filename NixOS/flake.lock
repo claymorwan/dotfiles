@@ -96,9 +96,7 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "quickshell": [
-          "quickshell"
-        ]
+        "quickshell": "quickshell"
       },
       "locked": {
         "lastModified": 1767844768,
@@ -808,17 +806,18 @@
         ]
       },
       "locked": {
-        "lastModified": 1767693058,
-        "narHash": "sha256-rnLX8IA4yMbKHjYmJPcYCcWrqJ50B8WApQW62l+V9LE=",
+        "lastModified": 1766725085,
+        "narHash": "sha256-O2aMFdDUYJazFrlwL7aSIHbUSEm3ADVZjmf41uBJfHs=",
         "ref": "refs/heads/master",
-        "rev": "6742148cf4a8415a9c51fdeb11d8c3ea716c2e14",
-        "revCount": 717,
+        "rev": "41828c4180fb921df7992a5405f5ff05d2ac2fff",
+        "revCount": 715,
         "type": "git",
-        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+        "url": "https://git.outfoxxed.me/quickshell/quickshell"
       },
       "original": {
+        "rev": "41828c4180fb921df7992a5405f5ff05d2ac2fff",
         "type": "git",
-        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+        "url": "https://git.outfoxxed.me/quickshell/quickshell"
       }
     },
     "re2-src": {
@@ -858,7 +857,6 @@
         "nix-output-monitor": "nix-output-monitor",
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs",
-        "quickshell": "quickshell",
         "spicetify-nix": "spicetify-nix",
         "steam-config-nix": "steam-config-nix",
         "xdp-termfilepickers": "xdp-termfilepickers",

@@ -10,6 +10,7 @@
     APP2UNIT_SLICES = "a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice";
 
     XDG_DESKTOP_PORTAL_DIR = "/etc/profiles/per-user/claymorwan/share/xdg-desktop-portal/portals";
+    TERMCMD = "ghostty --title=\"terminal-filechooser\" -e";
     MOZ_LEGACY_PROFILES = 1;
     KRITA_NO_STYLE_OVERRIDE = 1;
 
@@ -19,9 +20,9 @@
     CLUTTER_BACKEND = "wayland";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
 
-    XDG_CURRENT_DESKTOP = "Hyprland";
+    # XDG_CURRENT_DESKTOP = "niri"; #"Hyprland";
     XDG_SESSION_TYPE = "wayland";
-    XDG_SESSION_DESKTOP = "Hyprland";
+    # XDG_SESSION_DESKTOP = "Hyprland";
 
     _JAVA_AWT_WM_NONREPARENTING = 1;
   };

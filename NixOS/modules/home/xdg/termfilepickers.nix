@@ -23,6 +23,7 @@ in
       desktopEnvironments = [
         "common"
         "hyprland"
+        "niri"
       ];
       config = {
         # open_file_script_path = "${inputs.xdp-termfilepickers}/data/share/wrappers/yazi-open-file.nu";

@@ -29,8 +29,8 @@
   "showSeconds": true,
   "useFahrenheit": false,
   "nightModeEnabled": false,
-  "animationSpeed": 0,
-  "customAnimationDuration": 500,
+  "animationSpeed": 4,
+  "customAnimationDuration": 200,
   "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": false,
   "blurWallpaperOnOverview": false,
@@ -289,7 +289,7 @@
   "dockBorderThickness": 1,
   "dockIsolateDisplays": false,
   "notificationOverlayEnabled": false,
-  "modalDarkenBackground": false,
+  "modalDarkenBackground": true,
   "lockScreenShowPowerActions": true,
   "lockScreenShowSystemIcons": true,
   "lockScreenShowTime": true,
@@ -630,7 +630,10 @@
             "name": "eDP-1",
             "model": "0x07F1"
           }
-        ]
+        ],
+        "showOnOverview": false,
+        "showOnOverlay": false,
+        "showOnOverviewOnly": false
       },
       "positions": {
         "DP-1": {
@@ -700,7 +703,7 @@
         "DP-1": {
           "x": 30,
           "y": 60,
-          "width": 420,
+          "width": 390,
           "height": 510
         },
         "eDP-1": {
@@ -737,7 +740,7 @@
           "x": 1560,
           "y": 60,
           "width": 330,
-          "height": 510
+          "height": 540
         },
         "eDP-1": {
           "x": 1560,
@@ -935,6 +938,10 @@
           {
             "name": "eDP-1",
             "model": "0x07F1"
+          },
+          {
+            "name": "DP-1",
+            "model": "PLX2283H"
           }
         ],
         "command": "pipes",
@@ -943,7 +950,8 @@
         "refreshInterval": "60",
         "useDank16": true,
         "backgroundOpacity": 100,
-        "fontSize": 21
+        "fontSize": 21,
+        "showOnOverviewOnly": false
       },
       "positions": {
         "DP-1": {
@@ -957,33 +965,6 @@
           "y": 750,
           "width": 480,
           "height": 300
-        }
-      }
-    },
-    {
-      "id": "dw_1767964332395_ikt7mkyl5",
-      "widgetType": "appShortcut",
-      "name": "Application Shortcut",
-      "enabled": true,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "backgroundOpacity": 45,
-        "shortcutApp": "kitty"
-      },
-      "positions": {
-        "eDP-1": {
-          "x": 1360,
-          "y": 320,
-          "width": 120,
-          "height": 120
-        },
-        "DP-1": {
-          "x": 1410,
-          "y": 300,
-          "width": 120,
-          "height": 120
         }
       }
     }

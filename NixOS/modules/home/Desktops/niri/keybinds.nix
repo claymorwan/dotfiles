@@ -7,19 +7,38 @@ in
 {
   imports = [
     ./keybinds/dms.nix
+    ./keybinds/default-binds.nix
   ];
   programs.niri.settings = {
     binds = {
       # Applications
-      "Mod+Return".action.spawn = terminal;
-      "Mod+W".action.spawn = browser;
-      "Mod+D".action.spawn = "equibop";
-      "Mod+S".action.spawn = "spotify";
-      "Mod+E".action.spawn = [ terminal "-e" "yazi" ];
+      "Mod+Return" = {
+        action.spawn = terminal;
+        hotkey-overlay.title = "Terminal";
+      };
 
-      "Print".action.spawn = [ "dms" "screenshot" "full" "--stdout" "|" "gradia" ];
-      "Ctrl+Print".action.spawn = [ "dms" "screenshot" "--stdout" "|" "gradia" ];
-      "Mod+Print".action.spawn = [ "dms" "screenshot" "window" "--stdout" "|" "gradia" ];
+      "Mod+W" = {
+        action.spawn-sh = browser;
+        hotkey-overlay.title = "Browser";
+      };
+
+      "Mod+D" = {
+        action.spawn = "equibop";
+        hotkey-overlay.title = "Discord";
+      };
+
+      "Mod+Alt+S" = {
+        action.spawn = "spotify";
+        hotkey-overlay.title ="Spotify";
+      };
+
+      "Mod+E" = {
+        action.spawn = [ terminal "-e" "yazi" ];
+        hotkey-overlay.title = "File explorer";
+      };
+      # "Print".action.spawn = [ "dms" "screenshot" "full" "--stdout" "| gradia" ];
+      # "Ctrl+Print".action.spawn = [ "dms" "screenshot" "--stdout" "| gradia" ];
+      # "Mod+Print".action.spawn = [ "dms" "screenshot" "window" "--stdout" "| gradia" ];
     };
   };
 }

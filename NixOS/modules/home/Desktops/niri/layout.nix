@@ -3,7 +3,7 @@
     # gaps = 15;
     always-center-single-column = true;
 
-    default-column-width = { proportion = 0.33333; };
+    default-column-width = { proportion = 0.66666; };
 
     border = {
       enable = true;
@@ -13,8 +13,10 @@
       urgent.color = "#f38ba8";
     };
 
+    focus-ring.enable = false;
+
     shadow = {
-      enable = true;
+      enable = false;
       draw-behind-window = true;
     };
 

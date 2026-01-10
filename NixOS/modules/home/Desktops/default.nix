@@ -1,6 +1,6 @@
 {
   imports = [
     ./hyprland
-    ./niri/niri.nix
+    ./niri
   ];
 }

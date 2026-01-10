@@ -1,15 +1,49 @@
 {
   programs.niri.settings.binds = {
-    "Mod+Super_L".action.spawn = [ "dms" "ipc" "call" "spotlight" "toggle" ];
-    "Mod+V".action.spawn = [ "dms" "ipc" "call" "clipboard" "toggle" ];
-    "Mod+M".action.spawn = [ "dms" "ipc" "call" "processlist" "toggle" ];
-    "Mod+N".action.spawn = [ "dms" "ipc" "call" "notifications" "toggle" ];
-    "Mod+I".action.spawn = [ "dms" "ipc" "call" "settings" "toggle" ];
-    "Mod+P".action.spawn = [ "dms" "ipc" "call" "notepad" "toggle" ];
-    "Mod+Alt+L".action.spawn = [ "dms" "ipc" "call" "lock" "lock" ];
-    "Mod+X".action.spawn = [ "dms" "ipc" "call" "powermenu" "toggle" ];
-    "Mod+Shift+S".action.spawn = [ "dms" "ipc" "call" "control-center" "toggle" ];
-    
+    "Mod+S" = {
+      action.spawn = [ "dms" "ipc" "call" "spotlight" "toggle" ];
+      repeat = false;
+    };
+
+    "Mod+V"= {
+      action.spawn = [ "dms" "ipc" "call" "clipboard" "toggle" ];
+      repeat = false;
+    };
+
+    "Mod+M" = {
+      action.spawn = [ "dms" "ipc" "call" "processlist" "toggle" ];
+      repeat = true;
+    };
+
+    "Mod+N" = {
+      action.spawn = [ "dms" "ipc" "call" "notifications" "toggle" ];
+      repeat = true;
+    };
+
+    "Mod+I" = {
+      action.spawn = [ "dms" "ipc" "call" "settings" "toggle" ];
+      repeat = false;
+    };
+
+    "Mod+P" = {
+      action.spawn = [ "dms" "ipc" "call" "notepad" "toggle" ];
+      repeat = false;
+    };
+
+    "Mod+Alt+L" = {
+      action.spawn = [ "dms" "ipc" "call" "lock" "lock" ];
+      repeat = false;
+    };
+
+    "Mod+X" = {
+      action.spawn = [ "dms" "ipc" "call" "powermenu" "toggle" ];
+      repeat = false;
+    };
+
+    "Mod+Shift+S" = {
+      action.spawn = [ "dms" "ipc" "call" "control-center" "toggle" ];
+      repeat = false;
+    };
     # Audio controls
     "XF86AudioRaiseVolume".action.spawn = [ "dms" "ipc" "call" "audio" "increment" "3" ];
     "XF86AudioLowerVolume".action.spawn = [ "dms" "ipc" "call" "audio" "decrement" "3" ];

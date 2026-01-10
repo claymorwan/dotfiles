@@ -1,6 +1,22 @@
 {
   programs.niri.settings = {
+    workspaces = {
+      "chat" = {};
+      "shijima" = {};
+    };
     window-rules = [
+      {
+        geometry-corner-radius = let
+          radius = 20.0;
+        in
+        {
+          bottom-left = radius;
+          bottom-right = radius;
+          top-left = radius;
+          top-right = radius;
+        };
+        clip-to-geometry = true;
+      }
       # Float
       {
         matches = [ 
@@ -73,6 +89,17 @@
           y = 0.75;
           relative-to = "top-left";
         };
+      }
+
+      {
+        matches = [{ app-id = "discord|equibop|vesktop|whatsapp|BeeperTexts"; }];
+        open-on-workspace = "chat";
+        open-focused = true;
+      }
+      {
+        matches = [{ app-id = "shijima-qt"; }];
+        open-on-workspace = "shijima";
+        open-focused = true;
       }
     ];
 

@@ -7,7 +7,7 @@ let
 in
 {
   imports = [
-    inputs.niri.homeModules.niri
+    # inputs.niri.homeModules.niri
     ./execs.nix
     ./keybinds.nix
     ./layout.nix
@@ -16,8 +16,6 @@ in
 
   programs = {
     niri = {
-      # enable = true;
-      # package = pkgs.niri;
 
       settings = {
 
@@ -43,7 +41,7 @@ in
         };
 
         overview = {
-          zoom = 0.25;
+          zoom = 0.5;
         };
 
         xwayland-satellite = {
