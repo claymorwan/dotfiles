@@ -87,19 +87,37 @@
         default-floating-position = {
           x = 0.75;
           y = 0.75;
-          relative-to = "top-left";
+          relative-to = "bottom-right";
         };
+      }
+      {
+        matches = [
+          {
+            app-id = "equibop";
+            title = "^$";
+          }
+        ];
+        open-floating = true;
+        default-floating-position = {
+          x = 0.75;
+          y = 0.75;
+          relative-to = "bottom-right";
+        };
+        default-column-width = { proportion = 0.3; };
+        default-window-height = { proportion = 0.25; };
       }
 
       {
         matches = [{ app-id = "discord|equibop|vesktop|whatsapp|BeeperTexts"; }];
         open-on-workspace = "chat";
         open-focused = true;
+        open-maximized = true;
       }
       {
         matches = [{ app-id = "shijima-qt"; }];
         open-on-workspace = "shijima";
         open-focused = true;
+        open-maximized = true;
       }
     ];
 

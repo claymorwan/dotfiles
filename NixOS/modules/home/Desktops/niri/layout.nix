@@ -1,6 +1,6 @@
 {
   programs.niri.settings.layout = {
-    # gaps = 15;
+    gaps = 17;
     always-center-single-column = true;
 
     default-column-width = { proportion = 0.66666; };

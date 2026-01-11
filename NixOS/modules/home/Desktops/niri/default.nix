@@ -18,7 +18,7 @@ in
     niri = {
 
       settings = {
-
+        prefer-no-csd = true;
         input = {
           mod-key = mainMod;
 

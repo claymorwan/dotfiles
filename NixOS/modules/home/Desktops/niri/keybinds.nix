@@ -36,9 +36,21 @@ in
         action.spawn = [ terminal "-e" "yazi" ];
         hotkey-overlay.title = "File explorer";
       };
-      # "Print".action.spawn = [ "dms" "screenshot" "full" "--stdout" "| gradia" ];
-      # "Ctrl+Print".action.spawn = [ "dms" "screenshot" "--stdout" "| gradia" ];
-      # "Mod+Print".action.spawn = [ "dms" "screenshot" "window" "--stdout" "| gradia" ];
+
+      "Print" = {
+        action.spawn-sh = "dms screenshot full --stdout | gradia";
+        hotkey-overlay.title = "Screenshot (screen)";
+      };
+      
+      "Ctrl+Print" = {
+        action.spawn-sh = "dms screenshot --stdout | gradia";
+        hotkey-overlay.title = "Screenshot (region)";
+      };
+
+      "Mod+Print" = {
+        action.spawn-sh = "dms screenshot window --stdout | gradia";
+        hotkey-overlay.title = "Screenshot (window)";
+      };
     };
   };
 }

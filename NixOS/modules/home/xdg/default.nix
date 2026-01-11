@@ -2,7 +2,7 @@
 
 {
   imports = [
-    # ./termfilepickers.nix
+    ./termfilepickers.nix
   ];
   xdg = {
     enable = true;
@@ -18,7 +18,7 @@
       ];
       config = {
         common = {
-          "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
+          # "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
         };
 
         hyprland = {
@@ -26,7 +26,7 @@
             "hyprland"
             "gtk"
           ];
-          "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
+          # "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
         };
 
         niri = {
@@ -34,7 +34,7 @@
             "gnome"
             "gtk"
           ];
-          "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
+          # "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
         };
       };
     };

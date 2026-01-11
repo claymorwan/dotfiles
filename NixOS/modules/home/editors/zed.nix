@@ -7,7 +7,7 @@ let
 in
 {
   programs.zed-editor = {
-    enable = true;
+    # enable = true;
 
     extensions = [
       "nix"
