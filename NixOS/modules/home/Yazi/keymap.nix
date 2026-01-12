@@ -859,21 +859,37 @@
       }
 
       # Shell
+      # {
+      #   on = ":";
+      #   run = "plugin shell block";
+      #   desc = "Run a shell command with your shell (block until finishes)";
+      # }
+      # {
+      #   on = ";";
+      #   run = "plugin shell noblock";
+      #   desc = "Run a shell command with your shell";
+      # }
+      # {
+      #   on = "!";
+      #   run = "plugin shell noskip";
+      #   desc = "Run a shell command with your shell (block until finishes and when return key is pressed)";
+      # }
       {
         on = ":";
-        run = "plugin shell block";
+        run = "plugin custom-shell -- auto --interactive --block";
         desc = "Run a shell command with your shell (block until finishes)";
       }
       {
         on = ";";
-        run = "plugin shell noblock";
-        desc = "Run a shell command with your shell";
+        run = "plugin custom-shell -- auto --interactive";
+        desc = "custom-shell as default, interactive";
       }
       {
         on = "!";
-        run = "plugin shell noskip";
-        desc = "Run a shell command with your shell (block until finishes and when return key is pressed)";
+        run = "plugin custom-shell -- auto --interactive --block --wait";
+        desc = "custom-shell as default, waits for user";
       }
+
 
       # Toggle pane
       {

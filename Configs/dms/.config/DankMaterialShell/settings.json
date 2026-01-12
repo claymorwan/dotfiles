@@ -172,6 +172,33 @@
   "keyboardLayoutNameCompactMode": true,
   "runningAppsCurrentWorkspace": false,
   "runningAppsGroupByApp": false,
+  "appIdSubstitutions": [
+    {
+      "pattern": "Spotify",
+      "replacement": "spotify",
+      "type": "exact"
+    },
+    {
+      "pattern": "beepertexts",
+      "replacement": "beeper",
+      "type": "exact"
+    },
+    {
+      "pattern": "home assistant desktop",
+      "replacement": "homeassistant-desktop",
+      "type": "exact"
+    },
+    {
+      "pattern": "com.transmissionbt.transmission",
+      "replacement": "transmission-gtk",
+      "type": "contains"
+    },
+    {
+      "pattern": "^steam_app_(\\d+)$",
+      "replacement": "steam_icon_$1",
+      "type": "regex"
+    }
+  ],
   "centeringMode": "geometric",
   "clockDateFormat": "",
   "lockDateFormat": "",
@@ -311,6 +338,7 @@
   "notificationTimeoutLow": 5000,
   "notificationTimeoutNormal": 5000,
   "notificationTimeoutCritical": 0,
+  "notificationCompactMode": false,
   "notificationPopupPosition": 0,
   "notificationHistoryEnabled": true,
   "notificationHistoryMaxCount": 50,
@@ -387,14 +415,6 @@
         {
           "id": "focusedWindow",
           "enabled": true
-        },
-        {
-          "id": "dankPomodoroTimer",
-          "enabled": true
-        },
-        {
-          "id": "dockerManager",
-          "enabled": true
         }
       ],
       "centerWidgets": [
@@ -412,16 +432,9 @@
           "enabled": true
         },
         {
-          "id": "workspaceSwitcher",
-          "enabled": true
-        },
-        {
-          "id": "separator",
-          "enabled": true
-        },
-        {
           "id": "clock",
-          "enabled": true
+          "enabled": true,
+          "clockCompactMode": false
         },
         {
           "id": "alarmClock",
@@ -492,6 +505,79 @@
       "widgetOutlineOpacity": 1,
       "widgetOutlineThickness": 2,
       "maximizeDetection": true
+    },
+    {
+      "id": "bar1768214186318",
+      "name": "Bar 2",
+      "enabled": true,
+      "position": 2,
+      "screenPreferences": [
+        "all"
+      ],
+      "showOnLastDisplay": false,
+      "leftWidgets": [
+        {
+          "id": "workspaceSwitcher",
+          "enabled": true
+        }
+      ],
+      "centerWidgets": [
+        {
+          "id": "dockerManager",
+          "enabled": true
+        },
+        {
+          "id": "separator",
+          "enabled": true
+        },
+        {
+          "id": "clock",
+          "enabled": true
+        },
+        {
+          "id": "separator",
+          "enabled": true
+        },
+        {
+          "id": "dankPomodoroTimer",
+          "enabled": true
+        }
+      ],
+      "rightWidgets": [],
+      "spacing": 0,
+      "innerPadding": 10,
+      "bottomGap": 0,
+      "transparency": 1,
+      "widgetTransparency": 1,
+      "squareCorners": true,
+      "noBackground": false,
+      "gothCornersEnabled": true,
+      "gothCornerRadiusOverride": true,
+      "gothCornerRadiusValue": 23,
+      "borderEnabled": true,
+      "borderColor": "primary",
+      "borderOpacity": 1,
+      "borderThickness": 2,
+      "widgetOutlineEnabled": false,
+      "widgetOutlineColor": "primary",
+      "widgetOutlineOpacity": 1,
+      "widgetOutlineThickness": 2,
+      "fontScale": 1,
+      "autoHide": false,
+      "autoHideDelay": 250,
+      "showOnWindowsOpen": false,
+      "openOnOverview": false,
+      "visible": true,
+      "popupGapsAuto": true,
+      "popupGapsManual": 4,
+      "maximizeDetection": true,
+      "scrollEnabled": true,
+      "scrollXBehavior": "column",
+      "scrollYBehavior": "workspace",
+      "shadowIntensity": 0,
+      "shadowOpacity": 60,
+      "shadowColorMode": "text",
+      "shadowCustomColor": "#000000"
     }
   ],
   "desktopClockEnabled": true,
@@ -598,7 +684,8 @@
       "enabled": true
     },
     "eDP-1": {
-      "enabled": true
+      "enabled": true,
+      "size": 30
     }
   },
   "desktopWidgetInstances": [
@@ -713,8 +800,8 @@
           "height": 520
         },
         "eDP-1": {
-          "x": 30,
-          "y": 60,
+          "x": 80,
+          "y": 80,
           "width": 420,
           "height": 510
         }
@@ -893,8 +980,8 @@
           "height": 120
         },
         "eDP-1": {
-          "x": 1400,
-          "y": 200,
+          "x": 1410,
+          "y": 180,
           "width": 120,
           "height": 120
         }

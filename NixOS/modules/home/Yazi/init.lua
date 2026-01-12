@@ -24,6 +24,12 @@ require("git"):setup()
 -- 	save_password_autoconfirm = true,
 -- })
 
+-- Custom shell
+require("custom-shell"):setup({
+    history_path = "default",
+    save_history = true,
+})
+
 -- Starship
 require("starship"):setup()
 

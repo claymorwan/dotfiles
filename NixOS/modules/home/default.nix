@@ -2,29 +2,30 @@
 
 {
   imports = [
-    ./art
-    ./browsers
+    ./Art
+    ./Browsers
     ./catppuccin.nix
-    ./cursors
+    ./Cursors
     ./Desktops
     ./discord.nix
-    ./dms
-    ./editors
+    ./DMS
+    ./Editors
     ./env.nix
     ./fetchs
-    ./gaming
+    ./Gaming
     ./git.nix
     ./ghostty.nix
     ./gtk.nix
     ./obs-studio.nix
-    ./packages
+    ./Packages
     ./qt.nix
+    ./services.nix
     ./starship.nix
     ./spotify.nix
     ./ssh.nix
     # ./uwsm.nix
-    ./xdg
-    ./yazi
-    ./zsh
+    ./XDG
+    ./Yazi
+    ./Zsh
   ];
 }
