@@ -10,7 +10,6 @@
     APP2UNIT_SLICES = "a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice";
 
     XDG_DESKTOP_PORTAL_DIR = "/etc/profiles/per-user/claymorwan/share/xdg-desktop-portal/portals";
-    TERMCMD = "ghostty --title=\"terminal-filechooser\" -e";
     MOZ_LEGACY_PROFILES = 1;
     KRITA_NO_STYLE_OVERRIDE = 1;
 

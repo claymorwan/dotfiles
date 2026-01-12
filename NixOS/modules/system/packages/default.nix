@@ -10,7 +10,7 @@
 
   programs = {
     hyprland = {
-      enable = true;
+      # enable = true;
       # withUWSM = true;
     };
     hyprlock.enable = true;
@@ -36,6 +36,8 @@
 
   # Allow unfree pkg
   nixpkgs.config.allowUnfree = true;
+
+  systemd.user.services.niri-flake-polkit.enable = false;
 
   environment.systemPackages = with pkgs; [
     kitty

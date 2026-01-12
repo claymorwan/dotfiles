@@ -18,5 +18,6 @@
     ./steam.nix
     ./system.nix
     ./users.nix
+    ./xdg
   ];
 }
