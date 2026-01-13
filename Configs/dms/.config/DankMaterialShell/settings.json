@@ -682,7 +682,7 @@
     },
     "eDP-1": {
       "enabled": true,
-      "size": 30
+      "size": 20
     }
   },
   "desktopWidgetInstances": [
@@ -718,8 +718,8 @@
           "height": 120
         },
         "eDP-1": {
-          "x": 1290,
-          "y": 180,
+          "x": 1320,
+          "y": 160,
           "width": 120,
           "height": 120
         },
@@ -847,8 +847,8 @@
           "height": 520
         },
         "eDP-1": {
-          "x": 80,
-          "y": 80,
+          "x": 60,
+          "y": 60,
           "width": 420,
           "height": 510
         },
@@ -933,7 +933,7 @@
           "height": 120
         },
         "eDP-1": {
-          "x": 1290,
+          "x": 1320,
           "y": 60,
           "width": 120,
           "height": 120
@@ -976,7 +976,7 @@
           "height": 120
         },
         "eDP-1": {
-          "x": 1410,
+          "x": 1420,
           "y": 60,
           "width": 120,
           "height": 120
@@ -1020,8 +1020,8 @@
           "height": 120
         },
         "eDP-1": {
-          "x": 1410,
-          "y": 180,
+          "x": 1420,
+          "y": 160,
           "width": 120,
           "height": 120
         },
@@ -1121,13 +1121,6 @@
           "height": 300
         }
       }
-    }
-  ],
-  "desktopWidgetGroups": [
-    {
-      "id": "dwg_1768250470674_709lyve4o",
-      "name": "app shortcut",
-      "collapsed": false
     }
   ],
   "builtInPluginSettings": {
