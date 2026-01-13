@@ -64,9 +64,9 @@
   "controlCenterShowBatteryIcon": false,
   "controlCenterShowPrinterIcon": false,
   "showPrivacyButton": true,
-  "privacyShowMicIcon": false,
-  "privacyShowCameraIcon": false,
-  "privacyShowScreenShareIcon": false,
+  "privacyShowMicIcon": true,
+  "privacyShowCameraIcon": true,
+  "privacyShowScreenShareIcon": true,
   "controlCenterWidgets": [
     {
       "id": "volumeSlider",
@@ -161,7 +161,16 @@
   "workspaceFocusedBorderEnabled": false,
   "workspaceFocusedBorderColor": "primary",
   "workspaceFocusedBorderThickness": 2,
-  "workspaceNameIcons": {},
+  "workspaceNameIcons": {
+    "chat": {
+      "type": "icon",
+      "value": "chat"
+    },
+    "shijima": {
+      "type": "icon",
+      "value": "pets"
+    }
+  },
   "waveProgressEnabled": true,
   "scrollTitleEnabled": true,
   "audioVisualizerEnabled": true,
@@ -171,7 +180,7 @@
   "runningAppsCompactMode": true,
   "keyboardLayoutNameCompactMode": true,
   "runningAppsCurrentWorkspace": false,
-  "runningAppsGroupByApp": false,
+  "runningAppsGroupByApp": true,
   "appIdSubstitutions": [
     {
       "pattern": "Spotify",
@@ -419,63 +428,34 @@
       ],
       "centerWidgets": [
         {
-          "id": "colorPicker",
-          "enabled": true
-        },
-        {
           "id": "music",
-          "enabled": true,
-          "mediaSize": 1
-        },
-        {
-          "id": "separator",
-          "enabled": true
-        },
-        {
-          "id": "clock",
-          "enabled": true,
-          "clockCompactMode": false
-        },
-        {
-          "id": "alarmClock",
-          "enabled": true
-        },
-        {
-          "id": "weather",
-          "enabled": true
-        }
-      ],
-      "rightWidgets": [
-        {
-          "id": "cpuUsage",
-          "enabled": true
-        },
-        {
-          "id": "memUsage",
-          "enabled": true
-        },
-        {
-          "id": "keyboard_layout_name",
           "enabled": true
         },
         {
           "id": "nixMonitor",
           "enabled": true
-        },
+        }
+      ],
+      "rightWidgets": [
         {
-          "id": "systemTray",
+          "id": "network_speed_monitor",
           "enabled": true
         },
         {
-          "id": "battery",
+          "id": "cpuUsage",
           "enabled": true
         },
         {
-          "id": "notificationButton",
+          "id": "cpuTemp",
           "enabled": true
         },
         {
-          "id": "controlCenterButton",
+          "id": "memUsage",
+          "enabled": true,
+          "showSwap": true
+        },
+        {
+          "id": "keyboard_layout_name",
           "enabled": true
         }
       ],
@@ -543,7 +523,24 @@
           "enabled": true
         }
       ],
-      "rightWidgets": [],
+      "rightWidgets": [
+        {
+          "id": "systemTray",
+          "enabled": true
+        },
+        {
+          "id": "battery",
+          "enabled": true
+        },
+        {
+          "id": "notificationButton",
+          "enabled": true
+        },
+        {
+          "id": "controlCenterButton",
+          "enabled": true
+        }
+      ],
       "spacing": 0,
       "innerPadding": 10,
       "bottomGap": 0,
@@ -690,6 +687,52 @@
   },
   "desktopWidgetInstances": [
     {
+      "id": "dw_1766536827586_2vq4mmpuh",
+      "widgetType": "appShortcut",
+      "name": "Application Shortcut: Lutris",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          {
+            "name": "DP-1",
+            "model": "PLX2283H"
+          },
+          {
+            "name": "eDP-1",
+            "model": "0x07F1"
+          }
+        ],
+        "shortcutApp": "net.lutris.Lutris",
+        "backgroundOpacity": 100,
+        "drawOutlines": false,
+        "drawBorder": true,
+        "followTheme": true,
+        "showOnOverlay": false,
+        "syncPositionAcrossScreens": true
+      },
+      "positions": {
+        "DP-1": {
+          "x": 1290,
+          "y": 180,
+          "width": 120,
+          "height": 120
+        },
+        "eDP-1": {
+          "x": 1290,
+          "y": 180,
+          "width": 120,
+          "height": 120
+        },
+        "_synced": {
+          "x": 0.671875,
+          "y": 0.16666666666666666,
+          "width": 120,
+          "height": 120
+        }
+      },
+      "group": "dwg_1768250470674_709lyve4o"
+    },
+    {
       "id": "dw_clock_primary",
       "widgetType": "desktopClock",
       "name": "Desktop Clock",
@@ -718,15 +761,12 @@
           {
             "name": "DP-1",
             "model": "PLX2283H"
-          },
-          {
-            "name": "eDP-1",
-            "model": "0x07F1"
           }
         ],
         "showOnOverview": false,
         "showOnOverlay": false,
-        "showOnOverviewOnly": false
+        "showOnOverviewOnly": false,
+        "syncPositionAcrossScreens": true
       },
       "positions": {
         "DP-1": {
@@ -738,6 +778,12 @@
         "eDP-1": {
           "x": 870,
           "y": 450,
+          "width": 240,
+          "height": 240
+        },
+        "_synced": {
+          "x": 0.4375,
+          "y": 0.4074074074074074,
           "width": 240,
           "height": 240
         }
@@ -790,11 +836,12 @@
             "model": "0x07F1"
           }
         ],
-        "showOnOverlay": false
+        "showOnOverlay": false,
+        "syncPositionAcrossScreens": true
       },
       "positions": {
         "DP-1": {
-          "x": 20,
+          "x": 60,
           "y": 60,
           "width": 380,
           "height": 520
@@ -804,6 +851,12 @@
           "y": 80,
           "width": 420,
           "height": 510
+        },
+        "_synced": {
+          "x": 0.03125,
+          "y": 0.05555555555555555,
+          "width": 380,
+          "height": 520
         }
       }
     },
@@ -826,7 +879,8 @@
         "viewMode": "detailed",
         "backgroundOpacity": 100,
         "forecastDays": 7,
-        "showOnOverlay": false
+        "showOnOverlay": false,
+        "syncPositionAcrossScreens": true
       },
       "positions": {
         "DP-1": {
@@ -840,44 +894,12 @@
           "y": 60,
           "width": 330,
           "height": 510
-        }
-      }
-    },
-    {
-      "id": "dw_1766536827586_2vq4mmpuh",
-      "widgetType": "appShortcut",
-      "name": "Application Shortcut: Lutris",
-      "enabled": true,
-      "config": {
-        "displayPreferences": [
-          {
-            "name": "DP-1",
-            "model": "PLX2283H"
-          },
-          {
-            "name": "eDP-1",
-            "model": "0x07F1"
-          }
-        ],
-        "shortcutApp": "net.lutris.Lutris",
-        "backgroundOpacity": 100,
-        "drawOutlines": false,
-        "drawBorder": true,
-        "followTheme": true,
-        "showOnOverlay": false
-      },
-      "positions": {
-        "DP-1": {
-          "x": 1290,
-          "y": 180,
-          "width": 120,
-          "height": 120
         },
-        "eDP-1": {
-          "x": 1290,
-          "y": 180,
-          "width": 120,
-          "height": 120
+        "_synced": {
+          "x": 0.8125,
+          "y": 0.05555555555555555,
+          "width": 340,
+          "height": 520
         }
       }
     },
@@ -900,7 +922,8 @@
         "shortcutApp": "zen-beta",
         "backgroundOpacity": 100,
         "followTheme": true,
-        "drawOutlines": false
+        "drawOutlines": false,
+        "syncPositionAcrossScreens": true
       },
       "positions": {
         "DP-1": {
@@ -914,8 +937,15 @@
           "y": 60,
           "width": 120,
           "height": 120
+        },
+        "_synced": {
+          "x": 0.671875,
+          "y": 0.05555555555555555,
+          "width": 120,
+          "height": 120
         }
-      }
+      },
+      "group": "dwg_1768250470674_709lyve4o"
     },
     {
       "id": "dw_1766536968316_mgter55a3",
@@ -935,7 +965,8 @@
         ],
         "shortcutApp": "com.mitchellh.ghostty",
         "backgroundOpacity": 100,
-        "followTheme": true
+        "followTheme": true,
+        "syncPositionAcrossScreens": true
       },
       "positions": {
         "DP-1": {
@@ -949,8 +980,15 @@
           "y": 60,
           "width": 120,
           "height": 120
+        },
+        "_synced": {
+          "x": 0.734375,
+          "y": 0.05555555555555555,
+          "width": 120,
+          "height": 120
         }
-      }
+      },
+      "group": "dwg_1768250470674_709lyve4o"
     },
     {
       "id": "dw_1766537033256_0zmk3wdt2",
@@ -970,7 +1008,9 @@
         ],
         "shortcutApp": "steam",
         "followTheme": true,
-        "backgroundOpacity": 100
+        "backgroundOpacity": 100,
+        "syncPositionAcrossScreens": true,
+        "drawOutlines": false
       },
       "positions": {
         "DP-1": {
@@ -984,8 +1024,15 @@
           "y": 180,
           "width": 120,
           "height": 120
+        },
+        "_synced": {
+          "x": 0.734375,
+          "y": 0.16666666666666666,
+          "width": 120,
+          "height": 120
         }
-      }
+      },
+      "group": "dwg_1768250470674_709lyve4o"
     },
     {
       "id": "dw_1766722143485_14jkl7g83",
@@ -1004,11 +1051,12 @@
           }
         ],
         "backgroundOpacity": 100,
-        "showOnOverlay": false
+        "showOnOverlay": false,
+        "syncPositionAcrossScreens": true
       },
       "positions": {
         "DP-1": {
-          "x": 20,
+          "x": 60,
           "y": 840,
           "width": 420,
           "height": 200
@@ -1018,6 +1066,12 @@
           "y": 840,
           "width": 420,
           "height": 210
+        },
+        "_synced": {
+          "x": 0.03125,
+          "y": 0.7777777777777778,
+          "width": 420,
+          "height": 200
         }
       }
     },
@@ -1044,7 +1098,8 @@
         "useDank16": true,
         "backgroundOpacity": 100,
         "fontSize": 21,
-        "showOnOverviewOnly": false
+        "showOnOverviewOnly": false,
+        "syncPositionAcrossScreens": true
       },
       "positions": {
         "DP-1": {
@@ -1058,8 +1113,21 @@
           "y": 750,
           "width": 480,
           "height": 300
+        },
+        "_synced": {
+          "x": 0.7395833333333334,
+          "y": 0.6851851851851852,
+          "width": 480,
+          "height": 300
         }
       }
+    }
+  ],
+  "desktopWidgetGroups": [
+    {
+      "id": "dwg_1768250470674_709lyve4o",
+      "name": "app shortcut",
+      "collapsed": false
     }
   ],
   "builtInPluginSettings": {

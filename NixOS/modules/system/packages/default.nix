@@ -58,6 +58,7 @@
     unzip
     efibootmgr
     imagemagick
+    cabal-install
 
     gnumake
     gcc

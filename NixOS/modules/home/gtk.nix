@@ -14,7 +14,7 @@ in
     };
     iconTheme = {
       name = "Papirus-Dark"; # "Neuwaita";
-      # package = (pkgs.callPackage ../../packages/neuwaita/package.nix { });
+      # package = (pkgs.callPackage ../../pkgs/neuwaita/package.nix { });
     };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;

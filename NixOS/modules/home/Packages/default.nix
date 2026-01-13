@@ -37,7 +37,7 @@
     pipes
 
     gradia
-    (pkgs.callPackage ../../../packages/shiru/package.nix { })
+    (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
     packet
     gnome-font-viewer
     gnome-disk-utility

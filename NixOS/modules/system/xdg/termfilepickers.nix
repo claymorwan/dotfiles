@@ -30,7 +30,7 @@ in
         # save_file_script_path = "${inputs.xdp-termfilepickers}/data/share/wrappers/yazi-save-file.nu";
         # save_files_script_path = "${inputs.xdp-termfilepickers}/data/share/wrappers/yazi-save-file.nu";
         terminal_command = [
-          (lib.getExe pkgs.kitty)
+          (lib.getExe pkgs.ghostty)
           "--title=terminal-filepicker"
           "-e"
         ];
