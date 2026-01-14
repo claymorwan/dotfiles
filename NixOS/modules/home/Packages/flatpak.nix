@@ -2,7 +2,6 @@
 
 {
   services.flatpak = {
-    # enable = true;
     packages = [
       "org.vinegarhq.Sober"
       "io.github.marco_calautti.DeltaPatcher"

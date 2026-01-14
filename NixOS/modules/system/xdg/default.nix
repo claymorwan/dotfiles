@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports = [
@@ -14,26 +14,37 @@
         xdg-desktop-portal-gtk
         xdg-desktop-portal-gnome
       ];
-      config = {
-        common = {
+
+      config = let
+        defaultPortalCfg = {
           # "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
         };
+      in
+      {
+        common = defaultPortalCfg;
 
-        hyprland = {
+        hyprland = lib.recursiveUpdate defaultPortalCfg {
           default = [
             "hyprland"
             "gtk"
           ];
-          # "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
         };
 
-        niri = {
+        niri = lib.recursiveUpdate defaultPortalCfg {
           default = [
             "gtk"
             "gnome"
           ];
-          # "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
         };
+      };
+    };
+
+    terminal-exec = {
+      enable = true;
+      settings = {
+        default = [
+          "com.mitchellh.ghostty.desktop"
+        ];
       };
     };
   };

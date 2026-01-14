@@ -53,6 +53,16 @@
         excludes = [{ title = ".* - Limo$"; }];
         open-floating = true;
       }
+      {
+        matches = [{ app-id = "notificationtoasts_.*_desktop"; }];
+        open-floating = true;
+        open-focused = false;
+        default-floating-position = {
+          x = 0;
+          y = 0;
+          relative-to = "bottom-right";
+        };
+      }
 
       # Float and resize
       {

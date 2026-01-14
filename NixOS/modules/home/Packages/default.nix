@@ -35,6 +35,7 @@
     sl
     zenity
     pipes
+    (pkgs.callPackage ../../../pkgs/lncur/package.nix { })
 
     gradia
     (pkgs.callPackage ../../../pkgs/shiru/package.nix { })

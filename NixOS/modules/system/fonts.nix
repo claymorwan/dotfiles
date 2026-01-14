@@ -3,9 +3,12 @@
 {
   fonts = {
     packages = with pkgs; [
-      nerd-fonts.jetbrains-mono
-      corefonts
+      noto-fonts
       noto-fonts-cjk-sans
-    ];
+      noto-fonts-color-emoji
+      corefonts
+
+    ]
+    ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
   };
 }

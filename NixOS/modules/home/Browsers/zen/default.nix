@@ -50,6 +50,7 @@ in
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "browser.toolbars.bookmarks.visibility" = "always";
           "browser.uiCustomization.state" = builtins.readFile ./layout.json;
+          "general.smoothScroll.msdPhysics.enabled" = true;
 
           "zen.view.use-single-toolbar" = false;
           "zen.urlbar.replace-newtab" = false;
