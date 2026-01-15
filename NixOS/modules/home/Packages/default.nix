@@ -36,6 +36,7 @@
     zenity
     pipes
     (pkgs.callPackage ../../../pkgs/lncur/package.nix { })
+    cbonsai
 
     gradia
     (pkgs.callPackage ../../../pkgs/shiru/package.nix { })

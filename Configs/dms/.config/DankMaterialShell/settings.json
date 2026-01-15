@@ -63,6 +63,7 @@
   "controlCenterShowMicPercent": false,
   "controlCenterShowBatteryIcon": false,
   "controlCenterShowPrinterIcon": false,
+  "controlCenterShowScreenSharingIcon": true,
   "showPrivacyButton": true,
   "privacyShowMicIcon": true,
   "privacyShowCameraIcon": true,
@@ -730,7 +731,7 @@
           "height": 120
         }
       },
-      "group": "dwg_1768250470674_709lyve4o"
+      "group": "dwg_1768486261606_w0rmhmkpm"
     },
     {
       "id": "dw_clock_primary",
@@ -945,7 +946,7 @@
           "height": 120
         }
       },
-      "group": "dwg_1768250470674_709lyve4o"
+      "group": "dwg_1768486261606_w0rmhmkpm"
     },
     {
       "id": "dw_1766536968316_mgter55a3",
@@ -988,7 +989,7 @@
           "height": 120
         }
       },
-      "group": "dwg_1768250470674_709lyve4o"
+      "group": "dwg_1768486261606_w0rmhmkpm"
     },
     {
       "id": "dw_1766537033256_0zmk3wdt2",
@@ -1032,7 +1033,7 @@
           "height": 120
         }
       },
-      "group": "dwg_1768250470674_709lyve4o"
+      "group": "dwg_1768486261606_w0rmhmkpm"
     },
     {
       "id": "dw_1766722143485_14jkl7g83",
@@ -1091,13 +1092,13 @@
             "model": "PLX2283H"
           }
         ],
-        "command": "pipes",
+        "command": "cbonsai",
         "autoRefresh": false,
-        "commandTimeout": "1",
-        "refreshInterval": "60",
+        "commandTimeout": "600",
+        "refreshInterval": "1",
         "useDank16": true,
         "backgroundOpacity": 100,
-        "fontSize": 21,
+        "fontSize": 10,
         "showOnOverviewOnly": false,
         "syncPositionAcrossScreens": true
       },
@@ -1123,7 +1124,13 @@
       }
     }
   ],
-  "desktopWidgetGroups": [],
+  "desktopWidgetGroups": [
+    {
+      "id": "dwg_1768486261606_w0rmhmkpm",
+      "name": "Application shortcut",
+      "collapsed": false
+    }
+  ],
   "builtInPluginSettings": {
     "dms_settings_search": {
       "trigger": "?"
