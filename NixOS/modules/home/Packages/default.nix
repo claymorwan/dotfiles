@@ -20,6 +20,7 @@
       enableZshIntegration = true;
       nix-direnv.enable = true;
     };
+
     onlyoffice.enable = true;
   };
 

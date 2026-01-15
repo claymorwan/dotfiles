@@ -25,13 +25,14 @@
       enableSSHSupport = true;
     };
 
-    kdeconnect.enable = true;
-    droidcam.enable = true;
-
     appimage = {
       enable = true;
       binfmt = true;
     };
+
+    gpu-screen-recorder.enable = true;
+    kdeconnect.enable = true;
+    droidcam.enable = true;
   };
 
   # Allow unfree pkg
@@ -58,7 +59,9 @@
     unzip
     efibootmgr
     imagemagick
-    cabal-install
+
+    gpu-screen-recorder
+    gpu-screen-recorder-gtk
 
     gnumake
     gcc
