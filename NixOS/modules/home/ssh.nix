@@ -12,6 +12,10 @@
         identityFile = "~/.ssh/github";
         user = "git";
       };
+      "aur.archlinux.org" = {
+        identityFile = "~/.ssh/aur";
+        user = "aur";
+      };
     };
   };
 }

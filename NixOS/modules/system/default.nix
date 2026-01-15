@@ -12,6 +12,7 @@
     ./nix
     ./overlays.nix
     ./packages
+    ./pacman.nix
     ./printing.nix
     ./services.nix
     ./security.nix

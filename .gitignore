@@ -1,4 +1,5 @@
 Configs/yazi/.config/yazi/plugins/
 Configs/yazi/.config/yazi/flavors/
+.venv
 
-# Configs/dms/.config/DankMaterialShell/plugins/
+NixOS/.entangled
