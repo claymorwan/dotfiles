@@ -1,7 +1,7 @@
 {
   lib,
   python3Packages,
-  fetchFromGitHub,
+  fetchFromGitea,
 
   # build-system
   hatch,
@@ -15,14 +15,15 @@ python3Packages.buildPythonApplication rec {
   version = "1.1.0";
   pyproject = true;
 
-  src = fetchFromGitHub {
+  src = fetchFromGitea {
+    domain = "codeberg.org";
     owner = "claymorwan";
-    repo = "${pname}";
+    repo = "lncur";
     rev = "v${version}";
     hash = "sha256-J6mucNUpmgZrQ7iMqh1cdc0gY0GuXwpzlx9QPgUfhtg=";
   };
 
-  build-system = with python3Packages; [
+  build-system = [
     hatch
   ];
 
@@ -36,9 +37,9 @@ python3Packages.buildPythonApplication rec {
   };
 
   meta = {
-    changelog = "https://github.com/claymorwan/lncur/releases/tag/v${version}";
-    description = "Python CLI easily symlink files when porting Windows cursors to Linux ";
-    homepage = "https://github.com/claymorwan/lncur";
+    changelog = "https://codeberg.org/claymorwan/lncur/releases/tag/v${version}";
+    description = "Python CLI easily symlink files when porting Windows cursors to Linux";
+    homepage = "https://codeberg.org/claymorwan/lncur";
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [
       claymorwan

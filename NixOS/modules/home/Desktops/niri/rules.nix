@@ -54,7 +54,7 @@
         open-floating = true;
       }
       {
-        matches = [{ app-id = "notificationtoasts_.*_desktop"; }];
+        matches = [{ app-id = "notificationtoasts_(.*)_desktop"; }];
         open-floating = true;
         open-focused = false;
         default-floating-position = {
