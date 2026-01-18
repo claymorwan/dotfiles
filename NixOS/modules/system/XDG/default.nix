@@ -30,12 +30,12 @@
           ];
         };
 
-        niri = lib.recursiveUpdate defaultPortalCfg {
-          default = [
-            "gtk"
-            "gnome"
-          ];
-        };
+        # niri = lib.recursiveUpdate defaultPortalCfg {
+        #   default = lib.mkDefault [
+        #     "gtk"
+        #     "gnome"
+        #   ];
+        # };
       };
     };
 

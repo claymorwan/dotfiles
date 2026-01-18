@@ -1,6 +1,6 @@
 {
   home.sessionVariables = {
-    QT_QPA_PLATFORM = "wayland,xcb";
+    # QT_QPA_PLATFORM =  "wayland,xcb";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
 
@@ -9,13 +9,12 @@
 
     APP2UNIT_SLICES = "a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice";
 
-    XDG_DESKTOP_PORTAL_DIR = "/etc/profiles/per-user/claymorwan/share/xdg-desktop-portal/portals";
+    # XDG_DESKTOP_PORTAL_DIR = "/etc/profiles/per-user/claymorwan/share/xdg-desktop-portal/portals";
     MOZ_LEGACY_PROFILES = 1;
     KRITA_NO_STYLE_OVERRIDE = 1;
 
-    # Hyprland
     # GDK_BACKEND = "wayland,x11";
-    SDL_VIDEODRIVER = "wayland,x11";
+    # SDL_VIDEODRIVER = "wayland,x11";
     CLUTTER_BACKEND = "wayland";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
 

@@ -1,6 +1,11 @@
+let
+  inherit (import ./vars.nix)
+  window_gap
+  ;
+in
 {
   programs.niri.settings.layout = {
-    gaps = 14;
+    gaps = window_gap;
     # always-center-single-column = true;
 
     default-column-width = { proportion = 0.66666; };

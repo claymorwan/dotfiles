@@ -2,18 +2,18 @@
 
 {
   imports = [
-    inputs.niri.nixosModules.niri
+    # inputs.niri.nixosModules.niri
     ./flatpak.nix
   ];
 
   nixpkgs.config.allowBroken = true;
 
   programs = {
-    hyprland = {
-      # enable = true;
-      # withUWSM = true;
-    };
-    hyprlock.enable = true;
+    # hyprland = {
+    #   enable = true;
+    #   withUWSM = true;
+    # };
+    # hyprlock.enable = true;
 
     niri = {
       enable = true;
@@ -42,7 +42,6 @@
 
   environment.systemPackages = with pkgs; [
     kitty
-    #neovim
     bat
     fastfetch
     blahaj
@@ -59,6 +58,7 @@
     unzip
     efibootmgr
     imagemagick
+    amdgpu_top
 
     gpu-screen-recorder
     gpu-screen-recorder-gtk

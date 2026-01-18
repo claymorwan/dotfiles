@@ -9,9 +9,9 @@
     ./virtualisation.nix
     ./fonts.nix
     ./networking.nix
-    ./nix
+    ./Nix
     ./overlays.nix
-    ./packages
+    ./Packages
     ./pacman.nix
     ./printing.nix
     ./services.nix
@@ -19,6 +19,6 @@
     ./steam.nix
     ./system.nix
     ./users.nix
-    ./xdg
+    ./XDG
   ];
 }

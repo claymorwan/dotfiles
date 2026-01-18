@@ -23,35 +23,10 @@ dsearch = {
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
+dms-plugin-registry = {
+  url = "github:AvengeMedia/dms-plugin-registry";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+
 nix-monitor.url = "github:antonjah/nix-monitor";
-
-dms-plugins-official = {
-  url = "github:AvengeMedia/dms-plugins";
-  flake = false;
-};
-
-dms-lucyfire-plugins = {
-  url = "github:lucyfire/dms-plugins";
-  flake = false;
-};
-
-dms-wallpaper-engine = {
-  url = "github:sgtaziz/dms-wallpaperengine";
-  flake = false;
-};
-
-dms-app-shortcut = {
-  url = "github:oabragh/AppShortcut";
-  flake = false;
-};
-
-dms-media-player = {
-  url = "github:arrifat346afs/mediaPlayer";
-  flake = false;
-};
-
-dms-desktop-cmd = {
-  url = "github:yayuuu/desktopCommand";
-  flake = false;
-};
 ```

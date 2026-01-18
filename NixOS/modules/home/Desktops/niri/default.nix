@@ -7,16 +7,15 @@ let
 in
 {
   imports = [
-    # inputs.niri.homeModules.niri
+    inputs.niri.homeModules.niri
     ./execs.nix
-    ./keybinds.nix
+    ./keybinds
     ./layout.nix
     ./rules.nix
   ];
 
   programs = {
     niri = {
-
       settings = {
         prefer-no-csd = true;
         input = {
@@ -27,6 +26,7 @@ in
               layout = "fr,us";
               options = "grp:win_space_toggle";
             };
+            track-layout = "window";
             repeat-delay = 200;
             repeat-rate = 35;
             numlock = true;

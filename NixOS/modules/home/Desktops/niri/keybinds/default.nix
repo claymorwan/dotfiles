@@ -1,13 +1,13 @@
 let
-  inherit (import ../../../../variables/variables.nix)
+  inherit (import ../../../../../variables/variables.nix)
   terminal
   browser
   ;
 in 
 {
   imports = [
-    ./keybinds/dms.nix
-    ./keybinds/default-binds.nix
+    ./dms.nix
+    ./default-binds.nix
   ];
   programs.niri.settings = {
     binds = {

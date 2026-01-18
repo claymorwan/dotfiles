@@ -1,3 +1,8 @@
+let
+  inherit (import ./vars.nix)
+  window_gap
+  ;
+in
 {
   programs.niri.settings = {
     workspaces = {
@@ -50,16 +55,19 @@
       }
       {
         matches = [{ app-id = "limo"; }];
-        excludes = [{ title = ".* - Limo$"; }];
+        excludes = [{ title = ".*- Limo$"; }];
         open-floating = true;
       }
       {
-        matches = [{ app-id = "notificationtoasts_(.*)_desktop"; }];
+        matches = [{
+          app-id = "steam";
+          title = "^notificationtoasts_[0-9]+_desktop$" ;
+        }];
         open-floating = true;
         open-focused = false;
         default-floating-position = {
-          x = 0;
-          y = 0;
+          x = 5;
+          y = 5;
           relative-to = "bottom-right";
         };
       }
@@ -95,11 +103,26 @@
         matches = [{ title = "Picture(-| )in(-| )[Pp]icture"; }];
         open-floating = true;
         default-floating-position = {
-          x = 0.75;
-          y = 0.75;
+          x = window_gap;
+          y = window_gap;
           relative-to = "bottom-right";
         };
       }
+      {
+        matches = [{
+          app-id = "equibop";
+          title = "Discord Popout";
+        }];
+        open-floating = true;
+        default-column-width = { proportion = 0.27; };
+        default-window-height = { proportion = 0.27; };
+        default-floating-position = {
+          x = window_gap;
+          y = window_gap;
+          relative-to = "bottom-right";
+        };
+      }
+
       {
         matches = [
           {

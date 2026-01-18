@@ -1,6 +1,8 @@
 Using this to separate my inputs into multiple files, as flake.nix files aren't parsed like regular nix files and cannlt use `import` for inputs
 ```{.nix file=flake.nix}
 {
+  description = "NixOS configuration";
+
   inputs = {
     <<flake-inputs>>
   };

@@ -14,6 +14,7 @@
     package = pkgs.firewalld;
 
     services = {
+      
       kdeconnect = {
         short = "KDE Connect";
         ports = [
@@ -33,6 +34,7 @@
           }
         ];
       };
+
       localsend = {
         short = "LocalSend";
         ports = [
@@ -42,6 +44,20 @@
           }
           {
             port = 53317;
+            protocol = "udp";
+          }
+        ];
+      };
+
+      packet = {
+        short = "Packet";
+        ports = [
+          {
+            port = 9300;
+            protocol = "tcp";
+          }
+          {
+            port = 9300;
             protocol = "udp";
           }
         ];
