@@ -1161,7 +1161,7 @@
           }
         ],
         "imagePath": "/home/claymorwan/Pictures/clairi/1st-anniv-trans.png",
-        "backgroundOpacity": 100,
+        "backgroundOpacity": 0,
         "syncPositionAcrossScreens": true
       },
       "positions": {
