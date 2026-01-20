@@ -75,9 +75,6 @@ in
           # Trackpad Animation
           "8039de3b-72e1-41ea-83b3-5077cf0f98d1"
 
-          # Extensions List
-          "181e41d4-dfd3-410d-9a73-561381a2f77d"
-
           # Ghost Tabs
           "c01d3e22-1cee-45c1-a25e-53c0f180eea8"
 

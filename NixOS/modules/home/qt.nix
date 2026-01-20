@@ -23,6 +23,24 @@ in
   home.packages = with pkgs; [
     kdePackages.qtstyleplugin-kvantum
     libsForQt5.qtstyleplugin-kvantum
+
+    # kdePackages.qt6ct.overrideAttrs (finalAttrs: previousAttrs: {
+    #   patches = [
+    #     fetchpatch {
+    #       url = "https://aur.archlinux.org/cgit/aur.git/plain/qt6ct-shenanigans.patch?h=qt6ct-kde";
+    #       hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    #     }
+    #   ];
+    # })
+    #
+    # libsForQt5.qt5ct.override {
+    #   patches = [
+    #     fetchpatch {
+    #       url = "https://aur.archlinux.org/cgit/aur.git/plain/qt5ct-shenanigans.patch?h=qt5ct-kde";
+    #       hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    #     }
+    #   ];
+    # }
   ];
 
   qt = {
