@@ -1,7 +1,7 @@
 {
   "currentThemeName": "custom",
   "currentThemeCategory": "custom",
-  "customThemeFile": "/home/claymorwan/colors-mauve.json",
+  "customThemeFile": "/home/claymorwan/.dotfiles/Submodules/catppuccin/monorepo/dank-material-shell/themes/mocha-latte/colors-mauve.json",
   "registryThemeVariants": {
     "catppuccin": {
       "flavor": "mocha",
@@ -157,7 +157,6 @@
   "reverseScrolling": false,
   "dwlShowAllTags": false,
   "workspaceColorMode": "default",
-  "workspaceOccupiedColorMode": "default",
   "workspaceUnfocusedColorMode": "default",
   "workspaceUrgentColorMode": "default",
   "workspaceFocusedBorderEnabled": false,
@@ -319,7 +318,6 @@
   "matugenTemplateVscode": false,
   "showDock": true,
   "dockAutoHide": true,
-  "dockSmartAutoHide": false,
   "dockGroupByApp": true,
   "dockOpenOnOverview": true,
   "dockPosition": 1,
@@ -341,7 +339,6 @@
   "lockScreenShowDate": true,
   "lockScreenShowProfileImage": true,
   "lockScreenShowPasswordField": true,
-  "lockScreenPowerOffMonitorsOnLock": false,
   "enableFprint": false,
   "maxFprintTries": 3,
   "lockScreenActiveMonitor": "all",

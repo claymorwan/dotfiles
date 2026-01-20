@@ -76,6 +76,8 @@ in
         amdGpuMonitor.enable = true;
 
         dankKDEConnect.enable = true;
+
+        mediaFrame.enable = true;
       };
     };
   };
