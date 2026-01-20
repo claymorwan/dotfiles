@@ -13,6 +13,9 @@ in
     accent = ctp_accent;
     nvim.enable = false;
     # gtk.icon.enable = false;
-    kvantum.assertStyle = false;
+    kvantum = {
+      enable = false;
+      assertStyle = false;
+    };
   };
 }
