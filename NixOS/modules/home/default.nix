@@ -15,14 +15,13 @@
     ./Gaming
     ./git.nix
     ./ghostty.nix
-    ./gtk.nix
     ./obs-studio.nix
     ./Packages
-    ./qt.nix
     ./services.nix
     ./starship.nix
     ./spotify.nix
     ./ssh.nix
+    ./Theming
     # ./uwsm.nix
     ./XDG
     ./Yazi

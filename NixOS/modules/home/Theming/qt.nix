@@ -14,7 +14,7 @@ let
     };
   };
 
-  inherit (import ../../variables/variables.nix)
+  inherit (import ../../../variables/variables.nix)
   ctp_flavor
   ctp_accent
   ;
@@ -23,6 +23,9 @@ in
   home.packages = with pkgs; [
     kdePackages.qtstyleplugin-kvantum
     libsForQt5.qtstyleplugin-kvantum
+
+    # (pkgs.callPackage ../../../pkgs/qtct/qt6ct.nix { })
+    # (pkgs.callPackage ../../../pkgs/qtct/qt5ct.nix { })
 
     # (kdePackages.qt6ct.overrideAttrs (finalAttrs: previousAttrs: {
     #   patches = [
