@@ -56,10 +56,6 @@
             port = 9300;
             protocol = "tcp";
           }
-          {
-            port = 9300;
-            protocol = "udp";
-          }
         ];
       };
     };

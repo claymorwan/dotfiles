@@ -42,13 +42,11 @@
     gradia
     (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
     packet
+    catppuccinifier-gui
     gnome-font-viewer
     gnome-disk-utility
-
     kooha
-
     bottles
-
     obsidian
 
     linux-wallpaperengine

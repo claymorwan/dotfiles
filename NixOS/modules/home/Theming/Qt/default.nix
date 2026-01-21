@@ -38,14 +38,14 @@ in
     #   ];
     # }))
     #
-    # (libsForQt5.qt5ct.override {
+    # (libsForQt5.qt5ct.overrideAttrs (finalAttrs: previousAttrs: {
     #   patches = [
     #     fetchpatch {
     #       url = "https://aur.archlinux.org/cgit/aur.git/plain/qt5ct-shenanigans.patch?h=qt5ct-kde";
     #       hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
     #     }
     #   ];
-    # })
+    # }))
   ];
 
   qt = {
