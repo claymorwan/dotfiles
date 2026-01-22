@@ -219,7 +219,10 @@
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 4,
   "spotlightCloseNiriOverview": true,
-  "spotlightSectionViewModes": {},
+  "spotlightSectionViewModes": {
+    "apps": "list"
+  },
+  "appDrawerSectionViewModes": {},
   "niriOverviewOverlayEnabled": true,
   "dankLauncherV2Size": "compact",
   "dankLauncherV2BorderEnabled": false,
@@ -291,7 +294,11 @@
   "wifiNetworkPins": {
     "preferredWifi": "Ackdar family couloir"
   },
-  "bluetoothDevicePins": {},
+  "bluetoothDevicePins": {
+    "preferredDevice": [
+      "8C:C5:D0:B9:CC:31"
+    ]
+  },
   "audioInputDevicePins": {
     "preferredInput": "alsa_input.usb-Razer_Razer_Kraken_V3_HyperSense_000000000001-00.analog-stereo"
   },
@@ -323,6 +330,7 @@
   "matugenTemplateDgop": false,
   "matugenTemplateKcolorscheme": false,
   "matugenTemplateVscode": false,
+  "matugenTemplateEmacs": true,
   "showDock": true,
   "dockAutoHide": true,
   "dockSmartAutoHide": false,
@@ -339,7 +347,7 @@
   "dockBorderOpacity": 1,
   "dockBorderThickness": 1,
   "dockIsolateDisplays": false,
-  "notificationOverlayEnabled": false,
+  "notificationOverlayEnabled": true,
   "modalDarkenBackground": true,
   "lockScreenShowPowerActions": true,
   "lockScreenShowSystemIcons": true,
@@ -358,7 +366,7 @@
   "notificationTimeoutNormal": 5000,
   "notificationTimeoutCritical": 0,
   "notificationCompactMode": false,
-  "notificationPopupPosition": 0,
+  "notificationPopupPosition": 1,
   "notificationHistoryEnabled": true,
   "notificationHistoryMaxCount": 50,
   "notificationHistoryMaxAgeDays": 7,

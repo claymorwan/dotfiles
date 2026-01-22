@@ -48,6 +48,7 @@
     kooha
     bottles
     obsidian
+    qalculate-gtk
 
     linux-wallpaperengine
 

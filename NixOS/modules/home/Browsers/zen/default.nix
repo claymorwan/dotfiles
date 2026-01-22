@@ -135,7 +135,7 @@ in
     in
     {
       associations.added = associations;
-      # defaultApplications = associations;
+      defaultApplications = associations;
     };
 
 }
