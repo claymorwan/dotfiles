@@ -2,7 +2,7 @@
 
 {
   imports = [
-    # ./termfilepickers.nix
+    ./mimes.nix
   ];
   xdg = {
     configFile."xdg-desktop-portal-termfilechooser/config" = {

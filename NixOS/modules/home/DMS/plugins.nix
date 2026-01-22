@@ -32,7 +32,7 @@ in
       # ts pisses me off im using a script now
       generationsCommand = [
         "sh"
-        "${flake_dir}/modules/home/dms/nix-monitor-gen.sh"
+        "${flake_dir}/modules/home/DMS/nix-monitor-gen.sh"
       ];
 
       gcCommand = [
@@ -76,7 +76,12 @@ in
 
         amdGpuMonitor.enable = true;
 
-        dankKDEConnect.enable = true;
+        # KDE Connect
+        # Plugins doesn't work when called `dankKDEConnect`, so i gotta do this to rename it
+        KDEConnect = {
+          enable = true;
+          src = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.dankKDEConnect;
+        };
 
         mediaFrame.enable = true;
       };

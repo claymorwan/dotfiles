@@ -77,5 +77,18 @@ in
       [General]
       theme=libadwaita-kde-${ctp_flavor}-${ctp_accent}
     '';
+    "kdeglobals" = {
+      enable = true;
+      text = ''
+        [UiSettings]
+        ColorScheme=*
+      ''
+      + (builtins.readFile "${
+        pkgs.catppuccin-kde.override {
+          flavour = [ ctp_flavor ];
+          accents = [ ctp_accent ];
+        }
+        }/share/color-schemes/CatppuccinMochaMauve.colors");
+    };
   };
 }

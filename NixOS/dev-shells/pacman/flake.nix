@@ -1,8 +1,15 @@
 {
-  description = "An empty flake template that you can adapt to your own environment";
+  description = "Evironment to make pacman/arch packages";
 
   # Flake inputs
-  inputs.nixpkgs.url = "nixpkgs/nixos-unstable";
+  inputs = {
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+
+    archix = {
+      url = "github:SamLukeYes/archix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 
   # Flake outputs
   outputs =
@@ -33,13 +40,22 @@
             # Add any you need here
             packages = with pkgs; [
               pacman
+              paru
+              fakeroot
+              inputs.archix.packages.${system}.devtools
             ];
 
             # Set any environment variables for your dev shell
-            env = { };
+            env = {
+              CHROOT = "/mnt/media/Programmation/Arch"; # builtins.toString ./.; # doesn't work yet
+            };
 
             # Add any shell logic you want executed any time the environment is activated
-            shellHook = '''';
+            shellHook = ''
+              if [ ! -d "root" ]; then
+                mkarchroot $CHROOT/root base-devel
+              fi
+            '';
           };
         }
       );

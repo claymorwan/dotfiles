@@ -1,7 +1,7 @@
 {
   pkgs,
   inputs,
-  stdenv,
+  # stdenv,
   config,
   ...
 }:
@@ -105,7 +105,7 @@ in
     let
       value =
         let
-          zen-browser = inputs.zen-browser.packages.${stdenv.hostPlatform.system}.${version};
+          zen-browser = inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.${version};
         in
         zen-browser.meta.desktopFileName;
 
@@ -135,7 +135,7 @@ in
     in
     {
       associations.added = associations;
-      defaultApplications = associations;
+      # defaultApplications = associations;
     };
 
 }
