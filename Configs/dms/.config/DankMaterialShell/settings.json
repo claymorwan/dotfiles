@@ -157,6 +157,7 @@
   "reverseScrolling": false,
   "dwlShowAllTags": false,
   "workspaceColorMode": "default",
+  "workspaceOccupiedColorMode": "default",
   "workspaceUnfocusedColorMode": "default",
   "workspaceUrgentColorMode": "default",
   "workspaceFocusedBorderEnabled": false,
@@ -218,7 +219,13 @@
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 4,
   "spotlightCloseNiriOverview": true,
+  "spotlightSectionViewModes": {},
   "niriOverviewOverlayEnabled": true,
+  "dankLauncherV2Size": "compact",
+  "dankLauncherV2BorderEnabled": false,
+  "dankLauncherV2BorderThickness": 2,
+  "dankLauncherV2BorderColor": "primary",
+  "dankLauncherV2ShowFooter": true,
   "useAutoLocation": true,
   "weatherEnabled": true,
   "networkPreference": "wifi",
@@ -318,6 +325,7 @@
   "matugenTemplateVscode": false,
   "showDock": true,
   "dockAutoHide": true,
+  "dockSmartAutoHide": false,
   "dockGroupByApp": true,
   "dockOpenOnOverview": true,
   "dockPosition": 1,
@@ -339,6 +347,7 @@
   "lockScreenShowDate": true,
   "lockScreenShowProfileImage": true,
   "lockScreenShowPasswordField": true,
+  "lockScreenPowerOffMonitorsOnLock": false,
   "enableFprint": false,
   "maxFprintTries": 3,
   "lockScreenActiveMonitor": "all",
@@ -1189,5 +1198,7 @@
       "trigger": "?"
     }
   },
+  "launcherPluginVisibility": {},
+  "launcherPluginOrder": [],
   "configVersion": 5
 }

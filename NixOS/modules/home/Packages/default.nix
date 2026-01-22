@@ -11,7 +11,7 @@
   ];
 
   programs = {
-    firefox.enable = true;
+    # firefox.enable = true;
     btop.enable = true;
     # quickshell.enable = true;
 
