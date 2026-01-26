@@ -59,6 +59,7 @@
     efibootmgr
     imagemagick
     amdgpu_top
+    # inputs.entangled.packages.${pkgs.stdenv.hostPlatform.system}.entangled-cli
 
     gpu-screen-recorder
     gpu-screen-recorder-gtk

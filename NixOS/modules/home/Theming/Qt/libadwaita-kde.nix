@@ -3,7 +3,7 @@
 
 # with import <nixpkgs> { };
 let
-  inherit (import ../../../../variables/variables.nix)
+  inherit (import ../../../../variables)
   ctp_flavor
   ctp_accent
   ;
@@ -15,7 +15,7 @@ in
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "libadwaita-kde-${ctp_flavor}-${ctp_accent}";
-  version = "0-unstable-01-20";
+  version = "2-unstable-01-25";
 
   src = ./kvantum/Libadwaita-KDE/Kvantum;
 

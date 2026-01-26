@@ -1,7 +1,8 @@
 let
-  inherit (import ../../../../../variables/variables.nix)
+  inherit (import ../../../../../variables)
   terminal
   browser
+  discord
   ;
 in 
 {
@@ -23,7 +24,7 @@ in
       };
 
       "Mod+D" = {
-        action.spawn = "equibop";
+        action.spawn-sh = discord;
         hotkey-overlay.title = "Discord";
       };
 

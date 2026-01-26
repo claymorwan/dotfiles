@@ -27,7 +27,9 @@
   "mangoLayoutBorderSize": -1,
   "use24HourClock": true,
   "showSeconds": true,
+  "padHours12Hour": false,
   "useFahrenheit": false,
+  "windSpeedUnit": "kmh",
   "nightModeEnabled": false,
   "animationSpeed": 4,
   "customAnimationDuration": 200,
@@ -216,6 +218,10 @@
   "mediaSize": 1,
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
+  "browserPickerViewMode": "grid",
+  "browserUsageHistory": {},
+  "appPickerViewMode": "grid",
+  "filePickerUsageHistory": {},
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 4,
   "spotlightCloseNiriOverview": true,
@@ -225,7 +231,7 @@
   "appDrawerSectionViewModes": {},
   "niriOverviewOverlayEnabled": true,
   "dankLauncherV2Size": "compact",
-  "dankLauncherV2BorderEnabled": false,
+  "dankLauncherV2BorderEnabled": true,
   "dankLauncherV2BorderThickness": 2,
   "dankLauncherV2BorderColor": "primary",
   "dankLauncherV2ShowFooter": true,
@@ -347,6 +353,13 @@
   "dockBorderOpacity": 1,
   "dockBorderThickness": 1,
   "dockIsolateDisplays": false,
+  "dockLauncherEnabled": false,
+  "dockLauncherLogoMode": "apps",
+  "dockLauncherLogoCustomPath": "",
+  "dockLauncherLogoColorOverride": "",
+  "dockLauncherLogoSizeOffset": 0,
+  "dockLauncherLogoBrightness": 0.5,
+  "dockLauncherLogoContrast": 1,
   "notificationOverlayEnabled": true,
   "modalDarkenBackground": true,
   "lockScreenShowPowerActions": true,
@@ -355,6 +368,7 @@
   "lockScreenShowDate": true,
   "lockScreenShowProfileImage": true,
   "lockScreenShowPasswordField": true,
+  "lockScreenShowMediaPlayer": true,
   "lockScreenPowerOffMonitorsOnLock": false,
   "enableFprint": false,
   "maxFprintTries": 3,
@@ -920,7 +934,8 @@
         "backgroundOpacity": 100,
         "forecastDays": 7,
         "showOnOverlay": false,
-        "syncPositionAcrossScreens": true
+        "syncPositionAcrossScreens": true,
+        "colorMode": "primary"
       },
       "positions": {
         "DP-1": {
@@ -1163,37 +1178,25 @@
       }
     },
     {
-      "id": "dw_1768767007209_5m6lpo19r",
+      "id": "dw_1769303607333_9czzjiea7",
       "widgetType": "mediaFrame",
       "name": "Media Frame",
       "enabled": true,
       "config": {
         "displayPreferences": [
-          {
-            "name": "DP-1",
-            "model": "PLX2283H"
-          },
-          {
-            "name": "eDP-1",
-            "model": "0x07F1"
-          }
+          "all"
         ],
         "imagePath": "/home/claymorwan/Pictures/clairi/1st-anniv-trans.png",
         "backgroundOpacity": 0,
-        "syncPositionAcrossScreens": true
+        "enableBorder": false,
+        "frameRadius": "7"
       },
       "positions": {
         "DP-1": {
-          "width": 380,
-          "height": 280,
+          "width": 400,
+          "height": 260,
           "x": 60,
-          "y": 780
-        },
-        "_synced": {
-          "x": 0.03125,
-          "y": 0.7222222222222222,
-          "width": 380,
-          "height": 280
+          "y": 800
         }
       }
     }
@@ -1207,7 +1210,7 @@
   ],
   "builtInPluginSettings": {
     "dms_settings_search": {
-      "trigger": "?"
+      "trigger": ";"
     }
   },
   "launcherPluginVisibility": {},

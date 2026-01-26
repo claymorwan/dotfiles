@@ -40,6 +40,15 @@ in
           hash = "sha256-eb5a5WMQi8arZRZDt4aX1IV+ik6Iee3OxNMCiMnjIx4=";
         };
       }
+      {
+        name = "zsh-eza";
+        src = pkgs.fetchFromGitHub {
+          owner = "z-shell";
+          repo = "zsh-eza";
+          rev = "baf28b07fd9d601de701eff0c7ccac3f53f6c9ef";
+          hash = "sha256-wsPbH9S9mh/DH6g6lYBRRve53q0XH0mM5HZ6H/ndUsA=";
+        };
+      }
     ];
 
     history = {
@@ -54,12 +63,11 @@ in
         "git"
         "python"
         "man"
-        "eza"
       ];
     };
 
     shellAliases = {
-      rl = "source ~/.zshrc";
+      rl = "source ~/.config/zsh/.zshrc";
       nv = "nvim";
       sv = "sudo nvim";
       cls = "clear";

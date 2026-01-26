@@ -1,7 +1,7 @@
 { ... }:
 
 let
-  inherit (import ../../../../variables/variables.nix)
+  inherit (import ../../../../variables)
     mouse_cursor
     ;
 in

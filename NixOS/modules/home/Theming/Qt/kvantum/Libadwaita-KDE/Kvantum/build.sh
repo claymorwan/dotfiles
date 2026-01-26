@@ -23,45 +23,8 @@ export base_accent_hover="#599cea"
 export base_accent_text="#75aee4"
 export base_disabled_text="#000000"
 
-color_latte() {
-    export text="#4c4f69"
-    export window="#e6e9ef"
-    export view="#eff1f5"
-    export header="#eff1f5"
-    export header_separator="#ccd0da"
-    export menu="#eff1f5"
-    export tooltip="#eff1f5"
-    export tooltip_text="#4c4f69"
-    export accent_text="#dce0e8"
-    export disabled_text="#6c6f85"
-}
-color_mocha() {
-    export text="#cdd6f4"
-    export window="#181825"
-    export view="#1e1e2e"
-    export header="#1e1e2e"
-    export header_separator="#313244"
-    export menu="#1e1e2e"
-    export tooltip="#1e1e2e"
-    export tooltip_text="#cdd6f4"
-    export accent_text="#11111b"
-    export disabled_text="#a6adc8"
-}
-
 export accent
 export accent_hover
-
-case $1 in
-    mocha)
-        color_mocha
-        ;;
-    latte)
-        color_latte
-        ;;
-    *)
-        echo "Didnt set color arg/wrong colorscheme"
-        exit 1
-esac
 
 case $1 in
     mocha)
@@ -190,6 +153,43 @@ case $1 in
                 exit 1
         esac
     ;;
+esac
+
+color_latte() {
+    export text="#4c4f69"
+    export window="#e6e9ef"
+    export view="#eff1f5"
+    export header="#eff1f5"
+    export header_separator="#ccd0da"
+    export menu="#eff1f5"
+    export tooltip="#eff1f5"
+    export tooltip_text="#4c4f69"
+    export accent_text="#dce0e8"
+    export disabled_text="#6c6f85"
+}
+color_mocha() {
+    export text="#cdd6f4"
+    export window="#181825"
+    export view="#1e1e2e"
+    export header="#1e1e2e"
+    export header_separator="#313244"
+    export menu="#1e1e2e"
+    export tooltip="#1e1e2e"
+    export tooltip_text="#cdd6f4"
+    export accent_text="${accent}" #"#11111b"
+    export disabled_text="#a6adc8"
+}
+
+case $1 in
+    mocha)
+        color_mocha
+        ;;
+    latte)
+        color_latte
+        ;;
+    *)
+        echo "Didnt set color arg/wrong colorscheme"
+        exit 1
 esac
 
 export build_dir="$theme_name-$theme_color-$theme_variant"

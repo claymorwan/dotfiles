@@ -1,7 +1,7 @@
 { ... }:
 
 let
-  inherit (import ../../../variables/variables.nix)
+  inherit (import ../../../variables)
     font_family
     ;
 in

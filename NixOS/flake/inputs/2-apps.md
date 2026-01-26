@@ -10,7 +10,7 @@ steam-config-nix = {
 };
 
 millennium = {
-  url = "github:Trivaris/Millennium?dir=packages/nix";
+  url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
@@ -40,5 +40,6 @@ nixcord = {
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
-
+# entangled.url = "github:v1kko/entangled.py";
 ```
+

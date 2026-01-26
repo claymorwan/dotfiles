@@ -6,7 +6,7 @@
 }:
 
 let
-  inherit (import ../../../variables/variables.nix)
+  inherit (import ../../../variables)
     flake_dir
     ;
 in

@@ -16,7 +16,7 @@ let
     };
   };
 
-  inherit (import ../../../../variables/variables.nix)
+  inherit (import ../../../../variables)
   ctp_flavor
   ctp_accent
   ;

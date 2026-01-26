@@ -7,7 +7,7 @@
 }:
 
 let
-  inherit (import ../../../variables/variables.nix)
+  inherit (import ../../../variables)
     flake_dir
     ;
 in
@@ -84,6 +84,8 @@ in
         };
 
         mediaFrame.enable = true;
+
+        dankGifSearch.enable = true;
       };
     };
   };

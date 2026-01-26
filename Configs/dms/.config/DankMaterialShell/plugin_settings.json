@@ -72,7 +72,7 @@
     ],
     "defaultEngine": "duckduckgo",
     "noTrigger": false,
-    "trigger": ";"
+    "trigger": "?"
   },
   "grimblast": {
     "enabled": true
@@ -135,5 +135,11 @@
   "dankKDEConnect": {
     "enabled": true,
     "selectedDeviceId": "c613fe7a_9eab_4762_b899_0b44f6ec2db8"
+  },
+  "dankGifSearch": {
+    "enabled": true
+  },
+  "mediaFrame": {
+    "enabled": true
   }
 }

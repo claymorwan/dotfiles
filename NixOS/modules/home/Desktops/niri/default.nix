@@ -1,7 +1,7 @@
 { inputs, pkgs, lib, ... }:
 
 let
-  inherit (import ../../../../variables/variables.nix)
+  inherit (import ../../../../variables)
   mainMod
   ;
 in

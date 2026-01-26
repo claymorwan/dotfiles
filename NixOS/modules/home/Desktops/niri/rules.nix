@@ -54,10 +54,17 @@ in
         open-floating = true;
       }
       {
+        matches = [{
+          app-id = "limo";
+          title = ".* - Limo$";
+        }];
+        open-floating = false;
+      }
+      {
         matches = [{ app-id = "limo"; }];
-        excludes = [{ title = ".*- Limo$"; }];
         open-floating = true;
       }
+
       {
         matches = [{
           app-id = "steam";

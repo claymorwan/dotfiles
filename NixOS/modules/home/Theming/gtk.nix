@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  inherit (import ../../../variables/variables.nix)
+  inherit (import ../../../variables)
     submodules_dir
     ;
 in

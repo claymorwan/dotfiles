@@ -7,7 +7,7 @@
     ./catppuccin.nix
     ./Cursors
     ./Desktops
-    ./discord.nix
+    # ./discord.nix
     ./DMS
     ./Editors
     ./env.nix

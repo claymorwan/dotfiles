@@ -39,6 +39,7 @@
     (pkgs.callPackage ../../../pkgs/lncur/package.nix { })
     cbonsai
 
+    equibop
     gradia
     (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
     packet

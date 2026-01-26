@@ -6,7 +6,7 @@
 }:
 
 let
-  inherit (import ../../variables/variables.nix)
+  inherit (import ../../variables)
     home_dir
     dotfiles_dir
     ;

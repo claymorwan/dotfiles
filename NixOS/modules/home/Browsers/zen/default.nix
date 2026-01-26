@@ -1,7 +1,6 @@
 {
   pkgs,
   inputs,
-  # stdenv,
   config,
   ...
 }:
@@ -14,7 +13,7 @@ let
     rev = "c855685442c6040c4dda9c8d3ddc7b708de1cbaa";
     hash = "sha256-5A57Lyctq497SSph7B+ucuEyF1gGVTsuI3zuBItGfg4=";
   };
-  inherit (import ../../variables/variables.nix)
+  inherit (import ../../variables)
     submodules_dir
     ;
 in
@@ -39,6 +38,10 @@ in
       kdePackages.plasma-browser-integration
     ];
 
+    policies = {
+      LegacyProfiles = true;
+    };
+
     profiles = {
       default = {
         id = 0;
@@ -51,6 +54,7 @@ in
           "browser.toolbars.bookmarks.visibility" = "always";
           "browser.uiCustomization.state" = builtins.readFile ./layout.json;
           "general.smoothScroll.msdPhysics.enabled" = true;
+
 
           "zen.view.use-single-toolbar" = false;
           "zen.urlbar.replace-newtab" = false;

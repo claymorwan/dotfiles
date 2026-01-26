@@ -12,6 +12,7 @@ rec {
   launch_prefix = "app2unit --";
   terminal = "ghostty";
   browser = "MOZ_LEGACY_PROFILES=1 zen";
+  discord = "equibop --wayland";
 
   # Dirs
   home_dir = "/home/${username}";
