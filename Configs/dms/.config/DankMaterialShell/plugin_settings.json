@@ -61,10 +61,10 @@
         ]
       },
       {
-        "id": "hmopt",
-        "name": "Home Manager options",
+        "id": "hm",
+        "name": "Home Manager",
         "icon": "unicode:",
-        "url": "https://home-manager-options.extranix.com/?query=%s&release=master",
+        "url": "https://home-manager-options.extranix.com/?query=%s&release=release-25.11",
         "keywords": [
           "hm"
         ]

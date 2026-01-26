@@ -55,7 +55,7 @@
 
     # Kde stuff
     kdePackages.gwenview
-    kdePackages.kdenlive
+    # kdePackages.kdenlive
     kdePackages.plasma-browser-integration
 
     intiface-central
