@@ -27,9 +27,7 @@
   "mangoLayoutBorderSize": -1,
   "use24HourClock": true,
   "showSeconds": true,
-  "padHours12Hour": false,
   "useFahrenheit": false,
-  "windSpeedUnit": "kmh",
   "nightModeEnabled": false,
   "animationSpeed": 4,
   "customAnimationDuration": 200,
@@ -218,10 +216,6 @@
   "mediaSize": 1,
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
-  "browserPickerViewMode": "grid",
-  "browserUsageHistory": {},
-  "appPickerViewMode": "grid",
-  "filePickerUsageHistory": {},
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 4,
   "spotlightCloseNiriOverview": true,
@@ -353,13 +347,6 @@
   "dockBorderOpacity": 1,
   "dockBorderThickness": 1,
   "dockIsolateDisplays": false,
-  "dockLauncherEnabled": false,
-  "dockLauncherLogoMode": "apps",
-  "dockLauncherLogoCustomPath": "",
-  "dockLauncherLogoColorOverride": "",
-  "dockLauncherLogoSizeOffset": 0,
-  "dockLauncherLogoBrightness": 0.5,
-  "dockLauncherLogoContrast": 1,
   "notificationOverlayEnabled": true,
   "modalDarkenBackground": true,
   "lockScreenShowPowerActions": true,
@@ -368,7 +355,6 @@
   "lockScreenShowDate": true,
   "lockScreenShowProfileImage": true,
   "lockScreenShowPasswordField": true,
-  "lockScreenShowMediaPlayer": true,
   "lockScreenPowerOffMonitorsOnLock": false,
   "enableFprint": false,
   "maxFprintTries": 3,
@@ -1184,12 +1170,16 @@
       "enabled": true,
       "config": {
         "displayPreferences": [
-          "all"
+          {
+            "name": "eDP-1",
+            "model": "0x07F1"
+          }
         ],
         "imagePath": "/home/claymorwan/Pictures/clairi/1st-anniv-trans.png",
         "backgroundOpacity": 0,
         "enableBorder": false,
-        "frameRadius": "7"
+        "frameRadius": "7",
+        "syncPositionAcrossScreens": true
       },
       "positions": {
         "DP-1": {
@@ -1197,6 +1187,18 @@
           "height": 260,
           "x": 60,
           "y": 800
+        },
+        "eDP-1": {
+          "width": 400,
+          "height": 280,
+          "x": 60,
+          "y": 780
+        },
+        "_synced": {
+          "width": 380,
+          "height": 280,
+          "x": 0.03125,
+          "y": 0.7222222222222222
         }
       }
     }

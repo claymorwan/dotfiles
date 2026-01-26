@@ -49,7 +49,7 @@ stdenv.mkDerivation {
       cd electron
     '';
     fetcherVersion = 2;
-    hash = "sha256-TF/0AP9SE4ujHdgsF1CxbCWvmXfpwLTuIRM01aha3zo=";
+    hash = "sha256-7nmZTevWbCDf6bgEj22faVVQ8yaflMwBZyMRfX3N2Eg=";
   };
 
   buildPhase = ''
