@@ -15,6 +15,7 @@
   "dockTransparency": 1,
   "widgetBackgroundColor": "sch",
   "widgetColorMode": "default",
+  "controlCenterTileColorMode": "primary",
   "cornerRadius": 7,
   "niriLayoutGapsOverride": -1,
   "niriLayoutRadiusOverride": -1,
@@ -153,6 +154,7 @@
   "workspaceScrolling": false,
   "showWorkspaceApps": true,
   "maxWorkspaceIcons": 3,
+  "workspaceAppIconSizeOffset": 0,
   "groupWorkspaceApps": true,
   "workspaceFollowFocus": false,
   "showOccupiedWorkspacesOnly": false,
@@ -359,6 +361,9 @@
   "dockLauncherLogoSizeOffset": 0,
   "dockLauncherLogoBrightness": 0.5,
   "dockLauncherLogoContrast": 1,
+  "dockMaxVisibleApps": 0,
+  "dockMaxVisibleRunningApps": 0,
+  "dockShowOverflowBadge": true,
   "notificationOverlayEnabled": true,
   "modalDarkenBackground": true,
   "lockScreenShowPowerActions": true,
@@ -761,7 +766,8 @@
         "drawBorder": true,
         "followTheme": true,
         "showOnOverlay": false,
-        "syncPositionAcrossScreens": true
+        "syncPositionAcrossScreens": true,
+        "showOnOverviewOnly": false
       },
       "positions": {
         "DP-1": {
@@ -1224,6 +1230,11 @@
     {
       "id": "dwg_1768486261606_w0rmhmkpm",
       "name": "Application shortcut",
+      "collapsed": false
+    },
+    {
+      "id": "dwg_1769526213643_u8gd7uarl",
+      "name": "Game overlay",
       "collapsed": false
     }
   ],

@@ -159,6 +159,17 @@ in
         open-focused = true;
         open-maximized = true;
       }
+
+      # Game specific rules;
+      {
+        matches = [
+          {
+            app-id = "steam_app_default";
+            title = "VS Impostor: V4";
+          }
+        ];
+        open-fullscreen = true;
+      }
     ];
 
     layer-rules = [

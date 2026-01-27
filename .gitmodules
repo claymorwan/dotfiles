@@ -61,3 +61,6 @@
 [submodule "Submodules/ghostty/shaders/cursors"]
 	path = Submodules/ghostty/shaders/cursors
 	url = https://github.com/KroneCorylus/ghostty-shader-playground
+[submodule "Submodules/catppuccin/heroic"]
+	path = Submodules/catppuccin/heroic
+	url = https://github.com/catppuccin/heroic
