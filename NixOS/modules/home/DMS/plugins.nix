@@ -78,7 +78,7 @@ in
 
         # KDE Connect
         # Plugins doesn't work when called `dankKDEConnect`, so i gotta do this to rename it
-        KDEConnect = {
+        phoneConnect = {
           enable = true;
           src = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.dankKDEConnect;
         };

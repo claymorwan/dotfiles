@@ -16,7 +16,7 @@
     distrobox
     boxbuddy
 
-    jetbrains.idea
+    # jetbrains.idea
     # jetbrains.pycharm
   ];
 }

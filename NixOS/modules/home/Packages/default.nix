@@ -50,6 +50,7 @@
     bottles
     obsidian
     qalculate-gtk
+    protonvpn-gui
 
     linux-wallpaperengine
 

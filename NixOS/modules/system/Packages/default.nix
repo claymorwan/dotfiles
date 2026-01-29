@@ -30,8 +30,12 @@
       binfmt = true;
     };
 
+    kdeconnect = {
+      enable = true;
+      package = pkgs.valent;
+    };
+
     gpu-screen-recorder.enable = true;
-    kdeconnect.enable = true;
     droidcam.enable = true;
   };
 
