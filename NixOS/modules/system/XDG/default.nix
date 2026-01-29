@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 
 {
   imports = [
@@ -9,15 +9,15 @@
       enable = true;
       xdgOpenUsePortal = true;
       extraPortals = with pkgs; [
-        xdg-desktop-portal-hyprland
-        xdg-desktop-portal-termfilechooser
+        (lib.mkIf config.programs.hyprland.enable xdg-desktop-portal-hyprland)
+        lib.mkIf (config.services.xdg-desktop-portal-termfilepickers == false) xdg-desktop-portal-termfilechooser
         xdg-desktop-portal-gtk
         xdg-desktop-portal-gnome
       ];
 
       config = let
         defaultPortalCfg = {
-          # "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
+          "org.freedesktop.impl.portal.FileChooser" = lib.mkIf (config.services.xdg-desktop-portal-termfilepickers == false) ["termfilechooser"];
         };
       in
       {
