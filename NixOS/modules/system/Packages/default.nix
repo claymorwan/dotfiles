@@ -70,7 +70,7 @@ in
     efibootmgr
     imagemagick
     amdgpu_top
-    # inputs.entangled.packages.${pkgs.stdenv.hostPlatform.system}.entangled.py
+    # inputs.entangled.packages.${pkgs.stdenv.hostPlatform.system}.default
     gpu-screen-recorder
     gpu-screen-recorder-gtk
 
