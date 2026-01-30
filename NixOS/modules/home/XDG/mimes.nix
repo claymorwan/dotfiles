@@ -1,3 +1,5 @@
+{ lib, ... }:
+
 {
   xdg.mimeApps = let
     value = "dms-open.desktop";
@@ -14,7 +16,18 @@
   in
   {
     enable = true;
-    associations.added = associations;
-    defaultApplications = associations;
+    associations.added = lib.attrsets.mergeAttrsList [
+    {
+      "inode/directory" = "yazi.desktop";
+    }
+    associations
+    ];
+
+    defaultApplications = lib.attrsets.mergeAttrsList [
+    {
+      "inode/directory" = "yazi.desktop";
+    }
+    associations
+    ];
   };
 }

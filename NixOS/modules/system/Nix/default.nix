@@ -40,5 +40,7 @@
     nurl
     update-nix-fetchgit
     nixpkgs-review
+    nix-output-monitor
+    expect
   ];
 }
