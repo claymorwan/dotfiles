@@ -20,4 +20,8 @@ rec {
   flake_dir = "${dotfiles_dir}/NixOS";
   screenshot_dir = "${home_dir}/Pictures/Screenshots";
   submodules_dir = "${dotfiles_dir}/Submodules";
+
+  # enable
+  enableNiri = true;
+  enableHyprland = false;
 }

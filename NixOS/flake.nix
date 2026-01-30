@@ -65,7 +65,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    # entangled.url = "github:v1kko/entangled.py";
+    entangled.url = "github:entangled/entangled.py";
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-dms.md#flake-inputs>>[0]
     # DMS related stuff
@@ -104,9 +104,7 @@
   outputs =
     inputs@{
       nixpkgs,
-      catppuccin,
       home-manager,
-      nix-flatpak,
       ...
     }:
     let
@@ -125,8 +123,6 @@
 
           modules = [
             ./hosts/${host}
-            nix-flatpak.nixosModules.nix-flatpak
-            catppuccin.nixosModules.catppuccin
           ];
         };
     in

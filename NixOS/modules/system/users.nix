@@ -23,8 +23,6 @@
     users.${username} = {
       imports = [
         ./../home
-        inputs.nix-flatpak.homeManagerModules.nix-flatpak
-        inputs.catppuccin.homeModules.catppuccin
       ];
 
       home = {

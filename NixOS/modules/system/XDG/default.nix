@@ -10,7 +10,7 @@
       xdgOpenUsePortal = true;
       extraPortals = with pkgs; [
         (lib.mkIf config.programs.hyprland.enable xdg-desktop-portal-hyprland)
-        lib.mkIf (config.services.xdg-desktop-portal-termfilepickers == false) xdg-desktop-portal-termfilechooser
+        (lib.mkIf (config.services.xdg-desktop-portal-termfilepickers == false) xdg-desktop-portal-termfilechooser)
         xdg-desktop-portal-gtk
         xdg-desktop-portal-gnome
       ];

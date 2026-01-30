@@ -76,6 +76,8 @@ in
         launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
       };
 
+      "1226640" = winGameOptions;
+
       # Overcooked 2
       "728880" = winGameOptions;
 

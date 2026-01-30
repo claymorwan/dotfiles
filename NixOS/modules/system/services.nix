@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
 
@@ -20,6 +20,11 @@
 
     power-profiles-daemon = {
       enable = true;
+    };
+
+    joycond = {
+      enable = true;
+      package = pkgs.callPackage ../../pkgs/joycond/package.nix { };
     };
 
     openssh.enable = true;

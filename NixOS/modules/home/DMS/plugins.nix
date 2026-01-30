@@ -3,6 +3,7 @@
   inputs,
   host,
   lib,
+  config,
   ...
 }:
 
@@ -38,7 +39,7 @@ in
       gcCommand = [
         "zsh"
         "-c"
-        "sudo ${pkgs.nh}/bin/nh clean all"
+        "sudo ${pkgs.nh}/bin/nh clean all ${config.programs.nh.clean.extraArgs}"
       ];
     };
 

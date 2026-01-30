@@ -1,6 +1,12 @@
+let
+  inherit (import ../../../variables)
+  enableNiri
+  enableHyprland
+  ;
+in
 {
-  imports = [
-    # ./hyprland
-    ./niri
-  ];
+  imports = []
+  ++ (if enableNiri then [./niri] else [])
+  ++ (if enableHyprland then [./hyprland] else [])
+  ;
 }

@@ -10,9 +10,7 @@ Using this to separate my inputs into multiple files, as flake.nix files aren't 
   outputs =
     inputs@{
       nixpkgs,
-      catppuccin,
       home-manager,
-      nix-flatpak,
       ...
     }:
     let
@@ -31,8 +29,6 @@ Using this to separate my inputs into multiple files, as flake.nix files aren't 
 
           modules = [
             ./hosts/${host}
-            nix-flatpak.nixosModules.nix-flatpak
-            catppuccin.nixosModules.catppuccin
           ];
         };
     in

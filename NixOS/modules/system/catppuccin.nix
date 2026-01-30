@@ -7,6 +7,10 @@ let
     ;
 in
 {
+  imports = [
+    inputs.catppuccin.nixosModules.catppuccin
+  ];
+
   catppuccin = {
     enable = true;
     flavor = ctp_flavor;

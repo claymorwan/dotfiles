@@ -40,6 +40,5 @@ nixcord = {
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
-# entangled.url = "github:v1kko/entangled.py";
+entangled.url = "github:entangled/entangled.py";
 ```
-

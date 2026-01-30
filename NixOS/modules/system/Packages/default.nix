@@ -1,5 +1,11 @@
 { pkgs, inputs, ... }:
 
+let
+  inherit (import ../../../variables)
+  enableNiri
+  enableHyprland
+  ;
+in
 {
   imports = [
     # inputs.niri.nixosModules.niri
@@ -9,14 +15,15 @@
   nixpkgs.config.allowBroken = true;
 
   programs = {
-    # hyprland = {
-    #   enable = true;
-    #   withUWSM = true;
-    # };
-    # hyprlock.enable = true;
+    hyprland = {
+      enable = enableHyprland;
+      withUWSM = true;
+    };
+
+    hyprlock.enable = enableHyprland;
 
     niri = {
-      enable = true;
+      enable = enableNiri;
       package = pkgs.niri;
     };
 
@@ -63,8 +70,7 @@
     efibootmgr
     imagemagick
     amdgpu_top
-    # inputs.entangled.packages.${pkgs.stdenv.hostPlatform.system}.entangled-cli
-
+    # inputs.entangled.packages.${pkgs.stdenv.hostPlatform.system}.entangled.py
     gpu-screen-recorder
     gpu-screen-recorder-gtk
 

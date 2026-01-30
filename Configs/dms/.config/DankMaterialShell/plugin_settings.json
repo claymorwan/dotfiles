@@ -5,8 +5,7 @@
     "trigger": "="
   },
   "dankPomodoroTimer": {
-    "enabled": true,
-    "completedPomodoros-2026-01-22": 1
+    "enabled": true
   },
   "dockerManager": {
     "enabled": true,
