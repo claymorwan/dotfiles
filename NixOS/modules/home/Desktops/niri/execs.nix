@@ -9,7 +9,8 @@ in
       # { argv = [ "gnome-keyring-daemon" "--start" "--components=secrets" ]; }
       # { argv = [ "mpris-proxy" ]; }
       { sh =  "sleep 3; ${discord} --start-minimized"; }
-      { argv = [ "nsticky" ]; }
+      # { argv = [ "nsticky" ]; }
+      { argv = [ "niri-float-sticky" ]; }
     ];
   };
 }

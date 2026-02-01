@@ -13,6 +13,7 @@ let
       style = "kvantum-dark";
       # custom_palette = true;
       icon_theme = config.gtk.iconTheme.name;
+      standard_dialogs = "xdgdesktopportal";
     };
   };
 
@@ -77,6 +78,8 @@ in
       [General]
       theme=libadwaita-kde-${ctp_flavor}-${ctp_accent}
     '';
+    
+    # KDE theme
     "kdeglobals" = {
       enable = true;
       text = ''

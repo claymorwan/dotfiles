@@ -57,6 +57,7 @@ in
         hash = "sha256-hJVFZvcHgcjmcwUUGs1Q668KjeLSCEVuAhAD1A8ZM90=";
       };
     };
+  };
 
   # Packages for plugins
   home.packages = with pkgs; [

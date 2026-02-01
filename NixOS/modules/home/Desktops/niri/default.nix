@@ -16,6 +16,7 @@ in
 
   home.packages = [
     inputs.nsticky.packages.${pkgs.stdenv.hostPlatform.system}.nsticky
+    inputs.niri-float-sticky.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   programs = {

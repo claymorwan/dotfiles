@@ -80,6 +80,11 @@
       inputs.nixpkgs.follows= "nixpkgs";
     };
     
+    niri-float-sticky = {
+      url = "github:probeldev/niri-float-sticky";
+      inputs.nixpkgs.follows= "nixpkgs";
+    };
+    
     dgop = {
       url = "github:AvengeMedia/dgop";
       inputs.nixpkgs.follows = "nixpkgs";
