@@ -53,17 +53,20 @@ in
         ];
         open-floating = true;
       }
-      {
-        matches = [{
-          app-id = "limo";
-          title = ".* - Limo$";
-        }];
-        open-floating = false;
-      }
-      {
-        matches = [{ app-id = "limo"; }];
-        open-floating = true;
-      }
+
+      # Limo
+      # {
+      #   matches = [{
+      #     app-id = "limo";
+      #     is-floating = true;
+      #   }];
+      #   tiled-state = true;
+      # }
+      # {
+      #   matches = [{ app-id = "limo"; }];
+      #   excludes = [{ title = ".* - Limo$"; }];
+      #   open-floating = true;
+      # }
 
       {
         matches = [{
@@ -161,6 +164,13 @@ in
       }
 
       # Game specific rules;
+      {
+        matches = [{
+          app-id = "steam_app_default";
+          title = "^BepInEx .*$";
+        }];
+        open-floating = true;
+      }
       {
         matches = [
           {

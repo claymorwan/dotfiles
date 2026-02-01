@@ -6,17 +6,35 @@
   ];
 
   services.flatpak = {
+    enable = true;
+
     packages = [
       "org.vinegarhq.Sober"
       "io.github.marco_calautti.DeltaPatcher"
     ];
 
     overrides = {
-      "org.vinegarhq.Sober".Context = {
-        filesystems = [
-          "xdg-run/discord-ipc-0"
-          "xdg-run/app/com.discordapp.Discord:create"
-        ];
+      global = {
+        Context = {
+          filesystems = [
+            "xdg-config/gtk-3.0:ro"
+            "xdg-config/gtk-4.0:ro"
+            "xdg-config/MangoHud/MangoHud.conf:ro"
+          ];
+        };
+      };
+
+      "org.vinegarhq.Sober" = {
+        Environment = {
+          MANGOHUD = "1";
+        };
+
+        Context = {
+          filesystems = [
+            "xdg-run/discord-ipc-0"
+            "xdg-run/app/com.discordapp.Discord:create"
+          ];
+        };
       };
     };
     update.onActivation = true;

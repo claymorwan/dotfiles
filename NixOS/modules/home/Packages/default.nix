@@ -38,7 +38,9 @@
     pipes
     (pkgs.callPackage ../../../pkgs/lncur/package.nix { })
     cbonsai
+    linux-wallpaperengine
 
+    # GUI
     equibop
     gradia
     (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
@@ -51,14 +53,11 @@
     obsidian
     qalculate-gtk
     protonvpn-gui
-
-    linux-wallpaperengine
+    intiface-central
+    polychromatic
 
     # Kde stuff
     kdePackages.gwenview
-    # kdePackages.kdenlive
     kdePackages.plasma-browser-integration
-
-    intiface-central
   ];
 }

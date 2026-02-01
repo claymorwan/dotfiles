@@ -683,7 +683,7 @@
       }
       {
         on = "w";
-        run = "tasks_show";
+        run = "tasks:show";
         desc = "Show task manager";
       }
       {

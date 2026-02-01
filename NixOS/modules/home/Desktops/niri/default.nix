@@ -14,6 +14,10 @@ in
     ./rules.nix
   ];
 
+  home.packages = [
+    inputs.nsticky.packages.${pkgs.stdenv.hostPlatform.system}.nsticky
+  ];
+
   programs = {
     niri = {
       package = pkgs.niri;

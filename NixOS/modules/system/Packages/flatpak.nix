@@ -14,20 +14,17 @@
       # Examples:
       packages = [
         "com.github.tchx84.Flatseal"
-        # "com.valvesoftware.Steam"
-        # "net.lutris.Lutris"
-        #"com.github.tchx84.Flatseal" #Manage flatpak permissions - should always have this
-        #"com.rtosta.zapzap"              # WhatsApp client
+        "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08"
         #"io.github.flattool.Warehouse"   # Manage flatpaks, clean data, remove flatpaks and deps
-        #"it.mijorus.gearlever"           # Manage and support AppImages
       ];
 
       overrides = {
         global = {
           Context = {
             filesystems = [
-              "xdg-config/gtk-3.0"
-              "xdg-config/gtk-4.0"
+              "xdg-config/gtk-3.0:ro"
+              "xdg-config/gtk-4.0:ro"
+              "xdg-config/MangoHud:ro"
             ];
           };
         };

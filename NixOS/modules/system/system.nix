@@ -13,6 +13,8 @@
 
       daemon.enable = true;
     };
+
+    openrazer.enable = true;
     bluetooth.enable = true;
   };
 

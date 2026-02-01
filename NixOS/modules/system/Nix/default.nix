@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
@@ -40,7 +40,7 @@
     nurl
     update-nix-fetchgit
     nixpkgs-review
-    nix-output-monitor
+    inputs.nix-output-monitor.packages.${pkgs.stdenv.hostPlatform.system}.default
     expect
   ];
 }

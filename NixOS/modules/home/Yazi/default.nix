@@ -19,6 +19,8 @@ in
 
   programs.yazi = {
     enable = true;
+    package = pkgs.yazi.override {_7zz = pkgs._7zz-rar; };
+
     enableZshIntegration = true;
     enableBashIntegration = true;
     enableFishIntegration = true;
@@ -55,14 +57,6 @@ in
         hash = "sha256-hJVFZvcHgcjmcwUUGs1Q668KjeLSCEVuAhAD1A8ZM90=";
       };
     };
-
-    # yaziPlugins = {
-    #   enable = true;
-    #   plugins = {
-    #     yamb.enable = true;
-    #   };
-    # };
-  };
 
   # Packages for plugins
   home.packages = with pkgs; [

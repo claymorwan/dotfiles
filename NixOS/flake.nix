@@ -71,9 +71,15 @@
     # DMS related stuff
     
     niri = {
-          url = "github:sodiboo/niri-flake";
-          inputs.nixpkgs.follows = "nixpkgs";
-        };
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    nsticky = {
+      url = "github:lonerOrz/nsticky";
+      inputs.nixpkgs.follows= "nixpkgs";
+    };
+    
     dgop = {
       url = "github:AvengeMedia/dgop";
       inputs.nixpkgs.follows = "nixpkgs";

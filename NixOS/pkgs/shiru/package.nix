@@ -3,26 +3,26 @@
   lib,
   stdenv,
   pnpm,
-  pnpmConfigHook,
-  fetchPnpmDeps,
   nodejs,
   fetchFromGitHub,
   python3,
   electron_39,
-  copyDesktopItems,
   makeDesktopItem,
   makeBinaryWrapper,
+  copyDesktopItems,
+  fetchPnpmDeps,
+  pnpmConfigHook,
 }:
 let
   electron = electron_39;
   pname = "shiru";
-  version = "6.4.8";
+  version = "6.4.1";
 
   src = fetchFromGitHub {
     owner = "RockinChaos";
     repo = "shiru";
     tag = "v${version}";
-    hash = "sha256-tbIayIAlsLRHOzgc4MCIfGGFkde9m1lyXg26hKHP5c8=";
+    hash = "sha256-aYr5nCGEkYE27ZjODqltsSR7kY9YBwnqbt4qcRwt8TE=";
   };
 in
 stdenv.mkDerivation {
@@ -49,7 +49,7 @@ stdenv.mkDerivation {
       cd electron
     '';
     fetcherVersion = 2;
-    hash = "sha256-7nmZTevWbCDf6bgEj22faVVQ8yaflMwBZyMRfX3N2Eg=";
+    hash = "sha256-YINaWE5wB6la31XXuhJlmQhjaNea3dL908e3ybctknY=";
   };
 
   buildPhase = ''
