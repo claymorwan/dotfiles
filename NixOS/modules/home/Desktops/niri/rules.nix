@@ -172,6 +172,10 @@ in
         open-floating = true;
       }
       {
+        matches = [{ app-id = ".gamescope-wrapped"; }];
+        open-maximized = true;
+      }
+      {
         matches = [
           {
             app-id = "steam_app_default";
