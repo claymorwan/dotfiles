@@ -3,7 +3,6 @@
   pkgs,
   username,
   host,
-  # system,
   ...
 }:
 
@@ -32,18 +31,24 @@
       };
     };
   };
-  users.mutableUsers = true;
-  users.users.${username} = {
-    isNormalUser = true;
-    description = "${username}";
-    extraGroups = [
-      "docker"
-      "networkmanager"
-      "wheel"
-    ];
-    shell = pkgs.zsh;
-    ignoreShellProgramCheck = true;
+
+  users = {
+    mutableUsers = true;
+    users = {
+      ${username} = {
+        isNormalUser = true;
+        description = "${username}";
+        extraGroups = [
+          "docker"
+          "networkmanager"
+          "wheel"
+        ];
+        shell = pkgs.zsh;
+        ignoreShellProgramCheck = true;
+      };
+    };
   };
+
   nix.settings.allowed-users = [ "${username}" ];
   services.accounts-daemon.enable = true;
 }

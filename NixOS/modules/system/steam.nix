@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   programs = {
@@ -14,19 +14,19 @@
       extraCompatPackages = [ pkgs.proton-ge-bin ];
     };
 
-    gamescope = {
-      enable = true;
+  gamescope = {
+    enable = true;
 
-      capSysNice = true;
-      args = [
-        "--rt"
-        "--expose-wayland"
-      ];
-    };
+    # capSysNice = true;
+    # args = [
+    #   "--rt"
+    #   "--expose-wayland"
+    # ];
   };
 
-  programs.gamemode = {
-    enable = true;
+    gamemode = {
+      enable = true;
+    };
   };
 
   hardware.steam-hardware.enable = true;

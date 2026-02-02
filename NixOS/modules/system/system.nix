@@ -2,7 +2,6 @@
   host,
   pkgs,
   options,
-  username,
   ...
 }:
 
