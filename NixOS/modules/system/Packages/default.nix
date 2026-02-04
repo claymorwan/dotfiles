@@ -17,6 +17,7 @@ in
   programs = {
     hyprland = {
       enable = enableHyprland;
+      package = pkgs.hyprland;
       withUWSM = false;
     };
 

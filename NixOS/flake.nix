@@ -48,7 +48,6 @@
       url = "github:Guekka/xdg-desktop-portal-termfilepickers";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
       };
     };
     
@@ -101,7 +100,6 @@
       url = "github:AvengeMedia/DankMaterialShell";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        quickshell.inputs.nixpkgs.follows = "nixpkgs";
       };
     };
     

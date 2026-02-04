@@ -18,7 +18,7 @@ in
       #     hash = "sha256-eVD4U3Oqzz0VU9ylJ5wo76xDcYKv2CpiiRXq4Is4QdA=";
       #   };
       # })
-      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprscrolling
+      (pkgs.callPackage ../../../../pkgs/hyprscrolling { })
       hypr-dynamic-cursors
       hyprexpo
       hyprbars
@@ -36,10 +36,10 @@ in
         };
 
         hyprscrolling = {
-          column_width = 0.8;
+          column_width = 0.66666;
           fullscreen_on_one_column = true;
           focus_fit_method = 1;
-          follow_focus = false;
+          follow_focus = true;
         };
 
         hyprexpo = {

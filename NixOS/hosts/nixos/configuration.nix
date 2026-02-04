@@ -14,8 +14,8 @@
     ./../../modules/system
   ];
 
-  boot.initrd.luks.devices."luks-2ee397b7-ed8a-4268-aaac-1294cad57c05".device = "/dev/disk/by-uuid/2ee397b7-ed8a-4268-aaac-1294cad57c05";
-
+  boot.initrd.luks.devices."luks-f39cc2fd-88f1-4b75-994c-49f9175d4506".device = "/dev/disk/by-uuid/f39cc2fd-88f1-4b75-994c-49f9175d4506";
+  
   boot = {
     blacklistedKernelModules = [
       "rtw88_8822bu"

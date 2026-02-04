@@ -22,6 +22,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    package = pkgs.hyprland;
 
     systemd = {
       enable = true;
@@ -58,10 +59,12 @@
         no_focus_fallback = true;
         allow_tearing = true; # This just allows the `immediate` window rule to work
 
-        snap = {
+        snap = let
+          gap = 14;
+        in {
           enabled = true;
-          window_gap = 4;
-          monitor_gap = 5;
+          window_gap = gap;
+          monitor_gap = gap;
           respect_gaps = true;
         };
       };
