@@ -1,7 +1,5 @@
-{ ... }:
-
 let
-  inherit (import ../../../../variables)
+  inherit (import ../../../../../variables)
     mainMod
     terminal
     browser

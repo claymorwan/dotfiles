@@ -35,7 +35,7 @@
         "fadeLayersOut, 1, 2.7, menu_accel"
 
         # workspaces
-        "workspaces, 1, 7, menu_decel, slide"
+        "workspaces, 1, 7, menu_decel, slidevert"
 
         # specialWorkspace
         "specialWorkspaceIn, 1, 2.8, emphasizedDecel, slidevert"

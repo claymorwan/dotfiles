@@ -1,8 +1,3 @@
-let
-  inherit (import ../../../../../variables)
-    mainMod
-    ;
-in
 {
   wayland.windowManager.hyprland.settings = {
     bind = [
