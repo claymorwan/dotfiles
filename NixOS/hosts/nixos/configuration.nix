@@ -14,7 +14,22 @@
     ./../../modules/system
   ];
 
-  # nixpkgs.config.allowBroken = true;
-  boot.initrd.luks.devices."luks-9f016025-97b5-4c03-abea-d3ed5b8ad2b4".device =
-    "/dev/disk/by-uuid/9f016025-97b5-4c03-abea-d3ed5b8ad2b4";
+  boot.initrd.luks.devices."luks-2ee397b7-ed8a-4268-aaac-1294cad57c05".device = "/dev/disk/by-uuid/2ee397b7-ed8a-4268-aaac-1294cad57c05";
+
+  boot = {
+    blacklistedKernelModules = [
+      "rtw88_8822bu"
+      "rtw88_usb"
+      "rtw88_core"
+    ];
+
+    extraModulePackages = with config.boot.kernelPackages; [
+      rtl88x2bu
+      # (config.boot.kernelPackages.callPackage ./../../pkgs/rtl88x2bu.nix {})
+    ];
+
+    extraModprobeConfig = ''
+      options 88x2bu rtw_switch_usb_mode=1
+    '';
+  };
 }

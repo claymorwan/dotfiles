@@ -43,7 +43,7 @@
     # GUI
     equibop
     gradia
-    (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
+    # (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
     packet
     catppuccinifier-gui
     gnome-font-viewer

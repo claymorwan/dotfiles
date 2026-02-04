@@ -17,7 +17,7 @@ in
   programs = {
     hyprland = {
       enable = enableHyprland;
-      withUWSM = true;
+      withUWSM = false;
     };
 
     hyprlock.enable = enableHyprland;
