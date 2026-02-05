@@ -111,7 +111,7 @@ in
       layerrule = [
         # Animation
         "match:namespace dms:color-picker, no_anim on"
-        "match:namespace dms:(control-center|notification-center-popout|battery), animation slide right"
+        "match:namespace dms:(control-center|notification-center-popout|battery), animation slide left"
         "match:namespace dms:(dash|tray-menu-window|toast|system-update|process-list-popout|popout), animation slide top"
         "match:namespace dms:(dock|dock-context-menu|osd), animation slide bottom"
         "match:namespace dms:app-launcher, animation slide left"
