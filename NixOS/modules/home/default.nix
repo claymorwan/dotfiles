@@ -19,7 +19,7 @@
     ./Packages
     ./services.nix
     ./starship.nix
-    # ./spotify.nix
+    ./spotify.nix
     ./ssh.nix
     ./Theming
     # ./uwsm.nix

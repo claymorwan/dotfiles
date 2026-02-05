@@ -87,6 +87,8 @@ in
         mediaFrame.enable = true;
 
         dankGifSearch.enable = true;
+
+        dankHyprlandWindows.enable = true;
       };
     };
   };

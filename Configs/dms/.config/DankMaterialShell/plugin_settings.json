@@ -140,5 +140,8 @@
   },
   "mediaFrame": {
     "enabled": true
+  },
+  "dankHyprlandWindows": {
+    "enabled": true
   }
 }
