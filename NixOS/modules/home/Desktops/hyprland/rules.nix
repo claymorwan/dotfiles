@@ -1,4 +1,5 @@
-{ ... }:
+{ lib, pkgs, config, ... }:
+
 let
   hyprbar =
     "com-abdownloadmanager-desktop-AppKt|floorp|codium|ONLYOFFICE|org.vinegarhq.Sober|hyprpolkitagent|scrcpy|dragon-drop|Blockbench|hyprland-share-picker|obsidian|gale|shiru|zen.*|steam||org.kde.plasmawindowed|localsend|swayimg.*|nz.co.mega.megasync|org.quickshell|"
@@ -11,6 +12,7 @@ in
       "$pip_coord" = "(monitor_w*0.75) (monitor_h*0.75)";
 
       windowrule = [
+
         # Tile
         "match:class Godot match:initial_title Godot, tile on"
         "match:class jetbrains-.*, match:initial_title ^$, tile on"
@@ -96,18 +98,21 @@ in
         "match:title win[0-9]+, match:xwayland 1, no_shadow on"
         "match:title win[0-9]+, match:xwayland 1, rounding 10"
 
-        # Hyprbar
-        "match:class ${hyprbar}, hyprbars:no_bar on"
-        "match:class (jetbrains-.*), match:initial_title ^(?:(?! ).)*$, hyprbars:no_bar on"
-        "match:initial_title Discord Popout, hyprbars:no_bar on"
-
         # Swayimg
         "match:class ^(swayimg.*), no_blur on"
         # "match:class ^(swayimg.*), no_border on"
-      ];
+      ]
+      # Hyprbars
+      ++ lib.optional (lib.lists.any (x: x == pkgs.hyprlandPlugins.hyprbars) config.wayland.windowManager.hyprland.plugins)
+        [
+        "match:class ${hyprbar}, hyprbars:no_bar on"
+        "match:class (jetbrains-.*), match:initial_title ^(?:(?! ).)*$, hyprbars:no_bar on"
+        "match:initial_title Discord Popout, hyprbars:no_bar on"
+        ]
+      ;
 
       "$blur_modal" =
-        "dms:(modal|polkit|keybinds|notification-center-modal|workspace-overview|color-picker|clipboard|spotlight|settings|process-list-modal)";
+        "dms:(modal|polkit|keybinds|notification-center-modal|workspace-overview|color-picker|clipboard|process-list-modal)";
       layerrule = [
         # Animation
         "match:namespace dms:color-picker, no_anim on"

@@ -8,20 +8,10 @@ in
 {
   wayland.windowManager.hyprland = {
     plugins = with pkgs.hyprlandPlugins; [
-      # (hyprscrolling.overrideAttrs {
-      #   version = "0.53.3";
-      #
-      #   hyprland-plugins-src = pkgs.fetchFromGitHub {
-      #     owner = "hyprwm";
-      #     repo = "hyprland-plugins";
-      #     rev = "06c0749a0dac978d89b1a76ae6adc76a3c15dbfa";
-      #     hash = "sha256-eVD4U3Oqzz0VU9ylJ5wo76xDcYKv2CpiiRXq4Is4QdA=";
-      #   };
-      # })
       (pkgs.callPackage ../../../../pkgs/hyprscrolling { })
       hypr-dynamic-cursors
       hyprexpo
-      hyprbars
+      # hyprbars
     ];
     settings = {
       plugin = {

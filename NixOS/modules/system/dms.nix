@@ -13,16 +13,14 @@ let
 in
 {
   imports = [
-    # inputs.dankMaterialShell.nixosModules.dankMaterialShell
     inputs.dms.nixosModules.greeter
   ];
 
   programs = {
     dank-material-shell = {
-  # services.displayManager.dms-greeter = {
       greeter = {
         enable = true;
-        compositor.name = "niri"; # Or "hyprland" or "sway"
+        compositor.name = "hyprland";
 
         configHome = "${home_dir}";
         configFiles = [

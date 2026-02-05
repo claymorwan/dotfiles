@@ -6,7 +6,7 @@
       rounding = 20;
 
       blur = {
-        enabled = false;
+        enabled = true;
         xray = false;
         special = false;
         new_optimizations = true;
