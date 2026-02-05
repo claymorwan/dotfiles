@@ -1,13 +1,6 @@
 ```{.nix #flake-inputs}
 # DMS related stuff
 
-hyprland.url = "github:hyprwm/Hyprland";
-
-hyprland-plugins = {
-  url = "github:hyprwm/hyprland-plugins";
-  inputs.hyprland.follows = "hyprland";
-};
-
 niri = {
   url = "github:sodiboo/niri-flake";
   inputs.nixpkgs.follows = "nixpkgs";
@@ -30,10 +23,7 @@ dgop = {
 
 dms = {
   url = "github:AvengeMedia/DankMaterialShell";
-  inputs = {
-    nixpkgs.follows = "nixpkgs";
-    quickshell.inputs.nixpkgs.follows = "nixpkgs";
-  };
+  inputs.nixpkgs.follows = "nixpkgs";
 };
 
 dsearch = {

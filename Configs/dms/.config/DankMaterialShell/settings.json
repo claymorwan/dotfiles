@@ -16,6 +16,7 @@
   "widgetBackgroundColor": "sch",
   "widgetColorMode": "default",
   "controlCenterTileColorMode": "primary",
+  "buttonColorMode": "primary",
   "cornerRadius": 7,
   "niriLayoutGapsOverride": -1,
   "niriLayoutRadiusOverride": -1,
@@ -561,7 +562,8 @@
       "widgetOutlineColor": "primary",
       "widgetOutlineOpacity": 1,
       "widgetOutlineThickness": 2,
-      "maximizeDetection": true
+      "maximizeDetection": true,
+      "scrollYBehavior": "workspace"
     },
     {
       "id": "bar1768214186318",

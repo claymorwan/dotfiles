@@ -46,9 +46,7 @@
     
     xdp-termfilepickers = {
       url = "github:Guekka/xdg-desktop-portal-termfilepickers";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     
     zen-browser = {
@@ -68,13 +66,6 @@
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-dms.md#flake-inputs>>[0]
     # DMS related stuff
-    
-    hyprland.url = "github:hyprwm/Hyprland";
-    
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
     
     niri = {
       url = "github:sodiboo/niri-flake";
@@ -98,9 +89,7 @@
     
     dms = {
       url = "github:AvengeMedia/DankMaterialShell";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     
     dsearch = {

@@ -21,10 +21,7 @@ spicetify-nix = {
 
 xdp-termfilepickers = {
   url = "github:Guekka/xdg-desktop-portal-termfilepickers";
-  inputs = {
-    nixpkgs.follows = "nixpkgs";
-    treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
-  };
+  inputs.nixpkgs.follows = "nixpkgs";
 };
 
 zen-browser = {
