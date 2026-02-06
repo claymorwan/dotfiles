@@ -228,6 +228,16 @@
       "pattern": "^steam_app_(\\d+)$",
       "replacement": "steam_icon_$1",
       "type": "regex"
+    },
+    {
+      "pattern": ".(.*)-wrapped",
+      "replacement": "$1",
+      "type": "regex"
+    },
+    {
+      "pattern": "filius-Main",
+      "replacement": "filius",
+      "type": "exact"
     }
   ],
   "centeringMode": "index",
@@ -244,7 +254,8 @@
   "appLauncherGridColumns": 4,
   "spotlightCloseNiriOverview": true,
   "spotlightSectionViewModes": {
-    "apps": "list"
+    "apps": "list",
+    "plugin_dankHyprlandWindows": "tile"
   },
   "appDrawerSectionViewModes": {},
   "niriOverviewOverlayEnabled": true,
