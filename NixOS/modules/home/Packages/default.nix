@@ -43,7 +43,7 @@
     # GUI
     equibop
     gradia
-    # (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
+    (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
     packet
     catppuccinifier-gui
     gnome-font-viewer
@@ -55,6 +55,7 @@
     protonvpn-gui
     intiface-central
     polychromatic
+    filius
 
     # Kde stuff
     kdePackages.gwenview

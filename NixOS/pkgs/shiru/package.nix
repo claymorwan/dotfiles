@@ -1,4 +1,3 @@
-# https://github.com/NixOS/nixpkgs/blob/f143438bde4bcba7cb7f156804a8b1c424bd8e0e/pkgs/by-name/sh/shiru/package.nix
 {
   lib,
   stdenv,
@@ -16,13 +15,13 @@
 let
   electron = electron_39;
   pname = "shiru";
-  version = "6.4.1";
+  version = "6.5.0";
 
   src = fetchFromGitHub {
     owner = "RockinChaos";
     repo = "shiru";
     tag = "v${version}";
-    hash = "sha256-aYr5nCGEkYE27ZjODqltsSR7kY9YBwnqbt4qcRwt8TE=";
+    hash = "sha256-URNTgdvUR4q5Wh9TnvJ+Bbx1ggIDupDQX+HFRWHkspM=";
   };
 in
 stdenv.mkDerivation {
@@ -49,7 +48,7 @@ stdenv.mkDerivation {
       cd electron
     '';
     fetcherVersion = 2;
-    hash = "sha256-YINaWE5wB6la31XXuhJlmQhjaNea3dL908e3ybctknY=";
+    hash = "sha256-pIsHvYbjzTnaATiXRPtuR4IgMDDXjmImfexo19tosaU=";
   };
 
   buildPhase = ''

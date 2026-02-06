@@ -14,10 +14,11 @@ in
       windowrule = [
 
         # Tile
-        "match:class Godot match:initial_title Godot, tile on"
+        "match:class Godot, match:initial_title Godot, tile on"
         "match:class jetbrains-.*, match:initial_title ^$, tile on"
         "match:class Aseprite, tile on"
         "match:title Pizza Oven, tile on"
+        "match:class filius-Main, match:title FILIUS, tile on"
 
         # Float
         "match:class guifetch, float on"
@@ -112,7 +113,7 @@ in
       ;
 
       "$blur_modal" =
-        "dms:(modal|polkit|keybinds|notification-center-modal|workspace-overview|color-picker|clipboard|process-list-modal)";
+        "dms:(modal|spotlight|polkit|keybinds|notification-center-modal|workspace-overview|color-picker|clipboard|process-list-modal)";
       layerrule = [
         # Animation
         "match:namespace dms:color-picker, no_anim on"
@@ -128,6 +129,9 @@ in
         "match:namespace $blur_modal, blur on"
         "match:namespace $blur_modal, animation fade"
         "match:namespace $blur_modal, animation popin"
+
+        "match:namespace dms:spotlight, blur on"
+        "match:namespace dms:spotlight, ignore_alpha 0"
 
         "match:namespace dms:(notification-.*), no_screen_share on"
 

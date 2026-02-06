@@ -35,6 +35,10 @@
   "nightModeEnabled": false,
   "animationSpeed": 4,
   "customAnimationDuration": 200,
+  "popoutAnimationSpeed": 1,
+  "popoutCustomAnimationDuration": 150,
+  "modalAnimationSpeed": 1,
+  "modalCustomAnimationDuration": 150,
   "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": false,
   "blurWallpaperOnOverview": false,
@@ -198,6 +202,7 @@
   "keyboardLayoutNameCompactMode": true,
   "runningAppsCurrentWorkspace": false,
   "runningAppsGroupByApp": true,
+  "runningAppsCurrentMonitor": false,
   "appIdSubstitutions": [
     {
       "pattern": "Spotify",
@@ -406,6 +411,7 @@
   "osdPosition": 5,
   "osdVolumeEnabled": true,
   "osdMediaVolumeEnabled": true,
+  "osdMediaPlaybackEnabled": true,
   "osdBrightnessEnabled": true,
   "osdIdleInhibitorEnabled": true,
   "osdMicMuteEnabled": true,

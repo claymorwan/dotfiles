@@ -1,4 +1,4 @@
-From 57103351d1c10d6aea2432943a12e07b8b88b08a Mon Sep 17 00:00:00 2001
+From b6518afe2dcbd07cde4abb15187c90b1e55f5ca5 Mon Sep 17 00:00:00 2001
 From: Naomi Roberts <mia@naomieow.xyz>
 Date: Thu, 4 Dec 2025 19:59:48 +0000
 Subject: [PATCH] Remove Windows-specific dep
@@ -9,15 +9,15 @@ Signed-off-by: Naomi Roberts <mia@naomieow.xyz>
  electron/src/main/app.js    | 17 +----------------
  electron/webpack.config.cjs |  4 +---
  package.json                |  1 -
- pnpm-lock.yaml              | 16 ----------------
- 5 files changed, 2 insertions(+), 37 deletions(-)
+ pnpm-lock.yaml              | 18 +-----------------
+ 5 files changed, 3 insertions(+), 38 deletions(-)
 
 diff --git a/electron/package.json b/electron/package.json
-index d3b6228b..3dfa1968 100644
+index 880b0dd7..824594b2 100644
 --- a/electron/package.json
 +++ b/electron/package.json
 @@ -26,7 +26,6 @@
-     "webpack-merge": "^6.0.1"
+     "electron-updater": "^6.8.2"
    },
    "dependencies": {
 -    "@paymoapp/electron-shutdown-handler": "^1.1.2",
@@ -25,18 +25,18 @@ index d3b6228b..3dfa1968 100644
      "concurrently": "^9.2.1",
      "jimp": "0.22.12",
 diff --git a/electron/src/main/app.js b/electron/src/main/app.js
-index 7959ab6d..6e87d797 100644
+index 0b5597d9..8a92c67c 100644
 --- a/electron/src/main/app.js
 +++ b/electron/src/main/app.js
-@@ -6,7 +6,6 @@ import Jimp from 'jimp'
+@@ -7,7 +7,6 @@ import Jimp from 'jimp'
  import fs from 'fs'
  
  import { BrowserWindow, MessageChannelMain, Notification, Tray, Menu, nativeImage, app, dialog, ipcMain, powerMonitor, shell, session } from 'electron'
 -import electronShutdownHandler from '@paymoapp/electron-shutdown-handler'
  
- import { development } from './util.js'
+ import { development, getWindowState, saveWindowState, getDefaultBounds } from './util.js'
  import Discord from './discord.js'
-@@ -126,21 +125,7 @@ export default class App {
+@@ -162,21 +161,7 @@ export default class App {
        notification.show()
      })
  
@@ -60,10 +60,10 @@ index 7959ab6d..6e87d797 100644
      this.mainWindow.loadURL(development ? 'http://localhost:5000/app.html' : `file://${join(__dirname, '/app.html')}`)
  
 diff --git a/electron/webpack.config.cjs b/electron/webpack.config.cjs
-index 83d202bc..a7ec5627 100644
+index ac8742fc..109174bc 100644
 --- a/electron/webpack.config.cjs
 +++ b/electron/webpack.config.cjs
-@@ -69,9 +69,7 @@ module.exports = [
+@@ -71,9 +71,7 @@ module.exports = [
        path: join(__dirname, 'build'),
        filename: 'main.js'
      },
@@ -75,11 +75,11 @@ index 83d202bc..a7ec5627 100644
        aliasFields: [],
        alias: {
 diff --git a/package.json b/package.json
-index b74d8391..22735493 100644
+index eed93f59..0355460b 100644
 --- a/package.json
 +++ b/package.json
-@@ -48,7 +48,6 @@
-       "rfdc": "patches/rfdc.patch"
+@@ -47,7 +47,6 @@
+       "capacitor-plugin-safe-area": "patches/capacitor-plugin-safe-area.patch"
      },
      "onlyBuiltDependencies": [
 -      "@paymoapp/electron-shutdown-handler",
@@ -87,10 +87,10 @@ index b74d8391..22735493 100644
        "electron",
        "fs-native-extensions",
 diff --git a/pnpm-lock.yaml b/pnpm-lock.yaml
-index d13d3475..d704f875 100644
+index 3dea86aa..41e1b09b 100644
 --- a/pnpm-lock.yaml
 +++ b/pnpm-lock.yaml
-@@ -251,9 +251,6 @@ importers:
+@@ -275,9 +275,6 @@ importers:
  
    electron:
      dependencies:
@@ -100,17 +100,19 @@ index d13d3475..d704f875 100644
        '@xhayper/discord-rpc':
          specifier: ^1.3.0
          version: 1.3.0(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-@@ -860,9 +857,6 @@ packages:
-     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+@@ -888,10 +885,7 @@ packages:
      deprecated: This functionality has been moved to @npmcli/fs
  
+   '@obsidize/rx-console@6.2.1':
+-    resolution: {integrity: sha512-UXa8S8pNoDmyZ9x2UjU/GJmqEhJ/LGmAI/2V/3njNBQRIxmDFCIPJIavsRv6x+JueNZ4mU1wHE0gU7paT5iWrA==}
+-
 -  '@paymoapp/electron-shutdown-handler@1.1.2':
 -    resolution: {integrity: sha512-/MIC+wdRlVw1Sm56qJcT17O/KBpQARP2tOcAgg1OKB4W83B9IyBBtIoLXkRlpCOEJnGEleuv5HiSBryUgwbFvQ==}
--
++    resolution: {integrity: sha512-UXa8S8pNoDmyZ9x2UjU/GJmqEhJ/LGmAI/2V/3njNBQRIxmDFCIPJIavsRv6xJueNZ4mU1wHE0gU7paT5iWrA==}
+ 
    '@pkgjs/parseargs@0.11.0':
      resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
-     engines: {node: '>=14'}
-@@ -3936,9 +3930,6 @@ packages:
+@@ -3969,9 +3963,6 @@ packages:
    node-addon-api@4.3.0:
      resolution: {integrity: sha512-73sE9+3UaLYYFmDsFZnqCInzPyh3MqIwZO9cw58yIqAZhONrrabrYyYe3TuIqtIiOuTXVhsGau8hcrhhwSsDIQ==}
  
@@ -120,9 +122,9 @@ index d13d3475..d704f875 100644
    node-addon-api@6.1.0:
      resolution: {integrity: sha512-+eawOlIgy680F0kBzPUNFhMZGtJ1YmqM6l4+Crf4IkImjYrO/mqPwRMh352g23uIaQKFItcQ64I7KMaJxHgAVA==}
  
-@@ -6709,11 +6700,6 @@ snapshots:
-       mkdirp: 1.0.4
-       rimraf: 3.0.2
+@@ -6734,11 +6725,6 @@ snapshots:
+ 
+   '@obsidize/rx-console@6.2.1': {}
  
 -  '@paymoapp/electron-shutdown-handler@1.1.2':
 -    dependencies:
@@ -132,7 +134,7 @@ index d13d3475..d704f875 100644
    '@pkgjs/parseargs@0.11.0':
      optional: true
  
-@@ -10356,8 +10342,6 @@ snapshots:
+@@ -10383,8 +10369,6 @@ snapshots:
  
    node-addon-api@4.3.0: {}
  
@@ -142,4 +144,4 @@ index d13d3475..d704f875 100644
  
    node-api-version@0.2.1:
 -- 
-2.51.2
+2.52.0

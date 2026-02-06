@@ -77,6 +77,7 @@
         repeat_rate = 35;
 
         follow_mouse = 0;
+        float_switch_override_focus = 0;
         off_window_axis_events = 2;
 
         touchpad = {
