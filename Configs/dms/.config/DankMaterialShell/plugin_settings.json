@@ -143,5 +143,8 @@
   },
   "dankHyprlandWindows": {
     "enabled": true
+  },
+  "polyglot": {
+    "enabled": true
   }
 }

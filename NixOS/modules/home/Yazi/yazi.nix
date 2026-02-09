@@ -302,6 +302,12 @@
         run = "file";
       }
     ];
+
+    prepend_preloaders = [
+      { name = "*.kra"; run = "krita-preview"; }
+      { name = "*.kra~"; run = "krita-preview"; }
+    ];
+
     preloaders = [
       # Image
       {
@@ -336,12 +342,16 @@
         run = "font";
       }
     ];
+
     prepend_previewers = [
       {
         mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}";
         run = "ouch --archive-icon=' ' --show-file-icons";
       }
+      { name = "*.kra"; run = "krita-preview"; }
+      { name = "*.kra~"; run = "krita-preview"; }
     ];
+
     previewers = [
       {
         url = "*/";

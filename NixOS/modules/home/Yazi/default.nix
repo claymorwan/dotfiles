@@ -56,6 +56,12 @@ in
         rev = "b04213d2f4ca6079bef37491be07860baa8264b9";
         hash = "sha256-hJVFZvcHgcjmcwUUGs1Q668KjeLSCEVuAhAD1A8ZM90=";
       };
+      krita-preview = pkgs.fetchFromGitHub {
+        owner = "walldmtd";
+        repo = "krita-preview.yazi";
+        rev = "2a1e66ef41d6c8b70ca13d9021f6a1a7e14f4c63";
+        hash = "sha256-7C7Bsb8nKFMxqwIHHyU6hw5qdkaHVmUPIN2g2j9gTEY=";
+      };
     };
   };
 

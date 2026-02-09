@@ -55,7 +55,6 @@
     protonvpn-gui
     intiface-central
     polychromatic
-    filius
 
     # Kde stuff
     kdePackages.gwenview

@@ -89,6 +89,8 @@ in
         dankGifSearch.enable = true;
 
         dankHyprlandWindows.enable = true;
+
+        polyglot.enable = true;
       };
     };
   };
