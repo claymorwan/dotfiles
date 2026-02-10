@@ -52,6 +52,11 @@ in
         action.spawn-sh = "dms screenshot window --stdout | gradia";
         hotkey-overlay.title = "Screenshot (window)";
       };
+
+      "Mod+Shift+P" = {
+        action.spawn = [ "nirius" "toggle-follow-mode" ];
+        hotkey-overlay.title = "Pin window";
+      };
     };
   };
 }

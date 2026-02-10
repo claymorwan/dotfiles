@@ -10,7 +10,8 @@ in
       # { argv = [ "mpris-proxy" ]; }
       { sh =  "sleep 3; ${discord} --start-minimized"; }
       # { argv = [ "nsticky" ]; }
-      { argv = [ "niri-float-sticky" ]; }
+      # { argv = [ "niri-float-sticky" ]; }
+      { argv = [ "niriusd" ]; }
     ];
   };
 }

@@ -45,6 +45,7 @@
     gradia
     (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
     packet
+    localsend
     catppuccinifier-gui
     gnome-font-viewer
     gnome-disk-utility

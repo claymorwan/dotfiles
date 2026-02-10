@@ -14,7 +14,8 @@
     "shellPath": "/bin/sh"
   },
   "emojiLauncher": {
-    "enabled": true
+    "enabled": true,
+    "trigger": ";"
   },
   "linuxWallpaperEngine": {
     "enabled": true,
@@ -146,5 +147,13 @@
   },
   "polyglot": {
     "enabled": true
+  },
+  "commandRunner": {
+    "enabled": true,
+    "terminal": "ghostty",
+    "history": [
+      "yes"
+    ],
+    "trigger": ">"
   }
 }

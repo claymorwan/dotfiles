@@ -20,7 +20,7 @@ in
     dank-material-shell = {
       greeter = {
         enable = true;
-        compositor.name = "hyprland";
+        compositor.name = "niri";
 
         configHome = "${home_dir}";
         configFiles = [

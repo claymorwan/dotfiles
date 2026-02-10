@@ -249,7 +249,13 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {},
   "appPickerViewMode": "grid",
-  "filePickerUsageHistory": {},
+  "filePickerUsageHistory": {
+    "org.kde.gwenview": {
+      "count": 2,
+      "lastUsed": 1770671124207,
+      "name": "Gwenview"
+    }
+  },
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 4,
   "spotlightCloseNiriOverview": true,

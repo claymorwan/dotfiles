@@ -193,4 +193,10 @@ in
       }
     ];
   };
+
+  xdg.configFile."niri/dms/rules.kdl".text = ''
+    window-rule {
+      open-maximized-to-edges false
+    }
+  '';
 }

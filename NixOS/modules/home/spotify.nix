@@ -9,7 +9,7 @@ in
   ];
 
   programs.spicetify = {
-    # enable = true;
+    enable = true;
     enabledExtensions = with spicePkgs.extensions; [
       catJamSynced
       beautifulLyrics

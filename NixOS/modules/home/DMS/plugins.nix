@@ -45,52 +45,29 @@ in
 
     dank-material-shell = {
       plugins = {
-
-        # Wallpaper engine
         linuxWallpaperEngine.enable = true;
-
-        # Web search
         webSearch.enable = true;
-
-        # Calculator
         calculator.enable = true;
-
-        # Emoji launcher
         emojiLauncher.enable = true;
-
-        # docker manager
         dockerManager.enable = true;
-
-        # Pomodoro
         dankPomodoroTimer.enable = true;
-
-        # Weather desktop
         dankDesktopWeather.enable = true;
-
         alarmClock.enable = true;
-
         appShortcut.enable = true;
-
         mediaPlayer.enable = true;
-
         desktopCommand.enable = true;
-
         amdGpuMonitor.enable = true;
-
+        mediaFrame.enable = true;
+        dankGifSearch.enable = true;
+        dankHyprlandWindows.enable = true;
+        polyglot.enable = true;
+        commandRunner.enable = true;
         # KDE Connect
         # Plugins doesn't work when called `dankKDEConnect`, so i gotta do this to rename it
         phoneConnect = {
           enable = true;
           src = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.dankKDEConnect;
         };
-
-        mediaFrame.enable = true;
-
-        dankGifSearch.enable = true;
-
-        dankHyprlandWindows.enable = true;
-
-        polyglot.enable = true;
       };
     };
   };

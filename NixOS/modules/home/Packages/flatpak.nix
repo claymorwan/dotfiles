@@ -9,6 +9,7 @@
     enable = true;
 
     packages = [
+      "com.github.tchx84.Flatseal"
       "org.vinegarhq.Sober"
       "io.github.marco_calautti.DeltaPatcher"
       "de.lernsoftware_filius.Filius"
