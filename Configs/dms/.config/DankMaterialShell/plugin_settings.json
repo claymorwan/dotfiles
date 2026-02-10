@@ -152,6 +152,7 @@
     "enabled": true,
     "terminal": "ghostty",
     "history": [
+      "lur",
       "yes"
     ],
     "trigger": ">"

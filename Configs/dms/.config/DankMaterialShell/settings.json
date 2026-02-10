@@ -238,6 +238,16 @@
       "pattern": "filius-Main",
       "replacement": "filius",
       "type": "exact"
+    },
+    {
+      "pattern": "^Minecraft\\* 1\\.\\d+\\.\\d+$",
+      "replacement": "minecraft",
+      "type": "regex"
+    },
+    {
+      "pattern": "io-github-gaming32-modloadingscreen-ActualLoadingScreen",
+      "replacement": "minecraft",
+      "type": "exact"
     }
   ],
   "centeringMode": "index",

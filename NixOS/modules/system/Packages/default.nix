@@ -72,8 +72,8 @@ in
     imagemagick
     amdgpu_top
     # inputs.entangled.packages.${pkgs.stdenv.hostPlatform.system}.default
-    gpu-screen-recorder
-    gpu-screen-recorder-gtk
+    usbutils
+    wlr-randr
 
     gnumake
     gcc
