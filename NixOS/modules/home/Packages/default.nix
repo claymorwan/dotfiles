@@ -45,8 +45,8 @@
     (pkgs.gradia.overrideAttrs {
       version = "1.11.3";
       src = pkgs.fetchzip {
-        url = "https://github.com/AlexanderVanhee/Gradia/472a970e10c3a85f9db938719ebba121321c1d90.zip";
-        hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        url = "https://github.com/AlexanderVanhee/Gradia/archive/472a970e10c3a85f9db938719ebba121321c1d90.zip";
+        hash = "sha256-wVQzvkLB9XOp5mOopYbgMTs8lwNhvPyYzlIjh4e48pU=";
       };
     })
     (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
