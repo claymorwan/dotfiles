@@ -1,6 +1,6 @@
 {
   home.sessionVariables = {
-    # QT_QPA_PLATFORM =  "wayland,xcb";
+    QT_QPA_PLATFORM =  "wayland";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
 
@@ -10,7 +10,6 @@
     APP2UNIT_SLICES = "a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice";
 
     MOZ_LEGACY_PROFILES = 1;
-    # KRITA_NO_STYLE_OVERRIDE = 1;
 
     # GDK_BACKEND = "wayland,x11";
     # SDL_VIDEODRIVER = "wayland,x11";

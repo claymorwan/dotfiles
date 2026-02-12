@@ -43,18 +43,12 @@ in
       ouch = pkgs.yaziPlugins.ouch;
       glow = pkgs.yaziPlugins.glow;
       lutris = "${claymorwan-plugin}/lutris.yazi";
-      # shell = "${claymorwan-plugin}/shell.yazi";
+      shell = "${claymorwan-plugin}/shell.yazi";
       yamb = pkgs.fetchFromGitHub {
         owner = "h-hg";
         repo = "yamb.yazi";
         rev = "5f2e22e784dd5fc830cd85885a6d1d6690b52298";
         hash = "sha256-3Cp3+v0laSVsDdTyG26EOh2xt18ER8P9Nla9vtRuj9k=";
-      };
-      custom-shell = pkgs.fetchFromGitHub {
-        owner = "AnirudhG07";
-        repo = "custom-shell.yazi";
-        rev = "b04213d2f4ca6079bef37491be07860baa8264b9";
-        hash = "sha256-hJVFZvcHgcjmcwUUGs1Q668KjeLSCEVuAhAD1A8ZM90=";
       };
       krita-preview = pkgs.fetchFromGitHub {
         owner = "walldmtd";
