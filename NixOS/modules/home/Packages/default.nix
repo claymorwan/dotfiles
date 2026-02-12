@@ -42,7 +42,13 @@
 
     # GUI
     equibop
-    gradia
+    (pkgs.gradia.override {
+      version = "1.11.3";
+      src = pkgs.fetchzip {
+        url = "https://github.com/AlexanderVanhee/Gradia/472a970e10c3a85f9db938719ebba121321c1d90.zip";
+        hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+      };
+    })
     (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
     packet
     localsend
@@ -56,6 +62,7 @@
     protonvpn-gui
     intiface-central
     polychromatic
+    kdePackages.dolphin
 
     # Kde stuff
     kdePackages.gwenview

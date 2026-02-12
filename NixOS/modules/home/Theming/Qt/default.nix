@@ -1,11 +1,6 @@
 #TODO clean up this mess, qt theming with nix is lowkey harder than i thought lol
 
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}:
+{ pkgs, lib, config, ... }:
 
 let
   qtctSettings = {
@@ -26,27 +21,6 @@ in
   home.packages = with pkgs; [
     kdePackages.qtstyleplugin-kvantum
     libsForQt5.qtstyleplugin-kvantum
-
-    # (pkgs.callPackage ../../../../pkgs/qtct/qt6ct.nix { })
-    # (pkgs.callPackage ../../../../pkgs/qtct/qt5ct.nix { })
-
-    # (kdePackages.qt6ct.overrideAttrs (finalAttrs: previousAttrs: {
-    #   patches = [
-    #     fetchpatch {
-    #       url = "https://aur.archlinux.org/cgit/aur.git/plain/qt6ct-shenanigans.patch?h=qt6ct-kde";
-    #       hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-    #     }
-    #   ];
-    # }))
-    #
-    # (libsForQt5.qt5ct.overrideAttrs (finalAttrs: previousAttrs: {
-    #   patches = [
-    #     fetchpatch {
-    #       url = "https://aur.archlinux.org/cgit/aur.git/plain/qt5ct-shenanigans.patch?h=qt5ct-kde";
-    #       hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-    #     }
-    #   ];
-    # }))
   ];
 
   qt = {
@@ -72,7 +46,20 @@ in
     # };
   };
 
-  xdg = {
+  xdg = let
+    kdeTheme = {
+      enable = true;
+      text = ''
+        [UiSettings]
+        ColorScheme=*
+      ''
+      + (builtins.readFile "${
+        pkgs.catppuccin-kde.override {
+          flavour = [ ctp_flavor ];
+          accents = [ ctp_accent ];
+        }}/share/color-schemes/CatppuccinMochaMauve.colors");
+    };
+  in {
     configFile = {
       "Kvantum/libadwaita-kde-mocha-mauve".source =
         "${(pkgs.callPackage ./libadwaita-kde.nix { })}/share/Kvantum/libadwaita-kde-${ctp_flavor}-${ctp_accent}";
@@ -82,25 +69,9 @@ in
       '';
       
       # KDE theme
-      "kdeglobals" = {
-        enable = true;
-        text = ''
-          [UiSettings]
-          ColorScheme=*
-        ''
-        + (builtins.readFile "${
-          pkgs.catppuccin-kde.override {
-            flavour = [ ctp_flavor ];
-            accents = [ ctp_accent ];
-          }
-          }/share/color-schemes/CatppuccinMochaMauve.colors");
-      };
+      "kdeglobals" = kdeTheme;
     };
 
-    dataFile."krita/color-schemes/CatppuccinMochaMauve.colors".source =
-      "${pkgs.fetchzip {
-        url = "https://github.com/catppuccin/kde/releases/download/v0.2.6/Mocha-color-schemes.tar.gz";
-        hash = "sha256-I5WIXubfArLsrELLdWvuN66VsQ3dr7PzxYBlzz9qBBI=";
-      }}/CatppuccinMochaMauve.colors";
+    dataFile."krita/color-schemes/CatppuccinMochaMauve.colors" = kdeTheme;
   };
 }

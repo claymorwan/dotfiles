@@ -623,6 +623,10 @@
         {
           "id": "dankKDEConnect",
           "enabled": true
+        },
+        {
+          "id": "colorPicker",
+          "enabled": true
         }
       ],
       "centerWidgets": [

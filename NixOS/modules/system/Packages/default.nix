@@ -43,7 +43,7 @@ in
       package = pkgs.valent;
     };
 
-    # gpu-screen-recorder.enable = true;
+    gpu-screen-recorder.enable = true;
     droidcam.enable = true;
   };
 

@@ -13,6 +13,7 @@
       "org.vinegarhq.Sober"
       "io.github.marco_calautti.DeltaPatcher"
       "de.lernsoftware_filius.Filius"
+      "be.alexandervanhee.gradia"
     ];
 
     overrides = {
