@@ -42,7 +42,7 @@
 
     # GUI
     equibop
-    (pkgs.gradia.override {
+    (pkgs.gradia.overrideAttrs {
       version = "1.11.3";
       src = pkgs.fetchzip {
         url = "https://github.com/AlexanderVanhee/Gradia/472a970e10c3a85f9db938719ebba121321c1d90.zip";
