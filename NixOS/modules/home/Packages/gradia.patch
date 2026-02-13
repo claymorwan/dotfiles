@@ -1,0 +1,26 @@
+diff --git a/gradia/ui/image_exporters.py b/gradia/ui/image_exporters.py
+index 5a3477b..d0c2d39 100644
+--- a/gradia/ui/image_exporters.py
++++ b/gradia/ui/image_exporters.py
+@@ -100,7 +100,7 @@ class BaseImageExporter:
+     def _get_dynamic_filename(self, extension: str = ".png") -> str:
+         original_name = self.window.image.get_proper_name(with_extension=False)
+         if self.window.image.has_proper_name():
+-            return f"{original_name} ({_('Edit')}){extension}"
++            return f"{original_name}{extension}"
+         else:
+             return f"{original_name}{extension}"
+         return f"{_('Enhanced Screenshot')}{extension}"
+diff --git a/gradia/utils/std_image_loader.py b/gradia/utils/std_image_loader.py
+index 8a2fa62..82147c4 100644
+--- a/gradia/utils/std_image_loader.py
++++ b/gradia/utils/std_image_loader.py
+@@ -35,7 +35,7 @@ class StdinImageLoader:
+             image.load()
+ 
+             temp_dir = self.get_flatpak_safe_temp_dir()
+-            filename = TimestampedFilenameGenerator().generate(_("Edited Image From %Y-%m-%d %H-%M-%S")) + ".png"
++            filename = TimestampedFilenameGenerator().generate(_("%Y-%m-%d %H-%M-%S")) + ".png"
+             temp_path = os.path.join(temp_dir, filename)
+             Path(temp_dir).mkdir(parents=True, exist_ok=True)
+ 

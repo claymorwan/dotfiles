@@ -32,7 +32,7 @@
         "fps": 30
       }
     },
-    "generateStaticWallpaper": false
+    "generateStaticWallpaper": true
   },
   "screenshot": {
     "enabled": true,

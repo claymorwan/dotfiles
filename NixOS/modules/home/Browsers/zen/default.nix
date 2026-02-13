@@ -63,37 +63,38 @@ in
           "zen.view.compact.enable-at-startup" = true;
         };
 
-        mods = [
-          # Better Find Bar
-          "a6335949-4465-4b71-926c-4a52d34bc9c0"
-
-          # SuperPins
-          "ad97bb70-0066-4e42-9b5f-173a5e42c6fc"
-
-          # Audio Indicator Enhanced
-          "2317fd93-c3ed-4f37-b55a-304c1816819e"
-
-          # Pimp your PiP
-          "599a1599-e6ab-4749-ab22-de533860de2c"
-
-          # Trackpad Animation
-          "8039de3b-72e1-41ea-83b3-5077cf0f98d1"
-
-          # Ghost Tabs
-          "c01d3e22-1cee-45c1-a25e-53c0f180eea8"
-
-          # Vertical Split Tab Groups
-          "4c2bec61-7f6c-4e5c-bdc6-c9ad1aba1827"
-
-          # Tab Preview Enhanced
-          "87196c08-8ca1-4848-b13b-7ea41ee830e7"
-
-          # Better Active Tab
-          "d8b79d4a-6cba-4495-9ff6-d6d30b0e94fe"
-
-          # Better CtrlTab Panel
-          "72f8f48d-86b9-4487-acea-eb4977b18f21"
-        ];
+        sine.enable = true;
+        # mods = [
+        #   # Better Find Bar
+        #   "a6335949-4465-4b71-926c-4a52d34bc9c0"
+        #
+        #   # SuperPins
+        #   "ad97bb70-0066-4e42-9b5f-173a5e42c6fc"
+        #
+        #   # Audio Indicator Enhanced
+        #   "2317fd93-c3ed-4f37-b55a-304c1816819e"
+        #
+        #   # Pimp your PiP
+        #   "599a1599-e6ab-4749-ab22-de533860de2c"
+        #
+        #   # Trackpad Animation
+        #   "8039de3b-72e1-41ea-83b3-5077cf0f98d1"
+        #
+        #   # Ghost Tabs
+        #   "c01d3e22-1cee-45c1-a25e-53c0f180eea8"
+        #
+        #   # Vertical Split Tab Groups
+        #   "4c2bec61-7f6c-4e5c-bdc6-c9ad1aba1827"
+        #
+        #   # Tab Preview Enhanced
+        #   "87196c08-8ca1-4848-b13b-7ea41ee830e7"
+        #
+        #   # Better Active Tab
+        #   "d8b79d4a-6cba-4495-9ff6-d6d30b0e94fe"
+        #
+        #   # Better CtrlTab Panel
+        #   "72f8f48d-86b9-4487-acea-eb4977b18f21"
+        # ];
       };
     };
 
