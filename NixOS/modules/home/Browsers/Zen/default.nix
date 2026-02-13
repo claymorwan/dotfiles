@@ -1,9 +1,4 @@
-{
-  pkgs,
-  inputs,
-  config,
-  ...
-}:
+{ pkgs, inputs, config, ... }:
 
 let
   version = "beta";
@@ -20,19 +15,10 @@ in
 {
   imports = [
     inputs.zen-browser.homeModules.${version}
-    # or inputs.zen-browser.homeModules.twilight
-    # or inputs.zen-browser.homeModules.twilight-official
   ];
 
   programs.zen-browser = {
     enable = true;
-
-    # package = let   
-    #   custom-zen = inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.beta-unwrapped.overrideAttrs (oldAttrs: rec {
-    #     makeDesktopItem = oldAttrs.exec // "${oldAttrs.binaryName} -p default %u";
-    #   });
-    # in 
-    # (config.lib.nixGL.wrap ((pkgs.wrapFirefox) custom-zen {}));
 
     nativeMessagingHosts = with pkgs; [
       kdePackages.plasma-browser-integration
@@ -55,46 +41,30 @@ in
           "browser.uiCustomization.state" = builtins.readFile ./layout.json;
           "general.smoothScroll.msdPhysics.enabled" = true;
 
-
+          # Zen specific options
           "zen.view.use-single-toolbar" = false;
           "zen.urlbar.replace-newtab" = false;
           "zen.view.compact.hide-tabbar" = true;
           "zen.view.compact.hide-toolbar" = true;
           "zen.view.compact.enable-at-startup" = true;
+
+          # Mods
+          #- Advanced Tab Groups
+          "browser.tabs.groups.enabled" = true;
+          #- Audio wave
+          "zen.mods.AudioIndicatorEnhanced.returnOldIcons" = false;
+          "zen.mods.AudioIndicatorEnhanced.audioWave.enabled" = true;
+          #- Better find bar
+          "theme-better_find_bar-enable_custom_background" = true;
+          "theme.better_find_bar.custom_background" = "#1E1E2E";
+          #- Context menu icon
+          "cmi-Switch-Icon-Package" = 2;
+          #- Tidy popup
+          "mod.tidypopup.usecustomhovercolor" = true;
+          "mod.tidypopup.hovercolor" = "#313244"; #"rgba(203, 166, 247, 1)"
         };
 
         sine.enable = true;
-        # mods = [
-        #   # Better Find Bar
-        #   "a6335949-4465-4b71-926c-4a52d34bc9c0"
-        #
-        #   # SuperPins
-        #   "ad97bb70-0066-4e42-9b5f-173a5e42c6fc"
-        #
-        #   # Audio Indicator Enhanced
-        #   "2317fd93-c3ed-4f37-b55a-304c1816819e"
-        #
-        #   # Pimp your PiP
-        #   "599a1599-e6ab-4749-ab22-de533860de2c"
-        #
-        #   # Trackpad Animation
-        #   "8039de3b-72e1-41ea-83b3-5077cf0f98d1"
-        #
-        #   # Ghost Tabs
-        #   "c01d3e22-1cee-45c1-a25e-53c0f180eea8"
-        #
-        #   # Vertical Split Tab Groups
-        #   "4c2bec61-7f6c-4e5c-bdc6-c9ad1aba1827"
-        #
-        #   # Tab Preview Enhanced
-        #   "87196c08-8ca1-4848-b13b-7ea41ee830e7"
-        #
-        #   # Better Active Tab
-        #   "d8b79d4a-6cba-4495-9ff6-d6d30b0e94fe"
-        #
-        #   # Better CtrlTab Panel
-        #   "72f8f48d-86b9-4487-acea-eb4977b18f21"
-        # ];
       };
     };
 
