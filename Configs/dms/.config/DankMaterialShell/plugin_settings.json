@@ -59,15 +59,6 @@
         "keywords": [
           "fl"
         ]
-      },
-      {
-        "id": "hm",
-        "name": "Home Manager",
-        "icon": "unicode:",
-        "url": "https://home-manager-options.extranix.com/?query=%s&release=master",
-        "keywords": [
-          "hm"
-        ]
       }
     ],
     "defaultEngine": "duckduckgo",
@@ -156,5 +147,14 @@
       "yes"
     ],
     "trigger": ">"
+  },
+  "developerUtilities": {
+    "enabled": true
+  },
+  "githubHeatmap": {
+    "enabled": false,
+    "username": "claymorwan",
+    "pat": "",
+    "refreshInterval": 300
   }
 }

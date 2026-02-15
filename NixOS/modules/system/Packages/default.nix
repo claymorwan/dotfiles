@@ -70,7 +70,6 @@ in
     unzip
     efibootmgr
     imagemagick
-    amdgpu_top
     # inputs.entangled.packages.${pkgs.stdenv.hostPlatform.system}.default
     usbutils
     wlr-randr
@@ -83,9 +82,8 @@ in
     luajitPackages.luarocks
     go
     dotnetCorePackages.sdk_9_0_1xx-bin
-    nimble
 
-    wineWowPackages.staging
+    # wineWowPackages.staging
 
     vlc
   ];

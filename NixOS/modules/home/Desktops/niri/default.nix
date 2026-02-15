@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, ... }:
+{ inputs, pkgs, lib, osConfig, ... }:
 
 let
   inherit (import ../../../../variables)
@@ -20,7 +20,7 @@ in
 
   programs = {
     niri = {
-      package = pkgs.niri;
+      package = osConfig.programs.niri.package;
       settings = {
         prefer-no-csd = true;
         input = {

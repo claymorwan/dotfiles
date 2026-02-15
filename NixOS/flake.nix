@@ -104,7 +104,6 @@
     }:
     let
       username = "claymorwan";
-      # system = "x86_64-linux";
 
       mkNixosConfig =
         host:

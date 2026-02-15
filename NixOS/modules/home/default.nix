@@ -5,7 +5,6 @@
     ./Art
     ./Browsers
     ./catppuccin.nix
-    ./Cursors
     ./Desktops
     # ./discord.nix
     ./DMS

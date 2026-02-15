@@ -276,7 +276,9 @@
     "apps": "list",
     "plugin_dankHyprlandWindows": "tile"
   },
-  "appDrawerSectionViewModes": {},
+  "appDrawerSectionViewModes": {
+    "apps": "list"
+  },
   "niriOverviewOverlayEnabled": true,
   "dankLauncherV2Size": "compact",
   "dankLauncherV2BorderEnabled": true,
@@ -438,6 +440,7 @@
   "notificationHistorySaveLow": true,
   "notificationHistorySaveNormal": true,
   "notificationHistorySaveCritical": true,
+  "notificationRules": [],
   "osdAlwaysShowValue": true,
   "osdPosition": 5,
   "osdVolumeEnabled": true,
@@ -631,6 +634,10 @@
         {
           "id": "colorPicker",
           "enabled": true
+        },
+        {
+          "id": "developerUtilities",
+          "enabled": true
         }
       ],
       "centerWidgets": [
@@ -640,6 +647,10 @@
         }
       ],
       "rightWidgets": [
+        {
+          "id": "githubHeatmap",
+          "enabled": true
+        },
         {
           "id": "systemTray",
           "enabled": true

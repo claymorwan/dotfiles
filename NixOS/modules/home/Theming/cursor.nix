@@ -11,7 +11,7 @@ in
     enable = true;
 
     name = "${mouse_cursor}";
-    package = (pkgs.callPackage ./cursor.nix { });
+    package = (pkgs.callPackage ../../../pkgs/cursors { });
 
     hyprcursor = {
       enable = true;

@@ -1,7 +1,7 @@
 { stdenvNoCC }:
 
 let
-  inherit (import ./../../../variables)
+  inherit (import ../../variables)
     mouse_cursor
     ;
 in

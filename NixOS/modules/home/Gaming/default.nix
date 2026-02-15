@@ -13,11 +13,11 @@
     limo
     gale
     olympus
-    (heroic.override {
-      extraPkgs = pkgs: [
-        pkgs.proton-ge-bin
-      ];
-    })
+    # (heroic.override {
+    #   extraPkgs = pkgs: [
+    #     pkgs.proton-ge-bin
+    #   ];
+    # })
     faugus-launcher
     # wine-discord-ipc-bridge
 

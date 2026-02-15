@@ -92,6 +92,12 @@ in
 
       # ULTRAKILL
       "1229490" = winGameOptions;
+
+      # Pizza tower
+      "2231450" = winGameOptions;
+
+      # Ena DBBQ
+      "2134320" = gameOptions;
     };
   };
 }

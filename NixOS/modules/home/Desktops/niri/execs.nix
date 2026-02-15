@@ -12,6 +12,7 @@ in
       # { argv = [ "nsticky" ]; }
       # { argv = [ "niri-float-sticky" ]; }
       { argv = [ "niriusd" ]; }
+      { argv = [ "steam" "-silent" ]; }
     ];
   };
 }

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, osConfig, ... }:
 
 {
   imports = [
@@ -22,7 +22,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = pkgs.hyprland;
+    package = osConfig.programs.hyprland.package;
 
     systemd = {
       enable = true;

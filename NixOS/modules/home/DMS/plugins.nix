@@ -1,15 +1,9 @@
-{
-  pkgs,
-  inputs,
-  host,
-  lib,
-  config,
-  ...
-}:
+{ pkgs, inputs, host, lib, config, osConfig, ... }:
 
 let
   inherit (import ../../../variables)
     flake_dir
+    enableHyprland
     ;
 in
 
@@ -19,6 +13,12 @@ in
     inputs.dms-plugin-registry.modules.default
     inputs.nix-monitor.homeManagerModules.default
   ];
+
+  # Deps for plugins
+  home.packages = with pkgs; [
+    (lib.mkIf config.programs.dank-material-shell.plugins.githubHeatmap.enable fish)
+    (lib.mkIf config.programs.dank-material-shell.plugins.amdGpuMonitor.enable amdgpu_top)
+  ]  ;
 
   programs = {
     nix-monitor = {
@@ -39,7 +39,7 @@ in
       gcCommand = [
         "zsh"
         "-c"
-        "sudo ${pkgs.nh}/bin/nh clean all ${config.programs.nh.clean.extraArgs}"
+        "sudo ${pkgs.nh}/bin/nh clean all ${osConfig.programs.nh.clean.extraArgs}"
       ];
     };
 
@@ -59,13 +59,15 @@ in
         amdGpuMonitor.enable = true;
         mediaFrame.enable = true;
         dankGifSearch.enable = true;
-        dankHyprlandWindows.enable = true;
+        dankHyprlandWindows.enable = (if enableHyprland then true else false);
         polyglot.enable = true;
         commandRunner.enable = true;
+        developerUtilities.enable = true;
+        githubHeatmap.enable = true;
         # KDE Connect
         # Plugins doesn't work when called `dankKDEConnect`, so i gotta do this to rename it
         phoneConnect = {
-          enable = true;
+          enable = osConfig.programs.kdeconnect.enable;
           src = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.dankKDEConnect;
         };
       };

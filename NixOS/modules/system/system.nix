@@ -2,6 +2,7 @@
   host,
   pkgs,
   options,
+  username,
   ...
 }:
 
@@ -13,7 +14,13 @@
       daemon.enable = true;
     };
 
-    openrazer.enable = true;
+    openrazer = {
+      enable = true;
+      users = [
+        username
+      ];
+    };
+
     bluetooth.enable = true;
   };
 
