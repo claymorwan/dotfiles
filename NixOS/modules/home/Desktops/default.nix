@@ -5,7 +5,9 @@ let
   ;
 in
 {
-  imports = []
+  imports = [
+    ./Shells
+  ]
   ++ (if enableNiri then [./niri] else [])
   ++ (if enableHyprland then [./hyprland] else [])
   ;

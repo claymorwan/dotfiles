@@ -1171,7 +1171,7 @@
       "id": "dw_1766722143485_14jkl7g83",
       "widgetType": "mediaPlayer",
       "name": "Media Player",
-      "enabled": false,
+      "enabled": true,
       "config": {
         "displayPreferences": [
           {
@@ -1185,7 +1185,8 @@
         ],
         "backgroundOpacity": 100,
         "showOnOverlay": false,
-        "syncPositionAcrossScreens": true
+        "syncPositionAcrossScreens": true,
+        "showOnOverviewOnly": true
       },
       "positions": {
         "DP-1": {
@@ -1201,9 +1202,9 @@
           "height": 210
         },
         "_synced": {
-          "x": 0.03125,
-          "y": 0.5370370370370371,
-          "width": 340,
+          "x": 0.010416666666666666,
+          "y": 0.7962962962962963,
+          "width": 400,
           "height": 200
         }
       }
@@ -1261,6 +1262,11 @@
     {
       "id": "dwg_1769526213643_u8gd7uarl",
       "name": "Game overlay",
+      "collapsed": false
+    },
+    {
+      "id": "dwg_1771238136245_agfojc3hp",
+      "name": "Overview",
       "collapsed": false
     }
   ],

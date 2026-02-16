@@ -1,7 +1,7 @@
 { pkgs, inputs, host, lib, config, osConfig, ... }:
 
 let
-  inherit (import ../../../variables)
+  inherit (import ../../../../../variables)
     flake_dir
     enableHyprland
     ;

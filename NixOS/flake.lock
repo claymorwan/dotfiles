@@ -897,6 +897,26 @@
         "type": "github"
       }
     },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1771233967,
+        "narHash": "sha256-r1XXTG4BMBj88btkpwYeymDPOlh2YfTz+6Kf6+nB+UA=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell",
+        "rev": "a9de816c721a0d1545670d96282adfcc0c29e5ef",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell",
+        "type": "github"
+      }
+    },
     "pyproject-nix": {
       "inputs": {
         "nixpkgs": [
@@ -984,6 +1004,26 @@
         "url": "https://git.outfoxxed.me/quickshell/quickshell"
       }
     },
+    "quickshell_2": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1770693276,
+        "narHash": "sha256-ngXnN5YXu+f45+QGYNN/VEBMQmcBCYGRCqwaK8cxY1s=",
+        "ref": "refs/heads/master",
+        "rev": "dacfa9de829ac7cb173825f593236bf2c21f637e",
+        "revCount": 735,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      }
+    },
     "re2-src": {
       "flake": false,
       "locked": {
@@ -1038,6 +1078,8 @@
         "nix-output-monitor": "nix-output-monitor",
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs_4",
+        "noctalia": "noctalia",
+        "quickshell": "quickshell_2",
         "spicetify-nix": "spicetify-nix",
         "steam-config-nix": "steam-config-nix",
         "xdp-termfilepickers": "xdp-termfilepickers",

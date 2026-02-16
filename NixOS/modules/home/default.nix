@@ -7,7 +7,6 @@
     ./catppuccin.nix
     ./Desktops
     # ./discord.nix
-    ./DMS
     ./Editors
     ./env.nix
     ./fetchs

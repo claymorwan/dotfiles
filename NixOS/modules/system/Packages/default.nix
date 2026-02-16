@@ -40,7 +40,7 @@ in
 
     kdeconnect = {
       enable = true;
-      package = pkgs.valent;
+      # package = pkgs.valent;
     };
 
     # gpu-screen-recorder.enable = true;

@@ -32,7 +32,8 @@
         "fps": 30
       }
     },
-    "generateStaticWallpaper": true
+    "generateStaticWallpaper": true,
+    "monitorPlaylists": {}
   },
   "screenshot": {
     "enabled": true,

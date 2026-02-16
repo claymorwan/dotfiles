@@ -1,7 +1,7 @@
 { inputs, ... }:
 
 let
-  inherit (import ../../../variables)
+  inherit (import ../../../../../variables)
     home_dir
     ;
 in
