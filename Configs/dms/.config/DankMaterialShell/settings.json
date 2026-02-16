@@ -496,7 +496,7 @@
   "displayProfiles": {},
   "activeDisplayProfile": {},
   "displayProfileAutoSelect": false,
-  "displayShowDisconnected": false,
+  "displayShowDisconnected": true,
   "displaySnapToEdge": true,
   "barConfigs": [
     {
@@ -649,6 +649,10 @@
       "rightWidgets": [
         {
           "id": "githubHeatmap",
+          "enabled": true
+        },
+        {
+          "id": "displayManager",
           "enabled": true
         },
         {
@@ -1201,53 +1205,6 @@
           "y": 0.5370370370370371,
           "width": 340,
           "height": 200
-        }
-      }
-    },
-    {
-      "id": "dw_1767706327125_38dly7mqi",
-      "widgetType": "desktopCommand",
-      "name": "Desktop Command",
-      "enabled": true,
-      "config": {
-        "displayPreferences": [
-          {
-            "name": "eDP-1",
-            "model": "0x07F1"
-          },
-          {
-            "name": "DP-1",
-            "model": "PLX2283H"
-          }
-        ],
-        "command": "cbonsai",
-        "autoRefresh": false,
-        "commandTimeout": "600",
-        "refreshInterval": "1",
-        "useDank16": true,
-        "backgroundOpacity": 100,
-        "fontSize": 10,
-        "showOnOverviewOnly": false,
-        "syncPositionAcrossScreens": true
-      },
-      "positions": {
-        "DP-1": {
-          "x": 1420,
-          "y": 740,
-          "width": 480,
-          "height": 300
-        },
-        "eDP-1": {
-          "x": 1410,
-          "y": 750,
-          "width": 480,
-          "height": 300
-        },
-        "_synced": {
-          "x": 0.7395833333333334,
-          "y": 0.7037037037037037,
-          "width": 480,
-          "height": 300
         }
       }
     },

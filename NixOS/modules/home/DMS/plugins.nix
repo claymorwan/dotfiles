@@ -18,7 +18,8 @@ in
   home.packages = with pkgs; [
     (lib.mkIf config.programs.dank-material-shell.plugins.githubHeatmap.enable fish)
     (lib.mkIf config.programs.dank-material-shell.plugins.amdGpuMonitor.enable amdgpu_top)
-  ]  ;
+    (lib.mkIf config.programs.dank-material-shell.plugins.displayManager.enable ddcutil)
+  ];
 
   programs = {
     nix-monitor = {
@@ -64,6 +65,7 @@ in
         commandRunner.enable = true;
         developerUtilities.enable = true;
         githubHeatmap.enable = true;
+        displayManager.enable = true;
         # KDE Connect
         # Plugins doesn't work when called `dankKDEConnect`, so i gotta do this to rename it
         phoneConnect = {

@@ -156,5 +156,10 @@
     "username": "claymorwan",
     "pat": "",
     "refreshInterval": 300
+  },
+  "displayManager": {
+    "enabled": true,
+    "brightness_DP-1": 48.15463362068966,
+    "contrast_DP-1": 48.84832974137931
   }
 }

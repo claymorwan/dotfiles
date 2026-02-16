@@ -42,6 +42,7 @@
           "docker"
           "networkmanager"
           "wheel"
+          "i2c"
         ];
         shell = pkgs.zsh;
         ignoreShellProgramCheck = true;
