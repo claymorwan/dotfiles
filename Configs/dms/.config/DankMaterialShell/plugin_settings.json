@@ -20,11 +20,14 @@
   "linuxWallpaperEngine": {
     "enabled": true,
     "monitorScenes": {
-      "eDP-1": "3371368351",
       "HDMI-A-1": "2497747884",
-      "DP-1": "3588332500"
+      "DP-1": "3588332500",
+      "eDP-1": "3371368351"
     },
     "sceneSettings": {
+      "2670952853": {
+        "screenshotDelay": 40
+      },
       "2873539769": {
         "fps": 30
       },
@@ -144,6 +147,7 @@
     "enabled": true,
     "terminal": "ghostty",
     "history": [
+      "sst",
       "lur",
       "yes"
     ],
