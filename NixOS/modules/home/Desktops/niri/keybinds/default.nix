@@ -7,9 +7,9 @@ let
 in 
 {
   imports = [
-    # ./dms.nix
+    ./dms.nix
     ./default-binds.nix
-    ./noctalia.nix
+    # ./noctalia.nix
   ];
   programs.niri.settings = {
     binds = {

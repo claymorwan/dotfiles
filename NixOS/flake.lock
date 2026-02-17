@@ -136,7 +136,9 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "quickshell": "quickshell"
+        "quickshell": [
+          "quickshell"
+        ]
       },
       "locked": {
         "lastModified": 1771039596,
@@ -985,28 +987,6 @@
     "quickshell": {
       "inputs": {
         "nixpkgs": [
-          "dms",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1766725085,
-        "narHash": "sha256-O2aMFdDUYJazFrlwL7aSIHbUSEm3ADVZjmf41uBJfHs=",
-        "ref": "refs/heads/master",
-        "rev": "41828c4180fb921df7992a5405f5ff05d2ac2fff",
-        "revCount": 715,
-        "type": "git",
-        "url": "https://git.outfoxxed.me/quickshell/quickshell"
-      },
-      "original": {
-        "rev": "41828c4180fb921df7992a5405f5ff05d2ac2fff",
-        "type": "git",
-        "url": "https://git.outfoxxed.me/quickshell/quickshell"
-      }
-    },
-    "quickshell_2": {
-      "inputs": {
-        "nixpkgs": [
           "nixpkgs"
         ]
       },
@@ -1079,7 +1059,7 @@
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs_4",
         "noctalia": "noctalia",
-        "quickshell": "quickshell_2",
+        "quickshell": "quickshell",
         "spicetify-nix": "spicetify-nix",
         "steam-config-nix": "steam-config-nix",
         "xdp-termfilepickers": "xdp-termfilepickers",

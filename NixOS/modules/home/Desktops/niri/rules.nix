@@ -195,6 +195,10 @@ in
         matches = [{ namespace = "dms:(modal|spotlight|polkit|keybinds|notification-center-modal|workspace-overview|color-picker|clipboard|process-list-modal)"; }];
         baba-is-float = true;
       }
+      {
+        matches = [{ namespace = "dms:blurwallpaper"; }];
+        place-within-backdrop = true;
+      }
     ];
   };
 

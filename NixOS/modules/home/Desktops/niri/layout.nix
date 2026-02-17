@@ -30,6 +30,6 @@ in
     #   left = 
     # };
 
-    background-color = "#181825";
+    background-color = "transparent";
   };
 }

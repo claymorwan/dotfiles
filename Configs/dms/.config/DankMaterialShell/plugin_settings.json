@@ -20,9 +20,9 @@
   "linuxWallpaperEngine": {
     "enabled": true,
     "monitorScenes": {
-      "DP-1": "3588332500",
       "eDP-1": "3371368351",
-      "HDMI-A-1": "2497747884"
+      "HDMI-A-1": "2497747884",
+      "DP-1": "3588332500"
     },
     "sceneSettings": {
       "2873539769": {

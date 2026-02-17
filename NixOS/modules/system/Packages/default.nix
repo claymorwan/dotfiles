@@ -43,7 +43,7 @@ in
       # package = pkgs.valent;
     };
 
-    # gpu-screen-recorder.enable = true;
+    gpu-screen-recorder.enable = true;
     droidcam.enable = true;
   };
 
@@ -86,6 +86,7 @@ in
     # wineWowPackages.staging
 
     vlc
+    gpu-screen-recorder-gtk
   ];
 
 }
