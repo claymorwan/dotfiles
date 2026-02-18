@@ -28,6 +28,8 @@ in
       LegacyProfiles = true;
     };
 
+    suppressXdgMigrationWarning = true;
+
     profiles = {
       default = let
         containers = {
@@ -41,17 +43,30 @@ in
         spaces = {
           "Default" = {
             id = "572910e1-4468-4832-a669-0b3a93e2f165";
-            icon = "⭐";
+            icon = "󰫢 ";
             position = 1000;
             # container = containers.Main.id;
           };
 
           "Nerd stuff" = {
             id = "42fb3bdc-65e7-4df0-bf85-6608411417c1";
-            icon = "💻";
+            icon = " ";
             position = 1001;
           };
+
+          "Work" = {
+            id = "a395bfd6-baaa-451f-98f0-b6001dc4b616";
+            icon = " ";
+            position = 1002;
+          };
+
+          "𝓯𝓻𝓮𝓪𝓴" = {
+            id = "9c1fa423-c2ae-413b-964b-2d7f77e8792e";
+            # icon = " ";
+            position = 1003;
+          };
         };
+
         pins = {
           "youtube" = {
             id = "21387aaf-f9f6-461f-9932-2cda4edbe952";
@@ -59,6 +74,20 @@ in
             isEssential = true;
             # container = containers.Main.id;
             position = 101;
+          };
+
+          "twitter" = {
+            id = "7c1c6fd1-f12d-427b-a0df-b161723afdb0";
+            url = "https://www.twitter.com/";
+            isEssential = true;
+            position = 102;
+          };
+
+          "bluesky" = {
+            id = "2f8dbc15-93eb-4cc5-8677-029fa2cc7f9a";
+            url = "https://bsky.app/";
+            isEssential = true;
+            position = 103;
           };
         };
       in {

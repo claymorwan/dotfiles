@@ -67,7 +67,8 @@
     ],
     "defaultEngine": "duckduckgo",
     "noTrigger": false,
-    "trigger": "?"
+    "trigger": "?",
+    "disabledEngines": []
   },
   "grimblast": {
     "enabled": true
