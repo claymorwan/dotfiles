@@ -1,4 +1,4 @@
-{ pkgs, inputs, config, ... }:
+{ inputs, pkgs, config, ... }:
 
 let
   version = "beta";
@@ -41,22 +41,22 @@ in
         };
 
         spaces = {
-          "Default" = {
+          Default = {
             id = "572910e1-4468-4832-a669-0b3a93e2f165";
-            icon = "󰫢 ";
+            icon = "✨";
             position = 1000;
             # container = containers.Main.id;
           };
 
           "Nerd stuff" = {
             id = "42fb3bdc-65e7-4df0-bf85-6608411417c1";
-            icon = " ";
+            icon = "🖥️";
             position = 1001;
           };
 
-          "Work" = {
+          Work = {
             id = "a395bfd6-baaa-451f-98f0-b6001dc4b616";
-            icon = " ";
+            icon = "📚";
             position = 1002;
           };
 
@@ -89,6 +89,20 @@ in
             isEssential = true;
             position = 103;
           };
+
+          "soundclouds" = {
+            id = "c434a171-b645-4df3-b909-38e954d47f22";
+            url = "https://soundcloud.com/";
+            isEssential = true;
+            position = 104;
+          };
+
+          "teams" = {
+            id = "c434a171-b645-4df3-b909-38e954d47f22";
+            url = "https://teams.microsoft.com/v2/";
+            workspace = spaces.Work.id;
+            position = 202;
+          };
         };
       in {
         id = 0;
@@ -106,6 +120,9 @@ in
           "browser.toolbars.bookmarks.visibility" = "always";
           "browser.uiCustomization.state" = builtins.readFile ./layout.json;
           "general.smoothScroll.msdPhysics.enabled" = true;
+          "font.name.serif.x-western" = "NotoSerif Nerd Font Propo";
+          "font.name.sans-serif.x-western" = "NotoSans Nerd Font Propo";
+          "font.name.monospace.x-western" = "JetBrainsMono Nerd Font Mono";
 
           # Zen specific options
           "zen.view.use-single-toolbar" = false;
@@ -128,7 +145,7 @@ in
           "cmi-Switch-Icon-Package" = 2;
           #- Tidy popup
           "mod.tidypopup.usecustomhovercolor" = true;
-          "mod.tidypopup.hovercolor" = "#313244"; #"rgba(203, 166, 247, 1)"
+          "mod.tidypopup.hovercolor" = "#313244";
         };
 
         sine = {
@@ -138,6 +155,7 @@ in
             "advanced-tab-groups"
             "context-menu-icons"
             "floating-statusbar"
+            "Neo-Zen"
             ## Deta Loading Bar
             "c9ee0d97-d2d6-40fd-8f85-549fe000b868"
 

@@ -32,7 +32,8 @@
         "fps": 30
       },
       "3371368351": {
-        "fps": 30
+        "fps": 30,
+        "screenshotDelay": 60
       }
     },
     "generateStaticWallpaper": true,

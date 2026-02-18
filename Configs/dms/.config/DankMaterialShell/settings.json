@@ -274,7 +274,8 @@
   "spotlightCloseNiriOverview": true,
   "spotlightSectionViewModes": {
     "apps": "list",
-    "plugin_dankHyprlandWindows": "tile"
+    "plugin_dankHyprlandWindows": "tile",
+    "plugin_emojiLauncher": "list"
   },
   "appDrawerSectionViewModes": {
     "apps": "list"
