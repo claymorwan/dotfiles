@@ -21,6 +21,9 @@ in
     inputs.steam-config-nix.homeModules.default
   ];
 
+  xdg.dataFile."Steam/steamui/skins/Material-Theme".source =
+    "${pkgs.callPackage ../../../pkgs/millenium-material-theme { }}/share/Steam/steamui/skins/Material-Theme";
+
   programs.steam.config = {
     enable = true;
     closeSteam = true; # See 'Important' note at beginning of this readme

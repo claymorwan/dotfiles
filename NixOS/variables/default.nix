@@ -11,7 +11,7 @@ rec {
   # Apps
   launch_prefix = "app2unit --";
   terminal = "ghostty";
-  browser = "MOZ_LEGACY_PROFILES=1 zen";
+  browser = "MOZ_LEGACY_PROFILES=1 zen-beta";
   discord = "equibop --wayland";
 
   # Dirs

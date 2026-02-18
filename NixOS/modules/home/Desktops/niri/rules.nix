@@ -71,7 +71,7 @@ in
       {
         matches = [{
           app-id = "steam";
-          title = "^notificationtoasts_[0-9]+_desktop$" ;
+          title = "^notificationtoasts_([0-9]+|undefined)_desktop$" ;
         }];
         open-floating = true;
         open-focused = false;
@@ -151,7 +151,7 @@ in
       }
 
       {
-        matches = [{ app-id = "discord|equibop|vesktop|whatsapp|BeeperTexts"; }];
+        matches = [{ app-id = "discord|equibop|vesktop|whatsapp|BeeperTexts|fluxer_app|stoat-desktop"; }];
         open-on-workspace = "chat";
         open-focused = true;
         open-maximized = true;

@@ -65,7 +65,7 @@ in
         "match:class btop, workspace special:sysmon"
         "match:class feishin|Spotify|Supersonic, workspace special:music"
         "match:initial_title Spotify( Free)?, workspace special:music"
-        "match:class discord|equibop|vesktop|whatsapp|BeeperTexts, workspace special:chat"
+        "match:class discord|equibop|vesktop|whatsapp|BeeperTexts|fluxer_app|stoat-desktop, workspace special:chat"
         "match:class shijima-qt, workspace special:shijima"
 
         # Dialogs

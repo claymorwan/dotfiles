@@ -1,0 +1,93 @@
+---
+whiskers:
+    version: "^2.5.1"
+    matrix:
+      - flavor
+      - accent
+    hex_format: "{{R}}{{G}}{{B}}{{Z}}"
+    filename: "themes/{{ flavor.identifier }}-latte/colors-{{ accent }}.css"
+---
+{%- macro tint(color, amt) -%}
+  {{ color | add(lightness=amt*3) | add(hue=amt) | sub(saturation=amt*10) | get(key="hex") }}
+{%- endmacro tint -%}
+{%- macro shade(color, amt) -%}
+  {{ color | sub(lightness=amt*8) | sub(hue=amt) | add(saturation=amt*10) | get(key="hex") }}
+{%- endmacro shade -%}
+
+{%- set accent = flavor.colors[accent] -%}
+{%- set latte = flavors.latte -%}
+
+:root {
+    --theme-color: "Catppuccin {{ accent.name }}";
+
+    --ctp-dark-red: #{{ red.hex }};
+    --ctp-dark-text: #{{ text.hex }};
+    --ctp-dark-subtext0: #{{ subtext0.hex }};
+    --ctp-dark-surface1: #{{ surface1.hex }};
+    --ctp-dark-surface0: #{{ surface0.hex }};
+    --ctp-dark-base: #{{ base.hex }};
+    --ctp-dark-mantle: #{{ mantle.hex }};
+    --ctp-dark-crust: #{{ crust.hex }};
+    --ctp-dark-accent: #{{ accent.hex }};
+
+    --ctp-light-red: #{{ latte.colors[red.identifier].hex }};
+    --ctp-light-text: #{{ latte.colors[text.identifier].hex }};
+    --ctp-light-subtext0: #{{ latte.colors[subtext0.identifier].hex }};
+    --ctp-light-surface1: #{{ latte.colors[surface1.identifier].hex }};
+    --ctp-light-surface0: #{{ latte.colors[surface0.identifier].hex }};
+    --ctp-light-base: #{{ latte.colors[base.identifier].hex }};
+    --ctp-light-mantle: #{{ latte.colors[mantle.identifier].hex }};
+    --ctp-light-crust: #{{ latte.colors[crust.identifier].hex }};
+    --ctp-light-accent: #{{ latte.colors[accent.identifier].hex }};
+
+    --hue-rotate: 360deg;
+    --md-sys-color-primary: var(--scheme-light, var(--ctp-light-accent)) var(--scheme-dark, var(--ctp-dark-accent));
+    --md-sys-color-surface-tint: var(--scheme-light, #{{ self::tint(color=latte.colors[accent.identifier], amt=2) }}) var(--scheme-dark, #{{ self::tint(color=accent, amt=2) }});
+    --md-sys-color-on-primary: var(--scheme-light, var(--ctp-light-crust)) var(--scheme-dark, var(--ctp-dark-crust));
+    --md-sys-color-primary-container: var(--scheme-light, var(--ctp-light-base)) var(--scheme-dark, var(--ctp-dark-base));
+    --md-sys-color-on-primary-container: var(--scheme-light, var(--ctp-light-text)) var(--scheme-dark, var(--ctp-dark-text));
+    --md-sys-color-secondary: var(--scheme-light, var(--ctp-light-accent)) var(--scheme-dark, var(--ctp-dark-accent));
+    --md-sys-color-on-secondary: var(--scheme-light, var(--ctp-light-crust)) var(--scheme-dark, var(--ctp-dark-crust));
+    --md-sys-color-secondary-container: var(--scheme-light, var(--ctp-light-base)) var(--scheme-dark, var(--ctp-dark-base));
+    --md-sys-color-on-secondary-container: var(--scheme-light, var(--ctp-light-text)) var(--scheme-dark, var(--ctp-dark-text));
+    --md-sys-color-tertiary: var(--scheme-light, var(--ctp-light-accent)) var(--scheme-dark, var(--ctp-dark-accent));
+    --md-sys-color-on-tertiary: var(--scheme-light, var(--ctp-light-crust)) var(--scheme-dark, var(--ctp-dark-crust));
+    --md-sys-color-tertiary-container: var(--scheme-light, var(--ctp-light-base)) var(--scheme-dark, var(--ctp-dark-base));
+    --md-sys-color-on-tertiary-container: var(--scheme-light, var(--ctp-light-text)) var(--scheme-dark, var(--ctp-dark-text));
+    --md-sys-color-error: var(--scheme-light, var(--ctp-light-red)) var(--scheme-dark, var(--ctp-dark-red));
+    --md-sys-color-on-error: var(--scheme-light, var(--ctp-light-crust)) var(--scheme-dark, var(--ctp-dark-red));
+    --md-sys-color-error-container: var(--scheme-light, var(--ctp-light-base)) var(--scheme-dark, var(--ctp-dark-base));
+    --md-sys-color-on-error-container: var(--scheme-light, var(--ctp-light-text)) var(--scheme-dark, var(--ctp-dark-text));
+    --md-sys-color-background: var(--scheme-light, var(--ctp-light-mantle)) var(--scheme-dark, var(--ctp-dark-mantle));
+    --md-sys-color-on-background: var(--scheme-light, var(--ctp-light-text)) var(--scheme-dark, var(--ctp-dark-text));
+    --md-sys-color-surface: var(--scheme-light, var(--ctp-light-mantle)) var(--scheme-dark, var(--ctp-dark-mantle));
+    --md-sys-color-on-surface: var(--scheme-light, var(--ctp-light-text)) var(--scheme-dark, var(--ctp-dark-text));
+    --md-sys-color-surface-variant: var(--scheme-light, var(--ctp-light-surface0)) var(--scheme-dark, var(--ctp-dark-surface0));
+    --md-sys-color-on-surface-variant: var(--scheme-light, var(--ctp-light-text)) var(--scheme-dark, var(--ctp-dark-text));
+    --md-sys-color-outline: var(--scheme-light, var(--ctp-light-subtext0)) var(--scheme-dark, var(--ctp-dark-subtext0));
+    --md-sys-color-outline-variant: var(--scheme-light, var(--ctp-light-accent)) var(--scheme-dark, var(--ctp-dark-accent));
+    --md-sys-color-shadow: rgb(0 0 0);
+    --md-sys-color-scrim: rgb(0 0 0);
+    --md-sys-color-inverse-surface: var(--scheme-light, var(--ctp-dark-base)) var(--scheme-dark, var(--ctp-light-base));
+    --md-sys-color-inverse-on-surface: var(--scheme-light, var(--ctp-dark-text)) var(--scheme-dark, var(--ctp-light-text));
+    --md-sys-color-inverse-primary: var(--scheme-light, var(--ctp-dark-accent)) var(--scheme-dark, var(--ctp-light-accent));
+    --md-sys-color-primary-fixed: var(--scheme-light, var(--ctp-light-accent)) var(--scheme-dark, var(--ctp-dark-accent));
+    --md-sys-color-on-primary-fixed: var(--scheme-light, var(--ctp-light-text)) var(--scheme-dark, var(--ctp-dark-text));
+    --md-sys-color-primary-fixed-dim: var(--scheme-light, #{{ self::shade(color=latte.colors[accent.identifier], amt=1) }}) var(--scheme-dark, #{{ self::shade(color=accent, amt=1) }});
+    --md-sys-color-on-primary-fixed-variant: var(--scheme-light, #{{ self::shade(color=latte.colors[accent.identifier], amt=2) }}) var(--scheme-dark, #{{ self::shade(color=accent, amt=2) }});
+    --md-sys-color-secondary-fixed: var(--scheme-light, var(--ctp-light-accent)) var(--scheme-dark, var(--ctp-dark-accent));
+    --md-sys-color-on-secondary-fixed: var(--scheme-light, var(--ctp-light-text)) var(--scheme-dark, var(--ctp-dark-text));
+    --md-sys-color-secondary-fixed-dim: var(--scheme-light, #{{ self::shade(color=latte.colors[accent.identifier], amt=1) }}) var(--scheme-dark, #{{ self::shade(color=accent, amt=1) }});
+    --md-sys-color-on-secondary-fixed-variant: var(--scheme-light, #{{ self::shade(color=latte.colors[accent.identifier], amt=2) }}) var(--scheme-dark, #{{ self::shade(color=accent, amt=2) }});
+    --md-sys-color-tertiary-fixed: var(--scheme-light, var(--ctp-light-accent)) var(--scheme-dark, var(--ctp-dark-accent));
+    --md-sys-color-on-tertiary-fixed: var(--scheme-light, var(--ctp-light-text)) var(--scheme-dark, var(--ctp-dark-text));
+    --md-sys-color-tertiary-fixed-dim: var(--scheme-light, #{{ self::shade(color=latte.colors[accent.identifier], amt=1) }}) var(--scheme-dark, #{{ self::shade(color=accent, amt=1) }});
+    --md-sys-color-on-tertiary-fixed-variant: var(--scheme-light, #{{ self::shade(color=latte.colors[accent.identifier], amt=2) }}) var(--scheme-dark, #{{ self::shade(color=accent, amt=2) }});
+    --md-sys-color-surface-dim: var(--scheme-light, #{{ self::shade(color=latte.colors[base.identifier], amt=1) }}) var(--scheme-dark, #{{ self::shade(color=base, amt=1) }});
+    --md-sys-color-surface-bright: var(--scheme-light, rgb(249 249 255)) var(--scheme-dark, rgb(55 57 62));
+    --md-sys-color-surface-container-lowest: var(--scheme-light, var(--ctp-light-mantle)) var(--scheme-dark, var(--ctp-dark-mantle));
+    --md-sys-color-surface-container-low: var(--scheme-light, var(--ctp-light-mantle)) var(--scheme-dark, var(--ctp-dark-mantle));
+    --md-sys-color-surface-container: var(--scheme-light, var(--ctp-light-base)) var(--scheme-dark, var(--ctp-dark-base));
+    --md-sys-color-surface-container-high: var(--scheme-light, var(--ctp-light-surface0)) var(--scheme-dark, var(--ctp-dark-surface0));
+    --md-sys-color-surface-container-highest: var(--scheme-light, var(--ctp-light-surface1)) var(--scheme-dark, var(--ctp-dark-surface1));
+}

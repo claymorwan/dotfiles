@@ -29,10 +29,47 @@ in
     };
 
     profiles = {
-      default = {
+      default = let
+        containers = {
+          Main = {
+            color = "green";
+            icon = "tree";
+            id = 1;
+          };
+        };
+
+        spaces = {
+          "Default" = {
+            id = "572910e1-4468-4832-a669-0b3a93e2f165";
+            icon = "⭐";
+            position = 1000;
+            # container = containers.Main.id;
+          };
+
+          "Nerd stuff" = {
+            id = "42fb3bdc-65e7-4df0-bf85-6608411417c1";
+            icon = "💻";
+            position = 1001;
+          };
+        };
+        pins = {
+          "youtube" = {
+            id = "21387aaf-f9f6-461f-9932-2cda4edbe952";
+            url = "https://www.youtube.com/";
+            isEssential = true;
+            # container = containers.Main.id;
+            position = 101;
+          };
+        };
+      in {
         id = 0;
         name = "default";
         isDefault = true;
+
+        # containersForce = true;
+        spacesForce = true;
+        pinsForce = true;
+        inherit spaces pins;
         settings = {
           "widget.use-xdg-desktop-portal.file-picker" = 1;
           "services.sync.prefs.sync.browser.uiCustomization.state" = true;
@@ -49,6 +86,7 @@ in
           "zen.view.compact.enable-at-startup" = true;
 
           # Mods
+          "sine.engine.auto-update" = false;
           #- Advanced Tab Groups
           "browser.tabs.groups.enabled" = true;
           #- Audio wave
@@ -64,13 +102,41 @@ in
           "mod.tidypopup.hovercolor" = "#313244"; #"rgba(203, 166, 247, 1)"
         };
 
-        sine.enable = true;
+        sine = {
+          enable = true;
+          mods = [
+            # Sine
+            "advanced-tab-groups"
+            "context-menu-icons"
+            "floating-statusbar"
+            ## Deta Loading Bar
+            "c9ee0d97-d2d6-40fd-8f85-549fe000b868"
+
+            # Zen
+            ## Audio Indicator Enhanced
+            "2317fd93-c3ed-4f37-b55a-304c1816819e"
+            ## Vertical Split Tab Groups
+            "4c2bec61-7f6c-4e5c-bdc6-c9ad1aba1827"
+            ## Pimp your PiP
+            "599a1599-e6ab-4749-ab22-de533860de2c"
+            ## Tidy Popup
+            "79dde383-4fe7-404a-a8e6-9be440022542"
+            ## Trackpad Animation
+            "8039de3b-72e1-41ea-83b3-5077cf0f98d1"
+            ## Better Find Bar
+            "a6335949-4465-4b71-926c-4a52d34bc9c0"
+            ## SuperPins
+            "ad97bb70-0066-4e42-9b5f-173a5e42c6fc"
+            ## Better Unloaded Tabs
+            "f7c71d9a-bce2-420f-ae44-a64bd92975ab"
+          ];
+        };
       };
     };
 
   };
 
-  home.file.".zen/default/chrome" = {
+  home.file.".config/zen/default/chrome" = {
     enable = true;
     source = "${ctp_zen}/themes/Mocha/Mauve";
     recursive = true;

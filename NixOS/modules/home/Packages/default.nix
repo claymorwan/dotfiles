@@ -42,6 +42,8 @@
 
     # GUI
     equibop
+    (pkgs.callPackage ../../../pkgs/fluxer/default.nix { })
+    stoat-desktop
     (pkgs.gradia.overrideAttrs (finalAttrs: {
       version = "1.11.3";
       src = pkgs.fetchFromGitHub {

@@ -285,6 +285,7 @@
   "dankLauncherV2BorderThickness": 2,
   "dankLauncherV2BorderColor": "primary",
   "dankLauncherV2ShowFooter": true,
+  "dankLauncherV2UnloadOnClose": false,
   "useAutoLocation": true,
   "weatherEnabled": true,
   "networkPreference": "wifi",
@@ -413,6 +414,8 @@
   "dockMaxVisibleRunningApps": 0,
   "dockShowOverflowBadge": true,
   "notificationOverlayEnabled": true,
+  "notificationPopupShadowEnabled": true,
+  "notificationPopupPrivacyMode": false,
   "modalDarkenBackground": false,
   "lockScreenShowPowerActions": true,
   "lockScreenShowSystemIcons": true,
@@ -434,6 +437,8 @@
   "notificationTimeoutCritical": 0,
   "notificationCompactMode": false,
   "notificationPopupPosition": 1,
+  "notificationAnimationSpeed": 1,
+  "notificationCustomAnimationDuration": 400,
   "notificationHistoryEnabled": true,
   "notificationHistoryMaxCount": 50,
   "notificationHistoryMaxAgeDays": 7,
@@ -1275,6 +1280,7 @@
       "trigger": ";"
     }
   },
+  "clipboardEnterToPaste": false,
   "launcherPluginVisibility": {},
   "launcherPluginOrder": [],
   "configVersion": 5

@@ -1,0 +1,16 @@
+diff --git a/skin.json b/skin.json
+index cfbd8ee..527c900 100644
+--- a/skin.json
++++ b/skin.json
+@@ -46,6 +46,11 @@
+             "default": "Blue",
+             "tab": "Style",
+             "values": {
++                "Catppucin": {
++                    "TargetCss": {
++                        "affects": [".*"], "src": "css/main/colors/catppuccin.css"
++                    }
++                },
+                 "Red": {
+                     "TargetCss": {
+                         "affects": [".*"], "src": "css/main/colors/red.css"
