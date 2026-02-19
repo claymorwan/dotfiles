@@ -39,6 +39,7 @@
     (pkgs.callPackage ../../../pkgs/lncur/package.nix { })
     cbonsai
     linux-wallpaperengine
+    wev
 
     # GUI
     equibop

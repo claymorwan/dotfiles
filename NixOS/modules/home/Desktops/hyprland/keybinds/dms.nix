@@ -17,7 +17,8 @@
 
       "$mainMod, A, exec, dms ipc call desktopWidget toggleOverlay dw_sysmon_primary # Wiget overlay"
 
-      "ALT, TAB, exec, dms ipc call spotlight toggleQuery \"\!\""
+      "ALT, TAB, exec, dms ipc call spotlight toggleQuery '!'"
+      "$mainMod, ;, exec, dms ipc call spotlight toggleQuery ';'"
     ];
 
     bindl = [

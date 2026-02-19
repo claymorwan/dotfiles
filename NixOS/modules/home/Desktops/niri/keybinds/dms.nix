@@ -54,6 +54,12 @@
       hotkey-overlay.title = "Control center";
     };
 
+    "Mod+Semicolon" = {
+      action.spawn = [ "dms" "ipc" "call" "spotlight" "toggleQuery" ";" ];
+      repeat = false;
+      hotkey-overlay.title = "Emojis and unicode";
+    };
+
     # Audio controls
     "XF86AudioRaiseVolume" = {
       action.spawn = [ "dms" "ipc" "call" "audio" "increment" "3" ];

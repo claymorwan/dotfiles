@@ -2,7 +2,7 @@
   programs.niri.settings.binds = {
       # Mod-Shift-/, which is usually the same as Mod-?,
       # shows a list of important hotkeys.
-      "Mod+Shift+KP_Divide".action.show-hotkey-overlay = {};
+      "Mod+KP_Divide".action.show-hotkey-overlay = {};
 
       # Example volume keys mappings for PipeWire & WirePlumber.
       # The allow-when-locked=true property makes them work even when the session is locked.
