@@ -6,7 +6,7 @@ index cfbd8ee..527c900 100644
              "default": "Blue",
              "tab": "Style",
              "values": {
-+                "Catppucin": {
++                "Catppuccin": {
 +                    "TargetCss": {
 +                        "affects": [".*"], "src": "css/main/colors/catppuccin.css"
 +                    }
