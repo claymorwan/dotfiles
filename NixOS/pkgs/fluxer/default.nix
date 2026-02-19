@@ -2,6 +2,8 @@
   lib,
   fetchurl,
   appimageTools,
+  copyDesktopItems,
+  makeDesktopItem,
 }:
 
 let
@@ -16,6 +18,20 @@ in
 
 appimageTools.wrapType2 {
   inherit pname version src;
+
+  desktopItems = [
+    (makeDesktopItem {
+      name = "Fluxer";
+      desktopName = "fluxer";
+      exec = "fluxer-bin";
+      icon = "fluxer";
+      categories = [ "Chat" "Game" ];
+    })
+  ];
+
+  nativeBuildInputs = [
+    copyDesktopItems
+  ];
 
   meta = {
     description = "Fluxer desktop client";

@@ -72,7 +72,6 @@ in
             id = "21387aaf-f9f6-461f-9932-2cda4edbe952";
             url = "https://www.youtube.com/";
             isEssential = true;
-            # container = containers.Main.id;
             position = 101;
           };
 
@@ -91,7 +90,7 @@ in
           };
 
           "soundclouds" = {
-            id = "c434a171-b645-4df3-b909-38e954d47f22";
+            id = "c434a171-b645-4df3-b909-38e954d47f23";
             url = "https://soundcloud.com/";
             isEssential = true;
             position = 104;
@@ -101,7 +100,14 @@ in
             id = "c434a171-b645-4df3-b909-38e954d47f22";
             url = "https://teams.microsoft.com/v2/";
             workspace = spaces.Work.id;
-            position = 202;
+            position = 200;
+          };
+
+          "raindrop" = {
+            id = "e2fb6e27-e4fe-45a5-afd0-43da55d2674c";
+            url = "https://app.raindrop.io/";
+            workspace = spaces."𝓯𝓻𝓮𝓪𝓴".id;
+            position = 201;
           };
         };
       in {
@@ -127,6 +133,7 @@ in
           # Zen specific options
           "zen.view.use-single-toolbar" = false;
           "zen.urlbar.replace-newtab" = false;
+          "zen.urlbar.behavior" = "float";
           "zen.view.compact.hide-tabbar" = true;
           "zen.view.compact.hide-toolbar" = true;
           "zen.view.compact.enable-at-startup" = true;
@@ -143,6 +150,11 @@ in
           "theme.better_find_bar.custom_background" = "#1E1E2E";
           #- Context menu icon
           "cmi-Switch-Icon-Package" = 2;
+          #- Neo Zen
+          "neo-features-bottom-disabled" = true;
+          "neo-features-bottom-at-bottom" = true;
+          "neo-theme-background-enabled" = true;
+          "neo-external-nebula-animations-tabs-disabled" = true;
           #- Tidy popup
           "mod.tidypopup.usecustomhovercolor" = true;
           "mod.tidypopup.hovercolor" = "#313244";
@@ -171,7 +183,7 @@ in
             ## Trackpad Animation
             "8039de3b-72e1-41ea-83b3-5077cf0f98d1"
             ## Better Find Bar
-            "a6335949-4465-4b71-926c-4a52d34bc9c0"
+            # "a6335949-4465-4b71-926c-4a52d34bc9c0"
             ## SuperPins
             "ad97bb70-0066-4e42-9b5f-173a5e42c6fc"
             ## Better Unloaded Tabs

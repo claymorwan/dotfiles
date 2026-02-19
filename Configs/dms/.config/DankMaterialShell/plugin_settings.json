@@ -159,7 +159,7 @@
     "enabled": true
   },
   "githubHeatmap": {
-    "enabled": false,
+    "enabled": true,
     "username": "claymorwan",
     "pat": "",
     "refreshInterval": 300
