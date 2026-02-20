@@ -18,6 +18,12 @@
       hotkey-overlay.title = "Clipboard";
     };
 
+    "Mod+Alt+L" = {
+      action.spawn = [ "noctalia-shell" "ipc" "call" "sessionMenu" "lockAndSuspend" ];
+      repeat = false;
+      hotkey-overlay.title = "Lock screen";
+    };
+
     # Audio controls
     "XF86AudioRaiseVolume" = {
       action.spawn = [ "noctalia-shell" "ipc" "call" "volume" "increase" ];

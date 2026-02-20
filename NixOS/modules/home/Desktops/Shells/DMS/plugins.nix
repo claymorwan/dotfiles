@@ -1,6 +1,8 @@
 { pkgs, inputs, host, lib, config, osConfig, ... }:
 
 let
+
+  dms-plugins = config.programs.dank-material-shell.plugins; 
   inherit (import ../../../../../variables)
     flake_dir
     enableHyprland
@@ -16,8 +18,8 @@ in
 
   # Deps for plugins
   home.packages = with pkgs; [
-    (lib.mkIf config.programs.dank-material-shell.plugins.amdGpuMonitor.enable amdgpu_top)
-    (lib.mkIf config.programs.dank-material-shell.plugins.displayManager.enable ddcutil)
+    (lib.mkIf dms-plugins.amdGpuMonitor.enable amdgpu_top)
+    (lib.mkIf dms-plugins.displayManager.enable ddcutil)
   ];
 
   programs = {
