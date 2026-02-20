@@ -1,3 +1,5 @@
+{ lib, config, ... }:
+
 let
   inherit (import ../../../../variables/default.nix)
   discord
@@ -13,6 +15,7 @@ in
       # { argv = [ "niri-float-sticky" ]; }
       { argv = [ "niriusd" ]; }
       { argv = [ "steam" "-silent" ]; }
+      ( lib.mkIf config.programs.noctalia-shell.enable { argv = [ "wallpaperengine-gui" "--minimized" ]; })
     ];
   };
 }

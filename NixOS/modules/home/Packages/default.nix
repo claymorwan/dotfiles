@@ -1,9 +1,4 @@
-{
-  pkgs,
-  system,
-  inputs,
-  ...
-}:
+{ inputs, pkgs, config, ... }:
 
 {
   imports = [
@@ -69,7 +64,7 @@
     protonvpn-gui
     intiface-central
     polychromatic
-    kdePackages.dolphin
+    (lib.mkIf config.programs.noctalia-shell.enable (pkgs.callPackage ../../../pkgs/wallpaperengine-gui { }))
 
     # Kde stuff
     kdePackages.gwenview

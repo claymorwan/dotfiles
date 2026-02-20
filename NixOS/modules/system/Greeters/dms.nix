@@ -1,7 +1,7 @@
 { inputs, pkgs, username, ... }:
 
 let
-  inherit (import ../../variables)
+  inherit (import ../../../variables)
     home_dir
     dotfiles_dir
     mouse_cursor
@@ -28,7 +28,6 @@ in
 
   # Needed to make custom cursor work
   environment = {
-    systemPackages = [ (pkgs.callPackage ../../pkgs/cursors { }) ];
     etc."greetd/niri_overrides.kdl".text = ''
       cursor {
         xcursor-theme "${mouse_cursor}"

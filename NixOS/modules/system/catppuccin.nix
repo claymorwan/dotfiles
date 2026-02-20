@@ -15,5 +15,6 @@ in
     enable = true;
     flavor = ctp_flavor;
     accent = ctp_accent;
+    sddm.enable = false;
   };
 }

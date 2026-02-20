@@ -5,9 +5,9 @@
     ./boot.nix
     ./catppuccin.nix
     ./clamav.nix
-    ./dms.nix
     ./virtualisation.nix
     ./fonts.nix
+    ./Greeters
     ./networking.nix
     ./Nix
     ./overlays.nix
