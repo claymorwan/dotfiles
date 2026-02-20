@@ -33,7 +33,7 @@
       },
       "3371368351": {
         "fps": 30,
-        "screenshotDelay": 60
+        "screenshotDelay": 150
       }
     },
     "generateStaticWallpaper": true,
@@ -168,5 +168,9 @@
     "enabled": true,
     "brightness_DP-1": 48.15463362068966,
     "contrast_DP-1": 48.84832974137931
+  },
+  "dankNotepadModule": {
+    "enabled": true,
+    "style": "catppuccin-mocha"
   }
 }

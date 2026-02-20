@@ -66,7 +66,7 @@
                     "compactMode": false,
                     "compactShowAlbumArt": true,
                     "compactShowVisualizer": false,
-                    "hideMode": "hidden",
+                    "hideMode": "visible",
                     "hideWhenIdle": false,
                     "id": "MediaMini",
                     "maxWidth": 200,
@@ -118,7 +118,7 @@
                 },
                 {
                     "colorizeIcons": false,
-                    "hideMode": "hidden",
+                    "hideMode": "visible",
                     "id": "ActiveWindow",
                     "maxWidth": 145,
                     "scrollingMode": "hover",
@@ -148,8 +148,8 @@
                     "usePadding": false
                 },
                 {
-                    "displayMode": "onhover",
-                    "iconColor": "none",
+                    "displayMode": "forceOpen",
+                    "iconColor": "primary",
                     "id": "KeyboardLayout",
                     "showIcon": true,
                     "textColor": "none"
@@ -194,6 +194,7 @@
                     "textColor": "none"
                 },
                 {
+                    "applyToAllMonitors": false,
                     "displayMode": "onhover",
                     "iconColor": "none",
                     "id": "Brightness",
@@ -314,6 +315,7 @@
         "colorizeIcons": false,
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
+        "dockType": "static",
         "enabled": true,
         "floatingRatio": 1,
         "inactiveIndicators": false,
@@ -323,8 +325,10 @@
         "pinnedApps": [
             "zen-beta"
         ],
-        "pinnedStatic": false,
+        "pinnedStatic": true,
         "position": "bottom",
+        "showFrameIndicator": false,
+        "sitOnFrame": true,
         "size": 1.25
     },
     "general": {
@@ -368,12 +372,13 @@
         },
         "language": "",
         "lockOnSuspend": true,
-        "lockScreenAnimations": false,
+        "lockScreenAnimations": true,
         "lockScreenBlur": 0,
         "lockScreenCountdownDuration": 10000,
         "lockScreenMonitors": [
         ],
         "lockScreenTint": 0,
+        "passwordChars": true,
         "radiusRatio": 1,
         "reverseScroll": false,
         "scaleRatio": 1,
@@ -433,10 +438,12 @@
     },
     "notifications": {
         "backgroundOpacity": 1,
+        "clearDismissed": true,
         "criticalUrgencyDuration": 15,
         "density": "default",
         "enableBatteryToast": true,
         "enableKeyboardLayoutToast": true,
+        "enableMarkdown": false,
         "enableMediaToast": false,
         "enabled": true,
         "location": "top_right",

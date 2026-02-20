@@ -7,7 +7,7 @@
 }:
 
 let
-  fetch_cmd = "clear; hyfetch;  blahaj -s -c trans";
+  fetch_cmd = "clear; fastfetch;";
   inherit (import ../../../variables)
   flake_dir
   ;

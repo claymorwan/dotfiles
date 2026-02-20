@@ -63,7 +63,16 @@ in
         polyglot.enable = true;
         commandRunner.enable = true;
         developerUtilities.enable = true;
-        githubHeatmap.enable = true;
+        dankNotepadModule.enable = true;
+        ghHeatmap = {
+          enable = true;
+          src = lib.mkForce (inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.githubHeatmap.overrideAttrs (finalAttrs: {
+            prePatch = ''
+              substituteInPlace ./GitHubHeatMap/HeatMapWidget.qml \
+                --replace-fail '"/bin/bash"' '"bash"'
+            '';
+          }));
+        };
         # KDE Connect
         # Plugins doesn't work when called `dankKDEConnect`, so i gotta do this to rename it
         phoneConnect = {

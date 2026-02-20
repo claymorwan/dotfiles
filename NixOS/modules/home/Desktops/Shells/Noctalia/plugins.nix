@@ -18,9 +18,11 @@ in
       };
 
       kde-connect = {
-        enabled = false;
+        enabled = true;
         sourceUrl = offical-plugins;
       };
+
+      kaomoji-provider.enabled = true;
     };
   };
 }

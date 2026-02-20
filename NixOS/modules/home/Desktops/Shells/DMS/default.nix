@@ -18,7 +18,7 @@
     dgop.package = inputs.dgop.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
     systemd = {
-      enable = true; # Systemd service for auto-start
+      # enable = true; # Systemd service for auto-start
       restartIfChanged = true; # Auto-restart dms.service when dankMaterialShell changes
     };
 

@@ -1279,6 +1279,14 @@
   "builtInPluginSettings": {
     "dms_settings_search": {
       "trigger": ";"
+    },
+    "dankNotepadModule": {
+      "previewActive": true,
+      "currentFilePath": "/home/claymorwan/Documents/note.md",
+      "currentFileExtension": "md",
+      "sourceContent": "",
+      "updatedAt": 1771597220781,
+      "highlightedHtml": ""
     }
   },
   "clipboardEnterToPaste": false,

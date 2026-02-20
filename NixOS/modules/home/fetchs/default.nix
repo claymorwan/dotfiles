@@ -1,6 +1,6 @@
 {
   imports = [
     ./fastfetch
-    ./hyfetch.nix
+    # ./hyfetch.nix
   ];
 }
