@@ -93,24 +93,21 @@ in
       # Wasteland bites demo
       "3820720" = gameOptions;
 
+      # Ultrakill
       "1229490" = lib.recursiveUpdate winGameOptions {
         launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
       };
-      # ultrakill = {
-      #   id = 1229490;
-      #   compatTool = "GE-Proton";
-      #   launchOptions.wrappers = [
-      #     pkgs.gamemode
-      #     (lib.getExe' pkgs.gamescope "gamescope") 
-      #     "-f" "-w" "1920" "-h" "1080" "-W" "1920" "-H" "1080" "--force-grab-cursor" "--mangoapp" "--"
-      #   ];
-      # };
 
       # Pizza tower
       "2231450" = winGameOptions;
 
       # Ena DBBQ
       "2134320" = gameOptions;
+
+      # Denshattack Demo
+      "4142750" = lib.recursiveUpdate winGameOptions {
+        launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
+      };
     };
   };
 }
