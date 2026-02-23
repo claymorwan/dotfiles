@@ -15,7 +15,7 @@ in
   ];
 
   home.packages = with pkgs; [
-    nirius
+    inputs.nsticky.packages.${pkgs.stdenv.hostPlatform.system}.nsticky
   ];
 
   programs = {

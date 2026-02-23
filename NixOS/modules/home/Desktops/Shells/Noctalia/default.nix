@@ -7,7 +7,7 @@
   ];
 
   programs.noctalia-shell = {
-    enable = true;
+    # enable = true;
     package = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
       quickshell = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };

@@ -6,6 +6,11 @@ niri = {
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
+nsticky = {
+  url = "github:lonerOrz/nsticky";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+
 noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";

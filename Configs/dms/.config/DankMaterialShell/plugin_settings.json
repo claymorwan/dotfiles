@@ -172,5 +172,11 @@
   "dankNotepadModule": {
     "enabled": true,
     "style": "catppuccin-mocha"
+  },
+  "niriScreenshot": {
+    "enabled": true
+  },
+  "dms-niri-screenshot": {
+    "mode": "window"
   }
 }

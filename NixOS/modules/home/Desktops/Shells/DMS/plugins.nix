@@ -66,17 +66,14 @@ in
         commandRunner.enable = true;
         developerUtilities.enable = true;
         dankNotepadModule.enable = true;
-        ghHeatmap = {
-          enable = true;
-          src = lib.mkForce (inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.githubHeatmap.overrideAttrs (finalAttrs: {
-            prePatch = ''
-              substituteInPlace ./GitHubHeatMap/HeatMapWidget.qml \
-                --replace-fail '"/bin/bash"' '"bash"'
-            '';
-          }));
-        };
+        githubHeatmap.enable = true;
+        niriScreenshot.enable = true;
+        # Plugin that i have to rename or else they won't work
+        # ghHeatmap = {
+        #   enable = true;
+        #   src = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.githubHeatmap;
+        # };
         # KDE Connect
-        # Plugins doesn't work when called `dankKDEConnect`, so i gotta do this to rename it
         phoneConnect = {
           enable = osConfig.programs.kdeconnect.enable;
           src = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.dankKDEConnect;

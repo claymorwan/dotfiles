@@ -7,9 +7,9 @@ let
 in 
 {
   imports = [
-    # ./dms.nix
+    ./dms.nix
     ./default-binds.nix
-    ./noctalia.nix
+    # ./noctalia.nix
   ];
   programs.niri.settings = {
     binds = {
@@ -20,7 +20,7 @@ in
       };
 
       "Mod+W" = {
-        action.spawn-sh = browser;
+        action.spawn = browser;
         hotkey-overlay.title = "Browser";
       };
 

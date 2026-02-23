@@ -9,7 +9,7 @@
 
     APP2UNIT_SLICES = "a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice";
 
-    MOZ_LEGACY_PROFILES = 1;
+    # MOZ_LEGACY_PROFILES = 1;
 
     # GDK_BACKEND = "wayland,x11";
     # SDL_VIDEODRIVER = "wayland,x11";

@@ -157,11 +157,6 @@
             ],
             "right": [
                 {
-                    "defaultSettings": {
-                    },
-                    "id": "plugin:kde-connect"
-                },
-                {
                     "blacklist": [
                     ],
                     "chevronColor": "none",
@@ -212,6 +207,14 @@
                     "enableColorization": true,
                     "icon": "noctalia",
                     "id": "ControlCenter",
+                    "useDistroLogo": true
+                },
+                {
+                    "colorizeSystemIcon": "none",
+                    "customIconPath": "",
+                    "enableColorization": true,
+                    "icon": "noctalia",
+                    "id": "plugin:kde-connect",
                     "useDistroLogo": true
                 }
             ]
@@ -488,7 +491,7 @@
         "overlayLayer": true
     },
     "plugins": {
-        "autoUpdate": false
+        "autoUpdate": true
     },
     "sessionMenu": {
         "countdownDuration": 10000,

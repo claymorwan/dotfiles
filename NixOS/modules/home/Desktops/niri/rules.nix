@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 let
   inherit (import ./vars.nix)
   window_gap
@@ -202,9 +204,21 @@ in
     ];
   };
 
-  xdg.configFile."niri/dms/rules.kdl".text = ''
-    window-rule {
-      open-maximized-to-edges false
-    }
-  '';
+  xdg.configFile = {
+    "niri/dms/rules.kdl".text = ''
+      window-rule {
+        open-maximized-to-edges false
+      }
+    '';
+    
+    "nsticky/config.toml".source = (pkgs.formats.toml { }).generate "sticky-config" {
+      sticky = {
+        pip.title = "Picture(-| )in(-| )[Pp]icture";
+        discord = {
+          app-id = "equibop";
+          title = "Discord Popout";
+        };
+      };
+    };
+  };
 }

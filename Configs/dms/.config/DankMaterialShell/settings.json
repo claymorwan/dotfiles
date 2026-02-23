@@ -644,6 +644,10 @@
         {
           "id": "developerUtilities",
           "enabled": true
+        },
+        {
+          "id": "niriScreenshot",
+          "enabled": true
         }
       ],
       "centerWidgets": [
@@ -1281,11 +1285,11 @@
       "trigger": ";"
     },
     "dankNotepadModule": {
-      "previewActive": true,
+      "previewActive": false,
       "currentFilePath": "/home/claymorwan/Documents/note.md",
       "currentFileExtension": "md",
-      "sourceContent": "",
-      "updatedAt": 1771597220781,
+      "sourceContent": "---\nSensible à l'écologie, j'ai auparavent participé par bénévolat au nettoyage d'une plage au Sénégal.\n---\nDurant ma scolarité j'ai effectué les deux stages qui sont compris en Troisième et en Seconde: Le premier dans une petite entreprise de bureautique nommée \"Staburo\" (impressions et vente de materiels de bureaux), le second dans une entreprise de fabrication et vente de câbles nommée \"Le Câbleries du Sénégal (LCS)\".\n---\nTrès intéressé par l'informatique, j'ai développé deux petit CLI (outil en ligne de commmande) en python, j'ai aussi des connaissances basiques dans d'autres languages tels que java, kotlin, C# et rust. J'ai aussi contribué à quelques projets open-source.\nJe suis également un mainteneur officiel dans la communauté catppuccin, le dépôt de paquets Nix ainsi que l'AUR (Arch User Repository).\nJ'utilise exclusivement une distribution basée sur Linux (originellement Arch Linux et maintenant NixOS) et donc je possède des connaissances sur le sujet.\n\nDans mon temps libre, je dessine aussi sur tablette graphique.\n\nJ'ai également pratiqué du judo pendant environs trois ans.",
+      "updatedAt": 1771859885977,
       "highlightedHtml": ""
     }
   },

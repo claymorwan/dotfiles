@@ -72,6 +72,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    nsticky.url = "github:lonerOrz/nsticky";
+    
     noctalia = {
           url = "github:noctalia-dev/noctalia-shell";
           inputs.nixpkgs.follows = "nixpkgs";
