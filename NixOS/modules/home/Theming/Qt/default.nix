@@ -30,7 +30,7 @@ in
       # name = "kvantum-dark";
       package = with pkgs; [
         darkly
-        darkly-qt5
+        # darkly-qt5
         kdePackages.breeze
       ];
     };

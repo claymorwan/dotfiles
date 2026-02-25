@@ -31,7 +31,7 @@
     
     steam-config-nix = {
       url = "github:different-name/steam-config-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     
     millennium = {
@@ -72,7 +72,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    nsticky.url = "github:lonerOrz/nsticky";
+    nsticky = {
+      url = "github:lonerOrz/nsticky";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     
     noctalia = {
           url = "github:noctalia-dev/noctalia-shell";

@@ -6,7 +6,7 @@ catppuccin = {
 
 steam-config-nix = {
   url = "github:different-name/steam-config-nix";
-  inputs.nixpkgs.follows = "nixpkgs";
+  # inputs.nixpkgs.follows = "nixpkgs";
 };
 
 millennium = {

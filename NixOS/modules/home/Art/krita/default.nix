@@ -19,7 +19,7 @@ let
 in 
 {
   home.packages = with pkgs; [
-    krita
+    # krita
   ];
 
   xdg.dataFile = {

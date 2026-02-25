@@ -6,9 +6,6 @@
   ];
 
   programs = {
-    # firefox.enable = true;
-    btop.enable = true;
-    # quickshell.enable = true;
 
     direnv = {
       enable = true;
@@ -17,6 +14,7 @@
     };
 
     onlyoffice.enable = true;
+    btop.enable = true;
   };
 
   home.packages = with pkgs; [
@@ -41,14 +39,6 @@
     (pkgs.callPackage ../../../pkgs/fluxer/default.nix { })
     stoat-desktop
     (pkgs.gradia.overrideAttrs (finalAttrs: {
-      version = "1.11.3";
-      src = pkgs.fetchFromGitHub {
-        owner = "AlexanderVanhee";
-        repo = "Gradia";
-        rev = "472a970e10c3a85f9db938719ebba121321c1d90";
-        hash = "sha256-wVQzvkLB9XOp5mOopYbgMTs8lwNhvPyYzlIjh4e48pU=";
-      };
-
       patches = [ ./gradia.patch ];
     }))
     (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
@@ -65,6 +55,7 @@
     intiface-central
     polychromatic
     (lib.mkIf config.programs.noctalia-shell.enable (pkgs.callPackage ../../../pkgs/wallpaperengine-gui { }))
+    openssh-askpass
 
     # Kde stuff
     kdePackages.gwenview

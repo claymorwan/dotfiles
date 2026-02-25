@@ -609,7 +609,8 @@
       "widgetOutlineOpacity": 1,
       "widgetOutlineThickness": 2,
       "maximizeDetection": false,
-      "scrollYBehavior": "workspace"
+      "scrollYBehavior": "workspace",
+      "scrollEnabled": false
     },
     {
       "id": "bar1768214186318",
