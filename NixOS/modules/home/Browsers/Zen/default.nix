@@ -68,42 +68,49 @@ in
         };
 
         pins = {
-          "youtube" = {
+          youtube = {
             id = "21387aaf-f9f6-461f-9932-2cda4edbe952";
             url = "https://www.youtube.com/";
             isEssential = true;
             position = 101;
           };
 
-          "twitter" = {
+          twitter = {
             id = "7c1c6fd1-f12d-427b-a0df-b161723afdb0";
             url = "https://www.twitter.com/";
             isEssential = true;
             position = 102;
           };
 
-          "bluesky" = {
+          bluesky = {
             id = "2f8dbc15-93eb-4cc5-8677-029fa2cc7f9a";
             url = "https://bsky.app/";
             isEssential = true;
             position = 103;
           };
 
-          "soundclouds" = {
+          soundclouds = {
             id = "c434a171-b645-4df3-b909-38e954d47f23";
             url = "https://soundcloud.com/";
             isEssential = true;
             position = 104;
           };
 
-          "teams" = {
+          whatsapp = {
+            id = "2a0b3560-421f-42ec-82da-e9e15484b7eb";
+            url = "https://web.whatsapp.com/";
+            isEssential = true;
+            position = 105;
+          };
+
+          teams = {
             id = "c434a171-b645-4df3-b909-38e954d47f22";
             url = "https://teams.microsoft.com/v2/";
             workspace = spaces.Work.id;
             position = 200;
           };
 
-          "raindrop" = {
+          raindrop = {
             id = "e2fb6e27-e4fe-45a5-afd0-43da55d2674c";
             url = "https://app.raindrop.io/";
             workspace = spaces."𝓯𝓻𝓮𝓪𝓴".id;

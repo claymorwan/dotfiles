@@ -55,10 +55,10 @@
     intiface-central
     polychromatic
     (lib.mkIf config.programs.noctalia-shell.enable (pkgs.callPackage ../../../pkgs/wallpaperengine-gui { }))
-    openssh-askpass
 
     # Kde stuff
     kdePackages.gwenview
     kdePackages.plasma-browser-integration
+    kdePackages.ksshaskpass
   ];
 }
