@@ -81,11 +81,12 @@ in
     lua
     luajitPackages.luarocks
     go
-    dotnetCorePackages.sdk_9_0_1xx-bin
+    dotnetCorePackages.dotnet_10.sdk
 
     # wineWowPackages.staging
 
     vlc
+    mpv
     gpu-screen-recorder-gtk
   ];
 
