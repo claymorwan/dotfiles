@@ -1,52 +1,157 @@
 {
+  stdenv,
+  autoPatchelfHook,
+  makeWrapper,
+  glib,
+  nspr,
+  nss,
+  dbus,
+  at-spi2-atk,
+  cups,
+  cairo,
+  gtk3,
+  pango,
+  libX11,
+  libXcomposite,
+  libXdamage,
+  libXext,
+  libXtst,
+  libXt,
+  libXfixes,
+  libXrandr,
+  libgbm,
+  expat,
+  libxcb,
+  libxkbcommon,
+  eudev,
+  alsa-lib,
   lib,
-  fetchurl,
-  appimageTools,
+  libGL,
+  electron_40,
+  fetchPnpmDeps,
+  pnpmConfigHook,
+  pnpm,
+  nodejs,
+  python3,
+  esbuild,
+  fetchFromGitHub,
+  copyDesktopItems,
   makeDesktopItem,
+  ...
 }:
+stdenv.mkDerivation rec {
+  pname = "fluxer";
+  version = "1.0.0-canary";
 
-let
-  pname = "fluxer-bin";
-  version = "0.0.8";
+  src = "${
+    fetchFromGitHub {
+      owner = "fluxerapp";
+      repo = "fluxer";
+      rev = "refactor";
+      sha256 = "sha256-gHziJbueqVYrC+34xJ5AKsGLdPJrhWgXKDwq+jcRFkA=";
+    }
+  }/fluxer_desktop";
 
-  src = fetchurl {
-    url = "https://api.fluxer.app/dl/desktop/stable/linux/x64/fluxer-stable-${version}-x86_64.AppImage";
-    hash = "sha256-GdoBK+Z/d2quEIY8INM4IQy5tzzIBBM+3CgJXQn0qAw=";
-  };
+  patches = [ ./fluxer.patch ];
 
-  appimageContents = appimageTools.extractType2 {
+  nativeBuildInputs = [
+    autoPatchelfHook
+    makeWrapper
+    pnpmConfigHook
+    pnpm
+    nodejs
+    python3
+    esbuild
+    copyDesktopItems
+  ];
+
+  pnpmDeps = fetchPnpmDeps {
     inherit pname version src;
+    fetcherVersion = 3;
+    hash = "sha256-Rh84JplYrd9k4fslofQli4fRNKmFhosftUfYXKBKU4g=";
   };
 
-  desktopItem = makeDesktopItem {
-    name = "fluxer";
+  pnpmInstallFlags = [
+    "--frozen-lockfile"
+  ];
+
+  buildInputs = [
+    glib
+    nspr
+    nss
+    dbus.lib
+    at-spi2-atk
+    cups.lib
+    cairo
+    gtk3
+    pango
+    libX11
+    libXcomposite
+    libXdamage
+    libXext
+    libXtst
+    libXt
+    libXfixes
+    libXrandr
+    libgbm
+    expat
+    libxcb
+    libxkbcommon
+    eudev
+    alsa-lib
+  ];
+
+  desktopItems = makeDesktopItem {
+    name = pname;
     desktopName = "Fluxer";
-    comment = "Fluxer desktop client";
-    exec = "fluxer-bin %U";
-    icon = "fluxer";
+    comment = "OSS messaging platform";
+    exec = pname;
+    icon = pname;
     terminal = false;
-    categories = [ "InstantMessaging" ];
+    type = "Application";
+    startupNotify = true;
+    startupWMClass = pname;
+    categories = [
+      "Network"
+      "InstantMessaging"
+      "Chat"
+    ];
   };
-in
 
-appimageTools.wrapType2 {
-  inherit pname version src;
+  buildPhase = ''
+    runHook preBuild
 
-  extraInstallCommands = ''
-    install -Dm444 ${desktopItem}/share/applications/*.desktop \
-      $out/share/applications/fluxer.desktop
+    pnpm run set-channel stable
+    pnpm build
 
-    install -Dm444 \
-      ${appimageContents}/usr/share/icons/hicolor/256x256/apps/fluxer.png \
-      $out/share/icons/hicolor/256x256/apps/fluxer.png
+    pnpm exec electron-builder --config electron-builder.config.cjs --linux \
+    --dir \
+    -c.electronDist=${electron_40}/libexec/electron \
+    -c.electronVersion=${electron_40.version} \
+    -c.npmRebuild=false \
+
+    runHook postBuild
   '';
 
-  meta = {
-    description = "Fluxer desktop client";
-    homepage = "https://fluxer.app";
-    license = lib.licenses.agpl3Only;
-    platforms = lib.platforms.linux;
-    mainProgram = "fluxer-bin";
-    maintainers = with lib.maintainers; [ WoutFontaine ];
-  };
+  installPhase = ''
+    runHook preInstall
+
+    mkdir -p $out/share/fluxer
+    mkdir -p $out/bin
+
+    cp -r ./dist-electron/linux-unpacked/resources/* $out/share/fluxer
+
+    ls -la ./dist-electron/linux-unpacked/fluxer_desktop
+    ls -la ./dist-electron/linux-unpacked/resources
+
+    makeWrapper ${electron_40}/bin/electron $out/bin/fluxer \
+    --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ libGL ]}" \
+    --add-flags "$out/share/fluxer/app.asar"
+
+    mkdir -p $out/share/icons/hicolor/512x512/
+    cp build_resources/icons-stable/512x512.png $out/share/icons/hicolor/512x512/fluxer.png
+    
+    runHook postInstall
+  '';
 }
+

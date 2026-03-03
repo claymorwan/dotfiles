@@ -73,6 +73,7 @@ in
     # inputs.entangled.packages.${pkgs.stdenv.hostPlatform.system}.default
     usbutils
     wlr-randr
+    android-tools
 
     gnumake
     gcc

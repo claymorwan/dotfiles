@@ -210,12 +210,9 @@
                     "useDistroLogo": true
                 },
                 {
-                    "colorizeSystemIcon": "none",
-                    "customIconPath": "",
-                    "enableColorization": true,
-                    "icon": "noctalia",
-                    "id": "plugin:kde-connect",
-                    "useDistroLogo": true
+                    "defaultSettings": {
+                    },
+                    "id": "plugin:kde-connect"
                 }
             ]
         }

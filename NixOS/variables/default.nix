@@ -23,5 +23,5 @@ rec {
 
   # enable
   enableNiri = true;
-  enableHyprland = true;
+  enableHyprland = false;
 }

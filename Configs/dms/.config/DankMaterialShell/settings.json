@@ -17,7 +17,7 @@
   "widgetColorMode": "default",
   "controlCenterTileColorMode": "primary",
   "buttonColorMode": "primary",
-  "cornerRadius": 12,
+  "cornerRadius": 16,
   "niriLayoutGapsOverride": -1,
   "niriLayoutRadiusOverride": -1,
   "niriLayoutBorderSize": -1,
@@ -27,6 +27,7 @@
   "mangoLayoutGapsOverride": -1,
   "mangoLayoutRadiusOverride": -1,
   "mangoLayoutBorderSize": -1,
+  "firstDayOfWeek": -1,
   "use24HourClock": true,
   "showSeconds": true,
   "padHours12Hour": false,
@@ -41,6 +42,15 @@
   "modalAnimationSpeed": 1,
   "modalCustomAnimationDuration": 150,
   "enableRippleEffects": true,
+  "m3ElevationEnabled": true,
+  "m3ElevationIntensity": 12,
+  "m3ElevationOpacity": 30,
+  "m3ElevationColorMode": "default",
+  "m3ElevationLightDirection": "top",
+  "m3ElevationCustomColor": "#000000",
+  "modalElevationEnabled": true,
+  "popoutElevationEnabled": true,
+  "barElevationEnabled": false,
   "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": true,
   "blurWallpaperOnOverview": false,
@@ -429,9 +439,14 @@
   "lockAtStartup": false,
   "enableFprint": false,
   "maxFprintTries": 3,
+  "enableU2f": false,
+  "u2fMode": "or",
   "lockScreenActiveMonitor": "all",
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 0,
+  "lockScreenVideoEnabled": false,
+  "lockScreenVideoPath": "",
+  "lockScreenVideoCycling": false,
   "hideBrightnessSlider": false,
   "notificationTimeoutLow": 5000,
   "notificationTimeoutNormal": 5000,
@@ -521,6 +536,15 @@
         },
         {
           "id": "focusedWindow",
+          "enabled": true,
+          "focusedWindowCompactMode": false
+        },
+        {
+          "id": "separator",
+          "enabled": true
+        },
+        {
+          "id": "githubHeatmap",
           "enabled": true
         }
       ],
@@ -658,10 +682,6 @@
         }
       ],
       "rightWidgets": [
-        {
-          "id": "githubHeatmap",
-          "enabled": true
-        },
         {
           "id": "displayManager",
           "enabled": true
@@ -1297,5 +1317,5 @@
   "clipboardEnterToPaste": false,
   "launcherPluginVisibility": {},
   "launcherPluginOrder": [],
-  "configVersion": 5
+  "configVersion": 6
 }

@@ -8,7 +8,6 @@ in
 {
   wayland.windowManager.hyprland = {
     plugins = with pkgs.hyprlandPlugins; [
-      (pkgs.callPackage ../../../../pkgs/hyprscrolling { })
       hypr-dynamic-cursors
       hyprexpo
       # hyprbars
@@ -25,12 +24,12 @@ in
           };
         };
 
-        hyprscrolling = {
-          column_width = 0.66666;
-          fullscreen_on_one_column = true;
-          focus_fit_method = 1;
-          follow_focus = true;
-        };
+        # hyprscrolling = {
+        #   column_width = 0.66666;
+        #   fullscreen_on_one_column = true;
+        #   focus_fit_method = 1;
+        #   follow_focus = true;
+        # };
 
         hyprexpo = {
           columns = 3;
