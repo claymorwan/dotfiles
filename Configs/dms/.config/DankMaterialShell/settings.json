@@ -261,6 +261,11 @@
       "pattern": "io-github-gaming32-modloadingscreen-ActualLoadingScreen",
       "replacement": "minecraft",
       "type": "exact"
+    },
+    {
+      "pattern": "fluxer_(app|desktop)",
+      "replacement": "fluxer",
+      "type": "regex"
     }
   ],
   "centeringMode": "index",

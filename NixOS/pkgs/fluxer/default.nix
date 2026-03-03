@@ -34,6 +34,7 @@
   nodejs,
   python3,
   esbuild,
+  imagemagick,
   fetchFromGitHub,
   copyDesktopItems,
   makeDesktopItem,
@@ -150,6 +151,10 @@ stdenv.mkDerivation rec {
 
     mkdir -p $out/share/icons/hicolor/512x512/
     cp build_resources/icons-stable/512x512.png $out/share/icons/hicolor/512x512/fluxer.png
+    for size in 16 24 32 48 64 128 256; do
+      mkdir -p $out/share/icons/hicolor/"$size"x"$size"/apps
+      ${lib.getExe imagemagick} build_resources/icons-stable/512x512.png -resize "$size"x"$size" $out/share/icons/hicolor/"$size"x"$size"/apps/${pname}.png
+    done
     
     runHook postInstall
   '';
