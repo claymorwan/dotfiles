@@ -72,7 +72,6 @@
               }
 
               venvVersionWarn
-              uv init --bare
             '';
 
             packages = with python.pkgs; [

@@ -15,8 +15,8 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     (fetchFromGitHub {
       owner = "kuska1";
       repo = "Material-Theme";
-      rev = "b1aa00ec7250327fda88d2fa555fdd23164e0187";
-      hash = "sha256-FJemv26E/tFcD7JIE5yVIp9W+t0K10TrMyVDz2fr06s=";
+      rev = "1bf0e1e1ee859accf1d1048d2cc11938a4dd4914";
+      hash = "sha256-F2OwJ5uGecxTT1RqWQdyiG6jh5mDClpfYQLqY+APPAI=";
     })
     ./files
   ];

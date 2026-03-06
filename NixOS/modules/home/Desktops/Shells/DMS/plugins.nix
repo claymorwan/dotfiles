@@ -68,11 +68,8 @@ in
         dankNotepadModule.enable = true;
         githubHeatmap.enable = true;
         niriScreenshot.enable = true;
-        # Plugin that i have to rename or else they won't work
-        # ghHeatmap = {
-        #   enable = true;
-        #   src = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.githubHeatmap;
-        # };
+        musicLyrics.enable = true;
+        dankAudioVisualizer.enable = true;
         # KDE Connect
         phoneConnect = {
           enable = osConfig.programs.kdeconnect.enable;

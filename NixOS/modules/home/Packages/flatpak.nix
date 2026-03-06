@@ -21,7 +21,7 @@
           filesystems = [
             "xdg-config/gtk-3.0:ro"
             "xdg-config/gtk-4.0:ro"
-            "xdg-config/MangoHud/MangoHud.conf:ro"
+            "xdg-config/MangoHud/Sober.conf:ro"
           ];
         };
       };

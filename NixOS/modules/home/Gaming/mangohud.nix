@@ -21,5 +21,7 @@
     "MangoHud/ENA-4-DreamBBQ.conf".text = ''
       font_file=${pkgs.callPackage ../../../pkgs/Fonts/no-continue.nix { }}/share/fonts/truetype/gomarice_no_continue.ttf
     '' + baseCfg;
+    "MangoHud/sober.conf".text = baseCfg;
+
   };
 }

@@ -105,7 +105,7 @@ in
 
           teams = {
             id = "c434a171-b645-4df3-b909-38e954d47f22";
-            url = "https://teams.microsoft.com/v2/";
+            url = "https://teams.cloud.microsoft/";
             workspace = spaces.Work.id;
             position = 200;
           };

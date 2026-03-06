@@ -271,6 +271,8 @@
   "centeringMode": "index",
   "clockDateFormat": "",
   "lockDateFormat": "",
+  "greeterRememberLastSession": true,
+  "greeterRememberLastUser": true,
   "mediaSize": 1,
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
@@ -579,7 +581,7 @@
       ],
       "rightWidgets": [
         {
-          "id": "network_speed_monitor",
+          "id": "musicLyrics",
           "enabled": true
         },
         {
@@ -591,17 +593,9 @@
           "enabled": true
         },
         {
-          "id": "cpuTemp",
-          "enabled": true
-        },
-        {
           "id": "memUsage",
           "enabled": true,
           "showSwap": true
-        },
-        {
-          "id": "amdGpuMonitor",
-          "enabled": true
         },
         {
           "id": "separator",
@@ -1287,6 +1281,35 @@
           "y": 0.7222222222222222
         }
       }
+    },
+    {
+      "id": "dw_1772552868020_jib0v5vgr",
+      "widgetType": "dankAudioVisualizer",
+      "name": "Dank Audio Visualizer",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          {
+            "name": "DP-1",
+            "model": "PLX2283H"
+          }
+        ],
+        "visualizationMode": "wave",
+        "useCustomColors": false,
+        "fadeWhenIdle": true,
+        "bloomIntensity": 50,
+        "innerDiameter": 50,
+        "rotationSpeed": 25,
+        "sensitivity": 50
+      },
+      "positions": {
+        "DP-1": {
+          "width": 240,
+          "height": 240,
+          "x": 840,
+          "y": 440
+        }
+      }
     }
   ],
   "desktopWidgetGroups": [
@@ -1312,10 +1335,10 @@
     },
     "dankNotepadModule": {
       "previewActive": false,
-      "currentFilePath": "/home/claymorwan/Documents/note.md",
-      "currentFileExtension": "md",
-      "sourceContent": "---\nSensible à l'écologie, j'ai auparavent participé par bénévolat au nettoyage d'une plage au Sénégal.\n---\nDurant ma scolarité j'ai effectué les deux stages qui sont compris en Troisième et en Seconde: Le premier dans une petite entreprise de bureautique nommée \"Staburo\" (impressions et vente de materiels de bureaux), le second dans une entreprise de fabrication et vente de câbles nommée \"Le Câbleries du Sénégal (LCS)\".\n---\nTrès intéressé par l'informatique, j'ai développé deux petit CLI (outil en ligne de commmande) en python, j'ai aussi des connaissances basiques dans d'autres languages tels que java, kotlin, C# et rust. J'ai aussi contribué à quelques projets open-source.\nJe suis également un mainteneur officiel dans la communauté catppuccin, le dépôt de paquets Nix ainsi que l'AUR (Arch User Repository).\nJ'utilise exclusivement une distribution basée sur Linux (originellement Arch Linux et maintenant NixOS) et donc je possède des connaissances sur le sujet.\n\nDans mon temps libre, je dessine aussi sur tablette graphique.\n\nJ'ai également pratiqué du judo pendant environs trois ans.",
-      "updatedAt": 1771859885977,
+      "currentFilePath": "notepad-files/untitled-1770243197424.txt",
+      "currentFileExtension": "txt",
+      "sourceContent": "",
+      "updatedAt": 1772721437097,
       "highlightedHtml": ""
     }
   },

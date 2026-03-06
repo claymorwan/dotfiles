@@ -54,6 +54,7 @@
     protonvpn-gui
     intiface-central
     polychromatic
+    fragments
     (pkgs.callPackage ../../../pkgs/shijima-qt-bin { })
     (pkgs.callPackage ../../../pkgs/namida-bin { })
     (lib.mkIf config.programs.noctalia-shell.enable (pkgs.callPackage ../../../pkgs/wallpaperengine-gui { }))
