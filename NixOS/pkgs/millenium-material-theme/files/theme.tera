@@ -66,8 +66,8 @@ whiskers:
     --md-sys-color-on-surface-variant: var(--scheme-light, var(--ctp-light-text)) var(--scheme-dark, var(--ctp-dark-text));
     --md-sys-color-outline: var(--scheme-light, var(--ctp-light-subtext0)) var(--scheme-dark, var(--ctp-dark-subtext0));
     --md-sys-color-outline-variant: var(--scheme-light, var(--ctp-light-accent)) var(--scheme-dark, var(--ctp-dark-accent));
-    --md-sys-color-shadow: rgb(0 0 0);
-    --md-sys-color-scrim: rgb(0 0 0);
+    --md-sys-color-shadow: rgba(0 0 0 0);
+    --md-sys-color-scrim: rgba(0 0 0 0);
     --md-sys-color-inverse-surface: var(--scheme-light, var(--ctp-dark-base)) var(--scheme-dark, var(--ctp-light-base));
     --md-sys-color-inverse-on-surface: var(--scheme-light, var(--ctp-dark-text)) var(--scheme-dark, var(--ctp-light-text));
     --md-sys-color-inverse-primary: var(--scheme-light, var(--ctp-dark-accent)) var(--scheme-dark, var(--ctp-light-accent));

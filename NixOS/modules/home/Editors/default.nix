@@ -3,6 +3,7 @@
 {
   imports = [
     # ./helix.nix
+    ./jetbrains.nix
     ./neovim.nix
     ./zed.nix
   ];
@@ -15,8 +16,5 @@
     sqlitebrowser
     distrobox
     boxbuddy
-
-    # jetbrains.idea
-    jetbrains.pycharm
   ];
 }

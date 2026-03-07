@@ -9,14 +9,14 @@
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "millenium-material-theme";
-  version = "0-unstable-2026-02-17";
+  version = "0-unstable-2026-03-06";
 
   srcs = [
     (fetchFromGitHub {
       owner = "kuska1";
       repo = "Material-Theme";
-      rev = "1bf0e1e1ee859accf1d1048d2cc11938a4dd4914";
-      hash = "sha256-F2OwJ5uGecxTT1RqWQdyiG6jh5mDClpfYQLqY+APPAI=";
+      rev = "4871c64661a15eb7741e561ccce9a7bca820aa9c";
+      hash = "sha256-Rzw/L1Oa9zpILRkC3BcS+wAoMM2JLHlKmlShB1b/Ug8=";
     })
     ./files
   ];
