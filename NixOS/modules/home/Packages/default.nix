@@ -36,7 +36,7 @@
 
     # GUI
     equibop
-    (pkgs.callPackage ../../../pkgs/fluxer/default.nix { })
+    # (pkgs.callPackage ../../../pkgs/fluxer/default.nix { })
     stoat-desktop
     (pkgs.gradia.overrideAttrs (finalAttrs: {
       patches = [ ./gradia.patch ];
@@ -61,7 +61,6 @@
 
     # Kde stuff
     kdePackages.gwenview
-    kdePackages.plasma-browser-integration
     kdePackages.ksshaskpass
   ];
 }
