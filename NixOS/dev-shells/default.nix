@@ -1,41 +1,41 @@
 rec {
   c-cpp = {
-    path = ./c-cpp;
-    description = "C/C++ development environment";
+    path = ./direnv/c-cpp;
+    description = "./direnv/C++ development environment";
   };
   c = c-cpp;
   cpp = c-cpp;
 
   catppuccin = {
-    path = ./catppuccin;
+    path = ./direnv/catppuccin;
     description = "Environment to make catppuccin themes and ports";
   };
   ctp = catppuccin;
 
   csharp = {
-    path = ./csharp;
+    path = ./direnv/csharp;
     description = "C# development environment";
   };
   cs = csharp;
 
   empty = {
-    path = ./empty;
+    path = ./direnv/empty;
     description = "Empty dev environment";
   };
 
   kotlin = {
-    path = ./kotlin;
+    path = ./direnv/kotlin;
     description = "Kotlin development environment";
   };
   kt = kotlin;
 
   pacman = {
-    path = ./pacman;
+    path = ./direnv/pacman;
     description = "Environment to make pacman packages";
   };
 
   python = {
-    path = ./python;
+    path = ./direnv/python;
     description = "Python development environment";
   };
   py = python;

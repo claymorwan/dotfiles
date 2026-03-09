@@ -33,6 +33,7 @@
     cbonsai
     linux-wallpaperengine
     wev
+    devenv
 
     # GUI
     equibop
