@@ -36,7 +36,7 @@
 
     # GUI
     equibop
-    # (pkgs.callPackage ../../../pkgs/fluxer/default.nix { })
+    (pkgs.callPackage ../../../pkgs/fluxer/default.nix { })
     stoat-desktop
     (pkgs.gradia.overrideAttrs (finalAttrs: {
       patches = [ ./gradia.patch ];
@@ -55,6 +55,7 @@
     intiface-central
     polychromatic
     fragments
+    inputs.gsr.packages.${pkgs.stdenv.hostPlatform.system}.gpu-screen-recorder-ui
     (pkgs.callPackage ../../../pkgs/shijima-qt-bin { })
     (pkgs.callPackage ../../../pkgs/namida-bin { })
     (lib.mkIf config.programs.noctalia-shell.enable (pkgs.callPackage ../../../pkgs/wallpaperengine-gui { }))

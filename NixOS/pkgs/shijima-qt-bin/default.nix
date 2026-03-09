@@ -14,16 +14,25 @@
 
 let
   appName = "shijima-qt";
+  version ="0.2.0-alpha1";
+  urls = {
+    x86_64-linux = {
+      url = "https://github.com/pixelomer/Shijima-Qt/releases/download/v${version}/release-linux-x86_64.zip";
+      hash = "sha256-H0H15WthZabfSA0AFNDH0UuE4uK5UkF4IRynu1TbWTY=";
+      stripRoot = false;
+    };
+
+    aarch64-linux = {
+      url = "https://github.com/pixelomer/Shijima-Qt/releases/download/v${version}/release-linux-arm64.zip";
+      hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+      stripRoot = false;
+    };
+  };
 in 
 stdenv.mkDerivation (finalAttrs: {
   pname = "shjima-qt-bin";
-  version = "0.2.0-alpha1";
-
-  src = fetchzip {
-    url = "https://github.com/pixelomer/Shijima-Qt/releases/download/v${finalAttrs.version}/release-linux-x86_64.zip";
-    hash = "sha256-H0H15WthZabfSA0AFNDH0UuE4uK5UkF4IRynu1TbWTY=";
-    stripRoot = false;
-  };
+  inherit version;
+  src = fetchzip (urls.${stdenv.hostPlatform.system}  or (throw "Unsupported system: ${stdenv.hostPlatform.system}"));
 
   nativeBuildInputs = [
     autoPatchelfHook

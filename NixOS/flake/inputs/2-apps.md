@@ -37,5 +37,10 @@ nixcord = {
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
+gsr = {
+  url = "github:Elibrio/gsr-nix";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+
 entangled.url = "github:entangled/entangled.py";
 ```

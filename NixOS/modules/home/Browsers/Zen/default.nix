@@ -59,9 +59,8 @@ in
             position = 1002;
           };
 
-          "𝓯𝓻𝓮𝓪𝓴" = {
+          freak = {
             id = "9c1fa423-c2ae-413b-964b-2d7f77e8792e";
-            # icon = " ";
             position = 1003;
           };
         };
@@ -112,7 +111,7 @@ in
           raindrop = {
             id = "e2fb6e27-e4fe-45a5-afd0-43da55d2674c";
             url = "https://app.raindrop.io/";
-            workspace = spaces."𝓯𝓻𝓮𝓪𝓴".id;
+            workspace = spaces.freak.id;
             position = 201;
           };
         };

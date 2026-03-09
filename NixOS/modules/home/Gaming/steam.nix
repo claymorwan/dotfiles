@@ -27,7 +27,8 @@ in
   programs.steam.config = {
     enable = true;
     closeSteam = true; # See 'Important' note at beginning of this readme
-
+    defaultCompatTool = "GE-Proton";
+      
     apps = {
 
       # Geometry dash
@@ -39,7 +40,20 @@ in
       };
 
       # Titanfall 2
-      "1237970" = winGameOptions;
+      
+      titanfall-2 = lib.recursiveUpdate gameOptions {
+        id = 1237970;
+        launchOptions = {
+          env.PROTON_ENABLE_WAYLAND = 1;
+          args = [
+            "-sw"
+            "-novid"
+            "-high"
+            "-windowed"
+            "-noborder"
+          ];
+        };
+      };
 
       # Subnautica
       subnautica = lib.recursiveUpdate winGameOptions {
@@ -76,7 +90,7 @@ in
       "3241660" = winGameOptions;
 
       "1962890" = lib.recursiveUpdate gameOptions {
-        launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
+        launchOptions.env.PROTON_ENABLE_WAYLAND = 1;
       };
 
       "1226640" = winGameOptions;
@@ -95,7 +109,7 @@ in
 
       # Ultrakill
       "1229490" = lib.recursiveUpdate winGameOptions {
-        launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
+        launchOptions.env.PROTON_ENABLE_WAYLAND = 1;
       };
 
       # Pizza tower
@@ -108,6 +122,9 @@ in
       "4142750" = lib.recursiveUpdate winGameOptions {
         launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
       };
+
+      # Boost vector EX Demo
+      "4338440" = gameOptions;
     };
   };
 }

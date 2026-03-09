@@ -62,6 +62,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    gsr = {
+      url = "github:Elibrio/gsr-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     entangled.url = "github:entangled/entangled.py";
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]

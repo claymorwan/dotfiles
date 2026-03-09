@@ -42,14 +42,14 @@
 }:
 stdenv.mkDerivation rec {
   pname = "fluxer";
-  version = "1.0.0-canary";
+  version = "0-unstable-2026-03-08";
 
   src = "${
     fetchFromGitHub {
       owner = "fluxerapp";
       repo = "fluxer";
-      rev = "refactor";
-      sha256 = "sha256-gHziJbueqVYrC+34xJ5AKsGLdPJrhWgXKDwq+jcRFkA=";
+      rev = "03813bbe17db008452f0f1be3090a7d2970a5447";
+      sha256 = "sha256-B8V1O1JhoK13yJS29LhTlwltdfh7f2XyzrKjZVdLQVY=";
     }
   }/fluxer_desktop";
 
