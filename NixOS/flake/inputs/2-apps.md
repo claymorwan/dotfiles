@@ -42,5 +42,18 @@ gsr = {
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
-entangled.url = "github:entangled/entangled.py";
+devenvcp = {
+  url = "git+https://codeberg.org/claymorwan/devenvcp";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+
+lncur = {
+  url = "git+https://codeberg.org/claymorwan/lncur";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+
+namida = {
+  url = "git+https://codeberg.org/claymorwan/namida-flake";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
 ```

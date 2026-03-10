@@ -67,7 +67,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    entangled.url = "github:entangled/entangled.py";
+    devenvcp = {
+      url = "git+https://codeberg.org/claymorwan/devenvcp";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    lncur = {
+      url = "git+https://codeberg.org/claymorwan/lncur";
+      inputs.nixpkgs.follows = "nixpkgs"; 
+    };
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]
     # DMS related stuff

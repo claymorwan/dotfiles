@@ -29,11 +29,12 @@
     sl
     zenity
     pipes
-    (pkgs.callPackage ../../../pkgs/lncur/package.nix { })
     cbonsai
     linux-wallpaperengine
     wev
     devenv
+    inputs.devenvcp.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.lncur.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # GUI
     equibop
