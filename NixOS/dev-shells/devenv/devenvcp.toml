@@ -1,3 +1,14 @@
+[empty]
+path = "./empty"
+
+[catppuccin]
+path ="./catppuccin"
+aliases = ["ctp"]
+
+[csharp]
+path = "./csharp"
+aliases = ["cs"]
+
 [python]
 path = "./python"
 aliases = ["py"]

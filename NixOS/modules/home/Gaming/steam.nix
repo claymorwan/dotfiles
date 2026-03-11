@@ -44,9 +44,8 @@ in
       titanfall-2 = lib.recursiveUpdate gameOptions {
         id = 1237970;
         launchOptions = {
-          env.PROTON_ENABLE_WAYLAND = 1;
+          # env.PROTON_ENABLE_WAYLAND = 1;
           args = [
-            "-sw"
             "-novid"
             "-high"
             "-windowed"

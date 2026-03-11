@@ -414,10 +414,12 @@
   "matugenTemplateKcolorscheme": false,
   "matugenTemplateVscode": false,
   "matugenTemplateEmacs": false,
+  "matugenTemplateZed": true,
   "showDock": true,
   "dockAutoHide": true,
   "dockSmartAutoHide": false,
   "dockGroupByApp": true,
+  "dockRestoreSpecialWorkspaceOnClick": false,
   "dockOpenOnOverview": true,
   "dockPosition": 1,
   "dockSpacing": 10,
@@ -478,6 +480,7 @@
   "notificationHistorySaveNormal": true,
   "notificationHistorySaveCritical": true,
   "notificationRules": [],
+  "notificationFocusedMonitor": false,
   "osdAlwaysShowValue": true,
   "osdPosition": 5,
   "osdVolumeEnabled": true,
@@ -953,8 +956,8 @@
           "height": 240
         },
         "_synced": {
-          "x": 0.4375,
-          "y": 0.4074074074074074,
+          "x": 0.4479166666666667,
+          "y": 0.37037037037037035,
           "width": 240,
           "height": 240
         }

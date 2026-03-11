@@ -59,7 +59,6 @@
     fragments
     inputs.gsr.packages.${pkgs.stdenv.hostPlatform.system}.gpu-screen-recorder-ui
     (pkgs.callPackage ../../../pkgs/shijima-qt-bin { })
-    (pkgs.callPackage ../../../pkgs/namida-bin { })
     (lib.mkIf config.programs.noctalia-shell.enable (pkgs.callPackage ../../../pkgs/wallpaperengine-gui { }))
 
     # Kde stuff
