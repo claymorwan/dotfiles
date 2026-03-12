@@ -5,10 +5,17 @@ path = "./empty"
 path ="./catppuccin"
 aliases = ["ctp"]
 
-[csharp]
-path = "./csharp"
-aliases = ["cs"]
+[dotnet]
+path = "./dotnet"
+aliases = ["cs", "csharp"]
 
 [python]
 path = "./python"
 aliases = ["py"]
+
+[java]
+path = "./java"
+
+[rust]
+path = "./rust"
+aliases = ["rs"]

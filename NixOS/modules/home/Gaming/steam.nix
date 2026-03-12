@@ -44,12 +44,17 @@ in
       titanfall-2 = lib.recursiveUpdate gameOptions {
         id = 1237970;
         launchOptions = {
-          # env.PROTON_ENABLE_WAYLAND = 1;
+          env = {
+            # PROTON_ENABLE_WAYLAND = 1;
+            PROTON_LOG = 1;
+            OPENSSL_ia32cap = "~0x200000200000000";
+          };
+
           args = [
-            "-novid"
-            "-high"
-            "-windowed"
+            # "-windowed"
             "-noborder"
+            "-novid"
+            "--force-grab-cursor"
           ];
         };
       };

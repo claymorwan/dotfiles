@@ -185,5 +185,8 @@
   "musicLyrics": {
     "enabled": true,
     "musixmatchToken": "260311a12efd49899783b02825b150c7d50b0322c9cc1ccaa82a3e"
+  },
+  "dankAudioVisualizer": {
+    "enabled": true
   }
 }

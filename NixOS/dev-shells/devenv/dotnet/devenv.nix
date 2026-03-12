@@ -1,10 +1,11 @@
 { pkgs, lib, config, inputs, ... }:
 
-let
-  dotnet = dotnetCorePackages.dotnet_10;
-in 
 {
+  languages.dotnet = {
+    enable = true;
+  };
+
   packages = with pkgs; [
-    dotnet.sdk
+  
   ];
 }
