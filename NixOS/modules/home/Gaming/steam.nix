@@ -1,9 +1,4 @@
-{
-  inputs,
-  pkgs,
-  lib,
-  ...
-}:
+{ inputs, pkgs, lib, ... }:
 
 let
   gameOptions.launchOptions.wrappers = [
@@ -47,14 +42,11 @@ in
           env = {
             # PROTON_ENABLE_WAYLAND = 1;
             PROTON_LOG = 1;
-            OPENSSL_ia32cap = "~0x200000200000000";
+            OPENSSL_ia32cap = "~0x20000000";
           };
 
           args = [
-            # "-windowed"
-            "-noborder"
             "-novid"
-            "--force-grab-cursor"
           ];
         };
       };
