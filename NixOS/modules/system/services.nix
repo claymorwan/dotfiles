@@ -22,11 +22,7 @@
       enable = true;
     };
 
-    joycond = {
-      enable = true;
-      package = pkgs.callPackage ../../pkgs/joycond/package.nix { };
-    };
-
+    joycond.enable = true;
     openssh.enable = true;
     blueman.enable = true;
     upower.enable = true;

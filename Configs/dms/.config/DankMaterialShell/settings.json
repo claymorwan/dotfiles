@@ -178,6 +178,7 @@
   "showOccupiedWorkspacesOnly": false,
   "reverseScrolling": false,
   "dwlShowAllTags": false,
+  "workspaceActiveAppHighlightEnabled": false,
   "workspaceColorMode": "default",
   "workspaceOccupiedColorMode": "default",
   "workspaceUnfocusedColorMode": "default",
@@ -415,6 +416,16 @@
   "matugenTemplateVscode": false,
   "matugenTemplateEmacs": false,
   "matugenTemplateZed": true,
+  "matugenTemplateNeovimSettings": {
+    "dark": {
+      "baseTheme": "github_dark",
+      "harmony": 0.5
+    },
+    "light": {
+      "baseTheme": "github_light",
+      "harmony": 0.5
+    }
+  },
   "showDock": true,
   "dockAutoHide": true,
   "dockSmartAutoHide": false,
@@ -898,8 +909,8 @@
           "height": 120
         },
         "_synced": {
-          "x": 0.6979166666666666,
-          "y": 0.14814814814814814,
+          "x": 0.75,
+          "y": 0.3148148148148148,
           "width": 120,
           "height": 120
         }
@@ -956,10 +967,10 @@
           "height": 240
         },
         "_synced": {
-          "x": 0.4479166666666667,
-          "y": 0.37037037037037035,
-          "width": 240,
-          "height": 240
+          "x": 0.7083333333333334,
+          "y": 0.05555555555555555,
+          "width": 180,
+          "height": 180
         }
       }
     },
@@ -1115,7 +1126,7 @@
         },
         "_synced": {
           "x": 0.6979166666666666,
-          "y": 0.05555555555555555,
+          "y": 0.2222222222222222,
           "width": 120,
           "height": 120
         }
@@ -1158,7 +1169,7 @@
         },
         "_synced": {
           "x": 0.75,
-          "y": 0.05555555555555555,
+          "y": 0.2222222222222222,
           "width": 120,
           "height": 120
         }
@@ -1201,8 +1212,8 @@
           "height": 120
         },
         "_synced": {
-          "x": 0.75,
-          "y": 0.14814814814814814,
+          "x": 0.6979166666666666,
+          "y": 0.3148148148148148,
           "width": 120,
           "height": 120
         }

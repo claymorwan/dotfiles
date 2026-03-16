@@ -3,6 +3,7 @@
   lib,
   fetchFromGitHub,
   catppuccin-whiskers,
+  nix-update-script,
   flavor ? "mocha",
   accent ? "mauve",
 }:
@@ -15,8 +16,8 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     (fetchFromGitHub {
       owner = "kuska1";
       repo = "Material-Theme";
-      rev = "896a247a3ce4d2b520374b6675fb52a6eec03058";
-      hash = "sha256-pLiYVMxJU6W+MIz3ZHmkB034x04mTAWe+rWERRhmqV0=";
+      rev = "1172546966f4684a821856b0c97df7e2f2560c48";
+      hash = "sha256-xjSC7rYeIDQT6/XgLaxTjRe9s+0V3oJt/4GDZ/k24y8=";
     })
     ./files
   ];
@@ -44,6 +45,8 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     cd ..
     cp -r source $out/share/Steam/steamui/skins/Material-Theme
   '';
+
+  passthru.updateScript = nix-update-script { extraArgs = [ "--version=branch" ]; };
 
   meta = {
     description = "Material Theme for Steam Millenium";

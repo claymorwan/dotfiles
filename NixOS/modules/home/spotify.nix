@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ inputs, pkgs, ... }:
 
 let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
@@ -10,6 +10,10 @@ in
 
   programs.spicetify = {
     enable = true;
+
+    theme = spicePkgs.themes.catppuccin;
+    colorScheme = "mocha";
+    
     enabledExtensions = with spicePkgs.extensions; [
       catJamSynced
       beautifulLyrics
@@ -19,7 +23,9 @@ in
       hidePodcasts
       # shuffle # shuffle+ (special characters are sanitized out of extension names)
     ];
-    theme = spicePkgs.themes.text;
-    colorScheme = "CatppuccinMocha";
+
+    enabledSnippets = with spicePkgs.snippets; [
+      newHoverPanel
+    ];
   };
 }

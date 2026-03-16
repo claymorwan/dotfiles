@@ -29,6 +29,15 @@ in
   # Needed to make custom cursor work
   environment = {
     etc."greetd/niri_overrides.kdl".text = ''
+      input {
+        keyboard {
+          xkb {
+            layout "fr,us"
+            options "grp:win_space_toggle"
+          }
+        }
+      }
+
       cursor {
         xcursor-theme "${mouse_cursor}"
         xcursor-size 24

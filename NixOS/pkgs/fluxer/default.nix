@@ -38,11 +38,12 @@
   fetchFromGitHub,
   copyDesktopItems,
   makeDesktopItem,
+  nix-update-script,
   ...
 }:
 stdenv.mkDerivation rec {
   pname = "fluxer";
-  version = "0-unstable-2026-03-08";
+  version = "0-unstable-2026-03-14";
 
   src = "${
     fetchFromGitHub {
@@ -158,5 +159,18 @@ stdenv.mkDerivation rec {
     
     runHook postInstall
   '';
+
+  passthru.updateScript = nix-update-script { extraArgs = [ "--version=branch" ]; };
+
+  meta = {
+    description = "Free and open source instant messaging and VoIP platform built for friends, groups, and communities";
+    homepage = "https://fluxer.app/";
+    mainProgram = "fluxer-desktop";
+    license = lib.licenses.agpl3Plus;
+    platforms = lib.platforms.linux ++ lib.platforms.darwin;
+    maintainers = with lib.maintainers; [
+      claymorwan
+    ];
+  };
 }
 

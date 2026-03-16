@@ -15,7 +15,7 @@
 let
   electron = electron_39;
   pname = "shiru";
-  version = "6.5.0";
+  version = "6.5.1";
 
   src = fetchFromGitHub {
     owner = "RockinChaos";

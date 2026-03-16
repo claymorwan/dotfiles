@@ -121,6 +121,9 @@ in
 
       # Boost vector EX Demo
       "4338440" = gameOptions;
+
+      # Awaria
+      "3274300"= winGameOptions;
     };
   };
 }
