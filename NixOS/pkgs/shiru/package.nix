@@ -21,7 +21,7 @@ let
     owner = "RockinChaos";
     repo = "shiru";
     tag = "v${version}";
-    hash = "sha256-URNTgdvUR4q5Wh9TnvJ+Bbx1ggIDupDQX+HFRWHkspM=";
+    hash = "sha256-dqXpX4pLF3EjoTrjofOPTO39EGU/2JyfS3+slwCR4xU=";
   };
 in
 stdenv.mkDerivation {
@@ -48,7 +48,7 @@ stdenv.mkDerivation {
       cd electron
     '';
     fetcherVersion = 2;
-    hash = "sha256-pIsHvYbjzTnaATiXRPtuR4IgMDDXjmImfexo19tosaU=";
+    hash = "sha256-jeiGiBcfY3eY/TlalzwSm8FFLjgn9bqSWY6L3J48NfY=";
   };
 
   buildPhase = ''

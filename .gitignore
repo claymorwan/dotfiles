@@ -14,7 +14,4 @@ __pycache__
 .venv
 dist
 
-Configs/yazi/.config/yazi/plugins/
-Configs/yazi/.config/yazi/flavors/
-
 .entangled

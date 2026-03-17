@@ -43,7 +43,7 @@
     (pkgs.gradia.overrideAttrs (finalAttrs: {
       patches = [ ./gradia.patch ];
     }))
-    (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
+    # (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
     packet
     localsend
     catppuccinifier-gui

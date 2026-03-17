@@ -3,17 +3,18 @@
 {
   languages.python = {
     enable = true;
-    venv.enable = true;
+    venv = {
+      enable = true;
+      requirements = ''
+        entangled-cli
+      '';
+    };
+
     uv = {
       enable = true;
-      sync.enable = true;
     };
   };
 
   packages = with pkgs.python3.pkgs;[
   ];
-
-  enterShell = ''
-    uv pip install entangled-cli
-  '';
 }
