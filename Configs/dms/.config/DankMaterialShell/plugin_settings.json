@@ -157,6 +157,7 @@
     "enabled": true,
     "terminal": "ghostty",
     "history": [
+      "winn",
       "sst",
       "lur",
       "yes"

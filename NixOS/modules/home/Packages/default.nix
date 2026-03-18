@@ -57,6 +57,7 @@
     intiface-central
     polychromatic
     fragments
+    winboat
     inputs.gsr.packages.${pkgs.stdenv.hostPlatform.system}.gpu-screen-recorder-ui
     (pkgs.callPackage ../../../pkgs/shijima-qt-bin { })
     (lib.mkIf config.programs.noctalia-shell.enable (pkgs.callPackage ../../../pkgs/wallpaperengine-gui { }))
