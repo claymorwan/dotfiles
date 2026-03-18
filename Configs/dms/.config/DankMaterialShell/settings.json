@@ -951,6 +951,10 @@
           {
             "name": "DP-1",
             "model": "PLX2283H"
+          },
+          {
+            "name": "eDP-1",
+            "model": "0x07F1"
           }
         ],
         "showOnOverview": false,
