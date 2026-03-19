@@ -124,6 +124,16 @@ in
 
       # Awaria
       "3274300"= winGameOptions;
+
+      # White Knhcle Demo
+      "3218540" = lib.recursiveUpdate winGameOptions {
+        launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
+      };
+
+      # Herringen Demo
+      "4283210" = lib.recursiveUpdate winGameOptions {
+        launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
+      };
     };
   };
 }
