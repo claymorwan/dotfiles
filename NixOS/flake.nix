@@ -79,7 +79,7 @@
     
     namida = {
       url = "git+https://codeberg.org/iWisp360/namida-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     
     # omnisearch = {

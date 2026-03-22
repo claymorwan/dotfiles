@@ -11,16 +11,19 @@
         "flakes"
       ];
 
-      substituters = ["https://hyprland.cachix.org"];
+      substituters = [
+        "https://hyprland.cachix.org"
+        "https://cache.garnix.io"
+      ];
       
       trusted-substituters = [
         "https://hyprland.cachix.org"
-        "https://ejb1123.cachix.org"
+        "https://cache.garnix.io"
       ];
 
       trusted-public-keys = [
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-        "ejb1123.cachix.org-1:ay+9Fw4EX2GbTK8tqoPSYKLVpskg5MtMzxGHw27vZ2Q="
+        "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
       ];
 
       auto-optimise-store = true;
@@ -41,11 +44,7 @@
         (pkgs.runCommand "steamrun-lib" { } "mkdir $out; ln -s ${pkgs.steam-run.fhsenv}/usr/lib64 $out/lib")
       ]
       ++ (with pkgs; [
-        # libunarr
-        # kdePackages.qtbase
-        # kdePackages.qtmultimedia
-        # libx11
-        # wayland
+        # lib here
       ]);
     };
   };

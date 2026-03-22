@@ -24,7 +24,7 @@ in
     };
 
     namida = {
-      # enable = true;
+      enable = true;
       package = inputs.namida.packages.${pkgs.stdenv.hostPlatform.system}.beta;
     };
 
