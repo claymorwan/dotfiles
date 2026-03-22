@@ -53,7 +53,12 @@ lncur = {
 };
 
 namida = {
-  url = "git+https://codeberg.org/claymorwan/namida-flake";
+  url = "git+https://codeberg.org/iWisp360/namida-nix";
   inputs.nixpkgs.follows = "nixpkgs";
 };
+
+# omnisearch = {
+#   url = "git+https://git.bwaaa.monster/omnisearch";
+#   inputs.nixpkgs.follows = "nixpkgs";
+# };
 ```

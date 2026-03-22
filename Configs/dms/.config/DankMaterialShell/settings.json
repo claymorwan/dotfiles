@@ -9,6 +9,7 @@
     }
   },
   "matugenScheme": "scheme-tonal-spot",
+  "matugenContrast": 0,
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "",
   "popupTransparency": 1,
@@ -678,10 +679,6 @@
           "enabled": true
         },
         {
-          "id": "alarmClock",
-          "enabled": true
-        },
-        {
           "id": "dankPomodoroTimer",
           "enabled": true
         },
@@ -699,6 +696,10 @@
         },
         {
           "id": "niriScreenshot",
+          "enabled": true
+        },
+        {
+          "id": "screenRecorder",
           "enabled": true
         }
       ],

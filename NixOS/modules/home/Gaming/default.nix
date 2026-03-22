@@ -21,7 +21,9 @@
     faugus-launcher
     # wine-discord-ipc-bridge
 
-    # osu-lazer-bin
+    (osu-lazer-bin.override {
+      nativeWayland = true;
+    })
     #sm64coopdx
   ];
 

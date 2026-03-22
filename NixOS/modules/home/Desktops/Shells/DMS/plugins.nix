@@ -70,6 +70,7 @@ in
         niriScreenshot.enable = true;
         musicLyrics.enable = true;
         dankAudioVisualizer.enable = true;
+        screenRecorder.enable = true;
         # KDE Connect
         phoneConnect = {
           enable = osConfig.programs.kdeconnect.enable;

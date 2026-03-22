@@ -1,5 +1,8 @@
 {
   stdenvNoCC,
+  millenium-material-theme-src,
+  pkgs,
+  local-utils ? import ../utils.nix { inherit pkgs; },
   lib,
   fetchFromGitHub,
   catppuccin-whiskers,
@@ -10,15 +13,10 @@
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "millenium-material-theme";
-  version = "0-unstable-2026-03-06";
+  version = "0-unstable-${local-utils.timestamp millenium-material-theme-src}";
 
   srcs = [
-    (fetchFromGitHub {
-      owner = "kuska1";
-      repo = "Material-Theme";
-      rev = "1172546966f4684a821856b0c97df7e2f2560c48";
-      hash = "sha256-xjSC7rYeIDQT6/XgLaxTjRe9s+0V3oJt/4GDZ/k24y8=";
-    })
+    millenium-material-theme-src
     ./files
   ];
 
@@ -41,9 +39,9 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   '';
 
   installPhase = ''
-    mkdir -p $out/share/Steam/steamui/skins
+    # mkdir -p $out/share/Steam/steamui/skins
     cd ..
-    cp -r source $out/share/Steam/steamui/skins/Material-Theme
+    cp -r source $out #/share/Steam/steamui/skins/Material-Theme
   '';
 
   passthru.updateScript = nix-update-script { extraArgs = [ "--version=branch" ]; };

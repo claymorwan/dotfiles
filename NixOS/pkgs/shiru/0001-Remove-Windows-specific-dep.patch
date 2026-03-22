@@ -1,4 +1,4 @@
-From b6518afe2dcbd07cde4abb15187c90b1e55f5ca5 Mon Sep 17 00:00:00 2001
+From 9e37651ca68f28f2795cecb3fedf3f648c5dd228 Mon Sep 17 00:00:00 2001
 From: Naomi Roberts <mia@naomieow.xyz>
 Date: Thu, 4 Dec 2025 19:59:48 +0000
 Subject: [PATCH] Remove Windows-specific dep
@@ -13,19 +13,19 @@ Signed-off-by: Naomi Roberts <mia@naomieow.xyz>
  5 files changed, 3 insertions(+), 38 deletions(-)
 
 diff --git a/electron/package.json b/electron/package.json
-index 880b0dd7..824594b2 100644
+index 4a9660ae..773a1032 100644
 --- a/electron/package.json
 +++ b/electron/package.json
 @@ -26,7 +26,6 @@
-     "electron-updater": "^6.8.2"
+     "electron-updater": "^6.8.3"
    },
    "dependencies": {
 -    "@paymoapp/electron-shutdown-handler": "^1.1.2",
-     "@xhayper/discord-rpc": "^1.3.0",
+     "@xhayper/discord-rpc": "^1.3.1",
      "concurrently": "^9.2.1",
      "jimp": "0.22.12",
 diff --git a/electron/src/main/app.js b/electron/src/main/app.js
-index 0b5597d9..8a92c67c 100644
+index d5e87aca..9f8c3375 100644
 --- a/electron/src/main/app.js
 +++ b/electron/src/main/app.js
 @@ -7,7 +7,6 @@ import Jimp from 'jimp'
@@ -75,11 +75,11 @@ index ac8742fc..109174bc 100644
        aliasFields: [],
        alias: {
 diff --git a/package.json b/package.json
-index eed93f59..0355460b 100644
+index 9e689462..40b29796 100644
 --- a/package.json
 +++ b/package.json
-@@ -47,7 +47,6 @@
-       "capacitor-plugin-safe-area": "patches/capacitor-plugin-safe-area.patch"
+@@ -49,7 +49,6 @@
+       "svelte-keybinds": "patches/svelte-keybinds.patch"
      },
      "onlyBuiltDependencies": [
 -      "@paymoapp/electron-shutdown-handler",
@@ -87,10 +87,10 @@ index eed93f59..0355460b 100644
        "electron",
        "fs-native-extensions",
 diff --git a/pnpm-lock.yaml b/pnpm-lock.yaml
-index 3dea86aa..41e1b09b 100644
+index 388ff37e..06ac0f5c 100644
 --- a/pnpm-lock.yaml
 +++ b/pnpm-lock.yaml
-@@ -275,9 +275,6 @@ importers:
+@@ -278,9 +278,6 @@ importers:
  
    electron:
      dependencies:
@@ -98,9 +98,9 @@ index 3dea86aa..41e1b09b 100644
 -        specifier: ^1.1.2
 -        version: 1.1.2
        '@xhayper/discord-rpc':
-         specifier: ^1.3.0
-         version: 1.3.0(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-@@ -888,10 +885,7 @@ packages:
+         specifier: ^1.3.1
+         version: 1.3.1(bufferutil@4.0.8)(utf-8-validate@6.0.4)
+@@ -883,10 +880,7 @@ packages:
      deprecated: This functionality has been moved to @npmcli/fs
  
    '@obsidize/rx-console@6.2.1':
@@ -112,7 +112,7 @@ index 3dea86aa..41e1b09b 100644
  
    '@pkgjs/parseargs@0.11.0':
      resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
-@@ -3969,9 +3963,6 @@ packages:
+@@ -3988,9 +3982,6 @@ packages:
    node-addon-api@4.3.0:
      resolution: {integrity: sha512-73sE9+3UaLYYFmDsFZnqCInzPyh3MqIwZO9cw58yIqAZhONrrabrYyYe3TuIqtIiOuTXVhsGau8hcrhhwSsDIQ==}
  
@@ -122,7 +122,7 @@ index 3dea86aa..41e1b09b 100644
    node-addon-api@6.1.0:
      resolution: {integrity: sha512-+eawOlIgy680F0kBzPUNFhMZGtJ1YmqM6l4+Crf4IkImjYrO/mqPwRMh352g23uIaQKFItcQ64I7KMaJxHgAVA==}
  
-@@ -6734,11 +6725,6 @@ snapshots:
+@@ -6730,11 +6721,6 @@ snapshots:
  
    '@obsidize/rx-console@6.2.1': {}
  
@@ -134,7 +134,7 @@ index 3dea86aa..41e1b09b 100644
    '@pkgjs/parseargs@0.11.0':
      optional: true
  
-@@ -10383,8 +10369,6 @@ snapshots:
+@@ -10402,8 +10388,6 @@ snapshots:
  
    node-addon-api@4.3.0: {}
  
@@ -144,4 +144,4 @@ index 3dea86aa..41e1b09b 100644
  
    node-api-version@0.2.1:
 -- 
-2.52.0
+2.53.0

@@ -157,6 +157,7 @@
     "enabled": true,
     "terminal": "ghostty",
     "history": [
+      "luttr",
       "winn",
       "sst",
       "lur",
@@ -186,13 +187,16 @@
     "enabled": true
   },
   "dms-niri-screenshot": {
-    "mode": "interactive"
+    "mode": "window"
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "26031907ab4c059330e07768710de88cbd2a8e1ba0ab94ac2765aa"
+    "musixmatchToken": "260322f15cc8c40d0dfd3ccb5d759804e7253758f48c8143db47aa"
   },
   "dankAudioVisualizer": {
+    "enabled": true
+  },
+  "screenRecorder": {
     "enabled": true
   }
 }

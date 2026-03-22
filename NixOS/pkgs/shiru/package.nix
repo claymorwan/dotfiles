@@ -14,18 +14,17 @@
 }:
 let
   electron = electron_39;
+in
+stdenv.mkDerivation (finalAttrs: {
   pname = "shiru";
   version = "6.5.1";
 
   src = fetchFromGitHub {
     owner = "RockinChaos";
     repo = "shiru";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-dqXpX4pLF3EjoTrjofOPTO39EGU/2JyfS3+slwCR4xU=";
   };
-in
-stdenv.mkDerivation {
-  inherit pname version src;
 
   patches = [
     # electron-shutdown-handler is only used on Windows and tries to download
@@ -43,7 +42,7 @@ stdenv.mkDerivation {
   ];
 
   pnpmDeps = fetchPnpmDeps {
-    inherit pname version src;
+    inherit (finalAttrs) pname version src;
     prePnpmInstall = ''
       cd electron
     '';
@@ -101,15 +100,15 @@ stdenv.mkDerivation {
     })
   ];
 
-  meta = with lib; {
+  meta = {
     description = "Stream your personal media library in real-time";
     homepage = "https://github.com/RockinChaos/Shiru";
-    changelog = "https://github.com/RockinChaos/Shiru/releases/tag/v${version}";
-    license = licenses.gpl3Plus;
-    maintainers = with maintainers; [
+    changelog = "https://github.com/RockinChaos/Shiru/releases/tag/v${finalAttrs.version}";
+    license = lib.licenses.gpl3Plus;
+    maintainers = with lib.maintainers; [
       naomieow
     ];
     platforms = [ "x86_64-linux" ];
     mainProgram = "shiru";
   };
-}
+})

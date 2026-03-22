@@ -6,18 +6,19 @@ let
     pkgs.gamemode
   ];
 
-  winGameOptions = gameOptions // {
+  winGameOptions = lib.recursiveUpdate gameOptions {
     compatTool = "GE-Proton";
+    launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
   };
-
 in
 {
   imports = [
     inputs.steam-config-nix.homeModules.default
   ];
 
+  # Millenium theme
   xdg.dataFile."Steam/steamui/skins/Material-Theme".source =
-    "${pkgs.callPackage ../../../pkgs/millenium-material-theme { }}/share/Steam/steamui/skins/Material-Theme";
+    pkgs.callPackage ../../../pkgs/millenium-material-theme { inherit (inputs) millenium-material-theme-src; };
 
   programs.steam.config = {
     enable = true;
@@ -27,20 +28,15 @@ in
     apps = {
 
       # Geometry dash
-      geometry-dash = lib.recursiveUpdate winGameOptions {
-        id = 322170;
-        launchOptions = {
-          env.WINEDLLOVERRIDES = "xinput1_4=n,b";
-        };
+      "322170" = lib.recursiveUpdate winGameOptions {
+        launchOptions.env.WINEDLLOVERRIDES = "xinput1_4=n,b";
       };
 
       # Titanfall 2
-      
-      titanfall-2 = lib.recursiveUpdate gameOptions {
-        id = 1237970;
+      "1237970" = lib.recursiveUpdate gameOptions {
         launchOptions = {
           env = {
-            # PROTON_ENABLE_WAYLAND = 1;
+            PROTON_ENABLE_WAYLAND = 0;
             PROTON_LOG = 1;
             OPENSSL_ia32cap = "~0x20000000";
           };
@@ -52,19 +48,13 @@ in
       };
 
       # Subnautica
-      subnautica = lib.recursiveUpdate winGameOptions {
-        id = 264710;
-        launchOptions = {
-          env.WINEDLLOVERRIDES = "winhttp=n,b";
-        };
+      "264710" = lib.recursiveUpdate winGameOptions {
+        launchOptions.env.WINEDLLOVERRIDES = "winhttp=n,b";
       };
 
       # Subnautica: Below Zero
-      subnautica-bz = lib.recursiveUpdate winGameOptions {
-        id = 848450;
-        launchOptions = {
-          env.WINEDLLOVERRIDES = "winhttp=n,b";
-        };
+      "848450" = lib.recursiveUpdate winGameOptions {
+        launchOptions.env.WINEDLLOVERRIDES = "winhttp=n,b";
       };
 
       # Spelunky 2
@@ -85,9 +75,7 @@ in
       # R.E.P.0
       "3241660" = winGameOptions;
 
-      "1962890" = lib.recursiveUpdate gameOptions {
-        launchOptions.env.PROTON_ENABLE_WAYLAND = 1;
-      };
+      "1962890" = gameOptions;
 
       "1226640" = winGameOptions;
 
@@ -104,9 +92,7 @@ in
       "3820720" = gameOptions;
 
       # Ultrakill
-      "1229490" = lib.recursiveUpdate winGameOptions {
-        launchOptions.env.PROTON_ENABLE_WAYLAND = 1;
-      };
+      "1229490" = winGameOptions;
 
       # Pizza tower
       "2231450" = winGameOptions;
@@ -115,9 +101,7 @@ in
       "2134320" = gameOptions;
 
       # Denshattack Demo
-      "4142750" = lib.recursiveUpdate winGameOptions {
-        launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
-      };
+      "4142750" = winGameOptions;
 
       # Boost vector EX Demo
       "4338440" = gameOptions;
@@ -126,14 +110,22 @@ in
       "3274300"= winGameOptions;
 
       # White Knhcle Demo
-      "3218540" = lib.recursiveUpdate winGameOptions {
-        launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
-      };
+      "3218540" = winGameOptions;
 
       # Herringen Demo
-      "4283210" = lib.recursiveUpdate winGameOptions {
-        launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
-      };
+      "4283210" = winGameOptions;
+
+      # Quaver
+      "980610" = gameOptions;
+
+      # Data Center Demo
+      "4376050" = winGameOptions;
+
+      # Nothing Together
+      "2788630" = winGameOptions;
+
+      # Content Warning
+      "2881650" = winGameOptions;
     };
   };
 }

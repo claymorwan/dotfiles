@@ -12,8 +12,17 @@
       ];
 
       substituters = ["https://hyprland.cachix.org"];
-      trusted-substituters = ["https://hyprland.cachix.org"];
-      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+      
+      trusted-substituters = [
+        "https://hyprland.cachix.org"
+        "https://ejb1123.cachix.org"
+      ];
+
+      trusted-public-keys = [
+        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+        "ejb1123.cachix.org-1:ay+9Fw4EX2GbTK8tqoPSYKLVpskg5MtMzxGHw27vZ2Q="
+      ];
+
       auto-optimise-store = true;
     };
 

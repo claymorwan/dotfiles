@@ -1,5 +1,9 @@
 {
   stdenv,
+  fluxer-src,
+  pkgs,
+  local-utils ? import ../utils.nix { inherit pkgs; },
+  runCommand,
   autoPatchelfHook,
   makeWrapper,
   glib,
@@ -43,16 +47,9 @@
 }:
 stdenv.mkDerivation rec {
   pname = "fluxer";
-  version = "0-unstable-2026-03-14";
+  version = "0-unstable-${local-utils.timestamp fluxer-src}";
 
-  src = "${
-    fetchFromGitHub {
-      owner = "fluxerapp";
-      repo = "fluxer";
-      rev = "03813bbe17db008452f0f1be3090a7d2970a5447";
-      sha256 = "sha256-B8V1O1JhoK13yJS29LhTlwltdfh7f2XyzrKjZVdLQVY=";
-    }
-  }/fluxer_desktop";
+  src = "${fluxer-src}/fluxer_desktop";
 
   patches = [ ./fluxer.patch ];
 

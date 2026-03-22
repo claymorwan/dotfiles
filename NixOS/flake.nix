@@ -74,8 +74,18 @@
     
     lncur = {
       url = "git+https://codeberg.org/claymorwan/lncur";
-      inputs.nixpkgs.follows = "nixpkgs"; 
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    namida = {
+      url = "git+https://codeberg.org/iWisp360/namida-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    # omnisearch = {
+    #   url = "git+https://git.bwaaa.monster/omnisearch";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]
     # DMS related stuff
@@ -126,6 +136,17 @@
     };
     
     nix-monitor.url = "github:antonjah/nix-monitor";
+    # ~/~ end
+    # ~/~ begin <<flake/inputs/4-package-src.md#flake-inputs>>[0]
+    fluxer-src = {
+      url = "github:fluxerapp/fluxer";
+      flake = false;
+    };
+    
+    millenium-material-theme-src = {
+      url = "github:kuska1/Material-Theme";
+      flake = false;
+    };
     # ~/~ end
   };
 
