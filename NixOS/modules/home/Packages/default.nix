@@ -52,6 +52,7 @@ in
 
     # GUI
     equibop
+    fluxer
     stoat-desktop
     packet
     localsend
@@ -69,13 +70,12 @@ in
     winboat
     inputs.gsr.packages.${pkgs.stdenv.hostPlatform.system}.gpu-screen-recorder-ui
     
-    (pkgs.callPackage ../../../pkgs/fluxer/default.nix { inherit (inputs) fluxer-src; })
-    (pkgs.callPackage ../../../pkgs/shiru/package.nix { })
-    (pkgs.callPackage ../../../pkgs/shijima-qt-bin { })
+    shiru
+    shijima-qt-bin
     (pkgs.gradia.overrideAttrs (finalAttrs: {
       patches = [ ./gradia.patch ];
     }))
-    (lib.mkIf config.programs.noctalia-shell.enable (pkgs.callPackage ../../../pkgs/wallpaperengine-gui { }))
+    (lib.mkIf config.programs.noctalia-shell.enable pkgs.wallpaperengine-gui)
 
     # Kde stuff
     kdePackages.gwenview

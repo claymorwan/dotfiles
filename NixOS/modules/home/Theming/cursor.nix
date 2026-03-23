@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 let
   inherit (import ./../../../variables)
@@ -6,17 +6,17 @@ let
     ;
 in
 {
-
   home.pointerCursor = {
     enable = true;
 
-    name = "${mouse_cursor}";
-    package = (pkgs.callPackage ../../../pkgs/cursors { });
+    name = config.globVars.mouse_cursor; #"${mouse_cursor}";
+    package = pkgs.mouse-cursor;
 
     hyprcursor = {
       enable = true;
       size = 24;
     };
+
     gtk.enable = true;
     x11.enable = true;
   };

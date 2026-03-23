@@ -21,8 +21,7 @@ in
   ];
 
   # Millenium theme
-  xdg.dataFile."Steam/steamui/skins/Material-Theme".source =
-    pkgs.callPackage ../../../pkgs/millenium-material-theme { inherit (inputs) millenium-material-theme-src; };
+  xdg.dataFile."Steam/steamui/skins/Material-Theme".source = pkgs.millenium-material-theme;
 
   programs.steam.config = {
     enable = true;

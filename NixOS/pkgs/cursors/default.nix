@@ -1,20 +1,18 @@
-{ stdenvNoCC }:
+{
+  stdenvNoCC,
+  cursorName ? null,
+}:
 
-let
-  inherit (import ../../variables)
-    mouse_cursor
-    ;
-in
 stdenvNoCC.mkDerivation {
-  pname = "${mouse_cursor}";
+  pname = "${cursorName}";
   version = "0-unstable-2025-12-30";
 
-  src = ./cursors/${mouse_cursor};
+  src = ./cursors/${cursorName};
 
   installPhase = ''
     runHook preInstall
-    mkdir -p $out/share/icons/${mouse_cursor}
-    cp -r ./* $out/share/icons/${mouse_cursor}
+    mkdir -p $out/share/icons/${cursorName}
+    cp -r ./* $out/share/icons/${cursorName}
     runHook postInstall
   '';
 

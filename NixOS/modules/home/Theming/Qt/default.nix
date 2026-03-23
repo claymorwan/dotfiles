@@ -62,7 +62,7 @@ in
   in {
     configFile = {
       "Kvantum/libadwaita-kde-mocha-mauve".source =
-        "${(pkgs.callPackage ./libadwaita-kde.nix { })}/share/Kvantum/libadwaita-kde-${ctp_flavor}-${ctp_accent}";
+        "${(pkgs.callPackage ./libadwaita-kde.nix { inherit ctp_flavor ctp_accent;} )}/share/Kvantum/libadwaita-kde-${ctp_flavor}-${ctp_accent}";
       "Kvantum/kvantum.kvconfig".text = ''
         [General]
         theme=libadwaita-kde-${ctp_flavor}-${ctp_accent}

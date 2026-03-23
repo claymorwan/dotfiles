@@ -6,5 +6,5 @@
     # ./sddm.nix
   ];
 
-  environment.systemPackages = [ (pkgs.callPackage ../../../pkgs/cursors { }) ];
+  environment.systemPackages = [ pkgs.mouse-cursor ];
 }

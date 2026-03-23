@@ -1,16 +1,11 @@
 # The kvantum theme is from a deleted repo, idk what happend, but i left the repo's remote in meta.homepage anyway
 # I also left the license and readme in the theme's dir,  and removed extra folder i didn't needed, since he repo is gone
 
-# with import <nixpkgs> { };
-let
-  inherit (import ../../../../variables)
-  ctp_flavor
-  ctp_accent
-  ;
-in 
 {
   lib,
   stdenvNoCC,
+  ctp_flavor ? "mocha",
+  ctp_accent ? "mauve",
 }:
 
 stdenvNoCC.mkDerivation (finalAttrs: {
