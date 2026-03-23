@@ -1,14 +1,18 @@
 { inputs, pkgs, lib, ... }:
 
 let
-  gameOptions.launchOptions.wrappers = [
+  defaultWrappers = [
     (lib.getExe' pkgs.mangohud "mangohud")
     pkgs.gamemode
   ];
 
+  gameOptions.launchOptions.wrappers = defaultWrappers;
+
   winGameOptions = lib.recursiveUpdate gameOptions {
     compatTool = "GE-Proton";
-    launchOptions.env."PROTON_ENABLE_WAYLAND" = 1;
+    launchOptions = {
+      env."PROTON_ENABLE_WAYLAND" = 1;
+    };
   };
 in
 {
@@ -58,7 +62,7 @@ in
       };
 
       # Spelunky 2
-      " 418530" = winGameOptions;
+      "418530" = winGameOptions;
 
       # Peak
       "3527290" = winGameOptions;
@@ -126,6 +130,9 @@ in
 
       # Content Warning
       "2881650" = winGameOptions;
+
+      # Subterranauts
+      "3075800" = winGameOptions;
     };
   };
 }
