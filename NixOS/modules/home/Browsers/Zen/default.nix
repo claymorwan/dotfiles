@@ -8,9 +8,6 @@ let
     rev = "c855685442c6040c4dda9c8d3ddc7b708de1cbaa";
     hash = "sha256-5A57Lyctq497SSph7B+ucuEyF1gGVTsuI3zuBItGfg4=";
   };
-  inherit (import ../../variables)
-    submodules_dir
-    ;
 in
 {
   imports = [
@@ -200,7 +197,7 @@ in
 
   };
 
-  home.file.".config/zen/default/chrome" = {
+  xdg.configFile."zen/default/chrome" = {
     enable = true;
     source = "${ctp_zen}/themes/Mocha/Mauve";
     recursive = true;

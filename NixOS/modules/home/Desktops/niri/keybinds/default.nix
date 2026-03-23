@@ -1,10 +1,5 @@
-let
-  inherit (import ../../../../../variables)
-  terminal
-  browser
-  discord
-  ;
-in 
+{ osConfig, ... }:
+
 {
   imports = [
     ./dms.nix
@@ -15,17 +10,17 @@ in
     binds = {
       # Applications
       "Mod+Return" = {
-        action.spawn = terminal;
-        hotkey-overlay.title = "Terminal";
+        action.spawn = osConfig.globVars.terminal;
+        hotkey-overlay.title = "osConfig.globVars.terminal";
       };
 
       "Mod+W" = {
-        action.spawn = browser;
-        hotkey-overlay.title = "Browser";
+        action.spawn = osConfig.globVars.browser;
+        hotkey-overlay.title = "osConfig.globVars.browser";
       };
 
       "Mod+D" = {
-        action.spawn-sh = discord;
+        action.spawn-sh = osConfig.globVars.discord;
         hotkey-overlay.title = "Discord";
       };
 
@@ -35,7 +30,7 @@ in
       };
 
       "Mod+E" = {
-        action.spawn = [ terminal "-e" "yazi" ];
+        action.spawn = [ osConfig.globVars.terminal "-e" "yazi" ];
         hotkey-overlay.title = "File explorer";
       };
 

@@ -1,9 +1,5 @@
-{ inputs, pkgs, config, ... }:
+{ inputs, pkgs, config, osConfig, ... }:
 
-let
-  inherit (import ../../../variables)
-  flake_dir;
-in 
 {
   imports = [
     ./flatpak.nix
@@ -20,7 +16,7 @@ in
 
     devenvcp = {
       enable = true;
-      defaultPath = "${flake_dir}/dev-shells/devenv";
+      defaultPath = "${osConfig.globVars.flake_dir}/dev-shells/devenv";
     };
 
     namida = {

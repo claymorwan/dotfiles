@@ -1,15 +1,10 @@
-{ pkgs, config, ... }:
+{ pkgs, osConfig, ... }:
 
-let
-  inherit (import ./../../../variables)
-    mouse_cursor
-    ;
-in
 {
   home.pointerCursor = {
     enable = true;
 
-    name = config.globVars.mouse_cursor; #"${mouse_cursor}";
+    name = osConfig.globVars.mouse_cursor; #"${mouse_cursor}";
     package = pkgs.mouse-cursor;
 
     hyprcursor = {

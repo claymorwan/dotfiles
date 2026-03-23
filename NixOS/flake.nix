@@ -171,8 +171,8 @@
           };
 
           modules = [
-            ./variables_1
             ./hosts/${host}
+            ./variables
           ];
         };
     in

@@ -1,6 +1,6 @@
 #TODO clean up this mess, qt theming with nix is lowkey harder than i thought lol
 
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, osConfig, ... }:
 
 let
   qtctSettings = {
@@ -11,11 +11,6 @@ let
       standard_dialogs = "xdgdesktopportal";
     };
   };
-
-  inherit (import ../../../../variables)
-  ctp_flavor
-  ctp_accent
-  ;
 in
 {
   home.packages = with pkgs; [
@@ -37,12 +32,12 @@ in
 
     qt5ctSettings = qtctSettings;
     # lib.recursiveUpdate qtctSettings { 
-    #   Appearance.color_scheme_path = "${pkgs.catppuccin-qt5ct}/share/qt5ct/colors/catppuccin-${ctp_flavor}-${ctp_accent}.conf";
+    #   Appearance.color_scheme_path = "${pkgs.catppuccin-qt5ct}/share/qt5ct/colors/catppuccin-${osConfig.globVars.ctp_flavor}-${osConfig.globVars.ctp_accent}.conf";
     # };
 
     qt6ctSettings = qtctSettings;
     # lib.recursiveUpdate qtctSettings {
-    #   Appearance.color_scheme_path = "${pkgs.catppuccin-qt5ct}/share/qt6ct/colors/catppuccin-${ctp_flavor}-${ctp_accent}.conf";
+    #   Appearance.color_scheme_path = "${pkgs.catppuccin-qt5ct}/share/qt6ct/colors/catppuccin-${osConfig.globVars.ctp_flavor}-${osConfig.globVars.ctp_accent}.conf";
     # };
   };
 
@@ -55,17 +50,17 @@ in
       ''
       + (builtins.readFile "${
         pkgs.catppuccin-kde.override {
-          flavour = [ ctp_flavor ];
-          accents = [ ctp_accent ];
+          flavour = [ osConfig.globVars.ctp_flavor ];
+          accents = [ osConfig.globVars.ctp_accent ];
         }}/share/color-schemes/CatppuccinMochaMauve.colors");
     };
   in {
     configFile = {
       "Kvantum/libadwaita-kde-mocha-mauve".source =
-        "${(pkgs.callPackage ./libadwaita-kde.nix { inherit ctp_flavor ctp_accent;} )}/share/Kvantum/libadwaita-kde-${ctp_flavor}-${ctp_accent}";
+        "${(pkgs.callPackage ./libadwaita-kde.nix { inherit (osConfig.globVars) ctp_flavor ctp_accent;} )}/share/Kvantum/libadwaita-kde-${osConfig.globVars.ctp_flavor}-${osConfig.globVars.ctp_accent}";
       "Kvantum/kvantum.kvconfig".text = ''
         [General]
-        theme=libadwaita-kde-${ctp_flavor}-${ctp_accent}
+        theme=libadwaita-kde-${osConfig.globVars.ctp_flavor}-${osConfig.globVars.ctp_accent}
       '';
       
       # KDE theme

@@ -29,6 +29,7 @@ Using this to separate my inputs into multiple files, as flake.nix files aren't 
 
           modules = [
             ./hosts/${host}
+            ./variables
           ];
         };
     in

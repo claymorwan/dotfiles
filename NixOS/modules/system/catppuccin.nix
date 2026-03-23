@@ -1,11 +1,5 @@
-{ inputs, ... }:
+{ inputs, config, ... }:
 
-let
-  inherit (import ../../variables)
-    ctp_flavor
-    ctp_accent
-    ;
-in
 {
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
@@ -13,8 +7,8 @@ in
 
   catppuccin = {
     enable = true;
-    flavor = ctp_flavor;
-    accent = ctp_accent;
+    flavor = config.globVars.ctp_flavor;
+    accent = config.globVars.ctp_accent;
     sddm.enable = false;
   };
 }

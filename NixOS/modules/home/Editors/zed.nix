@@ -1,10 +1,5 @@
-{ ... }:
+{ osConfig, ... }:
 
-let
-  inherit (import ../../../variables)
-    font_family
-    ;
-in
 {
   programs.zed-editor = {
     # enable = true;
@@ -13,6 +8,7 @@ in
       "nix"
       "lua"
     ];
+
     mutableUserSettings = false;
     userSettings = {
       base_keymap = "JetBrains";
@@ -21,7 +17,7 @@ in
         catppuccin-icons = true;
       };
 
-      buffer_font_family = font_family;
+      buffer_font_family = osConfig.globVars.font_family;
 
       icon_theme = "Catppuccin Mocha";
 

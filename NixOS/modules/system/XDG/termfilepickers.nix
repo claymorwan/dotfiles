@@ -5,11 +5,6 @@
   ...
 }:
 
-let
-  inherit (import ../../../variables)
-    home_dir
-    ;
-in
 {
   imports = [ inputs.xdp-termfilepickers.nixosModules.default ];
 

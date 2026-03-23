@@ -1,11 +1,5 @@
-let
-  inherit (import ../../../../../variables)
-    mainMod
-    terminal
-    browser
-    screenshot_dir
-    ;
-in
+{ osConfig, ... }:
+
 {
 
   imports = [
@@ -15,32 +9,32 @@ in
   ];
 
   wayland.windowManager.hyprland.settings = {
-    "$mainMod" = mainMod;
+    "$osConfig.globVars.mainMod" = osConfig.globVars.mainMod;
     exec = "hyprctl dispatch submap global";
     submap = "global";
 
     bind = [
       "Alt, F4, killactive, # [hidden]" # Close (Windows)
-      # "$mainMod, Space, exec, hyprctl switchxkblayout # Switch keyboard layout"
+      # "$osConfig.globVars.mainMod, Space, exec, hyprctl switchxkblayout # Switch keyboard layout"
 
       # Applications
-      "$mainMod, Return, exec, ${terminal} # Terminal"
-      "$mainMod, W, exec, ${browser} # Browser"
-      "$mainMod, D, exec, equibop # Discord"
-      "$mainMod, S, exec, spotify # Spotify"
-      "$mainMod, E, exec, ${terminal} -e yazi # File explorer"
+      "$osConfig.globVars.mainMod, Return, exec, ${osConfig.globVars.terminal} # osConfig.globVars.terminal"
+      "$osConfig.globVars.mainMod, W, exec, ${osConfig.globVars.browser} # osConfig.globVars.browser"
+      "$osConfig.globVars.mainMod, D, exec, equibop # Discord"
+      "$osConfig.globVars.mainMod, S, exec, spotify # Spotify"
+      "$osConfig.globVars.mainMod, E, exec, ${osConfig.globVars.terminal} -e yazi # File explorer"
 
       # Plugins
-      "$mainMod, C, hyprexpo:expo, toggle # Hyprexpo"
+      "$osConfig.globVars.mainMod, C, hyprexpo:expo, toggle # Hyprexpo"
 
       # Screenshots
       ", Print, exec, dms screenshot full --stdout | gradia # Screenshot (full)"
       "Ctrl, Print, exec, dms screenshot --stdout | gradia # Screenshot (region)"
-      "$mainMod, Print, exec, dms screenshot window --stdout | gradia # Screenshot (window)"
+      "$osConfig.globVars.mainMod, Print, exec, dms screenshot window --stdout | gradia # Screenshot (window)"
 
-      # ", Print, exec, hyprshot -z -m output -o ${screenshot_dir} -- gradia"
-      # "Ctrl, Print, exec, hyprshot -z -m region -o ${screenshot_dir} -- gradia"
-      # "$mainMod, Print, exec, hyprshot -z -m window -o ${screenshot_dir} -- gradia"
+      # ", Print, exec, hyprshot -z -m output -o ${osConfig.globVars.screenshot_dir} -- gradia"
+      # "Ctrl, Print, exec, hyprshot -z -m region -o ${osConfig.globVars.screenshot_dir} -- gradia"
+      # "$osConfig.globVars.mainMod, Print, exec, hyprshot -z -m window -o ${osConfig.globVars.screenshot_dir} -- gradia"
 
     ];
   };

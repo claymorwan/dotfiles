@@ -3,14 +3,12 @@
   lib,
   host,
   config,
+  osConfig,
   ...
 }:
 
 let
   fetch_cmd = "clear; fastfetch;";
-  inherit (import ../../../variables)
-  flake_dir
-  ;
 in
 {
   programs.zsh = {
@@ -77,7 +75,7 @@ in
       fetch = "${fetch_cmd}";
 
       nrl = "nh os switch --hostname ${host}";
-      nupd = "nh os switch --update --hostname ${host}; ${flake_dir}/dev-shells/update.sh";
+      nupd = "nh os switch --update --hostname ${host}; ${osConfig.globVars.flake_dir}/dev-shells/update.sh";
       # nreload = "sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#${host} --log-format bar-with-logs";
       # nupd = "sudo nixos-rebuild switch --recreate-lock-file --flake ~/.dotfiles/nixos#${host} --log-format bar-with-logs";
     };

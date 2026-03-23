@@ -1,11 +1,5 @@
-{ inputs, ... }:
+{ inputs, osConfig, ... }:
 
-let
-  inherit (import ../../variables)
-    ctp_flavor
-    ctp_accent
-    ;
-in
 {
   imports = [
     inputs.catppuccin.homeModules.catppuccin
@@ -13,8 +7,8 @@ in
 
   catppuccin = {
     enable = true;
-    flavor = ctp_flavor;
-    accent = ctp_accent;
+    flavor = osConfig.globVars.ctp_flavor;
+    accent = osConfig.globVars.ctp_accent;
     nvim.enable = false;
     # gtk.icon.enable = false;
     kvantum = {

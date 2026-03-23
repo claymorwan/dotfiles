@@ -1,10 +1,6 @@
 { inputs, pkgs, lib, osConfig, ... }:
 
-let
-  inherit (import ../../../../variables)
-  mainMod
-  ;
-in
+
 {
   imports = [
     inputs.niri.homeModules.niri
@@ -24,7 +20,7 @@ in
       settings = {
         prefer-no-csd = true;
         input = {
-          mod-key = mainMod;
+          mod-key = osConfig.globVars.mainMod;
 
           keyboard = {
             xkb = {

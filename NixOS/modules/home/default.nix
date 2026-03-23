@@ -1,7 +1,5 @@
 {
   imports = [
-    ../../variables_1
-
     ./Art
     ./Browsers
     ./catppuccin.nix

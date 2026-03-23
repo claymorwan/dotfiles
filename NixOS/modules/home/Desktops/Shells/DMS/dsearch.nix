@@ -1,10 +1,5 @@
-{ inputs, ... }:
+{ inputs, osConfig, ... }:
 
-let
-  inherit (import ../../../../../variables)
-    home_dir
-    ;
-in
 {
   imports = [ inputs.dsearch.homeModules.default ];
 
@@ -14,7 +9,7 @@ in
     # Put your config here or omit this for dsearch to generate the default config at runtime
     config = {
       index_paths = {
-        path = "${home_dir}";
+        path = "${osConfig.globVars.home_dir}";
         max_depth = 6;
         exclude_hidden = false;
         exclude_dirs = [

@@ -1,10 +1,5 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, config, ... }:
 
-let
-  inherit (import ../../variables)
-  mouse_cursor
-  ;
-in 
 {
   nixpkgs.overlays = [
     inputs.millennium.overlays.default
@@ -15,7 +10,7 @@ in
       shijima-qt-bin = pkgs.callPackage ../../pkgs/shijima-qt-bin { };
       wallpaperengine-gui = pkgs.callPackage ../../pkgs/wallpaperengine-gui { };
 
-      mouse-cursor = pkgs.callPackage ../../pkgs/cursors { cursorName = mouse_cursor; };
+      mouse-cursor = pkgs.callPackage ../../pkgs/cursors { cursorName = config.globVars.mouse_cursor; };
       millenium-material-theme = pkgs.callPackage ../../pkgs/millenium-material-theme { inherit (inputs) millenium-material-theme-src; };
       neuwaita = pkgs.callPackage ../../pkgs/neuwaita { };
 

@@ -1,10 +1,5 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, osConfig, ... }:
 
-let
-  inherit (import ../../../../variables)
-    font_family
-    ;
-in
 {
   wayland.windowManager.hyprland = {
     plugins = with pkgs.hyprlandPlugins; [
@@ -48,7 +43,7 @@ in
         };
 
         hyprbars = {
-          bar_text_font = font_family;
+          bar_text_font = osConfig.globVars.font_family;
           bar_height = 30;
           bar_padding = 15;
 

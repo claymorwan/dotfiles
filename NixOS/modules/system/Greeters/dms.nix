@@ -1,12 +1,5 @@
-{ inputs, pkgs, username, ... }:
+{ inputs, pkgs, config, ... }:
 
-let
-  inherit (import ../../../variables)
-    home_dir
-    dotfiles_dir
-    mouse_cursor
-    ;
-in
 {
   imports = [
     inputs.dms.nixosModules.greeter
@@ -18,9 +11,9 @@ in
         enable = true;
         compositor.name = "niri";
 
-        configHome = "${home_dir}";
+        configHome = config.globVars.home_dir;
         configFiles = [
-          "${dotfiles_dir}/Configs/dms/.config/DankMaterialShell/settings.json"
+          "${config.globVars.dotfiles_dir}/Configs/dms/.config/DankMaterialShell/settings.json"
         ];
       };
     };
@@ -39,7 +32,7 @@ in
       }
 
       cursor {
-        xcursor-theme "${mouse_cursor}"
+        xcursor-theme "${config.globVars.mouse_cursor}"
         xcursor-size 24
       }
     '';

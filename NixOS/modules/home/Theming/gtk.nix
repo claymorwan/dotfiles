@@ -1,10 +1,5 @@
-{ pkgs, ... }:
+{ pkgs, osConfig, ... }:
 
-let
-  inherit (import ../../../variables)
-    submodules_dir
-    ;
-in
 {
   gtk = {
     enable = true;
@@ -23,7 +18,7 @@ in
       };
 
       extraCss = ''
-        @import url("${submodules_dir}/catppuccin/monorepo/adw/themes/mocha/catppuccin-mocha-mauve.css");
+        @import url("${osConfig.globVars.submodules_dir}/catppuccin/monorepo/adw/themes/mocha/catppuccin-mocha-mauve.css");
       '';
     };
 
@@ -34,7 +29,7 @@ in
       };
 
       extraCss = ''
-        @import url("${submodules_dir}/catppuccin/monorepo/adw/themes/mocha/catppuccin-mocha-mauve.css");
+        @import url("${osConfig.globVars.submodules_dir}/catppuccin/monorepo/adw/themes/mocha/catppuccin-mocha-mauve.css");
       '';
     };
   };

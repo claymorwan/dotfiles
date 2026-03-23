@@ -1,14 +1,8 @@
 { pkgs, inputs, host, lib, config, osConfig, ... }:
 
 let
-
-  dms-plugins = config.programs.dank-material-shell.plugins; 
-  inherit (import ../../../../../variables)
-    flake_dir
-    enableHyprland
-    ;
-in
-
+  dms-plugins = config.programs.dank-material-shell.plugins;
+in 
 {
 
   imports = [
@@ -29,13 +23,13 @@ in
       rebuildCommand = [
         "zsh"
         "-c"
-        "sudo ${pkgs.nh}/bin/nh os switch ${flake_dir} --hostname ${host} --no-nom --bypass-root-check"
+        "sudo ${pkgs.nh}/bin/nh os switch ${osConfig.globVars.flake_dir} --hostname ${host} --no-nom --bypass-root-check"
       ];
 
       # ts pisses me off im using a script now
       generationsCommand = [
         "sh"
-        "${flake_dir}/modules/home/DMS/nix-monitor-gen.sh"
+        "${osConfig.globVars.flake_dir}/modules/home/DMS/nix-monitor-gen.sh"
       ];
 
       gcCommand = [
@@ -61,7 +55,7 @@ in
         amdGpuMonitor.enable = true;
         mediaFrame.enable = true;
         dankGifSearch.enable = true;
-        dankHyprlandWindows.enable = (if enableHyprland then true else false);
+        dankHyprlandWindows.enable = (if osConfig.globVars.enableHyprland then true else false);
         polyglot.enable = true;
         commandRunner.enable = true;
         developerUtilities.enable = true;

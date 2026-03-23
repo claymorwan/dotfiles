@@ -1,11 +1,5 @@
-{ pkgs, inputs, ... }:
+{ inputs, pkgs, config, ... }:
 
-let
-  inherit (import ../../../variables)
-  enableNiri
-  enableHyprland
-  ;
-in
 {
   imports = [
     # inputs.niri.nixosModules.niri
@@ -16,15 +10,15 @@ in
 
   programs = {
     hyprland = {
-      enable = enableHyprland;
+      enable = config.globVars.enableHyprland;
       package = pkgs.hyprland;
       withUWSM = false;
     };
 
-    hyprlock.enable = enableHyprland;
+    hyprlock.enable = config.globVars.enableHyprland;
 
     niri = {
-      enable = enableNiri;
+      enable = config.globVars.enableNiri;
       package = pkgs.niri;
     };
 

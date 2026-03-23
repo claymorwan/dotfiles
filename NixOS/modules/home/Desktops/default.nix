@@ -1,14 +1,10 @@
-let
-  inherit (import ../../../variables)
-  enableNiri
-  enableHyprland
-  ;
-in
+{ osConfig, ... }:
+
 {
   imports = [
     ./Shells
   ]
-  ++ (if enableNiri then [./niri] else [])
-  ++ (if enableHyprland then [./hyprland] else [])
+  ++ (if osConfig.globVars.enableNiri then [./niri] else [])
+  ++ (if osConfig.globVars.enableHyprland then [./hyprland] else [])
   ;
 }

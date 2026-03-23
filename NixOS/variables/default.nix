@@ -1,27 +1,48 @@
-rec {
-  username = "claymorwan";
-  mainMod = "SUPER";
+{ lib, config, ... }:
 
-  # Theming
-  ctp_flavor = "mocha";
-  ctp_accent = "mauve";
-  font_family = "JetBrainsMono Nerd Font";
-  mouse_cursor = "akita-neru";
+let
+  cfg = config.globVars;
+  
+  # Most of them are str vars so this will make it faster
+  mkStrVar = var:
+    lib.mkOption {
+      type = lib.types.str;
+      default = var;
+    };
 
-  # Apps
-  launch_prefix = "app2unit --";
-  terminal = "ghostty";
-  browser = "zen-beta"; # "MOZ_LEGACY_PROFILES=1 zen-beta";
-  discord = "equibop --wayland";
+  # for "enable" var
+  mkBoolVar = var:
+    lib.mkOption {
+      type = lib.types.bool;
+      default = var;
+    };
+in 
+{
+  options.globVars = {
+    username = mkStrVar "claymorwan";
+    mainMod = mkStrVar "SUPER";
 
-  # Dirs
-  home_dir = "/home/${username}";
-  dotfiles_dir = "${home_dir}/.dotfiles";
-  flake_dir = "${dotfiles_dir}/NixOS";
-  screenshot_dir = "${home_dir}/Pictures/Screenshots";
-  submodules_dir = "${dotfiles_dir}/Submodules";
+    # Theming
+    ctp_flavor = mkStrVar "mocha";
+    ctp_accent = mkStrVar "mauve";
+    font_family = mkStrVar "JetBrainsMono Nerd Font";
+    mouse_cursor = mkStrVar "akita-neru";
 
-  # enable
-  enableNiri = true;
-  enableHyprland = false;
+    # Apps
+    launch_prefix = mkStrVar "app2unit --";
+    terminal = mkStrVar "ghostty";
+    browser = mkStrVar "zen-beta"; # "MOZ_LEGACY_PROFILES=1 zen-beta";
+    discord = mkStrVar "equibop --wayland";
+
+    # Dirs
+    home_dir = mkStrVar "/home/${cfg.username}";
+    dotfiles_dir = mkStrVar "${cfg.home_dir}/.dotfiles";
+    flake_dir = mkStrVar "${cfg.dotfiles_dir}/NixOS";
+    screenshot_dir = mkStrVar "${cfg.home_dir}/Pictures/Screenshots";
+    submodules_dir = mkStrVar "${cfg.dotfiles_dir}/Submodules";
+  
+    # enable
+    enableNiri = mkBoolVar true;
+    enableHyprland = mkBoolVar false;
+  };
 }

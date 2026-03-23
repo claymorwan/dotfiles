@@ -1,14 +1,10 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }:
 
-let
-  inherit (import ../../../variables)
-    flake_dir
-    ;
-in
 {
   programs.nh = {
     enable = true;
@@ -17,6 +13,6 @@ in
     };
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "${flake_dir}";
+    flake = config.globVars.flake_dir;
   };
 }
