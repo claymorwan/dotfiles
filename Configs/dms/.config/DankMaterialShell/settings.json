@@ -1374,10 +1374,10 @@
     },
     "dankNotepadModule": {
       "previewActive": false,
-      "currentFilePath": "/home/claymorwan/Documents/note.md",
-      "currentFileExtension": "md",
-      "sourceContent": "- a\n- a\n- a\n**a**",
-      "updatedAt": 1774267695239,
+      "currentFilePath": "notepad-files/untitled-1770243197424.txt",
+      "currentFileExtension": "txt",
+      "sourceContent": "/home/claymorwan/.local/share/steam-config-nix/apps/3075800/wrapper %command%",
+      "updatedAt": 1774293545745,
       "highlightedHtml": ""
     }
   },

@@ -39,6 +39,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    scopebuddy = {
+      url = "github:HikariKnight/ScopeBuddy";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -2,16 +2,27 @@
 
 let
   defaultWrappers = [
-    (lib.getExe' pkgs.mangohud "mangohud")
     pkgs.gamemode
   ];
 
-  gameOptions.launchOptions.wrappers = defaultWrappers;
+  gameOptions.launchOptions.wrappers = defaultWrappers ++ [ (lib.getExe' pkgs.mangohud "mangohud") ];
 
   winGameOptions = lib.recursiveUpdate gameOptions {
     compatTool = "GE-Proton";
     launchOptions = {
-      env."PROTON_ENABLE_WAYLAND" = 1;
+      wrappers = defaultWrappers ++ [
+        (lib.getExe' inputs.scopebuddy.packages.${pkgs.stdenv.hostPlatform.system}.default "scopebuddy")
+        "-w" "2560" "-h" "1440"
+        "-O" "DP-1"
+        "-f"
+        "--mangoapp"
+        "--"
+      ];
+
+      env = {
+        PROTON_ENABLE_WAYLAND = 1;
+        SCB_AUTO_RES = 1;
+      };
     };
   };
 in
@@ -20,16 +31,25 @@ in
     inputs.steam-config-nix.homeModules.default
   ];
 
+  home.packages = [
+    inputs.scopebuddy.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ];
+
   # Millenium theme
-  xdg.dataFile."Steam/steamui/skins/Material-Theme".source = pkgs.millenium-material-theme;
+  xdg = {
+    dataFile."Steam/steamui/skins/Material-Theme".source = pkgs.millenium-material-theme;
+    
+    configFile."scopebuddy/scb.conf".text = ''
+      SCB_GAMESCOPE_ARGS="-f --mangoapp"
+      SCB_AUTO_RES=1
+    '';
+  };
 
   programs.steam.config = {
     enable = true;
     closeSteam = true; # See 'Important' note at beginning of this readme
-    defaultCompatTool = "GE-Proton";
       
     apps = {
-
       # Geometry dash
       "322170" = lib.recursiveUpdate winGameOptions {
         launchOptions.env.WINEDLLOVERRIDES = "xinput1_4=n,b";

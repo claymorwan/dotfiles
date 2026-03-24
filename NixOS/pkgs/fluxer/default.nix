@@ -1,8 +1,7 @@
 {
   stdenv,
   fluxer-src,
-  pkgs,
-  local-utils ? import ../utils.nix { inherit pkgs; },
+  local-utils,
   runCommand,
   autoPatchelfHook,
   makeWrapper,

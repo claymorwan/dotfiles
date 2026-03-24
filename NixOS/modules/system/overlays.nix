@@ -5,6 +5,8 @@
     inputs.millennium.overlays.default
 
     (final: prev: {
+      local-utils = pkgs.callPackage ../../pkgs/utils.nix { };
+
       fluxer = pkgs.callPackage ../../pkgs/fluxer { inherit (inputs) fluxer-src; };
       shiru = pkgs.callPackage ../../pkgs/shiru { };
       shijima-qt-bin = pkgs.callPackage ../../pkgs/shijima-qt-bin { };

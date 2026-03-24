@@ -9,6 +9,7 @@
       enable = true;
     };
   };
+
   services.firewalld = {
     enable = true;
     package = pkgs.firewalld;
@@ -64,6 +65,7 @@
         services = [
           "kdeconnect"
           "localsend"
+          "packet"
           "http"
           "https"
         ];

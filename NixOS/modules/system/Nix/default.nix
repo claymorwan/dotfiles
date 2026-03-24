@@ -55,5 +55,8 @@
     nixpkgs-review
     inputs.nix-output-monitor.packages.${pkgs.stdenv.hostPlatform.system}.default
     expect
+
+    # For nixpkgs-review
+    glow
   ];
 }

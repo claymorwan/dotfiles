@@ -65,6 +65,7 @@ in
       
       # KDE theme
       "kdeglobals" = kdeTheme;
+      "kdenliverc".source = ./kdenliverc;
     };
 
     dataFile."krita/color-schemes/CatppuccinMochaMauve.colors" = kdeTheme;

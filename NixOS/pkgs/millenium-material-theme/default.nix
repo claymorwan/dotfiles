@@ -1,8 +1,7 @@
 {
   stdenvNoCC,
   millenium-material-theme-src,
-  pkgs,
-  local-utils ? import ../utils.nix { inherit pkgs; },
+  local-utils,
   lib,
   fetchFromGitHub,
   catppuccin-whiskers,
@@ -39,9 +38,8 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   '';
 
   installPhase = ''
-    # mkdir -p $out/share/Steam/steamui/skins
     cd ..
-    cp -r source $out #/share/Steam/steamui/skins/Material-Theme
+    cp -r source $out
   '';
 
   passthru.updateScript = nix-update-script { extraArgs = [ "--version=branch" ]; };
