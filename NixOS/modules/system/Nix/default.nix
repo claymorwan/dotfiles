@@ -4,6 +4,7 @@
   imports = [
     ./nh.nix
   ];
+
   nix = {
     settings = {
       experimental-features = [
@@ -35,6 +36,10 @@
       options = "--delete-older-than 1w";
     };
   };
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-38.8.4"
+  ];
 
   programs = {
     nix-ld = {

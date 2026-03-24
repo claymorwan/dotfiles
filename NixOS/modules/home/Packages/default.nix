@@ -63,7 +63,7 @@
     intiface-central
     polychromatic
     fragments
-    winboat
+    # winboat
     inputs.gsr.packages.${pkgs.stdenv.hostPlatform.system}.gpu-screen-recorder-ui
     
     shiru
