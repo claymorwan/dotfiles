@@ -13,11 +13,6 @@ let
   };
 in
 {
-  home.packages = with pkgs; [
-    kdePackages.qtstyleplugin-kvantum
-    libsForQt5.qtstyleplugin-kvantum
-  ];
-
   qt = {
     enable = true;
     platformTheme.name = "qtct";
@@ -28,6 +23,17 @@ in
         # darkly-qt5
         kdePackages.breeze
       ];
+    };
+
+    kvantum = {
+      enable = true;
+      qt5.enable = true;
+
+      themes = with pkgs; [
+        (pkgs.callPackage ./libadwaita-kde.nix { inherit (osConfig.globVars) ctp_flavor ctp_accent; })
+      ];
+
+      settings.General.theme = "libadwaita-kde-${osConfig.globVars.ctp_flavor}-${osConfig.globVars.ctp_accent}";
     };
 
     qt5ctSettings = qtctSettings;
@@ -56,16 +62,9 @@ in
     };
   in {
     configFile = {
-      "Kvantum/libadwaita-kde-mocha-mauve".source =
-        "${(pkgs.callPackage ./libadwaita-kde.nix { inherit (osConfig.globVars) ctp_flavor ctp_accent;} )}/share/Kvantum/libadwaita-kde-${osConfig.globVars.ctp_flavor}-${osConfig.globVars.ctp_accent}";
-      "Kvantum/kvantum.kvconfig".text = ''
-        [General]
-        theme=libadwaita-kde-${osConfig.globVars.ctp_flavor}-${osConfig.globVars.ctp_accent}
-      '';
-      
       # KDE theme
       "kdeglobals" = kdeTheme;
-      "kdenliverc".source = ./kdenliverc;
+      # "kdenliverc".source = ./kdenliverc;
     };
 
     dataFile."krita/color-schemes/CatppuccinMochaMauve.colors" = kdeTheme;

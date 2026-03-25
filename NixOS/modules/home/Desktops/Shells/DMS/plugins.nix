@@ -1,4 +1,4 @@
-{ pkgs, inputs, host, lib, config, osConfig, ... }:
+{ inputs, pkgs, host, lib, config, osConfig, ... }:
 
 let
   dms-plugins = config.programs.dank-material-shell.plugins;
@@ -11,10 +11,22 @@ in
   ];
 
   # Deps for plugins
+  # Lots of them are already installed but it don't to add them here too
   home.packages = with pkgs; [
     (lib.mkIf dms-plugins.amdGpuMonitor.enable amdgpu_top)
     (lib.mkIf dms-plugins.displayManager.enable ddcutil)
-  ];
+  ]
+  ++ (if dms-plugins.usbManager.enable then (with pkgs; [
+      udisks
+      bash
+      util-linux
+      parted
+      dosfstools
+      e2fsprogs
+      exfatprogs
+      polkit
+    ]) else [])
+  ;
 
   programs = {
     nix-monitor = {
@@ -65,6 +77,7 @@ in
         musicLyrics.enable = true;
         dankAudioVisualizer.enable = true;
         screenRecorder.enable = true;
+        usbManager.enable = true;
         # KDE Connect
         phoneConnect = {
           enable = osConfig.programs.kdeconnect.enable;

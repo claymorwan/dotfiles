@@ -5,7 +5,9 @@
     "trigger": "="
   },
   "dankPomodoroTimer": {
-    "enabled": true
+    "enabled": true,
+    "autoStartBreaks": true,
+    "autoStartPomodoros": true
   },
   "dockerManager": {
     "enabled": true,
@@ -191,12 +193,15 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "260322bc427f1ccf87e2e860a8f953eae49a82887d1413674df711"
+    "musixmatchToken": "260325c3366d07865842416e5c989cd736888ca31bbe9d4bd9171d"
   },
   "dankAudioVisualizer": {
     "enabled": true
   },
   "screenRecorder": {
     "enabled": true
+  },
+  "usbManager": {
+    "enabled": false
   }
 }

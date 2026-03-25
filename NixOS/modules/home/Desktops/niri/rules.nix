@@ -153,7 +153,13 @@ in
       }
 
       {
-        matches = [{ app-id = "discord|equibop|vesktop|whatsapp|BeeperTexts|fluxer_(app|desktop)|stoat-desktop"; }];
+        matches = [
+          { app-id = "discord|equibop|vesktop|whatsapp|BeeperTexts|fluxer_(app|desktop)|stoat-desktop"; }
+          {
+            app-id = "electron";
+            title = ".*Discord.*";
+          }
+        ];
         open-on-workspace = "chat";
         open-focused = true;
         open-maximized = true;

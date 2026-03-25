@@ -711,15 +711,15 @@
       ],
       "rightWidgets": [
         {
-          "id": "displayManager",
-          "enabled": true
-        },
-        {
           "id": "systemTray",
           "enabled": true
         },
         {
           "id": "battery",
+          "enabled": true
+        },
+        {
+          "id": "usbManager",
           "enabled": true
         },
         {
@@ -1376,8 +1376,8 @@
       "previewActive": false,
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "/home/claymorwan/.local/share/steam-config-nix/apps/3075800/wrapper %command%",
-      "updatedAt": 1774380928598,
+      "sourceContent": "card(C) = 27\ncard(S) = \ncard(M) = \ncard(|Fn|M) = 11\ncard(F",
+      "updatedAt": 1774466961406,
       "highlightedHtml": ""
     }
   },

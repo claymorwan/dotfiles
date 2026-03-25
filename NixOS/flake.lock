@@ -195,11 +195,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1774358685,
-        "narHash": "sha256-2lsy2uZRcm96yR7IgX6SHlT1wm6YzVlqkkTeXCTUaIg=",
+        "lastModified": 1774401540,
+        "narHash": "sha256-ymqGwXJPL1pO+K1hs6WTtBbSixV3KpKeBpEqrkh5pss=",
         "owner": "AvengeMedia",
         "repo": "dms-plugin-registry",
-        "rev": "3b94cee2efd7157986b1a47f6893c7f229c53f47",
+        "rev": "03dc6f4f64cc22a76de2dba23fcc72a2769811a0",
         "type": "github"
       },
       "original": {
@@ -474,15 +474,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1774357444,
-        "narHash": "sha256-xISUnO64LVh+DhV6wMAbWJtWjw9eqUQBJE/NX4BcDlw=",
-        "owner": "nix-community",
+        "lastModified": 1774456576,
+        "narHash": "sha256-n5aTnEWBsw5IRS4JTfaNZPHXnvLGYiAAfKFT391AY5s=",
+        "owner": "claymorwan",
         "repo": "home-manager",
-        "rev": "61463d50fca2f07b39231f88ebeffbf1617d2094",
+        "rev": "66db435b712d616902e980edd34585be8cae8a6a",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
+        "owner": "claymorwan",
+        "ref": "kvantum-packages",
         "repo": "home-manager",
         "type": "github"
       }
