@@ -432,6 +432,7 @@
       "harmony": 0.5
     }
   },
+  "matugenTemplateNeovimSetBackground": true,
   "showDock": true,
   "dockAutoHide": true,
   "dockSmartAutoHide": false,
@@ -1377,7 +1378,7 @@
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
       "sourceContent": "card(C) = 27\ncard(S) = \ncard(M) = \ncard(|Fn|M) = 11\ncard(F",
-      "updatedAt": 1774466961406,
+      "updatedAt": 1774542853155,
       "highlightedHtml": ""
     }
   },
