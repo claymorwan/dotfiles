@@ -3,24 +3,26 @@
 let
   defaultWrappers = [
     pkgs.gamemode
+    (lib.getExe' pkgs.mangohud "mangohud")
   ];
 
-  gameOptions.launchOptions.wrappers = defaultWrappers ++ [ (lib.getExe' pkgs.mangohud "mangohud") ];
+  gameOptions.launchOptions.wrappers = defaultWrappers; # ++ [ (lib.getExe' pkgs.mangohud "mangohud") ];
 
   winGameOptions = lib.recursiveUpdate gameOptions {
     compatTool = "GE-Proton";
     launchOptions = {
       wrappers = defaultWrappers ++ [
         (lib.getExe' inputs.scopebuddy.packages.${pkgs.stdenv.hostPlatform.system}.default "scopebuddy")
-        "-w" "2560" "-h" "1440"
+        # "-w" "2560" "-h" "1440"
         "-O" "DP-1"
         "-f"
         "--mangoapp"
+        "--expose-wayland"
         "--"
       ];
 
       env = {
-        PROTON_ENABLE_WAYLAND = 1;
+        # PROTON_ENABLE_WAYLAND = 1;
         SCB_AUTO_RES = 1;
       };
     };

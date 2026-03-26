@@ -1,16 +1,9 @@
-{
-  host,
-  pkgs,
-  options,
-  username,
-  ...
-}:
+{ pkgs, host, username, ... }:
 
 {
   hardware = {
     opentabletdriver = {
       enable = true;
-
       daemon.enable = true;
     };
 

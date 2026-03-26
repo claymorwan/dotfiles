@@ -1,8 +1,9 @@
-{ pkgs, inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
     ./nh.nix
+    ./overlays.nix
   ];
 
   nix = {

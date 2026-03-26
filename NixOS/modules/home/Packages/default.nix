@@ -59,7 +59,7 @@
     bottles
     obsidian
     qalculate-gtk
-    protonvpn-gui
+    proton-vpn
     intiface-central
     polychromatic
     fragments

@@ -474,11 +474,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1774456576,
-        "narHash": "sha256-n5aTnEWBsw5IRS4JTfaNZPHXnvLGYiAAfKFT391AY5s=",
+        "lastModified": 1774563761,
+        "narHash": "sha256-u8OtO2wESSsi9oENAnPg50j7kepP1RrlFHBW/i7Uj+8=",
         "owner": "claymorwan",
         "repo": "home-manager",
-        "rev": "66db435b712d616902e980edd34585be8cae8a6a",
+        "rev": "51091e7ceac93c477e39d81d90f3be8fb3bd684f",
         "type": "github"
       },
       "original": {

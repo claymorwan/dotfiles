@@ -22,6 +22,7 @@
       enable = true;
     };
 
+    printing.enable = true;
     joycond.enable = true;
     openssh.enable = true;
     blueman.enable = true;
