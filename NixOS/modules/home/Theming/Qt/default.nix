@@ -13,6 +13,10 @@ let
   };
 in
 {
+  imports = [
+    # ./options.nix
+  ];
+
   qt = {
     enable = true;
     platformTheme.name = "qtct";

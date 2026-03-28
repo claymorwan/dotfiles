@@ -6,23 +6,23 @@ let
     (lib.getExe' pkgs.mangohud "mangohud")
   ];
 
-  gameOptions.launchOptions.wrappers = defaultWrappers; # ++ [ (lib.getExe' pkgs.mangohud "mangohud") ];
+  gamescopeWrapper = [
+    (lib.getExe' inputs.scopebuddy.packages.${pkgs.stdenv.hostPlatform.system}.default "scopebuddy")
+    "-w" "3840" "-h" "2160"
+    "-O" "DP-1"
+    "-f"
+    "--expose-wayland"
+    "--"
+   ];
+
+  gameOptions.launchOptions.wrappers = defaultWrappers;
 
   winGameOptions = lib.recursiveUpdate gameOptions {
     compatTool = "GE-Proton";
     launchOptions = {
-      wrappers = defaultWrappers ++ [
-        (lib.getExe' inputs.scopebuddy.packages.${pkgs.stdenv.hostPlatform.system}.default "scopebuddy")
-        # "-w" "2560" "-h" "1440"
-        "-O" "DP-1"
-        "-f"
-        "--mangoapp"
-        "--expose-wayland"
-        "--"
-      ];
-
+      wrappers = defaultWrappers;
       env = {
-        # PROTON_ENABLE_WAYLAND = 1;
+        PROTON_ENABLE_WAYLAND = 1;
         SCB_AUTO_RES = 1;
       };
     };
@@ -40,11 +40,6 @@ in
   # Millenium theme
   xdg = {
     dataFile."Steam/steamui/skins/Material-Theme".source = pkgs.millenium-material-theme;
-    
-    configFile."scopebuddy/scb.conf".text = ''
-      SCB_GAMESCOPE_ARGS="-f --mangoapp"
-      SCB_AUTO_RES=1
-    '';
   };
 
   programs.steam.config = {
@@ -60,9 +55,9 @@ in
       # Titanfall 2
       "1237970" = lib.recursiveUpdate gameOptions {
         launchOptions = {
+          wrappers = defaultWrappers ++ gamescopeWrapper;
           env = {
             PROTON_ENABLE_WAYLAND = 0;
-            PROTON_LOG = 1;
             OPENSSL_ia32cap = "~0x20000000";
           };
 

@@ -74,12 +74,32 @@
         "keywords": [
           "fl"
         ]
+      },
+      {
+        "id": "omnisearch",
+        "name": "Omnisearch",
+        "icon": "unicode:",
+        "url": "http://localhost:8087/search?q=%s",
+        "keywords": [
+          "om"
+        ]
+      },
+      {
+        "id": "hm-options",
+        "name": "Home manager options",
+        "icon": "unicode:",
+        "url": "https://home-manager-options.extranix.com/?query=%s&release=master",
+        "keywords": [
+          "hm"
+        ]
       }
     ],
-    "defaultEngine": "duckduckgo",
+    "defaultEngine": "omnisearch",
     "noTrigger": false,
     "trigger": "?",
-    "disabledEngines": []
+    "disabledEngines": [
+      "nixopts"
+    ]
   },
   "grimblast": {
     "enabled": true
@@ -193,7 +213,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "260325c3366d07865842416e5c989cd736888ca31bbe9d4bd9171d"
+    "musixmatchToken": "260328bc00298d450384faf66af9f855b3d032f988517f9cc7faf9"
   },
   "dankAudioVisualizer": {
     "enabled": true

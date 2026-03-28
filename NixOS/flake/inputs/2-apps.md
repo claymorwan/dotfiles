@@ -62,8 +62,8 @@ namida = {
   # inputs.nixpkgs.follows = "nixpkgs";
 };
 
-# omnisearch = {
-#   url = "git+https://git.bwaaa.monster/omnisearch";
-#   inputs.nixpkgs.follows = "nixpkgs";
-# };
+omnisearch = {
+  url = "git+https://git.bwaaa.monster/omnisearch";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
 ```

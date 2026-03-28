@@ -1,4 +1,11 @@
-{ inputs, pkgs, config, ... }:
+{
+  inputs,
+  pkgs,
+  lib,
+  config,
+  osConfig,
+  ...
+}:
 
 let
   version = "beta";
@@ -121,6 +128,32 @@ in
         spacesForce = true;
         pinsForce = true;
         inherit spaces pins;
+
+        search = {
+          force = true;
+          default = "om";
+          engines = {
+            omnisearch = lib.mkIf osConfig.services.omnisearch.enable {
+              name = "Omnisearch";
+              icon =
+                "${inputs.omnisearch.packages.${pkgs.stdenv.hostPlatform.system}.default}/share/omnisearch/static/favicon.ico";
+              definedAliases = [ "@om" "om" ];
+
+              urls = [
+                {
+                  template = "http://localhost:8087/search?q={searchTerms}";
+                  params = [
+                    {
+                      name = "query";
+                      value = "searchTerms";
+                    }
+                  ];
+                }
+              ];
+            };
+          };
+        };
+
         settings = {
           "widget.use-xdg-desktop-portal.file-picker" = 1;
           "services.sync.prefs.sync.browser.uiCustomization.state" = true;
@@ -131,6 +164,9 @@ in
           "font.name.serif.x-western" = "NotoSerif Nerd Font Propo";
           "font.name.sans-serif.x-western" = "NotoSans Nerd Font Propo";
           "font.name.monospace.x-western" = "JetBrainsMono Nerd Font Mono";
+          "browser.startup.homepage" = "http://localhost:8087";
+          "browser.newtab.extensionControlled" = true;
+          "browser.newtab.privateAllowed" = true;
 
           # Zen specific options
           "zen.view.use-single-toolbar" = false;

@@ -1,6 +1,9 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
+  imports = [
+    inputs.omnisearch.nixosModules.default
+  ];
 
   services = {
     # Enable sound with pipewire.
@@ -30,5 +33,6 @@
     fwupd.enable = true;
     gnome.gnome-keyring.enable = true;
     input-remapper.enable = true;
+    omnisearch.enable = true;
   };
 }
