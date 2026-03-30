@@ -131,7 +131,7 @@ in
 
         search = {
           force = true;
-          default = "om";
+          # default = "om";
           engines = {
             omnisearch = lib.mkIf osConfig.services.omnisearch.enable {
               name = "Omnisearch";
