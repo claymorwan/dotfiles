@@ -1375,10 +1375,10 @@
     },
     "dankNotepadModule": {
       "previewActive": false,
-      "currentFilePath": "notepad-files/untitled-1770243197424.txt",
-      "currentFileExtension": "txt",
-      "sourceContent": "card(C) = 27\ncard(S) = \ncard(M) = \ncard(|Fn|M) = 11\ncard(F",
-      "updatedAt": 1774785326321,
+      "currentFilePath": "/home/claymorwan/Documents/note.md",
+      "currentFileExtension": "md",
+      "sourceContent": "(0,1) (1,3)\n",
+      "updatedAt": 1774879045884,
       "highlightedHtml": ""
     }
   },

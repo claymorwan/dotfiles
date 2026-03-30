@@ -131,13 +131,13 @@ in
 
         search = {
           force = true;
-          # default = "om";
+          default = "omnisearch";
           engines = {
             omnisearch = lib.mkIf osConfig.services.omnisearch.enable {
-              name = "Omnisearch";
+              name = "OmniSearch";
               icon =
-                "${inputs.omnisearch.packages.${pkgs.stdenv.hostPlatform.system}.default}/share/omnisearch/static/favicon.ico";
-              definedAliases = [ "@om" "om" ];
+                "${inputs.omnisearch}/static/favicon.ico";
+              definedAliases = [ "@om" ];
 
               urls = [
                 {

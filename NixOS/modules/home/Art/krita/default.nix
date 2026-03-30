@@ -25,11 +25,11 @@ in
   xdg.dataFile = {
     "krita/pykrita" = {
       enable = true;
+      recursive = true;
       source = pkgs.symlinkJoin {
         name = "pykrita";
         paths = krita-plugins;
       };
-      recursive = true;
     };
   };
 }

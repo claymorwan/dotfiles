@@ -492,14 +492,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1774711625,
-        "narHash": "sha256-adXMfufmfLk4r3QGNItxiJ8GI6fu8A9w+mtw62Qfahg=",
-        "path": "/mnt/media/Programmation/Nix/home-manager",
-        "type": "path"
+        "lastModified": 1774738535,
+        "narHash": "sha256-2jfBEZUC67IlnxO5KItFCAd7Oc+1TvyV/jQlR+2ykGQ=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "769e07ef8f4cf7b1ec3b96ef015abec9bc6b1e2a",
+        "type": "github"
       },
       "original": {
-        "path": "/mnt/media/Programmation/Nix/home-manager",
-        "type": "path"
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
       }
     },
     "home-manager_2": {
@@ -1163,11 +1166,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1774382611,
-        "narHash": "sha256-ZWFwBUYjPaZrBI5VapISxz45ec3Xec6VOokvOmmdGas=",
+        "lastModified": 1774755469,
+        "narHash": "sha256-sO6h2JLu7eaxILkHQgdAo7oDc8soqJbIShzlzH79tUw=",
         "ref": "refs/heads/master",
-        "rev": "783a58d95487a1a8e97f1cc5f2fc58016e695b7e",
-        "revCount": 73,
+        "rev": "6b8a278b4f2973391b256eedf6add3d6a3516bc0",
+        "revCount": 79,
         "type": "git",
         "url": "https://git.bwaaa.monster/omnisearch"
       },

@@ -24,6 +24,13 @@
     power-profiles-daemon = {
       enable = true;
     };
+    
+    omnisearch = {
+      enable = true;
+      package = inputs.omnisearch.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (finalAttrs: {
+        patches = [ ../../pkgs/Patches/ctp-mocha-latte-mauve.patch ];
+      });
+    };
 
     printing.enable = true;
     joycond.enable = true;
@@ -33,6 +40,5 @@
     fwupd.enable = true;
     gnome.gnome-keyring.enable = true;
     input-remapper.enable = true;
-    omnisearch.enable = true;
   };
 }

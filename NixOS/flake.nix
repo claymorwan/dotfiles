@@ -7,20 +7,20 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     # home-manager, used for managing user configuration
     
-    home-manager = {
-      url = "/mnt/media/Programmation/Nix/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # home-manager = {
+    #   url = "/mnt/media/Programmation/Nix/home-manager";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     #
     # home-manager = {
     #   url = "github:claymorwan/home-manager/kvantum-packages";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
     
-    # home-manager = {
-    #   url = "github:nix-community/home-manager";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     

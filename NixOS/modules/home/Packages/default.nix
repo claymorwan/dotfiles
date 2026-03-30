@@ -4,7 +4,7 @@
   imports = [
     ./flatpak.nix
     inputs.devenvcp.homeModules.default
-    inputs.namida.homeManagerModules.namida
+    # inputs.namida.homeManagerModules.namida
   ];
 
   programs = {
@@ -19,10 +19,10 @@
       defaultPath = "${osConfig.globVars.flake_dir}/dev-shells/devenv";
     };
 
-    namida = {
-      enable = true;
-      package = inputs.namida.packages.${pkgs.stdenv.hostPlatform.system}.beta;
-    };
+    # namida = {
+    #   enable = true;
+    #   package = inputs.namida.packages.${pkgs.stdenv.hostPlatform.system}.beta;
+    # };
 
     onlyoffice.enable = true;
     btop.enable = true;

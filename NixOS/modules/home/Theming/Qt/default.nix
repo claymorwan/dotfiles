@@ -14,7 +14,7 @@ let
 in
 {
   imports = [
-    # ./options.nix
+    ./options.nix
   ];
 
   qt = {

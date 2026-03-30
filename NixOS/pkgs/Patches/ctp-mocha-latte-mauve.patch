@@ -1,0 +1,41 @@
+diff --git a/static/main.css b/static/main.css
+index 6f899cf..6969746 100644
+--- a/static/main.css
++++ b/static/main.css
+@@ -1,22 +1,22 @@
+ :root {
+-    --bg-main: #ffffff;
+-    --bg-card: #f8f9fa;
+-    --border: #e0e0e0;
+-    --text-primary: #1a1a1a;
+-    --text-secondary: #5f6368;
+-    --text-muted: #757575;
+-    --accent: #202124;
++    --bg-main: #e6e9ef;
++    --bg-card: #eff1f5;
++    --border: #ccd0da;
++    --text-primary: #4c4f69;
++    --text-secondary: #5c5f77;
++    --text-muted: #6c6f85;
++    --accent: #8839ef;
+     --accent-glow: rgba(0,0,0,0.05);
+ }
+ @media (prefers-color-scheme: dark) {
+     :root {
+-        --bg-main: #121212;
+-        --bg-card: #1e1e1e;
+-        --border: #333333;
+-        --text-primary: #ffffff;
+-        --text-secondary: #a0a0a0;
+-        --text-muted: #d1d1d1;
+-        --accent: #e2e2e2;
++        --bg-main: #181825;
++        --bg-card: #1e1e2e;
++        --border: #363a4f;
++        --text-primary: #cdd6f4;
++        --text-secondary: #b8c0e0;
++        --text-muted: #a5adcb;
++        --accent: #cba6f7;
+         --accent-glow: rgba(255,255,255,0.1);
+     }
+ }
