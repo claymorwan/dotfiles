@@ -149,6 +149,9 @@ in
 
       # Subterranauts
       "3075800" = winGameOptions;
+
+      # Lethal Company
+      "1966720" = winGameOptions;
     };
   };
 }
