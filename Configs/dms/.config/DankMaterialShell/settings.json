@@ -53,6 +53,10 @@
   "modalElevationEnabled": true,
   "popoutElevationEnabled": true,
   "barElevationEnabled": false,
+  "blurEnabled": false,
+  "blurBorderColor": "outline",
+  "blurBorderCustomColor": "#ffffff",
+  "blurBorderOpacity": 1,
   "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": true,
   "blurWallpaperOnOverview": false,
@@ -301,6 +305,7 @@
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 4,
   "spotlightCloseNiriOverview": true,
+  "rememberLastQuery": false,
   "spotlightSectionViewModes": {
     "apps": "list",
     "plugin_dankHyprlandWindows": "tile",
@@ -1375,10 +1380,10 @@
     },
     "dankNotepadModule": {
       "previewActive": false,
-      "currentFilePath": "/home/claymorwan/Documents/note.md",
-      "currentFileExtension": "md",
-      "sourceContent": "(0,1) (1,3)\n",
-      "updatedAt": 1774879045884,
+      "currentFilePath": "notepad-files/untitled-1770243197424.txt",
+      "currentFileExtension": "txt",
+      "sourceContent": "Cl@y-PR3p@_!|\\|",
+      "updatedAt": 1774971087789,
       "highlightedHtml": ""
     }
   },

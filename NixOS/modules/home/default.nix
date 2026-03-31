@@ -12,6 +12,7 @@
     ./git.nix
     ./ghostty.nix
     ./obs-studio.nix
+    ./Options
     ./Packages
     ./services.nix
     ./starship.nix

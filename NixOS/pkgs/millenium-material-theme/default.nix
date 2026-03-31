@@ -39,7 +39,8 @@ stdenvNoCC.mkDerivation (finalAttrs: {
 
   installPhase = ''
     cd ..
-    cp -r source $out
+    mkdir -p $out/Material-Theme
+    cp -r source/* $out/Material-Theme
   '';
 
   passthru.updateScript = nix-update-script { extraArgs = [ "--version=branch" ]; };

@@ -222,6 +222,6 @@
     "enabled": true
   },
   "usbManager": {
-    "enabled": false
+    "enabled": true
   }
 }

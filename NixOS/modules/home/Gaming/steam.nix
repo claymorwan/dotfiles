@@ -38,8 +38,15 @@ in
   ];
 
   # Millenium theme
-  xdg = {
-    dataFile."Steam/steamui/skins/Material-Theme".source = pkgs.millenium-material-theme;
+  # xdg = {
+  #   dataFile."Steam/steamui/skins/Material-Theme".source = pkgs.millenium-material-theme;
+  # };
+
+  programs.steam.millenium = {
+    enable = true;
+    themes = with pkgs; [
+      millenium-material-theme
+    ];
   };
 
   programs.steam.config = {
