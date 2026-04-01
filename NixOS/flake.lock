@@ -246,6 +246,22 @@
         "type": "github"
       }
     },
+    "extendium-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1774799284,
+        "narHash": "sha256-VV5Y0FKQ4Ongvg+hTCSWMj7FDzUZV1EV2eEIew/nwtU=",
+        "owner": "BossSloth",
+        "repo": "Extendium",
+        "rev": "56177bfd0628a36cb86cf2f0ffbbb5aefee8064f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "BossSloth",
+        "repo": "Extendium",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -629,22 +645,6 @@
         "type": "github"
       }
     },
-    "millenium-material-theme-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1774784657,
-        "narHash": "sha256-EW+YsbXFaLuU3ET2nS0XC1zCDnzDhk6QgXLf1AZv54M=",
-        "owner": "kuska1",
-        "repo": "Material-Theme",
-        "rev": "a44438715c911e56a608cd5f8eebb80eaaa3f3d3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "kuska1",
-        "repo": "Material-Theme",
-        "type": "github"
-      }
-    },
     "millennium": {
       "inputs": {
         "abseil-src": "abseil-src",
@@ -680,6 +680,22 @@
         "dir": "packages/nix",
         "owner": "SteamClientHomebrew",
         "repo": "Millennium",
+        "type": "github"
+      }
+    },
+    "millennium-material-theme-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1774784657,
+        "narHash": "sha256-EW+YsbXFaLuU3ET2nS0XC1zCDnzDhk6QgXLf1AZv54M=",
+        "owner": "kuska1",
+        "repo": "Material-Theme",
+        "rev": "a44438715c911e56a608cd5f8eebb80eaaa3f3d3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kuska1",
+        "repo": "Material-Theme",
         "type": "github"
       }
     },
@@ -1239,12 +1255,13 @@
         "dms": "dms",
         "dms-plugin-registry": "dms-plugin-registry",
         "dsearch": "dsearch",
+        "extendium-src": "extendium-src",
         "fluxer-src": "fluxer-src",
         "gsr": "gsr",
         "home-manager": "home-manager",
         "lncur": "lncur",
-        "millenium-material-theme-src": "millenium-material-theme-src",
         "millennium": "millennium",
+        "millennium-material-theme-src": "millennium-material-theme-src",
         "namida": "namida",
         "niri": "niri",
         "nix-flatpak": "nix-flatpak",

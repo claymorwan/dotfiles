@@ -1,6 +1,6 @@
 {
   stdenvNoCC,
-  millenium-material-theme-src,
+  millennium-material-theme-src,
   local-utils,
   lib,
   fetchFromGitHub,
@@ -11,11 +11,11 @@
 }:
 
 stdenvNoCC.mkDerivation (finalAttrs: {
-  pname = "millenium-material-theme";
-  version = "0-unstable-${local-utils.timestamp millenium-material-theme-src}";
+  pname = "millennium-material-theme";
+  version = "0-unstable-${local-utils.timestamp millennium-material-theme-src}";
 
   srcs = [
-    millenium-material-theme-src
+    millennium-material-theme-src
     ./files
   ];
 
@@ -46,7 +46,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   passthru.updateScript = nix-update-script { extraArgs = [ "--version=branch" ]; };
 
   meta = {
-    description = "Material Theme for Steam Millenium";
+    description = "Material Theme for Steam millennium";
     longDescription = ''
       My stupid solution to wanting the Material Theme but with a custom color scheme and reproducible.
       This might not be the best way to do this but idc brah it's just a local package.

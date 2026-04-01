@@ -17,7 +17,8 @@
   },
   "emojiLauncher": {
     "enabled": true,
-    "trigger": ";"
+    "trigger": ";",
+    "recentEmojis": "🥀"
   },
   "linuxWallpaperEngine": {
     "enabled": true,
@@ -213,7 +214,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "260330d72c44108abbad72afe7326830c5c1c82737a8d3f8846721"
+    "musixmatchToken": "2603318dda8bbe870c02b58f102a4e8cb6e6516a33a64481a39275"
   },
   "dankAudioVisualizer": {
     "enabled": true

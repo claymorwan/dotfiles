@@ -1,6 +1,6 @@
 {
   imports = [
     ./kvantum.nix
-    ./millenium.nix
+    ./millennium.nix
   ];
 }

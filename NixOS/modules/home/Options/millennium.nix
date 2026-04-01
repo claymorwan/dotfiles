@@ -9,10 +9,10 @@ let
   mkIf
   ;
 
-  cfg = config.programs.steam.millenium;
+  cfg = config.programs.steam.millennium;
 in
 {
-  options.programs.steam.millenium = {
+  options.programs.steam.millennium = {
     enable = mkEnableOption "devenvcp";
 
     themes = mkOption {
@@ -27,7 +27,7 @@ in
     };
 
     plugins = mkOption {
-      type = with types; listOf package;
+      type = with types; listOf (either package path);
       default = [];
       example = literalExpression ''
       '';
@@ -43,15 +43,15 @@ in
       "Steam/steamui/skins" = mkIf (cfg.themes != [ ]) {
         recursive = true;
         source = pkgs.symlinkJoin {
-          name = "millenium-themes";
+          name = "millennium-themes";
           paths = cfg.themes;
         };
       };
 
-      "millenium/plugins" = mkIf (cfg.plugins != [ ]) {
+      "millennium/plugins" = mkIf (cfg.plugins != [ ]) {
         recursive = true;
         source =pkgs.symlinkJoin {
-          name = "millenium-plugins";
+          name = "millennium-plugins";
           paths = cfg.plugins;
         };
       };

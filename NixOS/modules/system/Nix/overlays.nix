@@ -13,11 +13,14 @@
       wallpaperengine-gui = pkgs.callPackage ../../../pkgs/wallpaperengine-gui { };
 
       mouse-cursor = pkgs.callPackage ../../../pkgs/cursors { cursorName = config.globVars.mouse_cursor; };
-      millenium-material-theme = pkgs.callPackage ../../../pkgs/millenium-material-theme { inherit (inputs) millenium-material-theme-src; };
       neuwaita = pkgs.callPackage ../../../pkgs/neuwaita { };
 
       # Fonts
       no-continue = pkgs.callPackage ../../../pkgs/Fonts/no-continue.nix { };
+
+      # Millennium
+      millennium-material-theme = pkgs.callPackage ../../../pkgs/Millennium/themes/millennium-material-theme { inherit (inputs) millennium-material-theme-src; };
+      extendium = pkgs.callPackage ../../../pkgs/Millennium/plugins/extendium { inherit (inputs) extendium-src; };
     })
   ];
 }
