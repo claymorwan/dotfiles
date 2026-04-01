@@ -45,30 +45,7 @@ in
       ) cfg.themes)
       (lib.mapAttrs' (
         name: value: lib.nameValuePair "millennium/plugins/${name}" { source = value; }
-      ) cfg.plugins);
-    #   {
-    #   "Steam/steamui/skins" = mkIf (cfg.themes != [ ]) {
-    #     recursive = true;
-    #     source = pkgs.symlinkJoin {
-    #       name = "millennium-themes";
-    #       paths = cfg.themes;
-    #     };
-    #   };
-    #
-    #   "millennium/plugins" = mkIf (cfg.plugins != [ ]) {
-    #     recursive = true;
-    #     source =pkgs.symlinkJoin {
-    #       name = "millennium-plugins";
-    #       paths = cfg.plugins;
-    #     };
-    #   };
-    # }
-    # // (lib.mapAttrs' (
-    #     name: value: lib.nameValuePair "Steam/steamui/skins/${name}" { source = value; }
-    #   ) cfg.themes)
-    # // (lib.mapAttrs' (
-    #     name: value: lib.nameValuePair "millennium/plugins/${name}" { source = value; }
-    #   ) cfg.plugins)
-    # ;
+      ) cfg.plugins)
+    ;
   };
 }
