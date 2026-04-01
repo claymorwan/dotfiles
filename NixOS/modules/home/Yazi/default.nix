@@ -27,8 +27,12 @@ in
     shellWrapperName = "y";
     settings = settings;
     keymap = keymap;
-    #theme = theme;
     initLua = ./init.lua;
+
+    extraPackages = with pkgs; [
+      ouch
+      glow
+    ];
 
     plugins = {
       toggle-pane = pkgs.yaziPlugins.toggle-pane;
@@ -58,9 +62,4 @@ in
       };
     };
   };
-
-  # Packages for plugins
-  home.packages = with pkgs; [
-    ouch
-  ];
 }

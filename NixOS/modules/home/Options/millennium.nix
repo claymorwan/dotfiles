@@ -16,8 +16,8 @@ in
     enable = mkEnableOption "devenvcp";
 
     themes = mkOption {
-      type = with types; listOf package;
-      default = [];
+      type = with types; attrsOf (oneOf [ package path ]);
+      default = {};
       example = literalExpression ''
       '';
 
@@ -27,8 +27,8 @@ in
     };
 
     plugins = mkOption {
-      type = with types; listOf (either package path);
-      default = [];
+      type = with types; attrsOf (oneOf [ package path ]);
+      default = {};
       example = literalExpression ''
       '';
 
@@ -39,22 +39,36 @@ in
   };
 
   config = mkIf cfg.enable {
-    xdg.dataFile = {
-      "Steam/steamui/skins" = mkIf (cfg.themes != [ ]) {
-        recursive = true;
-        source = pkgs.symlinkJoin {
-          name = "millennium-themes";
-          paths = cfg.themes;
-        };
-      };
-
-      "millennium/plugins" = mkIf (cfg.plugins != [ ]) {
-        recursive = true;
-        source =pkgs.symlinkJoin {
-          name = "millennium-plugins";
-          paths = cfg.plugins;
-        };
-      };
-    };
+    xdg.dataFile = lib.mergeAttrs
+      (lib.mapAttrs' (
+        name: value: lib.nameValuePair "Steam/steamui/skins/${name}" { source = value; }
+      ) cfg.themes)
+      (lib.mapAttrs' (
+        name: value: lib.nameValuePair "millennium/plugins/${name}" { source = value; }
+      ) cfg.plugins);
+    #   {
+    #   "Steam/steamui/skins" = mkIf (cfg.themes != [ ]) {
+    #     recursive = true;
+    #     source = pkgs.symlinkJoin {
+    #       name = "millennium-themes";
+    #       paths = cfg.themes;
+    #     };
+    #   };
+    #
+    #   "millennium/plugins" = mkIf (cfg.plugins != [ ]) {
+    #     recursive = true;
+    #     source =pkgs.symlinkJoin {
+    #       name = "millennium-plugins";
+    #       paths = cfg.plugins;
+    #     };
+    #   };
+    # }
+    # // (lib.mapAttrs' (
+    #     name: value: lib.nameValuePair "Steam/steamui/skins/${name}" { source = value; }
+    #   ) cfg.themes)
+    # // (lib.mapAttrs' (
+    #     name: value: lib.nameValuePair "millennium/plugins/${name}" { source = value; }
+    #   ) cfg.plugins)
+    # ;
   };
 }

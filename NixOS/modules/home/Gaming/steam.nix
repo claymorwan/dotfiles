@@ -40,13 +40,13 @@ in
   programs.steam = {
     millennium = {
       enable = true;
-      themes = with pkgs; [
-        millennium-material-theme
-      ];
+      themes = {
+        material = pkgs.millennium-material-theme;
+      };
 
-      plugins = with pkgs; [
-        extendium
-      ];
+      plugins = {
+        extendium = pkgs.extendium;
+      };
     };
 
     config = {

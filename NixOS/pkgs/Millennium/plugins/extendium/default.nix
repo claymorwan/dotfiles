@@ -13,8 +13,9 @@ stdenvNoCC.mkDerivation {
   src = extendium-src;
 
   installPhase = ''
-    mkdir -p $out/extendium
-    cp -r * $out/extendium
+    # wtf brah
+    mkdir -p $out
+    cp -r * $out
   '';
 
   meta = {

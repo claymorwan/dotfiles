@@ -13,10 +13,10 @@
       astrolsp
     ];
 
-    extraLuaPackages =
-      luaPkgs: with luaPkgs; [
-        # luarocks
-      ];
+    extraPackages = with pkgs; [
+      luarocks
+      pkg-config
+    ];
 
     # extraLuaConfig = ''
     #  require("lazy").setup({

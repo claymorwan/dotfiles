@@ -74,11 +74,8 @@
     python3
     uv
     lua
-    luajitPackages.luarocks
     go
     dotnetCorePackages.dotnet_10.sdk
-
-    # wineWowPackages.staging
 
     vlc
     mpv
