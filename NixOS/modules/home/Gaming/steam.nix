@@ -40,12 +40,18 @@ in
   programs.steam = {
     millennium = {
       enable = true;
+      activeTheme = "material";
+
       themes = {
         material = pkgs.millennium-material-theme;
       };
 
       plugins = {
         extendium = pkgs.extendium;
+      };
+
+      config = {
+        themes.conditions.material.Color = "Catppuccin";
       };
     };
 

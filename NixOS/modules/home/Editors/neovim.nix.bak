@@ -1,0 +1,21 @@
+{ inputs, pkgs, ... }:
+
+{
+  imports = [
+    inputs.nixvim.homeModules.nixvim
+  ];
+
+  programs = {
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+    };
+
+    nixvim = {
+      colorschemes.catppuccin = {
+      	enable = true;
+	lazyload = true;
+      };
+    };
+  };
+}

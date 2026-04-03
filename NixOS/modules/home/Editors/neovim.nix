@@ -14,7 +14,8 @@
     ];
 
     extraPackages = with pkgs; [
-      luarocks
+      lua51Packages.lua
+      lua51Packages.luarocks
       pkg-config
     ];
 

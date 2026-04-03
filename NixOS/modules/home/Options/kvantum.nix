@@ -2,8 +2,6 @@
 
 let
   cfg = config.qt.kvantum;
-
-  qt5Pkg = lib.lists.all (x: x == true) [ cfg.qt5.enable (cfg.qt5.package != null) ];
 in
 {
   options.qt.kvantum = {
@@ -23,7 +21,7 @@ in
   config = lib.mkIf cfg.enable {
     home.packages = lib.mkIf (cfg.package != null) [
       cfg.package
-      (lib.mkIf qt5Pkg cfg.qt5.package)
+      (lib.mkIf (cfg.qt5.enable && cfg.qt5.package != null) cfg.qt5.package)
     ];
   };
 }
