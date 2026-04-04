@@ -168,6 +168,9 @@ in
 
         # Rabbit & Steel
         "2132850" = winGameOptions;
+
+        # BOMMY Playtest
+        "4365450" = winGameOptions;
       };
     };
   };

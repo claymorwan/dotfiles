@@ -1383,7 +1383,7 @@
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
       "sourceContent": "lib.mapAttrs' (name: value: lib.nameValuePair \"Steam/steamui/skins/${name}\" { source = value; }) cfg.themes",
-      "updatedAt": 1775236767955,
+      "updatedAt": 1775304159272,
       "highlightedHtml": ""
     }
   },
