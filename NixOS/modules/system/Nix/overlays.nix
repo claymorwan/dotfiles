@@ -20,7 +20,7 @@
 
       # Millennium
       millennium-material-theme = pkgs.callPackage ../../../pkgs/Millennium/themes/millennium-material-theme { inherit (inputs) millennium-material-theme-src; };
-      extendium = pkgs.callPackage ../../../pkgs/Millennium/plugins/extendium { inherit (inputs) extendium-src; };
+      extendium = pkgs.callPackage ../../../pkgs/Millennium/plugins/extendium { };
     })
   ];
 }

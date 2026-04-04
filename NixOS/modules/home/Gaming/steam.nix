@@ -165,6 +165,9 @@ in
 
         # Lethal Company
         "1966720" = winGameOptions;
+
+        # Rabbit & Steel
+        "2132850" = winGameOptions;
       };
     };
   };
