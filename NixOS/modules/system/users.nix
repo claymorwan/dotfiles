@@ -1,12 +1,15 @@
-{ inputs,
+{
+  inputs,
   pkgs,
   username,
   host,
+  self,
   ...
 }:
 
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
+  
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
@@ -15,7 +18,7 @@
         inputs
         username
         host
-        # system
+        self
         ;
     };
     users.${username} = {

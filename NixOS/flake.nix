@@ -99,8 +99,9 @@
     };
     
     omnisearch = {
-      url = "git+https://git.bwaaa.monster/omnisearch";
+      url = "/mnt/media/Programmation/C/omnisearch"; #"git+https://git.bwaaa.monster/omnisearch";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.beaker-src.follows = "beaker-src";
     };
     
     nixvim = {
@@ -169,8 +170,13 @@
       flake = false;
     };
     
-    extendium-src = {
-      url = "github:BossSloth/Extendium";
+    beaker-src = {
+      url = "git+https://git.bwaaa.monster/beaker?shallow=0";
+      flake = false;
+    };
+    
+    dms-screenshot-src = {
+      url = "github:JDKamalakar/DMS-Screenshot/Testing";
       flake = false;
     };
     # ~/~ end
@@ -178,6 +184,7 @@
 
   outputs =
     inputs@{
+      self,
       nixpkgs,
       home-manager,
       ...
@@ -193,6 +200,7 @@
             inherit inputs;
             inherit username;
             inherit host;
+            inherit self;
             # inherit system;
           };
 

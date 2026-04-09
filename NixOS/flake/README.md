@@ -9,6 +9,7 @@ Using this to separate my inputs into multiple files, as flake.nix files aren't 
 
   outputs =
     inputs@{
+      self,
       nixpkgs,
       home-manager,
       ...
@@ -24,6 +25,7 @@ Using this to separate my inputs into multiple files, as flake.nix files aren't 
             inherit inputs;
             inherit username;
             inherit host;
+            inherit self;
             # inherit system;
           };
 

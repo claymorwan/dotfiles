@@ -18,7 +18,7 @@
   "emojiLauncher": {
     "enabled": true,
     "trigger": ";",
-    "recentEmojis": "🥀"
+    "recentEmojis": "😭,🥀"
   },
   "linuxWallpaperEngine": {
     "enabled": true,
@@ -213,7 +213,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "260403b0642f0d860b6fc3f042af05a86c3dfd0c1836af6360ad1f"
+    "musixmatchToken": "260408e6e027944f9e2f799d72518c61efbbb3bb429e00944990d6"
   },
   "dankAudioVisualizer": {
     "enabled": true
@@ -222,6 +222,31 @@
     "enabled": true
   },
   "usbManager": {
+    "enabled": true
+  },
+  "dmsScreenshot": {
+    "enabled": true,
+    "quality": 90,
+    "mode": "interactive",
+    "saveToDisk": false,
+    "customPath": "~/Pictures/Screenshots",
+    "copyToClipboard": false,
+    "showToast": true,
+    "showPointer": true,
+    "showNotify": true,
+    "format": "png",
+    "stdout": true,
+    "pipeCommand": "gradia"
+  },
+  "easyEffects": {
+    "enabled": true,
+    "currentOutputIndex": -1,
+    "currentInputIndex": -1
+  },
+  "discordVoice": {
+    "enabled": true
+  },
+  "liveChartSchedule": {
     "enabled": true
   }
 }

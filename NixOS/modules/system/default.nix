@@ -7,6 +7,7 @@
     ./Greeters
     ./networking.nix
     ./Nix
+    ./Options
     ./Packages
     ./services.nix
     ./security.nix

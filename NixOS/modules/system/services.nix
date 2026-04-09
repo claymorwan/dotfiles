@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, self, ... }:
 
 {
   imports = [
@@ -28,7 +28,7 @@
     omnisearch = {
       enable = true;
       package = inputs.omnisearch.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (finalAttrs: {
-        patches = [ ../../pkgs/Patches/ctp-mocha-latte-mauve.patch ];
+        patches = [ "${self}/pkgs/Patches/ctp-mocha-latte-mauve.patch" ];
       });
     };
 

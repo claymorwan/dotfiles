@@ -2,6 +2,7 @@
 
 let
   dms-plugins = config.programs.dank-material-shell.plugins;
+  inherit (lib) mkIf;
 in 
 {
 
@@ -13,8 +14,9 @@ in
   # Deps for plugins
   # Lots of them are already installed but it don't to add them here too
   home.packages = with pkgs; [
-    (lib.mkIf dms-plugins.amdGpuMonitor.enable amdgpu_top)
-    (lib.mkIf dms-plugins.displayManager.enable ddcutil)
+    (mkIf dms-plugins.amdGpuMonitor.enable amdgpu_top)
+    (mkIf dms-plugins.displayManager.enable ddcutil)
+    (mkIf dms-plugins.discordVoice.enable python3)
   ]
   ++ (if dms-plugins.usbManager.enable then (with pkgs; [
       udisks
@@ -25,6 +27,12 @@ in
       e2fsprogs
       exfatprogs
       polkit
+    ]) else [])
+
+  ++ (if dms-plugins.liveChartSchedule.enable then (with pkgs; [
+      python3
+      python3Packages.browser-cookie3
+      qt6.qt5compat
     ]) else [])
   ;
 
@@ -67,17 +75,23 @@ in
         amdGpuMonitor.enable = true;
         mediaFrame.enable = true;
         dankGifSearch.enable = true;
-        dankHyprlandWindows.enable = (if osConfig.globVars.enableHyprland then true else false);
+        dankHyprlandWindows.enable = osConfig.globVars.enableHyprland;
         polyglot.enable = true;
         commandRunner.enable = true;
         developerUtilities.enable = true;
         dankNotepadModule.enable = true;
         githubHeatmap.enable = true;
-        niriScreenshot.enable = true;
         musicLyrics.enable = true;
         dankAudioVisualizer.enable = true;
         screenRecorder.enable = true;
         usbManager.enable = true;
+        easyEffects.enable = config.services.easyeffects.enable;
+        discordVoice.enable = true;
+        liveChartSchedule.enable = true;
+        dmsScreenshot = {
+          enable = true;
+          src = lib.mkForce inputs.dms-screenshot-src;
+        };
         # KDE Connect
         phoneConnect = {
           enable = osConfig.programs.kdeconnect.enable;

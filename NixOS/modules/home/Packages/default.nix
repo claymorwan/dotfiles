@@ -63,7 +63,8 @@
     intiface-central
     polychromatic
     fragments
-    # winboat
+    audacity
+    winboat
     inputs.gsr.packages.${pkgs.stdenv.hostPlatform.system}.gpu-screen-recorder-ui
     
     shiru

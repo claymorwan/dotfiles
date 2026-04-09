@@ -1,26 +1,26 @@
-{ inputs, pkgs, config, ... }:
+{ inputs, pkgs, config, self,... }:
 
 {
   nixpkgs.overlays = [
     inputs.millennium.overlays.default
 
     (final: prev: {
-      local-utils = pkgs.callPackage ../../../pkgs/utils.nix { };
+      local-utils = pkgs.callPackage "${self}/pkgs/utils.nix" { };
 
-      fluxer = pkgs.callPackage ../../../pkgs/fluxer { inherit (inputs) fluxer-src; };
-      shiru = pkgs.callPackage ../../../pkgs/shiru { };
-      shijima-qt-bin = pkgs.callPackage ../../../pkgs/shijima-qt-bin { };
-      wallpaperengine-gui = pkgs.callPackage ../../../pkgs/wallpaperengine-gui { };
+      fluxer = pkgs.callPackage "${self}/pkgs/fluxer" { inherit (inputs) fluxer-src; };
+      shiru = pkgs.callPackage "${self}/pkgs/shiru" { };
+      shijima-qt-bin = pkgs.callPackage "${self}/pkgs/shijima-qt-bin" { };
+      wallpaperengine-gui = pkgs.callPackage "${self}/pkgs/wallpaperengine-gui" { };
 
-      mouse-cursor = pkgs.callPackage ../../../pkgs/cursors { cursorName = config.globVars.mouse_cursor; };
-      neuwaita = pkgs.callPackage ../../../pkgs/neuwaita { };
+      mouse-cursor = pkgs.callPackage "${self}/pkgs/cursors" { cursorName = config.globVars.mouse_cursor; };
+      neuwaita = pkgs.callPackage "${self}/pkgs/neuwaita" { };
 
       # Fonts
-      no-continue = pkgs.callPackage ../../../pkgs/Fonts/no-continue.nix { };
+      no-continue = pkgs.callPackage "${self}/pkgs/Fonts/no-continue.nix" { };
 
       # Millennium
-      millennium-material-theme = pkgs.callPackage ../../../pkgs/Millennium/themes/millennium-material-theme { inherit (inputs) millennium-material-theme-src; };
-      extendium = pkgs.callPackage ../../../pkgs/Millennium/plugins/extendium { };
+      millennium-material-theme = pkgs.callPackage "${self}/pkgs/Millennium/themes/millennium-material-theme" { inherit (inputs) millennium-material-theme-src; };
+      extendium = pkgs.callPackage "${self}/pkgs/Millennium/plugins/extendium" { };
     })
   ];
 }

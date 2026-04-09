@@ -204,6 +204,7 @@
   },
   "waveProgressEnabled": true,
   "scrollTitleEnabled": true,
+  "mediaAdaptiveWidthEnabled": true,
   "audioVisualizerEnabled": true,
   "audioScrollMode": "volume",
   "audioWheelScrollAmount": 5,
@@ -360,6 +361,7 @@
   "notepadLastCustomTransparency": 0.7,
   "soundsEnabled": true,
   "useSystemSoundTheme": true,
+  "soundLogin": false,
   "soundNewNotification": true,
   "soundVolumeChanged": true,
   "soundPluggedIn": true,
@@ -620,6 +622,10 @@
           "enabled": true
         },
         {
+          "id": "discordVoice",
+          "enabled": true
+        },
+        {
           "id": "separator",
           "enabled": true
         },
@@ -668,7 +674,7 @@
       "widgetOutlineThickness": 2,
       "maximizeDetection": false,
       "scrollYBehavior": "workspace",
-      "scrollEnabled": false
+      "scrollEnabled": true
     },
     {
       "id": "bar1768214186318",
@@ -693,19 +699,7 @@
           "enabled": true
         },
         {
-          "id": "colorPicker",
-          "enabled": true
-        },
-        {
-          "id": "developerUtilities",
-          "enabled": true
-        },
-        {
-          "id": "niriScreenshot",
-          "enabled": true
-        },
-        {
-          "id": "screenRecorder",
+          "id": "liveChartSchedule",
           "enabled": true
         }
       ],
@@ -771,6 +765,82 @@
       "shadowOpacity": 60,
       "shadowColorMode": "text",
       "shadowCustomColor": "#000000"
+    },
+    {
+      "id": "bar1775588628193",
+      "name": "Bar 3",
+      "enabled": true,
+      "position": 3,
+      "screenPreferences": [
+        "all"
+      ],
+      "showOnLastDisplay": false,
+      "leftWidgets": [],
+      "centerWidgets": [
+        {
+          "id": "dmsScreenshot",
+          "enabled": true
+        },
+        {
+          "id": "screenRecorder",
+          "enabled": true
+        },
+        {
+          "id": "colorPicker",
+          "enabled": true
+        },
+        {
+          "id": "easyEffects",
+          "enabled": true
+        },
+        {
+          "id": "developerUtilities",
+          "enabled": true
+        }
+      ],
+      "rightWidgets": [],
+      "spacing": 4,
+      "innerPadding": 15,
+      "bottomGap": 0,
+      "transparency": 0,
+      "widgetTransparency": 1,
+      "squareCorners": false,
+      "noBackground": false,
+      "gothCornersEnabled": false,
+      "gothCornerRadiusOverride": true,
+      "gothCornerRadiusValue": 23,
+      "borderEnabled": false,
+      "borderColor": "primary",
+      "borderOpacity": 1,
+      "borderThickness": 2,
+      "widgetOutlineEnabled": true,
+      "widgetOutlineColor": "primary",
+      "widgetOutlineOpacity": 1,
+      "widgetOutlineThickness": 2,
+      "widgetPadding": 8,
+      "maximizeWidgetIcons": false,
+      "maximizeWidgetText": false,
+      "removeWidgetPadding": false,
+      "fontScale": 1,
+      "iconScale": 1,
+      "autoHide": true,
+      "autoHideDelay": 250,
+      "showOnWindowsOpen": false,
+      "openOnOverview": false,
+      "visible": true,
+      "popupGapsAuto": true,
+      "popupGapsManual": 4,
+      "maximizeDetection": false,
+      "scrollEnabled": false,
+      "scrollXBehavior": "column",
+      "scrollYBehavior": "workspace",
+      "shadowIntensity": 0,
+      "shadowOpacity": 60,
+      "shadowDirectionMode": "inherit",
+      "shadowDirection": "top",
+      "shadowColorMode": "default",
+      "shadowCustomColor": "#000000",
+      "clickThrough": false
     }
   ],
   "desktopClockEnabled": true,
@@ -1383,7 +1453,7 @@
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
       "sourceContent": "lib.mapAttrs' (name: value: lib.nameValuePair \"Steam/steamui/skins/${name}\" { source = value; }) cfg.themes",
-      "updatedAt": 1775304159272,
+      "updatedAt": 1775683820111,
       "highlightedHtml": ""
     }
   },

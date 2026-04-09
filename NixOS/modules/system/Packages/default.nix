@@ -2,7 +2,6 @@
 
 {
   imports = [
-    # inputs.niri.nixosModules.niri
     ./flatpak.nix
   ];
 
