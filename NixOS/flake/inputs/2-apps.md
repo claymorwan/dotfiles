@@ -63,7 +63,7 @@ namida = {
 };
 
 omnisearch = {
-  url = "/mnt/media/Programmation/C/omnisearch"; #"git+https://git.bwaaa.monster/omnisearch";
+  url = "git+https://git.bwaaa.monster/omnisearch";
   inputs.nixpkgs.follows = "nixpkgs";
   inputs.beaker-src.follows = "beaker-src";
 };

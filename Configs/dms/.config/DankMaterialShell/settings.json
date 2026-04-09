@@ -1452,8 +1452,8 @@
       "previewActive": false,
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "lib.mapAttrs' (name: value: lib.nameValuePair \"Steam/steamui/skins/${name}\" { source = value; }) cfg.themes",
-      "updatedAt": 1775683820111,
+      "sourceContent": "",
+      "updatedAt": 1775756743337,
       "highlightedHtml": ""
     }
   },

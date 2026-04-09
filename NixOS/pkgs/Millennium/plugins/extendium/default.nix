@@ -10,13 +10,12 @@ stdenvNoCC.mkDerivation rec {
 
   src = fetchzip {
     url = "https://github.com/BossSloth/Extendium/releases/download/v${version}/extendium-${version}.zip";
-    hash = "sha256-RcIgJ9fWykBR6qs5F+2eUOQF40+sf/4kMzo9eKAwMUc=";
+    hash = "sha256-izwZ30GKywaJjd0y/POCX0JOdsTdEyNmEdfCxYC53O4=";
+    stripRoot = false;
   };
 
   installPhase = ''
-    # wtf brah
-    mkdir -p $out
-    cp -r * $out
+    cp -r extendium $out
   '';
 
   meta = {

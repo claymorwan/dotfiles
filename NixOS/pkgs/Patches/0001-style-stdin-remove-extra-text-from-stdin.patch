@@ -1,3 +1,13 @@
+From 7c7379d79bda489c914cb3e56c8369ddcb5baa59 Mon Sep 17 00:00:00 2001
+From: claymorwan <claymorwan@fembois.dev>
+Date: Thu, 9 Apr 2026 17:06:08 +0000
+Subject: [PATCH] style(stdin): remove extra text from stdin
+
+---
+ gradia/ui/image_exporters.py     | 2 +-
+ gradia/utils/std_image_loader.py | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
 diff --git a/gradia/ui/image_exporters.py b/gradia/ui/image_exporters.py
 index 5a3477b..d0c2d39 100644
 --- a/gradia/ui/image_exporters.py
@@ -24,3 +34,6 @@ index 8a2fa62..82147c4 100644
              temp_path = os.path.join(temp_dir, filename)
              Path(temp_dir).mkdir(parents=True, exist_ok=True)
  
+-- 
+2.53.0
+

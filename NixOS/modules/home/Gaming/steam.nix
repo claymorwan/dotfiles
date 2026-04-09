@@ -172,9 +172,10 @@ in
         # BOMMY Playtest
         "4365450" = winGameOptions;
 
-        "4449070" = lib.recursiveUpdate winGameOptions {
-          launchOptions.env.PROTON_ENABLE_WAYLAND = 0;
-        };
+        "4449070" = winGameOptions;
+        
+        # House Flipper
+        "613100" = winGameOptions;
       };
     };
   };
