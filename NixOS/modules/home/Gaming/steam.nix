@@ -176,6 +176,9 @@ in
         
         # House Flipper
         "613100" = winGameOptions;
+
+        # Wallpaper engine
+        "431960" = winGameOptions;
       };
     };
   };

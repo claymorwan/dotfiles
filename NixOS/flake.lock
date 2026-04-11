@@ -226,23 +226,6 @@
         "type": "github"
       }
     },
-    "dms-screenshot-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1775702177,
-        "narHash": "sha256-Ie8ASJjYkAN3egfk5hNCSiibEPaBuZDpHDUTY+SNK0k=",
-        "owner": "JDKamalakar",
-        "repo": "DMS-Screenshot",
-        "rev": "f43d977501e8de42a21a554dc0cdb9d309d8897f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "JDKamalakar",
-        "ref": "Testing",
-        "repo": "DMS-Screenshot",
-        "type": "github"
-      }
-    },
     "dsearch": {
       "inputs": {
         "nixpkgs": [
@@ -1261,14 +1244,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1775692573,
-        "narHash": "sha256-/WKwRPC0laHv55CStz5HXXgTm0bEsiuFLUHP92KYeSg=",
-        "path": "/mnt/media/Programmation/C/omnisearch",
-        "type": "path"
+        "lastModified": 1775885017,
+        "narHash": "sha256-KYgoIClRFYJE7//xDoR8H9K3WEng5V6PZSFwsJVIGy4=",
+        "ref": "refs/heads/master",
+        "rev": "4368e163682e6ccb0b5b992cd31bd8feada8fd88",
+        "revCount": 117,
+        "type": "git",
+        "url": "https://git.bwaaa.monster/omnisearch"
       },
       "original": {
-        "path": "/mnt/media/Programmation/C/omnisearch",
-        "type": "path"
+        "type": "git",
+        "url": "https://git.bwaaa.monster/omnisearch"
       }
     },
     "quickshell": {
@@ -1317,7 +1303,6 @@
         "dgop": "dgop",
         "dms": "dms",
         "dms-plugin-registry": "dms-plugin-registry",
-        "dms-screenshot-src": "dms-screenshot-src",
         "dsearch": "dsearch",
         "fluxer-src": "fluxer-src",
         "gsr": "gsr",
