@@ -7,6 +7,14 @@
     (final: prev: {
       local-utils = pkgs.callPackage "${self}/pkgs/utils.nix" { };
 
+      # Overrides
+      omnisearch = inputs.omnisearch.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (finalAttrs: {
+        patches = [ "${self}/pkgs/Patches/ctp-mocha-latte-mauve.patch" ];
+      });
+      gradia = prev.gradia.overrideAttrs (finalAttrs: {
+        patches = [ "${self}/pkgs/Patches/0001-style-stdin-remove-extra-text-from-stdin.patch" ];
+      });
+
       fluxer = pkgs.callPackage "${self}/pkgs/fluxer" { inherit (inputs) fluxer-src; };
       shiru = pkgs.callPackage "${self}/pkgs/shiru" { };
       shijima-qt-bin = pkgs.callPackage "${self}/pkgs/shijima-qt-bin" { };

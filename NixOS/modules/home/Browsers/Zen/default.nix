@@ -135,13 +135,11 @@ in
           engines = {
             omnisearch = lib.mkIf osConfig.services.omnisearch.enable {
               name = "OmniSearch";
-              icon =
-                "${inputs.omnisearch}/static/favicon.ico";
+              icon = "${inputs.omnisearch}/static/favicon.ico";
               definedAliases = [ "@om" ];
-
               urls = [
                 {
-                  template = "http://localhost:8087/search?q={searchTerms}";
+                  template = "${osConfig.services.omnisearch.settings.server.domain}/search?q={searchTerms}";
                   params = [
                     {
                       name = "query";
@@ -164,7 +162,7 @@ in
           "font.name.serif.x-western" = "NotoSerif Nerd Font Propo";
           "font.name.sans-serif.x-western" = "NotoSans Nerd Font Propo";
           "font.name.monospace.x-western" = "JetBrainsMono Nerd Font Mono";
-          "browser.startup.homepage" = "http://localhost:8087";
+          "browser.startup.homepage" = osConfig.services.omnisearch.settings.server.domain;
           "browser.newtab.extensionControlled" = true;
           "browser.newtab.privateAllowed" = true;
 

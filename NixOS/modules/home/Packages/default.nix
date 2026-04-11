@@ -73,12 +73,9 @@
     audacity
     winboat
     inputs.gsr.packages.${pkgs.stdenv.hostPlatform.system}.gpu-screen-recorder-ui
-    
+    gradia
     shiru
     shijima-qt-bin
-    (pkgs.gradia.overrideAttrs (finalAttrs: {
-      patches = [ "${self}/pkgs/Patches/0001-style-stdin-remove-extra-text-from-stdin.patch" ];
-    }))
     (lib.mkIf config.programs.noctalia-shell.enable pkgs.wallpaperengine-gui)
 
     # Kde stuff

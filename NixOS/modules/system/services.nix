@@ -27,9 +27,7 @@
     
     omnisearch = {
       enable = true;
-      package = inputs.omnisearch.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (finalAttrs: {
-        patches = [ "${self}/pkgs/Patches/ctp-mocha-latte-mauve.patch" ];
-      });
+      package =  pkgs.omnisearch;
     };
 
     printing.enable = true;
