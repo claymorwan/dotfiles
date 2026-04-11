@@ -91,10 +91,7 @@ in
         easyEffects.enable = config.services.easyeffects.enable;
         discordVoice.enable = true;
         liveChartSchedule.enable = true;
-        dmsScreenshot = {
-          enable = true;
-          src = lib.mkForce inputs.dms-screenshot-src;
-        };
+        dmsScreenshot.enable = true;
         # KDE Connect
         phoneConnect = {
           enable = osConfig.programs.kdeconnect.enable;
