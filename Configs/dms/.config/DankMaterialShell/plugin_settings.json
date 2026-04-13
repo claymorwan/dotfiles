@@ -249,5 +249,16 @@
   },
   "liveChartSchedule": {
     "enabled": true
+  },
+  "clipboardPlus": {
+    "enabled": true,
+    "listenClipboardWhileOpen": true,
+    "tabOrder": "clipboard,search,category,pinned,todo",
+    "tabOrderEnabled": "clipboard,search,category,pinned,todo",
+    "maxPinnedImageMb": 8,
+    "fullscreenMode": true,
+    "enableFullTextDecode": false,
+    "useBuiltInDmsClipboard": true,
+    "hidePanelBackground": false
   }
 }

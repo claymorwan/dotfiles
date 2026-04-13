@@ -1,5 +1,9 @@
 { inputs, pkgs, config, self,... }:
 
+let
+  # Using `self` to point to a patch makes the package rebuild every time so gotta use this instead
+  patchDir = ../../../pkgs/Patches;
+in 
 {
   nixpkgs.overlays = [
     inputs.millennium.overlays.default
@@ -9,10 +13,10 @@
 
       # Overrides
       omnisearch = inputs.omnisearch.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (finalAttrs: {
-        patches = [ "${self}/pkgs/Patches/ctp-mocha-latte-mauve.patch" ];
+        patches = [ "${patchDir}/ctp-mocha-latte-mauve.patch" ];
       });
       gradia = prev.gradia.overrideAttrs (finalAttrs: {
-        patches = [ "${self}/pkgs/Patches/0001-style-stdin-remove-extra-text-from-stdin.patch" ];
+        patches = [ "${patchDir}/0001-style-stdin-remove-extra-text-from-stdin.patch" ];
       });
 
       fluxer = pkgs.callPackage "${self}/pkgs/fluxer" { inherit (inputs) fluxer-src; };

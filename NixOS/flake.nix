@@ -174,6 +174,11 @@
       url = "git+https://git.bwaaa.monster/beaker?shallow=0";
       flake = false;
     };
+    
+    clipboardplus-src = {
+      url = "github:Dadangdut33/dms-plugins";
+      flake = false;
+    };
     # ~/~ end
   };
 

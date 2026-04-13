@@ -16,5 +16,14 @@
     sqlitebrowser
     distrobox
     boxbuddy
+
+    godot-mono
   ];
+
+  home.file = {
+    ".local" = {
+      source = pkgs.godotPackages.export-templates-mono-bin;
+      recursive = true;
+    };
+  };
 }

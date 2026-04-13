@@ -796,6 +796,10 @@
         {
           "id": "developerUtilities",
           "enabled": true
+        },
+        {
+          "id": "clipboardPlus",
+          "enabled": true
         }
       ],
       "rightWidgets": [],
@@ -1452,8 +1456,8 @@
       "previewActive": false,
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "\n\nwataoshi tho is more likely, since like u said the manga and anime r more recents. if we could at least get reprints of the LN in europe in english that'd be good enough for me\ni do hope for BiY as well, story was so beautiful i want to physically own the manga eventually",
-      "updatedAt": 1775917586858,
+      "sourceContent": "o that's amazing, I'm french myself and I did noticed Claire François' is a very ",
+      "updatedAt": 1776001480409,
       "highlightedHtml": ""
     }
   },

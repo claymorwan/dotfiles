@@ -125,6 +125,22 @@
         "type": "github"
       }
     },
+    "clipboardplus-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1775928038,
+        "narHash": "sha256-8tjUOdk4WzluGS9GB/oZstrpM5WNdhu41TiTCwflrIw=",
+        "owner": "Dadangdut33",
+        "repo": "dms-plugins",
+        "rev": "846aff653e9492f2907790e1017f723206ea568b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Dadangdut33",
+        "repo": "dms-plugins",
+        "type": "github"
+      }
+    },
     "curl-src": {
       "flake": false,
       "locked": {
@@ -1299,6 +1315,7 @@
         "archix": "archix",
         "beaker-src": "beaker-src",
         "catppuccin": "catppuccin",
+        "clipboardplus-src": "clipboardplus-src",
         "devenvcp": "devenvcp",
         "dgop": "dgop",
         "dms": "dms",
