@@ -253,8 +253,8 @@
   "clipboardPlus": {
     "enabled": true,
     "listenClipboardWhileOpen": true,
-    "tabOrder": "clipboard,search,category,pinned,todo",
-    "tabOrderEnabled": "clipboard,search,category,pinned,todo",
+    "tabOrder": "clipboard,search,pinned,category,todo",
+    "tabOrderEnabled": "clipboard,search,pinned,category,todo",
     "maxPinnedImageMb": 8,
     "fullscreenMode": true,
     "enableFullTextDecode": false,

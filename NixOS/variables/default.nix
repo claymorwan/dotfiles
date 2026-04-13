@@ -26,7 +26,13 @@ in
     ctp_flavor = mkStrVar "mocha";
     ctp_accent = mkStrVar "mauve";
     font_family = mkStrVar "JetBrainsMono Nerd Font";
-    mouse_cursor = mkStrVar "akita-neru";
+    mouseCursor = {
+      name = mkStrVar "akita-neru";
+      size = lib.mkOption {
+        type = lib.types.int;
+        default = 24;
+      };
+    };
 
     # Apps
     launch_prefix = mkStrVar "app2unit --";

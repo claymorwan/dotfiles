@@ -24,7 +24,7 @@ in
       shijima-qt-bin = pkgs.callPackage "${self}/pkgs/shijima-qt-bin" { };
       wallpaperengine-gui = pkgs.callPackage "${self}/pkgs/wallpaperengine-gui" { };
 
-      mouse-cursor = pkgs.callPackage "${self}/pkgs/cursors" { cursorName = config.globVars.mouse_cursor; };
+      mouse-cursor = pkgs.callPackage "${self}/pkgs/cursors" { cursorName = config.globVars.mouseCursor.name; };
       neuwaita = pkgs.callPackage "${self}/pkgs/neuwaita" { };
 
       # Fonts

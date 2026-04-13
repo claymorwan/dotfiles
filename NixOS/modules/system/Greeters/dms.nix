@@ -24,6 +24,7 @@
     etc."greetd/niri_overrides.kdl".text = ''
       input {
         keyboard {
+          numlock
           xkb {
             layout "fr,us"
             options "grp:win_space_toggle"
@@ -32,8 +33,8 @@
       }
 
       cursor {
-        xcursor-theme "${config.globVars.mouse_cursor}"
-        xcursor-size 24
+        xcursor-theme "${config.globVars.mouseCursor.name}"
+        xcursor-size ${toString config.globVars.mouseCursor.size}
       }
     '';
   };

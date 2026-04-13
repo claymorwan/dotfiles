@@ -4,12 +4,12 @@
   home.pointerCursor = {
     enable = true;
 
-    name = osConfig.globVars.mouse_cursor; #"${mouse_cursor}";
+    name = osConfig.globVars.mouseCursor.name;
     package = pkgs.mouse-cursor;
 
     hyprcursor = {
       enable = true;
-      size = 24;
+      size = osConfig.globVars.mouseCursor.size;
     };
 
     gtk.enable = true;
