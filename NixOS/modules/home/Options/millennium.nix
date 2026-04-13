@@ -28,7 +28,7 @@ let
 in
 {
   options.programs.steam.millennium = {
-    enable = mkEnableOption "devenvcp";
+    enable = mkEnableOption "millennium";
 
     activeTheme = mkOption {
       type = with types; nullOr str;

@@ -18,18 +18,9 @@ let
   ];
 in 
 {
-  home.packages = with pkgs; [
-    krita
-  ];
+  programs.krita = {
+    enable = true;
 
-  xdg.dataFile = {
-    "krita/pykrita" = {
-      enable = true;
-      recursive = true;
-      source = pkgs.symlinkJoin {
-        name = "pykrita";
-        paths = krita-plugins;
-      };
-    };
+    plugins = krita-plugins;
   };
 }

@@ -1394,41 +1394,6 @@
           "y": 0.7222222222222222
         }
       }
-    },
-    {
-      "id": "dw_1772552868020_jib0v5vgr",
-      "widgetType": "dankAudioVisualizer",
-      "name": "Dank Audio Visualizer",
-      "enabled": true,
-      "config": {
-        "displayPreferences": [
-          {
-            "name": "DP-1",
-            "model": "PLX2283H"
-          }
-        ],
-        "visualizationMode": "wave",
-        "useCustomColors": false,
-        "fadeWhenIdle": true,
-        "bloomIntensity": 50,
-        "innerDiameter": 50,
-        "rotationSpeed": 25,
-        "sensitivity": 50
-      },
-      "positions": {
-        "DP-1": {
-          "width": 240,
-          "height": 240,
-          "x": 840,
-          "y": 440
-        },
-        "eDP-1": {
-          "width": 200,
-          "height": 200,
-          "x": 860,
-          "y": 440
-        }
-      }
     }
   ],
   "desktopWidgetGroups": [

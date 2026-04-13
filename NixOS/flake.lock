@@ -125,22 +125,6 @@
         "type": "github"
       }
     },
-    "clipboardplus-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1775928038,
-        "narHash": "sha256-8tjUOdk4WzluGS9GB/oZstrpM5WNdhu41TiTCwflrIw=",
-        "owner": "Dadangdut33",
-        "repo": "dms-plugins",
-        "rev": "846aff653e9492f2907790e1017f723206ea568b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Dadangdut33",
-        "repo": "dms-plugins",
-        "type": "github"
-      }
-    },
     "curl-src": {
       "flake": false,
       "locked": {
@@ -229,11 +213,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1775870605,
-        "narHash": "sha256-t6D7Embz0dwSh6RArB0PPGYSFY/956g2tww6T0bCtxc=",
+        "lastModified": 1776044985,
+        "narHash": "sha256-+cHw4VDiFuI79vSf77meeE0N+ArrUw67oujr1vQQI08=",
         "owner": "AvengeMedia",
         "repo": "dms-plugin-registry",
-        "rev": "b6496f41b9b1a3e67d239026bae17026f2064e06",
+        "rev": "5b5cdc8eb9ceca67166be2be38170edeb9857dfb",
         "type": "github"
       },
       "original": {
@@ -1315,7 +1299,6 @@
         "archix": "archix",
         "beaker-src": "beaker-src",
         "catppuccin": "catppuccin",
-        "clipboardplus-src": "clipboardplus-src",
         "devenvcp": "devenvcp",
         "dgop": "dgop",
         "dms": "dms",

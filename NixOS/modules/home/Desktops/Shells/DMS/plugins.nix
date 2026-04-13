@@ -92,10 +92,7 @@ in
         discordVoice.enable = true;
         liveChartSchedule.enable = true;
         dmsScreenshot.enable = true;
-        clipboardPlus = {
-          enable = true;
-          src = lib.mkForce "${inputs.clipboardplus-src}/ClipboardPlus";
-        };
+        clipboardPlus.enable = true;
         # KDE Connect
         phoneConnect = {
           enable = osConfig.programs.kdeconnect.enable;
