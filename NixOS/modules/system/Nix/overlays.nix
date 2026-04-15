@@ -15,8 +15,8 @@ in
       omnisearch = inputs.omnisearch.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (finalAttrs: {
         patches = [ "${patchDir}/ctp-mocha-latte-mauve.patch" ];
       });
-      gradia = prev.gradia.overrideAttrs (finalAttrs: {
-        patches = [ "${patchDir}/0001-style-stdin-remove-extra-text-from-stdin.patch" ];
+      gradia = prev.gradia.overrideAttrs (finalAttrs: prevAttrs: {
+        patches = prevAttrs.patches ++ [ "${patchDir}/0001-style-stdin-remove-extra-text-from-stdin.patch" ];
       });
 
       fluxer = pkgs.callPackage "${self}/pkgs/fluxer" { inherit (inputs) fluxer-src; };

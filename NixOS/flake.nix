@@ -117,8 +117,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    niri-wip = {
-      url = "github:niri-wm/niri/wip/branch";
+    niri-pkg = {
+      url = "github:niri-wm/niri";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
