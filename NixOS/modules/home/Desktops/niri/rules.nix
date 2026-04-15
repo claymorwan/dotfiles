@@ -215,6 +215,15 @@ in
       window-rule {
         open-maximized-to-edges false
       }
+
+      layer-rule {
+        match namespace="^dms-clipboardPlus-panel"
+
+        background-effect {
+            blur true
+            xray false
+        }
+      }
     '';
     
     "nsticky/config.toml".source = (pkgs.formats.toml { }).generate "sticky-config" {

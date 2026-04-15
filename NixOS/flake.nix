@@ -117,6 +117,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    niri-wip = {
+      url = "github:niri-wm/niri/wip/branch";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     nsticky = {
       url = "github:lonerOrz/nsticky";
       inputs.nixpkgs.follows = "nixpkgs";

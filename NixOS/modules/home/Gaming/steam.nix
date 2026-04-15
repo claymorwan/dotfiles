@@ -179,6 +179,12 @@ in
 
         # Wallpaper engine
         "431960" = winGameOptions;
+
+        # Crypt of the NecroDancer
+        "247080" = gameOptions;
+
+        # Rift of the NecroDancer
+        "3029150" = winGameOptions;
       };
     };
   };

@@ -69,6 +69,7 @@
     proton-vpn
     intiface-central
     polychromatic
+    qbittorrent
     fragments
     audacity
     winboat

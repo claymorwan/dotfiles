@@ -18,7 +18,7 @@
 
     niri = {
       enable = config.globVars.enableNiri;
-      package = pkgs.niri;
+      package = inputs.niri-wip.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
 
     gnupg.agent = {

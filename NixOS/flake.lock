@@ -869,6 +869,28 @@
         "type": "github"
       }
     },
+    "niri-wip": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1776147365,
+        "narHash": "sha256-vf9vQwyaABwKq/ml4NhvW0LXRp1JCqFM3qksblXiNTE=",
+        "owner": "niri-wm",
+        "repo": "niri",
+        "rev": "36627de0af457e4d90eb93c00b0f042bb4a206bb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "niri-wm",
+        "ref": "wip/branch",
+        "repo": "niri",
+        "type": "github"
+      }
+    },
     "nix-flatpak": {
       "locked": {
         "lastModified": 1767983141,
@@ -1244,11 +1266,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1775885017,
-        "narHash": "sha256-KYgoIClRFYJE7//xDoR8H9K3WEng5V6PZSFwsJVIGy4=",
+        "lastModified": 1776134667,
+        "narHash": "sha256-UKJfv7uG2BsQqRdTNVl4BkKjQs2tA17lmi4/uW/Yzk0=",
         "ref": "refs/heads/master",
-        "rev": "4368e163682e6ccb0b5b992cd31bd8feada8fd88",
-        "revCount": 117,
+        "rev": "3a99a37b0c1232cf7310f5a5314466839001fec9",
+        "revCount": 118,
         "type": "git",
         "url": "https://git.bwaaa.monster/omnisearch"
       },
@@ -1312,6 +1334,7 @@
         "millennium-material-theme-src": "millennium-material-theme-src",
         "namida": "namida",
         "niri": "niri",
+        "niri-wip": "niri-wip",
         "nix-flatpak": "nix-flatpak",
         "nix-monitor": "nix-monitor",
         "nix-output-monitor": "nix-output-monitor",
@@ -1327,6 +1350,27 @@
         "steam-config-nix": "steam-config-nix",
         "xdp-termfilepickers": "xdp-termfilepickers",
         "zen-browser": "zen-browser"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "niri-wip",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1757989933,
+        "narHash": "sha256-9cpKYWWPCFhgwQTww8S94rTXgg8Q8ydFv9fXM6I8xQM=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "8249aa3442fb9b45e615a35f39eca2fe5510d7c3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     },
     "scopebuddy": {
