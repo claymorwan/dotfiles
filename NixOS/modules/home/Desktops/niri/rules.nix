@@ -23,6 +23,7 @@ in
           top-right = radius;
         };
         clip-to-geometry = true;
+        draw-border-with-background = false;
       }
       # Float
       {
@@ -214,6 +215,11 @@ in
     "niri/dms/rules.kdl".text = ''
       window-rule {
         open-maximized-to-edges false
+        opacity 0.95
+        background-effect {
+          blur true
+          xray false
+        }
       }
 
       layer-rule {

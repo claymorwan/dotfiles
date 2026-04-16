@@ -58,15 +58,6 @@
     "enabled": true,
     "searchEngines": [
       {
-        "id": "nixpkgs",
-        "name": "Nixpkgs",
-        "icon": "unicode:",
-        "url": "https://search.nixos.org/packages?channel=unstable&query=%s",
-        "keywords": [
-          "nix"
-        ]
-      },
-      {
         "id": "flathub",
         "name": "Flathub",
         "icon": "unicode:",
@@ -85,12 +76,12 @@
         ]
       },
       {
-        "id": "hm-options",
-        "name": "Home manager options",
+        "id": "mynixos",
+        "name": "MyNixOs",
         "icon": "unicode:",
-        "url": "https://home-manager-options.extranix.com/?query=%s&release=master",
+        "url": "https://mynixos.com/search?q=%s",
         "keywords": [
-          "hm"
+          "nix"
         ]
       }
     ],

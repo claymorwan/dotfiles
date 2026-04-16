@@ -33,9 +33,6 @@ in
       python3
       python3Packages.browser-cookie3
       qt6.qt5compat
-      # (python3.withPackages (ps: with ps; [
-      #   browser-cookie3
-      # ]))
     ]) else [])
   ;
 
