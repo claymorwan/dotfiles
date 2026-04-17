@@ -36,6 +36,7 @@
       filesToInclude = [         # Files under `$XDG_CONFIG_HOME/niri/dms` to be included into the new config
         "outputs"
         "rules"
+        "tests"
       ];
     };
   };

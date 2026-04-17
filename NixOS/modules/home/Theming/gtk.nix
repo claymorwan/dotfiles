@@ -24,8 +24,8 @@
 
     gtk4 = {
       theme = {
-        name = "Adwaita";
-        package = pkgs.gnome-themes-extra;
+        name = "adw-gtk3-dark";
+        package = pkgs.adw-gtk3; # pkgs.gnome-themes-extra;
       };
 
       extraCss = ''

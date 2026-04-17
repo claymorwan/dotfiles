@@ -230,6 +230,14 @@ in
             xray false
         }
       }
+
+      layer-rule {
+        match namespace="^dms:"
+
+        background-effect {
+          xray false
+        }
+      }
     '';
     
     "nsticky/config.toml".source = (pkgs.formats.toml { }).generate "sticky-config" {
