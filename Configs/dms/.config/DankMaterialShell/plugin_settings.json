@@ -18,7 +18,7 @@
   "emojiLauncher": {
     "enabled": true,
     "trigger": ";",
-    "recentEmojis": "😭,🥀"
+    "recentEmojis": "❤️‍🩹,😭,🥀"
   },
   "linuxWallpaperEngine": {
     "enabled": true,
@@ -76,12 +76,22 @@
         ]
       },
       {
-        "id": "mynixos",
-        "name": "MyNixOs",
+        "id": "nixpkgs",
+        "name": "nixpkgs",
         "icon": "unicode:",
-        "url": "https://mynixos.com/search?q=%s",
+        "url": "https://search.nixos.org/packages?channel=unstable&include_modular_service_options=1&include_nixos_options=1&query=%s",
         "keywords": [
-          "nix"
+          "nix",
+          "nixpkgs"
+        ]
+      },
+      {
+        "id": "hm-opt",
+        "name": "Home Manager options",
+        "icon": "unicode:",
+        "url": "https://home-manager-options.extranix.com/?query=%s&release=master",
+        "keywords": [
+          "hm"
         ]
       }
     ],
@@ -205,7 +215,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "26041582c2de34790387375d559c95980bee54898b150a106ae289"
+    "musixmatchToken": "260420a336f42f042033c010a80576864c92ad14630eaf24cdf632"
   },
   "dankAudioVisualizer": {
     "enabled": true

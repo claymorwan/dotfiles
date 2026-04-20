@@ -4,7 +4,7 @@
       # dragon-drop
       {
         on = [ "<C-n>" ];
-        run = ''shell 'dragon-drop -x -i -T "$1"' --confirm'';
+        run = "shell -- dragon-drop -x -i -T %h";
       }
 
       # chmod

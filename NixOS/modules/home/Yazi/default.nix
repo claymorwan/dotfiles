@@ -8,8 +8,8 @@ let
     domain = "codeberg.org";
     owner = "claymorwan";
     repo = "yazi-plugins";
-    rev = "49b134d972ace3a3144e34465b7e153412116255";
-    hash = "sha256-6Rb9IIiCl3NuO91jsWqZcAKMzP0Qo+fNq3WuglHejnk=";
+    rev = "1a7a20aca94d03db769794ca141dab19f6dcb237";
+    hash = "sha256-HCYhuAMhvmv4hkX0loLJLhC0/Z5XGn2HIJbx2whxJYc=";
   };
 in
 {

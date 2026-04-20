@@ -1,15 +1,5 @@
-{
-  pkgs,
-  lib,
-  host,
-  config,
-  osConfig,
-  ...
-}:
+{ pkgs, lib, config, ... }:
 
-let
-  fetch_cmd = "clear; fastfetch;";
-in
 {
   programs.zsh = {
     enable = true;
@@ -69,20 +59,12 @@ in
 
     shellAliases = {
       rl = "source ~/.config/zsh/.zshrc";
-      nv = "nvim";
-      sv = "sudo nvim";
-      cls = "clear";
-      fetch = "${fetch_cmd}";
-
-      nrl = "nh os switch --hostname ${host}";
-      nupd = "nh os switch --update --hostname ${host}; ${osConfig.globVars.flake_dir}/dev-shells/update.sh";
-      # nreload = "sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#${host} --log-format bar-with-logs";
-      # nupd = "sudo nixos-rebuild switch --recreate-lock-file --flake ~/.dotfiles/nixos#${host} --log-format bar-with-logs";
+      py = "python3"
     };
 
     initContent = ''
       if [[ "$YAZI_SHELL_SKIP_CMD" != true ]]; then
-        ${fetch_cmd}
+        ${config.home.shellAliases.fetch}
       fi
     '';
   };

@@ -212,13 +212,24 @@ in
   };
 
   xdg.configFile = {
-    "niri/dms/rules.kdl".text = ''
+    "niri/dms/rules.kdl".text = let
+      opacity = "0.95";
+    in  ''
       window-rule {
         open-maximized-to-edges false
-        opacity 0.95
+        opacity ${opacity}
         background-effect {
           blur true
           xray false
+        }
+
+        popups {
+          geometry-corner-radius 15
+          opacity ${opacity}
+          background-effect {
+            blur true
+            xray false
+          }
         }
       }
 

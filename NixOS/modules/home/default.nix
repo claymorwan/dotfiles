@@ -15,6 +15,7 @@
     ./Options
     ./Packages
     ./services.nix
+    ./Shells
     ./starship.nix
     ./spotify.nix
     ./ssh.nix
@@ -22,6 +23,5 @@
     # ./uwsm.nix
     ./XDG
     ./Yazi
-    ./Zsh
   ];
 }

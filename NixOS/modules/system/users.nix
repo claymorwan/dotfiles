@@ -46,7 +46,7 @@
           "wheel"
           "i2c"
         ];
-        shell = pkgs.zsh;
+        shell = pkgs.fish;
         ignoreShellProgramCheck = true;
       };
     };

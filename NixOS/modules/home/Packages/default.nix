@@ -40,6 +40,7 @@
     ookla-speedtest
     # speedtest-cli
     dragon-drop
+    fzf
     scrcpy
     yt-dlp-light
     lolcat
