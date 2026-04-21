@@ -4,10 +4,8 @@
   imports = [ inputs.xdp-termfilepickers.nixosModules.default ];
 
   services.xdg-desktop-portal-termfilepickers = {
-    # enable = true;
-    package = inputs.xdp-termfilepickers.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
-      replaceYazi = false;
-    };
+    enable = true;
+    package = inputs.xdp-termfilepickers.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
     desktopEnvironments = [
       "common"

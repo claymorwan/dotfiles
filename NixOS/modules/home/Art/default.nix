@@ -9,7 +9,7 @@
     blockbench
     blender
     kdePackages.kdenlive
-    davinci-resolve
+    # davinci-resolve
     # openshot-qt
   ];
 }

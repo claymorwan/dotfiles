@@ -74,7 +74,7 @@
     uv
     lua
     go
-    dotnetCorePackages.dotnet_10.sdk
+    # dotnetCorePackages.dotnet_10.sdk
 
     vlc
     mpv

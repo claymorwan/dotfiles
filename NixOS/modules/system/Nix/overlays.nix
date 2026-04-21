@@ -19,6 +19,17 @@ in
         patches = prevAttrs.patches ++ [ "${patchDir}/0001-style-stdin-remove-extra-text-from-stdin.patch" ];
       });
 
+      lutris-unwrapped = prev.lutris-unwrapped.overrideAttrs (finalAttrs: {
+        version = "0.5.22-0-unstable-2026-04-20";
+
+        src = pkgs.fetchFromGitHub {
+          owner = "lutris";
+          repo = "lutris";
+          rev = "5aa61a238ef99108f524563ff451fa2c3095094d";
+          hash = "sha256-0tOKh7vGKwpLTx8q07ITyOHuwJveKxLC2VIfNOWOITE=";
+        };
+      });
+
       fluxer = pkgs.callPackage "${self}/pkgs/fluxer" { inherit (inputs) fluxer-src; };
       shiru = pkgs.callPackage "${self}/pkgs/shiru" { };
       shijima-qt-bin = pkgs.callPackage "${self}/pkgs/shijima-qt-bin" { };

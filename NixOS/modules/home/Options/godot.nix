@@ -23,6 +23,10 @@ in
   };
 
   config = mkIf cfg.enable {
+    home.packages = mkIf (cfg.package != null) [
+      cfg.package
+    ];
+
     xdg.dataFile."godot/export_templates" = mkIf (cfg.exportTemplates != [ ]) {
       recursive = true;
       source = pkgs.symlinkJoin {

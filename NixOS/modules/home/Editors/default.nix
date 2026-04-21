@@ -4,7 +4,7 @@
   imports = [
     # ./helix.nix
     ./jetbrains.nix
-    ./neovim.nix
+    #./neovim.nix
     ./zed.nix
   ];
 
@@ -21,6 +21,7 @@
   };
 
   home.packages = with pkgs; [
+    neovim
     sqlitebrowser
     distrobox
     boxbuddy
