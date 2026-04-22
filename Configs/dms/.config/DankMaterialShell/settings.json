@@ -275,6 +275,11 @@
       "pattern": "fluxer_(app|desktop)",
       "replacement": "fluxer",
       "type": "regex"
+    },
+    {
+      "pattern": "org.godotengine.Editor",
+      "replacement": "godot",
+      "type": "exact"
     }
   ],
   "centeringMode": "index",
@@ -1427,7 +1432,7 @@
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
       "sourceContent": "o that's amazing, I'm french myself and I did noticed Claire François' is a very ",
-      "updatedAt": 1776736376527,
+      "updatedAt": 1776865188995,
       "highlightedHtml": ""
     }
   },

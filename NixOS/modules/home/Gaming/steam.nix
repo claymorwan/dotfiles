@@ -183,8 +183,11 @@ in
         # Crypt of the NecroDancer
         "247080" = gameOptions;
 
-        # Rift of the NecroDancer
+        # Rift of the NecroDancer Demo
         "3029150" = winGameOptions;
+
+        # MOTORSLICE Demo
+        "3910170" = winGameOptions;
       };
     };
   };

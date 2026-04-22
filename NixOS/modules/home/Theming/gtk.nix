@@ -25,7 +25,7 @@
     gtk4 = {
       theme = {
         name = "adw-gtk3-dark";
-        package = pkgs.adw-gtk3; # pkgs.gnome-themes-extra;
+        package = pkgs.gnome-themes-extra;
       };
 
       extraCss = ''

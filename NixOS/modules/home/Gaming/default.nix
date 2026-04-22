@@ -13,13 +13,6 @@
     limo
     gale
     olympus
-    # (heroic.override {
-    #   extraPkgs = pkgs: [
-    #     pkgs.proton-ge-bin
-    #   ];
-    # })
-    faugus-launcher
-    # wine-discord-ipc-bridge
 
     (osu-lazer-bin.override {
       nativeWayland = true;
