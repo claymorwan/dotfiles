@@ -78,6 +78,7 @@
     gradia
     shiru
     shijima-qt-bin
+    nicotine-plus
     (lib.mkIf config.programs.noctalia-shell.enable pkgs.wallpaperengine-gui)
 
     # Kde stuff
