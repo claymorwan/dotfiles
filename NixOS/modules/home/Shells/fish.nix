@@ -23,14 +23,16 @@
 
     shellAbbrs = {
       yt-mp3 = "yt-dlp -t mp3 --embed-metadata --embed-thumbnail";
-
-      gpr = "git pull --rebase";
     };
 
     plugins = [
+      # {
+      #   name = "git";
+      #   src = pkgs.fishPlugins.git-abbr.src;
+      # }
       {
         name = "git";
-        src = pkgs.fishPlugins.git-abbr.src;
+        src = pkgs.git-fish.src;
       }
       {
         name = "eza";

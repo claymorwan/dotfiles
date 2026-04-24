@@ -34,6 +34,7 @@ in
       shiru = pkgs.callPackage "${self}/pkgs/shiru" { };
       shijima-qt-bin = pkgs.callPackage "${self}/pkgs/shijima-qt-bin" { };
       wallpaperengine-gui = pkgs.callPackage "${self}/pkgs/wallpaperengine-gui" { };
+      git-fish = pkgs.callPackage "${self}/pkgs/git-fish" { };
 
       mouse-cursor = pkgs.callPackage "${self}/pkgs/cursors" { cursorName = config.globVars.mouseCursor.name; };
       neuwaita = pkgs.callPackage "${self}/pkgs/neuwaita" { };

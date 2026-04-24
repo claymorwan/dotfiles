@@ -570,14 +570,8 @@
         run = "cd ~/.local";
         desc = "Goto ~/.local";
       }
-      {
-        on = [
-          "g"
-          "d"
-        ];
-        run = "cd ~/Downloads";
-        desc = "Goto ~/Downloads";
-      }
+      { on = [ "g" "d" ]; run = "cd ~/Downloads"; desc = "Goto ~/Downloads"; }
+      { on = [ "g" "m" ]; run = "cd ~/Music"; desc = "Goto ~/Music"; }
       {
         on = [
           "g"

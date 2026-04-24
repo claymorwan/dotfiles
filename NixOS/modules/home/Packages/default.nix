@@ -79,6 +79,7 @@
     shiru
     shijima-qt-bin
     nicotine-plus
+    lollypop
     (lib.mkIf config.programs.noctalia-shell.enable pkgs.wallpaperengine-gui)
 
     # Kde stuff

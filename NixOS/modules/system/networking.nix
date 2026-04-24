@@ -1,6 +1,10 @@
 { pkgs, host, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    firewalld-gui
+  ];
+
   networking = {
     hostName = "${host}";
     networkmanager.enable = true;
