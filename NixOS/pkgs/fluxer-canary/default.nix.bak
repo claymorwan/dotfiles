@@ -1,0 +1,90 @@
+with import <nixpkgs> { };
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "fluxer-canary-bin";
+  version = "0.0.41";
+
+  src = fetchzip {
+    url = "https://api.canary.fluxer.app/dl/desktop/canary/linux/x64/${finalAttrs.version}/tar_gz";
+    hash = "sha256-KaY+YWHJBBZgxc3XJWQcwXNVeQQW1GhLu6R/jID+GrY=";
+    extension = "tar.gz";
+  };
+
+  nativeBuildInputs = [
+    autoPatchelfHook
+    copyDesktopItems
+  ];
+
+  buildInputs = [
+    glib
+    nspr
+    nss
+    dbus.lib
+    at-spi2-atk
+    cups.lib
+    cairo
+    gtk3
+    pango
+    libX11
+    libXcomposite
+    libXdamage
+    libXext
+    libXtst
+    libXt
+    libXfixes
+    libXrandr
+    libgbm
+    expat
+    libxcb
+    libxkbcommon
+    eudev
+    alsa-lib
+    pipewire
+    libpulseaudio
+    mesa
+  ];
+
+  desktopItems = makeDesktopItem {
+    name = "fluxer-canary";
+    desktopName = "Fluxer Canary";
+    comment = "Chat, voice, and video with your communities on Fluxer.";
+    exec = "fluxer-canary %U";
+    icon = "fluxer";
+    terminal = false;
+    type = "Application";
+    startupNotify = true;
+    startupWMClass = "fluxer-canary";
+    mimeTypes = [
+      "x-scheme-handler/fluxer-canary"
+    ];
+
+    categories = [
+      "Network"
+      "InstantMessaging"
+      "Chat"
+    ];
+  };
+
+  installPhase = ''
+    runHook preInstall
+    
+    mkdir -p $out/{bin,share,opt}
+
+    cp -r * $out/opt
+    ln -s $out/opt/fluxer_desktop_canary $out/bin/fluxer-canary
+
+    for size in 16 24 32 48 64 128 256 512; do
+      mkdir -p $out/share/icons/hicolor/"$size"x"$size"/apps
+      ln -s $out/opt/resources/icons/"$size"x"$size".png $out/share/icons/hicolor/"$size"x"$size"/apps/fluxer.png
+    done
+
+    runHook postInstall
+  '';
+
+  meta = {
+    description = "Free and open source instant messaging and VoIP platform.";
+    homepage = "https://canary.fluxer.app/";
+    license = lib.licenses.agpl3Only;
+    maintainers = with lib.maintainers; [ claymorwan ];
+  };
+})

@@ -30,3 +30,4 @@ index 4ee9ac8..1c959e4 100644
  	});
  
  	console.log('Main process build complete.');
+

@@ -31,7 +31,6 @@ in
 
   ++ (if dms-plugins.liveChartSchedule.enable then (with pkgs; [
       python3
-      python3Packages.browser-cookie3
       qt6.qt5compat
     ]) else [])
   ;
@@ -87,7 +86,40 @@ in
         usbManager.enable = true;
         easyEffects.enable = config.services.easyeffects.enable;
         discordVoice.enable = true;
-        liveChartSchedule.enable = true;
+        liveChartSchedule = { 
+          enable = true;
+          src = let
+            liveChartSchedule = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.liveChartSchedule;
+          in
+          lib.mkForce (pkgs.symlinkJoin {
+            inherit (liveChartSchedule) pname version;
+
+            paths = [ liveChartSchedule ];
+            nativeBuildInputs = with pkgs; [
+              makeWrapper
+              python3.pkgs.wrapPython
+            ];
+
+            pythonInputs = with pkgs.python3.pkgs; [
+              beautifulsoup4
+              browser-cookie3
+            ];
+
+            postBuild = ''
+              mv $out/fetch_livechart.py $out/fetch_livechart.py.bak
+              install -m755 $out/fetch_livechart.py.bak $out/fetch_livechart.py
+              rm $out/fetch_livechart.py.bak
+
+              buildPythonPath "$pythonInputs"
+
+              wrapProgram $out/fetch_livechart.py \
+                --prefix PATH : $program_PATH \
+                --set PYTHONHOME ${pkgs.python3} \
+                --set PYTHONPATH $program_PYTHONPATH
+            '';
+          });
+        };
+
         dmsScreenshot.enable = true;
         clipboardPlus.enable = true;
         # KDE Connect

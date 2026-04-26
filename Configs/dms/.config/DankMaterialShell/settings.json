@@ -11,7 +11,7 @@
   "matugenScheme": "scheme-tonal-spot",
   "matugenContrast": 0,
   "runUserMatugenTemplates": false,
-  "matugenTargetMonitor": "",
+  "matugenTargetMonitor": "DP-1",
   "popupTransparency": 0.95,
   "dockTransparency": 0.95,
   "widgetBackgroundColor": "sch",
@@ -665,7 +665,7 @@
       "squareCorners": true,
       "noBackground": false,
       "gothCornersEnabled": true,
-      "gothCornerRadiusOverride": true,
+      "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 23,
       "borderEnabled": true,
       "borderColor": "primary",
@@ -684,7 +684,8 @@
       "widgetOutlineThickness": 2,
       "maximizeDetection": false,
       "scrollYBehavior": "workspace",
-      "scrollEnabled": true
+      "scrollEnabled": true,
+      "widgetPadding": 8
     },
     {
       "id": "bar1768214186318",
@@ -749,7 +750,7 @@
       "squareCorners": true,
       "noBackground": false,
       "gothCornersEnabled": true,
-      "gothCornerRadiusOverride": true,
+      "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 23,
       "borderEnabled": true,
       "borderColor": "primary",
@@ -774,7 +775,8 @@
       "shadowIntensity": 0,
       "shadowOpacity": 60,
       "shadowColorMode": "text",
-      "shadowCustomColor": "#000000"
+      "shadowCustomColor": "#000000",
+      "widgetPadding": 8
     },
     {
       "id": "bar1775588628193",
@@ -814,7 +816,7 @@
       ],
       "rightWidgets": [],
       "spacing": 4,
-      "innerPadding": 15,
+      "innerPadding": 4,
       "bottomGap": 0,
       "transparency": 0,
       "widgetTransparency": 1,
@@ -1431,8 +1433,8 @@
       "previewActive": false,
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "o that's amazing, I'm french myself and I did noticed Claire François' is a very ",
-      "updatedAt": 1776940454093,
+      "sourceContent": "ok so it broke with appimage so i tried to remove `~/.config/fluxer-canary` which fixed it\n\nalso i got my friend reporting we can heard our voices through the stream for some reasons, even if the audio",
+      "updatedAt": 1777171330873,
       "highlightedHtml": ""
     }
   },

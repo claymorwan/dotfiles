@@ -18,13 +18,13 @@
   "emojiLauncher": {
     "enabled": true,
     "trigger": ";",
-    "recentEmojis": "😭,❤️‍🩹,🥀"
+    "recentEmojis": "😭,🧅,❤️‍🩹,🥀"
   },
   "linuxWallpaperEngine": {
     "enabled": true,
     "monitorScenes": {
-      "HDMI-A-1": "2497747884",
-      "eDP-1": "3658437802"
+      "eDP-1": "3658437802",
+      "HDMI-A-1": "3371368351"
     },
     "sceneSettings": {
       "2670952853": {
@@ -180,6 +180,7 @@
     "enabled": true,
     "terminal": "ghostty",
     "history": [
+      "lolll",
       "ppri",
       "luttr",
       "winn",
@@ -215,7 +216,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "26042308eaba0d91cb74eab2424f4b5bb3e1baeb992b7bf8855c10"
+    "musixmatchToken": "260426663b594d1a618f7ec00532593373d0f2bff91a313670ae55"
   },
   "dankAudioVisualizer": {
     "enabled": true
@@ -256,10 +257,13 @@
     "listenClipboardWhileOpen": true,
     "tabOrder": "clipboard,search,pinned,category,todo",
     "tabOrderEnabled": "clipboard,search,pinned,category,todo",
-    "maxPinnedImageMb": 8,
+    "maxPinnedImageMb": 5,
     "fullscreenMode": true,
     "enableFullTextDecode": false,
     "useBuiltInDmsClipboard": true,
-    "hidePanelBackground": false
+    "hidePanelBackground": true,
+    "useDmsClipboard": true,
+    "panelMarginLeft": 0,
+    "maxPinnedTextMb": 1
   }
 }

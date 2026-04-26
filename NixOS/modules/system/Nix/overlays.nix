@@ -30,7 +30,9 @@ in
         };
       });
 
+      # Local packages
       fluxer = pkgs.callPackage "${self}/pkgs/fluxer" { inherit (inputs) fluxer-src; };
+      fluxer-canary = pkgs.callPackage "${self}/pkgs/fluxer-canary" { };
       shiru = pkgs.callPackage "${self}/pkgs/shiru" { };
       shijima-qt-bin = pkgs.callPackage "${self}/pkgs/shijima-qt-bin" { };
       wallpaperengine-gui = pkgs.callPackage "${self}/pkgs/wallpaperengine-gui" { };
@@ -39,10 +41,10 @@ in
       mouse-cursor = pkgs.callPackage "${self}/pkgs/cursors" { cursorName = config.globVars.mouseCursor.name; };
       neuwaita = pkgs.callPackage "${self}/pkgs/neuwaita" { };
 
-      # Fonts
+      ## Fonts
       no-continue = pkgs.callPackage "${self}/pkgs/Fonts/no-continue.nix" { };
 
-      # Millennium
+      ## Millennium
       millennium-material-theme = pkgs.callPackage "${self}/pkgs/Millennium/themes/millennium-material-theme" { inherit (inputs) millennium-material-theme-src; };
       extendium = pkgs.callPackage "${self}/pkgs/Millennium/plugins/extendium" { };
     })
