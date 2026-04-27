@@ -32,7 +32,7 @@ in
 
       # Local packages
       fluxer = pkgs.callPackage "${self}/pkgs/fluxer" { inherit (inputs) fluxer-src; };
-      fluxer-canary = pkgs.callPackage "${self}/pkgs/fluxer-canary" { };
+      fluxer-canary = pkgs.callPackage "${self}/pkgs/fluxer-canary" { inherit (inputs) fluxer-canary-src; };
       shiru = pkgs.callPackage "${self}/pkgs/shiru" { };
       shijima-qt-bin = pkgs.callPackage "${self}/pkgs/shijima-qt-bin" { };
       wallpaperengine-gui = pkgs.callPackage "${self}/pkgs/wallpaperengine-gui" { };

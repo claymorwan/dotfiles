@@ -89,7 +89,12 @@ in
         liveChartSchedule = { 
           enable = true;
           src = let
-            liveChartSchedule = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.liveChartSchedule;
+            liveChartSchedule = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.liveChartSchedule.overrideAttrs (finalAttrs: {
+              prePatch = ''
+                substituteInPlace ./LiveChartWidget.qml \
+                  --replace-fail "python3" "bash"
+              '';
+            });
           in
           lib.mkForce (pkgs.symlinkJoin {
             inherit (liveChartSchedule) pname version;

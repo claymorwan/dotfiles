@@ -13,5 +13,10 @@ beaker-src = {
   url = "git+https://git.bwaaa.monster/beaker?shallow=0";
   flake = false;
 };
+
+fluxer-canary-src = {
+  url = "https://api.canary.fluxer.app/dl/desktop/canary/linux/x64/latest/appimage";
+  flake = false;
+};
 ```
 

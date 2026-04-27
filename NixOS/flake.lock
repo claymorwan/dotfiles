@@ -442,6 +442,18 @@
         "type": "indirect"
       }
     },
+    "fluxer-canary-src": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-WrxweJjATjeHii1uLgBTOMLPbFVs909HJUckrZrrEsM=",
+        "type": "file",
+        "url": "https://api.canary.fluxer.app/dl/desktop/canary/linux/x64/latest/appimage"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://api.canary.fluxer.app/dl/desktop/canary/linux/x64/latest/appimage"
+      }
+    },
     "fluxer-src": {
       "flake": false,
       "locked": {
@@ -1342,6 +1354,7 @@
         "dms": "dms",
         "dms-plugin-registry": "dms-plugin-registry",
         "dsearch": "dsearch",
+        "fluxer-canary-src": "fluxer-canary-src",
         "fluxer-src": "fluxer-src",
         "gsr": "gsr",
         "home-manager": "home-manager",
