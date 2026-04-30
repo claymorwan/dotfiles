@@ -11,16 +11,16 @@
     #   url = "/mnt/media/Programmation/Nix/home-manager";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
-    #
-    # home-manager = {
-    #   url = "github:claymorwan/home-manager/kvantum-packages";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:claymorwan/home-manager/nushell-fixes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    # home-manager = {
+    #   url = "github:nix-community/home-manager";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    # };
     
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     
@@ -107,6 +107,11 @@
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    nu-scripts = {
+      url = "github:nushell/nu_scripts";
+      flake = false;
     };
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]

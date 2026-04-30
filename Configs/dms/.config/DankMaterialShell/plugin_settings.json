@@ -18,7 +18,7 @@
   "emojiLauncher": {
     "enabled": true,
     "trigger": ";",
-    "recentEmojis": "😭,⤪,🧅,❤️‍🩹,🥀"
+    "recentEmojis": "🇫🇷,😭,⤪,🧅,❤️‍🩹,🥀"
   },
   "linuxWallpaperEngine": {
     "enabled": true,
@@ -217,7 +217,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "26042758597fecb0ad1fb207c9c2b68d50f44b3a081cbd0ebada22"
+    "musixmatchToken": "2604292bfaff9e2cc7ebd9da595751934c3f1b1913d731a97bda2c"
   },
   "dankAudioVisualizer": {
     "enabled": true

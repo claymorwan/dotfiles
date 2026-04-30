@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, host, ... }:
 
 let
   cfg = config.globVars;
@@ -50,5 +50,19 @@ in
     # enable
     enableNiri = mkBoolVar true;
     enableHyprland = mkBoolVar false;
+
+    shellAliases = lib.mkOption {
+      type = with lib.types; attrsOf str;
+      default = {
+        nv = "nvim";
+        sv = "sudo nvim";
+        cls = "clear";
+        fetch = "clear; fastfetch";
+        py = "python3";
+
+        nrl = "nh os switch --hostname ${host}";
+        nupd = "nh os switch --update --hostname ${host}; ${cfg.flake_dir}/dev-shells/update.sh";
+      };
+    };
   };
 }

@@ -72,4 +72,9 @@ nixvim = {
   url = "github:nix-community/nixvim";
   inputs.nixpkgs.follows = "nixpkgs";
 };
+
+nu-scripts = {
+  url = "github:nushell/nu_scripts";
+  flake = false;
+};
 ```

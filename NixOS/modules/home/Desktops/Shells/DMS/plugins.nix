@@ -90,10 +90,12 @@ in
           enable = true;
           src = let
             liveChartSchedule = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.liveChartSchedule.overrideAttrs (finalAttrs: {
-              prePatch = ''
-                substituteInPlace ./LiveChartWidget.qml \
-                  --replace-fail "python3" "bash"
-              '';
+              src = pkgs.fetchFromGitHub {
+                owner = "claymorwan";
+                repo = "DMS-LiveChart.me";
+                rev = "1cf2843d98d3dc6ce412ff5cd014604155d5d66b";
+                hash = "sha256-9GqWN8+dsaoF5HKzhbXiB9AK6w8hbkeDko61Xc6diEE=";
+              };
             });
           in
           lib.mkForce (pkgs.symlinkJoin {
@@ -101,20 +103,15 @@ in
 
             paths = [ liveChartSchedule ];
             nativeBuildInputs = with pkgs; [
-              makeWrapper
-              python3.pkgs.wrapPython
+              python3Packages.wrapPython
             ];
 
-            pythonInputs = with pkgs.python3.pkgs; [
+            pythonInputs = with pkgs.python3Packages; [
               beautifulsoup4
               browser-cookie3
             ];
 
             postBuild = ''
-              mv $out/fetch_livechart.py $out/fetch_livechart.py.bak
-              install -m755 $out/fetch_livechart.py.bak $out/fetch_livechart.py
-              rm $out/fetch_livechart.py.bak
-
               buildPythonPath "$pythonInputs"
 
               wrapProgram $out/fetch_livechart.py \

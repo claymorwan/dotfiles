@@ -3,7 +3,8 @@
 {
   imports = [
     ./fish.nix
-    # ./zsh.nix
+    ./nushell.nix
+    ./zsh.nix
   ];
 
   home.shellAliases = {
@@ -11,6 +12,7 @@
     sv = "sudo nvim";
     cls = "clear";
     fetch = "clear; fastfetch";
+    py = "python3";
 
     nrl = "nh os switch --hostname ${host}";
     nupd = "nh os switch --update --hostname ${host}; ${osConfig.globVars.flake_dir}/dev-shells/update.sh";

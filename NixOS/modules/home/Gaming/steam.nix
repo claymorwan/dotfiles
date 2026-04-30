@@ -142,7 +142,10 @@ in
         # Awaria
         "3274300"= winGameOptions;
 
-        # White Knhcle Demo
+        # White Knuckle
+        "3195790" = winGameOptions;
+
+        # White Knuckle Demo
         "3218540" = winGameOptions;
 
         # Herringen Demo
@@ -188,6 +191,9 @@ in
 
         # MOTORSLICE Demo
         "3910170" = winGameOptions;
+
+        # Creature Kitchen Demo
+        "4116110" = winGameOptions;
       };
     };
   };

@@ -15,8 +15,8 @@ in
       omnisearch = inputs.omnisearch.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (finalAttrs: {
         patches = [ "${patchDir}/ctp-mocha-latte-mauve.patch" ];
       });
-      gradia = prev.gradia.overrideAttrs (finalAttrs: prevAttrs: {
-        patches = prevAttrs.patches ++ [ "${patchDir}/0001-style-stdin-remove-extra-text-from-stdin.patch" ];
+      gradia = prev.gradia.overrideAttrs (finalAttrs: {
+        patches = [ "${patchDir}/0001-style-stdin-remove-extra-text-from-stdin.patch" ];
       });
 
       lutris-unwrapped = prev.lutris-unwrapped.overrideAttrs (finalAttrs: {
@@ -35,6 +35,7 @@ in
       fluxer-canary = pkgs.callPackage "${self}/pkgs/fluxer-canary" { inherit (inputs) fluxer-canary-src; };
       shiru = pkgs.callPackage "${self}/pkgs/shiru" { };
       shijima-qt-bin = pkgs.callPackage "${self}/pkgs/shijima-qt-bin" { };
+      wl_shimeji = pkgs.callPackage "${self}/pkgs/wl_shimeji" { };
       wallpaperengine-gui = pkgs.callPackage "${self}/pkgs/wallpaperengine-gui" { };
       git-fish = pkgs.callPackage "${self}/pkgs/git-fish" { };
 

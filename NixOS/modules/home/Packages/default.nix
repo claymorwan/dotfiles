@@ -52,6 +52,7 @@
     linux-wallpaperengine
     wev
     devenv
+    wl_shimeji
     inputs.lncur.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # GUI

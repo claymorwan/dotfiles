@@ -11,12 +11,12 @@
       # Applications
       "Mod+Return" = {
         action.spawn = osConfig.globVars.terminal;
-        hotkey-overlay.title = "osConfig.globVars.terminal";
+        hotkey-overlay.title = "Terminal";
       };
 
       "Mod+W" = {
         action.spawn = osConfig.globVars.browser;
-        hotkey-overlay.title = "osConfig.globVars.browser";
+        hotkey-overlay.title = "Browser";
       };
 
       "Mod+D" = {
