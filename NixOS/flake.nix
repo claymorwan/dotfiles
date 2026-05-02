@@ -12,15 +12,15 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
     
+    # home-manager = {
+    #   url = "github:claymorwan/home-manager/nushell-fixes";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+    
     home-manager = {
-      url = "github:claymorwan/home-manager/nushell-fixes";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
-    # home-manager = {
-    #   url = "github:nix-community/home-manager";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    # };
     
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     

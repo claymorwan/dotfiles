@@ -194,6 +194,9 @@ in
 
         # Creature Kitchen Demo
         "4116110" = winGameOptions;
+
+        # Among Us
+        "945360" = winGameOptions;
       };
     };
   };

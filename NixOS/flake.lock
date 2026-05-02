@@ -445,7 +445,7 @@
     "fluxer-canary-src": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-BISMyktPWE4t+m8N2lcsl2s9JECUFpmr561wEWEkJwY=",
+        "narHash": "sha256-4+FCQvaI5GVsSqAnYj7icN+62p/0kF3/1VWjEACJxUM=",
         "type": "file",
         "url": "https://api.canary.fluxer.app/dl/desktop/canary/linux/x64/latest/appimage"
       },
@@ -560,16 +560,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1777524004,
-        "narHash": "sha256-RjUnvPe3u3KlO5Ik13AqbWUUyWjh+qCTlcsAvGtNDEM=",
-        "owner": "claymorwan",
+        "lastModified": 1777518431,
+        "narHash": "sha256-SwgiG2T5pbyo33Vz7/vUCAhEMgwCK8Pa2nDSx5a6/WE=",
+        "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "312c7abdabc93ffb5530dfd8360986daecf37668",
+        "rev": "2e54a938cdd4c8e414b2518edc3d82308027c670",
         "type": "github"
       },
       "original": {
-        "owner": "claymorwan",
-        "ref": "nushell-fixes",
+        "owner": "nix-community",
         "repo": "home-manager",
         "type": "github"
       }

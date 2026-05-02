@@ -15,7 +15,9 @@
     
     shellAliases = {
       rl = "source ~/.config/fish/config.fish";
-    };
+    }
+    // osConfig.globVars.shellAliases
+    ;
 
     functions = {
       clsc = "clamdscan --fdpass \"$argv\"";

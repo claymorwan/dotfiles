@@ -4,11 +4,12 @@
   fluxer-canary-src,
   appimageTools,
   makeDesktopItem,
+  local-utils,
 }:
 
 let
   pname = "fluxer-canary-appimage";
-  version = "0.0.44";
+  version = "canary";
   
   src = fluxer-canary-src;
 

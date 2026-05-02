@@ -61,7 +61,7 @@ in
         py = "python3";
 
         nrl = "nh os switch --hostname ${host}";
-        nupd = "nh os switch --update --hostname ${host}; ${cfg.flake_dir}/dev-shells/update.sh";
+        nupd = "nh os switch --update --hostname ${host}; ${cfg.flake_dir}/dev-shells/update.nu";
       };
     };
   };

@@ -59,7 +59,9 @@
 
     shellAliases = {
       rl = "source ~/.config/zsh/.zshrc";
-    };
+    }
+    // osConfig.globVars.shellAliases
+    ;
 
     initContent = ''
       if [[ "$YAZI_SHELL_SKIP_CMD" != true ]]; then

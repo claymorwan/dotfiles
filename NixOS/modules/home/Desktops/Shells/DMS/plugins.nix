@@ -40,19 +40,20 @@ in
       enable = true;
 
       rebuildCommand = [
-        "zsh"
+        "sh"
         "-c"
         "sudo ${pkgs.nh}/bin/nh os switch ${osConfig.globVars.flake_dir} --hostname ${host} --no-nom --bypass-root-check"
       ];
 
       # ts pisses me off im using a script now
       generationsCommand = [
-        "sh"
-        "${osConfig.globVars.flake_dir}/modules/home/DMS/nix-monitor-gen.sh"
+        (lib.getExe pkgs.nushell)
+        "-c"
+        "nh os info | lines | drop nth 0 1 | length"
       ];
 
       gcCommand = [
-        "zsh"
+        "sh"
         "-c"
         "sudo ${pkgs.nh}/bin/nh clean all ${osConfig.programs.nh.clean.extraArgs}"
       ];
