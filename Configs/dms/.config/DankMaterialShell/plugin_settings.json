@@ -180,8 +180,8 @@
     "enabled": true,
     "terminal": "ghostty",
     "history": [
-      "lurt",
       "lolll",
+      "lurt",
       "ppri",
       "luttr",
       "winn",
@@ -217,7 +217,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "2604292bfaff9e2cc7ebd9da595751934c3f1b1913d731a97bda2c"
+    "musixmatchToken": "2605033a5f2580b61ec479123ee1fc9266c2cd434a3d0ad130b0aa"
   },
   "dankAudioVisualizer": {
     "enabled": true

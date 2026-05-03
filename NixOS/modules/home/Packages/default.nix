@@ -1,5 +1,6 @@
 {
   inputs,
+  lib,
   pkgs,
   self,
   config,
@@ -65,22 +66,7 @@
     gnome-font-viewer
     gnome-disk-utility
     kooha
-    # (bottles)
-    (pkgs.bottles.override {
-      # Intercept buildFHSEnv to modify target packages
-      buildFHSEnv = args: pkgs.buildFHSEnv (args // {
-        multiPkgs = envPkgs:
-          let
-            # Fetch original package list
-            originalPkgs = args.multiPkgs envPkgs;
-
-            # Disable tests for openldap
-            customLdap = envPkgs.openldap.overrideAttrs (_: { doCheck = false; });
-          in
-          # Replace broken openldap with the custom one
-          builtins.filter (p: (p.pname or "") != "openldap") originalPkgs ++ [ customLdap ];
-      });
-    })
+    bottles
     obsidian
     qalculate-gtk
     proton-vpn

@@ -10,7 +10,7 @@ steam-config-nix = {
 };
 
 millennium = {
-  url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+  url = "github:SteamClientHomebrew/Millennium?tag=latest&dir=packages/nix";
   inputs.nixpkgs.follows = "nixpkgs";
 };
 

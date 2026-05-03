@@ -15,14 +15,17 @@
 
       substituters = [
         "https://cache.garnix.io"
+        "https://nixpkgs-python.cachix.org"
       ];
       
       trusted-substituters = [
         "https://cache.garnix.io"
+        "https://nixpkgs-python.cachix.org"
       ];
 
       trusted-public-keys = [
         "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+        "nixpkgs-python.cachix.org-1:hxjI7pFxTyuTHn2NkvWCrAUcNZLNS3ZAvfYNuYifcEU="
       ];
 
       auto-optimise-store = true;

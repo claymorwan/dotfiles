@@ -30,6 +30,10 @@ in
         };
       });
 
+      openldap = prev.openldap.overrideAttrs {
+        doCheck = !prev.stdenv.hostPlatform.isi686;
+      };
+
       # Local packages
       fluxer = pkgs.callPackage "${self}/pkgs/fluxer" { inherit (inputs) fluxer-src; };
       fluxer-canary = pkgs.callPackage "${self}/pkgs/fluxer-canary" { inherit (inputs) fluxer-canary-src; };

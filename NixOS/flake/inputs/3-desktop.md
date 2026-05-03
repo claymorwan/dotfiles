@@ -52,4 +52,9 @@ dms-plugin-registry = {
 };
 
 nix-monitor.url = "github:antonjah/nix-monitor";
+
+dms-plugin-dankPinentry = {
+  url = "github:pacman99/DankPinentry";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
 ```

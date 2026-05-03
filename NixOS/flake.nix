@@ -46,7 +46,7 @@
     };
     
     millennium = {
-      url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+      url = "github:SteamClientHomebrew/Millennium?tag=latest&dir=packages/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
@@ -168,6 +168,11 @@
     };
     
     nix-monitor.url = "github:antonjah/nix-monitor";
+    
+    dms-plugin-dankPinentry = {
+      url = "github:pacman99/DankPinentry";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # ~/~ end
     # ~/~ begin <<flake/inputs/4-package-src.md#flake-inputs>>[0]
     fluxer-src = {

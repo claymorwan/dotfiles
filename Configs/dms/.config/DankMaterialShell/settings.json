@@ -431,6 +431,7 @@
   "matugenTemplatePywalfox": false,
   "matugenTemplateZenBrowser": false,
   "matugenTemplateVesktop": false,
+  "matugenTemplateVencord": true,
   "matugenTemplateEquibop": false,
   "matugenTemplateGhostty": false,
   "matugenTemplateKitty": false,
@@ -557,6 +558,9 @@
   "updaterUseCustomCommand": true,
   "updaterCustomCommand": "ecdysys -u",
   "updaterTerminalAdditionalParams": "",
+  "updaterIntervalSeconds": 1800,
+  "updaterIncludeFlatpak": true,
+  "updaterAllowAUR": true,
   "displayNameMode": "system",
   "screenPreferences": {
     "dankBar": [
@@ -1441,7 +1445,7 @@
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
       "sourceContent": "28\n1 74 75 19 18 55 43 12 45 76 34 67 16 38 59 50 61 54 48 25 36 42",
-      "updatedAt": 1777677858072,
+      "updatedAt": 1777779899374,
       "highlightedHtml": ""
     }
   },

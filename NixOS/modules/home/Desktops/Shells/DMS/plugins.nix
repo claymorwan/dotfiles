@@ -87,6 +87,20 @@ in
         usbManager.enable = true;
         easyEffects.enable = config.services.easyeffects.enable;
         discordVoice.enable = true;
+        dmsScreenshot.enable = true;
+        clipboardPlus.enable = true;
+        
+        dankPinentry = {
+          # enable = true;
+          src = lib.mkForce inputs.dms-plugin-dankPinentry.packages.${pkgs.stdenv.hostPlatform.system}.dms-plugin;
+        };
+        
+        # KDE Connect
+        phoneConnect = {
+          enable = osConfig.programs.kdeconnect.enable;
+          src = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.dankKDEConnect;
+        };
+        
         liveChartSchedule = { 
           enable = true;
           src = let
@@ -121,14 +135,6 @@ in
                 --set PYTHONPATH $program_PYTHONPATH
             '';
           });
-        };
-
-        dmsScreenshot.enable = true;
-        clipboardPlus.enable = true;
-        # KDE Connect
-        phoneConnect = {
-          enable = osConfig.programs.kdeconnect.enable;
-          src = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.dankKDEConnect;
         };
       };
     };
