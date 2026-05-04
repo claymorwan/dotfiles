@@ -20,15 +20,15 @@ Using this to separate my inputs into multiple files, as flake.nix files aren't 
       # system = "x86_64-linux";
 
       mkNixosConfig = host: let
-        config = {
-          specialArgs = {
-            inherit inputs;
-            inherit username;
-            inherit host;
-            inherit self;
-            # inherit system;
-          };
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit host;
+          inherit self;
+          # inherit system;
+        };
 
+        config = {
           modules = [
             ./hosts/${host}
             ./variables
@@ -36,9 +36,9 @@ Using this to separate my inputs into multiple files, as flake.nix files aren't 
         };
       in 
         if (host == "android") then
-          nix-on-droid.lib.nixOnDroidConfiguration (config // { pkgs = import nixpkgs { system = "aarch64-linux"; }; })
+          nix-on-droid.lib.nixOnDroidConfiguration (config // { pkgs = import nixpkgs { system = "aarch64-linux"; extraSpecialArgs = specialArgs; }; })
         else
-          nixpkgs.lib.nixosSystem config;
+          nixpkgs.lib.nixosSystem (config // { specialArgs = specialArgs; });
     in
     {
       templates = import ./dev-shells;
