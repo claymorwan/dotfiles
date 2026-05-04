@@ -19,7 +19,13 @@ in
 
     settings = {
       show_banner = false;
-      hooks.display_output = "table --expand --icons";
+      hooks = {
+        pre_prompt = {
+          condition = "not ($env.PWD | path exists)";
+          code = "cd $'($env.PWD)/..'";
+        };
+        display_output = "table --expand --icons";
+      };
     };
 
     environmentVariables = config.home.sessionVariables;
