@@ -17,6 +17,11 @@ home-manager = {
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
+nix-on-droid = {
+  url = "github:nix-community/nix-on-droid";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+
 nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
 nix-output-monitor = {

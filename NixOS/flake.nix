@@ -22,6 +22,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    nix-on-droid = {
+      url = "github:nix-community/nix-on-droid";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     
     nix-output-monitor = {
@@ -202,15 +207,15 @@
       self,
       nixpkgs,
       home-manager,
+      nix-on-droid,
       ...
     }:
     let
       username = "claymorwan";
       # system = "x86_64-linux";
 
-      mkNixosConfig =
-        host:
-        nixpkgs.lib.nixosSystem {
+      mkNixosConfig = host: let
+        config = {
           specialArgs = {
             inherit inputs;
             inherit username;
@@ -224,6 +229,11 @@
             ./variables
           ];
         };
+      in 
+        if (host == "android") then
+          nix-on-droid.lib.nixOnDroidConfiguration config
+        else
+          nixpkgs.lib.nixosSystem config;
     in
     {
       templates = import ./dev-shells;
@@ -232,6 +242,7 @@
         nixos = mkNixosConfig "nixos";
         nixos-laptop = mkNixosConfig "nixos-laptop";
       };
+      nixOnDroidConfigurations.android = mkNixosConfig "android";
     };
 }
 # ~/~ end

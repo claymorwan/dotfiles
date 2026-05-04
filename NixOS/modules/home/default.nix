@@ -1,27 +1,31 @@
+{ host, ... }:
+
 {
   imports = [
-    ./Art
-    ./Browsers
     ./catppuccin.nix
-    ./Desktops
-    # ./discord.nix
-    ./Editors
     ./env.nix
     ./fetchs
-    ./Gaming
     ./git.nix
-    ./ghostty.nix
-    ./obs-studio.nix
     ./Options
     ./Packages
     ./services.nix
     ./Shells
     ./starship.nix
-    ./spotify.nix
     ./ssh.nix
-    ./Theming
     # ./uwsm.nix
-    ./XDG
     ./Yazi
-  ];
+  ]
+  ++ (if (host != "android") then [
+      ./Art
+      ./Browsers
+      ./Desktops
+      ./Editors
+      ./Gaming
+      ./ghostty.nix
+      ./obs-studio.nix
+      ./spotify.nix
+      ./Theming
+      ./XDG
+    ] else [])
+  ;
 }

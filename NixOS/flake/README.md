@@ -12,15 +12,15 @@ Using this to separate my inputs into multiple files, as flake.nix files aren't 
       self,
       nixpkgs,
       home-manager,
+      nix-on-droid,
       ...
     }:
     let
       username = "claymorwan";
       # system = "x86_64-linux";
 
-      mkNixosConfig =
-        host:
-        nixpkgs.lib.nixosSystem {
+      mkNixosConfig = host: let
+        config = {
           specialArgs = {
             inherit inputs;
             inherit username;
@@ -34,6 +34,11 @@ Using this to separate my inputs into multiple files, as flake.nix files aren't 
             ./variables
           ];
         };
+      in 
+        if (host == "android") then
+          nix-on-droid.lib.nixOnDroidConfiguration config
+        else
+          nixpkgs.lib.nixosSystem config;
     in
     {
       templates = import ./dev-shells;
@@ -42,6 +47,7 @@ Using this to separate my inputs into multiple files, as flake.nix files aren't 
         nixos = mkNixosConfig "nixos";
         nixos-laptop = mkNixosConfig "nixos-laptop";
       };
+      nixOnDroidConfigurations.android = mkNixosConfig "android";
     };
 }
 ```
