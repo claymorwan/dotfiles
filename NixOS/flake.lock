@@ -194,11 +194,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777840511,
-        "narHash": "sha256-sxmMNmsUIgAijm3p0LKBhlu6R+MUBJRA5cqG5epSG5M=",
+        "lastModified": 1777916686,
+        "narHash": "sha256-Kt1X99BFDfkeFb2tiMsNtC3AqlMaOkSL7N0eWwJ9yXc=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "082de6f1f0e058e679c188c2b31a4ffbd97d37aa",
+        "rev": "1e67927f8ada2ef42e514973e4a843f84b2719d1",
         "type": "github"
       },
       "original": {
@@ -235,11 +235,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777686876,
-        "narHash": "sha256-Jcxsfaebu+RzO4igAi1xDg3+XVJgm2+msUF0P8PlmQg=",
+        "lastModified": 1777859900,
+        "narHash": "sha256-gmPzuRBSGDBt7nP94cfbfFzVV4PRsLGL8aqzm7KbDeU=",
         "owner": "AvengeMedia",
         "repo": "dms-plugin-registry",
-        "rev": "b7856c76e5d8733a4c6ffe2e453e2bcb1ab3b351",
+        "rev": "8d86ba82dc6e730b4a40be20ef986299fbd4cc87",
         "type": "github"
       },
       "original": {
@@ -484,7 +484,7 @@
     "fluxer-canary-src": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-WMOabsKTXkGn4SUDoM5+y5VAp0nW+uhm5e8XPcy5bGk=",
+        "narHash": "sha256-cf4Wvi+zcizs+lmuikpqCxNPzY3eEFbMvBYV9S7ywTQ=",
         "type": "file",
         "url": "https://api.canary.fluxer.app/dl/desktop/canary/linux/x64/latest/appimage"
       },
