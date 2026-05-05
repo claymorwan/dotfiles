@@ -31,8 +31,8 @@ in
     environmentVariables = config.home.sessionVariables;
 
     extraConfig = ''
-      overlay use ${inputs.nu-scripts}/aliases/git/git-aliases.nu
-      overlay use ${inputs.nu-scripts}/custom-completions/git/git-completions.nu
+      source ${inputs.nu-scripts}/custom-completions/git/git-completions.nu
+      source ${inputs.nu-scripts}/aliases/git/git-aliases.nu
 
       # ls -s ${inputs.nu-scripts}/custom-completions
       #   | each {|n|
