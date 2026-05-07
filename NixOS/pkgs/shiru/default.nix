@@ -17,13 +17,13 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "shiru";
-  version = "6.5.1";
+  version = "6.6.0";
 
   src = fetchFromGitHub {
     owner = "RockinChaos";
     repo = "shiru";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-dqXpX4pLF3EjoTrjofOPTO39EGU/2JyfS3+slwCR4xU=";
+    hash = "sha256-LccI6Z4hhkmzWHt0CKum9giJMVGm3qM0ZKNvChUCYQ4=";
   };
 
   patches = [
@@ -47,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
       cd electron
     '';
     fetcherVersion = 2;
-    hash = "sha256-jeiGiBcfY3eY/TlalzwSm8FFLjgn9bqSWY6L3J48NfY=";
+    hash = "sha256-lozE33xdDN26SNHX0+ts9snsGsz7c7n7YL21Qfx3Dtc=";
   };
 
   buildPhase = ''
@@ -99,6 +99,9 @@ stdenv.mkDerivation (finalAttrs: {
       mimeTypes = [ "x-scheme-handler/shiru" ];
     })
   ];
+
+  strictDeps = true;
+  __structuredAttrs = true;
 
   meta = {
     description = "Stream your personal media library in real-time";

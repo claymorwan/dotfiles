@@ -460,6 +460,7 @@
   "showDock": true,
   "dockAutoHide": false,
   "dockSmartAutoHide": true,
+  "dockHideOnFullscreen": true,
   "dockGroupByApp": true,
   "dockRestoreSpecialWorkspaceOnClick": false,
   "dockOpenOnOverview": true,
@@ -1425,7 +1426,7 @@
         "frameRadius": "7",
         "syncPositionAcrossScreens": true,
         "refreshButtonPosition": "disabled",
-        "clickAction": "",
+        "clickAction": "xdg-open $MEDIA_FRAME_IMAGE",
         "refreshAction": ""
       },
       "positions": {
@@ -1476,7 +1477,7 @@
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
       "sourceContent": "28\n1 74 75 19 18 55 43 12 45 76 34 67 16 38 59 50 61 54 48 25 36 42",
-      "updatedAt": 1777942446435,
+      "updatedAt": 1778115140447,
       "highlightedHtml": ""
     }
   },

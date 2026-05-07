@@ -2,6 +2,7 @@
 
 let
   dms-plugins = config.programs.dank-material-shell.plugins;
+  system = pkgs.stdenv.hostPlatform.system;
   inherit (lib) mkIf;
 in 
 {
@@ -32,6 +33,10 @@ in
   ++ (if dms-plugins.liveChartSchedule.enable then (with pkgs; [
       python3
       qt6.qt5compat
+    ]) else [])
+  ++ (if dms-plugins.mpvpaperWallpaper.enable then (with pkgs; [
+      mpvpaper
+      ffmpeg-headless
     ]) else [])
   ;
 
@@ -89,10 +94,11 @@ in
         discordVoice.enable = true;
         dmsScreenshot.enable = true;
         clipboardPlus.enable = true;
+        mpvpaperWallpaper.enable = true;
         
         dankPinentry = {
           # enable = true;
-          src = lib.mkForce inputs.dms-plugin-dankPinentry.packages.${pkgs.stdenv.hostPlatform.system}.dms-plugin;
+          src = lib.mkForce inputs.dms-plugin-dankPinentry.packages.${system}.dms-plugin;
         };
         
         # KDE Connect

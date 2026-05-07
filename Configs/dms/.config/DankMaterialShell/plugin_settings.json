@@ -18,7 +18,7 @@
   "emojiLauncher": {
     "enabled": true,
     "trigger": ";",
-    "recentEmojis": "😭,💥,🤤,🇫🇷,⤪,🧅,❤️‍🩹,🥀"
+    "recentEmojis": "🚨,😭,💥,🤤,🇫🇷,⤪,🧅,❤️‍🩹,🥀"
   },
   "linuxWallpaperEngine": {
     "enabled": true,
@@ -180,6 +180,8 @@
     "enabled": true,
     "terminal": "ghostty",
     "history": [
+      "ffmplay",
+      "meow",
       "lolll",
       "lurt",
       "ppri",
@@ -217,7 +219,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "2605034ecaaab5d1510e508e34264050d8f3073fcae4a5eaabecf7"
+    "musixmatchToken": "2605073758e86d8ff54342a0944a4eb669548a17f6b2cd2d1309f1"
   },
   "dankAudioVisualizer": {
     "enabled": true
@@ -266,5 +268,14 @@
     "useDmsClipboard": true,
     "panelMarginLeft": 0,
     "maxPinnedTextMb": 1
+  },
+  "mpvpaperWallpaper": {
+    "enabled": true,
+    "monitorPaths": {
+      "DP-1": "/home/claymorwan/Videos/Video_2026-05-06_16-28-47.mp4"
+    },
+    "noAudio": true,
+    "loopPlaylist": false,
+    "panscanEnabled": false
   }
 }

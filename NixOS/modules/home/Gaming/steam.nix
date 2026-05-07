@@ -191,6 +191,9 @@ in
 
         # MOTORSLICE Demo
         "3910170" = winGameOptions;
+        
+        # MOTORSLICE
+        "2830030" = winGameOptions;
 
         # Creature Kitchen Demo
         "4116110" = winGameOptions;

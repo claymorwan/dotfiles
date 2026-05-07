@@ -41,7 +41,7 @@ in
             app-id = "lutris";
             title = "^Log for.*";
           }
-
+      
           # Dialogs
           {
             title = "(Select|Open)( a)? (File|Folder)(s)?|(Operation|Upload)( Progress)?|.* Properties|Export Image as PNG"
@@ -58,18 +58,11 @@ in
       }
 
       # Limo
-      # {
-      #   matches = [{
-      #     app-id = "limo";
-      #     is-floating = true;
-      #   }];
-      #   tiled-state = true;
-      # }
-      # {
-      #   matches = [{ app-id = "limo"; }];
-      #   excludes = [{ title = ".* - Limo$"; }];
-      #   open-floating = true;
-      # }
+      {
+        matches = [{ app-id = "limo"; }];
+        excludes = [{ title = "Limo"; }];
+        open-floating = true;
+      }
 
       {
         matches = [{
@@ -83,6 +76,13 @@ in
           y = 5;
           relative-to = "bottom-right";
         };
+      }
+
+      {
+        matches = [{ app-id = "com.danklinux.dms"; }];
+        excludes = [{ title = "Settings"; }];
+
+        open-floating = true;
       }
 
       # Float and resize
