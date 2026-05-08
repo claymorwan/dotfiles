@@ -18,13 +18,14 @@
   "emojiLauncher": {
     "enabled": true,
     "trigger": ";",
-    "recentEmojis": "🚨,😭,💥,🤤,🇫🇷,⤪,🧅,❤️‍🩹,🥀"
+    "recentEmojis": "😭,🚨,💥,🤤,🇫🇷,⤪,🧅,❤️‍🩹,🥀"
   },
   "linuxWallpaperEngine": {
     "enabled": true,
     "monitorScenes": {
       "eDP-1": "3658437802",
-      "HDMI-A-1": "3371368351"
+      "HDMI-A-1": "3371368351",
+      "DP-1": "3668742443"
     },
     "sceneSettings": {
       "2670952853": {

@@ -28,7 +28,7 @@ in
       };
     };
 
-    environmentVariables = config.home.sessionVariables;
+    environmentVariables = osConfig.environment.variables // config.home.sessionVariables;
 
     extraConfig = ''
       source ${inputs.nu-scripts}/custom-completions/git/git-completions.nu

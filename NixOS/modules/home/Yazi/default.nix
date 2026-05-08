@@ -8,8 +8,8 @@ let
     domain = "codeberg.org";
     owner = "claymorwan";
     repo = "yazi-plugins";
-    rev = "1a7a20aca94d03db769794ca141dab19f6dcb237";
-    hash = "sha256-HCYhuAMhvmv4hkX0loLJLhC0/Z5XGn2HIJbx2whxJYc=";
+    rev = "bdb3b97eeaf8e6a3e76c1dcdc0f4acee89070473";
+    hash = "sha256-uBfTjQ3LjLaPP9n7nffgULrPTJYzDz97mBrtsv16yYE=";
   };
 in
 {
@@ -19,7 +19,6 @@ in
 
   programs.yazi = {
     enable = true;
-    package = pkgs.yazi.override {_7zz = pkgs._7zz-rar; };
 
     enableZshIntegration = true;
     enableBashIntegration = true;

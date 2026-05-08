@@ -34,6 +34,8 @@ in
         doCheck = !prev.stdenv.hostPlatform.isi686;
       };
 
+      yazi = prev.yazi.override {_7zz = pkgs._7zz-rar; };
+
       # Local packages
       fluxer = pkgs.callPackage "${self}/pkgs/fluxer" { inherit (inputs) fluxer-src; };
       fluxer-canary = pkgs.callPackage "${self}/pkgs/fluxer-canary" { inherit (inputs) fluxer-canary-src; };
