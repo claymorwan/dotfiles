@@ -42,6 +42,9 @@
         "disableMouse": true,
         "fps": 30
       },
+      "3668742443": {
+        "screenshotDelay": 150
+      },
       "3670027144": {
         "screenshotDelay": 149
       }
@@ -84,15 +87,6 @@
         "keywords": [
           "nix",
           "nixpkgs"
-        ]
-      },
-      {
-        "id": "hm-opt",
-        "name": "Home Manager options",
-        "icon": "unicode:",
-        "url": "https://home-manager-options.extranix.com/?query=%s&release=master",
-        "keywords": [
-          "hm"
         ]
       }
     ],

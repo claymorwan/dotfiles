@@ -38,7 +38,7 @@ in
 
       # Local packages
       fluxer = pkgs.callPackage "${self}/pkgs/fluxer" { inherit (inputs) fluxer-src; };
-      fluxer-canary = pkgs.callPackage "${self}/pkgs/fluxer-canary" { inherit (inputs) fluxer-canary-src; };
+      fluxer-canary = pkgs.callPackage "${self}/pkgs/fluxer-canary" { };
       shiru = pkgs.callPackage "${self}/pkgs/shiru" { };
       shijima-qt-bin = pkgs.callPackage "${self}/pkgs/shijima-qt-bin" { };
       wl_shimeji = pkgs.callPackage "${self}/pkgs/wl_shimeji" { };

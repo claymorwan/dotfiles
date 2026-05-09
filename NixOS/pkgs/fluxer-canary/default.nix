@@ -1,17 +1,18 @@
 {
   lib,
   fetchurl,
-  fluxer-canary-src,
   appimageTools,
   makeDesktopItem,
-  local-utils,
 }:
 
 let
   pname = "fluxer-canary-appimage";
-  version = "canary";
+  version = "0.0.167";
   
-  src = fluxer-canary-src;
+  src = fetchurl {
+    url = "https://api.canary.fluxer.app/dl/desktop/canary/linux/x64/${version}/appimage";
+    hash = "sha256-BPjw3bFUBlhvZC1ocp/zb4sFTpgCxQwMwYZBA+bj6rM=";
+  };
 
   appimageContents = appimageTools.extractType2 {
     inherit pname version src;
