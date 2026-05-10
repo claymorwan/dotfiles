@@ -200,6 +200,9 @@ in
 
         # Among Us
         "945360" = winGameOptions;
+
+        # Shift At Midnight Multiplayer Demo
+        "4050060" = winGameOptions;
       };
     };
   };

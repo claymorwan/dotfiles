@@ -77,4 +77,9 @@ nu-scripts = {
   url = "github:nushell/nu_scripts";
   flake = false;
 };
+
+kopuz = {
+  url = "github:temidaradev/kopuz?tag=latest";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
 ```

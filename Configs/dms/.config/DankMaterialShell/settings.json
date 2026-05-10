@@ -607,7 +607,6 @@
       "borderEnabled": false
     }
   },
-  "connectedFrameModalDarkenBackup": null,
   "barConfigs": [
     {
       "id": "default",
@@ -739,6 +738,10 @@
         },
         {
           "id": "dankPomodoroTimer",
+          "enabled": true
+        },
+        {
+          "id": "timer",
           "enabled": true
         },
         {
@@ -1477,7 +1480,7 @@
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
       "sourceContent": "28\n1 74 75 19 18 55 43 12 45 76 34 67 16 38 59 50 61 54 48 25 36 42",
-      "updatedAt": 1778272473776,
+      "updatedAt": 1778421569569,
       "highlightedHtml": ""
     }
   },

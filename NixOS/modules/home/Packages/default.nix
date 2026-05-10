@@ -8,6 +8,9 @@
   ...
 }:
 
+let
+  system = pkgs.stdenv.hostPlatform.system;
+in 
 {
   imports = [
     ./flatpak.nix
@@ -76,12 +79,13 @@
     fragments
     audacity
     winboat
-    inputs.gsr.packages.${pkgs.stdenv.hostPlatform.system}.gpu-screen-recorder-ui
+    inputs.gsr.packages.${system}.gpu-screen-recorder-ui
     gradia
     shiru
     shijima-qt-bin
     nicotine-plus
     lollypop
+    inputs.kopuz.packages.${system}.default
     (lib.mkIf config.programs.noctalia-shell.enable pkgs.wallpaperengine-gui)
 
     # Kde stuff

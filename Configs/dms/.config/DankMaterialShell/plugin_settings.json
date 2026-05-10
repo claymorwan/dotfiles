@@ -25,7 +25,7 @@
     "monitorScenes": {
       "eDP-1": "3658437802",
       "HDMI-A-1": "3371368351",
-      "DP-1": "3668742443"
+      "DP-1": "3586787122"
     },
     "sceneSettings": {
       "2670952853": {
@@ -37,6 +37,9 @@
       "3371368351": {
         "fps": 30,
         "screenshotDelay": 150
+      },
+      "3586787122": {
+        "fps": 60
       },
       "3662903139": {
         "disableMouse": true,
@@ -214,7 +217,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "2605073758e86d8ff54342a0944a4eb669548a17f6b2cd2d1309f1"
+    "musixmatchToken": "260510a7349fd626124ac1528a07a9d39d9433550cf1f02eb8a900"
   },
   "dankAudioVisualizer": {
     "enabled": true
@@ -272,5 +275,11 @@
     "noAudio": true,
     "loopPlaylist": false,
     "panscanEnabled": false
+  },
+  "timer": {
+    "enabled": true
+  },
+  "wallpaperCarousel": {
+    "enabled": true
   }
 }
