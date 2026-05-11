@@ -9,7 +9,6 @@ in
   programs.niri.settings = {
     workspaces = {
       "chat" = {};
-      "shijima" = {};
     };
     window-rules = [
       {
@@ -162,12 +161,6 @@ in
           }
         ];
         open-on-workspace = "chat";
-        open-focused = true;
-        open-maximized = true;
-      }
-      {
-        matches = [{ app-id = "shijima-qt"; }];
-        open-on-workspace = "shijima";
         open-focused = true;
         open-maximized = true;
       }
