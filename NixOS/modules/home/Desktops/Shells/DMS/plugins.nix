@@ -112,21 +112,7 @@ in
         liveChartSchedule = { 
           enable = true;
           src = let
-            liveChartSchedule = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.liveChartSchedule.overrideAttrs (finalAttrs: {
-              src = pkgs.fetchFromGitHub {
-                owner = "JDKamalakar";
-                repo = "DMS-LiveChart.me";
-                rev = "e1ced23209bb929750f0a705c975c806cc576463";
-                hash = "sha256-Rx+L/2UsFQwBVWZQFcSrriJXRBoYQOgjMkk5KkAO4uE=";
-              };
-
-              #   pkgs.fetchFromGitHub {
-              #   owner = "claymorwan";
-              #   repo = "DMS-LiveChart.me";
-              #   rev = "1cf2843d98d3dc6ce412ff5cd014604155d5d66b";
-              #   hash = "sha256-9GqWN8+dsaoF5HKzhbXiB9AK6w8hbkeDko61Xc6diEE=";
-              # };
-            });
+            liveChartSchedule = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.liveChartSchedule;
           in
           lib.mkForce (pkgs.symlinkJoin {
             inherit (liveChartSchedule) pname version;

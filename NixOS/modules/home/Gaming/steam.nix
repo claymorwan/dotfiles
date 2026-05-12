@@ -90,6 +90,9 @@ in
           launchOptions.env.WINEDLLOVERRIDES = "winhttp=n,b";
         };
 
+        # Subnautica 2
+        "1962700" = winGameOptions;
+
         # Spelunky 2
         "418530" = winGameOptions;
 
