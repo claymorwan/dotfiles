@@ -203,7 +203,7 @@ in
             "advanced-tab-groups"
             "context-menu-icons"
             "floating-statusbar"
-            "Neo-Zen"
+            # "Neo-Zen"
             ## Deta Loading Bar
             "c9ee0d97-d2d6-40fd-8f85-549fe000b868"
 
@@ -219,7 +219,7 @@ in
             ## Trackpad Animation
             "8039de3b-72e1-41ea-83b3-5077cf0f98d1"
             ## Better Find Bar
-            # "a6335949-4465-4b71-926c-4a52d34bc9c0"
+            "a6335949-4465-4b71-926c-4a52d34bc9c0"
             ## SuperPins
             "ad97bb70-0066-4e42-9b5f-173a5e42c6fc"
             ## Better Unloaded Tabs

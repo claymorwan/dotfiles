@@ -367,6 +367,8 @@
   "monoFontFamily": "JetBrainsMono Nerd Font Mono",
   "fontWeight": 400,
   "fontScale": 1,
+  "textRenderType": 1,
+  "textRenderQuality": 0,
   "notepadUseMonospace": true,
   "notepadFontFamily": "",
   "notepadFontSize": 14,
@@ -1479,8 +1481,8 @@
       "previewActive": false,
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "28\n1 74 75 19 18 55 43 12 45 76 34 67 16 38 59 50 61 54 48 25 36 42",
-      "updatedAt": 1778522772695,
+      "sourceContent": "evaluation warning: The xorg package set has been deprecated, 'xorg.libX11' has been renamed to 'libx11'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXcomposite' has been renamed to 'libxcomposite'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXdamage' has been renamed to 'libxdamage'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXext' has been renamed to 'libxext'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXfixes' has been renamed to 'libxfixes'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXrandr' has been renamed to 'libxrandr'",
+      "updatedAt": 1778604790098,
       "highlightedHtml": ""
     }
   },

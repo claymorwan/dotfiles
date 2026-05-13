@@ -18,7 +18,7 @@
   "emojiLauncher": {
     "enabled": true,
     "trigger": ";",
-    "recentEmojis": "😭,🚨,💥,🤤,🇫🇷,⤪,🧅,❤️‍🩹,🥀"
+    "recentEmojis": "😭,✂️,🚨,💥,🤤,🇫🇷,⤪,🧅,❤️‍🩹,🥀"
   },
   "linuxWallpaperEngine": {
     "enabled": true,
@@ -217,7 +217,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "260511beae7c7ff44acd353a777a61be4aba066eaea977bcc11855"
+    "musixmatchToken": "2605123dffb82177c07e35ffc138e81614ece5b520a77c42b39e27"
   },
   "dankAudioVisualizer": {
     "enabled": true
@@ -248,7 +248,8 @@
     "currentInputIndex": -1
   },
   "discordVoice": {
-    "enabled": true
+    "enabled": true,
+    "accessToken": "MjA3NjQ2NjczOTAyNTAxODg4.Eoz2ZVIT0NbrM9oMsGbfbNZ4iswUkf"
   },
   "liveChartSchedule": {
     "enabled": true

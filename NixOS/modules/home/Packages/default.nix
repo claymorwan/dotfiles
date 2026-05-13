@@ -60,7 +60,6 @@ in
     inputs.lncur.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # GUI
-    equibop
     fluxer-canary
     stoat-desktop
     packet

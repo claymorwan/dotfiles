@@ -10,41 +10,32 @@
     inputs.nixcord.homeModules.nixcord
   ];
 
+  home.packages = with pkgs; [
+    overlayed
+  ];
+
   programs.nixcord = {
     enable = true;
-    discord.enable = false;
+    discord = {
+      vencord.enable = false;
+      equicord.enable = true;
+
+      autoscroll.enable = true;
+    };
 
     equibop = {
-      enable = true;
+      # enable = true;
       autoscroll.enable = true;
-
-      package = pkgs.equibop.overrideAttrs (_: {
-        postBuild = ''
-          pushd build
-          ${lib.getExe' pkgs.python313Packages.icnsutil "icnsutil"} e icon.icns
-          popd
-        '';
-
-        installPhase = ''
-          runHook preInstall
-          mkdir -p $out/opt/Equibop
-          cp -r dist/*unpacked/resources $out/opt/Equibop/
-
-          for file in build/icon.icns.export/*\@2x.png; do
-            base=''${file##*/}
-            size=''${base/x*/}
-            targetSize=$((size * 2))
-            install -Dm0644 $file $out/share/icons/hicolor/''${targetSize}x''${targetSize}/apps/equibop.png
-          done
-
-          runHook postInstall
-        '';
-      });
     };
 
     config = {
       useQuickCss = true;
-      enabledThemes = [ "dank-discord.css" ];
+      enabledThemes = [ "system24-catppuccin-mocha.theme.css" ];
+      themeLinks = [
+        "https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/theme/flavors/system24-catppuccin-mocha.theme.css"
+      ];
+
+      frameless = true;
 
       plugins = {
         bannersEverywhere.enable = true;
@@ -54,7 +45,6 @@
         characterCounter.enable = true;
         ClearURLs.enable = true;
         crashHandler.enable = true;
-        # CursorBuddy.enable = true;
         decor.enable = true;
         experiments.enable = true;
         expressionCloner.enable = true;
@@ -62,9 +52,7 @@
         fixSpotifyEmbeds.enable = true;
         fontLoader = {
           enable = true;
-          fontSearch = {
-            selectedFont = "JetBrains Mono";
-          };
+          selectedFont = "JetBrains Mono";
           applyOnCodeBlocks = true;
         };
         forceOwnerCrown.enable = true;

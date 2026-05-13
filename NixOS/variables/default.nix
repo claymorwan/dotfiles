@@ -38,7 +38,7 @@ in
     launch_prefix = mkStrVar "app2unit --";
     terminal = mkStrVar "ghostty";
     browser = mkStrVar "zen-beta"; # "MOZ_LEGACY_PROFILES=1 zen-beta";
-    discord = mkStrVar "equibop --wayland";
+    discord = mkStrVar "discord --wayland";
 
     # Dirs
     home_dir = mkStrVar "/home/${cfg.username}";

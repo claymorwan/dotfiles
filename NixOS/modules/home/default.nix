@@ -11,6 +11,7 @@
     ./Gaming
     ./git.nix
     ./ghostty.nix
+    ./nixcord.nix
     ./obs-studio.nix
     ./Options
     ./Packages
