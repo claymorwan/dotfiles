@@ -28,11 +28,16 @@
       autoscroll.enable = true;
     };
 
-    config = {
+    config = let
+      system24 = "https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/theme/flavors/system24-catppuccin-mocha.theme.css";
+    in
+    {
       useQuickCss = true;
-      enabledThemes = [ "system24-catppuccin-mocha.theme.css" ];
+      # enabledThemeLinks = [
+      #   system24
+      # ];
       themeLinks = [
-        "https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/theme/flavors/system24-catppuccin-mocha.theme.css"
+        system24
       ];
 
       frameless = true;
@@ -126,7 +131,6 @@
         whoReacted.enable = true;
         youtubeAdblock.enable = true;
       };
-
     };
   };
 }

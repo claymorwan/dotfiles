@@ -47,12 +47,14 @@ in
             + "|GIMP Crash Debug|Save As|Library";
           }
 
-          # Steam
-          {
-            app-id = "steam";
-            title = "title Friends List";
-          }
         ];
+        open-floating = true;
+      }
+
+      # Steam
+      {
+        matches = [{ app-id = "steam"; }];
+        excludes = [{ title = "Steam"; }];
         open-floating = true;
       }
 
@@ -122,7 +124,7 @@ in
       }
       {
         matches = [{
-          app-id = "equibop";
+          app-id = "discord|equibop|vesktop";
           title = "Discord Popout";
         }];
         open-floating = true;
@@ -133,23 +135,6 @@ in
           y = window_gap;
           relative-to = "bottom-right";
         };
-      }
-
-      {
-        matches = [
-          {
-            app-id = "equibop";
-            title = "^$";
-          }
-        ];
-        open-floating = true;
-        default-floating-position = {
-          x = 0.75;
-          y = 0.75;
-          relative-to = "bottom-right";
-        };
-        default-column-width = { proportion = 0.3; };
-        default-window-height = { proportion = 0.25; };
       }
 
       {
@@ -244,14 +229,14 @@ in
       }
     '';
     
-    "nsticky/config.toml".source = (pkgs.formats.toml { }).generate "sticky-config" {
-      sticky = {
-        pip.title = "Picture(-| )in(-| )[Pp]icture";
-        discord = {
-          app-id = "equibop";
-          title = "Discord Popout";
-        };
-      };
-    };
+    # "nsticky/config.toml".source = (pkgs.formats.toml { }).generate "sticky-config" {
+    #   sticky = {
+    #     pip.title = "Picture(-| )in(-| )[Pp]icture";
+    #     discord = {
+    #       app-id = "discord|equibop|vesktop";
+    #       title = "Discord Popout";
+    #     };
+    #   };
+    # };
   };
 }

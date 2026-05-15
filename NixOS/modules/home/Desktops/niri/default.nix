@@ -4,15 +4,16 @@
 {
   imports = [
     inputs.niri.homeModules.niri
+    inputs.nsticky.homeModules.default
     ./execs.nix
     ./keybinds
     ./layout.nix
     ./rules.nix
   ];
 
-  home.packages = with pkgs; [
-    inputs.nsticky.packages.${pkgs.stdenv.hostPlatform.system}.nsticky
-  ];
+  # home.packages = with pkgs; [
+  #   inputs.nsticky.packages.${pkgs.stdenv.hostPlatform.system}.nsticky
+  # ];
 
   programs = {
     niri = {
@@ -49,6 +50,19 @@
         xwayland-satellite = {
           enable = true;
           path = "${lib.getExe pkgs.xwayland-satellite}";
+        };
+      };
+    };
+
+    nsticky = {
+      enable = true;
+      settings = {
+        sticky = {
+          pip.title = "Picture(-| )in(-| )[Pp]icture";
+          discord = {
+            app-id = "discord|equibop|vesktop";
+            title = "Discord Popout";
+          };
         };
       };
     };

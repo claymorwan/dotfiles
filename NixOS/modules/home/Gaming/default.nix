@@ -13,6 +13,7 @@
     limo
     gale
     olympus
+    omikuji-appimage
 
     (osu-lazer-bin.override {
       nativeWayland = true;

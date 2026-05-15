@@ -28,7 +28,7 @@
 
     appimage = {
       enable = true;
-      binfmt = true;
+      # binfmt = true;
     };
 
     kdeconnect = {

@@ -39,7 +39,8 @@
         "screenshotDelay": 150
       },
       "3586787122": {
-        "fps": 60
+        "fps": 60,
+        "screenshotDelay": 150
       },
       "3662903139": {
         "disableMouse": true,
@@ -217,7 +218,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "2605123dffb82177c07e35ffc138e81614ece5b520a77c42b39e27"
+    "musixmatchToken": "260514cd23bcd8c49df321ca4885b8522ca83f1b5fd2183e22afb7"
   },
   "dankAudioVisualizer": {
     "enabled": true
@@ -271,16 +272,23 @@
   "mpvpaperWallpaper": {
     "enabled": true,
     "monitorPaths": {
-      "DP-1": "/home/claymorwan/Videos/Video_2026-05-06_16-28-47.mp4"
+      "DP-1": "/home/claymorwan/Videos/Video_2026-05-06_16-34-25.mp4"
     },
     "noAudio": true,
     "loopPlaylist": false,
-    "panscanEnabled": false
+    "panscanEnabled": false,
+    "allMonitors": true,
+    "allMonitorsPath": ""
   },
   "timer": {
     "enabled": true
   },
   "wallpaperCarousel": {
     "enabled": true
+  },
+  "mediaControlPlus": {
+    "enabled": true,
+    "horizontalVisualizerWidth": 12,
+    "horizontalVisualizerBars": 3
   }
 }

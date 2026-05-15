@@ -95,8 +95,9 @@ in
         discordVoice.enable = true;
         dmsScreenshot.enable = true;
         clipboardPlus.enable = true;
-        # mpvpaperWallpaper.enable = true;
+        mpvpaperWallpaper.enable = true;
         timer.enable = true;
+        mediaControlPlus.enable = true;
         
         dankPinentry = {
           # enable = true;

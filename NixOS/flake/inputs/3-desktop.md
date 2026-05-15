@@ -12,8 +12,8 @@ niri-pkg = {
 };
 
 nsticky = {
-  url = "github:lonerOrz/nsticky";
-  inputs.nixpkgs.follows = "nixpkgs";
+ url = "github:lonerOrz/nsticky";
+ inputs.nixpkgs.follows = "nixpkgs";
 };
 
 noctalia = {

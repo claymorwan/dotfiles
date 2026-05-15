@@ -206,6 +206,12 @@ in
 
         # Shift At Midnight Multiplayer Demo
         "4050060" = winGameOptions;
+
+        # ARSONATE
+        "2822980" = gameOptions;
+
+        # ARSONATE Demo
+        "2849630" = gameOptions;
       };
     };
   };

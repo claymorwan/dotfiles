@@ -44,6 +44,7 @@ in
       wl_shimeji = pkgs.callPackage "${self}/pkgs/wl_shimeji" { };
       wallpaperengine-gui = pkgs.callPackage "${self}/pkgs/wallpaperengine-gui" { };
       git-fish = pkgs.callPackage "${self}/pkgs/git-fish" { };
+      omikuji-appimage = pkgs.callPackage "${self}/pkgs/omikuji-appimage" { };
 
       mouse-cursor = pkgs.callPackage "${self}/pkgs/cursors" { cursorName = config.globVars.mouseCursor.name; };
       neuwaita = pkgs.callPackage "${self}/pkgs/neuwaita" { };

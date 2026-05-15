@@ -641,8 +641,7 @@
       "centerWidgets": [
         {
           "id": "music",
-          "enabled": true,
-          "mediaSize": 1
+          "enabled": true
         },
         {
           "id": "separator",
@@ -1454,6 +1453,25 @@
           "y": 0.7222222222222222
         }
       }
+    },
+    {
+      "id": "dw_1778791772676_tzw0yyamz",
+      "widgetType": "dankAudioVisualizer",
+      "name": "Dank Audio Visualizer",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ]
+      },
+      "positions": {
+        "DP-1": {
+          "width": 200,
+          "height": 200,
+          "x": 1340,
+          "y": 440
+        }
+      }
     }
   ],
   "desktopWidgetGroups": [
@@ -1482,7 +1500,7 @@
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
       "sourceContent": "evaluation warning: The xorg package set has been deprecated, 'xorg.libX11' has been renamed to 'libx11'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXcomposite' has been renamed to 'libxcomposite'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXdamage' has been renamed to 'libxdamage'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXext' has been renamed to 'libxext'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXfixes' has been renamed to 'libxfixes'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXrandr' has been renamed to 'libxrandr'",
-      "updatedAt": 1778604790098,
+      "updatedAt": 1778765533498,
       "highlightedHtml": ""
     }
   },
