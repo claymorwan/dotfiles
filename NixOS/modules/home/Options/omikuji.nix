@@ -8,9 +8,11 @@ let
   types
   mkIf
   optional
+  literalExpression
   ;
 
   cfg = config.programs.omikuji;
+  tomlFormat = pkgs.formats.toml { };
 in {
   options.programs.omikuji = {
     enable = mkEnableOption "omikuji";
@@ -53,14 +55,40 @@ in {
         List of proton packages to be added for lutris to use with umu-launcher.
       '';
     };
+
+    settings = {
+      defaults = mkOption {
+        inherit (tomlFormat) type;
+        default = { };
+        example = literalExpression ''
+          wine = {
+            ntsync = true
+            dxvk = true
+            vkd3d = true
+            d3d_extras = true
+          };
+
+          "launch.env" = {
+            PROTON_USE_WAYLAND = "1";
+          };
+
+          graphics.mangohud = true;
+          system.gamemode = true;
+        '';
+        description = ''
+          Configuration written to
+          {file}`$XDG_DATA_HOME/omikuji/defaults.toml`.
+        '';
+      };
+    };
   };
 
   config = {
-    home.packages = mkIf (cfg.package != null) [
-      (cfg.package.override {
-        extraPkgs = (_prev: cfg.extraPackages ++ (optional (cfg.steamPackage != null) cfg.steamPackage));
-      })
-    ];
+    # home.packages = mkIf (cfg.package != null) [
+    #   (cfg.package.override {
+    #     extraPkgs = (_prev: cfg.extraPackages ++ (optional (cfg.steamPackage != null) cfg.steamPackage));
+    #   })
+    # ];
 
     xdg.dataFile =
     let
@@ -78,6 +106,10 @@ in {
 
       protonPackages = map (proton: proton.steamcompattool) cfg.protonPackages;
     
-    in lib.listToAttrs (buildWineLink cfg.winePackages ++ buildWineLink protonPackages);
+    in lib.mergeAttrs
+    (lib.mapAttrs' (
+      name: value: lib.nameValuePair "omikuji/${name}.toml" { source = tomlFormat.generate "omikuji-config-${name}" value; }
+    ) cfg.settings)
+    (lib.listToAttrs (buildWineLink cfg.winePackages ++ buildWineLink protonPackages));
   };
 }

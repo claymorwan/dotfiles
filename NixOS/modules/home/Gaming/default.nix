@@ -15,6 +15,10 @@
     extraPackages = with pkgs; [
       umu-launcher
     ];
+
+    settings.defaults = {
+      "launch.env".PROTON_USE_WAYLAND = "1";
+    };
   };
 
   home.packages = with pkgs; [
