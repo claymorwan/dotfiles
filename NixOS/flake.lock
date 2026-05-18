@@ -1442,11 +1442,11 @@
         "rust-overlay": "rust-overlay_3"
       },
       "locked": {
-        "lastModified": 1779071336,
-        "narHash": "sha256-S7PDb55y0TJgXJtlteCIpGC2/hr2l99uYcGrTMayndY=",
+        "lastModified": 1779086756,
+        "narHash": "sha256-2LZdhWdi5hSz4MOPnRFgjB+qsXqgmfkMzhuIiFnVBK4=",
         "owner": "claymorwan",
         "repo": "omikuji",
-        "rev": "a64c064f48cd13f2cff1633b0a9679305552b151",
+        "rev": "f107b073aa8c801dc23cd7dfadf94c74c19dc239",
         "type": "github"
       },
       "original": {
