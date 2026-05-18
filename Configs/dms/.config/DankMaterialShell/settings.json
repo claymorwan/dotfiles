@@ -1461,8 +1461,12 @@
       "enabled": true,
       "config": {
         "displayPreferences": [
-          "all"
-        ]
+          {
+            "name": "DP-1",
+            "model": "PLX2283H"
+          }
+        ],
+        "syncPositionAcrossScreens": true
       },
       "positions": {
         "DP-1": {
@@ -1470,6 +1474,12 @@
           "height": 200,
           "x": 1340,
           "y": 440
+        },
+        "_synced": {
+          "x": 0.6979166666666666,
+          "y": 0.4074074074074074,
+          "width": 200,
+          "height": 200
         }
       }
     }
@@ -1499,8 +1509,8 @@
       "previewActive": false,
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "evaluation warning: The xorg package set has been deprecated, 'xorg.libX11' has been renamed to 'libx11'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXcomposite' has been renamed to 'libxcomposite'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXdamage' has been renamed to 'libxdamage'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXext' has been renamed to 'libxext'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXfixes' has been renamed to 'libxfixes'\nevaluation warning: The xorg package set has been deprecated, 'xorg.libXrandr' has been renamed to 'libxrandr'",
-      "updatedAt": 1778765533498,
+      "sourceContent": "Yeah ! Me and him have played chess in that specific table over there for a year now. And it's not just us either. There's teenagers playing cricket here every Saturday, there's people occasionally playing card games in that table close to us. I've met so many new people in this Park, and i have been seeing them around here constantly. A real community has been built here, and it'll be destroyed without your help",
+      "updatedAt": 1779018846761,
       "highlightedHtml": ""
     }
   },

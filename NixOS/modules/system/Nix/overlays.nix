@@ -3,6 +3,8 @@
 let
   # Using `self` to point to a patch makes the package rebuild every time so gotta use this instead
   patchDir = ../../../pkgs/Patches;
+
+  mkLocalPkg = path: pkgs.callPackage "${self}/pkgs/${path}" { };
 in 
 {
   nixpkgs.overlays = [
@@ -37,24 +39,24 @@ in
       yazi = prev.yazi.override {_7zz = pkgs._7zz-rar; };
 
       # Local packages
-      fluxer = pkgs.callPackage "${self}/pkgs/fluxer" { inherit (inputs) fluxer-src; };
-      fluxer-canary = pkgs.callPackage "${self}/pkgs/fluxer-canary" { };
-      # shiru = pkgs.callPackage "${self}/pkgs/shiru" { };
-      shijima-qt-bin = pkgs.callPackage "${self}/pkgs/shijima-qt-bin" { };
-      wl_shimeji = pkgs.callPackage "${self}/pkgs/wl_shimeji" { };
-      wallpaperengine-gui = pkgs.callPackage "${self}/pkgs/wallpaperengine-gui" { };
-      git-fish = pkgs.callPackage "${self}/pkgs/git-fish" { };
-      omikuji-appimage = pkgs.callPackage "${self}/pkgs/omikuji-appimage" { };
+      fluxer = (mkLocalPkg "fluxer").override { inherit (inputs) fluxer-src; };
+      fluxer-canary = mkLocalPkg "fluxer-canary";
+      # shiru = mkLocalPkg "shiru";
+      shijima-qt-bin = mkLocalPkg "shijima-qt-bin";
+      wl_shimeji = mkLocalPkg "wl_shimeji";
+      wallpaperengine-gui = mkLocalPkg "wallpaperengine-gui";
+      git-fish = mkLocalPkg "git-fish";
+      # omikuji-bin = mkLocalPkg "omikuji-bin";
 
-      mouse-cursor = pkgs.callPackage "${self}/pkgs/cursors" { cursorName = config.globVars.mouseCursor.name; };
-      neuwaita = pkgs.callPackage "${self}/pkgs/neuwaita" { };
+      mouse-cursor = (mkLocalPkg "cursors").override { cursorName = config.globVars.mouseCursor.name; };
+      neuwaita = mkLocalPkg "neuwaita";
 
       ## Fonts
-      no-continue = pkgs.callPackage "${self}/pkgs/Fonts/no-continue.nix" { };
+      no-continue = mkLocalPkg "Fonts/no-continue.nix";
 
       ## Millennium
       millennium-material-theme = pkgs.callPackage "${self}/pkgs/Millennium/themes/millennium-material-theme" { inherit (inputs) millennium-material-theme-src; };
-      extendium = pkgs.callPackage "${self}/pkgs/Millennium/plugins/extendium" { };
+      extendium = mkLocalPkg "Millennium/plugins/extendium";
     })
   ];
 }

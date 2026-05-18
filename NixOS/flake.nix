@@ -123,6 +123,11 @@
       url = "github:temidaradev/kopuz?tag=latest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    omikuji = {
+      url = "github:claymorwan/omikuji/nix-package";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]
     # DMS related stuff

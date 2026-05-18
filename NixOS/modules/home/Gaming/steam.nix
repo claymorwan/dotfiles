@@ -212,6 +212,9 @@ in
 
         # ARSONATE Demo
         "2849630" = gameOptions;
+
+        # Random Racing Demo
+        "2199940" = winGameOptions;
       };
     };
   };
