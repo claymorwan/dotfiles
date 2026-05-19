@@ -125,7 +125,7 @@
     };
     
     omikuji = {
-      url = "github:reakjra/omikuji";
+      url = "github:claymorwan/omikuji"; # "github:reakjra/omikuji";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # ~/~ end
