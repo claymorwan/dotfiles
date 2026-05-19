@@ -2,6 +2,7 @@
 
 {
   imports = [
+    inputs.omikuji.homeModules.default
     ./lutris.nix
     ./mangohud.nix
     ./steam.nix
@@ -9,15 +10,33 @@
 
   programs.omikuji = {
     enable = true;
-    package = inputs.omikuji.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    protonPackages = osConfig.programs.steam.extraCompatPackages;
+    # package = inputs.omikuji.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    
+    defaultWinePackage = pkgs.proton-ge-bin;
+
+    winePackages = [ pkgs.wineWow64Packages.full ];
+    # protonPackages = osConfig.programs.steam.extraCompatPackages;
 
     extraPackages = with pkgs; [
       umu-launcher
     ];
 
     settings.defaults = {
-      "launch.env".PROTON_USE_WAYLAND = "1";
+      wine = {
+        ntsync = true;
+        dxvk = true;
+        vkd3d = true;
+        d3d_extras = true;
+        fsr = true;
+        battleye = true;
+        easyanticheat = true;
+      };
+
+      launch.env.PROTON_USE_WAYLAND = "1";
+
+      graphics.mangohud = true;
+      graphics.gamescope.enabled = false;
+      system.gamemode = true;
     };
   };
 

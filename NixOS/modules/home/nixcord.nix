@@ -10,10 +10,6 @@
     inputs.nixcord.homeModules.nixcord
   ];
 
-  home.packages = with pkgs; [
-    overlayed
-  ];
-
   programs.nixcord = {
     enable = true;
     discord = {
@@ -33,9 +29,10 @@
     in
     {
       useQuickCss = true;
-      # enabledThemeLinks = [
-      #   system24
-      # ];
+      enabledThemeLinks = [
+        system24
+      ];
+
       themeLinks = [
         system24
       ];

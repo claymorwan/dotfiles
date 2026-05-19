@@ -1,4 +1,5 @@
-{ lib, pkgs, config, ... }:
+# self:
+{ inputs, lib, pkgs, config, ... }:
 
 let
   inherit (lib)
@@ -13,10 +14,11 @@ let
 
   cfg = config.programs.omikuji;
   tomlFormat = pkgs.formats.toml { };
-in {
+in
+{
   options.programs.omikuji = {
     enable = mkEnableOption "omikuji";
-    package = mkPackageOption pkgs "omikuji-bin" { nullable = true; };
+    package = mkPackageOption inputs.omikuji.packages.${pkgs.stdenv.hostPlatform.system} "omikuji" { nullable = true; };
 
     extraPackages = mkOption {
       type = with types; listOf package;
@@ -43,7 +45,7 @@ in {
       default = [ ];
       example = "[ pkgs.wineWow64Packages.full ]";
       description = ''
-        List of wine packages to be added for lutris to use.
+        List of wine packages to be added for omikuji to use.
       '';
     };
 
@@ -52,7 +54,16 @@ in {
       default = [ ];
       example = "[ pkgs.proton-ge-bin ]";
       description = ''
-        List of proton packages to be added for lutris to use with umu-launcher.
+        List of proton packages to be added for omikuji to use with umu-launcher.
+      '';
+    };
+
+    defaultWinePackage = mkOption {
+      type = with types; nullOr package;
+      default = null;
+      example = "pkgs.proton-ge-bin";
+      description = ''
+        Default wine/proton package used in the settings.
       '';
     };
 
@@ -68,7 +79,7 @@ in {
             d3d_extras = true
           };
 
-          "launch.env" = {
+          launch.env = {
             PROTON_USE_WAYLAND = "1";
           };
 
@@ -80,20 +91,40 @@ in {
           {file}`$XDG_DATA_HOME/omikuji/defaults.toml`.
         '';
       };
+
+      settings = mkOption {
+        inherit (tomlFormat) type;
+        default = { };
+        description = ''
+          Configuration written to
+          {file}`$XDG_DATA_HOME/omikuji/settings.toml`.
+        '';
+      };
+
+      ui = mkOption {
+        inherit (tomlFormat) type;
+        default = { };
+        description = ''
+          Configuration written to
+          {file}`$XDG_DATA_HOME/omikuji/ui.toml`.
+        '';
+      };
     };
   };
 
-  config = {
-    # home.packages = mkIf (cfg.package != null) [
-    #   (cfg.package.override {
-    #     extraPkgs = (_prev: cfg.extraPackages ++ (optional (cfg.steamPackage != null) cfg.steamPackage));
-    #   })
-    # ];
+  config = let
+    formatWineName = (package: lib.toLower package.name);
+  in
+  mkIf cfg.enable
+  {
+    home.packages = mkIf (cfg.package != null) [
+      (cfg.package.override {
+        extraPkgs = (_prev: cfg.extraPackages ++ (optional (cfg.steamPackage != null) cfg.steamPackage));
+      })
+    ];
 
     xdg.dataFile =
     let
-      formatWineName = (package: lib.toLower package.name);
-
       buildWineLink =
         packages:
         map (
@@ -106,10 +137,29 @@ in {
 
       protonPackages = map (proton: proton.steamcompattool) cfg.protonPackages;
     
-    in lib.mergeAttrs
-    (lib.mapAttrs' (
-      name: value: lib.nameValuePair "omikuji/${name}.toml" { source = tomlFormat.generate "omikuji-config-${name}" value; }
-    ) cfg.settings)
-    (lib.listToAttrs (buildWineLink cfg.winePackages ++ buildWineLink protonPackages));
+      defaultSettingsMerged = lib.recursiveUpdate
+        (lib.optionalAttrs (cfg.settings.defaults != { }) cfg.settings.defaults)
+        (lib.optionalAttrs (cfg.defaultWinePackage != null) {
+          wine.version = formatWineName cfg.defaultWinePackage;
+        })
+        ;
+    in
+    {
+      "omikuji/defaults.toml" = mkIf (defaultSettingsMerged != { }) {
+        source = (tomlFormat.generate "omikuji-config-defaults" defaultSettingsMerged);
+      };
+
+      "omikuji/settings.toml" = mkIf (cfg.settings.settings != { }) {
+        source = (tomlFormat.generate "omikuji-config-defaults" cfg.settings.settings);
+      };
+
+      "omikuji/ui.toml" = mkIf (cfg.settings.ui != { }) {
+        source = (tomlFormat.generate "omikuji-config-defaults" cfg.settings.ui);
+      };
+    }
+    // lib.listToAttrs (
+        buildWineLink cfg.winePackages
+        ++ buildWineLink protonPackages
+        ++ (lib.lists.optionals (cfg.defaultWinePackage != null) buildWineLink [ cfg.defaultWinePackage ]));
   };
 }

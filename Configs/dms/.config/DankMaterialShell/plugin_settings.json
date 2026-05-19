@@ -161,7 +161,7 @@
   },
   "dankKDEConnect": {
     "enabled": true,
-    "selectedDeviceId": "807a874d77944ae28e14daa5af7c4117"
+    "selectedDeviceId": "c613fe7a_9eab_4762_b899_0b44f6ec2db8"
   },
   "dankGifSearch": {
     "enabled": true
@@ -218,7 +218,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "260517646c2f38bed23f804cdeebdb0cc464074a86aa9754bb14b8"
+    "musixmatchToken": "2605183bd81b2e0e1a63666a0b7742d10e98b98566cf6416a14fa9"
   },
   "dankAudioVisualizer": {
     "enabled": true

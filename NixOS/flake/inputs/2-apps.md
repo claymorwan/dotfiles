@@ -89,7 +89,7 @@ kopuz = {
 };
 
 omikuji = {
-  url = "github:claymorwan/omikuji/nix-package";
+  url = "github:reakjra/omikuji";
   inputs.nixpkgs.follows = "nixpkgs";
 };
 ```
