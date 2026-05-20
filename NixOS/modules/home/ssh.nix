@@ -3,7 +3,7 @@
     enable = true;
     enableDefaultConfig = false;
 
-    matchBlocks = {
+    settings = {
       "codeberg.org" = {
         identityFile = "~/.ssh/codeberg";
         user = "git";
