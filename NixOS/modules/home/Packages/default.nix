@@ -57,6 +57,7 @@ in
     wev
     devenv
     wl_shimeji
+    wineWow64Packages.full
     inputs.lncur.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # GUI

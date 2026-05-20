@@ -336,6 +336,7 @@
   "dankLauncherV2UnloadOnClose": true,
   "dankLauncherV2IncludeFilesInAll": false,
   "dankLauncherV2IncludeFoldersInAll": false,
+  "launcherStyle": "full",
   "useAutoLocation": true,
   "weatherEnabled": true,
   "networkPreference": "wifi",
@@ -560,6 +561,7 @@
   "customPowerActionReboot": "",
   "customPowerActionPowerOff": "",
   "updaterHideWidget": false,
+  "updaterCheckOnStart": false,
   "updaterUseCustomCommand": true,
   "updaterCustomCommand": "ecdysys -u",
   "updaterTerminalAdditionalParams": "",
@@ -1511,10 +1513,10 @@
     },
     "dankNotepadModule": {
       "previewActive": false,
-      "currentFilePath": "notepad-files/untitled-1775922963016.txt",
+      "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "2 et 11\n6 et 10\n\n",
-      "updatedAt": 1779193185758,
+      "sourceContent": "sur salaire = 5400000 franc cfa | 8232,24 euro",
+      "updatedAt": 1779239524999,
       "highlightedHtml": ""
     }
   },
@@ -1535,6 +1537,7 @@
   "frameCloseGaps": true,
   "frameLauncherEmergeSide": "bottom",
   "frameLauncherArcExtender": false,
+  "frameUseSpotlightLauncher": false,
   "frameMode": "connected",
   "configVersion": 11
 }
