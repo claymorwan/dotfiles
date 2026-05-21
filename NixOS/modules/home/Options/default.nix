@@ -5,6 +5,6 @@
     ./kvantum.nix
     ./millennium.nix
     # ./nsticky.nix
-    # ./omikuji.nix
+    ./omikuji.nix
   ];
 }

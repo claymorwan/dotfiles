@@ -2,7 +2,7 @@
 
 {
   imports = [
-    inputs.omikuji.homeModules.default
+    # inputs.omikuji.homeModules.default
     ./lutris.nix
     ./mangohud.nix
     ./steam.nix
@@ -35,6 +35,27 @@
       umu-launcher
     ];
 
+    settings.ui = {
+      theme = {
+        follow_system_colors = false;
+        colors = {
+          bg = "#181825";
+          surface = "#1e1e2e";
+          accent = "#cba6f7";
+          accentText = "#11111b";
+          text = "#cdd6f4";
+          error = "#f38ba8";
+          success = "#a6e3a1";
+          warning = "#f9e2af";
+        };
+      };
+    };
+
+    settings.settings = {
+      meowmeow = [{
+        meooow = "meeeeow";
+      }];
+    };
     settings.defaults = {
       wine = {
         ntsync = true;

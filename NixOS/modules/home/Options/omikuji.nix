@@ -68,6 +68,14 @@ in
     };
 
     settings = {
+
+      mutableDefaults = mkOption {
+        type = types.bool;
+        default = true;
+        description = ''
+
+        '';
+      };
       defaults = mkOption {
         inherit (tomlFormat) type;
         default = { };
@@ -92,6 +100,13 @@ in
         '';
       };
 
+      mutableSettings = mkOption {
+        type = types.bool;
+        default = true;
+        description = ''
+
+        '';
+      };
       settings = mkOption {
         inherit (tomlFormat) type;
         default = { };
@@ -101,9 +116,36 @@ in
         '';
       };
 
+      mutableUi = mkOption {
+        type = types.bool;
+        default = true;
+        description = ''
+
+        '';
+      };
       ui = mkOption {
         inherit (tomlFormat) type;
         default = { };
+        example = literalExpression ''
+          theme = {
+            follow_system_colors = false;
+            colors = {
+              bg = "#181825";
+              surface = "#1e1e2e";
+              accent = "#cba6f7";
+              accentText = "#11111b";
+              text = "#cdd6f4";
+              error = "#f38ba8";
+              success = "#a6e3a1";
+              warning = "#f9e2af";
+            };
+          };
+
+          console_mode = {
+            background = "wave";
+            active = false;
+          };
+        '';
         description = ''
           Configuration written to
           {file}`$XDG_DATA_HOME/omikuji/ui.toml`.
@@ -114,14 +156,49 @@ in
 
   config = let
     formatWineName = (package: lib.toLower package.name);
+
+    defaultSettingsMerged = lib.recursiveUpdate
+      (lib.optionalAttrs (cfg.settings.defaults != { }) cfg.settings.defaults)
+      (lib.optionalAttrs (cfg.defaultWinePackage != null) {
+        wine.version = formatWineName cfg.defaultWinePackage;
+      })
+      ;
+
+    impureConfigMerger = initialConfig: patchConfig: ''
+      ${lib.getExe pkgs.nushell} -c "
+      if ('${initialConfig}' | path exists) { open '${initialConfig}' } else { ' ' | from toml }
+      | merge deep (open ${patchConfig} | from toml)
+      | save ${initialConfig} -f
+      "
+    '';
+
+    defaultsToml = tomlFormat.generate "omikuji-config-defaults" defaultSettingsMerged;
+    settingsToml = tomlFormat.generate "omikuji-config-settings" cfg.settings.settings;
+    uiToml = tomlFormat.generate "omikuji-config-ui" cfg.settings.ui;
   in
   mkIf cfg.enable
   {
-    home.packages = mkIf (cfg.package != null) [
-      (cfg.package.override {
-        extraPkgs = (_prev: cfg.extraPackages ++ (optional (cfg.steamPackage != null) cfg.steamPackage));
-      })
-    ];
+    home = {
+      packages = mkIf (cfg.package != null) [
+        (cfg.package.override {
+          extraPkgs = (_prev: cfg.extraPackages ++ (optional (cfg.steamPackage != null) cfg.steamPackage));
+        })
+      ];
+
+      activation = {
+        omikujiDefaultsSettings = mkIf (cfg.settings.defaults != { } && cfg.settings.mutableDefaults) (lib.hm.dag.entryAfter [ "linkGeneration" ] (
+          impureConfigMerger "${config.xdg.dataHome}/omikuji/defaults.toml" defaultsToml
+        ));
+
+        omikujiSettingsSettings = mkIf (cfg.settings.settings != { } && cfg.settings.mutableSettings) (lib.hm.dag.entryAfter [ "linkGeneration" ] (
+          impureConfigMerger "${config.xdg.dataHome}/omikuji/settings.toml" settingsToml
+        ));
+
+        omikujiUiSettings = mkIf (cfg.settings.ui != { } && cfg.settings.mutableUi) (lib.hm.dag.entryAfter [ "linkGeneration" ] (
+          impureConfigMerger "${config.xdg.dataHome}/omikuji/ui.toml" uiToml
+        ));
+      };
+    };
 
     xdg.dataFile =
     let
@@ -135,31 +212,25 @@ in
           })
         ) packages;
 
-      protonPackages = map (proton: proton.steamcompattool) cfg.protonPackages;
-    
-      defaultSettingsMerged = lib.recursiveUpdate
-        (lib.optionalAttrs (cfg.settings.defaults != { }) cfg.settings.defaults)
-        (lib.optionalAttrs (cfg.defaultWinePackage != null) {
-          wine.version = formatWineName cfg.defaultWinePackage;
-        })
-        ;
+      protonPackages = map (proton: proton.steamcompattool)
+          (cfg.protonPackages ++ (lib.lists.optionals (cfg.defaultWinePackage != null) [ cfg.defaultWinePackage.steamcompattool ]));
     in
     {
-      "omikuji/defaults.toml" = mkIf (defaultSettingsMerged != { }) {
-        source = (tomlFormat.generate "omikuji-config-defaults" defaultSettingsMerged);
+      "omikuji/defaults.toml" = mkIf (defaultSettingsMerged != { } && !cfg.settings.mutableDefaults) {
+        source = defaultsToml;
       };
 
-      "omikuji/settings.toml" = mkIf (cfg.settings.settings != { }) {
-        source = (tomlFormat.generate "omikuji-config-defaults" cfg.settings.settings);
+      "omikuji/settings.toml" = mkIf (cfg.settings.settings != { } && !cfg.settings.mutableSettings) {
+        source = settingsToml;
       };
 
-      "omikuji/ui.toml" = mkIf (cfg.settings.ui != { }) {
-        source = (tomlFormat.generate "omikuji-config-defaults" cfg.settings.ui);
+      "omikuji/ui.toml" = mkIf (cfg.settings.ui != { } && !cfg.settings.mutableUi) {
+        source = uiToml;
       };
     }
     // lib.listToAttrs (
         buildWineLink cfg.winePackages
         ++ buildWineLink protonPackages
-        ++ (lib.lists.optionals (cfg.defaultWinePackage != null) buildWineLink [ cfg.defaultWinePackage ]));
+        );
   };
 }

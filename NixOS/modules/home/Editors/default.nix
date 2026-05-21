@@ -25,5 +25,6 @@
     sqlitebrowser
     distrobox
     boxbuddy
+    yq
   ];
 }
