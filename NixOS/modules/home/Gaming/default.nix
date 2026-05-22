@@ -2,7 +2,7 @@
 
 {
   imports = [
-    # inputs.omikuji.homeModules.default
+    inputs.omikuji.homeModules.default
     ./lutris.nix
     ./mangohud.nix
     ./steam.nix
@@ -35,43 +35,41 @@
       umu-launcher
     ];
 
-    settings.ui = {
-      theme = {
-        follow_system_colors = false;
-        colors = {
-          bg = "#181825";
-          surface = "#1e1e2e";
-          accent = "#cba6f7";
-          accentText = "#11111b";
-          text = "#cdd6f4";
-          error = "#f38ba8";
-          success = "#a6e3a1";
-          warning = "#f9e2af";
+    settings = {
+
+      defaults = {
+        wine = {
+          ntsync = true;
+          dxvk = true;
+          vkd3d = true;
+          d3d_extras = true;
+          fsr = true;
+          battleye = true;
+          easyanticheat = true;
+        };
+
+        launch.env.PROTON_USE_WAYLAND = "1";
+
+        graphics.mangohud = true;
+        graphics.gamescope.enabled = false;
+        system.gamemode = true;
+      };
+
+      ui = {
+        theme = {
+          follow_system_colors = false;
+          colors = {
+            bg = "#181825";
+            surface = "#1e1e2e";
+            accent = "#cba6f7";
+            accentText = "#11111b";
+            text = "#cdd6f4";
+            error = "#f38ba8";
+            success = "#a6e3a1";
+            warning = "#f9e2af";
+          };
         };
       };
-    };
-
-    settings.settings = {
-      meowmeow = [{
-        meooow = "meeeeow";
-      }];
-    };
-    settings.defaults = {
-      wine = {
-        ntsync = true;
-        dxvk = true;
-        vkd3d = true;
-        d3d_extras = true;
-        fsr = true;
-        battleye = true;
-        easyanticheat = true;
-      };
-
-      launch.env.PROTON_USE_WAYLAND = "1";
-
-      graphics.mangohud = true;
-      graphics.gamescope.enabled = false;
-      system.gamemode = true;
     };
   };
 
@@ -83,36 +81,13 @@
     olympus
     # sm64coopdx
 
-    # (omikuji-bin.override {
-    #   extraPkgs = (_prev: with pkgs; [
-    #     umu-launcher
-    #   ]);
-    # })
-
     (osu-lazer-bin.override {
       nativeWayland = true;
     })
   ];
 
   xdg = {
-    dataFile = let
-      formatWineName = (package: lib.toLower package.name);
-
-      buildWineLink =
-        packages:
-        map (
-          # lutris seems to not detect wine/proton if the name has some caps
-          package:
-          (lib.nameValuePair "omikuji/runners/${formatWineName package}" {
-            source = package;
-          })
-        ) packages;
-
-      # differentiatesProton = versionOlder cfg.package.version "0.5.20";
-      protonPackages = map (proton: proton.steamcompattool) [ pkgs.proton-ge-bin ];
-      # protonDirectory = if differentiatesProton then "proton" else "wine";
-    
-    in {
+    dataFile = {
       "sm64coopdx/mods/character-select-coop" = {
         source = pkgs.fetchzip {
           url = "https://github.com/Squishy6094/character-select-coop/releases/download/v1.16.3/character-select-coop.zip";

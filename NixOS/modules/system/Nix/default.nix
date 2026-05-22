@@ -18,6 +18,7 @@
         "https://nixpkgs-python.cachix.org"
         "https://kopuz.cachix.org"
         "https://omikuji.cachix.org"
+        # "https://omikuji-claymorwan-test.cachix.org"
       ];
       
       trusted-substituters = [
@@ -25,6 +26,7 @@
         "https://nixpkgs-python.cachix.org"
         "https://kopuz.cachix.org"
         "https://omikuji.cachix.org"
+        # "https://omikuji-claymorwan-test.cachix.org"
       ];
 
       trusted-public-keys = [
@@ -32,6 +34,7 @@
         "nixpkgs-python.cachix.org-1:hxjI7pFxTyuTHn2NkvWCrAUcNZLNS3ZAvfYNuYifcEU="
         "kopuz.cachix.org-1:J2X3AnAYhKTJW5S3aCLoA1ckonQXVNZMQvhZA0YAufw="
         "omikuji.cachix.org-1:dS6sbpMxarHWIIk3y0R7KXz3eVHUg1lo/y3gMbv4JhM="
+        # "omikuji-claymorwan-test.cachix.org-1:kWmsQxbuLrKC1igfm5Hymi8GSQQLNTHfJz2yU9STwos="
       ];
 
       auto-optimise-store = true;
