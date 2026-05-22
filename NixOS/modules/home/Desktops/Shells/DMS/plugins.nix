@@ -98,6 +98,14 @@ in
         mpvpaperWallpaper.enable = true;
         timer.enable = true;
         mediaControlPlus.enable = true;
+        # hiddenBar.enable = true;
+        nixPackageRunner.enable = true;
+        hydrate.enable = true;
+
+        dms-common = {
+          enable = true;
+          src = inputs.dms-common;
+        };
         
         dankPinentry = {
           # enable = true;

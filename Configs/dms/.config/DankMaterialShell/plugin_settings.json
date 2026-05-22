@@ -250,7 +250,7 @@
   },
   "discordVoice": {
     "enabled": true,
-    "accessToken": "MjA3NjQ2NjczOTAyNTAxODg4.Eoz2ZVIT0NbrM9oMsGbfbNZ4iswUkf"
+    "accessToken": ""
   },
   "liveChartSchedule": {
     "enabled": true
@@ -290,5 +290,15 @@
     "enabled": true,
     "horizontalVisualizerWidth": 12,
     "horizontalVisualizerBars": 3
+  },
+  "nixPackageRunner": {
+    "enabled": true,
+    "terminal": "ghostty"
+  },
+  "hiddenBar": {
+    "enabled": true
+  },
+  "hydrate": {
+    "enabled": true
   }
 }

@@ -219,6 +219,22 @@
         "type": "github"
       }
     },
+    "dms-common": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1779372379,
+        "narHash": "sha256-nLY1oeSOocma2dOWMfU9Yz+wAFHYSg4MyZpjSi4I+pg=",
+        "owner": "hthienloc",
+        "repo": "dms-common",
+        "rev": "ae66a020129e6226d28dc6e581a21bf68087efc6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hthienloc",
+        "repo": "dms-common",
+        "type": "github"
+      }
+    },
     "dms-plugin-dankPinentry": {
       "inputs": {
         "flake-parts": "flake-parts_2",
@@ -247,11 +263,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1778751506,
-        "narHash": "sha256-1uKZUme0C7vo3KSwlttK4l/0OWB/ktabKAD7kRHR5dE=",
+        "lastModified": 1779417178,
+        "narHash": "sha256-sqRVIGOTo9Mf2vFD2LzlsMa3zv0ltHsj18X6Rqe/4vY=",
         "owner": "AvengeMedia",
         "repo": "dms-plugin-registry",
-        "rev": "fde8456bb08af0715041451592c461af66709b70",
+        "rev": "f1e59487f8c2109f397fdebeaa085c8521540c36",
         "type": "github"
       },
       "original": {
@@ -1439,11 +1455,11 @@
         "rust-overlay": "rust-overlay_3"
       },
       "locked": {
-        "lastModified": 1779393614,
-        "narHash": "sha256-qRBleXYnRPMqzdDWVX6t5w7uFw0RJT73pbIgEw3st3g=",
+        "lastModified": 1779455667,
+        "narHash": "sha256-nhIA4Qd+egpJUDgnYrXWNf5r4kplZgXJiA1ke4K5Oqk=",
         "owner": "reakjra",
         "repo": "omikuji",
-        "rev": "044d44773d4eedf9ecb9b044b377b51869597d7f",
+        "rev": "4c3f4b4ede24bbdf3dd11fadfd536aa62ebec713",
         "type": "github"
       },
       "original": {
@@ -1520,6 +1536,7 @@
         "devenvcp": "devenvcp",
         "dgop": "dgop",
         "dms": "dms",
+        "dms-common": "dms-common",
         "dms-plugin-dankPinentry": "dms-plugin-dankPinentry",
         "dms-plugin-registry": "dms-plugin-registry",
         "dsearch": "dsearch",

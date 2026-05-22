@@ -748,6 +748,10 @@
           "enabled": true
         },
         {
+          "id": "hydrate",
+          "enabled": true
+        },
+        {
           "id": "dankKDEConnect",
           "enabled": true
         },
@@ -1516,7 +1520,7 @@
       "currentFilePath": "notepad-files/untitled-1775922963016.txt",
       "currentFileExtension": "txt",
       "sourceContent": "2 et 11\n6 et 10\n\n",
-      "updatedAt": 1779357562981,
+      "updatedAt": 1779460825913,
       "highlightedHtml": ""
     }
   },

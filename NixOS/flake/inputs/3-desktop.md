@@ -57,4 +57,9 @@ dms-plugin-dankPinentry = {
   url = "github:pacman99/DankPinentry";
   inputs.nixpkgs.follows = "nixpkgs";
 };
+
+dms-common = {
+  url = "github:hthienloc/dms-common";
+  flake = false;
+};
 ```

@@ -188,6 +188,11 @@
       url = "github:pacman99/DankPinentry";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    dms-common = {
+      url = "github:hthienloc/dms-common";
+      flake = false;
+    };
     # ~/~ end
     # ~/~ begin <<flake/inputs/4-package-src.md#flake-inputs>>[0]
     fluxer-src = {
