@@ -1,6 +1,6 @@
 {
   imports = [
-    ./helium.nix
+    # ./helium.nix
     ./Zen
   ];
 }

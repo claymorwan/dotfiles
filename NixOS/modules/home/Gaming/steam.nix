@@ -91,7 +91,9 @@ in
         };
 
         # Subnautica 2
-        "1962700" = winGameOptions;
+        "1962700" = lib.recursiveUpdate winGameOptions {
+          launchOptions.env.WINEDLLOVERRIDES = "dwmapi=n,b";
+        };
 
         # Spelunky 2
         "418530" = winGameOptions;
@@ -215,6 +217,9 @@ in
 
         # Random Racing Demo
         "2199940" = winGameOptions;
+
+        # Retail Hell Demo
+        "4379260" = winGameOptions;
       };
     };
   };

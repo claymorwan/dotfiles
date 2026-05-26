@@ -46,8 +46,8 @@
     };
     
     millennium = {
-      url = "github:SteamClientHomebrew/Millennium?rev=e2c66a276e579ee73c5151b01897bf63503aa12c&dir=packages/nix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:SteamClientHomebrew/Millennium/next?dir=packages/nix";
+    # inputs.nixpkgs.follows = "nixpkgs";
     };
     
     scopebuddy = {
@@ -73,18 +73,8 @@
       };
     };
     
-    helium = {
-      url = "github:cjavad/nixpille-helium";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
     nixcord = {
       url = "github:kaylorben/nixcord";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
-    gsr = {
-      url = "github:Elibrio/gsr-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
@@ -98,20 +88,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    namida = {
-      url = "git+https://codeberg.org/iWisp360/namida-nix";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
     omnisearch = {
       url = "git+https://git.bwaaa.monster/omnisearch";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.beaker-src.follows = "beaker-src";
-    };
-    
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     
     nu-scripts = {
@@ -121,12 +101,12 @@
     
     kopuz = {
       url = "github:temidaradev/kopuz?tag=latest";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     
     omikuji = {
       url = "github:reakjra/omikuji";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]
@@ -169,7 +149,7 @@
     dms = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.quickshell.follows = "quickshell";
+      # inputs.quickshell.follows = "quickshell";
     };
     
     dsearch = {

@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "CluelessCatBurger";
     repo = "wl_shimeji";
     rev = "8ae15cf7e56325b08708e1b8d851baef679962d1";
-    hash = "sha256-UBZXeuZJKGqbEK8Xwjs/Sk6JRktjBu4u6w5NGLjhuCs=";
+    hash = "sha256-i1WxTExJ/uRHnZP00k1vkiWH/2ZZNHjChe4vCycBsbs=";
     leaveDotGit = true;
     fetchSubmodules = true;
   };

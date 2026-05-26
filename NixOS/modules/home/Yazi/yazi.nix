@@ -240,19 +240,19 @@
     fetchers = [
       # Mymetypes
       {
-        id = "mime";
+        group = "mime";
         url = "*/";
         run = "mime.dir";
         prio = "high";
       }
       {
-        id = "mime";
+        group = "mime";
         url = "local://*";
         run = "mime.local";
         prio = "high";
       }
       {
-        id = "mime";
+        group = "mime";
         url = "remote://*";
         run = "mime.remote";
         prio = "high";
@@ -304,8 +304,8 @@
     ];
 
     prepend_preloaders = [
-      { name = "*.kra"; run = "krita-preview"; }
-      { name = "*.kra~"; run = "krita-preview"; }
+      { url = "*.kra"; run = "krita-preview"; }
+      { url = "*.kra~"; run = "krita-preview"; }
     ];
 
     preloaders = [
@@ -348,8 +348,8 @@
         mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}";
         run = "ouch --archive-icon=' ' --show-file-icons";
       }
-      { name = "*.kra"; run = "krita-preview"; }
-      { name = "*.kra~"; run = "krita-preview"; }
+      { url = "*.kra"; run = "krita-preview"; }
+      { url = "*.kra~"; run = "krita-preview"; }
     ];
 
     previewers = [
@@ -449,12 +449,12 @@
     prepend_fetchers = [
       # Git plugin
       {
-        id = "git";
+        group = "git";
         url = "*";
         run = "git";
       }
       {
-        id = "git";
+        group = "git";
         url = "*/";
         run = "git";
       }

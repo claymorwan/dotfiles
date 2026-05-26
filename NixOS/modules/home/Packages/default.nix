@@ -15,7 +15,6 @@ in
   imports = [
     ./flatpak.nix
     inputs.devenvcp.homeModules.default
-    # inputs.namida.homeManagerModules.namida
   ];
 
   programs = {
@@ -29,11 +28,6 @@ in
       enable = true;
       defaultPath = "${osConfig.globVars.flake_dir}/dev-shells/devenv";
     };
-
-    # namida = {
-    #   enable = true;
-    #   package = inputs.namida.packages.${pkgs.stdenv.hostPlatform.system}.beta;
-    # };
 
     onlyoffice.enable = true;
     btop.enable = true;
@@ -79,12 +73,11 @@ in
     fragments
     audacity
     winboat
-    inputs.gsr.packages.${system}.gpu-screen-recorder-ui
     gradia
     shiru
     shijima-qt-bin
     nicotine-plus
-    lollypop
+    gpu-screen-recorder-gtk
     inputs.kopuz.packages.${system}.default
     (lib.mkIf config.programs.noctalia-shell.enable pkgs.wallpaperengine-gui)
 

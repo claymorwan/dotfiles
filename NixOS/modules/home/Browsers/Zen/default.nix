@@ -165,6 +165,7 @@ in
           "browser.startup.homepage" = osConfig.services.omnisearch.settings.server.domain;
           "browser.newtab.extensionControlled" = true;
           "browser.newtab.privateAllowed" = true;
+          "general.autoScroll" = true;
 
           # Zen specific options
           "zen.view.use-single-toolbar" = false;

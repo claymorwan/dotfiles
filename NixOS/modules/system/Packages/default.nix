@@ -78,7 +78,6 @@
 
     vlc
     mpv
-    gpu-screen-recorder-gtk
   ];
 
 }

@@ -49,6 +49,7 @@
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-38.8.4"
+    "nodejs-20.20.2"
   ];
 
   programs = {
