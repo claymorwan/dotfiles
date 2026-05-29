@@ -25,7 +25,7 @@
     "monitorScenes": {
       "eDP-1": "3658437802",
       "HDMI-A-1": "3371368351",
-      "DP-1": "3586787122"
+      "DP-1": "3658437802"
     },
     "sceneSettings": {
       "2670952853": {
@@ -218,7 +218,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "2605183bd81b2e0e1a63666a0b7742d10e98b98566cf6416a14fa9"
+    "musixmatchToken": "260529f4db96314307f982ad86b586d390ee84444e89f759bcea9b"
   },
   "dankAudioVisualizer": {
     "enabled": true

@@ -1524,8 +1524,8 @@
       "previewActive": false,
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "sur salaire = 5400000 franc cfa | 8232,24 euro\n\n3x = 90\n",
-      "updatedAt": 1779756885175,
+      "sourceContent": "((sprite_2d.current_animation_position*10)//sprite_2d.current_animation_length)",
+      "updatedAt": 1780008210280,
       "highlightedHtml": ""
     }
   },

@@ -220,6 +220,9 @@ in
 
         # Retail Hell Demo
         "4379260" = winGameOptions;
+
+        # Bit Buddy Demo
+        "3950450" = winGameOptions;
       };
     };
   };
