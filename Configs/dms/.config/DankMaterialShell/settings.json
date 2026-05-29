@@ -1522,10 +1522,10 @@
     },
     "dankNotepadModule": {
       "previewActive": false,
-      "currentFilePath": "notepad-files/untitled-1770243197424.txt",
+      "currentFilePath": "notepad-files/untitled-1775922963016.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "((sprite_2d.current_animation_position*10)//sprite_2d.current_animation_length)",
-      "updatedAt": 1780008210280,
+      "sourceContent": "2 et 11\n6 et 10\n\n",
+      "updatedAt": 1780062429534,
       "highlightedHtml": ""
     }
   },

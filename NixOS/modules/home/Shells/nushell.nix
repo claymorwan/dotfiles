@@ -20,10 +20,6 @@ in
     settings = {
       show_banner = false;
       hooks = {
-        pre_prompt = {
-          condition = "not ($env.PWD | path exists)";
-          code = "cd $'($env.PWD)/..'";
-        };
         display_output = "table --expand --icons";
       };
     };
