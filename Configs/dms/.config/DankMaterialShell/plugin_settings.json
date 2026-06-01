@@ -18,14 +18,14 @@
   "emojiLauncher": {
     "enabled": true,
     "trigger": ";",
-    "recentEmojis": "😭,🥀,✂️,🚨,💥,🤤,🇫🇷,⤪,🧅,❤️‍🩹"
+    "recentEmojis": "🐚,😭,🥀,✂️,🚨,💥,🤤,🇫🇷,⤪,🧅,❤️‍🩹"
   },
   "linuxWallpaperEngine": {
-    "enabled": false,
+    "enabled": true,
     "monitorScenes": {
       "eDP-1": "3658437802",
       "HDMI-A-1": "3371368351",
-      "DP-1": "3586787122"
+      "DP-1": "3658437802"
     },
     "sceneSettings": {
       "2670952853": {
@@ -218,7 +218,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "2605183bd81b2e0e1a63666a0b7742d10e98b98566cf6416a14fa9"
+    "musixmatchToken": "2605312e2036c04f1c5ca3140acca2cb0462500a90635fe89375dc"
   },
   "dankAudioVisualizer": {
     "enabled": true
@@ -250,7 +250,7 @@
   },
   "discordVoice": {
     "enabled": true,
-    "accessToken": "MjA3NjQ2NjczOTAyNTAxODg4.inEYu5rM9xlQJAai0ZOw1gV8qRGXL9"
+    "accessToken": "MjA3NjQ2NjczOTAyNTAxODg4.8sEQ5G6LszDyXgIe8lLQ5aPubSBenm"
   },
   "liveChartSchedule": {
     "enabled": true

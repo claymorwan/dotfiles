@@ -1420,52 +1420,6 @@
       }
     },
     {
-      "id": "dw_1769303607333_9czzjiea7",
-      "widgetType": "mediaFrame",
-      "name": "Media Frame",
-      "enabled": true,
-      "config": {
-        "displayPreferences": [
-          {
-            "name": "eDP-1",
-            "model": "0x07F1"
-          },
-          {
-            "name": "DP-1",
-            "model": "PLX2283H"
-          }
-        ],
-        "imagePath": "/home/claymorwan/Pictures/clairi/1st-anniv-trans.png",
-        "backgroundOpacity": 0,
-        "enableBorder": false,
-        "frameRadius": "7",
-        "syncPositionAcrossScreens": true,
-        "refreshButtonPosition": "disabled",
-        "clickAction": "xdg-open $MEDIA_FRAME_IMAGE",
-        "refreshAction": ""
-      },
-      "positions": {
-        "DP-1": {
-          "width": 400,
-          "height": 260,
-          "x": 60,
-          "y": 800
-        },
-        "eDP-1": {
-          "width": 400,
-          "height": 280,
-          "x": 60,
-          "y": 780
-        },
-        "_synced": {
-          "width": 380,
-          "height": 280,
-          "x": 0.03125,
-          "y": 0.7222222222222222
-        }
-      }
-    },
-    {
       "id": "dw_1778791772676_tzw0yyamz",
       "widgetType": "dankAudioVisualizer",
       "name": "Dank Audio Visualizer",
@@ -1522,10 +1476,10 @@
     },
     "dankNotepadModule": {
       "previewActive": false,
-      "currentFilePath": "notepad-files/untitled-1775922963016.txt",
+      "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "2 et 11\n6 et 10\n\n",
-      "updatedAt": 1780062429534,
+      "sourceContent": "((sprite_2d.current_animation_position*10)//sprite_2d.current_animation_length)",
+      "updatedAt": 1780224007731,
       "highlightedHtml": ""
     }
   },
