@@ -101,6 +101,7 @@ in
         # hiddenBar.enable = true;
         nixPackageRunner.enable = true;
         hydrate.enable = true;
+        quickCapture.enable = true;
 
         dms-common = {
           enable = true;
