@@ -64,31 +64,23 @@
         gifPaste.enable = true;
         gitHubRepos.enable = true;
         imageZoom.enable = true;
-        imgToGif.enable = true;
+        # imgToGif.enable = true;
         keyboardSounds = {
           enable = true;
           soundPack = "osu";
         };
         messageColors.enable = true;
-        moreKaomoji.enable = true;
+        # moreKaomoji.enable = true;
         moyai.enable = true;
         noReplyMention.enable = true;
         openInApp.enable = true;
         petpet.enable = true;
         pictureInPicture.enable = true;
+        moreCommands.enable = true;
         PinDMs = {
           enable = true;
           canCollapseDmSection = true;
           userBasedCategoryList."593822661105156135" = [
-            {
-              id = "ptd8xgu9ax8";
-              name = "AIRIIIII!!!!";
-              color = 15277667;
-              collapsed = false;
-              channels = [
-                "1375490137760206913"
-              ];
-            }
             {
               id = "im6e23ihyaf";
               name = "Important people";
