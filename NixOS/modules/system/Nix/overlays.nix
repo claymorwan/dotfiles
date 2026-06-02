@@ -32,9 +32,9 @@ in
         };
       });
 
-      openldap = prev.openldap.overrideAttrs {
-        doCheck = !prev.stdenv.hostPlatform.isi686;
-      };
+      # openldap = prev.openldap.overrideAttrs {
+      #   doCheck = !prev.stdenv.hostPlatform.isi686;
+      # };
 
       yazi = prev.yazi.override {_7zz = pkgs._7zz-rar; };
 

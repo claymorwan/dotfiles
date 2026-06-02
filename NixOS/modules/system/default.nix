@@ -1,5 +1,6 @@
 {
   imports = [
+    ./archix.nix
     ./boot.nix
     ./catppuccin.nix
     ./virtualisation.nix
