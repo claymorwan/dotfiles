@@ -34,25 +34,41 @@
         hotkey-overlay.title = "File explorer";
       };
 
-      "Print" = {
-        action.spawn-sh = "dms screenshot full --stdout | gradia";
-        hotkey-overlay.title = "Screenshot (screen)";
-      };
-      
-      "Ctrl+Print" = {
-        action.spawn-sh = "dms screenshot --stdout | gradia";
-        hotkey-overlay.title = "Screenshot (region)";
-      };
-
-      "Mod+Print" = {
-        action.spawn-sh = "dms screenshot window --stdout | gradia";
-        hotkey-overlay.title = "Screenshot (window)";
-      };
-
       "Mod+Shift+P" = {
         action.spawn = [ "nirius" "toggle-follow-mode" ];
         hotkey-overlay.title = "Pin window";
       };
+
+      "Print" = {
+        action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "full" ];
+        hotkey-overlay.title = "Screenshot (screen)";
+      };
+      
+      "Ctrl+Print" = {
+        action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "region" ];
+        hotkey-overlay.title = "Screenshot (region)";
+      };
+
+      "Mod+Print" = {
+        action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "window" ];
+        hotkey-overlay.title = "Screenshot (window)";
+      };
+
+      # "Print" = {
+      #   action.spawn-sh = "dms screenshot full --stdout | gradia";
+      #   hotkey-overlay.title = "Screenshot (screen)";
+      # };
+      #
+      # "Ctrl+Print" = {
+      #   action.spawn-sh = "dms screenshot --stdout | gradia";
+      #   hotkey-overlay.title = "Screenshot (region)";
+      # };
+      #
+      # "Mod+Print" = {
+      #   action.spawn-sh = "dms screenshot window --stdout | gradia";
+      #   hotkey-overlay.title = "Screenshot (window)";
+      # };
+
     };
   };
 }
