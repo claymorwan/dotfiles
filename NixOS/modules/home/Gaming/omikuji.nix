@@ -8,6 +8,7 @@
   programs.omikuji = {
     enable = true;
     package = inputs.omikuji.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
+      extraLibraries = (_prev: with pkgs; [ icu ]);
       # Intercept buildFHSEnv to modify target packages
       buildFHSEnv = args: pkgs.buildFHSEnv (args // {
         multiPkgs = envPkgs:
@@ -30,6 +31,8 @@
 
     extraPackages = with pkgs; [
       umu-launcher
+      fuse2
+      fuse3
     ];
 
     settings = {

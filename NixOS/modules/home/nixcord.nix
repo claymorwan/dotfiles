@@ -16,6 +16,7 @@
       # enable = false;
       vencord.enable = false;
       equicord.enable = true;
+      branch = "canary";
 
       commandLineArgs = [
         "--start-minimized"

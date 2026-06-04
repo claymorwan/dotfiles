@@ -1048,7 +1048,7 @@
             "model": "0x07F1"
           }
         ],
-        "shortcutApp": "net.lutris.Lutris",
+        "shortcutApp": "io.github.reakjra.omikuji",
         "backgroundOpacity": 100,
         "drawOutlines": false,
         "drawBorder": true,
@@ -1485,11 +1485,14 @@
     },
     "dankNotepadModule": {
       "previewActive": false,
-      "currentFilePath": "notepad-files/untitled-1775922963016.txt",
+      "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "2 et 11\n6 et 10\n\n",
-      "updatedAt": 1780571539603,
+      "sourceContent": "((sprite_2d.current_animation_position*10)//sprite_2d.current_animation_length)",
+      "updatedAt": 1780613558528,
       "highlightedHtml": ""
+    },
+    "dms_clipboard_search": {
+      "trigger": "cb"
     }
   },
   "clipboardEnterToPaste": false,
