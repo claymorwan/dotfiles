@@ -647,6 +647,10 @@
         {
           "id": "githubHeatmap",
           "enabled": true
+        },
+        {
+          "id": "githubHeatmapRevive",
+          "enabled": true
         }
       ],
       "centerWidgets": [
@@ -888,7 +892,7 @@
       "borderColor": "primary",
       "borderOpacity": 1,
       "borderThickness": 2,
-      "widgetOutlineEnabled": true,
+      "widgetOutlineEnabled": false,
       "widgetOutlineColor": "primary",
       "widgetOutlineOpacity": 1,
       "widgetOutlineThickness": 2,
@@ -915,7 +919,8 @@
       "shadowDirection": "top",
       "shadowColorMode": "default",
       "shadowCustomColor": "#000000",
-      "clickThrough": false
+      "clickThrough": false,
+      "useOverlayLayer": false
     }
   ],
   "desktopClockEnabled": true,
@@ -1480,10 +1485,10 @@
     },
     "dankNotepadModule": {
       "previewActive": false,
-      "currentFilePath": "notepad-files/untitled-1770243197424.txt",
+      "currentFilePath": "notepad-files/untitled-1775922963016.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "((sprite_2d.current_animation_position*10)//sprite_2d.current_animation_length)",
-      "updatedAt": 1780518498514,
+      "sourceContent": "2 et 11\n6 et 10\n\n",
+      "updatedAt": 1780571539603,
       "highlightedHtml": ""
     }
   },

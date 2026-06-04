@@ -17,13 +17,16 @@
       vencord.enable = false;
       equicord.enable = true;
 
-      autoscroll.enable = true;
+      commandLineArgs = [
+        "--start-minimized"
+        "--ozone-platform=wayland"
+        "--enable-features=VaapiVideoDecoder,MiddleClickAutoscroll"
+        # "--enable-blink-features=MiddleClickAutoscroll"
+      ];
     };
 
     equibop = {
       enable = true;
-      package = pkgs.equibop;
-      useSystemEquicord = false;
       autoscroll.enable = true;
     };
 

@@ -77,19 +77,18 @@ in
         alarmClock.enable = true;
         appShortcut.enable = true;
         mediaPlayer.enable = true;
-        desktopCommand.enable = true;
-        amdGpuMonitor.enable = true;
+        # desktopCommand.enable = true;
         mediaFrame.enable = true;
-        dankGifSearch.enable = true;
+        # dankGifSearch.enable = true;
         dankHyprlandWindows.enable = osConfig.globVars.enableHyprland;
-        polyglot.enable = true;
+        # polyglot.enable = true;
         commandRunner.enable = true;
         developerUtilities.enable = true;
         dankNotepadModule.enable = true;
-        githubHeatmap.enable = true;
+        # githubHeatmap.enable = true;
         musicLyrics.enable = true;
         dankAudioVisualizer.enable = true;
-        screenRecorder.enable = true;
+        # screenRecorder.enable = true;
         usbManager.enable = true;
         easyEffects.enable = config.services.easyeffects.enable;
         discordVoice.enable = true;
@@ -100,8 +99,10 @@ in
         mediaControlPlus.enable = true;
         # hiddenBar.enable = true;
         nixPackageRunner.enable = true;
-        hydrate.enable = true;
+        # hydrate.enable = true;
         quickCapture.enable = true;
+        weatherArt.enable = true;
+        githubHeatmapRevive.enable = true;
 
         dms-common = {
           enable = true;

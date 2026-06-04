@@ -1,4 +1,4 @@
-{ inputs, osConfig, ... }:
+{ inputs, config, osConfig, ... }:
 
 {
   imports = [
@@ -7,6 +7,7 @@
 
   catppuccin = {
     enable = true;
+    autoEnable = config.catppuccin.enable;
     flavor = osConfig.globVars.ctp_flavor;
     accent = osConfig.globVars.ctp_accent;
     nvim.enable = false;
