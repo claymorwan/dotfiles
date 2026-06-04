@@ -97,6 +97,8 @@
   "controlCenterShowBatteryIcon": false,
   "controlCenterShowPrinterIcon": false,
   "controlCenterShowScreenSharingIcon": true,
+  "controlCenterShowIdleInhibitorIcon": false,
+  "controlCenterShowDoNotDisturbIcon": false,
   "showPrivacyButton": true,
   "privacyShowMicIcon": true,
   "privacyShowCameraIcon": true,
@@ -229,6 +231,7 @@
   "appsDockEnlargePercentage": 125,
   "appsDockIconSizePercentage": 100,
   "keyboardLayoutNameCompactMode": true,
+  "keyboardLayoutNameShowIcon": false,
   "runningAppsCurrentWorkspace": false,
   "runningAppsGroupByApp": true,
   "runningAppsCurrentMonitor": false,
@@ -1480,7 +1483,7 @@
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
       "sourceContent": "((sprite_2d.current_animation_position*10)//sprite_2d.current_animation_length)",
-      "updatedAt": 1780437352726,
+      "updatedAt": 1780518498514,
       "highlightedHtml": ""
     }
   },

@@ -155,11 +155,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780380182,
-        "narHash": "sha256-cukhSecNvADnLa7dk7GeUB/e1vM6hvRAFt0IDZ8Ox3I=",
+        "lastModified": 1780491591,
+        "narHash": "sha256-gZPb4KN8rFfQZpM+fy80qwnCH3WjnYy1uh0Fvjs2Wfg=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "335c5b4ac55382c2077ab2a18129c03dafb9558b",
+        "rev": "d20aa3b80aa9898391e2eabc742ca87e688e422e",
         "type": "github"
       },
       "original": {
@@ -774,11 +774,11 @@
         "nixpkgs-nixcord": "nixpkgs-nixcord"
       },
       "locked": {
-        "lastModified": 1780393349,
-        "narHash": "sha256-eCFJN1XLUPci+0+9VXLuXn3LVgugLMM/YQVPcq5aC4Y=",
+        "lastModified": 1780509217,
+        "narHash": "sha256-CAes5A7+1S8v0Hb/MyZOs1JXF5RZbgUQ/rpXDEBoc2c=",
         "owner": "kaylorben",
         "repo": "nixcord",
-        "rev": "2bdf40a608e5e630b58d8546438d7c11a801510c",
+        "rev": "585248a6299df3f0dd6b84fcd8ea1e5f74b32062",
         "type": "github"
       },
       "original": {

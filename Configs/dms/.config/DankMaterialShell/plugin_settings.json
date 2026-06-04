@@ -21,7 +21,7 @@
     "recentEmojis": "😭,🐚,🥀,✂️,🚨,💥,🤤,🇫🇷,⤪,🧅,❤️‍🩹"
   },
   "linuxWallpaperEngine": {
-    "enabled": true,
+    "enabled": false,
     "monitorScenes": {
       "eDP-1": "3658437802",
       "HDMI-A-1": "3371368351",
@@ -218,7 +218,7 @@
   },
   "musicLyrics": {
     "enabled": true,
-    "musixmatchToken": "2605312e2036c04f1c5ca3140acca2cb0462500a90635fe89375dc"
+    "musixmatchToken": "2606035175aecb3cc39d85e94b4c9ace02223d443b1c31e6fc0d42"
   },
   "dankAudioVisualizer": {
     "enabled": true

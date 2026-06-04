@@ -37,7 +37,7 @@ in
     # Apps
     launch_prefix = mkStrVar "app2unit --";
     terminal = mkStrVar "ghostty";
-    browser = mkStrVar "zen-beta"; # "MOZ_LEGACY_PROFILES=1 zen-beta";
+    browser = mkStrVar "zen-beta";
     discord = mkStrVar "discord --wayland";
 
     # Dirs

@@ -13,6 +13,7 @@
   programs.nixcord = {
     enable = true;
     discord = {
+      # enable = false;
       vencord.enable = false;
       equicord.enable = true;
 
@@ -20,7 +21,9 @@
     };
 
     equibop = {
-      # enable = true;
+      enable = true;
+      package = pkgs.equibop;
+      useSystemEquicord = false;
       autoscroll.enable = true;
     };
 

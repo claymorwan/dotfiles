@@ -25,6 +25,6 @@
     sqlitebrowser
     distrobox
     boxbuddy
-    yq
+    unityhub
   ];
 }
