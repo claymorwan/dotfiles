@@ -206,7 +206,7 @@ in
             "floating-statusbar"
             # "Neo-Zen"
             ## Deta Loading Bar
-            "c9ee0d97-d2d6-40fd-8f85-549fe000b868"
+            # "c9ee0d97-d2d6-40fd-8f85-549fe000b868"
 
             # Zen
             ## Audio Indicator Enhanced
