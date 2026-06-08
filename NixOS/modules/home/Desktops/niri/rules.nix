@@ -40,6 +40,10 @@ in
             app-id = "lutris";
             title = "^Log for.*";
           }
+          {
+            app-id = "omikuji";
+            title = "^omikuji · .* logs$";
+          }
       
           # Dialogs
           {

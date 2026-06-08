@@ -1,14 +1,14 @@
 { pkgs, lib, config, ... }:
 
+let
+  baseCfg = builtins.readFile config.xdg.configFile."MangoHud/MangoHud.conf".source;
+in 
 {
   programs.mangohud = {
     enable = true;
   };
 
-  xdg.configFile = let
-    baseCfg = builtins.readFile config.xdg.configFile."MangoHud/MangoHud.conf".source;
-  in
-  lib.mkIf config.programs.mangohud.enable {
+  xdg.configFile = lib.mkIf config.programs.mangohud.enable {
     "MangoHud/sober.conf".text = baseCfg;
     
     "MangoHud/java.conf".text = ''
@@ -17,6 +17,10 @@
     
     "MangoHud/ENA-4-DreamBBQ.conf".text = ''
       font_file=${pkgs.no-continue}/share/fonts/truetype/gomarice_no_continue.ttf
+    '' + baseCfg;
+
+    "MangoHud/wine-White Knuckle.conf".text = ''
+      position=top-right
     '' + baseCfg;
   };
 }

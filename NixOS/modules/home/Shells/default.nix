@@ -7,6 +7,8 @@
     ./zsh.nix
   ];
 
+  programs.carapace.enable = true;
+
   # home.shellAliases = {
   #   nv = "nvim";
   #   sv = "sudo nvim";

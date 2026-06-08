@@ -64,7 +64,7 @@ nu-scripts = {
 };
 
 kopuz = {
-  url = "github:temidaradev/kopuz?tag=latest";
+  url = "github:temidaradev/kopuz"; # ?tag=latest";
   # inputs.nixpkgs.follows = "nixpkgs";
 };
 

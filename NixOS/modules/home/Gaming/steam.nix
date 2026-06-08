@@ -33,7 +33,8 @@ in
     inputs.steam-config-nix.homeModules.default
   ];
 
-  home.packages = [
+  home.packages = with pkgs; [
+    sgdboop
     inputs.scopebuddy.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
@@ -223,6 +224,12 @@ in
 
         # Bit Buddy Demo
         "3950450" = winGameOptions;
+
+        # Colossus - Eternal Blight
+        "4802920" = winGameOptions;
+
+        # WEBFISHING
+        "3146520" = winGameOptions;
       };
     };
   };

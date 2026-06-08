@@ -28,7 +28,14 @@
 
     equibop = {
       enable = true;
+      useSystemEquicord = false;
       autoscroll.enable = true;
+    };
+
+    equibopConfig = {
+      plugins = {
+        equibopStreamFixes.enable = true;
+      };
     };
 
     config = let

@@ -103,6 +103,11 @@ in
         quickCapture.enable = true;
         weatherArt.enable = true;
         githubHeatmapRevive.enable = true;
+        
+        desktopWidgetToggle = {
+          enable = true;
+          src = inputs.dms-desktop-widget-toggle;
+        };
 
         dms-common = {
           enable = true;

@@ -643,14 +643,6 @@
         {
           "id": "separator",
           "enabled": true
-        },
-        {
-          "id": "githubHeatmap",
-          "enabled": true
-        },
-        {
-          "id": "githubHeatmapRevive",
-          "enabled": true
         }
       ],
       "centerWidgets": [
@@ -761,15 +753,7 @@
           "enabled": true
         },
         {
-          "id": "hydrate",
-          "enabled": true
-        },
-        {
           "id": "dankKDEConnect",
-          "enabled": true
-        },
-        {
-          "id": "liveChartSchedule",
           "enabled": true
         },
         {
@@ -1390,22 +1374,17 @@
       "id": "dw_1766722143485_14jkl7g83",
       "widgetType": "mediaPlayer",
       "name": "Media Player",
-      "enabled": true,
+      "enabled": false,
       "config": {
         "displayPreferences": [
-          {
-            "name": "DP-1",
-            "model": "PLX2283H"
-          },
-          {
-            "name": "eDP-1",
-            "model": "0x07F1"
-          }
+          "all"
         ],
         "backgroundOpacity": 100,
         "showOnOverlay": false,
         "syncPositionAcrossScreens": true,
-        "showOnOverviewOnly": true
+        "showOnOverviewOnly": false,
+        "showOnOverview": false,
+        "clickThrough": false
       },
       "positions": {
         "DP-1": {
@@ -1421,12 +1400,13 @@
           "height": 210
         },
         "_synced": {
-          "x": 0.010416666666666666,
+          "x": 0.020833333333333332,
           "y": 0.7962962962962963,
           "width": 400,
           "height": 200
         }
-      }
+      },
+      "group": "dwg_1769526213643_u8gd7uarl"
     },
     {
       "id": "dw_1778791772676_tzw0yyamz",
@@ -1460,6 +1440,62 @@
           "height": 200
         }
       }
+    },
+    {
+      "id": "dw_1780742753927_wwl469qzo",
+      "widgetType": "systemMonitor",
+      "name": "System Monitor GO",
+      "enabled": false,
+      "config": {
+        "showHeader": true,
+        "transparency": 1,
+        "colorMode": "primary",
+        "customColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1,
+          "hsvHue": -1,
+          "hsvSaturation": 0,
+          "hsvValue": 1,
+          "hslHue": -1,
+          "hslSaturation": 0,
+          "hslLightness": 1,
+          "valid": true
+        },
+        "showCpu": true,
+        "showCpuGraph": true,
+        "showCpuTemp": true,
+        "showGpuTemp": true,
+        "gpuPciId": "",
+        "showMemory": true,
+        "showMemoryGraph": true,
+        "showNetwork": true,
+        "showNetworkGraph": true,
+        "showDisk": true,
+        "showTopProcesses": true,
+        "topProcessCount": 5,
+        "topProcessSortBy": "cpu",
+        "layoutMode": "auto",
+        "graphInterval": 60,
+        "displayPreferences": [
+          "all"
+        ],
+        "showOnOverlay": false,
+        "syncPositionAcrossScreens": true,
+        "showOnOverview": false,
+        "showOnOverviewOnly": false,
+        "clickThrough": false
+      },
+      "positions": {
+        "_synced": {
+          "width": 380,
+          "height": 520,
+          "x": 0.010416666666666666,
+          "y": 0.018518518518518517
+        }
+      },
+      "group": "dwg_1769526213643_u8gd7uarl"
     }
   ],
   "desktopWidgetGroups": [
@@ -1472,11 +1508,6 @@
       "id": "dwg_1769526213643_u8gd7uarl",
       "name": "Game overlay",
       "collapsed": false
-    },
-    {
-      "id": "dwg_1771238136245_agfojc3hp",
-      "name": "Overview",
-      "collapsed": false
     }
   ],
   "builtInPluginSettings": {
@@ -1485,10 +1516,10 @@
     },
     "dankNotepadModule": {
       "previewActive": false,
-      "currentFilePath": "notepad-files/untitled-1775922963016.txt",
+      "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "2 et 11\n6 et 10\n\n",
-      "updatedAt": 1780650829356,
+      "sourceContent": "-1843, 91, 3023",
+      "updatedAt": 1780920058535,
       "highlightedHtml": ""
     },
     "dms_clipboard_search": {

@@ -184,6 +184,22 @@
         "type": "github"
       }
     },
+    "dms-desktop-widget-toggle": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1780752720,
+        "narHash": "sha256-V8L3ZoPiqgkzaDY1k9uJFOtidASh/0Kt9A3VtZrqpdA=",
+        "owner": "hthienloc",
+        "repo": "dms-desktop-widget-toggle",
+        "rev": "7570a70148eef455eac86ebc48d9195412f66990",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hthienloc",
+        "repo": "dms-desktop-widget-toggle",
+        "type": "github"
+      }
+    },
     "dms-plugin-dankPinentry": {
       "inputs": {
         "flake-parts": "flake-parts_2",
@@ -212,11 +228,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780626802,
-        "narHash": "sha256-kzdnpNc1dX+7myLb0nUo2e6Ojff/uQnjHQvGVxGG/4U=",
+        "lastModified": 1780711975,
+        "narHash": "sha256-l6oEu3L8ptc6jc6QHDyK6uMLjgSky0UjtDi6acEocDk=",
         "owner": "AvengeMedia",
         "repo": "dms-plugin-registry",
-        "rev": "fdded328772e526b2a5d31c52a2a2e15b805d7af",
+        "rev": "3483bc43c345f4c6c8ddd68974aa3b571da922d7",
         "type": "github"
       },
       "original": {
@@ -774,11 +790,11 @@
         "nixpkgs-nixcord": "nixpkgs-nixcord"
       },
       "locked": {
-        "lastModified": 1780509217,
-        "narHash": "sha256-CAes5A7+1S8v0Hb/MyZOs1JXF5RZbgUQ/rpXDEBoc2c=",
+        "lastModified": 1780751320,
+        "narHash": "sha256-3PlWrZkSwElqYHMnWi4d0A+GxlvCXk0JaMsTGghmQGE=",
         "owner": "kaylorben",
         "repo": "nixcord",
-        "rev": "585248a6299df3f0dd6b84fcd8ea1e5f74b32062",
+        "rev": "2b70dbed679d2705696deb36f0778c9ef9f1ded2",
         "type": "github"
       },
       "original": {
@@ -895,16 +911,16 @@
     },
     "nixpkgs-nixcord": {
       "locked": {
-        "lastModified": 1779102034,
-        "narHash": "sha256-vZJZjLo513IeI8hjzHFc6TDezUd4uCE2Eq4SNO3DNNg=",
+        "lastModified": 1780453794,
+        "narHash": "sha256-bXMRa9VTsHSPXL4Cw8R6JJLQeY3Y/IP4+YJCYVmQ7FY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "687f05a9184cad4eaf905c48b63649e3a86f5433",
+        "rev": "6b316287bae2ee04c9b93c8c858d930fd07d7338",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-25.11",
+        "ref": "nixos-26.05",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -1173,6 +1189,7 @@
         "dgop": "dgop",
         "dms": "dms",
         "dms-common": "dms-common",
+        "dms-desktop-widget-toggle": "dms-desktop-widget-toggle",
         "dms-plugin-dankPinentry": "dms-plugin-dankPinentry",
         "dms-plugin-registry": "dms-plugin-registry",
         "dsearch": "dsearch",

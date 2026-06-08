@@ -106,7 +106,7 @@ in
     xdg = {
       dataFile = lib.mergeAttrs
         (lib.mapAttrs' (
-          name: value: lib.nameValuePair "Steam/steamui/skins/${name}" { source = value; }
+          name: value: lib.nameValuePair "Steam/millennium/themes/${name}" { source = value; }
         ) cfg.themes)
         (lib.mapAttrs' (
           name: value: lib.nameValuePair "millennium/plugins/${name}" { source = value; }

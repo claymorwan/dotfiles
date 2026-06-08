@@ -100,7 +100,7 @@
     };
     
     kopuz = {
-      url = "github:temidaradev/kopuz?tag=latest";
+      url = "github:temidaradev/kopuz"; # ?tag=latest";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
     
@@ -171,6 +171,11 @@
     
     dms-common = {
       url = "github:hthienloc/dms-common";
+      flake = false;
+    };
+    
+    dms-desktop-widget-toggle = {
+      url = "github:hthienloc/dms-desktop-widget-toggle";
       flake = false;
     };
     # ~/~ end

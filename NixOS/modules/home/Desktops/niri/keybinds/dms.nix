@@ -90,5 +90,11 @@
       action.spawn = [ "dms" "ipc" "call" "brightness" "decrement" "5" ];
       hotkey-overlay.title = "Brightness down";
     };
+
+    "Mod+G" = {
+      action.spawn = [ "dms" "ipc" "call" "desktopWidgetToggle" "toggle" "g1" ];
+      repeat = false;
+      hotkey-overlay.title = "Toggle Game Overlay";
+    };
   };
 }
