@@ -102,12 +102,8 @@ in
         # hydrate.enable = true;
         quickCapture.enable = true;
         weatherArt.enable = true;
-        githubHeatmapRevive.enable = true;
-        
-        desktopWidgetToggle = {
-          enable = true;
-          src = inputs.dms-desktop-widget-toggle;
-        };
+        githubHeatmapRevive.enable = true;    
+        desktopWidgetToggle.enable = true;
 
         dms-common = {
           enable = true;

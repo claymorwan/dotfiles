@@ -62,9 +62,4 @@ dms-common = {
   url = "github:hthienloc/dms-common";
   flake = false;
 };
-
-dms-desktop-widget-toggle = {
-  url = "github:hthienloc/dms-desktop-widget-toggle";
-  flake = false;
-};
 ```

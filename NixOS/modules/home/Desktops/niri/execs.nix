@@ -6,7 +6,7 @@
       { sh =  "sleep 3; ${osConfig.globVars.discord} --start-minimized"; }
       # { argv = [ "nsticky" ]; }
       { argv = [ "steam" "-silent" ]; }
-      ( lib.mkIf config.programs.noctalia-shell.enable { argv = [ "wallpaperengine-gui" "--minimized" ]; })
+      # ( lib.mkIf config.programs.noctalia-shell.enable { argv = [ "wallpaperengine-gui" "--minimized" ]; })
     ];
   };
 }

@@ -27,7 +27,7 @@
     
     omnisearch = {
       enable = true;
-      package =  pkgs.omnisearch;
+      # package =  pkgs.omnisearch;
     };
 
     printing.enable = true;

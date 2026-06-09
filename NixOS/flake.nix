@@ -173,11 +173,6 @@
       url = "github:hthienloc/dms-common";
       flake = false;
     };
-    
-    dms-desktop-widget-toggle = {
-      url = "github:hthienloc/dms-desktop-widget-toggle";
-      flake = false;
-    };
     # ~/~ end
     # ~/~ begin <<flake/inputs/4-package-src.md#flake-inputs>>[0]
     fluxer-src = {
