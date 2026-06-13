@@ -230,6 +230,9 @@ in
 
         # WEBFISHING
         "3146520" = winGameOptions;
+
+        # Deltarune
+        "1671210" = winGameOptions;
       };
     };
   };

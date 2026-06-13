@@ -20,9 +20,9 @@
 
       commandLineArgs = [
         "--start-minimized"
-        "--ozone-platform=wayland"
-        "--enable-features=VaapiVideoDecoder,MiddleClickAutoscroll"
-        # "--enable-blink-features=MiddleClickAutoscroll"
+        # "--ozone-platform=wayland"
+        # "--enable-features=VaapiVideoDecoder,MiddleClickAutoscroll"
+        "--enable-blink-features=VaapiVideoDecoder,MiddleClickAutoscroll"
       ];
     };
 
@@ -55,11 +55,11 @@
 
       plugins = {
         bannersEverywhere.enable = true;
-        BlurNSFW.enable = true;
+        blurNsfw.enable = true;
         callTimer.enable = true;
         channelTabs.enable = true;
         characterCounter.enable = true;
-        ClearURLs.enable = true;
+        clearUrls.enable = true;
         crashHandler.enable = true;
         decor.enable = true;
         experiments.enable = true;
@@ -74,7 +74,7 @@
         forceOwnerCrown.enable = true;
         friendCodes.enable = true;
         friendsSince.enable = true;
-        FullVCPFP.enable = true;
+        fullVcpfp.enable = true;
         gifPaste.enable = true;
         gitHubRepos.enable = true;
         imageZoom.enable = true;
@@ -91,7 +91,7 @@
         petpet.enable = true;
         pictureInPicture.enable = true;
         moreCommands.enable = true;
-        PinDMs = {
+        pinDms = {
           enable = true;
           canCollapseDmSection = true;
           userBasedCategoryList."593822661105156135" = [
@@ -119,7 +119,7 @@
         };
         typingIndicator.enable = true;
         unlockedAvatarZoom.enable = true;
-        USRBG.enable = true;
+        usrbg.enable = true;
         viewIcons = {
           enable = true;
           format = "png";

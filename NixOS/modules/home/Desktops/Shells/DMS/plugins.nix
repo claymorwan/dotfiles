@@ -8,7 +8,7 @@ in
 {
 
   imports = [
-    inputs.dms-plugin-registry.modules.default
+    inputs.dms-plugin-registry.homeModules.default
     inputs.nix-monitor.homeManagerModules.default
   ];
 

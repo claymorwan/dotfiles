@@ -41,4 +41,11 @@
     plymouth.enable = true;
     # kernelParams = [ "quiet" ];
   };
+
+  # console = {
+  #   packages = with pkgs; [
+  #     nerd-fonts.jetbrains-mono
+  #   ];
+  #   font = "${pkgs.nerd-fonts.jetbrains-mono}/share/fonts/truetype/NerdFonts/JetBrainsMono/JetBrainsMonoNerdFont-Regular.ttf";
+  # };
 }
