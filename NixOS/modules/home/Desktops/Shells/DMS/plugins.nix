@@ -3,6 +3,7 @@
 let
   dms-plugins = config.programs.dank-material-shell.plugins;
   system = pkgs.stdenv.hostPlatform.system;
+  plugin-packages = inputs.dms-plugin-registry.packages.${system};
   inherit (lib) mkIf;
 in 
 {
@@ -104,6 +105,8 @@ in
         weatherArt.enable = true;
         githubHeatmapRevive.enable = true;    
         desktopWidgetToggle.enable = true;
+        dropdownMenu.enable = true;
+        # mediaDownloader.enable = true;
 
         dms-common = {
           enable = true;

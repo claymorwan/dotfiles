@@ -5,7 +5,7 @@ let version = http get https://api.canary.fluxer.app/dl/desktop/canary/linux/x64
   | get http_response.headers
   | where name == 'content-disposition'
   | get value
-  | parse --regex '(\d\.\d\.\d+)'
+  | parse --regex '(\d{4}\.\d*\.\d*)'
   | get 0.capture0
 
 let fetcher_hash = nix-prefetch-url $'https://api.canary.fluxer.app/dl/desktop/canary/linux/x64/($version)/appimage'

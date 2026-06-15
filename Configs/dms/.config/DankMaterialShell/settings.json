@@ -618,12 +618,6 @@
       "squareCorners": true,
       "gothCornersEnabled": true,
       "borderEnabled": true
-    },
-    "bar1775588628193": {
-      "shadowIntensity": 0,
-      "squareCorners": false,
-      "gothCornersEnabled": false,
-      "borderEnabled": false
     }
   },
   "barConfigs": [
@@ -648,6 +642,14 @@
         },
         {
           "id": "separator",
+          "enabled": true
+        },
+        {
+          "id": "githubHeatmapRevive",
+          "enabled": true
+        },
+        {
+          "id": "mediaDownloader",
           "enabled": true
         }
       ],
@@ -763,8 +765,20 @@
           "enabled": true
         },
         {
-          "id": "clipboardPlus",
+          "id": "liveChartSchedule",
           "enabled": true
+        },
+        {
+          "id": "dropdownMenu:variant_1781529300789",
+          "enabled": true
+        },
+        {
+          "id": "clipboardPlus",
+          "enabled": false
+        },
+        {
+          "id": "developerUtilities",
+          "enabled": false
         }
       ],
       "centerWidgets": [
@@ -830,87 +844,6 @@
       "shadowColorMode": "text",
       "shadowCustomColor": "#000000",
       "widgetPadding": 8
-    },
-    {
-      "id": "bar1775588628193",
-      "name": "Bar 3",
-      "enabled": false,
-      "position": 3,
-      "screenPreferences": [
-        "all"
-      ],
-      "showOnLastDisplay": false,
-      "leftWidgets": [],
-      "centerWidgets": [
-        {
-          "id": "dmsScreenshot",
-          "enabled": true
-        },
-        {
-          "id": "screenRecorder",
-          "enabled": true
-        },
-        {
-          "id": "colorPicker",
-          "enabled": true
-        },
-        {
-          "id": "easyEffects",
-          "enabled": true
-        },
-        {
-          "id": "developerUtilities",
-          "enabled": true
-        },
-        {
-          "id": "clipboardPlus",
-          "enabled": true
-        }
-      ],
-      "rightWidgets": [],
-      "spacing": 4,
-      "innerPadding": 4,
-      "bottomGap": 0,
-      "transparency": 0,
-      "widgetTransparency": 1,
-      "squareCorners": false,
-      "noBackground": false,
-      "gothCornersEnabled": false,
-      "gothCornerRadiusOverride": true,
-      "gothCornerRadiusValue": 23,
-      "borderEnabled": false,
-      "borderColor": "primary",
-      "borderOpacity": 1,
-      "borderThickness": 2,
-      "widgetOutlineEnabled": false,
-      "widgetOutlineColor": "primary",
-      "widgetOutlineOpacity": 1,
-      "widgetOutlineThickness": 2,
-      "widgetPadding": 8,
-      "maximizeWidgetIcons": false,
-      "maximizeWidgetText": false,
-      "removeWidgetPadding": false,
-      "fontScale": 1,
-      "iconScale": 1,
-      "autoHide": true,
-      "autoHideDelay": 250,
-      "showOnWindowsOpen": false,
-      "openOnOverview": false,
-      "visible": true,
-      "popupGapsAuto": true,
-      "popupGapsManual": 4,
-      "maximizeDetection": false,
-      "scrollEnabled": false,
-      "scrollXBehavior": "column",
-      "scrollYBehavior": "workspace",
-      "shadowIntensity": 0,
-      "shadowOpacity": 60,
-      "shadowDirectionMode": "inherit",
-      "shadowDirection": "top",
-      "shadowColorMode": "default",
-      "shadowCustomColor": "#000000",
-      "clickThrough": false,
-      "useOverlayLayer": false
     }
   ],
   "desktopClockEnabled": true,
@@ -1525,7 +1458,7 @@
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
       "sourceContent": "-1843, 91, 3023",
-      "updatedAt": 1781346668732,
+      "updatedAt": 1781530058848,
       "highlightedHtml": ""
     },
     "dms_clipboard_search": {

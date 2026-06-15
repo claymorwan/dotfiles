@@ -3,6 +3,7 @@
 {
   imports = [
     inputs.omnisearch.nixosModules.default
+    inputs.vertd.nixosModules.default
   ];
 
   services = {
@@ -30,6 +31,7 @@
       # package =  pkgs.omnisearch;
     };
 
+    # vertd.enable = true;
     printing.enable = true;
     joycond.enable = true;
     openssh.enable = true;

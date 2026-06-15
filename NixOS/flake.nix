@@ -78,6 +78,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    nixcord-rollback = {
+      url = "github:kaylorben/nixcord/0aef5bd949185a189adb79c886acee1abd64109a";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     devenvcp = {
       url = "git+https://codeberg.org/claymorwan/devenvcp";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -107,6 +112,11 @@
     omikuji = {
       url = "github:reakjra/omikuji";
       # inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    vertd = {
+      url = "github:VERT-sh/vertd";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]

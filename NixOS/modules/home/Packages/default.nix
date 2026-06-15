@@ -40,7 +40,7 @@ in
     dragon-drop
     fzf
     scrcpy
-    yt-dlp-light
+    yt-dlp
     lolcat
     kittysay
     sl

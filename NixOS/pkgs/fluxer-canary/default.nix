@@ -7,11 +7,11 @@
 
 let
   pname = "fluxer-canary-appimage";
-  version = "0.0.167";
+  version = "2026.602.31138";
   
   src = fetchurl {
     url = "https://api.canary.fluxer.app/dl/desktop/canary/linux/x64/${version}/appimage";
-    hash = "sha256-BPjw3bFUBlhvZC1ocp/zb4sFTpgCxQwMwYZBA+bj6rM=";
+    hash = "sha256-d4FAWwrWyoyp7lo8X+nIe+Dd6Z8rDThyK1wU00f7rjY=";
   };
 
   appimageContents = appimageTools.extractType2 {
