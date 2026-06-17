@@ -233,6 +233,9 @@ in
 
         # Deltarune
         "1671210" = winGameOptions;
+
+        # Chunky JUMP!
+        "4016020" = winGameOptions;
       };
     };
   };
