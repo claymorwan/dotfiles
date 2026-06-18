@@ -78,7 +78,7 @@ in
     shijima-qt-bin
     nicotine-plus
     gpu-screen-recorder-gtk
-    # inputs.kopuz.packages.${system}.default
+    inputs.kopuz.packages.${system}.default
     # (lib.mkIf config.programs.noctalia-shell.enable pkgs.wallpaperengine-gui)
 
     # Kde stuff

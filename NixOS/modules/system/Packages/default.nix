@@ -67,6 +67,7 @@
     usbutils
     wlr-randr
     android-tools
+    mesa-demos
 
     gnumake
     gcc

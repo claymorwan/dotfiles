@@ -14,10 +14,10 @@
       "rtw88_core"
     ];
 
-    extraModulePackages = with config.boot.kernelPackages; [
-      rtl88x2bu
-      # (config.boot.kernelPackages.callPackage ./../../pkgs/rtl88x2bu.nix {})
-    ];
+    # extraModulePackages = with config.boot.kernelPackages; [
+    #   rtl88x2bu
+    #   # (config.boot.kernelPackages.callPackage ./../../pkgs/rtl88x2bu.nix {})
+    # ];
 
     extraModprobeConfig = ''
       options 88x2bu rtw_switch_usb_mode=1

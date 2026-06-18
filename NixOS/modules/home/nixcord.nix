@@ -61,13 +61,13 @@ in
       #         branch
       #         commandLineArgs;
       # };
-      branch = "development"; # "canary";
+      # branch = "canary"; # "development";
       vencord.enable = false;
       equicord.enable = true;
 
       commandLineArgs = [
         "--start-minimized"
-        "--ozone-platform=wayland"
+        # "--ozone-platform=wayland"
         # "--enable-features=VaapiVideoDecoder,MiddleClickAutoscroll"
         "--enable-blink-features=VaapiVideoDecoder,MiddleClickAutoscroll"
       ];
