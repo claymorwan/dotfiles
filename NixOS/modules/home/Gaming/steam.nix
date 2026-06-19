@@ -1,13 +1,15 @@
 { inputs, pkgs, lib, ... }:
 
 let
+  system = pkgs.stdenv.hostPlatform.system;
+
   defaultWrappers = [
     pkgs.gamemode
     (lib.getExe' pkgs.mangohud "mangohud")
   ];
 
   gamescopeWrapper = [
-    (lib.getExe' inputs.scopebuddy.packages.${pkgs.stdenv.hostPlatform.system}.default "scopebuddy")
+    (lib.getExe' inputs.scopebuddy.packages.${system}.default "scopebuddy")
     "-w" "3840" "-h" "2160"
     "-O" "DP-1"
     "-f"
@@ -35,7 +37,7 @@ in
 
   home.packages = with pkgs; [
     sgdboop
-    inputs.scopebuddy.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.scopebuddy.packages.${system}.default
   ];
 
   programs.steam = {
@@ -236,6 +238,15 @@ in
 
         # Chunky JUMP!
         "4016020" = winGameOptions;
+
+        # ReStory Chill Electronic Repairs Demo
+        "4146680" = winGameOptions;
+
+        # VHOLUME Demo
+        "4245250" = winGameOptions;
+
+        # XenoFeels Demo
+        "4791300" = winGameOptions;
       };
     };
   };

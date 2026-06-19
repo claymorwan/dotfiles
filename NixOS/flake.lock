@@ -1130,22 +1130,6 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1765838191,
-        "narHash": "sha256-m5KWt1nOm76ILk/JSCxBM4MfK3rYY7Wq9/TZIIeGnT8=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "c6f52ebd45e5925c188d1a20119978aa4ffd5ef6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-25.11",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_7": {
-      "locked": {
         "lastModified": 1754340878,
         "narHash": "sha256-lgmUyVQL9tSnvvIvBp7x1euhkkCho7n3TMzgjdvgPoU=",
         "owner": "nixos",
@@ -1428,15 +1412,17 @@
     "steam-config-nix": {
       "inputs": {
         "flake-parts": "flake-parts_7",
-        "nixpkgs": "nixpkgs_6",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1773421780,
-        "narHash": "sha256-bkZGvIWV8JavLMQ2KzddrMCf9YBeiIM4OgdiwKcFx8M=",
+        "lastModified": 1781834224,
+        "narHash": "sha256-l9pVFs8+CmCvC+feR/PL5vstu3CVmKx/xCW8fGmux0c=",
         "owner": "different-name",
         "repo": "steam-config-nix",
-        "rev": "7b8021b2739733c547e2fe02739e6b8452813aa7",
+        "rev": "22c06e684b0785f9031872e0af7d9a96d27ad87c",
         "type": "github"
       },
       "original": {
@@ -1525,7 +1511,7 @@
     },
     "treefmt-nix_2": {
       "inputs": {
-        "nixpkgs": "nixpkgs_7"
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1755934250,
