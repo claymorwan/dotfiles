@@ -2,6 +2,11 @@
 
 {
   hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+
     opentabletdriver = {
       enable = true;
       daemon.enable = true;

@@ -1,0 +1,20 @@
+{
+    "allDayReminderDaysBefore": 0,
+    "allDayReminderTime": "09:00",
+    "allDayReminders": false,
+    "closeBehavior": "minimize",
+    "colorSource": "auto",
+    "customThemeFile": "",
+    "defaultEventDurationMinutes": 30,
+    "defaultReminderMinutes": 10,
+    "firstDayOfWeek": -1,
+    "presetTheme": "purple",
+    "reminderPersist": true,
+    "remindersEnabled": true,
+    "showWeekNumbers": false,
+    "sidebarWidth": 240,
+    "snoozeMinutes": 5,
+    "themeMode": "auto",
+    "timeFormat": "auto",
+    "use24HourClock": true
+}

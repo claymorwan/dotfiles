@@ -121,6 +121,26 @@
         "type": "github"
       }
     },
+    "dcal": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1781791712,
+        "narHash": "sha256-GdR9dHzdt+/2uarPlVeH1lVnLdRL7duYOQfOLQyOK0g=",
+        "owner": "AvengeMedia",
+        "repo": "dankcalendar",
+        "rev": "c324586640dcec7af72aa79e596bb945bf92391d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "dankcalendar",
+        "type": "github"
+      }
+    },
     "devenvcp": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -1270,6 +1290,7 @@
         "archix": "archix",
         "beaker-src": "beaker-src",
         "catppuccin": "catppuccin",
+        "dcal": "dcal",
         "devenvcp": "devenvcp",
         "dgop": "dgop",
         "dms": "dms",

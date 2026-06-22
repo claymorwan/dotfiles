@@ -23,4 +23,10 @@
       options 88x2bu rtw_switch_usb_mode=1
     '';
   };
+
+  hardware.amdgpu = {
+    initrd.enable = true;
+    opencl.enable = true;
+    zluda.enable = true;
+  };
 }
