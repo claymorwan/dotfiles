@@ -9,6 +9,7 @@
       obs-pipewire-audio-capture
       input-overlay
       droidcam-obs
+      obs-vaapi
       # obs-vkcapture
       # obs-source-clone
       # obs-move-transition

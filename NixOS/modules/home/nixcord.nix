@@ -5,42 +5,6 @@
   ...
 }:
 
-let
-  oldDiscord =
-    inputs.nixcord-rollback.packages.${pkgs.stdenv.hostPlatform.system}.discord;
-
-  binaryNameFor = branch:
-    if pkgs.stdenvNoCC.isLinux then
-      {
-        stable = "Discord";
-        ptb = "DiscordPTB";
-        canary = "DiscordCanary";
-        development = "DiscordDevelopment";
-      }.${branch}
-    else
-      {
-        stable = "Discord";
-        ptb = "Discord PTB";
-        canary = "Discord Canary";
-        development = "Discord Development";
-      }.${branch};
-
-  addCommandLineArgs = pkg: branch: commandLineArgs:
-    if commandLineArgs == [ ] then
-      pkg
-    else
-      pkg.overrideAttrs (oldAttrs: {
-        postFixup = (oldAttrs.postFixup or "")
-          + lib.optionalString pkgs.stdenvNoCC.isLinux ''
-            wrapProgramShell "$out/opt/${binaryNameFor branch}/${binaryNameFor branch}" \
-              --add-flags ${lib.escapeShellArg (lib.escapeShellArgs commandLineArgs)}
-          ''
-          + lib.optionalString pkgs.stdenvNoCC.isDarwin ''
-            wrapProgram "$out/bin/${binaryNameFor branch}" \
-              --add-flags ${lib.escapeShellArg (lib.escapeShellArgs commandLineArgs)}
-          '';
-      });
-in 
 {
   imports = [
     inputs.nixcord.homeModules.nixcord
@@ -50,18 +14,6 @@ in
     enable = true;
     discord = {
       # enable = false;
-      # package = oldDiscord // {
-      #   override= args:
-      #     let
-      #       commandLineArgs = args.commandLineArgs or [ ];
-      #       branch = args.branch or "stable";
-      #     in
-      #       addCommandLineArgs
-      #         (oldDiscord.override (builtins.removeAttrs args [ "commandLineArgs" ]))
-      #         branch
-      #         commandLineArgs;
-      # };
-      # branch = "canary"; # "development";
       vencord.enable = false;
       equicord.enable = true;
 
@@ -77,6 +29,30 @@ in
       enable = true;
       useSystemEquicord = false;
       autoscroll.enable = true;
+      settings = {
+        discordBranch = "stable";
+        minimizeToTray = true;
+        arRPC = true;
+        splashColor = "rgb(186, 194, 222)";
+        splashBackground = "rgb(30, 30, 46)";
+        spellCheckLanguages = [
+          "en-US"
+          "en"
+          "fr-FR"
+          "fr"
+        ];
+        splashProgress = true;
+        openLinksWithElectron = true;
+        audio = {
+          onlySpeakers = true;
+          onlyDefaultSpeakers = true;
+          ignoreInputMedia = false;
+          ignoreDevices = false;
+          deviceSelect = false;
+          ignoreVirtual = true;
+        };
+        hardwareVideoAcceleration = false;
+      };
     };
 
     equibopConfig = {

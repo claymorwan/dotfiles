@@ -1,5 +1,13 @@
 { inputs, pkgs, config, ... }:
 
+let
+  gstPackages = with pkgs.gst_all_1; [
+    gstreamer
+    gst-plugins-base
+    gst-libav
+    gst-vaapi
+  ];
+in 
 {
   imports = [
     ./flatpak.nix
@@ -68,6 +76,7 @@
     wlr-randr
     android-tools
     mesa-demos
+    libva-utils
 
     gnumake
     gcc
@@ -79,6 +88,8 @@
 
     vlc
     mpv
-  ];
+  ]
+  ++ gstPackages
+  ;
 
 }
