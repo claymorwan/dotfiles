@@ -78,6 +78,7 @@ in
     shijima-qt-bin
     nicotine-plus
     gpu-screen-recorder-gtk
+    handbrake
     inputs.kopuz.packages.${system}.default
     # (lib.mkIf config.programs.noctalia-shell.enable pkgs.wallpaperengine-gui)
 

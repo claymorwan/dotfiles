@@ -10,12 +10,20 @@
     inputs.nixcord.homeModules.nixcord
   ];
 
+  xdg.configFile = {
+    "equibop-flags.conf".text = ''
+      --force_high_performance_gpu
+      --start-minimized
+    '';
+  };
+
   programs.nixcord = {
     enable = true;
     discord = {
       # enable = false;
       vencord.enable = false;
       equicord.enable = true;
+      branch = "development";
 
       commandLineArgs = [
         "--start-minimized"
@@ -51,13 +59,21 @@
           deviceSelect = false;
           ignoreVirtual = true;
         };
-        hardwareVideoAcceleration = false;
+        hardwareVideoAcceleration = true;
       };
     };
 
     equibopConfig = {
       plugins = {
-        equibopStreamFixes.enable = true;
+        equibopStreamFixes = {
+          enable = true;
+          # keyframeInterval = 0;
+        };
+
+        streamingCodecDisabler = {
+          # enable = true;
+          disableH264Codec = true;
+        };
       };
     };
 
