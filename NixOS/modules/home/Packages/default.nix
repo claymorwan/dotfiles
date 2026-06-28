@@ -56,7 +56,7 @@ in
 
     # GUI
     fluxer-canary
-    stoat-desktop
+    # stoat-desktop
     packet
     localsend
     catppuccinifier-gui

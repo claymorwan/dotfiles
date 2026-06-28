@@ -112,7 +112,7 @@
         };
         forceOwnerCrown.enable = true;
         friendCodes.enable = true;
-        friendsSince.enable = true;
+        # friendsSince.enable = true;
         fullVcpfp.enable = true;
         gifPaste.enable = true;
         gitHubRepos.enable = true;

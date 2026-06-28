@@ -38,7 +38,7 @@ in
     launch_prefix = mkStrVar "app2unit --";
     terminal = mkStrVar "ghostty";
     browser = mkStrVar "zen-beta";
-    discord = mkStrVar "discord";
+    discord = mkStrVar "discorddevelopment";
 
     # Dirs
     home_dir = mkStrVar "/home/${cfg.username}";
