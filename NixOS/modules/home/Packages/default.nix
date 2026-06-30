@@ -52,6 +52,7 @@ in
     devenv
     wl_shimeji
     wineWow64Packages.full
+    xdelta
     inputs.lncur.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # GUI

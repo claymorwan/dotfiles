@@ -1209,11 +1209,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1782530015,
-        "narHash": "sha256-Z8HQq8VWT4MbPKXqQGeVnnnE5JcYCwJmviM6Bl3ootc=",
+        "lastModified": 1782729253,
+        "narHash": "sha256-xg6PGJMzXrxZd2Fm44MPJ92y2/luZasO/AYBwlHS6kY=",
         "owner": "reakjra",
         "repo": "omikuji",
-        "rev": "3baa4a7af44494bec6d806f64a0a0649a787593c",
+        "rev": "96dccbe929c077a1c297888d6c838d7135c1c4df",
         "type": "github"
       },
       "original": {

@@ -62,6 +62,8 @@
       ]
       ++ (with pkgs; [
         # lib here
+        libice
+        libsm
       ]);
     };
   };
