@@ -47,6 +47,7 @@ in
       wallpaperengine-gui = mkLocalPkg "wallpaperengine-gui";
       git-fish = mkLocalPkg "git-fish";
       # omikuji-bin = mkLocalPkg "omikuji-bin";
+      utmt-cli = mkLocalPkg "utmt-cli";
 
       mouse-cursor = (mkLocalPkg "cursors").override { cursorName = config.globVars.mouseCursor.name; };
       neuwaita = mkLocalPkg "neuwaita";

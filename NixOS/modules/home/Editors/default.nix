@@ -2,7 +2,7 @@
 
 {
   imports = [
-    # ./helix.nix
+    ./helix.nix
     ./jetbrains.nix
     #./neovim.nix
     ./zed.nix
@@ -26,5 +26,6 @@
     distrobox
     boxbuddy
     unityhub
+    utmt-cli
   ];
 }

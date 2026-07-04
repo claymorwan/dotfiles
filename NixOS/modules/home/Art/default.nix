@@ -9,8 +9,8 @@
         (pkgs.fetchFromGitHub {
           owner = "veryprofessionaldodo";
           repo = "Krita-UI-Redesign";
-          rev = "df37ade2334b09ca30820286e3e16c26b0fbb4f8";
-          hash = "sha256-kGs1K2aNIiQq//W8IQ2JX4iyXq43z2I/WnI8aJjg8Yk=";
+          rev = "80ae45c34fdcedf3c9972d6ee16e591cc3f7efcf";
+          hash = "sha256-TAAtaYua5uLrffM2c6wB2gvCo4c8NLT5DArskI8djTY=";
         })
 
         (pkgs.fetchFromGitHub {
@@ -19,6 +19,14 @@
           rev = "c30e920f7f1a7636013407e9817671835d136436";
           hash = "sha256-gNI3kQnMeZfme+Ly/1tH9tHoqoAzUliQXa5BmpFCj+Y=";
         })
+
+        # ("${pkgs.fetchFromGitLab {
+        #   domain = "invent.kde.org";
+        #   owner = "freyalupen";
+        #   repo = "reference-tabs-docker";
+        #   rev = "4e9723566c6f6772758067b247b86556a72de242";
+        #   hash = "sha256-L/7tA6o4lrYJZfoiaEsstlP3FQdPkl/QdD+Ihq2kpgk=";
+        # }}/pykrita")
       ];
     };
   };
