@@ -1,6 +1,10 @@
 { inputs, pkgs, lib, ... }:
 
 let
+  inherit (lib)
+  recursiveUpdate
+  ;
+  
   system = pkgs.stdenv.hostPlatform.system;
 
   defaultWrappers = [
@@ -17,9 +21,13 @@ let
     "--"
    ];
 
-  gameOptions.launchOptions.wrappers = defaultWrappers;
+  gameOptions = id: {
+    id = id;
+    launchOptions.wrappers = defaultWrappers;
+  };
 
-  winGameOptions = lib.recursiveUpdate gameOptions {
+  winGameOptions = id: recursiveUpdate (gameOptions id) {
+    
     compatTool = "GE-Proton";
     launchOptions = {
       wrappers = defaultWrappers;
@@ -60,16 +68,15 @@ in
 
     config = {
       enable = true;
-      closeSteam = true; # See 'Important' note at beginning of this readme
-        
+      onSteamRunning = "close"; # See 'Important' note at beginning of this readme
+      desktopEntries = true;
+    
       apps = {
-        # Geometry dash
-        "322170" = lib.recursiveUpdate winGameOptions {
+        "Geometry dash" = recursiveUpdate (winGameOptions 322170) {
           launchOptions.env.WINEDLLOVERRIDES = "xinput1_4=n,b";
         };
 
-        # Titanfall 2
-        "1237970" = lib.recursiveUpdate gameOptions {
+        "Titanfall 2" = recursiveUpdate (winGameOptions 1237970) {
           launchOptions = {
             wrappers = defaultWrappers ++ gamescopeWrapper;
             env = {
@@ -83,170 +90,120 @@ in
           };
         };
 
-        # Subnautica
-        "264710" = lib.recursiveUpdate winGameOptions {
+        "Subnautica" = recursiveUpdate (winGameOptions 264710) {
           launchOptions.env.WINEDLLOVERRIDES = "winhttp=n,b";
         };
 
-        # Subnautica: Below Zero
-        "848450" = lib.recursiveUpdate winGameOptions {
+       "Subnautica: Below Zero" = recursiveUpdate (winGameOptions 848450) {
           launchOptions.env.WINEDLLOVERRIDES = "winhttp=n,b";
         };
 
-        # Subnautica 2
-        "1962700" = lib.recursiveUpdate winGameOptions {
+        "Subnautica 2" = recursiveUpdate (winGameOptions 1962700) {
           launchOptions.env.WINEDLLOVERRIDES = "dwmapi=n,b";
         };
 
-        # Spelunky 2
-        "418530" = winGameOptions;
+        "Spelunky 2" = winGameOptions 2418530;
 
-        # Peak
-        "3527290" = winGameOptions;
+        "Peak" = winGameOptions 3527290;
 
-        # Waterpark simulator
-        "3293260" = winGameOptions;
+        "Waterpark simulator" = winGameOptions 3293260;
 
-        # Portal 2
-        "620" = winGameOptions;
+        "Portal 2" = winGameOptions 620;
 
-        # Portal Revolution
-        "601360" = winGameOptions;
+        "Portal Revolution" = winGameOptions 601360;
 
-        # R.E.P.0
-        "3241660" = winGameOptions;
+        "R.E.P.0" = winGameOptions 3241660;
 
-        "1962890" = gameOptions;
+        "IN HEAT: Lustful Nights" = gameOptions 1962890;
 
-        "1226640" = winGameOptions;
+        "Pieces of my Heart" = winGameOptions 1226640;
 
-        # Overcooked 2
-        "728880" = winGameOptions;
+        "Overcooked 2" = winGameOptions 728880;
 
-        # Slime Rancher
-        "433340" = winGameOptions;
+        "Slime Rancher" = winGameOptions 433340;
 
-        # The Beginner's Guide
-        "303210" = winGameOptions;
+        "The Beginner's Guide" = winGameOptions 303210;
 
-        # Wasteland bites demo
-        "3820720" = gameOptions;
+        "Wasteland bites Demo" = gameOptions 3820720;
 
-        # Ultrakill
-        "1229490" = winGameOptions;
+        "Ultrakill" = winGameOptions 1229490;
 
-        # Pizza tower
-        "2231450" = winGameOptions;
+        "Pizza tower" = winGameOptions 2231450;
 
-        # Ena DBBQ
-        "2134320" = gameOptions;
+        "Ena DBBQ" = gameOptions 2134320;
 
-        # Denshattack Demo
-        "4142750" = winGameOptions;
+        "Denshattack Demo" = winGameOptions 4142750;
 
-        # Boost vector EX Demo
-        "4338440" = gameOptions;
+        "Boost vector EX Demo" = gameOptions 4338440;
 
-        # Awaria
-        "3274300"= winGameOptions;
+        "Awaria"= winGameOptions 3274300;
 
         # White Knuckle
-        "3195790" = winGameOptions;
+        "White Knuckle" = winGameOptions 3195790;
 
-        # White Knuckle Demo
-        "3218540" = winGameOptions;
+        "White Knuckle Demo" = winGameOptions 3218540;
 
-        # Herringen Demo
-        "4283210" = winGameOptions;
+        "Herringen Demo" = winGameOptions 4283210;
 
-        # Quaver
-        "980610" = gameOptions;
+        "Quaver" = gameOptions 980610;
 
-        # Data Center Demo
-        "4376050" = winGameOptions;
+        "Data Center Demo" = winGameOptions 4376050;
 
-        # Nothing Together
-        "2788630" = winGameOptions;
+        "Nothing Together" = winGameOptions 2788630;
 
-        # Content Warning
-        "2881650" = winGameOptions;
+        "Content Warning" = winGameOptions 2881650;
 
-        # Subterranauts
-        "3075800" = winGameOptions;
+        "Subterranauts" = winGameOptions 3075800;
 
-        # Lethal Company
-        "1966720" = winGameOptions;
+        "Lethal Company" = winGameOptions 1966720;
 
-        # Rabbit & Steel
-        "2132850" = winGameOptions;
+        "Rabbit and Steel" = winGameOptions 2132850;
 
-        # BOMMY Playtest
-        "4365450" = winGameOptions;
+        "BOMMY Playtest" = winGameOptions 4365450;
 
-        "4449070" = winGameOptions;
+        "Game Game Developer" = winGameOptions 4449070;
         
-        # House Flipper
-        "613100" = winGameOptions;
+        "House Flipper" = winGameOptions 613100;
 
-        # Wallpaper engine
-        "431960" = winGameOptions;
+        "Wallpaper engine" = winGameOptions 431960;
 
-        # Crypt of the NecroDancer
-        "247080" = gameOptions;
+        "Crypt of the NecroDancer" = gameOptions 247080;
 
-        # Rift of the NecroDancer Demo
-        "3029150" = winGameOptions;
+        "Rift of the NecroDancer Demo" = winGameOptions 3029150;
 
-        # MOTORSLICE Demo
-        "3910170" = winGameOptions;
+        "MOTORSLICE Demo" = winGameOptions 3910170;
         
-        # MOTORSLICE
-        "2830030" = winGameOptions;
+        "MOTORSLICE" = winGameOptions 2830030;
 
-        # Creature Kitchen Demo
-        "4116110" = winGameOptions;
+        "Creature Kitchen Demo" = winGameOptions 4116110;
 
-        # Among Us
-        "945360" = winGameOptions;
+        "Among Us" = winGameOptions 945360;
 
-        # Shift At Midnight Multiplayer Demo
-        "4050060" = winGameOptions;
+        "Shift At Midnight Multiplayer Demo" = winGameOptions 4050060;
 
-        # ARSONATE
-        "2822980" = gameOptions;
+        "ARSONATE" = gameOptions 2822980;
 
-        # ARSONATE Demo
-        "2849630" = gameOptions;
+        "ARSONATE Demo" = gameOptions 2849630;
 
-        # Random Racing Demo
-        "2199940" = winGameOptions;
+        "Random Racing Demo" = winGameOptions 2199940;
 
-        # Retail Hell Demo
-        "4379260" = winGameOptions;
+        "Retail Hell Demo" = winGameOptions 4379260;
 
-        # Bit Buddy Demo
-        "3950450" = winGameOptions;
+        "Bit Buddy Demo" = winGameOptions 3950450;
 
-        # Colossus - Eternal Blight
-        "4802920" = winGameOptions;
+        "Colossus - Eternal Blight" = winGameOptions 4802920;
 
-        # WEBFISHING
-        "3146520" = winGameOptions;
+        "WEBFISHING" = winGameOptions 3146520;
 
-        # Deltarune
-        "1671210" = winGameOptions;
+        "DELTARUNE" = winGameOptions 1671210;
 
-        # Chunky JUMP!
-        "4016020" = winGameOptions;
+        "Chunky JUMP!" = winGameOptions 4016020;
 
-        # ReStory Chill Electronic Repairs Demo
-        "4146680" = winGameOptions;
+        "ReStory Chill Electronic Repairs Demo" = winGameOptions 4146680;
 
-        # VHOLUME Demo
-        "4245250" = winGameOptions;
+        "VHOLUME Demo" = winGameOptions 4245250;
 
-        # XenoFeels Demo
-        "4791300" = winGameOptions;
+        "XenoFeels Demo" = winGameOptions 4791300;
       };
     };
   };
