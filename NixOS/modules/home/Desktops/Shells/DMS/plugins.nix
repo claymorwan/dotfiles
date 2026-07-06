@@ -101,7 +101,7 @@ in
         # hiddenBar.enable = true;
         nixPackageRunner.enable = true;
         # hydrate.enable = true;
-        quickCapture.enable = true;
+        # quickCapture.enable = true;
         weatherArt.enable = true;
         githubHeatmapRevive.enable = true;    
         desktopWidgetToggle.enable = true;
@@ -112,6 +112,11 @@ in
           enable = true;
           src = inputs.dms-common;
         };
+
+        dms-quick-capture = {
+          enable = true;
+          src = inputs.dms-plugin-registry.packages.${system}.quickCapture;
+        };
         
         dankPinentry = {
           # enable = true;
@@ -121,13 +126,13 @@ in
         # KDE Connect
         phoneConnect = {
           enable = osConfig.programs.kdeconnect.enable;
-          src = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.dankKDEConnect;
+          src = inputs.dms-plugin-registry.packages.${system}.dankKDEConnect;
         };
         
         liveChartSchedule = { 
           enable = true;
           src = let
-            liveChartSchedule = inputs.dms-plugin-registry.packages.${pkgs.stdenv.hostPlatform.system}.liveChartSchedule;
+            liveChartSchedule = inputs.dms-plugin-registry.packages.${system}.liveChartSchedule;
           in
           lib.mkForce (pkgs.symlinkJoin {
             inherit (liveChartSchedule) pname version;

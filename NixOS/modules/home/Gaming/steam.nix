@@ -69,7 +69,7 @@ in
     config = {
       enable = true;
       onSteamRunning = "close"; # See 'Important' note at beginning of this readme
-      desktopEntries = true;
+      desktopEntries.enable = true;
     
       apps = {
         "Geometry dash" = recursiveUpdate (winGameOptions 322170) {
