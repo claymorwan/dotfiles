@@ -1,9 +1,4 @@
-{
-  inputs,
-  pkgs,
-  lib,
-  ...
-}:
+{ inputs, ... }:
 
 {
   imports = [
@@ -23,7 +18,7 @@
       # enable = false;
       vencord.enable = false;
       equicord.enable = true;
-      branch = "development";
+      branch = "canary"; # "development";
 
       commandLineArgs = [
         "--start-minimized"

@@ -139,7 +139,9 @@ in
         "Awaria"= winGameOptions 3274300;
 
         # White Knuckle
-        "White Knuckle" = winGameOptions 3195790;
+        "White Knuckle" = recursiveUpdate (winGameOptions 3195790) {
+          betaBranch = "publicearlyfixtesting";
+        };
 
         "White Knuckle Demo" = winGameOptions 3218540;
 
