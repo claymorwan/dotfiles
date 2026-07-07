@@ -1224,11 +1224,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783184415,
-        "narHash": "sha256-TOTL6XPF3qeonm+Kh3rjQwAtt5MMkX8zskB/WhC4YhA=",
+        "lastModified": 1783357409,
+        "narHash": "sha256-eolp0Msb3ACNatbenEJftjFlUoh/RfZDizv3GdetEsM=",
         "ref": "refs/heads/master",
-        "rev": "1b36b1a23e9e30474192128b40ca1dee23b25c2a",
-        "revCount": 133,
+        "rev": "9c68a8ae6fb32f8a1660da392b9985a4ab3e7cb4",
+        "revCount": 135,
         "type": "git",
         "url": "https://git.bwaaa.monster/omnisearch"
       },

@@ -16,9 +16,9 @@ buildDotnetModule (finalAttrs: {
     owner = "UnderminersTeam";
     repo = "UndertaleModTool";
     tag = finalAttrs.version;
-    hash = "sha256-bsV4q75rwo9Grqaqp9U1WaySahdoQMZSA1F06mfoyoA=";
-    leaveDotGit = true;
-    deepClone = true;
+    hash = "sha256-FGEC0uLaKlBYB76xmzgNMLNMgmAQbQDrLbix4Me3oQE=";
+    # leaveDotGit = true;
+    # deepClone = true;
     fetchSubmodules = true;
   };
 

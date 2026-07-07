@@ -487,7 +487,7 @@
   "batteryNotifyLow": false,
   "batteryChargeLimitNotificationType": 0,
   "batteryLowNotificationType": 0,
-  "batteryCriticalNotificationType": 0,
+  "batteryCriticalNotificationType": 1,
   "batteryAutoPowerSaver": false,
   "lockBeforeSuspend": true,
   "loginctlLockIntegration": true,
@@ -1538,10 +1538,10 @@
     },
     "dankNotepadModule": {
       "previewActive": false,
-      "currentFilePath": "notepad-files/untitled-1770243197424.txt",
+      "currentFilePath": "notepad-files/untitled-1775922963016.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "25\n6\n\n64",
-      "updatedAt": 1783435896482,
+      "sourceContent": "2 et 11\n6 et 10\n\n",
+      "updatedAt": 1783443884091,
       "highlightedHtml": ""
     },
     "dms_clipboard_search": {
