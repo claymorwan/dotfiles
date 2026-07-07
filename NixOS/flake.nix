@@ -33,6 +33,11 @@
       url = "github:SamLukeYes/archix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    awoopkgs = {
+      url = "git+https://tangled.org/awoo.ren/awoopkgs";
+      flake = false;
+    };
     # ~/~ end
     # ~/~ begin <<flake/inputs/2-apps.md#flake-inputs>>[0]
     catppuccin = {

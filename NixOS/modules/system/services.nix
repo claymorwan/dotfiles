@@ -31,6 +31,7 @@
       # package =  pkgs.omnisearch;
     };
 
+    # desktopManager.plasma6.enable = true;
     # vertd.enable = true;
     printing.enable = true;
     joycond.enable = true;

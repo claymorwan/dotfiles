@@ -53,6 +53,22 @@
         "type": "github"
       }
     },
+    "awoopkgs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1782038206,
+        "narHash": "sha256-oJJxjzg4sZLtHQJvfJVs5tvgbBVzVoJtWygXp/pJ8ks=",
+        "ref": "refs/heads/main",
+        "rev": "bcaf95eb2ef0d6e35a68aec472b6ebd44a1c7922",
+        "revCount": 36,
+        "type": "git",
+        "url": "https://tangled.org/awoo.ren/awoopkgs"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://tangled.org/awoo.ren/awoopkgs"
+      }
+    },
     "beaker-src": {
       "flake": false,
       "locked": {
@@ -1244,6 +1260,7 @@
     "root": {
       "inputs": {
         "archix": "archix",
+        "awoopkgs": "awoopkgs",
         "beaker-src": "beaker-src",
         "catppuccin": "catppuccin",
         "dcal": "dcal",

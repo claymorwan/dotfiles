@@ -56,7 +56,7 @@ in
     inputs.lncur.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # GUI
-    fluxer-canary
+    # fluxer-canary
     # stoat-desktop
     packet
     localsend

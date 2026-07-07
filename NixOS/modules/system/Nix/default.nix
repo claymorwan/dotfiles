@@ -64,6 +64,10 @@
         # lib here
         libice
         libsm
+        # glib
+        # gtk3
+        # libappindicator-gtk3
+        # # libayatana-appindicator
       ]);
     };
   };
