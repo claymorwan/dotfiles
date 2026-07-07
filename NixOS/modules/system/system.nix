@@ -12,12 +12,12 @@
       daemon.enable = true;
     };
 
-    # openrazer = {
-    #   enable = true;
-    #   users = [
-    #     username
-    #   ];
-    # };
+    openrazer = {
+      enable = true;
+      users = [
+        username
+      ];
+    };
 
     bluetooth.enable = true;
   };

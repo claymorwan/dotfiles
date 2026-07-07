@@ -52,6 +52,6 @@
     };
   };
 
-  nix.settings.allowed-users = [ "${username}" ];
+  nix.settings.trusted-users = [ "@wheel" ];
   services.accounts-daemon.enable = true;
 }
