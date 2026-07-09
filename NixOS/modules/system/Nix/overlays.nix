@@ -9,6 +9,7 @@ in
 {
   nixpkgs.overlays = [
     inputs.millennium.overlays.default
+    # inputs.waywallen.overlays.default
 
     (final: prev: {
       local-utils = pkgs.callPackage "${self}/pkgs/utils.nix" { };

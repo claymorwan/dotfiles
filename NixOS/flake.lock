@@ -53,22 +53,6 @@
         "type": "github"
       }
     },
-    "awoopkgs": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1782038206,
-        "narHash": "sha256-oJJxjzg4sZLtHQJvfJVs5tvgbBVzVoJtWygXp/pJ8ks=",
-        "ref": "refs/heads/main",
-        "rev": "bcaf95eb2ef0d6e35a68aec472b6ebd44a1c7922",
-        "revCount": 36,
-        "type": "git",
-        "url": "https://tangled.org/awoo.ren/awoopkgs"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://tangled.org/awoo.ren/awoopkgs"
-      }
-    },
     "beaker-src": {
       "flake": false,
       "locked": {
@@ -1237,6 +1221,38 @@
         "url": "https://git.bwaaa.monster/omnisearch"
       }
     },
+    "open-wallpaper-engine-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783510497,
+        "narHash": "sha256-lHuLwDTZYHnhyqgo2JTFfP3BkouE/6vbQ7dUGOwrYUY=",
+        "owner": "waywallen",
+        "repo": "open-wallpaper-engine",
+        "rev": "ad429684de0ae08feaa22c88bd38fbf4c6d84706",
+        "type": "github"
+      },
+      "original": {
+        "owner": "waywallen",
+        "repo": "open-wallpaper-engine",
+        "type": "github"
+      }
+    },
+    "open-wallpaper-engine-src_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783510497,
+        "narHash": "sha256-lHuLwDTZYHnhyqgo2JTFfP3BkouE/6vbQ7dUGOwrYUY=",
+        "owner": "waywallen",
+        "repo": "open-wallpaper-engine",
+        "rev": "ad429684de0ae08feaa22c88bd38fbf4c6d84706",
+        "type": "github"
+      },
+      "original": {
+        "owner": "waywallen",
+        "repo": "open-wallpaper-engine",
+        "type": "github"
+      }
+    },
     "quickshell": {
       "inputs": {
         "nixpkgs": [
@@ -1260,7 +1276,6 @@
     "root": {
       "inputs": {
         "archix": "archix",
-        "awoopkgs": "awoopkgs",
         "beaker-src": "beaker-src",
         "catppuccin": "catppuccin",
         "dcal": "dcal",
@@ -1290,11 +1305,15 @@
         "nu-scripts": "nu-scripts",
         "omikuji": "omikuji",
         "omnisearch": "omnisearch",
+        "open-wallpaper-engine-src": "open-wallpaper-engine-src",
         "quickshell": "quickshell",
         "scopebuddy": "scopebuddy",
         "spicetify-nix": "spicetify-nix",
         "steam-config-nix": "steam-config-nix",
         "vertd": "vertd",
+        "waywallen": "waywallen",
+        "waywallen-display-src": "waywallen-display-src_2",
+        "waywallen-src": "waywallen-src_2",
         "xdp-termfilepickers": "xdp-termfilepickers",
         "zen-browser": "zen-browser"
       }
@@ -1520,6 +1539,93 @@
       "original": {
         "owner": "VERT-sh",
         "repo": "vertd",
+        "type": "github"
+      }
+    },
+    "waywallen": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "open-wallpaper-engine-src": "open-wallpaper-engine-src_2",
+        "waywallen-display-src": "waywallen-display-src",
+        "waywallen-src": "waywallen-src"
+      },
+      "locked": {
+        "lastModified": 1780968760,
+        "narHash": "sha256-UaKAmecdKhUh1BgiaLyEvDVgjDtRPrHweTwv7ErhOcQ=",
+        "owner": "gettbitgirl",
+        "repo": "nix-waywallen",
+        "rev": "bc36cfdfaa28ae8d3b8da3b9b9a0dcc88980e508",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gettbitgirl",
+        "repo": "nix-waywallen",
+        "type": "github"
+      }
+    },
+    "waywallen-display-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783177802,
+        "narHash": "sha256-eYhtQfHVLB94hDcgfut3HiY2iylhAfBKnUunhz3M8lw=",
+        "owner": "waywallen",
+        "repo": "waywallen-display",
+        "rev": "5953ad381709bdd31cf690612d0b9b15ddc69d70",
+        "type": "github"
+      },
+      "original": {
+        "owner": "waywallen",
+        "repo": "waywallen-display",
+        "type": "github"
+      }
+    },
+    "waywallen-display-src_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783177802,
+        "narHash": "sha256-eYhtQfHVLB94hDcgfut3HiY2iylhAfBKnUunhz3M8lw=",
+        "owner": "waywallen",
+        "repo": "waywallen-display",
+        "rev": "5953ad381709bdd31cf690612d0b9b15ddc69d70",
+        "type": "github"
+      },
+      "original": {
+        "owner": "waywallen",
+        "repo": "waywallen-display",
+        "type": "github"
+      }
+    },
+    "waywallen-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783272644,
+        "narHash": "sha256-5o8q4gOiKCwUj/1t843ZsiSOa3YNbwcPCYfdd78stuk=",
+        "owner": "waywallen",
+        "repo": "waywallen",
+        "rev": "8e8197641f35d63db0a386333f499b5e19ef5017",
+        "type": "github"
+      },
+      "original": {
+        "owner": "waywallen",
+        "repo": "waywallen",
+        "type": "github"
+      }
+    },
+    "waywallen-src_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783272644,
+        "narHash": "sha256-5o8q4gOiKCwUj/1t843ZsiSOa3YNbwcPCYfdd78stuk=",
+        "owner": "waywallen",
+        "repo": "waywallen",
+        "rev": "8e8197641f35d63db0a386333f499b5e19ef5017",
+        "type": "github"
+      },
+      "original": {
+        "owner": "waywallen",
+        "repo": "waywallen",
         "type": "github"
       }
     },

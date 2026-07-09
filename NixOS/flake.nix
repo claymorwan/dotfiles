@@ -33,11 +33,6 @@
       url = "github:SamLukeYes/archix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
-    awoopkgs = {
-      url = "git+https://tangled.org/awoo.ren/awoopkgs";
-      flake = false;
-    };
     # ~/~ end
     # ~/~ begin <<flake/inputs/2-apps.md#flake-inputs>>[0]
     catppuccin = {
@@ -123,6 +118,16 @@
       url = "github:VERT-sh/vertd";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    waywallen = {
+      url = "github:gettbitgirl/nix-waywallen";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        # waywallen-src.follows = "waywallen-src";
+        # waywallen-display-src.follows = "waywallen-display-src";
+        # open-wallpaper-engine-src.follows = "open-wallpaper-engine-src";
+      };
+    };
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]
     # DMS related stuff
@@ -207,6 +212,19 @@
     
     beaker-src = {
       url = "git+https://git.bwaaa.monster/beaker?shallow=0";
+      flake = false;
+    };
+    
+    waywallen-src = {
+      url = "github:waywallen/waywallen";
+      flake = false;
+    };
+    waywallen-display-src = {
+      url = "github:waywallen/waywallen-display";
+      flake = false;
+    };
+    open-wallpaper-engine-src = {
+      url = "github:waywallen/open-wallpaper-engine";
       flake = false;
     };
     # ~/~ end

@@ -27,5 +27,6 @@
     boxbuddy
     unityhub
     utmt-cli
+    gitte
   ];
 }

@@ -206,6 +206,8 @@ in
         "VHOLUME Demo" = winGameOptions 4245250;
 
         "XenoFeels Demo" = winGameOptions 4791300;
+
+        "Liminal Shroud Demo" = winGameOptions 4101720;
       };
     };
   };

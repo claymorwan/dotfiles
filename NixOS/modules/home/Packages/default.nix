@@ -82,6 +82,8 @@ in
     handbrake
     inputs.kopuz.packages.${system}.default
     # (lib.mkIf config.programs.noctalia-shell.enable pkgs.wallpaperengine-gui)
+    # waywallen
+    # waywallen-layer-shell
 
     # Kde stuff
     kdePackages.gwenview

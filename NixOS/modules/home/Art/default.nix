@@ -20,13 +20,20 @@
           hash = "sha256-gNI3kQnMeZfme+Ly/1tH9tHoqoAzUliQXa5BmpFCj+Y=";
         })
 
-        # ("${pkgs.fetchFromGitLab {
-        #   domain = "invent.kde.org";
-        #   owner = "freyalupen";
-        #   repo = "reference-tabs-docker";
-        #   rev = "4e9723566c6f6772758067b247b86556a72de242";
-        #   hash = "sha256-L/7tA6o4lrYJZfoiaEsstlP3FQdPkl/QdD+Ihq2kpgk=";
-        # }}/pykrita")
+        ("${pkgs.fetchFromGitLab {
+          domain = "invent.kde.org";
+          owner = "freyalupen";
+          repo = "reference-tabs-docker";
+          rev = "4e9723566c6f6772758067b247b86556a72de242";
+          hash = "sha256-L/7tA6o4lrYJZfoiaEsstlP3FQdPkl/QdD+Ihq2kpgk=";
+        }}/pykrita")
+        
+        # (pkgs.fetchFromGitHub {
+        #   owner = "antoine-roux";
+        #   repo = "krita-plugin-reference";
+        #   rev = "d1ce15561fe3e38d670c2c040410005150547caf";
+        #   hash = "sha256-9OHfVWSzTR9XLRXWxYPe0kQ9t/Dp1QNdlvFfBrCW/n0=";
+        # })
       ];
     };
   };
