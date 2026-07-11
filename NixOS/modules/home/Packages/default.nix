@@ -14,21 +14,9 @@ in
 {
   imports = [
     ./flatpak.nix
-    inputs.devenvcp.homeModules.default
   ];
 
   programs = {
-    direnv = {
-      enable = true;
-      enableZshIntegration = true;
-      nix-direnv.enable = true;
-    };
-
-    devenvcp = {
-      enable = true;
-      defaultPath = "${osConfig.globVars.flake_dir}/dev-shells/devenv";
-    };
-
     onlyoffice.enable = true;
     btop.enable = true;
   };
@@ -49,7 +37,6 @@ in
     cbonsai
     linux-wallpaperengine
     wev
-    devenv
     wl_shimeji
     wineWow64Packages.full
     xdelta
