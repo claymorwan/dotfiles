@@ -6,9 +6,10 @@
 
     ./helix.nix
     #./neovim.nix
-    (lib.optionals (host != "android") ./desktop.nix)
-  ];
-
+  ]
+  ++ (lib.optionals (host != "android") [./desktop.nix])
+  ;
+  
   programs = {
     direnv = {
       enable = true;

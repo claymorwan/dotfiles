@@ -3,8 +3,9 @@
 
 {
   imports = [
-    (lib.optionals (host != "android") ./desktop.nix)
-  ];
+  ]
+  ++ (lib.optionals (host != "android") [./desktop.nix])
+  ;
   
   # Allow unfree pkg
   nixpkgs.config.allowUnfree = true;

@@ -2,9 +2,10 @@
 
 {
   imports = [
-    (lib.optionals (host != "android") ./desktop.nix)
-  ];
-
+  ]
+  ++ (lib.optionals (host != "android") [./desktop.nix])
+  ;
+  
   home.packages = with pkgs; [
     fzf
     lolcat
