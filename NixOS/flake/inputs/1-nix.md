@@ -17,6 +17,11 @@ home-manager = {
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
+nixos-avf = {
+  url = "github:nix-community/nixos-avf";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+
 nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
 nix-output-monitor = {

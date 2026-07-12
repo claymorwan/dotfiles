@@ -22,6 +22,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    nixos-avf = {
+      url = "github:nix-community/nixos-avf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     
     nix-output-monitor = {
@@ -118,16 +123,6 @@
       url = "github:VERT-sh/vertd";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
-    waywallen = {
-      url = "github:gettbitgirl/nix-waywallen";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        # waywallen-src.follows = "waywallen-src";
-        # waywallen-display-src.follows = "waywallen-display-src";
-        # open-wallpaper-engine-src.follows = "open-wallpaper-engine-src";
-      };
-    };
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]
     # DMS related stuff
@@ -214,19 +209,6 @@
       url = "git+https://git.bwaaa.monster/beaker?shallow=0";
       flake = false;
     };
-    
-    waywallen-src = {
-      url = "github:waywallen/waywallen";
-      flake = false;
-    };
-    waywallen-display-src = {
-      url = "github:waywallen/waywallen-display";
-      flake = false;
-    };
-    open-wallpaper-engine-src = {
-      url = "github:waywallen/open-wallpaper-engine";
-      flake = false;
-    };
     # ~/~ end
   };
 
@@ -264,6 +246,7 @@
       nixosConfigurations = {
         nixos = mkNixosConfig "nixos";
         nixos-laptop = mkNixosConfig "nixos-laptop";
+        android = mkNixosConfig "android";
       };
     };
 }

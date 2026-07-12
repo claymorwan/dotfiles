@@ -249,6 +249,7 @@
   "scrollTitleEnabled": true,
   "mediaAdaptiveWidthEnabled": true,
   "audioVisualizerEnabled": true,
+  "mediaUseAlbumArtAccent": false,
   "audioScrollMode": "volume",
   "audioWheelScrollAmount": 5,
   "audioDeviceScrollVolumeEnabled": false,
@@ -1541,7 +1542,7 @@
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
       "sourceContent": "25\n6\n\n64",
-      "updatedAt": 1783806670155,
+      "updatedAt": 1783859664845,
       "highlightedHtml": ""
     },
     "dms_clipboard_search": {

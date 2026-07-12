@@ -1,24 +1,15 @@
-{ inputs, pkgs, osConfig, ... }:
+{ inputs, lib, pkgs, osConfig, host, ... }:
 
 {
   imports = [
     inputs.devenvcp.homeModules.default
 
     ./helix.nix
-    ./jetbrains.nix
     #./neovim.nix
-    ./zed.nix
+    (lib.optionals (host != "android") ./desktop.nix)
   ];
 
   programs = {
-    godot = {
-      enable = true;
-      package = pkgs.godot-mono;
-      exportTemplates = with pkgs; [
-        godotPackages.export-templates-mono-bin
-      ];
-    };
-
     direnv = {
       enable = true;
       nix-direnv.enable = true;
@@ -35,11 +26,5 @@
 
   home.packages = with pkgs; [
     neovim
-    sqlitebrowser
-    distrobox
-    boxbuddy
-    unityhub
-    utmt-cli
-    gitte
   ];
 }

@@ -41,6 +41,7 @@ Using this to separate my inputs into multiple files, as flake.nix files aren't 
       nixosConfigurations = {
         nixos = mkNixosConfig "nixos";
         nixos-laptop = mkNixosConfig "nixos-laptop";
+        android = mkNixosConfig "android";
       };
     };
 }

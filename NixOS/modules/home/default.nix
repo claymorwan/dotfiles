@@ -1,28 +1,32 @@
+{ lib, host, ... }:
+
 {
   imports = [
-    ./Art
-    ./Browsers
     ./catppuccin.nix
-    ./Desktops
-    # ./discord.nix
     ./Editors
     ./env.nix
     ./fetchs
-    ./Gaming
     ./git.nix
+    ./Packages
+    ./Shells
+    ./starship.nix
+    ./ssh.nix
+    ./Yazi
+  ]
+  ++ (lib.optionals (host != "android") [
+    ./Art
+    ./Browsers
+    ./Desktops
+    # ./discord.nix
+    ./Gaming
     ./ghostty.nix
     ./nixcord.nix
     ./obs-studio.nix
     ./Options
-    ./Packages
     ./services.nix
-    ./Shells
-    ./starship.nix
     ./spotify.nix
-    ./ssh.nix
     ./Theming
     # ./uwsm.nix
     ./XDG
-    ./Yazi
-  ];
+  ]);
 }
