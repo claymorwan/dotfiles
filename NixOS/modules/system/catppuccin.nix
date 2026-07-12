@@ -10,6 +10,8 @@
     autoEnable = config.catppuccin.enable;
     flavor = config.globVars.ctp_flavor;
     accent = config.globVars.ctp_accent;
+    cache.enable = true;
+
     sddm.enable = false;
   };
 }

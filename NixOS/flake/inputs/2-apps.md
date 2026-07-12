@@ -1,8 +1,5 @@
 ```{.nix #flake-inputs}
-catppuccin = {
-  url = "github:catppuccin/nix";
-  inputs.nixpkgs.follows = "nixpkgs";
-};
+catppuccin.url = "github:catppuccin/nix";
 
 steam-config-nix = {
   url = "github:different-name/steam-config-nix";
