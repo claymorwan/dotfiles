@@ -27,22 +27,16 @@
           rev = "4e9723566c6f6772758067b247b86556a72de242";
           hash = "sha256-L/7tA6o4lrYJZfoiaEsstlP3FQdPkl/QdD+Ihq2kpgk=";
         }}/pykrita")
-        
-        # (pkgs.fetchFromGitHub {
-        #   owner = "antoine-roux";
-        #   repo = "krita-plugin-reference";
-        #   rev = "d1ce15561fe3e38d670c2c040410005150547caf";
-        #   hash = "sha256-9OHfVWSzTR9XLRXWxYPe0kQ9t/Dp1QNdlvFfBrCW/n0=";
-        # })
       ];
     };
   };
 
   home.packages = with pkgs; [
+    aseprite
     blockbench
     blender
     kdePackages.kdenlive
-    # davinci-resolve
+    davinci-resolve
     # openshot-qt
   ];
 }

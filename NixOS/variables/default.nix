@@ -16,6 +16,10 @@ let
       type = lib.types.bool;
       default = var;
     };
+
+  discordExeName = version:
+    "discord" + (lib.optionalString (version != "stable") version);
+    
 in 
 {
   options.globVars = {
@@ -38,7 +42,8 @@ in
     launch_prefix = mkStrVar "app2unit --";
     terminal = mkStrVar "ghostty";
     browser = mkStrVar "zen-beta";
-    discord = mkStrVar "discordcanary";
+    discord_branch = mkStrVar "stable";
+    discord = mkStrVar (discordExeName cfg.discord_branch);
 
     # Dirs
     home_dir = mkStrVar "/home/${cfg.username}";

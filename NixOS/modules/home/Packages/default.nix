@@ -51,7 +51,7 @@ in
     gnome-font-viewer
     gnome-disk-utility
     kooha
-    bottles
+    # bottles
     obsidian
     qalculate-gtk
     proton-vpn
@@ -66,7 +66,7 @@ in
     shijima-qt-bin
     nicotine-plus
     gpu-screen-recorder-gtk
-    handbrake
+    # handbrake
     inputs.kopuz.packages.${system}.default
     # (lib.mkIf config.programs.noctalia-shell.enable pkgs.wallpaperengine-gui)
     # waywallen

@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, osConfig, ... }:
 
 {
   imports = [
@@ -18,13 +18,15 @@
       # enable = false;
       vencord.enable = false;
       equicord.enable = true;
-      branch = "canary"; # "development";
+      branch = osConfig.globVars.discord_branch;
+      # branch = "development";
 
       commandLineArgs = [
         "--start-minimized"
-        # "--ozone-platform=wayland"
+        "--ozone-platform=wayland"
         # "--enable-features=VaapiVideoDecoder,MiddleClickAutoscroll"
-        "--enable-blink-features=VaapiVideoDecoder,MiddleClickAutoscroll"
+        # "--enable-blink-features=VaapiVideoDecoder,MiddleClickAutoscroll"
+        "--enable-blink-features=MiddleClickAutoscroll"
       ];
     };
 

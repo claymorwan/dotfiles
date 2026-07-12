@@ -1,11 +1,11 @@
-{ inputs, pkgs, config, ... }:
+{ pkgs, config, ... }:
 
 let
   gstPackages = with pkgs.gst_all_1; [
     gstreamer
     gst-plugins-base
     gst-libav
-    gst-vaapi
+    # gst-vaapi
   ];
 in 
 {

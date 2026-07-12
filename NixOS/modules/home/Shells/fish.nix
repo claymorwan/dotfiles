@@ -1,8 +1,9 @@
-{ pkgs, config, osConfig, ... }:
+{ pkgs, osConfig, ... }:
 
 {
   programs.fish = {
     enable = true;
+    generateCompletions = false;
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
     '';

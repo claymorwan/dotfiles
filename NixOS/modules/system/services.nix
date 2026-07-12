@@ -40,6 +40,6 @@
     upower.enable = true;
     fwupd.enable = true;
     gnome.gnome-keyring.enable = true;
-    input-remapper.enable = true;
+    # input-remapper.enable = true;
   };
 }
