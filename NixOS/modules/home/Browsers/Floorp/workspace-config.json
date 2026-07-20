@@ -1,0 +1,6 @@
+{
+  "manageOnBms": false,
+  "showWorkspaceNameOnToolbar": true,
+  "closePopupAfterClick": false,
+  "exitOnLastTabClose": false
+}

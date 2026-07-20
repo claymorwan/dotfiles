@@ -15,8 +15,6 @@
 
     extraPackages = with pkgs; [
       umu-launcher
-      fuse2
-      fuse3
     ];
 
     settings = {

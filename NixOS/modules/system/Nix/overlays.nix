@@ -15,9 +15,6 @@ in
       local-utils = pkgs.callPackage "${self}/pkgs/utils.nix" { };
 
       # Overrides
-      omnisearch = inputs.omnisearch.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (finalAttrs: {
-        patches = [ "${patchDir}/ctp-mocha-latte-mauve.patch" ];
-      });
       gradia = prev.gradia.overrideAttrs (finalAttrs: {
         patches = [ "${patchDir}/0001-style-stdin-remove-extra-text-from-stdin.patch" ];
       });
@@ -33,9 +30,14 @@ in
         };
       });
 
-      # openldap = prev.openldap.overrideAttrs {
-      #   doCheck = !prev.stdenv.hostPlatform.isi686;
-      # };
+      proton-ge-bin = prev.proton-ge-bin.overrideAttrs (finalAttrs: {
+        version = "GE-Proton10-34";
+
+        src = pkgs.fetchzip {
+          url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${finalAttrs.version}/${finalAttrs.version}.tar.gz";
+          hash = "sha256-lzPsYYcrp5NoT3B0WFj3o10Z7tXx7xva1wEP3edeuqM=";
+        };
+      });
 
       yazi = prev.yazi.override {_7zz = pkgs._7zz-rar; };
 
@@ -52,6 +54,7 @@ in
 
       mouse-cursor = (mkLocalPkg "cursors").override { cursorName = config.globVars.mouseCursor.name; };
       neuwaita = mkLocalPkg "neuwaita";
+      catppuccin-kde = mkLocalPkg "catppuccin-kde";
 
       ## Fonts
       no-continue = mkLocalPkg "Fonts/no-continue.nix";

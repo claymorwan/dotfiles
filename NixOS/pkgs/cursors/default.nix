@@ -4,8 +4,8 @@
 }:
 
 stdenvNoCC.mkDerivation {
-  pname = "${cursorName}";
-  version = "0-unstable-2025-12-30";
+  name = cursorName;
+  # version = "0-unstable-2025-12-30";
 
   src = ./cursors/${cursorName};
 

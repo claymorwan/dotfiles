@@ -16,5 +16,7 @@
       enable = false;
       assertStyle = false;
     };
+    gtk.icon.enable = false;
+    
   };
 }

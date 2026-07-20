@@ -1,0 +1,51 @@
+{
+  "defaultID": "2153e64e-0656-4aab-831b-e6938ff05a3a",
+  "data": [
+    [
+      "2153e64e-0656-4aab-831b-e6938ff05a3a",
+      {
+        "name": "Main",
+        "icon": "star",
+        "userContextId": 0,
+        "isSelected": null,
+        "isDefault": null
+      }
+    ],
+    [
+      "495ef911-3035-40c2-aa87-eb594bbc7534",
+      {
+        "name": "Nerd stuff",
+        "icon": "code",
+        "userContextId": 0,
+        "isSelected": null,
+        "isDefault": null
+      }
+    ],
+    [
+      "a1190761-4214-46c4-822a-5102b9df8a19",
+      {
+        "name": "Work",
+        "icon": "book",
+        "userContextId": 0,
+        "isSelected": null,
+        "isDefault": null
+      }
+    ],
+    [
+      "5da011db-2467-471e-9c3a-9cc6aef69ee0",
+      {
+        "name": "freaky",
+        "icon": "user",
+        "userContextId": 0,
+        "isSelected": null,
+        "isDefault": null
+      }
+    ]
+  ],
+  "order": [
+    "2153e64e-0656-4aab-831b-e6938ff05a3a",
+    "495ef911-3035-40c2-aa87-eb594bbc7534",
+    "a1190761-4214-46c4-822a-5102b9df8a19",
+    "5da011db-2467-471e-9c3a-9cc6aef69ee0"
+  ]
+}

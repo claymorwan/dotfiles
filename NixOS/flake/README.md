@@ -12,6 +12,7 @@ Using this to separate my inputs into multiple files, as flake.nix files aren't 
       self,
       nixpkgs,
       home-manager,
+      nur,
       ...
     }:
     let
@@ -32,6 +33,7 @@ Using this to separate my inputs into multiple files, as flake.nix files aren't 
           modules = [
             ./hosts/${host}
             ./variables
+            nur.modules.nixos.default
           ];
         };
     in

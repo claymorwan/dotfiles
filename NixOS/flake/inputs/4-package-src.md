@@ -13,4 +13,9 @@ beaker-src = {
   url = "git+https://git.bwaaa.monster/beaker?shallow=0";
   flake = false;
 };
+
+zen-ctp = {
+  url = "github:code-irisnk/catppuccin-zen-browser";
+  flake = false;
+};
 ```

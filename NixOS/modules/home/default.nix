@@ -25,7 +25,8 @@
     ./Options
     ./services.nix
     ./spotify.nix
-    ./Theming
+    ./stylix.nix
+    # ./Theming
     # ./uwsm.nix
     ./XDG
   ]);

@@ -138,10 +138,11 @@ in
 
         "Awaria"= winGameOptions 3274300;
 
-        # White Knuckle
-        "White Knuckle" = recursiveUpdate (winGameOptions 3195790) {
-          betaBranch = "publicearlyfixtesting";
-        };
+        "White Knuckle" = winGameOptions 3195790;
+
+        # "White Knuckle" = recursiveUpdate (winGameOptions 3195790) {
+        #   betaBranch = "publicearlyfixtesting";
+        # };
 
         "White Knuckle Demo" = winGameOptions 3218540;
 
@@ -208,6 +209,10 @@ in
         "XenoFeels Demo" = winGameOptions 4791300;
 
         "Liminal Shroud Demo" = winGameOptions 4101720;
+
+        "Code RAPID Demo" = winGameOptions 4841090;
+
+        "THE WELL IS NOT EMPTY Demo" = winGameOptions 4700530;
       };
     };
   };

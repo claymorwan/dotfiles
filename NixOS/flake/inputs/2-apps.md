@@ -35,7 +35,7 @@ zen-browser = {
 };
 
 nixcord = {
-  url = "github:kaylorben/nixcord";
+  url = "github:4evy/nixcord";
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
@@ -71,12 +71,17 @@ kopuz = {
 };
 
 omikuji = {
-  url = "github:reakjra/omikuji";
+  url = "github:omikuji-launcher/omikuji";
   # inputs.nixpkgs.follows = "nixpkgs";
 };
 
 vertd = {
   url = "github:VERT-sh/vertd";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+
+prefixer = {
+  url = "github:wojtmic/prefixer";
   inputs.nixpkgs.follows = "nixpkgs";
 };
 ```

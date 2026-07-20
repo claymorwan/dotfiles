@@ -1,4 +1,4 @@
-{ inputs, lib, pkgs, osConfig, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -14,6 +14,7 @@
     limo
     gale
     olympus
+    inputs.prefixer.packages.${pkgs.stdenv.hostPlatform.system}.default
     # sm64coopdx
 
     (osu-lazer-bin.override {

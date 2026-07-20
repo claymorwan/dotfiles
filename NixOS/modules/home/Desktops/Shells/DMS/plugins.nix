@@ -40,6 +40,13 @@ in
       mpvpaper
       ffmpeg-headless
     ]) else [])
+  ++ (if dms-plugins.dms-quick-capture.enable then (with pkgs; [
+      file
+      imagemagick
+      img2pdf
+      tesseract
+      zbar
+    ]) else [])
   ;
 
   programs = {
@@ -99,7 +106,7 @@ in
         timer.enable = true;
         mediaControlPlus.enable = true;
         # hiddenBar.enable = true;
-        nixPackageRunner.enable = true;
+        # nixPackageRunner.enable = true;
         # hydrate.enable = true;
         # quickCapture.enable = true;
         weatherArt.enable = true;

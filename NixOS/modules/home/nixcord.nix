@@ -23,7 +23,7 @@
 
       commandLineArgs = [
         "--start-minimized"
-        "--ozone-platform=wayland"
+        # "--ozone-platform=wayland"
         # "--enable-features=VaapiVideoDecoder,MiddleClickAutoscroll"
         # "--enable-blink-features=VaapiVideoDecoder,MiddleClickAutoscroll"
         "--enable-blink-features=MiddleClickAutoscroll"
@@ -79,13 +79,13 @@
     in
     {
       useQuickCss = true;
-      enabledThemeLinks = [
-        system24
-      ];
+      # enabledThemeLinks = [
+      #   system24
+      # ];
 
-      themeLinks = [
-        system24
-      ];
+      # themeLinks = [
+      #   system24
+      # ];
 
       frameless = true;
 
@@ -102,11 +102,11 @@
         expressionCloner.enable = true;
         fakeNitro.enable = true;
         fixSpotifyEmbeds.enable = true;
-        fontLoader = {
-          enable = true;
-          selectedFont = "JetBrains Mono";
-          applyOnCodeBlocks = true;
-        };
+        # fontLoader = {
+        #   enable = true;
+        #   selectedFont = "JetBrains Mono";
+        #   applyOnCodeBlocks = true;
+        # };
         forceOwnerCrown.enable = true;
         friendCodes.enable = true;
         # friendsSince.enable = true;

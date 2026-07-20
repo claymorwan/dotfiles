@@ -40,17 +40,17 @@
       };
 
       "Print" = {
-        action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "full" ];
+        action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "full" "edit" ];
         hotkey-overlay.title = "Screenshot (screen)";
       };
       
       "Ctrl+Print" = {
-        action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "region" ];
+        action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "region" "edit" ];
         hotkey-overlay.title = "Screenshot (region)";
       };
 
       "Mod+Print" = {
-        action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "window" ];
+        action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "window" "edit" ];
         hotkey-overlay.title = "Screenshot (window)";
       };
 

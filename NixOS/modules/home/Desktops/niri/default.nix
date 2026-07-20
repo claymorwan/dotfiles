@@ -1,4 +1,11 @@
-{ inputs, pkgs, lib, osConfig, ... }:
+{
+  inputs,
+  pkgs,
+  lib,
+  config,
+  osConfig,
+  ...
+}:
 
 
 {
@@ -19,6 +26,14 @@
     niri = {
       package = osConfig.programs.niri.package;
       settings = {
+        includes = with config.lib.niri.include; [
+          (optional "tests.kdl")
+
+          # DMS
+          (optional "dms/outputs.kdl")
+          (optional "dms/rules.kdl")
+        ];
+        
         prefer-no-csd = true;
         input = {
           mod-key = osConfig.globVars.mainMod;
@@ -40,6 +55,11 @@
             click-method = "button-areas";
             scroll-factor = 0.5;
           };            
+        };
+
+        cursor = {
+          theme = osConfig.globVars.mouseCursor.name;
+          size = osConfig.globVars.mouseCursor.size;
         };
 
         overview = {

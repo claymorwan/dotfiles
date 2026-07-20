@@ -2,19 +2,12 @@
   inputs,
   pkgs,
   lib,
-  config,
   osConfig,
   ...
 }:
 
 let
   version = "beta";
-  ctp_zen = pkgs.fetchFromGitHub {
-    owner = "catppuccin";
-    repo = "zen-browser";
-    rev = "c855685442c6040c4dda9c8d3ddc7b708de1cbaa";
-    hash = "sha256-5A57Lyctq497SSph7B+ucuEyF1gGVTsuI3zuBItGfg4=";
-  };
 in
 {
   imports = [
@@ -157,12 +150,12 @@ in
           "services.sync.prefs.sync.browser.uiCustomization.state" = true;
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "browser.toolbars.bookmarks.visibility" = "always";
-          "browser.uiCustomization.state" = builtins.readFile ./layout.json;
+          "browser.uiCustomization.state" = lib.toJSON (lib.importJSON ./layout.json);
           "general.smoothScroll.msdPhysics.enabled" = true;
-          "font.name.serif.x-western" = "NotoSerif Nerd Font Propo";
-          "font.name.sans-serif.x-western" = "NotoSans Nerd Font Propo";
-          "font.name.monospace.x-western" = "JetBrainsMono Nerd Font Mono";
-          "browser.startup.homepage" = osConfig.services.omnisearch.settings.server.domain;
+          # "font.name.serif.x-western" = "NotoSerif Nerd Font Propo";
+          # "font.name.sans-serif.x-western" = "NotoSans Nerd Font Propo";
+          # "font.name.monospace.x-western" = "JetBrainsMono Nerd Font Mono";
+          # "browser.startup.homepage" = osConfig.services.omnisearch.settings.server.domain;
           "browser.newtab.extensionControlled" = true;
           "browser.newtab.privateAllowed" = true;
           "general.autoScroll" = true;
@@ -204,38 +197,97 @@ in
             "advanced-tab-groups"
             "context-menu-icons"
             "floating-statusbar"
+            "ZenFolderTreeConnectors"
+            
             # "Neo-Zen"
             ## Deta Loading Bar
             # "c9ee0d97-d2d6-40fd-8f85-549fe000b868"
 
             # Zen
             ## Audio Indicator Enhanced
-            "2317fd93-c3ed-4f37-b55a-304c1816819e"
+            # "2317fd93-c3ed-4f37-b55a-304c1816819e"
             ## Vertical Split Tab Groups
             "4c2bec61-7f6c-4e5c-bdc6-c9ad1aba1827"
             ## Pimp your PiP
             "599a1599-e6ab-4749-ab22-de533860de2c"
             ## Tidy Popup
-            "79dde383-4fe7-404a-a8e6-9be440022542"
+            # "79dde383-4fe7-404a-a8e6-9be440022542"
             ## Trackpad Animation
             "8039de3b-72e1-41ea-83b3-5077cf0f98d1"
             ## Better Find Bar
             "a6335949-4465-4b71-926c-4a52d34bc9c0"
             ## SuperPins
-            "ad97bb70-0066-4e42-9b5f-173a5e42c6fc"
+            # "ad97bb70-0066-4e42-9b5f-173a5e42c6fc"
             ## Better Unloaded Tabs
             "f7c71d9a-bce2-420f-ae44-a64bd92975ab"
           ];
+        };
+
+        extensions = {
+          force = true;
+          packages = with pkgs.nur.repos.rycee.firefox-addons; [
+            stylus
+            # firefox-color
+            ublock-origin
+            proton-pass
+            darkreader
+            indie-wiki-buddy
+            
+            protondb-for-steam
+            steam-database
+
+            control-panel-for-twitter
+            control-panel-for-youtube
+            seventv
+            enhancer-for-youtube
+            youtube-no-translation
+
+            plasma-integration
+            pronoundb
+            catppuccin-web-file-icons
+            mal-sync
+            raindropio
+            shinigami-eyes
+            user-agent-string-switcher
+            image-search-options
+          ];
+
+        #   settings = {
+        #     # Stylus
+        #     "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}".settings = {
+        #       dbInChromeStorage = true; # required for Stylus
+        #     };
+
+        #     # Proton Pass
+        #     # "78272b6fa58f4a1abaac99321d503a20@proton.me".permissions = [
+        #     #   "https://*/*"
+        #     #   "http://*/*"
+        #     #   "https://account.proton.me/*"
+        #     #   "https://pass.proton.me/*"
+
+        #     #   "activeTab"
+        #     #   "alarms"
+        #     #   "scripting"
+        #     #   "storage"
+        #     #   "unlimitedStorage"
+        #     #   "webNavigation"
+        #     #   "webRequest"
+        #     #   "webRequestBlocking"
+        #     #   "privacy"        
+        #     #   "webRequestAuthProvider"
+        #     #   "clipboardRead"
+        #     #   "clipboardWrite"
+        #     #   "nativeMessaging"
+        #     # ];
+        #   };
         };
       };
     };
 
   };
 
-  xdg.configFile."zen/default/chrome" = {
-    enable = true;
-    source = "${ctp_zen}/themes/Mocha/Mauve";
-    recursive = true;
-  };
-
+  # xdg.configFile."zen/default/chrome" = {
+  #   source = "${inputs.zen-ctp}/themes/Mocha/Mauve";
+  #   recursive = true;
+  # };
 }

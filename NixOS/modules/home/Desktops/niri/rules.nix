@@ -4,25 +4,38 @@ let
   inherit (import ./vars.nix)
   window_gap
   ;
+
+  background-effect = {
+    blur = true;
+    xray = false;
+  };
 in
 {
   programs.niri.settings = {
     workspaces = {
       "chat" = {};
     };
+    
     window-rules = [
       {
+        clip-to-geometry = true;
+        draw-border-with-background = false;
+        open-maximized-to-edges = false;
+        opacity = 0.95;
+        inherit background-effect;
+        
+        popups = {
+          inherit background-effect;
+        };
+
         geometry-corner-radius = let
           radius = 20.0;
-        in
-        {
+        in {
           bottom-left = radius;
           bottom-right = radius;
           top-left = radius;
           top-right = radius;
         };
-        clip-to-geometry = true;
-        draw-border-with-background = false;
       }
       # Float
       {
@@ -179,6 +192,14 @@ in
 
     layer-rules = [
       {
+        matches = [{ namespace = "^dms:"; }];
+        background-effect.xray = false;
+      }
+      {
+        matches = [{ namespace = "^dms-clipboardPlus-panel"; }];
+        inherit background-effect;
+      }
+      {
         matches = [{ namespace = "^dms:(notification-.*)"; }];
         block-out-from = "screen-capture";
       }
@@ -194,44 +215,44 @@ in
   };
 
   xdg.configFile = {
-    "niri/dms/rules.kdl".text = let
-      opacity = "0.95";
-    in  ''
-      window-rule {
-        open-maximized-to-edges false
-        opacity ${opacity}
-        background-effect {
-          blur true
-          xray false
-        }
+    # "niri/dms/rules.kdl".text = let
+    #   opacity = "0.95";
+    # in  ''
+    #   window-rule {
+    #     open-maximized-to-edges false
+    #     opacity ${opacity}
+    #     background-effect {
+    #       blur true
+    #       xray false
+    #     }
 
-        popups {
-          geometry-corner-radius 15
-          opacity ${opacity}
-          background-effect {
-            blur true
-            xray false
-          }
-        }
-      }
+    #     popups {
+    #       geometry-corner-radius 15
+    #       opacity ${opacity}
+    #       background-effect {
+    #         blur true
+    #         xray false
+    #       }
+    #     }
+    #   }
 
-      layer-rule {
-        match namespace="^dms-clipboardPlus-panel"
+    #   layer-rule {
+    #     match namespace="^dms-clipboardPlus-panel"
 
-        background-effect {
-            blur true
-            xray false
-        }
-      }
+    #     background-effect {
+    #         blur true
+    #         xray false
+    #     }
+    #   }
 
-      layer-rule {
-        match namespace="^dms:"
+    #   layer-rule {
+    #     match namespace="^dms:"
 
-        background-effect {
-          xray false
-        }
-      }
-    '';
+    #     background-effect {
+    #       xray false
+    #     }
+    #   }
+    # '';
     
     # "nsticky/config.toml".source = (pkgs.formats.toml { }).generate "sticky-config" {
     #   sticky = {

@@ -22,6 +22,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     nixos-avf = {
       url = "github:nix-community/nixos-avf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,12 +43,14 @@
       url = "github:SamLukeYes/archix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # ~/~ end
-    # ~/~ begin <<flake/inputs/2-apps.md#flake-inputs>>[0]
-    catppuccin = {
-      url = "github:catppuccin/nix";
+    
+    stylix = {
+      url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # ~/~ end
+    # ~/~ begin <<flake/inputs/2-apps.md#flake-inputs>>[0]
+    catppuccin.url = "github:catppuccin/nix";
     
     steam-config-nix = {
       url = "github:different-name/steam-config-nix";
@@ -79,7 +86,7 @@
     };
     
     nixcord = {
-      url = "github:kaylorben/nixcord";
+      url = "github:4evy/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
@@ -115,7 +122,7 @@
     };
     
     omikuji = {
-      url = "github:reakjra/omikuji";
+      url = "github:omikuji-launcher/omikuji";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
     
@@ -123,12 +130,22 @@
       url = "github:VERT-sh/vertd";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    prefixer = {
+      url = "github:wojtmic/prefixer";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]
     # DMS related stuff
     
+    # niri = {
+    #   url = "github:sodiboo/niri-flake";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+    
     niri = {
-      url = "github:sodiboo/niri-flake";
+      url = "github:epireyn/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
@@ -209,6 +226,11 @@
       url = "git+https://git.bwaaa.monster/beaker?shallow=0";
       flake = false;
     };
+    
+    zen-ctp = {
+      url = "github:code-irisnk/catppuccin-zen-browser";
+      flake = false;
+    };
     # ~/~ end
   };
 
@@ -217,6 +239,7 @@
       self,
       nixpkgs,
       home-manager,
+      nur,
       ...
     }:
     let
@@ -237,6 +260,7 @@
           modules = [
             ./hosts/${host}
             ./variables
+            nur.modules.nixos.default
           ];
         };
     in

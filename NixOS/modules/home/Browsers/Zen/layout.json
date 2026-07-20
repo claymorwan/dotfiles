@@ -2,6 +2,7 @@
   "placements": {
     "widget-overflow-fixed-list": [],
     "unified-extensions-area": [
+      "moz-addon-prod_7tv_app-browser-action",
       "sponsorblocker_ajay_app-browser-action",
       "moz-addon_7tv_app-browser-action",
       "_a6c4a591-f1b2-4f03-b3ff-767e5bedf4e7_-browser-action",
@@ -22,7 +23,10 @@
       "_bf9e77ee-c405-4dd7-9bed-2f55e448d19a_-browser-action",
       "_5cce4ab5-3d47-41b9-af5e-8203eea05245_-browser-action",
       "_bbb880ce-43c9-47ae-b746-c3e0096c5b76_-browser-action",
-      "firefox_tampermonkey_net-browser-action"
+      "firefox_tampermonkey_net-browser-action",
+      "enhancerforyoutube_maximerf_addons_mozilla_org-browser-action",
+      "firefox-extension_steamdb_info-browser-action",
+      "_9a3104a2-02c2-464c-b069-82344e5ed4ec_-browser-action"
     ],
     "nav-bar": [
       "back-button",
@@ -36,7 +40,8 @@
       "unified-extensions-button",
       "ublock0_raymondhill_net-browser-action",
       "_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action",
-      "78272b6fa58f4a1abaac99321d503a20_proton_me-browser-action"
+      "78272b6fa58f4a1abaac99321d503a20_proton_me-browser-action",
+      "reset-pbm-toolbar-button"
     ],
     "toolbar-menubar": [
       "menubar-items"
@@ -90,7 +95,11 @@
     "_5cce4ab5-3d47-41b9-af5e-8203eea05245_-browser-action",
     "_bbb880ce-43c9-47ae-b746-c3e0096c5b76_-browser-action",
     "sponsorblocker_ajay_app-browser-action",
-    "firefox_tampermonkey_net-browser-action"
+    "firefox_tampermonkey_net-browser-action",
+    "enhancerforyoutube_maximerf_addons_mozilla_org-browser-action",
+    "firefox-extension_steamdb_info-browser-action",
+    "_9a3104a2-02c2-464c-b069-82344e5ed4ec_-browser-action",
+    "moz-addon-prod_7tv_app-browser-action"
   ],
   "dirtyAreaCache": [
     "nav-bar",
@@ -102,6 +111,6 @@
     "toolbar-menubar",
     "TabsToolbar"
   ],
-  "currentVersion": 23,
+  "currentVersion": 24,
   "newElementCount": 6
 }

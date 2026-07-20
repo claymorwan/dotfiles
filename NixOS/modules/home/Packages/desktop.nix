@@ -32,6 +32,7 @@ in
     inputs.lncur.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # GUI
+    chromium
     # fluxer-canary
     # stoat-desktop
     packet
@@ -55,7 +56,7 @@ in
     shijima-qt-bin
     nicotine-plus
     gpu-screen-recorder-gtk
-    # handbrake
+    handbrake
     inputs.kopuz.packages.${system}.default
     # (lib.mkIf config.programs.noctalia-shell.enable pkgs.wallpaperengine-gui)
     # waywallen
