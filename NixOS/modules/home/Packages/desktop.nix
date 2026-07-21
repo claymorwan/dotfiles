@@ -54,6 +54,7 @@ in
     gradia
     shiru
     shijima-qt-bin
+    shimelinux
     nicotine-plus
     gpu-screen-recorder-gtk
     handbrake

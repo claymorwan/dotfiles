@@ -51,6 +51,7 @@ in
       git-fish = mkLocalPkg "git-fish";
       # omikuji-bin = mkLocalPkg "omikuji-bin";
       utmt-cli = mkLocalPkg "utmt-cli";
+      shimelinux = mkLocalPkg "shimelinux";
 
       mouse-cursor = (mkLocalPkg "cursors").override { cursorName = config.globVars.mouseCursor.name; };
       neuwaita = mkLocalPkg "neuwaita";

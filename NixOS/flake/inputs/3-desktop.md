@@ -43,8 +43,14 @@ dgop = {
 dms = {
   url = "github:AvengeMedia/DankMaterialShell";
   inputs.nixpkgs.follows = "nixpkgs";
-  # inputs.quickshell.follows = "quickshell";
 };
+
+dank-greeter = {
+  url = "github:AvengeMedia/dank-greeter";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+
+
 
 dsearch = {
   url = "github:AvengeMedia/danksearch";

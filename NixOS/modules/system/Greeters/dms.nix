@@ -2,21 +2,17 @@
 
 {
   imports = [
-    inputs.dms.nixosModules.greeter
+    inputs.dank-greeter.nixosModules.default
   ];
 
-  programs = {
-    dank-material-shell = {
-      greeter = {
-        enable = true;
-        compositor.name = "niri";
+  programs.dms-greeter = {
+    enable = true;
+    compositor.name = "niri";
 
-        configHome = config.globVars.home_dir;
-        configFiles = [
-          "${config.globVars.dotfiles_dir}/Configs/dms/.config/DankMaterialShell/settings.json"
-        ];
-      };
-    };
+    configHome = config.globVars.home_dir;
+    configFiles = [
+      "${config.globVars.dotfiles_dir}/Configs/dms/.config/DankMaterialShell/settings.json"
+    ];
   };
 
   # Needed to make custom cursor work
