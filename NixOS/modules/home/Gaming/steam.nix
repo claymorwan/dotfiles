@@ -213,6 +213,8 @@ in
         "Code RAPID Demo" = winGameOptions 4841090;
 
         "THE WELL IS NOT EMPTY Demo" = winGameOptions 4700530;
+
+        "Ironwing Valiant: Record of Astera" = winGameOptions 4130300;
       };
     };
   };

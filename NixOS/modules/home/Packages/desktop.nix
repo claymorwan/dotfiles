@@ -62,6 +62,7 @@ in
     # (lib.mkIf config.programs.noctalia-shell.enable pkgs.wallpaperengine-gui)
     # waywallen
     # waywallen-layer-shell
+    pwvucontrol
 
     # Kde stuff
     kdePackages.gwenview

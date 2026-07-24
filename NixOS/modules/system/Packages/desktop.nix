@@ -46,10 +46,11 @@ in
     };
 
     gpu-screen-recorder.enable = true;
-    droidcam.enable = true;
+    # droidcam.enable = true;
   };
   
   environment.systemPackages = with pkgs; [
+    droidcam
     ffmpeg-full
     uwsm
     v4l-utils

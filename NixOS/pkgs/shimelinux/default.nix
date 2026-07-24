@@ -1,5 +1,3 @@
-# with import <nixpkgs> { };
-
 {
   stdenv,
   lib,
@@ -7,6 +5,7 @@
   gradle,
   makeWrapper,
   libappindicator,
+  glib,
   jdk21,
   callPackage,
 }:
@@ -30,10 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
   ];
 
-  buildInputs = [
-    libappindicator
-  ];
-  
   mitmCache = gradle.fetchDeps {
     # inherit (finalAttrs) pname;
     pkg = finalAttrs.finalPackage;
@@ -57,20 +52,22 @@ stdenv.mkDerivation (finalAttrs: {
   ''; 
 
   installPhase = ''
-    install -Dm644 build/libs/${finalAttrs.pname}-${finalAttrs.version}.jar $out/share/java/${finalAttrs.pname}.jar
-    install -Dm755 ./shimelinux.sh $out/bin/${finalAttrs.pname}
+    install -Dm644 build/libs/shimelinux-${finalAttrs.version}.jar $out/share/java/shimelinux.jar
+    install -Dm755 ./shimelinux.sh $out/bin/shimelinux
 
-    install -Dm644 ./icon.svg $out/share/icons/hicolor/scalable/apps/${finalAttrs.pname}.svg
+    install -Dm644 ./icon.svg $out/share/icons/hicolor/scalable/apps/shimelinux.svg
     install -Dm644 ./shimelinux.desktop -t $out/share/applications
   
-    wrapProgram $out/bin/${finalAttrs.pname} \
-      --prefix PATH : ${lib.makeBinPath [ jdk21 ]}
+    wrapProgram $out/bin/shimelinux \
+      --prefix PATH : ${lib.makeBinPath [ jdk21 ]} \
+      --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [ libappindicator glib ]}
   '';
 
   meta = {
     description = "An unofficial Linux port of Shimeji-ee Desktop Pet";
     license = lib.licenses.bsd3;
     maintainers = with lib.maintainers; [ claymorwan ];
+    mainProgram = "shimelinux";
     sourceProvenance =  with lib.sourceTypes; [
       fromSource
       binaryBytecode # mitm cache
