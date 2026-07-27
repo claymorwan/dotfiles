@@ -9,8 +9,8 @@
           inherit name value;
         })
         [
-        "image/png"
-        "application/zip"
+        # "image/png"
+        # "application/zip"
         ]
     );
   in

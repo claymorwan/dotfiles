@@ -48,13 +48,13 @@
         for = "unix";
       }
       {
-        run = "code %*";
+        run = "code %s";
         orphan = true;
         desc = "code";
         for = "windows";
       }
       {
-        run = "code -w %*";
+        run = "code -w %s";
         block = true;
         desc = "code (block)";
         for = "windows";
@@ -62,51 +62,51 @@
     ];
     open = [
       {
-        run = ''xdg-open "$1"'';
+        run = "xdg-open %s1";
         desc = "Open";
         for = "linux";
       }
       {
-        run = ''open "$@"'';
+        run = "open %s";
         desc = "Open";
         for = "macos";
       }
       {
-        run = ''start "" "%1"'';
+        run = ''start "" %s1'';
         orphan = true;
         desc = "Open";
         for = "windows";
       }
       {
-        run = ''termux-open "$1"'';
+        run = "termux-open %s1";
         desc = "Open";
         for = "android";
       }
     ];
     reveal = [
       {
-        run = ''xdg-open "$(dirname "$1")"'';
+        run = "xdg-open %d1";
         desc = "Reveal";
         for = "linux";
       }
       {
-        run = ''open -R "$1"'';
+        run = "open -R %s1";
         desc = "Reveal";
         for = "macos";
       }
       {
-        run = ''explorer /select,"%1"'';
+        run = "explorer /select,%s1";
         orphan = true;
         desc = "Reveal";
         for = "windows";
       }
       {
-        run = ''termux-open "$(dirname "$1")"'';
+        run = "termux-open %d1";
         desc = "Reveal";
         for = "android";
       }
       {
-        run = ''exiftool "$1"; echo "Press enter to exit"; read _'';
+        run = "clear; exiftool %s1; echo 'Press enter to exit'; read _";
         block = true;
         desc = "Show EXIF";
         for = "unix";
@@ -114,115 +114,197 @@
     ];
     extract = [
       {
-        run = ''ya pub extract --list "$@"'';
+        run = "ya pub extract --list %s";
         desc = "Extract here";
-        for = "unix";
-      }
-      {
-        run = "ya pub extract --list %*";
-        desc = "Extract here";
-        for = "windows";
       }
     ];
     play = [
       {
-        run = ''vlc "$@"'';
+        run = "xdg-open %s1";
+        desc = "Play";
         orphan = true;
-        for = "unix";
+        for = "linux";
       }
       {
-        run = "mpv --force-window %*";
+        run = "open %s";
+        desc = "Play";
+        for = "macos";
+      }
+      {
+        run = ''start "" %s1'';
+        desc = "Play";
         orphan = true;
         for = "windows";
       }
       {
-        run = ''mediainfo "$1"; echo "Press enter to exit"; read _'';
+        run = "termux-open %s1";
+        desc = "Play";
+        for = "android";
+      }
+      {
+        run = "mediainfo %s1; echo 'Press enter to exit'; read _";
         block = true;
         desc = "Show media info";
         for = "unix";
+      }
+    	{
+    	  run = "mediainfo %s1 & pause";
+    	  block = true;
+    	  desc = "Show media info";
+    	  for = "windows";
+    	}
+    ];
+
+    trash = [
+      {
+        run = "ya pub trash-restore --list %S";
+        desc = "Restore selected files";
+      }
+      {
+        run = "ya pub trash-empty --list %S";
+        desc = "Empty trash bin";
+      }
+    ];
+    
+    download = [
+      {
+        run = "ya emit download --open %S";
+        desc = "Download and open";
+      }
+      {
+        run = "ya emit download %S";
+        desc = "Download";
+      }
+    ];
+    
+    open-krita = [
+      {
+        run = ''krita "$@"'';
+        orphan = true;
+        for = "unix";
+      }
+      {
+        run = "krita %*";
+        orphan = true;
+        for = "windows";
       }
     ];
   };
 
   open = {
     rules = [
+    	# Trash
+      # { url = "trash://*"; use = [ "open" "trash" ]; }
+      # { url = "trash://*/"; use = [ "edit" "trash" ]; }
       # Folder
-      {
-        url = "*/";
-        use = [
-          "edit"
-          "open"
-          "reveal"
-        ];
-      }
+      { url = "*/"; use = [ "edit" "open" "reveal" ]; }
       # Text
-      {
-        mime = "text/*";
-        use = [
-          "edit"
-          "reveal"
-        ];
-      }
+      { mime = "text/*"; use = [ "edit" "reveal" ]; }
       # Image
-      {
-        mime = "image/*";
-        use = [
-          "open"
-          "reveal"
-        ];
-      }
+      { mime = "image/*"; use = [ "open" "reveal" ]; }
+      { url = "*.kra"; use = [ "open-krita" "reveal" ]; }
       # Media
+      { mime = "{audio,video}/*"; use = [ "play" "reveal" ]; }
+      # Code
       {
-        mime = "{audio,video}/*";
-        use = [
-          "play"
-          "reveal"
-        ];
+        mime = "application/{json,ndjson,javascript,wine-extension-ini}";
+        use = [ "edit" "reveal" ];
       }
       # Archive
       {
         mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}";
-        use = [
-          "extract"
-          "reveal"
-        ];
-      }
-      # JSON
-      {
-        mime = "application/{json,ndjson}";
-        use = [
-          "edit"
-          "reveal"
-        ];
-      }
-      {
-        mime = "*/javascript";
-        use = [
-          "edit"
-          "reveal"
-        ];
+        use = [ "extract" "reveal" ];
       }
       # Empty file
-      {
-        mime = "inode/empty";
-        use = [
-          "edit"
-          "reveal"
-        ];
-      }
+      { mime = "inode/empty"; use = [ "edit" "reveal" ]; }
       # Virtual file system
-      {
-        mime = "vfs/{absent,stale}";
-        use = "download";
-      }
+      { mime = "vfs/{absent,stale}"; use = "download"; }
       # Fallback
-      {
-        url = "*";
-        use = [
-          "open"
-          "reveal"
-        ];
-      }
+      { url = "*"; use = [ "open" "reveal" ]; }
+      # # Folder
+      # {
+      #   url = "*/";
+      #   use = [
+      #     "edit"
+      #     "open"
+      #     "reveal"
+      #   ];
+      # }
+      # # Text
+      # {
+      #   mime = "text/*";
+      #   use = [
+      #     "edit"
+      #     "reveal"
+      #   ];
+      # }
+      # # Image
+      # {
+      #   mime = "image/*";
+      #   use = [
+      #     "open"
+      #     "reveal"
+      #   ];
+      # }
+      # # Media
+      # {
+      #   mime = "{audio,video}/*";
+      #   use = [
+      #     "play"
+      #     "reveal"
+      #   ];
+      # }
+      # {
+      #   url = "*.krita";
+      #   use = [
+      #     "open-krita"
+      #     "reveal"
+      #   ];
+      # }
+      # # Archive
+      # {
+      #   mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}";
+      #   use = [
+      #     "extract"
+      #     "reveal"
+      #   ];
+      # }
+      # # JSON
+      # {
+      #   mime = "application/{json,ndjson}";
+      #   use = [
+      #     "edit"
+      #     "reveal"
+      #   ];
+      # }
+      # {
+      #   mime = "*/javascript";
+      #   use = [
+      #     "edit"
+      #     "reveal"
+      #   ];
+      # }
+      # # Empty file
+      # {
+      #   mime = "inode/empty";
+      #   use = [
+      #     "edit"
+      #     "reveal"
+      #   ];
+      # }
+      # # Virtual file system
+      # {
+      #   mime = "vfs/{absent,stale}";
+      #   use = "download";
+      # }
+      # # Fallback
+      # {
+      #   url = "*";
+      #   use = [
+      #     "open"
+      #     "reveal"
+      #   ];
+      # }
     ];
   };
   tasks = {
@@ -259,15 +341,9 @@
       }
     ];
     spotters = [
-      {
-        url = "*/";
-        run = "folder";
-      }
+      { url = "*/"; run = "folder"; }
       # Code
-      {
-        mime = "text/*";
-        run = "code";
-      }
+      { mime = "text/*"; run = "code"; }
       {
         mime = "application/{mbox,javascript,wine-extension-ini}";
         run = "code";
@@ -277,30 +353,15 @@
         mime = "image/{avif,hei?,jxl,svg+xml}";
         run = "magick";
       }
-      {
-        mime = "image/*";
-        run = "image";
-      }
+      { mime = "image/*"; run = "image"; }
       # Video
-      {
-        mime = "video/*";
-        run = "video";
-      }
+      { mime = "video/*"; run = "video"; }
       # Virtual file system
-      {
-        mime = "vfs/*";
-        run = "vfs";
-      }
+      { mime = "vfs/*"; run = "vfs"; }
       # Error
-      {
-        mime = "null/*";
-        run = "null";
-      }
+      { mime = "null/*"; run = "null"; }
       # Fallback
-      {
-        url = "*";
-        run = "file";
-      }
+      { url = "*"; run = "file"; }
     ];
 
     prepend_preloaders = [

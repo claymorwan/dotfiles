@@ -14,6 +14,7 @@
       ];
 
       substituters = [
+        "https://nix-community.cachix.org"
         "https://cache.garnix.io"
         "https://nixpkgs-python.cachix.org"
         "https://kopuz.cachix.org"
@@ -22,6 +23,7 @@
       ];
       
       trusted-substituters = [
+        "https://nix-community.cachix.org"
         "https://cache.garnix.io"
         "https://nixpkgs-python.cachix.org"
         "https://kopuz.cachix.org"
@@ -30,6 +32,7 @@
       ];
 
       trusted-public-keys = [
+        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
         "nixpkgs-python.cachix.org-1:hxjI7pFxTyuTHn2NkvWCrAUcNZLNS3ZAvfYNuYifcEU="
         "kopuz.cachix.org-1:J2X3AnAYhKTJW5S3aCLoA1ckonQXVNZMQvhZA0YAufw="
@@ -47,12 +50,16 @@
     };
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-38.8.4"
-    "electron-39.8.10"
-    "nodejs-20.20.2"
-    "electron-40.10.5"
-  ];
+  # Allow unfree pkg
+  nixpkgs.config= {
+    allowUnfree = true;
+    permittedInsecurePackages = [
+      "electron-38.8.4"
+      "electron-39.8.10"
+      "nodejs-20.20.2"
+      "electron-40.10.5"
+    ];
+  };
 
   programs = {
     nix-ld = {
@@ -73,14 +80,12 @@
     };
   };
 
+  # Nix related packages
   environment.systemPackages = with pkgs; [
     nurl
     update-nix-fetchgit
     nixpkgs-review
     inputs.nix-output-monitor.packages.${pkgs.stdenv.hostPlatform.system}.default
     expect
-
-    # For nixpkgs-review
-    glow
   ];
 }

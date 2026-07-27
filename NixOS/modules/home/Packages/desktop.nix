@@ -9,6 +9,13 @@ in
   ];
   
   programs = {
+    nix-init = {
+      enable = true;
+      settings = {
+        maintainers = [ "claymorwan" ];
+      };
+    };
+
     onlyoffice.enable = true;
     btop.enable = true;
   };
