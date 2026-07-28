@@ -43,7 +43,7 @@ in
           { 
             app-id = "guifetch|yad|zenity|wev|org\.gnome\.FileRoller|file-roller|blueman-manager|com\.github\.GradienceTeam\.Gradience"
               + "|feh|imv|system-config-printer|org.freedesktop.impl.portal.desktop.kde|xdg-desktop-portal-gtk|nz.co.mega.megasync|delta-patcher"
-              + "|.*Windows.*|be.alexandervanhee.gradia|qalculate-gtk|org.quickshell|.*scrcpy.*|org.kde.kdeconnect.daemon|XEyes";
+              + "|.*Windows.*|be.alexandervanhee.gradia|qalculate-gtk|org.quickshell|.*scrcpy.*|org.kde.kdeconnect.daemon|XEyes|com-group_finity-mascot-MainKt";
           }
           {
             app-id = "com-abdownloadmanager-desktop-AppKt";

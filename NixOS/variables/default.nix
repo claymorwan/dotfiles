@@ -42,7 +42,7 @@ in
     launch_prefix = mkStrVar "app2unit --";
     terminal = mkStrVar "ghostty";
     browser = mkStrVar "zen-beta";
-    discord_branch = mkStrVar "development";
+    discord_branch = mkStrVar "canary"; # "development";
     discord = mkStrVar (discordExeName cfg.discord_branch);
 
     # Dirs

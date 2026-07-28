@@ -18,19 +18,19 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "shimelinux";
   version = "1.1.3";
 
-  # src = fetchFromGitHub {
-  #   owner = "BujjuIsABee";
-  #   repo = "shimelinux";
-  #   rev = "a4745b3bb7b676ba53e43611b874d8d6706040d7";
-  #   hash = "sha256-/nVMxNvThY81QPaW1k/DJ4BWCDI5Ryn3Z5lvaDq/MBQ=";
-  # };
-  
   src = fetchFromGitHub {
     owner = "BujjuIsABee";
     repo = "shimelinux";
-    tag = "v${finalAttrs.version}";
-    hash = "sha256-oCMwxfLmeO8xJ5IjurBsvAW1C0XDJoWtsbivdZzovIA=";
+    rev = "de50f094f745fda26e538d025d2d982331cf87f3";
+    hash = "sha256-sx+ualb4y4MO4F9RxVkP9hLFjvpkctudv2opwBfT6OI=";
   };
+  
+  # src = fetchFromGitHub {
+  #   owner = "BujjuIsABee";
+  #   repo = "shimelinux";
+  #   tag = "v${finalAttrs.version}";
+  #   hash = "sha256-oCMwxfLmeO8xJ5IjurBsvAW1C0XDJoWtsbivdZzovIA=";
+  # };
 
   nativeBuildInputs = [
     gradle
