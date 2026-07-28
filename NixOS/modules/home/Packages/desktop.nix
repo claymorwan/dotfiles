@@ -39,7 +39,7 @@ in
     inputs.lncur.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # GUI
-    chromium
+    veracrypt
     # fluxer-canary
     # stoat-desktop
     packet
