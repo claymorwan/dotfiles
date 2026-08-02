@@ -9,6 +9,9 @@
   ];
 
   home.packages = with pkgs; [
+    # amethyst
+    nur.repos.rogreat.amethyst-mod-manager
+
     prismlauncher
     protonplus
     limo

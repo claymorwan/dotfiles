@@ -159,6 +159,7 @@ in
           "browser.newtab.extensionControlled" = true;
           "browser.newtab.privateAllowed" = true;
           "general.autoScroll" = true;
+          "extensions.autoDisableScopes" = 0;
 
           # Zen specific options
           "zen.view.use-single-toolbar" = false;

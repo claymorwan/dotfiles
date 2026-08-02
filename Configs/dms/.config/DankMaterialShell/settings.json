@@ -34,6 +34,24 @@
   "mangoLayoutRadiusOverride": -1,
   "mangoLayoutBorderSize": -1,
   "mangoTrackpadNaturalScrolling": true,
+  "mouseAccelProfile": "default",
+  "mouseAccelSpeed": 0,
+  "mouseLeftHanded": false,
+  "mouseMiddleEmulation": false,
+  "mouseNaturalScroll": false,
+  "mouseScrollFactor": 1,
+  "mouseScrollMethod": "default",
+  "touchpadAccelProfile": "default",
+  "touchpadAccelSpeed": 0,
+  "touchpadDisableOnExternalMouse": false,
+  "touchpadDisableWhileTyping": true,
+  "touchpadDragLock": false,
+  "touchpadMiddleEmulation": false,
+  "touchpadNaturalScroll": true,
+  "touchpadScrollFactor": 1,
+  "touchpadScrollMethod": "default",
+  "touchpadTapAndDrag": true,
+  "touchpadTapToClick": true,
   "firstDayOfWeek": -1,
   "showWeekNumber": false,
   "calendarBackend": "auto",
@@ -498,21 +516,6 @@
   "fadeToDpmsEnabled": false,
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "",
-  "brightnessDevicePins": {},
-  "wifiNetworkPins": {
-    "preferredWifi": "Ackdar family couloir"
-  },
-  "bluetoothDevicePins": {
-    "preferredDevice": [
-      "8C:C5:D0:B9:CC:31"
-    ]
-  },
-  "audioInputDevicePins": {
-    "preferredInput": "alsa_input.usb-Razer_Razer_Kraken_V3_HyperSense_000000000001-00.analog-stereo"
-  },
-  "audioOutputDevicePins": {
-    "preferredOutput": "alsa_output.usb-Razer_Razer_Kraken_V3_HyperSense_000000000001-00.analog-stereo"
-  },
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
@@ -622,6 +625,7 @@
   "notificationTimeoutLow": 5000,
   "notificationTimeoutNormal": 5000,
   "notificationTimeoutCritical": 0,
+  "notificationIgnoreAppTimeout": false,
   "notificationCompactMode": false,
   "notificationShowTimeoutBar": false,
   "notificationDedupeEnabled": true,
@@ -1551,8 +1555,8 @@
       "previewActive": false,
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "(L@y-UPp4",
-      "updatedAt": 1785205125754,
+      "sourceContent": "50 rue claude bernard Perigeux",
+      "updatedAt": 1785671407146,
       "highlightedHtml": ""
     },
     "dms_clipboard_search": {
@@ -1589,5 +1593,5 @@
   "barInsetPaddingShared": -1,
   "barInsetPaddingSyncAll": false,
   "frameBarInsetPadding": -1,
-  "configVersion": 12
+  "configVersion": 13
 }

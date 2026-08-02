@@ -61,14 +61,11 @@ in
     gradia
     shiru
     shijima-qt-bin
-    shimelinux
     nicotine-plus
     gpu-screen-recorder-gtk
     handbrake
     inputs.kopuz.packages.${system}.default
-    # (lib.mkIf config.programs.noctalia-shell.enable pkgs.wallpaperengine-gui)
-    # waywallen
-    # waywallen-layer-shell
+    nur.repos.claymorwan.shimelinux
     pwvucontrol
 
     # Kde stuff

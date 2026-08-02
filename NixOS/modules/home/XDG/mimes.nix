@@ -1,33 +1,22 @@
 { lib, ... }:
 
 {
-  xdg.mimeApps = let
-    value = "dms-open.desktop";
-    associations = builtins.listToAttrs (
-      map
-        (name: {
-          inherit name value;
-        })
-        [
-        # "image/png"
-        # "application/zip"
-        ]
-    );
-  in
-  {
+  xdg.mimeApps =   {
     enable = true;
-    associations.added = lib.attrsets.mergeAttrsList [
-    {
-      "inode/directory" = "yazi.desktop";
-    }
-    associations
-    ];
+    associations = {
+      added = {
+        "inode/directory" = "yazi.desktop";
+        "x-scheme-handler/nxm" = "amethystmodmanager-nxm.desktop";
+      };
 
-    defaultApplications = lib.attrsets.mergeAttrsList [
-    {
+      removed = {
+        "x-scheme-handler/nxm" = "limo.desktop";
+      };
+    };
+
+    defaultApplications = {
       "inode/directory" = "yazi.desktop";
-    }
-    associations
-    ];
+      "x-scheme-handler/nxm" = "amethystmodmanager-nxm.desktop";
+    };
   };
 }

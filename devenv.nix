@@ -10,8 +10,4 @@
       '';
     };
   };
-
-  enterShell = ''
-    cd NixOS    
-  '';
 }

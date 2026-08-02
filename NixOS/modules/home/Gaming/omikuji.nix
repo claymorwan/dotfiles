@@ -7,6 +7,12 @@
 
   programs.omikuji = {
     enable = true;
+    package = inputs.omikuji.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
+      extraLibraries = (_prev: ( with pkgs; [
+        nspr
+        libxdamage
+      ]));
+    };
     
     defaultWinePackage = pkgs.proton-ge-bin;
 

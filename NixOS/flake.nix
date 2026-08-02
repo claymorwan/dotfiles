@@ -27,6 +27,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    nurpkgs = {
+      url = "github:claymorwan/nurpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     nixos-avf = {
       url = "github:nix-community/nixos-avf";
       inputs.nixpkgs.follows = "nixpkgs";

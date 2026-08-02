@@ -16,21 +16,14 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "shimelinux";
-  version = "1.1.3";
+  version = "1.2.0";
 
   src = fetchFromGitHub {
     owner = "BujjuIsABee";
     repo = "shimelinux";
-    rev = "de50f094f745fda26e538d025d2d982331cf87f3";
-    hash = "sha256-sx+ualb4y4MO4F9RxVkP9hLFjvpkctudv2opwBfT6OI=";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-qsz860+5GLM2vu5uLQGPIUwkvZaeuutpXa4g6o7E6GA=";
   };
-  
-  # src = fetchFromGitHub {
-  #   owner = "BujjuIsABee";
-  #   repo = "shimelinux";
-  #   tag = "v${finalAttrs.version}";
-  #   hash = "sha256-oCMwxfLmeO8xJ5IjurBsvAW1C0XDJoWtsbivdZzovIA=";
-  # };
 
   nativeBuildInputs = [
     gradle
