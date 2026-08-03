@@ -84,4 +84,9 @@ prefixer = {
   url = "github:wojtmic/prefixer";
   inputs.nixpkgs.follows = "nixpkgs";
 };
+
+wl_shimeji = {
+  url = "git+https://github.com/claymorwan/wl_shimeji?submodules=1";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
 ```

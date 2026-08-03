@@ -13,7 +13,7 @@
         "flakes"
       ];
 
-      substituters = [
+      extra-substituters = [
         "https://nix-community.cachix.org"
         # "https://cache.garnix.io"
         "https://nixpkgs-python.cachix.org"
@@ -22,16 +22,16 @@
         # "https://omikuji-claymorwan-test.cachix.org"
       ];
       
-      trusted-substituters = [
-        "https://nix-community.cachix.org"
-        # "https://cache.garnix.io"
-        "https://nixpkgs-python.cachix.org"
-        "https://kopuz.cachix.org"
-        "https://omikuji.cachix.org"
-        # "https://omikuji-claymorwan-test.cachix.org"
-      ];
+      # trusted-substituters = [
+      #   "https://nix-community.cachix.org"
+      #   # "https://cache.garnix.io"
+      #   "https://nixpkgs-python.cachix.org"
+      #   "https://kopuz.cachix.org"
+      #   "https://omikuji.cachix.org"
+      #   # "https://omikuji-claymorwan-test.cachix.org"
+      # ];
 
-      trusted-public-keys = [
+      extra-trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         # "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
         "nixpkgs-python.cachix.org-1:hxjI7pFxTyuTHn2NkvWCrAUcNZLNS3ZAvfYNuYifcEU="

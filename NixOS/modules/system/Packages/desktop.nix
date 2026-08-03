@@ -55,7 +55,6 @@ in
     uwsm
     v4l-utils
     wl-clipboard
-    app2unit
     rar
     unzip
     efibootmgr

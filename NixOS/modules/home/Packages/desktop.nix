@@ -33,10 +33,10 @@ in
     cbonsai
     linux-wallpaperengine
     wev
-    wl_shimeji
+    inputs.wl_shimeji.packages.${system}.default
     wineWow64Packages.full
     xdelta
-    inputs.lncur.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.lncur.packages.${system}.default
 
     # GUI
     veracrypt
@@ -57,14 +57,14 @@ in
     qbittorrent
     fragments
     audacity
-    winboat
+    # winboat
     gradia
     shiru
     shijima-qt-bin
     nicotine-plus
     gpu-screen-recorder-gtk
     handbrake
-    inputs.kopuz.packages.${system}.default
+    # inputs.kopuz.packages.${system}.default
     nur.repos.claymorwan.shimelinux
     pwvucontrol
 

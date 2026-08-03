@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./jetbrains.nix
+    # ./jetbrains.nix
     ./zed.nix
   ];
 

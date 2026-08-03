@@ -39,7 +39,7 @@ in
     };
 
     # Apps
-    launch_prefix = mkStrVar "app2unit --";
+    # launch_prefix = mkStrVar "app2unit --";
     terminal = mkStrVar "ghostty";
     browser = mkStrVar "zen-beta";
     discord_branch = mkStrVar "canary"; # "development";

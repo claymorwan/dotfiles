@@ -140,6 +140,11 @@
       url = "github:wojtmic/prefixer";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    wl_shimeji = {
+      url = "git+https://github.com/claymorwan/wl_shimeji?submodules=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]
     # DMS related stuff
