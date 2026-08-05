@@ -327,11 +327,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785648621,
-        "narHash": "sha256-rjY9hNqLsMqMQZWJkPgyAlL9GEdhcgpnaf0ErwS+iFk=",
+        "lastModified": 1785881059,
+        "narHash": "sha256-k8ixUSu2bdeBsqJTeEk53eHNiPZzysRsXhu5btN84Hg=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "11287459c3abc23c74de86adccb2ab0bc536e464",
+        "rev": "e089948225bf6d8c9fcf6021f61affdf403ca355",
         "type": "github"
       },
       "original": {
@@ -2023,10 +2023,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1785717203,
-        "narHash": "sha256-hzDl3MVPhZSDN0R1fu8ThEq0hDwMZCcMov5u4kpNzTk=",
+        "lastModified": 1785882567,
+        "narHash": "sha256-K0jSIbcyHVmG8s9+yFlII+hOdkQ2gAEI0Gb6SUqCzs8=",
         "ref": "refs/heads/nix-flake",
-        "rev": "01809c64da976063084ff1a132727a9ef8cf7e57",
+        "rev": "0ae7f5e313adc81a6a293a7a576b34bfccc15b96",
         "revCount": 245,
         "submodules": true,
         "type": "git",

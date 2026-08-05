@@ -19,7 +19,7 @@
         "https://nixpkgs-python.cachix.org"
         "https://kopuz.cachix.org"
         "https://omikuji.cachix.org"
-        # "https://omikuji-claymorwan-test.cachix.org"
+        "https://nurpkgs-claymorwan.cachix.org"
       ];
       
       # trusted-substituters = [
@@ -37,7 +37,7 @@
         "nixpkgs-python.cachix.org-1:hxjI7pFxTyuTHn2NkvWCrAUcNZLNS3ZAvfYNuYifcEU="
         "kopuz.cachix.org-1:J2X3AnAYhKTJW5S3aCLoA1ckonQXVNZMQvhZA0YAufw="
         "omikuji.cachix.org-1:dS6sbpMxarHWIIk3y0R7KXz3eVHUg1lo/y3gMbv4JhM="
-        # "omikuji-claymorwan-test.cachix.org-1:kWmsQxbuLrKC1igfm5Hymi8GSQQLNTHfJz2yU9STwos="
+        "nurpkgs-claymorwan.cachix.org-1:kgQdj1q9CuJvKpz0nI1OttuqmfAQE6YmWD25PMLIwp0="
       ];
 
       auto-optimise-store = true;
@@ -72,10 +72,6 @@
         # lib here
         libice
         libsm
-        # glib
-        # gtk3
-        # libappindicator-gtk3
-        # # libayatana-appindicator
       ]);
     };
   };
