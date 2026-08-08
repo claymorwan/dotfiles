@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 let
   inherit (import ./vars.nix)
   window_gap
@@ -212,56 +210,5 @@ in
         place-within-backdrop = true;
       }
     ];
-  };
-
-  xdg.configFile = {
-    # "niri/dms/rules.kdl".text = let
-    #   opacity = "0.95";
-    # in  ''
-    #   window-rule {
-    #     open-maximized-to-edges false
-    #     opacity ${opacity}
-    #     background-effect {
-    #       blur true
-    #       xray false
-    #     }
-
-    #     popups {
-    #       geometry-corner-radius 15
-    #       opacity ${opacity}
-    #       background-effect {
-    #         blur true
-    #         xray false
-    #       }
-    #     }
-    #   }
-
-    #   layer-rule {
-    #     match namespace="^dms-clipboardPlus-panel"
-
-    #     background-effect {
-    #         blur true
-    #         xray false
-    #     }
-    #   }
-
-    #   layer-rule {
-    #     match namespace="^dms:"
-
-    #     background-effect {
-    #       xray false
-    #     }
-    #   }
-    # '';
-    
-    # "nsticky/config.toml".source = (pkgs.formats.toml { }).generate "sticky-config" {
-    #   sticky = {
-    #     pip.title = "Picture(-| )in(-| )[Pp]icture";
-    #     discord = {
-    #       app-id = "discord|equibop|vesktop";
-    #       title = "Discord Popout";
-    #     };
-    #   };
-    # };
   };
 }

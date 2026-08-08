@@ -69,7 +69,7 @@
 
         xwayland-satellite = {
           enable = true;
-          path = "${lib.getExe pkgs.xwayland-satellite}";
+          path = lib.getExe pkgs.xwayland-satellite;
         };
       };
     };

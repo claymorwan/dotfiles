@@ -1,9 +1,8 @@
-{ osConfig, host, ... }:
-
 {
   imports = [
     ./fish.nix
     ./nushell.nix
+    ./xonsh.nix
     ./zsh.nix
   ];
 

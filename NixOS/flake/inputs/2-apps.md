@@ -55,9 +55,12 @@ lncur = {
 };
 
 omnisearch = {
-  url = "git+https://git.bwaaa.monster/omnisearch";
-  inputs.nixpkgs.follows = "nixpkgs";
-  inputs.beaker-src.follows = "beaker-src";
+  url = "github:indium114/omnisearch-flake";
+  inputs = {
+    nixpkgs.follows = "nixpkgs";
+    # omnisearch-src.follows = "omnisearch-src";
+    # beaker-src.follows = "beaker-src";
+  };
 };
 
 nu-scripts = {

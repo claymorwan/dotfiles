@@ -215,6 +215,8 @@ in
         "THE WELL IS NOT EMPTY Demo" = winGameOptions 4700530;
 
         "Ironwing Valiant: Record of Astera" = winGameOptions 4130300;
+
+        "Stardew Valley" = gameOptions 413150;
       };
     };
   };

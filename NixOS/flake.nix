@@ -111,9 +111,12 @@
     };
     
     omnisearch = {
-      url = "git+https://git.bwaaa.monster/omnisearch";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.beaker-src.follows = "beaker-src";
+      url = "github:indium114/omnisearch-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        # omnisearch-src.follows = "omnisearch-src";
+        # beaker-src.follows = "beaker-src";
+      };
     };
     
     nu-scripts = {
@@ -238,10 +241,15 @@
       flake = false;
     };
     
-    beaker-src = {
-      url = "git+https://git.bwaaa.monster/beaker?shallow=0";
-      flake = false;
-    };
+    # omnisearch-src = {
+    #   url = "git+https://git.bwaaa.monster/omnisearch";
+    #   flake = false;
+    # };
+    # 
+    # beaker-src = {
+    #   url = "git+https://git.bwaaa.monster/beaker";
+    #   flake = false;
+    # };
     
     zen-ctp = {
       url = "github:code-irisnk/catppuccin-zen-browser";

@@ -44,15 +44,10 @@ in
       # Local packages
       fluxer = (mkLocalPkg "fluxer").override { inherit (inputs) fluxer-src; };
       fluxer-canary = mkLocalPkg "fluxer-canary";
-      # shiru = mkLocalPkg "shiru";
       shijima-qt-bin = mkLocalPkg "shijima-qt-bin";
       wl_shimeji = mkLocalPkg "wl_shimeji";
       wallpaperengine-gui = mkLocalPkg "wallpaperengine-gui";
       git-fish = mkLocalPkg "git-fish";
-      # omikuji-bin = mkLocalPkg "omikuji-bin";
-      utmt-cli = mkLocalPkg "utmt-cli";
-      shimelinux = mkLocalPkg "shimelinux";
-      # amethyst = mkLocalPkg "amethyst";
 
       mouse-cursor = (mkLocalPkg "cursors").override { cursorName = config.globVars.mouseCursor.name; };
       neuwaita = mkLocalPkg "neuwaita";

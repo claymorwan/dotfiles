@@ -22,5 +22,7 @@
     # XDG_SESSION_DESKTOP = "Hyprland";
 
     _JAVA_AWT_WM_NONREPARENTING = 1;
+
+    NIXPKGS_ALLOW_UNFREE = 1;
   };
 }

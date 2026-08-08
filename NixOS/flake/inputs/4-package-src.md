@@ -9,10 +9,15 @@ millennium-material-theme-src = {
   flake = false;
 };
 
-beaker-src = {
-  url = "git+https://git.bwaaa.monster/beaker?shallow=0";
-  flake = false;
-};
+# omnisearch-src = {
+#   url = "git+https://git.bwaaa.monster/omnisearch";
+#   flake = false;
+# };
+# 
+# beaker-src = {
+#   url = "git+https://git.bwaaa.monster/beaker";
+#   flake = false;
+# };
 
 zen-ctp = {
   url = "github:code-irisnk/catppuccin-zen-browser";

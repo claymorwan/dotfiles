@@ -26,11 +26,7 @@
       enable = true;
     };
     
-    omnisearch = {
-      enable = true;
-      # package =  pkgs.omnisearch;
-    };
-
+    omnisearch.enable = true;
     # desktopManager.plasma6.enable = true;
     # vertd.enable = true;
     printing.enable = true;

@@ -47,6 +47,11 @@ in
       tesseract
       zbar
     ]) else [])
+    ++ (if dms-plugins.screenCaptureToolbar.enable then (with pkgs; [
+      slurp
+      grim
+      jq
+    ]) else [])
   ;
 
   programs = {
@@ -75,14 +80,14 @@ in
 
     dank-material-shell = {
       plugins = {
-        linuxWallpaperEngine.enable = true;
+        # linuxWallpaperEngine.enable = true;
         webSearch.enable = true;
         calculator.enable = true;
         emojiLauncher.enable = true;
         dockerManager.enable = true;
         dankPomodoroTimer.enable = true;
         dankDesktopWeather.enable = true;
-        alarmClock.enable = true;
+        # alarmClock.enable = true;
         appShortcut.enable = true;
         mediaPlayer.enable = true;
         # desktopCommand.enable = true;
@@ -94,30 +99,33 @@ in
         developerUtilities.enable = true;
         dankNotepadModule.enable = true;
         # githubHeatmap.enable = true;
-        musicLyrics.enable = true;
+        # musicLyrics.enable = true;
         dankAudioVisualizer.enable = true;
         # screenRecorder.enable = true;
         usbManager.enable = true;
         easyEffects.enable = config.services.easyeffects.enable;
         discordVoice.enable = true;
-        dmsScreenshot.enable = true;
+        # dmsScreenshot.enable = true;
         clipboardPlus.enable = true;
-        mpvpaperWallpaper.enable = true;
-        timer.enable = true;
-        mediaControlPlus.enable = true;
-        # hiddenBar.enable = true;
+        # mpvpaperWallpaper.enable = true;
+        # timer.enable = true;
+        # mediaControlPlus.enable = true;
         # nixPackageRunner.enable = true;
-        # hydrate.enable = true;
         # quickCapture.enable = true;
-        weatherArt.enable = true;
         githubHeatmapRevive.enable = true;    
         desktopWidgetToggle.enable = true;
         dropdownMenu.enable = true;
         # mediaDownloader.enable = true;
+        screenCaptureToolbar.enable = true;
 
         dms-common = {
           enable = true;
           src = inputs.dms-common;
+        };
+
+        dms-wallpaper-engine = {
+          enable = true;
+          src = inputs.dms-plugin-registry.packages.${system}.linuxWallpaperEngine;
         };
 
         dms-quick-capture = {

@@ -20,7 +20,7 @@
     distrobox
     boxbuddy
     unityhub
-    utmt-cli
     gitte
+    nur.repos.claymorwan.utmt-cli
   ];
 }

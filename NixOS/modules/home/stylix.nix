@@ -49,7 +49,7 @@
     };
 
     targets = {
-      kde.enable = true;
+      # kde.enable = true;
       qt.enable = true;
       xresources.enable = true;
       blender.enable = true;

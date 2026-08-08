@@ -64,7 +64,7 @@ in
     nicotine-plus
     gpu-screen-recorder-gtk
     handbrake
-    # inputs.kopuz.packages.${system}.default
+    inputs.kopuz.packages.${system}.default
     nur.repos.claymorwan.shimelinux
     pwvucontrol
 

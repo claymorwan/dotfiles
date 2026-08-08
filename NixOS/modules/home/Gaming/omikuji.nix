@@ -11,7 +11,12 @@
       extraLibraries = (_prev: ( with pkgs; [
         nspr
         libxdamage
+        libvlc
       ]));
+
+      buildFHSEnv = args: pkgs.buildFHSEnv (args // {
+        profile = ''export QT_STYLE_OVERRIDE=anything'';
+      });
     };
     
     defaultWinePackage = pkgs.proton-ge-bin;

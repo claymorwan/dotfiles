@@ -1,5 +1,12 @@
 { osConfig, ... }:
 
+let
+  inherit (osConfig.globVars)
+    terminal
+    browser
+    discord
+    ;
+in
 {
   imports = [
     ./dms.nix
@@ -10,17 +17,17 @@
     binds = {
       # Applications
       "Mod+Return" = {
-        action.spawn = osConfig.globVars.terminal;
+        action.spawn = terminal;
         hotkey-overlay.title = "Terminal";
       };
 
       "Mod+W" = {
-        action.spawn = osConfig.globVars.browser;
+        action.spawn = browser;
         hotkey-overlay.title = "Browser";
       };
 
       "Mod+D" = {
-        action.spawn-sh = osConfig.globVars.discord;
+        action.spawn-sh = discord;
         hotkey-overlay.title = "Discord";
       };
 
@@ -30,44 +37,39 @@
       };
 
       "Mod+E" = {
-        action.spawn = [ osConfig.globVars.terminal "-e" "yazi" ];
+        action.spawn = [ terminal "-e" "yazi" ];
         hotkey-overlay.title = "File explorer";
       };
 
-      "Mod+Shift+P" = {
-        action.spawn = [ "nirius" "toggle-follow-mode" ];
-        hotkey-overlay.title = "Pin window";
-      };
-
-      "Print" = {
-        action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "full" "edit" ];
-        hotkey-overlay.title = "Screenshot (screen)";
-      };
-      
-      "Ctrl+Print" = {
-        action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "region" "edit" ];
-        hotkey-overlay.title = "Screenshot (region)";
-      };
-
-      "Mod+Print" = {
-        action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "window" "edit" ];
-        hotkey-overlay.title = "Screenshot (window)";
-      };
-
       # "Print" = {
-      #   action.spawn-sh = "dms screenshot full --stdout | gradia";
+      #   action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "full" "edit" ];
       #   hotkey-overlay.title = "Screenshot (screen)";
       # };
-      #
+      
       # "Ctrl+Print" = {
-      #   action.spawn-sh = "dms screenshot --stdout | gradia";
+      #   action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "region" "edit" ];
       #   hotkey-overlay.title = "Screenshot (region)";
       # };
-      #
+
       # "Mod+Print" = {
-      #   action.spawn-sh = "dms screenshot window --stdout | gradia";
+      #   action.spawn = [ "dms" "ipc" "call" "quickCapture" "screenshot" "window" "edit" ];
       #   hotkey-overlay.title = "Screenshot (window)";
       # };
+
+       "Print" = {
+         action.spawn = [ "dms" "ipc" "call" "screenCaptureToolbar" "toggle" ];
+         hotkey-overlay.title = "Screenshot (screen)";
+       };
+      
+       "Ctrl+Print" = {
+         action.spawn-sh = "dms screenshot --stdout | gradia";
+         hotkey-overlay.title = "Screenshot (region)";
+       };
+      
+       "Mod+Print" = {
+         action.spawn-sh = "dms screenshot window --stdout | gradia";
+         hotkey-overlay.title = "Screenshot (window)";
+       };
 
     };
   };
