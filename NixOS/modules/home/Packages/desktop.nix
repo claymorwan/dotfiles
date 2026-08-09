@@ -40,8 +40,6 @@ in
 
     # GUI
     veracrypt
-    # fluxer-canary
-    # stoat-desktop
     packet
     localsend
     catppuccinifier-gui
@@ -64,8 +62,10 @@ in
     nicotine-plus
     gpu-screen-recorder-gtk
     handbrake
-    inputs.kopuz.packages.${system}.default
+    # inputs.kopuz.packages.${system}.default
+    kopuz
     nur.repos.claymorwan.shimelinux
+    # nur.repos.forkprince.fluxer-canary-bin
     pwvucontrol
 
     # Kde stuff

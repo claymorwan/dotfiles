@@ -4,8 +4,8 @@
   imports = [
     inputs.dms.homeModules.dank-material-shell # .default
     # inputs.dms.homeModules.niri
-    ./dsearch.nix
-    ./dcal.nix
+    # ./dsearch.nix
+    # ./dcal.nix
     ./plugins.nix
   ];
 

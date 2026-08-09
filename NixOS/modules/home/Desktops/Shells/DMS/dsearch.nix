@@ -8,7 +8,7 @@
 
     # Put your config here or omit this for dsearch to generate the default config at runtime
     config = {
-      index_paths = {
+      index_paths = [{
         path = "${osConfig.globVars.home_dir}";
         max_depth = 6;
         exclude_hidden = false;
@@ -76,7 +76,7 @@
           ".idea"
           ".vscode"
         ];
-      };
+      }];
     };
   };
 }
