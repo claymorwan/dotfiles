@@ -23,18 +23,15 @@ let
 
   gameOptions = id: {
     id = id;
-    launchOptions.wrappers = defaultWrappers;
+    wrappers = defaultWrappers;
   };
 
   winGameOptions = id: recursiveUpdate (gameOptions id) {
-    
     compatTool = "GE-Proton";
-    launchOptions = {
-      wrappers = defaultWrappers;
-      env = {
-        PROTON_ENABLE_WAYLAND = 1;
-        SCB_AUTO_RES = 1;
-      };
+    wrappers = defaultWrappers;
+    env = {
+      PROTON_ENABLE_WAYLAND = 1;
+      SCB_AUTO_RES = 1;
     };
   };
 in
@@ -73,33 +70,31 @@ in
     
       apps = {
         "Geometry dash" = recursiveUpdate (winGameOptions 322170) {
-          launchOptions.env.WINEDLLOVERRIDES = "xinput1_4=n,b";
+          env.WINEDLLOVERRIDES = "xinput1_4=n,b";
         };
 
         "Titanfall 2" = recursiveUpdate (winGameOptions 1237970) {
-          launchOptions = {
-            wrappers = defaultWrappers ++ gamescopeWrapper;
-            env = {
-              PROTON_ENABLE_WAYLAND = 0;
-              OPENSSL_ia32cap = "~0x20000000";
-            };
-
-            args = [
-              "-novid"
-            ];
+          wrappers = defaultWrappers ++ gamescopeWrapper;
+          env = {
+            PROTON_ENABLE_WAYLAND = 0;
+            OPENSSL_ia32cap = "~0x20000000";
           };
+          
+          args = [
+            "-novid"
+          ];
         };
 
         "Subnautica" = recursiveUpdate (winGameOptions 264710) {
-          launchOptions.env.WINEDLLOVERRIDES = "winhttp=n,b";
+          env.WINEDLLOVERRIDES = "winhttp=n,b";
         };
 
        "Subnautica: Below Zero" = recursiveUpdate (winGameOptions 848450) {
-          launchOptions.env.WINEDLLOVERRIDES = "winhttp=n,b";
+          env.WINEDLLOVERRIDES = "winhttp=n,b";
         };
 
         "Subnautica 2" = recursiveUpdate (winGameOptions 1962700) {
-          launchOptions.env.WINEDLLOVERRIDES = "dwmapi=n,b";
+          env.WINEDLLOVERRIDES = "dwmapi=n,b";
         };
 
         "Spelunky 2" = winGameOptions 2418530;
@@ -219,6 +214,8 @@ in
         "Stardew Valley" = gameOptions 413150;
 
         "Bean Battles" = gameOptions 765410;
+
+        "Muse Dash" = winGameOptions 774171;
       };
     };
   };

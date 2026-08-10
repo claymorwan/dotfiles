@@ -1109,7 +1109,7 @@
           "height": 120
         },
         "_synced": {
-          "x": 0.75,
+          "x": 0.7395833333333334,
           "y": 0.3148148148148148,
           "width": 120,
           "height": 120
@@ -1171,7 +1171,7 @@
           "height": 240
         },
         "_synced": {
-          "x": 0.7083333333333334,
+          "x": 0.6979166666666666,
           "y": 0.05555555555555555,
           "width": 180,
           "height": 180
@@ -1286,7 +1286,7 @@
           "height": 510
         },
         "_synced": {
-          "x": 0.8125,
+          "x": 0.8020833333333334,
           "y": 0.05555555555555555,
           "width": 340,
           "height": 520
@@ -1329,7 +1329,7 @@
           "height": 120
         },
         "_synced": {
-          "x": 0.6979166666666666,
+          "x": 0.6875,
           "y": 0.2222222222222222,
           "width": 120,
           "height": 120
@@ -1372,7 +1372,7 @@
           "height": 120
         },
         "_synced": {
-          "x": 0.75,
+          "x": 0.7395833333333334,
           "y": 0.2222222222222222,
           "width": 120,
           "height": 120
@@ -1416,7 +1416,7 @@
           "height": 120
         },
         "_synced": {
-          "x": 0.6979166666666666,
+          "x": 0.6875,
           "y": 0.3148148148148148,
           "width": 120,
           "height": 120
@@ -1488,7 +1488,7 @@
           "y": 440
         },
         "_synced": {
-          "x": 0.6979166666666666,
+          "x": 0.6875,
           "y": 0.4074074074074074,
           "width": 200,
           "height": 200
@@ -1572,8 +1572,8 @@
       "previewActive": false,
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
-      "sourceContent": "50 rue claude bernard Perigeux",
-      "updatedAt": 1786275637262,
+      "sourceContent": "50 rue claude bernard Perigeux\n\nCl@y-5S|-|_C0b£r6\n",
+      "updatedAt": 1786364710649,
       "highlightedHtml": ""
     },
     "dms_clipboard_search": {
