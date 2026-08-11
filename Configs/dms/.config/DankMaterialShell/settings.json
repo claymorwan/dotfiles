@@ -1573,7 +1573,7 @@
       "currentFilePath": "notepad-files/untitled-1770243197424.txt",
       "currentFileExtension": "txt",
       "sourceContent": "50 rue claude bernard Perigeux\n\nCl@y-5S|-|_C0b£r6\n",
-      "updatedAt": 1786454320088,
+      "updatedAt": 1786469871351,
       "highlightedHtml": ""
     },
     "dms_clipboard_search": {
@@ -1583,6 +1583,7 @@
   "clipboardClickToPaste": false,
   "clipboardEnterToPaste": false,
   "clipboardRememberTypeFilter": false,
+  "clipboardUseOverlayLayer": false,
   "clipboardTypeFilter": "all",
   "clipboardVisibleEntryActions": [
     "pin",

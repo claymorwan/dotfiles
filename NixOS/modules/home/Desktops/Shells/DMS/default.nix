@@ -13,10 +13,6 @@
   programs.dank-material-shell = {
     enable = true;
     
-    dgop.package = inputs.dgop.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (_: {
-      vendorHash = "sha256-ZOPaf6d4HQM5MoJqdiFZ1ikBkJu46Et0CsNZuZAhN6Y=";
-    });
-
     systemd = {
       enable = true; # Systemd service for auto-start
       restartIfChanged = true; # Auto-restart dms.service when dankMaterialShell changes
