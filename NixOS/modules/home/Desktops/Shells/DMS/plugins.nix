@@ -52,6 +52,10 @@ in
       grim
       jq
     ]) else [])
+    # ++ (if dms-plugins.materialPlayer.enable then (with pkgs; [
+    #   python3
+    #   cava
+    # ]) else [])
   ;
 
   programs = {
@@ -117,6 +121,7 @@ in
         dropdownMenu.enable = true;
         # mediaDownloader.enable = true;
         screenCaptureToolbar.enable = true;
+        # materialPlayer.enable = true;
 
         dms-common = {
           enable = true;
