@@ -16,6 +16,11 @@ in
       };
     };
 
+    shimelinux = {
+      enable = true;
+      autostart = true;
+    };
+
     onlyoffice.enable = true;
     btop.enable = true;
   };
@@ -64,7 +69,6 @@ in
     handbrake
     # inputs.kopuz.packages.${system}.default
     kopuz
-    nur.repos.claymorwan.shimelinux
     # nur.repos.forkprince.fluxer-canary-bin
     pwvucontrol
 

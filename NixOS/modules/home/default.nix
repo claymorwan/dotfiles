@@ -11,6 +11,7 @@
     ./Shells
     ./starship.nix
     ./ssh.nix
+    ./variables.nix
     ./Yazi
   ]
   ++ (lib.optionals (host != "android") [

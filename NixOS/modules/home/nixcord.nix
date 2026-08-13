@@ -18,8 +18,7 @@
       # enable = false;
       vencord.enable = false;
       equicord.enable = true;
-      branch = osConfig.globVars.discord_branch;
-      # branch = "development";
+      branches = [ "canary" ];
 
       commandLineArgs = [
         "--start-minimized"

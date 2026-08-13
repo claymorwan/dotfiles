@@ -6,5 +6,6 @@
     ./millennium.nix
     # ./nsticky.nix
     # ./omikuji.nix
+    ./shimelinux.nix
   ];
 }

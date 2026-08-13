@@ -3,10 +3,10 @@
 {
   programs.niri.settings = {
     spawn-at-startup = [
-      { sh =  "sleep 3; ${osConfig.globVars.discord} --start-minimized"; }
+      { sh =  "sleep 3; ${config.globVars.discord} --start-minimized"; }
       # { argv = [ "nsticky" ]; }
       { argv = [ "steam" "-silent" ]; }
-      { argv = [ "shimelinux" ]; }
+      # { argv = [ "shimelinux" ]; }
       # ( lib.mkIf config.programs.noctalia-shell.enable { argv = [ "wallpaperengine-gui" "--minimized" ]; })
     ];
   };

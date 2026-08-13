@@ -5,6 +5,11 @@
     ./mimes.nix
   ];
   xdg = {
+    autostart = {
+      enable = true;
+      readOnly = true;
+    };
+    
     configFile."xdg-desktop-portal-termfilechooser/config" = {
       # enable = false;
       text = ''

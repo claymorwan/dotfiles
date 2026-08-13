@@ -97,7 +97,7 @@ in
         # desktopCommand.enable = true;
         mediaFrame.enable = true;
         # dankGifSearch.enable = true;
-        dankHyprlandWindows.enable = osConfig.globVars.enableHyprland;
+        dankHyprlandWindows.enable = osConfig.programs.hyprland.enable;
         # polyglot.enable = true;
         commandRunner.enable = true;
         developerUtilities.enable = true;
@@ -130,12 +130,12 @@ in
 
         dms-wallpaper-engine = {
           enable = true;
-          src = inputs.dms-plugin-registry.packages.${system}.linuxWallpaperEngine;
+          src = plugin-packages.linuxWallpaperEngine;
         };
 
         dms-quick-capture = {
           enable = true;
-          src = inputs.dms-plugin-registry.packages.${system}.quickCapture;
+          src = plugin-packages.quickCapture;
         };
         
         dankPinentry = {
@@ -146,13 +146,13 @@ in
         # KDE Connect
         phoneConnect = {
           enable = osConfig.programs.kdeconnect.enable;
-          src = inputs.dms-plugin-registry.packages.${system}.dankKDEConnect;
+          src = plugin-packages.dankKDEConnect;
         };
         
         liveChartSchedule = { 
           enable = true;
           src = let
-            liveChartSchedule = inputs.dms-plugin-registry.packages.${system}.liveChartSchedule;
+            liveChartSchedule = plugin-packages.liveChartSchedule;
           in
           lib.mkForce (pkgs.symlinkJoin {
             inherit (liveChartSchedule) pname version;

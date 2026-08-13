@@ -4,7 +4,7 @@
   imports = [
     ./Shells
   ]
-  ++ (if osConfig.globVars.enableNiri then [./niri] else [])
-  ++ (if osConfig.globVars.enableHyprland then [./hyprland] else [])
+  ++ (if osConfig.programs.niri.enable then [./niri] else [])
+  ++ (if osConfig.programs.hyprland.enable then [./hyprland] else [])
   ;
 }

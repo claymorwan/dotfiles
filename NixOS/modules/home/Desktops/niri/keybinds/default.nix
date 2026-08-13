@@ -1,7 +1,7 @@
-{ osConfig, ... }:
+{ config, ... }:
 
 let
-  inherit (osConfig.globVars)
+  inherit (config.globVars)
     terminal
     browser
     discord

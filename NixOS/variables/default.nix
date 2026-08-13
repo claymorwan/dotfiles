@@ -16,10 +16,6 @@ let
       type = lib.types.bool;
       default = var;
     };
-
-  discordExeName = version:
-    "discord" + (lib.optionalString (version != "stable") version);
-    
 in 
 {
   options.globVars = {
@@ -38,13 +34,6 @@ in
       };
     };
 
-    # Apps
-    # launch_prefix = mkStrVar "app2unit --";
-    terminal = mkStrVar "ghostty";
-    browser = mkStrVar "zen-beta";
-    discord_branch = mkStrVar "canary"; # "development";
-    discord = mkStrVar (discordExeName cfg.discord_branch);
-
     # Dirs
     home_dir = mkStrVar "/home/${cfg.username}";
     dotfiles_dir = mkStrVar "${cfg.home_dir}/.dotfiles";
@@ -52,10 +41,6 @@ in
     screenshot_dir = mkStrVar "${cfg.home_dir}/Pictures/Screenshots";
     submodules_dir = mkStrVar "${cfg.dotfiles_dir}/Submodules";
   
-    # enable
-    enableNiri = mkBoolVar true;
-    enableHyprland = mkBoolVar false;
-
     shellAliases = lib.mkOption {
       type = with lib.types; attrsOf str;
       default = {

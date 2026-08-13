@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -21,6 +21,6 @@
     boxbuddy
     unityhub
     gitte
-    nur.repos.claymorwan.utmt-cli
+    inputs.nurpkgs.packages.${pkgs.stdenv.hostPlatform.system}.utmt-cli
   ];
 }

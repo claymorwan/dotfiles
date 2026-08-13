@@ -18,15 +18,15 @@ in
 
   programs = {
     hyprland = {
-      enable = config.globVars.enableHyprland;
+      enable = false;
       package = pkgs.hyprland;
       withUWSM = false;
     };
 
-    hyprlock.enable = config.globVars.enableHyprland;
+    hyprlock.enable = config.programs.hyprland.enable;
 
     niri = {
-      enable = config.globVars.enableNiri;
+      enable = true;
       package = pkgs.niri;
     };
 
