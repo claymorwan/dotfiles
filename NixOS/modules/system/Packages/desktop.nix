@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ inputs, pkgs, config, username, ... }:
 
 let
   gstPackages = with pkgs.gst_all_1; [
@@ -10,6 +10,8 @@ let
 in 
 {
   imports = [
+    inputs.nurpkgs.nixosModules.pvpn
+    # inputs.nur.repos.claymorwan.nixosModules.pvpn
     ./flatpak.nix
   ];
 
@@ -43,6 +45,11 @@ in
     kdeconnect = {
       enable = true;
       # package = pkgs.valent;
+    };
+
+    pvpn = {
+      enable = true;
+      users = [ username ];
     };
 
     gpu-screen-recorder.enable = true;

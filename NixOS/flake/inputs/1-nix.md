@@ -24,7 +24,8 @@ nur = {
 
 nurpkgs = {
   url = "github:claymorwan/nurpkgs";
-  inputs.nixpkgs.follows = "nixpkgs";
+  # url = "/mnt/media/Programmation/Nix/nurpkgs";
+  # inputs.nixpkgs.follows = "nixpkgs";
 };
 
 nixos-avf = {

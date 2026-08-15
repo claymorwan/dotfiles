@@ -29,7 +29,8 @@
     
     nurpkgs = {
       url = "github:claymorwan/nurpkgs";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # url = "/mnt/media/Programmation/Nix/nurpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     
     nixos-avf = {
@@ -146,6 +147,11 @@
     
     wl_shimeji = {
       url = "git+https://github.com/claymorwan/wl_shimeji?submodules=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    pyroclear = {
+      url = "github:shreyanth-sureshkrishnaa/pyroclear";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # ~/~ end

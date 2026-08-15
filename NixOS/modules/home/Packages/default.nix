@@ -1,4 +1,10 @@
-{ lib, pkgs, host, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  host,
+  ...
+}:
 
 {
   imports = [
@@ -10,5 +16,6 @@
     fzf
     lolcat
     kittysay
+    inputs.pyroclear.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

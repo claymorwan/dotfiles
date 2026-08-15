@@ -21,6 +21,7 @@
         self
         ;
     };
+    
     users.${username} = {
       imports = [
         ./../home

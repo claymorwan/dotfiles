@@ -5,6 +5,8 @@ let
 in
 {
   imports = [
+    inputs.nurpkgs.homeModules.shimelinux
+    # inputs.nur.repos.claymorwan.homeModules.shimelinux
     ./flatpak.nix
   ];
   

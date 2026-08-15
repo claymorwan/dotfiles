@@ -41,13 +41,17 @@ in
     screenshot_dir = mkStrVar "${cfg.home_dir}/Pictures/Screenshots";
     submodules_dir = mkStrVar "${cfg.dotfiles_dir}/Submodules";
   
-    shellAliases = lib.mkOption {
+    shellAliases =
+    let
+      cls = "pyroclear --random";
+    in
+    lib.mkOption {
       type = with lib.types; attrsOf str;
       default = {
+        inherit cls;
         nv = "nvim";
         sv = "sudo nvim";
-        cls = "clear";
-        fetch = "clear; fastfetch";
+        fetch = "${cls}; fastfetch";
         py = "python3";
 
         nrl = "nh os switch --hostname ${host}";

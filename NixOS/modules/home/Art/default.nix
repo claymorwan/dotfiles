@@ -32,7 +32,7 @@
   };
 
   home.packages = with pkgs; [
-    aseprite
+    # aseprite
     blockbench
     blender
     kdePackages.kdenlive
