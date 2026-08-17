@@ -179,8 +179,13 @@
     };
     
     noctalia = {
-          url = "github:noctalia-dev/noctalia-shell";
-          inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    caelestia = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     
     quickshell = {

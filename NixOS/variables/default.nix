@@ -51,7 +51,7 @@ in
         inherit cls;
         nv = "nvim";
         sv = "sudo nvim";
-        fetch = "${cls}; fastfetch";
+        fetch = "clear; hyfetch";
         py = "python3";
 
         nrl = "nh os switch --hostname ${host}";

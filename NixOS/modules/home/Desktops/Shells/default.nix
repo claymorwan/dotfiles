@@ -1,5 +1,6 @@
 {
   imports = [
+    # ./Caelestia
     ./DMS
     # ./Noctalia
   ];

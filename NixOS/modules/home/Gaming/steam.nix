@@ -27,7 +27,7 @@ let
   };
 
   winGameOptions = id: recursiveUpdate (gameOptions id) {
-    compatTool = "GE-Proton";
+    # compatTool = "GE-Proton";
     wrappers = defaultWrappers;
     env = {
       PROTON_ENABLE_WAYLAND = 1;
@@ -67,16 +67,26 @@ in
       enable = true;
       onSteamRunning = "close"; # See 'Important' note at beginning of this readme
       desktopEntries.enable = true;
+      defaultCompatTool = "GE-Proton";
     
       apps = {
+       
+        "Zenless Zone Zero" = recursiveUpdate (winGameOptions 4162040) {
+          rawLaunchOptions = "bash -c 'exec \"\${@/HYP.exe/games\/ZenlessZoneZero Game\/ZenlessZoneZero.exe}\"' -- %command%";
+
+          args = [
+            "-use-d3d12"
+          ];
+        };
+
         "Geometry dash" = recursiveUpdate (winGameOptions 322170) {
-          env.WINEDLLOVERRIDES = "xinput1_4=n,b";
+          dllOverrides.xinput1_4 = "n,b";
         };
 
         "Titanfall 2" = recursiveUpdate (winGameOptions 1237970) {
-          wrappers = defaultWrappers ++ gamescopeWrapper;
+          # wrappers = defaultWrappers ++ gamescopeWrapper;
           env = {
-            PROTON_ENABLE_WAYLAND = 0;
+            # PROTON_ENABLE_WAYLAND = 0;
             OPENSSL_ia32cap = "~0x20000000";
           };
           
@@ -86,15 +96,15 @@ in
         };
 
         "Subnautica" = recursiveUpdate (winGameOptions 264710) {
-          env.WINEDLLOVERRIDES = "winhttp=n,b";
+          dllOverrides.winhttp = "n,b";
         };
 
        "Subnautica: Below Zero" = recursiveUpdate (winGameOptions 848450) {
-          env.WINEDLLOVERRIDES = "winhttp=n,b";
+          dllOverrides.winhttp = "n,b";
         };
 
         "Subnautica 2" = recursiveUpdate (winGameOptions 1962700) {
-          env.WINEDLLOVERRIDES = "dwmapi=n,b";
+          dllOverrides.dwmapi= "n,b";
         };
 
         "Spelunky 2" = winGameOptions 2418530;
