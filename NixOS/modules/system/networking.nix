@@ -64,8 +64,9 @@
         ];
       };
     };
+    
     zones = {
-      public = {
+      nixos-fw-default = {
         services = [
           "kdeconnect"
           "localsend"

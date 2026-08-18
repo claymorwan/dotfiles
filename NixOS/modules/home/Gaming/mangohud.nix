@@ -22,5 +22,9 @@ in
     "MangoHud/wine-White Knuckle.conf".text = ''
       position=top-right
     '' + baseCfg;
+
+    "MangoHud/wine-zenlesszonezero.conf".text = ''
+      position=bottom-left
+    '' + baseCfg;
   };
 }

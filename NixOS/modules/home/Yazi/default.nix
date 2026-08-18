@@ -37,7 +37,15 @@ in
       toggle-pane = pkgs.yaziPlugins.toggle-pane;
       lazygit = pkgs.yaziPlugins.lazygit;
       full-border = pkgs.yaziPlugins.full-border;
-      git = pkgs.yaziPlugins.git;
+      git = pkgs.yaziPlugins.git.overrideAttrs (_: {
+        src = pkgs.fetchFromGitHub {
+          owner = "yazi-rs";
+          repo = "plugins";
+          rev = "b564235ae6e98b86865d0a23b841d9ddb2edd7f1";
+          hash = "sha256-/T4bWdpRZrYJqNeUZSlwqf5bCCJiB4Wa273iYNb8eBY=";
+        };
+      });
+      
       chmod = pkgs.yaziPlugins.chmod;
       mount = pkgs.yaziPlugins.mount;
       starship = pkgs.yaziPlugins.starship;
@@ -47,12 +55,14 @@ in
       glow = pkgs.yaziPlugins.glow;
       lutris = "${claymorwan-plugin}/lutris.yazi";
       shell = "${claymorwan-plugin}/shell.yazi";
+
       yamb = pkgs.fetchFromGitHub {
         owner = "h-hg";
         repo = "yamb.yazi";
         rev = "5f2e22e784dd5fc830cd85885a6d1d6690b52298";
         hash = "sha256-3Cp3+v0laSVsDdTyG26EOh2xt18ER8P9Nla9vtRuj9k=";
       };
+      
       krita-preview = pkgs.fetchFromGitHub {
         owner = "walldmtd";
         repo = "krita-preview.yazi";

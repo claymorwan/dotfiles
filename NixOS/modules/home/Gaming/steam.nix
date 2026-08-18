@@ -74,9 +74,9 @@ in
         "Zenless Zone Zero" = recursiveUpdate (winGameOptions 4162040) {
           rawLaunchOptions = "bash -c 'exec \"\${@/HYP.exe/games\/ZenlessZoneZero Game\/ZenlessZoneZero.exe}\"' -- %command%";
 
-          args = [
-            "-use-d3d12"
-          ];
+          # args = [
+          #   "-use-d3d12"
+          # ];
         };
 
         "Geometry dash" = recursiveUpdate (winGameOptions 322170) {
