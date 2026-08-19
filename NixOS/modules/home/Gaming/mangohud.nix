@@ -23,7 +23,7 @@ in
       position=top-right
     '' + baseCfg;
 
-    "MangoHud/wine-zenlesszonezero.conf".text = ''
+    "MangoHud/wine-ZenlessZoneZero.conf".text = ''
       position=bottom-left
     '' + baseCfg;
   };
