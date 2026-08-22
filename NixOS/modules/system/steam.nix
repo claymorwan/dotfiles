@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   programs = {
@@ -16,7 +16,10 @@
       localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
       gamescopeSession.enable = true;
 
-      extraCompatPackages = [ pkgs.proton-ge-bin ];
+      extraCompatPackages = [
+        pkgs.proton-ge-bin
+        inputs.dw-proton.packages.${pkgs.stdenv.hostPlatform.system}.dw-proton
+      ];
     };
 
   gamescope = {

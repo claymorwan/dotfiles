@@ -72,7 +72,13 @@ in
       apps = {
        
         "Zenless Zone Zero" = recursiveUpdate (winGameOptions 4162040) {
+          compatTool = inputs.dw-proton.packages.${pkgs.stdenv.hostPlatform.system}.dw-proton;
           rawLaunchOptions = "bash -c 'exec \"\${@/HYP.exe/games\/ZenlessZoneZero Game\/ZenlessZoneZero.exe}\"' -- %command%";
+
+          env = {
+            PROTON_USE_WINEALSA = 1;
+            PROTON_DXVK_GPLASYNC = 1;
+          };
 
           # args = [
           #   "-use-d3d12"

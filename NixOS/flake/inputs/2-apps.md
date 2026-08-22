@@ -97,4 +97,6 @@ pyroclear = {
   url = "github:shreyanth-sureshkrishnaa/pyroclear";
   inputs.nixpkgs.follows = "nixpkgs";
 };
+
+dw-proton.url = "github:imaviso/dwproton-flake";
 ```

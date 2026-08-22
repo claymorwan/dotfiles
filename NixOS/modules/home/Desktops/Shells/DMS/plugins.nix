@@ -62,24 +62,29 @@ in
     nix-monitor = {
       enable = true;
 
-      rebuildCommand = [
-        "sh"
-        "-c"
-        "sudo ${pkgs.nh}/bin/nh os switch ${osConfig.globVars.flake_dir} --hostname ${host} --no-nom --bypass-root-check"
-      ];
+      # rebuildCommand = [
+      #   "sh"
+      #   "-c"
+      #   "sudo ${pkgs.nh}/bin/nh os switch ${osConfig.globVars.flake_dir} --hostname ${host} --no-nom --bypass-root-check"
+      # ];
 
-      # ts pisses me off im using a script now
       generationsCommand = [
         (lib.getExe pkgs.nushell)
         "-c"
         "nh os info | lines | drop nth 0 1 | length"
       ];
 
-      gcCommand = [
-        "sh"
-        "-c"
-        "sudo ${pkgs.nh}/bin/nh clean all ${osConfig.programs.nh.clean.extraArgs}"
+      storeSizeCommand = [
+        "nix path-info --json --all | ${lib.getExe pkgs.jq} 'map(.narSize) | add' | numfmt --to=iec"
       ];
+
+      updateInterval = 600;
+
+      # gcCommand = [
+      #   "sh"
+      #   "-c"
+      #   "sudo ${pkgs.nh}/bin/nh clean all ${osConfig.programs.nh.clean.extraArgs}"
+      # ];
     };
 
     dank-material-shell = {
@@ -124,6 +129,7 @@ in
         materialPlayer.enable = true;
         protonVPN.enable = true;
         nothingClock.enable = true;
+        batteryOSD.enable = true;
 
         dms-common = {
           enable = true;

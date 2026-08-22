@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, osConfig, ... }:
 
 {
   imports = [
@@ -22,7 +22,7 @@
     defaultWinePackage = pkgs.proton-ge-bin;
 
     winePackages = [ pkgs.wineWow64Packages.full ];
-    # protonPackages = osConfig.programs.steam.extraCompatPackages;
+    protonPackages = osConfig.programs.steam.extraCompatPackages;
 
     extraPackages = with pkgs; [
       umu-launcher

@@ -154,6 +154,8 @@
       url = "github:shreyanth-sureshkrishnaa/pyroclear";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    dw-proton.url = "github:imaviso/dwproton-flake";
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]
     # DMS related stuff
