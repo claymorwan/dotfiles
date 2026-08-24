@@ -3,12 +3,12 @@
 {
   fonts = {
     enableDefaultPackages = true;
+    enableGhostscriptFonts = true;
     fontDir.enable = true;
     packages = with pkgs; [
       noto-fonts
       noto-fonts-cjk-sans
       corefonts
-
     ]
     ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
   };

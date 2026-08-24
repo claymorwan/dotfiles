@@ -75,6 +75,8 @@ in
       ];
 
       storeSizeCommand = [
+        "sh"
+        "-c"
         "nix path-info --json --all | ${lib.getExe pkgs.jq} 'map(.narSize) | add' | numfmt --to=iec"
       ];
 
@@ -98,16 +100,15 @@ in
         dankDesktopWeather.enable = true;
         # alarmClock.enable = true;
         appShortcut.enable = true;
-        mediaPlayer.enable = true;
+        # mediaPlayer.enable = true;
         # desktopCommand.enable = true;
         mediaFrame.enable = true;
         # dankGifSearch.enable = true;
         dankHyprlandWindows.enable = osConfig.programs.hyprland.enable;
         # polyglot.enable = true;
-        commandRunner.enable = true;
+        # commandRunner.enable = true;
         developerUtilities.enable = true;
-        dankNotepadModule.enable = true;
-        # githubHeatmap.enable = true;
+        # dankNotepadModule.enable = true;
         # musicLyrics.enable = true;
         dankAudioVisualizer.enable = true;
         # screenRecorder.enable = true;
@@ -121,15 +122,16 @@ in
         # mediaControlPlus.enable = true;
         # nixPackageRunner.enable = true;
         # quickCapture.enable = true;
-        githubHeatmapRevive.enable = true;    
+        # githubHeatmapRevive.enable = true;    
         desktopWidgetToggle.enable = true;
         dropdownMenu.enable = true;
         # mediaDownloader.enable = true;
         screenCaptureToolbar.enable = true;
         materialPlayer.enable = true;
         protonVPN.enable = true;
-        nothingClock.enable = true;
-        batteryOSD.enable = true;
+        # nothingClock.enable = true;
+        batteryOSD.enable = lib.mkIf (host == "nixos-laptop") true;
+        # typingSounds.enable = true;
 
         dms-common = {
           enable = true;
@@ -158,7 +160,7 @@ in
         };
         
         liveChartSchedule = { 
-          enable = true;
+          # enable = true;
           src = let
             liveChartSchedule = plugin-packages.liveChartSchedule;
           in

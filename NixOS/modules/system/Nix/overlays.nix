@@ -55,6 +55,7 @@ in
 
       ## Fonts
       no-continue = mkLocalPkg "Fonts/no-continue.nix";
+      zzz-font = mkLocalPkg "Fonts/zzz";
 
       ## Millennium
       millennium-material-theme = pkgs.callPackage "${self}/pkgs/Millennium/themes/millennium-material-theme" { inherit (inputs) millennium-material-theme-src; };

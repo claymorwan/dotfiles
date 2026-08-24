@@ -25,6 +25,7 @@ in
 
     "MangoHud/wine-ZenlessZoneZero.conf".text = ''
       position=bottom-left
+      font_file=${pkgs.zzz-font}/share/fonts/truetype/zzz.tff
     '' + baseCfg;
   };
 }

@@ -1,10 +1,10 @@
-{ osConfig, ... }:
+{ lib, osConfig, ... }:
 
 {
   imports = [
     ./Shells
   ]
-  ++ (if osConfig.programs.niri.enable then [./niri] else [])
-  ++ (if osConfig.programs.hyprland.enable then [./hyprland] else [])
+  ++ (lib.optional osConfig.programs.niri.enable ./niri)
+  ++ (lib.optional osConfig.programs.hyprland.enable ./hyprland)
   ;
 }
