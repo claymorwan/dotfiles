@@ -40,6 +40,11 @@ nix-output-monitor = {
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
+nix-options-doc = {
+  url = "github:Thunderbottom/nix-options-doc";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+
 archix = {
   url = "github:SamLukeYes/archix";
   inputs.nixpkgs.follows = "nixpkgs";

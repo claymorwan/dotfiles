@@ -31,6 +31,12 @@ caelestia = {
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
+caffyne = {
+  url = "github:caffyne-org/caffyne-shell";
+  # url = "/mnt/media/Programmation/Nix/Flakes/caffyne-shell";
+  # inputs.nixpkgs.follows = "nixpkgs";
+};
+
 quickshell = {
   # add ?ref=<tag> to track a tag
   url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";

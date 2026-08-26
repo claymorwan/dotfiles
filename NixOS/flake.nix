@@ -45,6 +45,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    nix-options-doc = {
+      url = "github:Thunderbottom/nix-options-doc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     archix = {
       url = "github:SamLukeYes/archix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -188,6 +193,12 @@
     caelestia = {
       url = "github:caelestia-dots/shell";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    caffyne = {
+      url = "github:caffyne-org/caffyne-shell";
+      # url = "/mnt/media/Programmation/Nix/Flakes/caffyne-shell";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     
     quickshell = {

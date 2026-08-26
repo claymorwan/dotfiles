@@ -1,5 +1,8 @@
 { inputs, pkgs, ... }:
 
+let
+  system = pkgs.stdenv.hostPlatform.system;
+in
 {
   imports = [
     ./nh.nix
@@ -81,7 +84,8 @@
     nurl
     update-nix-fetchgit
     nixpkgs-review
-    inputs.nix-output-monitor.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.nix-output-monitor.packages.${system}.default
+    inputs.nix-options-doc.packages.${system}.default
     expect
   ];
 }

@@ -9,6 +9,7 @@ let
 in
 {
   imports = [
+    # ./caffyne.nix
     ./dms.nix
     ./default-binds.nix
     # ./noctalia.nix

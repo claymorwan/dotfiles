@@ -1,5 +1,6 @@
 {
   imports = [
+    ./caffyne.nix
     ./godot.nix
     ./krita.nix
     ./kvantum.nix

@@ -1,5 +1,11 @@
 # self:
-{ inputs, lib, pkgs, config, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  config,
+  ...
+}:
 
 let
   inherit (lib)
@@ -16,6 +22,17 @@ let
   tomlFormat = pkgs.formats.toml { };
 in
 {
+  imports = [
+    (lib.mkRenamedOptionModule
+      [ "programs" "omikuji" "settings" "ui" ]
+      [ "programs" "omikuji" "settings" "apps" ]
+    )
+    (lib.mkRenamedOptionModule
+      [ "programs" "omikuji" "settings" "mutableUi" ]
+      [ "programs" "omikuji" "settings" "mutableApps" ]
+    )
+  ];
+  
   options.programs.omikuji = {
     enable = mkEnableOption "omikuji";
     package = mkPackageOption inputs.omikuji.packages.${pkgs.stdenv.hostPlatform.system} "omikuji" { nullable = true; };
@@ -146,15 +163,15 @@ in
         '';
       };
 
-      mutableUi = mkOption {
+      mutableApps = mkOption {
         type = types.bool;
         default = true;
         description = ''
-          Wether configuration in `ui.toml` can be updated by omikuji.
+          Wether configuration in `app.toml` can be updated by omikuji.
         '';
       };
 
-      ui = mkOption {
+      apps = mkOption {
         inherit (tomlFormat) type;
         default = { };
         example = literalExpression ''
@@ -179,7 +196,7 @@ in
         '';
         description = ''
           Configuration written to
-          {file}`$XDG_DATA_HOME/omikuji/ui.toml`.
+          {file}`$XDG_DATA_HOME/omikuji/app.toml`.
         '';
       };
     };
@@ -211,7 +228,7 @@ in
 
     defaultsToml = tomlFormat.generate "omikuji-config-defaults" defaultSettingsMerged;
     settingsToml = tomlFormat.generate "omikuji-config-settings" cfg.settings.settings;
-    uiToml = tomlFormat.generate "omikuji-config-ui" cfg.settings.ui;
+    appsToml = tomlFormat.generate "omikuji-config-apps" cfg.settings.apps;
   in
   mkIf cfg.enable
   {
@@ -226,7 +243,7 @@ in
         # Generating settings
         omikujiDefaultsSettings = mkIf (defaultSettingsMerged != { } && cfg.settings.mutableDefaults) (impureConfigActivation "${config.xdg.dataHome}/omikuji/defaults.toml" defaultsToml);
         omikujiSettingsSettings = mkIf (cfg.settings.settings != { } && cfg.settings.mutableSettings) (impureConfigActivation "${config.xdg.dataHome}/omikuji/settings.toml" settingsToml);
-        omikujiUiSettings = mkIf (cfg.settings.ui != { } && cfg.settings.mutableUi) (impureConfigActivation "${config.xdg.dataHome}/omikuji/ui.toml" uiToml);
+        omikujiAppsSettings = mkIf (cfg.settings.apps != { } && cfg.settings.mutableApps) (impureConfigActivation "${config.xdg.dataHome}/omikuji/app.toml" appsToml);
       };
     };
 
@@ -237,7 +254,7 @@ in
         map (
           # lutris seems to not detect wine/proton if the name has some caps
           package:
-          (lib.nameValuePair "omikuji/runners/${formatWineName package}" {
+          (lib.nameValuePair "omikuji/components/runners/${formatWineName package}" {
             source = package;
           })
         ) packages;
@@ -254,8 +271,8 @@ in
         source = settingsToml;
       };
 
-      "omikuji/ui.toml" = mkIf (cfg.settings.ui != { } && !cfg.settings.mutableUi) {
-        source = uiToml;
+      "omikuji/app.toml" = mkIf (cfg.settings.apps != { } && !cfg.settings.mutableApps) {
+        source = appsToml;
       };
     }
     // lib.listToAttrs (
