@@ -5,7 +5,7 @@
     steam = {
       enable = true;
       # package = pkgs.millennium-steam;
-      package = pkgs.steam.override {
+      package = pkgs.millennium-steam.override {
         extraPkgs = (_prev: ( with pkgs; [
           ghostty
         ]));

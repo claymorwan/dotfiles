@@ -21,12 +21,12 @@ let
     "--"
    ];
 
-  gameOptions = id: {
-    id = id;
+  gameOptions = name: {
+    name = name;
     wrappers = defaultWrappers;
   };
 
-  winGameOptions = id: recursiveUpdate (gameOptions id) {
+  winGameOptions = name: recursiveUpdate (gameOptions name) {
     # compatTool = "GE-Proton";
     wrappers = defaultWrappers;
     env = {
@@ -71,7 +71,7 @@ in
     
       apps = {
        
-        "Zenless Zone Zero" = recursiveUpdate (winGameOptions 4162040) {
+        "4162040" = recursiveUpdate (winGameOptions "Zenless Zone Zero") {
           compatTool = inputs.dw-proton.packages.${pkgs.stdenv.hostPlatform.system}.dw-proton;
           rawLaunchOptions = "bash -c 'exec \"\${@/HYP.exe/games\/ZenlessZoneZero Game\/ZenlessZoneZero.exe}\"' -- %command%";
 
@@ -85,11 +85,11 @@ in
           # ];
         };
 
-        "Geometry dash" = recursiveUpdate (winGameOptions 322170) {
+        "322170" = recursiveUpdate (winGameOptions "Geometry dash") {
           dllOverrides.xinput1_4 = "n,b";
         };
 
-        "Titanfall 2" = recursiveUpdate (winGameOptions 1237970) {
+        "1237970" = recursiveUpdate (winGameOptions "Titanfall 2") {
           # wrappers = defaultWrappers ++ gamescopeWrapper;
           env = {
             # PROTON_ENABLE_WAYLAND = 0;
@@ -101,137 +101,129 @@ in
           ];
         };
 
-        "Subnautica" = recursiveUpdate (winGameOptions 264710) {
+        "264710" = recursiveUpdate (winGameOptions "Subnautica") {
           dllOverrides.winhttp = "n,b";
         };
 
-       "Subnautica: Below Zero" = recursiveUpdate (winGameOptions 848450) {
+       "848450" = recursiveUpdate (winGameOptions "Subnautica: Below Zero") {
           dllOverrides.winhttp = "n,b";
         };
 
-        "Subnautica 2" = recursiveUpdate (winGameOptions 1962700) {
+        "1962700" = recursiveUpdate (winGameOptions "Subnautica 2") {
           dllOverrides.dwmapi= "n,b";
         };
 
-        "Spelunky 2" = winGameOptions 2418530;
+        "2418530" = winGameOptions "Spelunky 2";
 
-        "Peak" = winGameOptions 3527290;
+        "3527290" = winGameOptions "Peak";
 
-        "Waterpark simulator" = winGameOptions 3293260;
+        "3293260" = winGameOptions "Waterpark simulator";
 
-        "Portal 2" = winGameOptions 620;
+        "620" = winGameOptions "Portal 2";
 
-        "Portal Revolution" = winGameOptions 601360;
+        "601360" = winGameOptions "Portal Revolution";
 
-        "R.E.P.0" = winGameOptions 3241660;
+        "3241660" = winGameOptions "R.E.P.0";
 
-        "IN HEAT: Lustful Nights" = gameOptions 1962890;
+        "1962890" = gameOptions "IN HEAT: Lustful Nights";
 
-        "Pieces of my Heart" = winGameOptions 1226640;
+        "1226640" = winGameOptions "Pieces of my Heart";
 
-        "Overcooked 2" = winGameOptions 728880;
+        "728880" = winGameOptions "Overcooked 2";
 
-        "Slime Rancher" = winGameOptions 433340;
+        "433340" = winGameOptions "Slime Rancher";
 
-        "The Beginner's Guide" = winGameOptions 303210;
+        "303210" = winGameOptions "The Beginner's Guide";
 
-        "Wasteland bites Demo" = gameOptions 3820720;
+        "3820720" = gameOptions "Wasteland bites Demo";
 
-        "Ultrakill" = winGameOptions 1229490;
+        "1229490" = winGameOptions "ULTRAKILL";
 
-        "Pizza tower" = winGameOptions 2231450;
+        "2231450" = winGameOptions "Pizza tower";
 
-        "Ena DBBQ" = gameOptions 2134320;
+        "2134320" = gameOptions "ENA: Dream BBQ";
 
-        "Denshattack Demo" = winGameOptions 4142750;
+        "4142750" = winGameOptions "Denshattack Demo";
 
-        "Boost vector EX Demo" = gameOptions 4338440;
+        "4338440" = gameOptions "Boost vector EX Demo";
 
-        "Awaria"= winGameOptions 3274300;
+        "3274300"= winGameOptions "Awaria";
 
-        "White Knuckle" = winGameOptions 3195790;
+        "3195790" = winGameOptions "White Knuckle";
 
-        # "White Knuckle" = recursiveUpdate (winGameOptions 3195790) {
-        #   betaBranch = "publicearlyfixtesting";
-        # };
+        "4283210" = winGameOptions "Herringen Demo";
 
-        "White Knuckle Demo" = winGameOptions 3218540;
+        "980610" = gameOptions "Quaver";
 
-        "Herringen Demo" = winGameOptions 4283210;
+        "4376050" = winGameOptions "Data Center Demo";
 
-        "Quaver" = gameOptions 980610;
+        "2788630" = winGameOptions "Nothing Together";
 
-        "Data Center Demo" = winGameOptions 4376050;
+        "2881650" = winGameOptions "Content Warning";
 
-        "Nothing Together" = winGameOptions 2788630;
+        "3075800" = winGameOptions "Subterranauts";
 
-        "Content Warning" = winGameOptions 2881650;
+        "1966720" = winGameOptions "Lethal Company";
 
-        "Subterranauts" = winGameOptions 3075800;
+        "2132850" = winGameOptions "Rabbit and Steel";
 
-        "Lethal Company" = winGameOptions 1966720;
+        "4365450" = winGameOptions "BOMMY Playtest";
 
-        "Rabbit and Steel" = winGameOptions 2132850;
-
-        "BOMMY Playtest" = winGameOptions 4365450;
-
-        "Game Game Developer" = winGameOptions 4449070;
+        "4449070" = winGameOptions "Game Game Developer";
         
-        "House Flipper" = winGameOptions 613100;
+        "613100" = winGameOptions "House Flipper";
 
-        "Wallpaper engine" = winGameOptions 431960;
+        "431960" = winGameOptions "Wallpaper engine";
 
-        "Crypt of the NecroDancer" = gameOptions 247080;
+        "247080" = gameOptions "Crypt of the NecroDancer";
 
-        "Rift of the NecroDancer Demo" = winGameOptions 3029150;
+        "3029150" = winGameOptions "Rift of the NecroDancer Demo";
 
-        "MOTORSLICE Demo" = winGameOptions 3910170;
+        # "3910170" = winGameOptions "MOTORSLICE Demo";
         
-        "MOTORSLICE" = winGameOptions 2830030;
+        "2830030" = winGameOptions "MOTORSLICE";
 
-        "Creature Kitchen Demo" = winGameOptions 4116110;
+        # "4116110" = winGameOptions "Creature Kitchen Demo";
 
-        "Among Us" = winGameOptions 945360;
+        "945360" = winGameOptions "Among Us";
 
-        "Shift At Midnight Multiplayer Demo" = winGameOptions 4050060;
+        # "4050060" = winGameOptions "Shift At Midnight Multiplayer Demo";
 
-        "ARSONATE" = gameOptions 2822980;
+        "2822980" = gameOptions "ARSONATE";
 
-        "ARSONATE Demo" = gameOptions 2849630;
+        # "2849630" = gameOptions "ARSONATE Demo";
 
-        "Random Racing Demo" = winGameOptions 2199940;
+        # "2199940" = winGameOptions "Random Racing Demo";
 
-        "Retail Hell Demo" = winGameOptions 4379260;
+        # "4379260" = winGameOptions "Retail Hell Demo";
 
-        "Bit Buddy Demo" = winGameOptions 3950450;
+        "4802920" = winGameOptions "Colossus - Eternal Blight";
 
-        "Colossus - Eternal Blight" = winGameOptions 4802920;
+        "3146520" = winGameOptions "WEBFISHING";
 
-        "WEBFISHING" = winGameOptions 3146520;
+        "1671210" = winGameOptions "DELTARUNE";
 
-        "DELTARUNE" = winGameOptions 1671210;
+        # "4016020" = winGameOptions "Chunky JUMP!";
 
-        "Chunky JUMP!" = winGameOptions 4016020;
+        "4146680" = winGameOptions "ReStory Chill Electronic Repairs Demo";
 
-        "ReStory Chill Electronic Repairs Demo" = winGameOptions 4146680;
+        "4245250" = winGameOptions "VHOLUME Demo";
 
-        "VHOLUME Demo" = winGameOptions 4245250;
+        "4791300" = winGameOptions "XenoFeels Demo";
 
-        "XenoFeels Demo" = winGameOptions 4791300;
+        "4101720" = winGameOptions "Liminal Shroud Demo";
 
-        "Liminal Shroud Demo" = winGameOptions 4101720;
+        "4841090" = winGameOptions "Code RAPID Demo";
 
-        "Code RAPID Demo" = winGameOptions 4841090;
+        "4700530" = winGameOptions "THE WELL IS NOT EMPTY Demo";
 
-        "THE WELL IS NOT EMPTY Demo" = winGameOptions 4700530;
+        "4130300" = winGameOptions "Ironwing Valiant: Record of Astera";
 
-        "Ironwing Valiant: Record of Astera" = winGameOptions 4130300;
+        "413150" = gameOptions "Stardew Valley";
 
-        "Stardew Valley" = gameOptions 413150;
+        "765410" = gameOptions "Bean Battles";
 
-        "Bean Battles" = gameOptions 765410;
-
-        "Muse Dash" = winGameOptions 774171;
+        "774171" = winGameOptions "Muse Dash";
       };
     };
   };

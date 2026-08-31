@@ -15,7 +15,7 @@
       ]));
 
       buildFHSEnv = args: pkgs.buildFHSEnv (args // {
-        profile = ''export QT_STYLE_OVERRIDE=anything'';
+        profile = ''export QT_STYLE_OVERRIDE=Fusion'';
       });
     };
     
@@ -48,7 +48,7 @@
         system.gamemode = true;
       };
 
-      ui = {
+      apps = {
         theme = {
           follow_system_colors = false;
           colors = {
