@@ -98,5 +98,10 @@ pyroclear = {
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
+proton-cachyos = {
+  url = "github:Daaboulex/proton-cachyos-nix";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+
 dw-proton.url = "github:imaviso/dwproton-flake";
 ```

@@ -19,7 +19,7 @@
       });
     };
     
-    defaultWinePackage = pkgs.proton-ge-bin;
+    defaultWinePackage = inputs.proton-cachyos.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
     winePackages = [ pkgs.wineWow64Packages.full ];
     protonPackages = osConfig.programs.steam.extraCompatPackages;

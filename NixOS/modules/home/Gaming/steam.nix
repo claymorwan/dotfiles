@@ -67,7 +67,7 @@ in
       enable = true;
       onSteamRunning = "close"; # See 'Important' note at beginning of this readme
       desktopEntries.enable = true;
-      defaultCompatTool = "GE-Proton";
+      defaultCompatTool = inputs.proton-cachyos.packages.${pkgs.stdenv.hostPlatform.system}.default;
     
       apps = {
        

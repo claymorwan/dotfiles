@@ -1,5 +1,8 @@
 { inputs, pkgs, ... }:
 
+let
+  system = pkgs.stdenv.hostPlatform.system;
+in
 {
   programs = {
     steam = {
@@ -18,7 +21,8 @@
 
       extraCompatPackages = [
         pkgs.proton-ge-bin
-        inputs.dw-proton.packages.${pkgs.stdenv.hostPlatform.system}.dw-proton
+        inputs.proton-cachyos.packages.${system}.default
+        inputs.dw-proton.packages.${system}.dw-proton
       ];
     };
 

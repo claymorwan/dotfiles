@@ -30,14 +30,14 @@ in
         };
       });
 
-      proton-ge-bin = prev.proton-ge-bin.overrideAttrs (finalAttrs: {
-        version = "GE-Proton10-34";
+      # proton-ge-bin = prev.proton-ge-bin.overrideAttrs (finalAttrs: {
+      #   version = "GE-Proton10-34";
 
-        src = pkgs.fetchzip {
-          url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${finalAttrs.version}/${finalAttrs.version}.tar.gz";
-          hash = "sha256-lzPsYYcrp5NoT3B0WFj3o10Z7tXx7xva1wEP3edeuqM=";
-        };
-      });
+      #   src = pkgs.fetchzip {
+      #     url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${finalAttrs.version}/${finalAttrs.version}.tar.gz";
+      #     hash = "sha256-lzPsYYcrp5NoT3B0WFj3o10Z7tXx7xva1wEP3edeuqM=";
+      #   };
+      # });
 
       yazi = prev.yazi.override {_7zz = pkgs._7zz-rar; };
 

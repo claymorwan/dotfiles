@@ -16,6 +16,8 @@
   "showSeconds": true,
   "animationSpeed": 4,
   "customAnimationDuration": 200,
+  "springBounce": 2,
+  "animationVariant": 2,
   "motionEffect": 1,
   "barElevationEnabled": false,
   "blurEnabled": true,
@@ -282,20 +284,6 @@
     "osd": true
   },
   "displayShowDisconnected": true,
-  "connectedFrameBarStyleBackups": {
-    "default": {
-      "shadowIntensity": 0,
-      "squareCorners": true,
-      "gothCornersEnabled": true,
-      "borderEnabled": true
-    },
-    "bar1768214186318": {
-      "shadowIntensity": 0,
-      "squareCorners": true,
-      "gothCornersEnabled": true,
-      "borderEnabled": true
-    }
-  },
   "barConfigs": [
     {
       "id": "default",
@@ -392,12 +380,12 @@
       "bottomGap": 0,
       "transparency": 0.95,
       "widgetTransparency": 0,
-      "squareCorners": false,
+      "squareCorners": true,
       "noBackground": false,
-      "gothCornersEnabled": false,
+      "gothCornersEnabled": true,
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 23,
-      "borderEnabled": false,
+      "borderEnabled": true,
       "borderColor": "primary",
       "borderOpacity": 1,
       "borderThickness": 2,
@@ -494,12 +482,12 @@
       "bottomGap": 0,
       "transparency": 1,
       "widgetTransparency": 0,
-      "squareCorners": false,
+      "squareCorners": true,
       "noBackground": false,
-      "gothCornersEnabled": false,
+      "gothCornersEnabled": true,
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 23,
-      "borderEnabled": false,
+      "borderEnabled": true,
       "borderColor": "primary",
       "borderOpacity": 1,
       "borderThickness": 2,
@@ -876,7 +864,6 @@
       "trigger": "qrg"
     }
   },
-  "frameEnabled": true,
   "frameOpacity": 0.9,
   "configVersion": 16
 }
