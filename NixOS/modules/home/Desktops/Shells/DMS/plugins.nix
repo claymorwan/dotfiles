@@ -99,7 +99,7 @@ in
         dankPomodoroTimer.enable = true;
         dankDesktopWeather.enable = true;
         # alarmClock.enable = true;
-        appShortcut.enable = true;
+        # appShortcut.enable = true;
         # mediaPlayer.enable = true;
         # desktopCommand.enable = true;
         mediaFrame.enable = true;
