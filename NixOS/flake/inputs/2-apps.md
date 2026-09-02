@@ -104,4 +104,9 @@ proton-cachyos = {
 };
 
 dw-proton.url = "github:imaviso/dwproton-flake";
+
+fastpotify = {
+  url = "github:crmne/fastpotify";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
 ```

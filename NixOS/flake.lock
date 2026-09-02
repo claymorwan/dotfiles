@@ -524,6 +524,27 @@
         "type": "github"
       }
     },
+    "fastpotify": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1788363536,
+        "narHash": "sha256-qHi+w10aKrrWXs/SJmEx3mMoxLZcfYQZfFoU3y1ubsw=",
+        "owner": "crmne",
+        "repo": "fastpotify",
+        "rev": "60ff32b8789466a3bc2f21432a096a48c64974b1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "crmne",
+        "repo": "fastpotify",
+        "type": "github"
+      }
+    },
     "fenix": {
       "inputs": {
         "nixpkgs": [
@@ -1041,7 +1062,7 @@
       "inputs": {
         "crane": "crane",
         "nixpkgs": "nixpkgs_4",
-        "rust-overlay": "rust-overlay"
+        "rust-overlay": "rust-overlay_2"
       },
       "locked": {
         "lastModified": 1788029235,
@@ -1270,7 +1291,7 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "rust-overlay": "rust-overlay_2"
+        "rust-overlay": "rust-overlay_3"
       },
       "locked": {
         "lastModified": 1785802329,
@@ -1832,11 +1853,11 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1787772825,
-        "narHash": "sha256-Ef6WqLTyzH8sOuw1iZdOcI1Ar1FmbzLac2JXe8JKGv4=",
+        "lastModified": 1788366726,
+        "narHash": "sha256-ZdKYSFtEuhHoOSWJP5DasOGhInOVMBVd10Ue7S/ZnaY=",
         "owner": "claymorwan",
         "repo": "nurpkgs",
-        "rev": "273fad467cfdb3a39c0bde5fa4af0e0e3bfcd59a",
+        "rev": "42c506040a0da1b484463623becfde5e16e4757a",
         "type": "github"
       },
       "original": {
@@ -1849,7 +1870,7 @@
       "inputs": {
         "flake-parts": "flake-parts_7",
         "nixpkgs": "nixpkgs_9",
-        "rust-overlay": "rust-overlay_3"
+        "rust-overlay": "rust-overlay_4"
       },
       "locked": {
         "lastModified": 1788276030,
@@ -2025,6 +2046,7 @@
         "dms-plugin-registry": "dms-plugin-registry",
         "dsearch": "dsearch",
         "dw-proton": "dw-proton",
+        "fastpotify": "fastpotify",
         "fluxer-src": "fluxer-src",
         "home-manager": "home-manager",
         "kopuz": "kopuz",
@@ -2066,6 +2088,27 @@
     "rust-overlay": {
       "inputs": {
         "nixpkgs": [
+          "fastpotify",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1787834454,
+        "narHash": "sha256-jXSvqn04IOecJCvSvl8+g3PsbDVNP6qKs6dKUs/b16k=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "dc2fd1acc537f3583744e1373597a5731ff7a6e3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "rust-overlay_2": {
+      "inputs": {
+        "nixpkgs": [
           "kopuz",
           "nixpkgs"
         ]
@@ -2084,7 +2127,7 @@
         "type": "github"
       }
     },
-    "rust-overlay_2": {
+    "rust-overlay_3": {
       "inputs": {
         "nixpkgs": [
           "nix-options-doc",
@@ -2105,7 +2148,7 @@
         "type": "github"
       }
     },
-    "rust-overlay_3": {
+    "rust-overlay_4": {
       "inputs": {
         "nixpkgs": [
           "omikuji",

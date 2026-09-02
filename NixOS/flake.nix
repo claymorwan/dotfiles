@@ -166,6 +166,11 @@
     };
     
     dw-proton.url = "github:imaviso/dwproton-flake";
+    
+    fastpotify = {
+      url = "github:crmne/fastpotify";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]
     # DMS related stuff

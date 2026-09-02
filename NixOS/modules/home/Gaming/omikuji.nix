@@ -39,9 +39,10 @@
           fsr = true;
           battleye = true;
           easyanticheat = true;
+          graphics_driver = "wayland";
         };
 
-        launch.env.PROTON_USE_WAYLAND = "1";
+        # launch.env.PROTON_USE_WAYLAND = "1";
 
         graphics.mangohud = true;
         graphics.gamescope.enabled = false;

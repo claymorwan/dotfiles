@@ -8,6 +8,10 @@ in
     inputs.spicetify-nix.homeManagerModules.spicetify
   ];
 
+  home.packages = [
+    inputs.fastpotify.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ];
+
   programs.spicetify = {
     enable = true;
 
