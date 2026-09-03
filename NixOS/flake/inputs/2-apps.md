@@ -109,4 +109,6 @@ fastpotify = {
   url = "github:crmne/fastpotify";
   inputs.nixpkgs.follows = "nixpkgs";
 };
+
+amethyst.url = "github:RoGreat/nixpkgs//amethyst-mod-manager";
 ```

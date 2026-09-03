@@ -171,6 +171,8 @@
       url = "github:crmne/fastpotify";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    amethyst.url = "github:RoGreat/nixpkgs//amethyst-mod-manager";
     # ~/~ end
     # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]
     # DMS related stuff

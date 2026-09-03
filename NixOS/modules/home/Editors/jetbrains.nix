@@ -2,9 +2,9 @@
 
 {
   home.packages = with pkgs; [
-    (jetbrains.pycharm.override {
-      forceWayland = true;
-    })
+    # (jetbrains.pycharm.override {
+    #   forceWayland = true;
+    # })
 
     (android-studio.override {
       forceWayland = true;

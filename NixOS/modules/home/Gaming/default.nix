@@ -1,5 +1,9 @@
 { inputs, pkgs, ... }:
 
+let
+  system = pkgs.stdenv.hostPlatform.system;
+  amethyst = (inputs.amethyst.legacyPackages.${system}).amethyst-mod-manager;
+in
 {
   imports = [
     ./lutris.nix
@@ -9,15 +13,15 @@
   ];
 
   home.packages = with pkgs; [
-    # amethyst
-    nur.repos.rogreat.amethyst-mod-manager
+    amethyst
+    # nur.repos.rogreat.amethyst-mod-manager
 
     prismlauncher
     protonplus
     limo
     gale
     olympus
-    inputs.prefixer.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.prefixer.packages.${system}.default
     # sm64coopdx
 
     (osu-lazer-bin.override {
