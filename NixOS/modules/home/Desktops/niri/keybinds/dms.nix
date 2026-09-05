@@ -7,7 +7,7 @@
     };
 
     "Mod+V"= {
-      action.spawn = [ "dms" "ipc" "call" "clipboardPlus" "togglePanel" ]; # [ "dms" "ipc" "call" "clipboard" "toggle" ];
+      action.spawn = [ "dms" "ipc" "call" "clipboard" "toggle" ]; # [ "dms" "ipc" "call" "clipboardPlus" "togglePanel" ]
       repeat = false;
       hotkey-overlay.title = "Clipboard";
     };
