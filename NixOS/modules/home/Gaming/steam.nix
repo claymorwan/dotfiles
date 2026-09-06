@@ -71,19 +71,19 @@ in
     
       apps = {
        
-        "4162040" = recursiveUpdate (winGameOptions "Zenless Zone Zero") {
-          compatTool = inputs.dw-proton.packages.${pkgs.stdenv.hostPlatform.system}.dw-proton;
-          rawLaunchOptions = "bash -c 'exec \"\${@/HYP.exe/games\/ZenlessZoneZero Game\/ZenlessZoneZero.exe}\"' -- %command%";
+        # "4162040" = recursiveUpdate (winGameOptions "Zenless Zone Zero") {
+        #   compatTool = inputs.dw-proton.packages.${pkgs.stdenv.hostPlatform.system}.dw-proton;
+        #   rawLaunchOptions = "bash -c 'exec \"\${@/HYP.exe/games\/ZenlessZoneZero Game\/ZenlessZoneZero.exe}\"' -- %command%";
 
-          env = {
-            PROTON_USE_WINEALSA = 1;
-            PROTON_DXVK_GPLASYNC = 1;
-          };
+        #   env = {
+        #     PROTON_USE_WINEALSA = 1;
+        #     PROTON_DXVK_GPLASYNC = 1;
+        #   };
 
-          # args = [
-          #   "-use-d3d12"
-          # ];
-        };
+        #   # args = [
+        #   #   "-use-d3d12"
+        #   # ];
+        # };
 
         "322170" = recursiveUpdate (winGameOptions "Geometry dash") {
           dllOverrides.xinput1_4 = "n,b";
