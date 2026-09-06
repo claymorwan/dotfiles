@@ -379,7 +379,7 @@
           "c"
           "d"
         ];
-        run = "copy dirname";
+        run = "copy dirpath";
         desc = "Copy the directory path";
       }
       {
