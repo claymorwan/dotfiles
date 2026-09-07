@@ -9,7 +9,7 @@ in
   ];
 
   home.packages = [
-    inputs.fastpotify.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # inputs.fastpotify.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   programs.spicetify = {

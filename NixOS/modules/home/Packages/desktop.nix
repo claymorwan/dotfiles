@@ -46,6 +46,7 @@ in
     inputs.lncur.packages.${system}.default
 
     # GUI
+    # citrix-workspace
     remmina
     veracrypt
     packet

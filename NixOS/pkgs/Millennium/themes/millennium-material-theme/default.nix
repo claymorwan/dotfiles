@@ -1,7 +1,6 @@
 {
   stdenvNoCC,
   millennium-material-theme-src,
-  local-utils,
   lib,
   fetchFromGitHub,
   catppuccin-whiskers,
@@ -12,7 +11,7 @@
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "millennium-material-theme";
-  version = "0-unstable-${local-utils.timestamp millennium-material-theme-src}";
+  version = "0-unstable";
 
   srcs = [
     millennium-material-theme-src
