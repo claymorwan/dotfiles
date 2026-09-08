@@ -17,6 +17,7 @@ in
     # nur.repos.rogreat.amethyst-mod-manager
     # nur.repos.forkprince.twintaillauncher
     inputs.nurpkgs.packages.${system}.twintaillauncher
+    modrinth-app
     prismlauncher
     protonplus
     limo
