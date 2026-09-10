@@ -25,8 +25,8 @@
     "monitorScenes": {
       "eDP-1": "3309449049",
       "HDMI-A-1": "3371368351",
-      "DP-1": "3309449049",
-      "DP-3": "3309449049"
+      "DP-3": "3309449049",
+      "DP-1": "3798538497"
     },
     "sceneSettings": {
       "2670952853": {
@@ -173,7 +173,7 @@
   },
   "dankKDEConnect": {
     "enabled": true,
-    "selectedDeviceId": "c613fe7a_9eab_4762_b899_0b44f6ec2db8",
+    "selectedDeviceId": "807a874d77944ae28e14daa5af7c4117",
     "scanSubdirectories": false
   },
   "dankGifSearch": {
