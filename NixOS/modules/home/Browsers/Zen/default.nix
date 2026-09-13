@@ -26,16 +26,13 @@ in
       LegacyProfiles = true;
     };
 
+    languagePacks = [
+      "en-US"
+      "fr"
+    ];
+
     profiles = {
       default = let
-        containers = {
-          Main = {
-            color = "green";
-            icon = "tree";
-            id = 1;
-          };
-        };
-
         spaces = {
           Default = {
             id = "572910e1-4468-4832-a669-0b3a93e2f165";
