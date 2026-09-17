@@ -18,7 +18,7 @@
   "emojiLauncher": {
     "enabled": true,
     "trigger": ";",
-    "recentEmojis": "😭,🔥,⛈️,🌱,🐟,🥀,💥,👀,🐚,✂️,🚨,🤤,🇫🇷,⤪,🧅,❤️‍🩹"
+    "recentEmojis": "😭,🗣️,🔥,⛈️,🌱,🐟,🥀,💥,👀,🐚,✂️,🚨,🤤,🇫🇷,⤪,🧅,❤️‍🩹"
   },
   "linuxWallpaperEngine": {
     "enabled": true,
@@ -173,7 +173,7 @@
   },
   "dankKDEConnect": {
     "enabled": true,
-    "selectedDeviceId": "c613fe7a_9eab_4762_b899_0b44f6ec2db8",
+    "selectedDeviceId": "807a874d77944ae28e14daa5af7c4117",
     "scanSubdirectories": false
   },
   "dankGifSearch": {
@@ -398,7 +398,7 @@
   },
   "screenCaptureToolbar": {
     "enabled": true,
-    "captureMode": "monitor",
+    "captureMode": "interactive",
     "videoFormat": "mp4",
     "videoMonitor": "DP-1",
     "stdout": true,
@@ -406,7 +406,7 @@
     "pipeCommand": "gradia",
     "quality": "100",
     "toolbarOpacity": "1",
-    "saveToDisk": true,
+    "saveToDisk": false,
     "copyToClipboard": true,
     "showAdvancedSettings": true,
     "recPillScreenName": "DP-1",
