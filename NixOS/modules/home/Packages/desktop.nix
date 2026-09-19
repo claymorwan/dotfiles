@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, host, ... }:
 
 let
   system = pkgs.stdenv.hostPlatform.system;
@@ -20,7 +20,7 @@ in
 
     shimelinux = {
       enable = true;
-      autostart = true;
+      autostart = host == "nixos";
     };
 
     onlyoffice.enable = true;
