@@ -101,6 +101,17 @@ in
         open-floating = true;
       }
 
+      # Looping
+      {
+        matches = [{ app-id = "looping.exe"; }];
+        excludes = [
+          { title = "^Looping - [.*]"; }
+          { title = ""; }
+        ];
+
+        open-floating = true;
+      }
+
       # Float and resize
       {
         matches = [{ app-id = "org\.gnome\.Settings"; }];
