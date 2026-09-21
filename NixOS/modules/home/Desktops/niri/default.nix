@@ -12,6 +12,7 @@
   imports = [
     inputs.niri.homeModules.niri
     inputs.nsticky.homeModules.default
+    ./animations.nix
     ./execs.nix
     ./keybinds
     ./layout.nix
