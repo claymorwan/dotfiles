@@ -23,7 +23,7 @@
   "linuxWallpaperEngine": {
     "enabled": true,
     "monitorScenes": {
-      "eDP-1": "3309449049",
+      "eDP-1": "3802960087",
       "HDMI-A-1": "3371368351",
       "DP-3": "3309449049",
       "DP-1": "3798538497"
@@ -61,6 +61,9 @@
       "DP-1": {
         "silent": false,
         "volume": 50,
+        "screenshotDelay": 150
+      },
+      "eDP-1": {
         "screenshotDelay": 150
       }
     },
@@ -173,7 +176,7 @@
   },
   "dankKDEConnect": {
     "enabled": true,
-    "selectedDeviceId": "807a874d77944ae28e14daa5af7c4117",
+    "selectedDeviceId": "c613fe7a_9eab_4762_b899_0b44f6ec2db8",
     "scanSubdirectories": false
   },
   "dankGifSearch": {
