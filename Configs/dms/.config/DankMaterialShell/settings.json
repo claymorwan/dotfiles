@@ -338,8 +338,6 @@
       "cursorHideTimeout": 0
     }
   },
-  "launcherLogoMode": "os",
-  "launcherLogoColorOverride": "primary",
   "useSystemSoundTheme": true,
   "batteryMonitorTimeout": 120,
   "batteryLockTimeout": 60,
@@ -422,7 +420,9 @@
       "leftWidgets": [
         {
           "id": "launcherButton",
-          "enabled": true
+          "enabled": true,
+          "launcherLogoMode": "os",
+          "launcherLogoColorOverride": "primary"
         },
         {
           "id": "focusedWindow",
@@ -972,5 +972,5 @@
     }
   },
   "frameEnabled": true,
-  "configVersion": 28
+  "configVersion": 29
 }

@@ -401,7 +401,7 @@
   },
   "screenCaptureToolbar": {
     "enabled": true,
-    "captureMode": "monitor",
+    "captureMode": "interactive",
     "videoFormat": "mp4",
     "videoMonitor": "DP-1",
     "stdout": true,
