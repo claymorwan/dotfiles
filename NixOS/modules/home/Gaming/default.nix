@@ -2,7 +2,6 @@
 
 let
   system = pkgs.stdenv.hostPlatform.system;
-  amethyst = (inputs.amethyst.legacyPackages.${system}).amethyst-mod-manager;
 in
 {
   imports = [
@@ -13,7 +12,7 @@ in
   ];
 
   home.packages = with pkgs; [
-    amethyst
+    inputs.amethyst.packages.${system}.default
     # nur.repos.rogreat.amethyst-mod-manager
     # nur.repos.forkprince.twintaillauncher
     inputs.nurpkgs.packages.${system}.twintaillauncher

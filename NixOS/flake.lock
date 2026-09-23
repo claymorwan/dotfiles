@@ -34,18 +34,22 @@
       }
     },
     "amethyst": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
       "locked": {
-        "lastModified": 1789697238,
-        "narHash": "sha256-bxLTDkVbmxy5TF6zZwm+0PaeR+2HolzEYvZsKCcwYpM=",
-        "owner": "RoGreat",
-        "repo": "nixpkgs",
-        "rev": "b801be00f7cc8425c193d14dc19900fc88ff3e5e",
+        "lastModified": 1789830932,
+        "narHash": "sha256-jZNfClEM475spCSDXFnVW+GXfD+dmOlBDDa24V6uybM=",
+        "owner": "ChrisDKN",
+        "repo": "Amethyst-Mod-Manager",
+        "rev": "7c04b7ca4cf1957d9314d9c5b9b60af12fbffc47",
         "type": "github"
       },
       "original": {
-        "owner": "RoGreat",
-        "ref": "amethyst-mod-manager",
-        "repo": "nixpkgs",
+        "owner": "ChrisDKN",
+        "repo": "Amethyst-Mod-Manager",
         "type": "github"
       }
     },
