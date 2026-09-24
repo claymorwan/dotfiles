@@ -274,7 +274,7 @@
   "spotlightSectionViewModes": {
     "apps": "list",
     "plugin_dankHyprlandWindows": "tile",
-    "plugin_emojiLauncher": "list"
+    "plugin_emojiLauncher": "grid"
   },
   "appDrawerSectionViewModes": {
     "apps": "list"
