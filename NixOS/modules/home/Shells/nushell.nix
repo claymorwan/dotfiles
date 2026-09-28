@@ -15,7 +15,9 @@ in
   programs.nushell = {
     enable = true;
 
-    shellAliases = shellAliases;
+    shellAliases = shellAliases // {
+      gcdf = "git commit -v -m $\"(^date +\"%F %T\")\"";
+    };
 
     settings = {
       show_banner = false;

@@ -5,6 +5,9 @@
     enable = true;
     defaultEditor = true;
     extraPackages = with pkgs; [
+      # Debugging
+      lldb
+      
       # Nix
       nil
 
