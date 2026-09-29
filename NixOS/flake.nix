@@ -1,24 +1,13 @@
-# ~/~ begin <<flake/README.md#flake.nix>>[init]
 {
   description = "NixOS configuration";
 
   inputs = {
-    # ~/~ begin <<flake/inputs/1-nix.md#flake-inputs>>[init]
+    # Nix stuffs
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    # home-manager, used for managing user configuration
-    
-    # home-manager = {
-    #   url = "/mnt/media/Programmation/Nix/home-manager";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    
-    # home-manager = {
-    #   url = "github:claymorwan/home-manager/nushell-fixes";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    
+
     home-manager = {
       url = "github:nix-community/home-manager";
+      # url = "/mnt/media/Programmation/Nix/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
@@ -30,7 +19,6 @@
     nurpkgs = {
       url = "github:claymorwan/nurpkgs";
       # url = "/mnt/media/Programmation/Nix/nurpkgs";
-      # inputs.nixpkgs.follows = "nixpkgs";
     };
     
     nixos-avf = {
@@ -59,8 +47,8 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # ~/~ end
-    # ~/~ begin <<flake/inputs/2-apps.md#flake-inputs>>[0]
+
+    # Apps
     catppuccin.url = "github:catppuccin/nix";
     
     steam-config-nix = {
@@ -176,22 +164,11 @@
       url = "github:ChrisDKN/Amethyst-Mod-Manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # ~/~ end
-    # ~/~ begin <<flake/inputs/3-desktop.md#flake-inputs>>[0]
-    # DMS related stuff
-    
-    # niri = {
-    #   url = "github:sodiboo/niri-flake";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    
+  
+    # Desktop stuffs (WM and shells)  
     niri = {
       url = "github:epireyn/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
-    niri-pkg = {
-      url = "github:niri-wm/niri";
+      # url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
@@ -200,30 +177,20 @@
      inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # noctalia = {
+    #   url = "github:noctalia-dev/noctalia-shell";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     
-    caelestia = {
-      url = "github:caelestia-dots/shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # caelestia = {
+    #   url = "github:caelestia-dots/shell";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     
-    caffyne = {
-      url = "github:caffyne-org/caffyne-shell";
-      # url = "/mnt/media/Programmation/Nix/Flakes/caffyne-shell";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
-    quickshell = {
-      # add ?ref=<tag> to track a tag
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-    
-      # THIS IS IMPORTANT
-      # Mismatched system dependencies will lead to crashes and other issues.
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # caffyne = {
+    #   url = "github:caffyne-org/caffyne-shell";
+    #   # inputs.nixpkgs.follows = "nixpkgs";
+    # };
     
     dgop = {
       url = "github:AvengeMedia/dgop";
@@ -239,8 +206,6 @@
       url = "github:AvengeMedia/dank-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
-    
     
     dsearch = {
       url = "github:AvengeMedia/danksearch";
@@ -259,42 +224,17 @@
     
     nix-monitor.url = "github:antonjah/nix-monitor";
     
-    dms-plugin-dankPinentry = {
-      url = "github:pacman99/DankPinentry";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
     dms-common = {
       url = "github:hthienloc/dms-common";
       flake = false;
     };
-    # ~/~ end
-    # ~/~ begin <<flake/inputs/4-package-src.md#flake-inputs>>[0]
-    fluxer-src = {
-      url = "github:fluxerapp/fluxer";
-      flake = false;
-    };
-    
+
+    # Source codes inputs    
     millennium-material-theme-src = {
       url = "github:kuska1/Material-Theme";
       flake = false;
     };
     
-    # omnisearch-src = {
-    #   url = "git+https://git.bwaaa.monster/omnisearch";
-    #   flake = false;
-    # };
-    # 
-    # beaker-src = {
-    #   url = "git+https://git.bwaaa.monster/beaker";
-    #   flake = false;
-    # };
-    
-    zen-ctp = {
-      url = "github:code-irisnk/catppuccin-zen-browser";
-      flake = false;
-    };
-    # ~/~ end
   };
 
   outputs =

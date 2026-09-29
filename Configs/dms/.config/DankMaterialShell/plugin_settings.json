@@ -18,12 +18,11 @@
   "emojiLauncher": {
     "enabled": true,
     "trigger": ";",
-    "recentEmojis": "♥️,❤️‍🩹,😭,🗣️,🔥,⛈️,🌱,🐟,🥀,💥,👀,🐚,✂️,🚨,🤤,🇫🇷,⤪,🧅"
+    "recentEmojis": "😭,🗣️,🔥,⛈️,🌱,🐟,🥀,💥,👀,🐚,✂️,🚨,🤤,🇫🇷,⤪,🧅,❤️‍🩹"
   },
   "linuxWallpaperEngine": {
     "enabled": true,
     "monitorScenes": {
-      "eDP-1": "3802960087",
       "HDMI-A-1": "3371368351",
       "DP-3": "3309449049",
       "DP-1": "3798538497"
@@ -176,7 +175,7 @@
   },
   "dankKDEConnect": {
     "enabled": true,
-    "selectedDeviceId": "c613fe7a_9eab_4762_b899_0b44f6ec2db8",
+    "selectedDeviceId": "e3df2f46f32a43d586d528fcbb7c6018",
     "scanSubdirectories": false
   },
   "dankGifSearch": {
@@ -401,7 +400,7 @@
   },
   "screenCaptureToolbar": {
     "enabled": true,
-    "captureMode": "monitor",
+    "captureMode": "interactive",
     "videoFormat": "mp4",
     "videoMonitor": "DP-1",
     "stdout": true,
