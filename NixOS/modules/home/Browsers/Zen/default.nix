@@ -238,6 +238,7 @@ in
             seventv
             enhancer-for-youtube
             youtube-no-translation
+            ambient-light-for-youtube
 
             plasma-integration
             pronoundb
