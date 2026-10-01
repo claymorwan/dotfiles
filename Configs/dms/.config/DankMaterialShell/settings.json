@@ -74,6 +74,9 @@
       "showTrash": false,
       "trashFileManager": "default",
       "trashCustomCommand": "yazi",
+      "magnification": false,
+      "magnificationScale": 130,
+      "magnificationProfile": "parabolic",
       "order": [],
       "widgets": [
         {
@@ -98,6 +101,9 @@
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "DP-1",
   "popupTransparency": 0.95,
+  "dmsWindowsFloatingSeeded": [
+    "niri"
+  ],
   "springBounce": 2,
   "motionEffect": 1,
   "barElevationEnabled": false,
@@ -105,6 +111,33 @@
   "blurForegroundLayers": false,
   "blurredWallpaperLayer": true,
   "controlCenterWidgets": [
+    {
+      "id": "user",
+      "enabled": true,
+      "w": 5,
+      "h": 1
+    },
+    {
+      "id": "settings",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "small": true
+    },
+    {
+      "id": "lock",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "small": true
+    },
+    {
+      "id": "power",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "small": true
+    },
     {
       "id": "volumeSlider",
       "enabled": true,
@@ -202,6 +235,13 @@
       "showMountPath": true,
       "w": 4,
       "h": 1
+    },
+    {
+      "id": "runningApps",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "footer": true
     }
   ],
   "workspaceNameIcons": {
@@ -532,7 +572,8 @@
       "scrollEnabled": true,
       "widgetPadding": 8,
       "shadowIntensity": 0,
-      "followInterfaceStyle": false
+      "followInterfaceStyle": false,
+      "widgetFollowInterfaceStyle": true
     },
     {
       "id": "bar1768214186318",
@@ -644,7 +685,8 @@
       "shadowColorMode": "text",
       "shadowCustomColor": "#000000",
       "widgetPadding": 8,
-      "followInterfaceStyle": false
+      "followInterfaceStyle": false,
+      "widgetFollowInterfaceStyle": true
     }
   ],
   "desktopWidgetInstances": [
@@ -972,5 +1014,5 @@
     }
   },
   "frameEnabled": true,
-  "configVersion": 29
+  "configVersion": 36
 }

@@ -19,7 +19,7 @@ in
     modrinth-app
     prismlauncher
     protonplus
-    limo
+    # limo
     gale
     olympus
     inputs.prefixer.packages.${system}.default
