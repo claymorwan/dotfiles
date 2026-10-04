@@ -57,6 +57,7 @@ in
   };
   
   environment.systemPackages = with pkgs; [
+    gnome-firmware
     droidcam
     ffmpeg-full
     uwsm

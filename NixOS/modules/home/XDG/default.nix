@@ -8,6 +8,10 @@
     autostart = {
       enable = true;
       readOnly = true;
+
+      entries = [
+        "${pkgs.gpu-screen-recorder-ui}/share/applications/gpu-screen-recorder.desktop"
+      ];
     };
     
     configFile."xdg-desktop-portal-termfilechooser/config" = {

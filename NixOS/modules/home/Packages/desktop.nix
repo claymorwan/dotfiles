@@ -69,6 +69,7 @@ in
     shiru
     shijima-qt-bin
     nicotine-plus
+    gpu-screen-recorder-ui
     gpu-screen-recorder-gtk
     handbrake
     # inputs.kopuz.packages.${system}.default
