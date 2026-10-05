@@ -26,7 +26,8 @@
       "firefox_tampermonkey_net-browser-action",
       "enhancerforyoutube_maximerf_addons_mozilla_org-browser-action",
       "firefox-extension_steamdb_info-browser-action",
-      "_9a3104a2-02c2-464c-b069-82344e5ed4ec_-browser-action"
+      "_9a3104a2-02c2-464c-b069-82344e5ed4ec_-browser-action",
+      "_60493d8c-aec8-448e-a247-5d2cfa047d69_-browser-action"
     ],
     "nav-bar": [
       "back-button",
@@ -47,7 +48,10 @@
       "menubar-items"
     ],
     "TabsToolbar": [
-      "tabbrowser-tabs"
+      "tabbrowser-tabs",
+      "zen-media-controls-toolbar",
+      "smartwindow-group-tabs-button",
+      "ai-window-toggle"
     ],
     "vertical-tabs": [],
     "PersonalToolbar": [
@@ -62,7 +66,7 @@
       "jid0-adyhmvsp91nuo8prv0mn2vkeb84_jetpack-browser-action"
     ],
     "zen-sidebar-foot-buttons": [
-      "downloads-button",
+      "zen-library-button",
       "zen-workspaces-button",
       "zen-create-new-button"
     ]
@@ -99,7 +103,10 @@
     "enhancerforyoutube_maximerf_addons_mozilla_org-browser-action",
     "firefox-extension_steamdb_info-browser-action",
     "_9a3104a2-02c2-464c-b069-82344e5ed4ec_-browser-action",
-    "moz-addon-prod_7tv_app-browser-action"
+    "moz-addon-prod_7tv_app-browser-action",
+    "_60493d8c-aec8-448e-a247-5d2cfa047d69_-browser-action",
+    "smartwindow-group-tabs-button",
+    "ai-window-toggle"
   ],
   "dirtyAreaCache": [
     "nav-bar",
@@ -111,6 +118,6 @@
     "toolbar-menubar",
     "TabsToolbar"
   ],
-  "currentVersion": 24,
-  "newElementCount": 6
+  "currentVersion": 26,
+  "newElementCount": 8
 }

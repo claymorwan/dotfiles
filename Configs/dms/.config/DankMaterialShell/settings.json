@@ -369,6 +369,9 @@
     },
     "calendar": {
       "weekends": true
+    },
+    "wallpaper": {
+      "layout": "carousel"
     }
   },
   "networkPreference": "wifi",
