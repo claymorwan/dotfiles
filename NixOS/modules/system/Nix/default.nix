@@ -25,15 +25,6 @@ in
         "https://nurpkgs-claymorwan.cachix.org"
       ];
       
-      # trusted-substituters = [
-      #   "https://nix-community.cachix.org"
-      #   # "https://cache.garnix.io"
-      #   "https://nixpkgs-python.cachix.org"
-      #   "https://kopuz.cachix.org"
-      #   "https://omikuji.cachix.org"
-      #   # "https://omikuji-claymorwan-test.cachix.org"
-      # ];
-
       extra-trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         # "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
@@ -87,5 +78,6 @@ in
     inputs.nix-output-monitor.packages.${system}.default
     inputs.nix-options-doc.packages.${system}.default
     expect
+    nix-update
   ];
 }
