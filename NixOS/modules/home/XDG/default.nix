@@ -10,7 +10,7 @@
       readOnly = true;
 
       entries = [
-        (lib.mkfIf (host == "nixos") "${pkgs.gpu-screen-recorder-ui}/share/applications/gpu-screen-recorder.desktop")
+        (lib.mkIf (host == "nixos") "${pkgs.gpu-screen-recorder-ui}/share/applications/gpu-screen-recorder.desktop")
       ];
     };
     
