@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, host, ... }:
 
 {
   imports = [
@@ -10,7 +10,7 @@
       readOnly = true;
 
       entries = [
-        "${pkgs.gpu-screen-recorder-ui}/share/applications/gpu-screen-recorder.desktop"
+        (lib.mkfIf (host == "nixos") "${pkgs.gpu-screen-recorder-ui}/share/applications/gpu-screen-recorder.desktop")
       ];
     };
     

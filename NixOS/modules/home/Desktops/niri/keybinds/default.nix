@@ -14,6 +14,7 @@ in
     ./default-binds.nix
     # ./noctalia.nix
   ];
+  
   programs.niri.settings = {
     binds = {
       # Applications
