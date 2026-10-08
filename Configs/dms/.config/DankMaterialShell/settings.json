@@ -31,7 +31,7 @@
           "all"
         ],
         "syncPositionAcrossScreens": true,
-        "format": "short",
+        "format": "long",
         "colorMode": "default",
         "customColor": "#ffffff"
       }
@@ -73,7 +73,7 @@
         "syncPositionAcrossScreens": true,
         "showMediaPlayer": true,
         "showWeather": true,
-        "background": false
+        "background": true
       }
     },
     {
@@ -85,7 +85,7 @@
           "all"
         ],
         "syncPositionAcrossScreens": true,
-        "shape": "round"
+        "shape": "softBurst"
       }
     }
   ],
@@ -121,7 +121,7 @@
           "all"
         ],
         "syncPositionAcrossScreens": true,
-        "format": "short",
+        "format": "long",
         "colorMode": "default",
         "customColor": "#ffffff"
       }
@@ -151,7 +151,7 @@
         "syncPositionAcrossScreens": true,
         "showMediaPlayer": true,
         "showWeather": true,
-        "background": false
+        "background": true
       }
     },
     {
@@ -163,7 +163,7 @@
           "all"
         ],
         "syncPositionAcrossScreens": true,
-        "shape": "round"
+        "shape": "softBurst"
       }
     },
     {
