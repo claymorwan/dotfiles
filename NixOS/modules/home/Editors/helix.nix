@@ -41,6 +41,9 @@
 
       # C/C++
       clang-tools
+
+      # Zig
+      zls
     ];
 
     settings = {
