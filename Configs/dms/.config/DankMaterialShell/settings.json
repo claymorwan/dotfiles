@@ -871,7 +871,7 @@
       "popupGapsManual": 4,
       "maximizeDetection": false,
       "scrollEnabled": true,
-      "scrollXBehavior": "column",
+      "scrollXBehavior": "focusWindow",
       "scrollYBehavior": "workspace",
       "shadowIntensity": 0,
       "shadowOpacity": 60,
@@ -1207,5 +1207,5 @@
     }
   },
   "frameEnabled": true,
-  "configVersion": 38
+  "configVersion": 40
 }
