@@ -70,6 +70,8 @@ in
       defaultCompatTool = inputs.proton-cachyos.packages.${pkgs.stdenv.hostPlatform.system}.default;
     
       apps = {
+
+        "3689210" = winGameOptions "HYPERFIST";
        
         # "4162040" = recursiveUpdate (winGameOptions "Zenless Zone Zero") {
         #   compatTool = inputs.dw-proton.packages.${pkgs.stdenv.hostPlatform.system}.dw-proton;
