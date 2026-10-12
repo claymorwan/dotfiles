@@ -118,7 +118,7 @@
         imageZoom.enable = true;
         # imgToGif.enable = true;
         keyboardSounds = {
-          enable = true;
+          # enable = true;
           soundPack = "osu";
         };
         messageColors.enable = true;

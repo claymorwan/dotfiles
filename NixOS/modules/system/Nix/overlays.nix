@@ -50,6 +50,7 @@ in
       git-fish = mkLocalPkg "git-fish";
 
       mouse-cursor = (mkLocalPkg "cursors").override { cursorName = config.globVars.mouseCursor.name; };
+
       neuwaita = mkLocalPkg "neuwaita";
       catppuccin-kde = mkLocalPkg "catppuccin-kde";
 

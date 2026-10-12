@@ -48,6 +48,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Apps
     catppuccin.url = "github:catppuccin/nix";
     
@@ -243,6 +248,7 @@
       nixpkgs,
       home-manager,
       nur,
+      agenix,
       ...
     }:
     let
@@ -264,6 +270,8 @@
             ./hosts/${host}
             ./variables
             nur.modules.nixos.default
+            agenix.nixosModules.default
+            ./secrets
           ];
         };
     in

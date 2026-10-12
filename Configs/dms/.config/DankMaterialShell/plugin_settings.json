@@ -421,7 +421,7 @@
     "enabled": true
   },
   "protonVPN": {
-    "enabled": false
+    "enabled": true
   },
   "batteryOSD": {
     "enabled": true,
