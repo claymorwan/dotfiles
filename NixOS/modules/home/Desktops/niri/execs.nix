@@ -1,11 +1,11 @@
-{ lib, config, osConfig, ... }:
+{ lib, host, ... }:
 
 {
   programs.niri.settings = {
     spawn-at-startup = [
-      { sh =  "sleep 3; ${config.globVars.discord} --start-minimized"; }
+      # { sh =  "sleep 3; ${config.globVars.discord} --start-minimized"; }
       # { argv = [ "nsticky" ]; }
-      { argv = [ "steam" "-silent" ]; }
+      (lib.mkIf (host == "nixos") { argv = [ "steam" "-silent" ]; })
       # ( lib.mkIf config.programs.noctalia-shell.enable { argv = [ "wallpaperengine-gui" "--minimized" ]; })
     ];
   };

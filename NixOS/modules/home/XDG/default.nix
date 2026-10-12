@@ -1,4 +1,11 @@
-{ lib, pkgs, host, ... }:
+{
+  lib,
+  pkgs,
+  config,
+  osConfig,
+  host,
+  ...
+}:
 
 {
   imports = [
@@ -10,12 +17,15 @@
       readOnly = true;
 
       entries = [
-        (lib.mkIf (host == "nixos") "${pkgs.gpu-screen-recorder-ui}/share/applications/gpu-screen-recorder.desktop")
+        "${config.programs.nixcord.finalPackage.discord}/share/applications/discord-${lib.findFirst (x: builtins.isString x) "" config.programs.nixcord.discord.branches}.desktop"
+      ]
+      ++ lib.optionals (host == "nixos") [
+        "${pkgs.gpu-screen-recorder-ui}/share/applications/gpu-screen-recorder.desktop"
       ];
     };
     
     configFile."xdg-desktop-portal-termfilechooser/config" = {
-      # enable = false;
+      enable = false;
       text = ''
         [filechooser]
         cmd=${pkgs.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh
