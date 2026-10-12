@@ -499,6 +499,11 @@
       "pattern": "org.godotengine.Editor",
       "replacement": "godot",
       "type": "exact"
+    },
+    {
+      "pattern": "",
+      "replacement": "",
+      "type": "exact"
     }
   ],
   "spotlightSectionViewModes": {

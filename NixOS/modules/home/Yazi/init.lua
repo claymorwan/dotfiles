@@ -1,6 +1,9 @@
 -- Border
 require("full-border"):setup()
 
+-- Starship
+require("starship"):setup()
+
 --Git
 require("git"):setup()
 
@@ -33,9 +36,6 @@ end, 3300, Status.LEFT)
 -- 	-- (Optional) save password automatically after mounting. Default: false
 -- 	save_password_autoconfirm = true,
 -- })
-
--- Starship
-require("starship"):setup()
 
 -- Yamb
 local bookmarks = {}
