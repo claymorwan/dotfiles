@@ -27,7 +27,7 @@ in
     ctp_accent = mkStrVar "mauve";
     font_family = mkStrVar "JetBrainsMono Nerd Font";
     mouseCursor = {
-      name = mkStrVar "pink";
+      name = mkStrVar "roxy";
       size = lib.mkOption {
         type = lib.types.int;
         default = 24;
