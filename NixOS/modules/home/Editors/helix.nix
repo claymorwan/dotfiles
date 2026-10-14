@@ -87,6 +87,7 @@
       language-server = {
         nil.config.autoEvalInputs = true;
         lemminx.command = "lemminx";
+        rust-analyzer.config.check.command = "clippy";
       };
     };
   };
