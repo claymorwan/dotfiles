@@ -422,7 +422,9 @@
       "enabled": true,
       "w": 4,
       "h": 1,
-      "footer": true
+      "small": true,
+      "col": 0,
+      "row": 8
     },
     {
       "id": "edit",
@@ -430,8 +432,8 @@
       "w": 1,
       "h": 1,
       "small": true,
-      "footer": true,
-      "footerEnd": true
+      "col": 7,
+      "row": 8
     }
   ],
   "workspaceNameIcons": {
@@ -1267,6 +1269,6 @@
     }
   },
   "frameEnabled": true,
-  "configVersion": 40,
-  "controlCenterFooterPosition": "bottom"
+  "configVersion": 42,
+  "notificationDndWhileScreenSharing": false
 }
