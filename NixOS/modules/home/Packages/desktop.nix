@@ -64,7 +64,7 @@ in
     qbittorrent
     fragments
     audacity
-    # winboat
+    winboat
     gradia
     shiru
     shijima-qt-bin

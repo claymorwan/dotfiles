@@ -1713,11 +1713,11 @@
         "rust-overlay": "rust-overlay_4"
       },
       "locked": {
-        "lastModified": 1791384258,
-        "narHash": "sha256-v9g1ySmbFqHooSSnjMBKQraw7kp9zDcqbfrenHu8FRU=",
+        "lastModified": 1792102462,
+        "narHash": "sha256-IDXFFK886PJgYRgM0Ao94fTkppy8I5ZqP4BmXPTukzc=",
         "owner": "omikuji-launcher",
         "repo": "omikuji",
-        "rev": "e0df6c8ff1c0e840eb23c18beaac5eb69be93f1b",
+        "rev": "d7ce40ce829c01a54d0e7dffe92843d51dfead93",
         "type": "github"
       },
       "original": {
