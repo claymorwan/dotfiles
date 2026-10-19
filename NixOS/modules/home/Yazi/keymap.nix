@@ -1,3 +1,5 @@
+# { lib, ... }:
+
 {
   mgr = {
     keymap = [
@@ -8,14 +10,7 @@
       }
 
       # chmod
-      {
-        on = [
-          "c"
-          "m"
-        ];
-        run = "plugin chmod";
-        desc = "Chmod on selected files";
-      }
+      { on = [ "c" "m" ]; run = "plugin chmod"; desc = "Chmod on selected files"; }
 
       {
         on = "<Esc>";
@@ -42,114 +37,34 @@
         run = "close";
         desc = "Close the current tab, or quit if it's last";
       }
-      {
-        on = "<C-z>";
-        run = "suspend";
-        desc = "Suspend the process";
-      }
-      {
-        on = "k";
-        run = "arrow -1";
-        desc = "Move cursor up";
-      }
-      {
-        on = "j";
-        run = "arrow 1";
-        desc = "Move cursor down";
-      }
-      {
-        on = "<Up>";
-        run = "arrow -1";
-        desc = "Move cursor up";
-      }
-      {
-        on = "<Down>";
-        run = "arrow 1";
-        desc = "Move cursor down";
-      }
-      {
-        on = "<C-u>";
-        run = "arrow -50%";
-        desc = "Move cursor up half page";
-      }
-      {
-        on = "<C-d>";
-        run = "arrow 50%";
-        desc = "Move cursor down half page";
-      }
-      {
-        on = "<C-b>";
-        run = "arrow -100%";
-        desc = "Move cursor up one page";
-      }
-      {
-        on = "<C-f>";
-        run = "arrow 100%";
-        desc = "Move cursor down one page";
-      }
-      {
-        on = "<S-PageUp>";
-        run = "arrow -50%";
-        desc = "Move cursor up half page";
-      }
-      {
-        on = "<S-PageDown>";
-        run = "arrow 50%";
-        desc = "Move cursor down half page";
-      }
-      {
-        on = "<PageUp>";
-        run = "arrow -100%";
-        desc = "Move cursor up one page";
-      }
-      {
-        on = "<PageDown>";
-        run = "arrow 100%";
-        desc = "Move cursor down one page";
-      }
-      {
-        on = [
-          "g"
-          "g"
-        ];
-        run = "arrow top";
-        desc = "Move cursor to the top";
-      }
-      {
-        on = "G";
-        run = "arrow bot";
-        desc = "Move cursor to the bottom";
-      }
-      {
-        on = "h";
-        run = "leave";
-        desc = "Go back to the parent directory";
-      }
-      {
-        on = "l";
-        run = "enter";
-        desc = "Enter the child directory";
-      }
-      {
-        on = "<Left>";
-        run = "leave";
-        desc = "Go back to the parent directory";
-      }
-      {
-        on = "<Right>";
-        run = "enter";
-        desc = "Enter the child directory";
-      }
-      {
-        on = "H";
-        run = "back";
-        desc = "Go back to the previous directory";
-      }
-      {
-        on = "L";
-        run = "forward";
-        desc = "Go forward to the next directory";
-      }
+      { on = "<C-z>"; run = "suspend"; desc = "Suspend the process"; }
+
+      { on = "k"; run = "arrow -1"; desc = "Move cursor up"; }
+      { on = "j"; run = "arrow 1"; desc = "Move cursor down"; }
+
+      { on = "<Up>"; run = "arrow -1"; desc = "Move cursor up"; }
+      { on = "<Down>"; run = "arrow 1"; desc = "Move cursor down"; }
+
+      { on = "<C-u>"; run = "arrow -50%"; desc = "Move cursor up half page"; }
+      { on = "<C-d>"; run = "arrow 50%"; desc = "Move cursor down half page"; }
+      { on = "<C-b>"; run = "arrow -100%"; desc = "Move cursor up one page"; }
+      { on = "<C-f>"; run = "arrow 100%"; desc = "Move cursor down one page"; }
+      { on = "<S-PageUp>"; run = "arrow -50%"; desc = "Move cursor up half page"; }
+      { on = "<S-PageDown>"; run = "arrow 50%"; desc = "Move cursor down half page"; }
+      { on = "<PageUp>"; run = "arrow -100%"; desc = "Move cursor up one page"; }
+      { on = "<PageDown>"; run = "arrow 100%"; desc = "Move cursor down one page"; }
+
+      { on = [ "g" "g" ]; run = "arrow top"; desc = "Move cursor to the top"; }
+      { on = "G"; run = "arrow bot"; desc = "Move cursor to the bottom"; }
+
+      { on = "h"; run = "leave"; desc = "Go back to the parent directory"; }
+      { on = "l"; run = "enter"; desc = "Enter the child directory"; }
+      { on = "<Left>"; run = "leave"; desc = "Go back to the parent directory"; }
+      { on = "<Right>"; run = "enter"; desc = "Enter the child directory"; }
+
+      { on = "H"; run = "back"; desc = "Go back to the previous directory"; }
+      { on = "L"; run = "forward"; desc = "Go forward to the next directory"; }
+
       {
         on = "<Space>";
         run = [
@@ -168,266 +83,75 @@
         run = "toggle_all";
         desc = "Invert selection of all files";
       }
+
+      { on = "v"; run = "visual_mode"; desc = "Enter visual mode (selection mode)"; }
+      { on = "V"; run = "visual_mode --unset"; desc = "Enter visual mode (unset mode)"; }
+
+      { on = "K"; run = "seek -5"; desc = "Seek up 5 units in the preview"; }
+      { on = "J"; run = "seek 5";  desc = "Seek down 5 units in the preview"; }
+
+      { on = "<Tab>"; run = "spot"; desc = "Spot hovered file"; }
+
+      { on = "o"; run = "open"; desc = "Open selected files"; }
+      { on = "O"; run = "open --interactive"; desc = "Open selected files interactively"; }
+      { on = "<Enter>"; run = "open"; desc = "Open selected files"; }
+      { on = "<S-Enter>"; run = "open --interactive"; desc = "Open selected files interactively"; }
+
+      { on = "y"; run = "yank"; desc = "Yank selected files (copy)"; }
+      { on = "x"; run = "yank --cut"; desc = "Yank selected files (cut)"; }
+      { on = "p"; run = "paste"; desc = "Paste yanked files"; }
+      { on = "P"; run = "paste --force"; desc = "Paste yanked files (overwrite if the destination exists)"; }
+
+      # Link
+      { on = "-"; run = "link"; desc = "Symlink the absolute path of yanked files"; }
+      { on = "_"; run = "link --relative"; desc = "Symlink the relative path of yanked files"; }
+      { on = "<C-->"; run = "hardlink"; desc = "Hardlink yanked files"; }
+
+      # Unyank
+      { on = "Y"; run = "unyank"; desc = "Cancel the yank status"; }
+      { on = "X"; run = "unyank"; desc = "Cancel the yank status"; }
+
+      # Remove / Delete
+      { on = "d"; run = "remove"; desc = "Trash selected files"; }
+      { on = "D"; run = "remove --permanently"; desc = "Permanently delete selected files"; }
+
+      { on = "a"; run = "create"; desc = "Create a file (ends with / for directories)"; }
+      { on = "r"; run = "rename --cursor=before_ext"; desc = "Rename selected file(s)"; }
+
+      { on = "."; run = "hidden toggle"; desc = "Toggle the visibility of hidden files"; }
+
+      # Search
+      { on = "s"; run = "search --via=fd"; desc = "Search files by name via fd"; }
+      { on = "S"; run = "search --via=rg"; desc = "Search files by content via ripgrep"; }
+      { on = "<C-s>"; run = "escape --search"; desc = "Cancel the ongoing search"; }
+
+      { on = "z"; run = "plugin zoxide"; desc = "Jump to a directory via zoxide"; }
+      { on = "Z"; run = "plugin fzf"; desc = "Jump to a file/directory via fzf"; }
+
+      # Linemode
+      { on = [ "m" "s" ]; run = "linemode size"; desc = "Linemode: size"; }
+      { on = [ "m" "p" ]; run = "linemode permissions"; desc = "Linemode: permissions"; }
+      { on = [ "m" "b" ]; run = "linemode btime"; desc = "Linemode: btime"; }
+      { on = [ "m" "m" ]; run = "linemode mtime"; desc = "Linemode: mtime"; }
+      { on = [ "m" "o" ]; run = "linemode owner"; desc = "Linemode: owner"; }
+      { on = [ "m" "n" ]; run = "linemode none"; desc = "Linemode: none"; }
+      { on = [ "c" "c" ]; run = "copy path"; desc = "Copy the file path"; }
+      { on = [ "c" "d" ]; run = "copy dirpath"; desc = "Copy the directory path"; }
+      { on = [ "c" "f" ]; run = "copy filename"; desc = "Copy the filename"; }
+      { on = [ "c" "n" ]; run = "copy name_without_ext"; desc = "Copy the filename without extension"; }
+
+      # Filter
+      { on = "f"; run = "filter --smart"; desc = "Filter files"; }
+
+      # Find
+      { on = "/"; run = "find --smart"; desc = "Find next file"; }
+      { on = "?"; run = "find --previous --smart"; desc = "Find previous file"; }
+      { on = "n"; run = "find_arrow"; desc = "Goto the next found"; }
+      { on = "N"; run = "find_arrow --previous"; desc = "Goto the previous found"; }
+
+      # Sort
       {
-        on = "v";
-        run = "visual_mode";
-        desc = "Enter visual mode (selection mode)";
-      }
-      {
-        on = "V";
-        run = "visual_mode --unset";
-        desc = "Enter visual mode (unset mode)";
-      }
-      {
-        on = "K";
-        run = "seek -5";
-        desc = "Seek up 5 units in the preview";
-      }
-      {
-        on = "J";
-        run = "seek 5";
-        desc = "Seek down 5 units in the preview";
-      }
-      {
-        on = "<Tab>";
-        run = "spot";
-        desc = "Spot hovered file";
-      }
-      {
-        on = "o";
-        run = "open";
-        desc = "Open selected files";
-      }
-      {
-        on = "O";
-        run = "open --interactive";
-        desc = "Open selected files interactively";
-      }
-      {
-        on = "<Enter>";
-        run = "open";
-        desc = "Open selected files";
-      }
-      {
-        on = "<S-Enter>";
-        run = "open --interactive";
-        desc = "Open selected files interactively";
-      }
-      {
-        on = "y";
-        run = "yank";
-        desc = "Yank selected files (copy)";
-      }
-      {
-        on = "x";
-        run = "yank --cut";
-        desc = "Yank selected files (cut)";
-      }
-      {
-        on = "p";
-        run = "paste";
-        desc = "Paste yanked files";
-      }
-      {
-        on = "P";
-        run = "paste --force";
-        desc = "Paste yanked files (overwrite if the destination exists)";
-      }
-      {
-        on = "-";
-        run = "link";
-        desc = "Symlink the absolute path of yanked files";
-      }
-      {
-        on = "_";
-        run = "link --relative";
-        desc = "Symlink the relative path of yanked files";
-      }
-      {
-        on = "<C-->";
-        run = "hardlink";
-        desc = "Hardlink yanked files";
-      }
-      {
-        on = "Y";
-        run = "unyank";
-        desc = "Cancel the yank status";
-      }
-      {
-        on = "X";
-        run = "unyank";
-        desc = "Cancel the yank status";
-      }
-      {
-        on = "d";
-        run = "remove";
-        desc = "Trash selected files";
-      }
-      {
-        on = "D";
-        run = "remove --permanently";
-        desc = "Permanently delete selected files";
-      }
-      {
-        on = "a";
-        run = "create";
-        desc = "Create a file (ends with / for directories)";
-      }
-      {
-        on = "r";
-        run = "rename --cursor=before_ext";
-        desc = "Rename selected file(s)";
-      }
-      {
-        on = ";";
-        run = "shell --interactive";
-        desc = "Run a shell command";
-      }
-      {
-        on = ":";
-        run = "shell --block --interactive";
-        desc = "Run a shell command (block until finishes)";
-      }
-      {
-        on = ".";
-        run = "hidden toggle";
-        desc = "Toggle the visibility of hidden files";
-      }
-      {
-        on = "s";
-        run = "search --via=fd";
-        desc = "Search files by name via fd";
-      }
-      {
-        on = "S";
-        run = "search --via=rg";
-        desc = "Search files by content via ripgrep";
-      }
-      {
-        on = "<C-s>";
-        run = "escape --search";
-        desc = "Cancel the ongoing search";
-      }
-      {
-        on = "z";
-        run = "plugin zoxide";
-        desc = "Jump to a directory via zoxide";
-      }
-      {
-        on = "Z";
-        run = "plugin fzf";
-        desc = "Jump to a file/directory via fzf";
-      }
-      {
-        on = [
-          "m"
-          "s"
-        ];
-        run = "linemode size";
-        desc = "Linemode: size";
-      }
-      {
-        on = [
-          "m"
-          "p"
-        ];
-        run = "linemode permissions";
-        desc = "Linemode: permissions";
-      }
-      {
-        on = [
-          "m"
-          "b"
-        ];
-        run = "linemode btime";
-        desc = "Linemode: btime";
-      }
-      {
-        on = [
-          "m"
-          "m"
-        ];
-        run = "linemode mtime";
-        desc = "Linemode: mtime";
-      }
-      {
-        on = [
-          "m"
-          "o"
-        ];
-        run = "linemode owner";
-        desc = "Linemode: owner";
-      }
-      {
-        on = [
-          "m"
-          "n"
-        ];
-        run = "linemode none";
-        desc = "Linemode: none";
-      }
-      {
-        on = [
-          "c"
-          "c"
-        ];
-        run = "copy path";
-        desc = "Copy the file path";
-      }
-      {
-        on = [
-          "c"
-          "d"
-        ];
-        run = "copy dirpath";
-        desc = "Copy the directory path";
-      }
-      {
-        on = [
-          "c"
-          "f"
-        ];
-        run = "copy filename";
-        desc = "Copy the filename";
-      }
-      {
-        on = [
-          "c"
-          "n"
-        ];
-        run = "copy name_without_ext";
-        desc = "Copy the filename without extension";
-      }
-      {
-        on = "f";
-        run = "filter --smart";
-        desc = "Filter files";
-      }
-      {
-        on = "/";
-        run = "find --smart";
-        desc = "Find next file";
-      }
-      {
-        on = "?";
-        run = "find --previous --smart";
-        desc = "Find previous file";
-      }
-      {
-        on = "n";
-        run = "find_arrow";
-        desc = "Goto the next found";
-      }
-      {
-        on = "N";
-        run = "find_arrow --previous";
-        desc = "Goto the previous found";
-      }
-      {
-        on = [
-          ","
-          "m"
-        ];
+        on = [ "," "m" ];
         run = [
           "sort mtime --reverse=no"
           "linemode mtime"
@@ -435,10 +159,7 @@
         desc = "Sort by modified time";
       }
       {
-        on = [
-          ","
-          "M"
-        ];
+        on = [ "," "M" ];
         run = [
           "sort mtime --reverse"
           "linemode mtime"
@@ -446,10 +167,7 @@
         desc = "Sort by modified time (reverse)";
       }
       {
-        on = [
-          ","
-          "b"
-        ];
+        on = [ "," "b" ];
         run = [
           "sort btime --reverse=no"
           "linemode btime"
@@ -457,10 +175,7 @@
         desc = "Sort by birth time";
       }
       {
-        on = [
-          ","
-          "B"
-        ];
+        on = [ "," "B" ];
         run = [
           "sort btime --reverse"
           "linemode btime"
@@ -468,58 +183,37 @@
         desc = "Sort by birth time (reverse)";
       }
       {
-        on = [
-          ","
-          "e"
-        ];
+        on = [ "," "e" ];
         run = "sort extension --reverse=no";
         desc = "Sort by extension";
       }
       {
-        on = [
-          ","
-          "E"
-        ];
+        on = [ "," "E" ];
         run = "sort extension --reverse";
         desc = "Sort by extension (reverse)";
       }
       {
-        on = [
-          ","
-          "a"
-        ];
+        on = [ "," "a" ];
         run = "sort alphabetical --reverse=no";
         desc = "Sort alphabetically";
       }
       {
-        on = [
-          ","
-          "A"
-        ];
+        on = [ "," "A" ];
         run = "sort alphabetical --reverse";
         desc = "Sort alphabetically (reverse)";
       }
       {
-        on = [
-          ","
-          "n"
-        ];
+        on = [ "," "n" ];
         run = "sort natural --reverse=no";
         desc = "Sort naturally";
       }
       {
-        on = [
-          ","
-          "N"
-        ];
+        on = [ "," "N" ];
         run = "sort natural --reverse";
         desc = "Sort naturally (reverse)";
       }
       {
-        on = [
-          ","
-          "s"
-        ];
+        on = [ "," "s" ];
         run = [
           "sort size --reverse=no"
           "linemode size"
@@ -527,10 +221,7 @@
         desc = "Sort by size";
       }
       {
-        on = [
-          ","
-          "S"
-        ];
+        on = [ "," "S" ];
         run = [
           "sort size --reverse"
           "linemode size"
@@ -538,10 +229,7 @@
         desc = "Sort by size (reverse)";
       }
       {
-        on = [
-          ","
-          "r"
-        ];
+        on = [ "," "r" ];
         run = "sort random --reverse=no";
         desc = "Sort randomly";
       }
@@ -554,59 +242,30 @@
       { on = [ "g" "m" ]; run = "cd ~/Music"; desc = "Goto ~/Music"; }
       { on = [ "g" "p" ]; run = "cd ~/Pictures"; desc = "Goto ~/Pictures"; }
       { on = [ "g" "v" ]; run = "cd ~/Videos"; desc = "Goto ~/Videos "; }
-      { on = [ "g" "D" ]; run = "cd ~/Documents/"; desc = "Goto ~/Documents "; }
+      { on = [ "g" "D" ]; run = "cd ~/Documents"; desc = "Goto ~/Documents "; }
       { on = [ "g" "<Space>" ]; run = "cd --interactive"; desc = "Jump interactively"; }
 
-      {
-        on = "t";
-        run = "tab_create --current";
-        desc = "Create a new tab with CWD";
-      }
-      {
-        on = "1";
-        run = "tab_switch 0";
-        desc = "Switch to the first tab";
-      }
-      {
-        on = "2";
-        run = "tab_switch 1";
-        desc = "Switch to the second tab";
-      }
-      {
-        on = "3";
-        run = "tab_switch 2";
-        desc = "Switch to the third tab";
-      }
-      {
-        on = "4";
-        run = "tab_switch 3";
-        desc = "Switch to the fourth tab";
-      }
-      {
-        on = "5";
-        run = "tab_switch 4";
-        desc = "Switch to the fifth tab";
-      }
-      {
-        on = "6";
-        run = "tab_switch 5";
-        desc = "Switch to the sixth tab";
-      }
-      {
-        on = "7";
-        run = "tab_switch 6";
-        desc = "Switch to the seventh tab";
-      }
-      {
-        on = "8";
-        run = "tab_switch 7";
-        desc = "Switch to the eighth tab";
-      }
-      {
-        on = "9";
-        run = "tab_switch 8";
-        desc = "Switch to the ninth tab";
-      }
+      { on = [ "u" "g" "a" ]; run = "cd /mnt/media/Art"; desc = "Art"; }
+      { on = [ "u" "g" "m" ]; run = "cd /mnt/media"; desc = "mnt"; }
+      { on = [ "u" "g" "p" ]; run = "cd /mnt/media/Programmation"; desc = "Programmation"; }
+      { on = [ "u" "g" "o" ]; run = "cd /mnt/media/Obsidian"; desc = "Obsidian"; }
+      { on = [ "u" "g" "g" ]; run = "cd /mnt/media/Games"; desc = "Games"; }
+      { on = [ "u" "g" "f" ]; run = "cd /home/claymorwan/.dotfiles/NixOS"; desc = "Flake"; }
+      { on = [ "u" "g" "P" ]; run = "cd /home/claymorwan/.dotfiles"; desc = "dotfiles"; }
+
+      # Tabs
+      { on = "t"; run = "tab_create --current"; desc = "Create a new tab with CWD"; }
+      # (map (num: { on = builtins.toString num; run = "tab_switch ${builtins.toString (num - 1)}"; desc = "Switch to the first tab"; }) (lib.range 1 9))
+      { on = "1"; run = "tab_switch 0"; desc = "Switch to the first tab"; }
+      { on = "2"; run = "tab_switch 1"; desc = "Switch to the second tab"; }
+      { on = "3"; run = "tab_switch 2"; desc = "Switch to the third tab"; }
+      { on = "4"; run = "tab_switch 3"; desc = "Switch to the fourth tab"; }
+      { on = "5"; run = "tab_switch 4"; desc = "Switch to the fifth tab"; }
+      { on = "6"; run = "tab_switch 5"; desc = "Switch to the sixth tab"; }
+      { on = "7"; run = "tab_switch 6"; desc = "Switch to the seventh tab"; }
+      { on = "8"; run = "tab_switch 7"; desc = "Switch to the eighth tab"; }
+      { on = "9"; run = "tab_switch 8"; desc = "Switch to the ninth tab"; }
+
       {
         on = "[";
         run = "tab_switch -1 --relative";
@@ -703,72 +362,6 @@
         ];
         run = "plugin compress -phl";
         desc = "Archive selected files (password+header+level)";
-      }
-
-      # Yamb
-      {
-        on = [
-          "u"
-          "a"
-        ];
-        run = "plugin yamb save";
-        desc = "Add bookmark";
-      }
-      {
-        on = [
-          "u"
-          "g"
-        ];
-        run = "plugin yamb jump_by_key";
-        desc = "Jump bookmark by key";
-      }
-      {
-        on = [
-          "u"
-          "G"
-        ];
-        run = "plugin yamb jump_by_fzf";
-        desc = "Jump bookmark by fzf";
-      }
-      {
-        on = [
-          "u"
-          "d"
-        ];
-        run = "plugin yamb delete_by_key";
-        desc = "Delete bookmark by key";
-      }
-      {
-        on = [
-          "u"
-          "D"
-        ];
-        run = "plugin yamb delete_by_fzf";
-        desc = "Delete bookmark by fzf";
-      }
-      {
-        on = [
-          "u"
-          "A"
-        ];
-        run = "plugin yamb delete_all";
-        desc = "Delete all bookmarks";
-      }
-      {
-        on = [
-          "u"
-          "r"
-        ];
-        run = "plugin yamb rename_by_key";
-        desc = "Rename bookmark by key";
-      }
-      {
-        on = [
-          "u"
-          "R"
-        ];
-        run = "plugin yamb rename_by_fzf";
-        desc = "Rename bookmark by fzf";
       }
 
       # Clipboard
