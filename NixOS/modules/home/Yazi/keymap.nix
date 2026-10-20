@@ -1,4 +1,4 @@
-# { lib, ... }:
+{ lib }:
 
 {
   mgr = {
@@ -255,16 +255,15 @@
 
       # Tabs
       { on = "t"; run = "tab_create --current"; desc = "Create a new tab with CWD"; }
-      # (map (num: { on = builtins.toString num; run = "tab_switch ${builtins.toString (num - 1)}"; desc = "Switch to the first tab"; }) (lib.range 1 9))
-      { on = "1"; run = "tab_switch 0"; desc = "Switch to the first tab"; }
-      { on = "2"; run = "tab_switch 1"; desc = "Switch to the second tab"; }
-      { on = "3"; run = "tab_switch 2"; desc = "Switch to the third tab"; }
-      { on = "4"; run = "tab_switch 3"; desc = "Switch to the fourth tab"; }
-      { on = "5"; run = "tab_switch 4"; desc = "Switch to the fifth tab"; }
-      { on = "6"; run = "tab_switch 5"; desc = "Switch to the sixth tab"; }
-      { on = "7"; run = "tab_switch 6"; desc = "Switch to the seventh tab"; }
-      { on = "8"; run = "tab_switch 7"; desc = "Switch to the eighth tab"; }
-      { on = "9"; run = "tab_switch 8"; desc = "Switch to the ninth tab"; }
+      # { on = "1"; run = "tab_switch 0"; desc = "Switch to the first tab"; }
+      # { on = "2"; run = "tab_switch 1"; desc = "Switch to the second tab"; }
+      # { on = "3"; run = "tab_switch 2"; desc = "Switch to the third tab"; }
+      # { on = "4"; run = "tab_switch 3"; desc = "Switch to the fourth tab"; }
+      # { on = "5"; run = "tab_switch 4"; desc = "Switch to the fifth tab"; }
+      # { on = "6"; run = "tab_switch 5"; desc = "Switch to the sixth tab"; }
+      # { on = "7"; run = "tab_switch 6"; desc = "Switch to the seventh tab"; }
+      # { on = "8"; run = "tab_switch 7"; desc = "Switch to the eighth tab"; }
+      # { on = "9"; run = "tab_switch 8"; desc = "Switch to the ninth tab"; }
 
       {
         on = "[";
@@ -1103,6 +1102,8 @@
         run = "filter";
         desc = "Apply a filter for the help items";
       }
-    ];
+    ]
+    ++ (map (num: { on = builtins.toString num; run = "tab_switch ${builtins.toString (num - 1)}"; desc = "Switch to the first tab"; }) (lib.range 1 9))
+    ;
   };
 }
