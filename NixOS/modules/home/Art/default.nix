@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   programs = {
@@ -37,6 +37,5 @@
     blender
     kdePackages.kdenlive
     # davinci-resolve
-    # openshot-qt
   ];
 }

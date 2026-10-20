@@ -253,6 +253,13 @@
       { on = [ "u" "g" "f" ]; run = "cd /home/claymorwan/.dotfiles/NixOS"; desc = "Flake"; }
       { on = [ "u" "g" "P" ]; run = "cd /home/claymorwan/.dotfiles"; desc = "dotfiles"; }
 
+      # Tasks
+      { on = "w"; run = "tasks:show"; desc = "Show task manager"; }
+
+      # Help
+      { on = "~"; run = "help"; desc = "Open help"; }
+      { on = "<F1>"; run = "help"; desc = "Open help"; }
+
       # Tabs
       { on = "t"; run = "tab_create --current"; desc = "Create a new tab with CWD"; }
       # { on = "1"; run = "tab_switch 0"; desc = "Switch to the first tab"; }
@@ -264,68 +271,21 @@
       # { on = "7"; run = "tab_switch 6"; desc = "Switch to the seventh tab"; }
       # { on = "8"; run = "tab_switch 7"; desc = "Switch to the eighth tab"; }
       # { on = "9"; run = "tab_switch 8"; desc = "Switch to the ninth tab"; }
+      { on = "["; run = "tab_switch -1 --relative"; desc = "Switch to the previous tab"; }
+      { on = "]"; run = "tab_switch 1 --relative";  desc = "Switch to the next tab"; }
+      { on = "{"; run = "tab_swap -1"; desc = "Swap current tab with previous tab"; }
+      { on = "}"; run = "tab_swap 1"; desc = "Swap current tab with next tab"; }
+    ]
+    ++ map (num: { on = toString num; run = "tab_switch ${toString (num - 1)}"; desc = "Switch to tab n°${toString num}"; }) (lib.range 1 9)
+    ;
 
-      {
-        on = "[";
-        run = "tab_switch -1 --relative";
-        desc = "Switch to the previous tab";
-      }
-      {
-        on = "]";
-        run = "tab_switch 1 --relative";
-        desc = "Switch to the next tab";
-      }
-      {
-        on = "{";
-        run = "tab_swap -1";
-        desc = "Swap current tab with previous tab";
-      }
-      {
-        on = "}";
-        run = "tab_swap 1";
-        desc = "Swap current tab with next tab";
-      }
-      {
-        on = "w";
-        run = "tasks:show";
-        desc = "Show task manager";
-      }
-      {
-        on = "~";
-        run = "help";
-        desc = "Open help";
-      }
-      {
-        on = "<F1>";
-        run = "help";
-        desc = "Open help";
-      }
-    ];
     prepend_keymap = [
-      {
-        on = [
-          "g"
-          "i"
-        ];
-        run = "plugin lazygit";
-        desc = "run lazygit";
-      }
-      {
-        on = "l";
-        run = "plugin smart-enter";
-        desc = "Enter the child directory, or open the file";
-      }
+      { on = [ "g" "i" ]; run = "plugin lazygit"; desc = "run lazygit"; }
+
+      { on = "l"; run = "plugin smart-enter"; desc = "Enter the child directory, or open the file"; }
 
       # Compress
-      {
-        on = [
-          "c"
-          "a"
-          "a"
-        ];
-        run = "plugin compress";
-        desc = "Archive selected files";
-      }
+      { on = [ "c" "a" "a" ]; run = "plugin compress"; desc = "Archive selected files"; }
       {
         on = [
           "c"
@@ -1103,7 +1063,7 @@
         desc = "Apply a filter for the help items";
       }
     ]
-    ++ (map (num: { on = builtins.toString num; run = "tab_switch ${builtins.toString (num - 1)}"; desc = "Switch to the first tab"; }) (lib.range 1 9))
+    # ++ (map (num: { on = builtins.toString num; run = "tab_switch ${builtins.toString (num - 1)}"; desc = "Switch to the first tab"; }) (lib.range 1 9))
     ;
   };
 }

@@ -169,7 +169,7 @@
       url = "github:ChrisDKN/Amethyst-Mod-Manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  
+
     # Desktop stuffs (WM and shells)  
     niri = {
       url = "github:epireyn/niri-flake";

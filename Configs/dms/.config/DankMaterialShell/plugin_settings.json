@@ -18,7 +18,7 @@
   "emojiLauncher": {
     "enabled": true,
     "trigger": ";",
-    "recentEmojis": "😭,⤴,↑,🗣️,🔥,⛈️,🌱,🐟,🥀,💥,👀,🐚,✂️,🚨,🤤,🇫🇷,⤪,🧅,❤️‍🩹"
+    "recentEmojis": "🥀,😭,⤴,↑,🗣️,🔥,⛈️,🌱,🐟,💥,👀,🐚,✂️,🚨,🤤,🇫🇷,⤪,🧅,❤️‍🩹"
   },
   "linuxWallpaperEngine": {
     "enabled": false,
@@ -175,7 +175,7 @@
   },
   "dankKDEConnect": {
     "enabled": true,
-    "selectedDeviceId": "5fac024e4a5944f38d1b8d74cb9e8c20",
+    "selectedDeviceId": "",
     "scanSubdirectories": false
   },
   "dankGifSearch": {
