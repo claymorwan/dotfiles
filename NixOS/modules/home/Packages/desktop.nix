@@ -47,6 +47,7 @@ in
 
     # GUI
     # citrix-workspace
+    rustdesk-flutter
     remmina
     veracrypt
     packet
