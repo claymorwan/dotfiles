@@ -56,6 +56,7 @@
 
     targets = {
       # kde.enable = true;
+      # dank-material-shell.enable = true;
       qt.enable = true;
       xresources.enable = true;
       blender.enable = true;

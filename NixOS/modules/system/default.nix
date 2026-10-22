@@ -15,6 +15,7 @@
     ./Greeters
     ./networking.nix
     ./Options
+    # ./rustdesk.nix
     ./security.nix
     ./services.nix
     ./steam.nix

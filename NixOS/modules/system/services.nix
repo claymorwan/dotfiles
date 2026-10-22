@@ -1,4 +1,4 @@
-{ inputs, pkgs, self, ... }:
+{ inputs, ... }:
 
 {
   imports = [
@@ -18,14 +18,8 @@
       jack.enable = true;
     };
 
-    libinput = {
-      enable = true;
-    };
-
-    power-profiles-daemon = {
-      enable = true;
-    };
-    
+    libinput.enable = true;
+    power-profiles-daemon.enable = true;
     omnisearch.enable = true;
     # desktopManager.plasma6.enable = true;
     # vertd.enable = true;

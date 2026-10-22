@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   claymorwan-plugin = pkgs.fetchFromGitea {
@@ -10,6 +10,11 @@ let
   };
 in
 {
+  imports = [
+    ./yazi.nix
+    ./keymap.nix
+  ];
+  
   programs.yazi = {
     enable = true;
 
@@ -17,8 +22,6 @@ in
     enableBashIntegration = true;
     enableFishIntegration = true;
     shellWrapperName = "y";
-    settings = import ./yazi.nix;
-    keymap = import ./keymap.nix { inherit lib; };
     initLua = ./init.lua;
 
     extraPackages = with pkgs; [
