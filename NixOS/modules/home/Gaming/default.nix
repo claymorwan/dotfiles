@@ -5,7 +5,7 @@ let
 in
 {
   imports = [
-    ./lutris.nix
+    # ./lutris.nix
     ./mangohud.nix
     ./omikuji.nix
     ./steam.nix

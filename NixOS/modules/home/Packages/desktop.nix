@@ -56,7 +56,7 @@ in
     gnome-font-viewer
     gnome-disk-utility
     kooha
-    bottles
+    # bottles
     obsidian
     qalculate-gtk
     proton-vpn
@@ -64,7 +64,7 @@ in
     polychromatic
     qbittorrent
     fragments
-    audacity
+    # audacity
     winboat
     gradia
     shiru
@@ -72,7 +72,7 @@ in
     nicotine-plus
     gpu-screen-recorder-ui
     gpu-screen-recorder-gtk
-    handbrake
+    # handbrake
     # inputs.kopuz.packages.${system}.default
     kopuz
     # nur.repos.forkprince.fluxer-canary-bin

@@ -14,6 +14,7 @@ in
 {
   programs.nushell = {
     enable = true;
+    loadSessionVariables = true;
 
     shellAliases = shellAliases // {
       gcdf = "git commit -v -m $\"(^date +\"%F %T\")\"";
@@ -25,8 +26,8 @@ in
         display_output = "table --expand --icons";
       };
     };
-
-    environmentVariables = osConfig.environment.variables // config.home.sessionVariables;
+    
+    # environmentVariables = osConfig.environment.variables // config.home.sessionVariables;
 
     extraConfig = ''
       source ${inputs.nu-scripts}/aliases/git/git-aliases.nu
