@@ -90,7 +90,7 @@
     };
     
     nixcord = {
-      url = "github:4evy/nixcord"; # /7cad323caed30b3555d56aec096e2b3dadddbbd4";
+      url = "github:4evy/nixcord/5e720f01d326ffd0ca157a3d2456a5d2b490db3d";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
