@@ -4,6 +4,7 @@
   imports = [
     # ./Floorp
     # ./helium.nix
+    # ./Waterfox
     ./Zen
   ];
 

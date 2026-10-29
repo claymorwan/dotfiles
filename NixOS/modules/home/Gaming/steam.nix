@@ -226,6 +226,8 @@ in
         "765410" = gameOptions "Bean Battles";
 
         "774171" = winGameOptions "Muse Dash";
+
+        "5265160" = winGameOptions "Project Exhibitionist Demo";
       };
     };
   };

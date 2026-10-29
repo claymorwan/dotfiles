@@ -19,8 +19,8 @@
       vencord.enable = false;
       equicord.enable = true;
       branches = [
-        "development"
         "canary"
+        "development"
       ];
 
       commandLineArgs = [

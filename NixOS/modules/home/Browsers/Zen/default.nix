@@ -235,7 +235,7 @@ in
 
             control-panel-for-twitter
             control-panel-for-youtube
-            seventv
+            # seventv
             enhancer-for-youtube
             youtube-no-translation
             ambient-light-for-youtube
