@@ -121,8 +121,14 @@ in
 
         search = {
           force = true;
-          default = "omnisearch";
+          default = "startpage";
           engines = {
+            startpage = {
+              name = "Startpage";
+              definedAliases = [ "@st" ];
+              urls = [{ template = "https://www.startpage.com/sp/search?q={searchTerms}"; }];
+            };
+
             omnisearch = lib.mkIf osConfig.services.omnisearch.enable {
               name = "OmniSearch";
               icon = "${inputs.omnisearch}/static/favicon.ico";

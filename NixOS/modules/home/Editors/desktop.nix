@@ -21,6 +21,6 @@
     boxbuddy
     unityhub
     gitte
-    inputs.nurpkgs.packages.${pkgs.stdenv.hostPlatform.system}.utmt-cli
+    # inputs.nurpkgs.packages.${pkgs.stdenv.hostPlatform.system}.utmt-cli
   ];
 }

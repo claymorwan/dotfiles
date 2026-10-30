@@ -27,12 +27,12 @@
     niri = {
       package = osConfig.programs.niri.package;
       settings = {
-        includes = with config.lib.niri.include; [
-          (optional "tests.kdl")
+        includes = [
+          "tests.kdl"
 
           # DMS
-          (optional "dms/outputs.kdl")
-          (optional "dms/rules.kdl")
+          "dms/outputs.kdl"
+          "dms/rules.kdl"
         ];
         
         prefer-no-csd = true;
