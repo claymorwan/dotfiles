@@ -128,7 +128,6 @@ in
         # mediaDownloader.enable = true;
         screenCaptureToolbar.enable = true;
         materialPlayer.enable = true;
-        protonVPN.enable = true;
         # nothingClock.enable = true;
         batteryOSD.enable = lib.mkIf (host == "nixos-laptop") true;
         # typingSounds.enable = true;

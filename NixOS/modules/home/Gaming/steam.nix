@@ -227,7 +227,7 @@ in
 
         "774171" = winGameOptions "Muse Dash";
 
-        "5265160" = winGameOptions "Project Exhibitionist Demo";
+        "2178380" = winGameOptions "SCP Containment Breach";
       };
     };
   };

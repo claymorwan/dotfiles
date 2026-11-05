@@ -52,6 +52,7 @@ in
       "electron-39.8.10"
       "nodejs-20.20.2"
       "electron-40.10.5"
+      "electron-42.11.18"
     ];
   };
 

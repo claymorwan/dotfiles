@@ -217,6 +217,7 @@
       "showOnLastDisplay": true,
       "position": 1,
       "mode": "compact",
+      "middleClickAction": "close",
       "taskbarAlign": "center",
       "widgetExpansion": "popout",
       "iconSize": 40,
@@ -780,14 +781,6 @@
         {
           "id": "separator",
           "enabled": true
-        },
-        {
-          "id": "githubHeatmapRevive",
-          "enabled": true
-        },
-        {
-          "id": "mediaDownloader",
-          "enabled": true
         }
       ],
       "centerWidgets": [
@@ -815,15 +808,7 @@
       ],
       "rightWidgets": [
         {
-          "id": "musicLyrics",
-          "enabled": true
-        },
-        {
           "id": "discordVoice",
-          "enabled": true
-        },
-        {
-          "id": "protonVPN",
           "enabled": true
         },
         {
@@ -901,24 +886,12 @@
           "enabled": true
         },
         {
-          "id": "timer",
-          "enabled": true
-        },
-        {
           "id": "dankKDEConnect",
-          "enabled": true
-        },
-        {
-          "id": "liveChartSchedule",
           "enabled": true
         },
         {
           "id": "dropdownMenu:variant_1781529300789",
           "enabled": true
-        },
-        {
-          "id": "clipboardPlus",
-          "enabled": false
         },
         {
           "id": "developerUtilities",
