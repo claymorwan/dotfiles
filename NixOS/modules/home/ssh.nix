@@ -23,6 +23,11 @@
         identityFile = "~/.ssh/tangled";
         user = "git";
       };
+  
+      "iparla" = {
+        identityFile = "~/.ssh/iut";
+        SetEnv.TERM = "xterm-256color";
+      };
     };
   };
 }
