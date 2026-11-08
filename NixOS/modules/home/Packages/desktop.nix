@@ -5,8 +5,8 @@ let
 in
 {
   imports = [
-    inputs.nurpkgs.homeModules.shimelinux
-    # inputs.nur.repos.claymorwan.homeModules.shimelinux
+    # inputs.nurpkgs.homeModules.shimelinux
+    inputs.nur.repos.claymorwan.homeModules.shimelinux
     ./flatpak.nix
   ];
   
@@ -72,7 +72,7 @@ in
     nicotine-plus
     gpu-screen-recorder-ui
     gpu-screen-recorder-gtk
-    # handbrake
+    handbrake
     # inputs.kopuz.packages.${system}.default
     kopuz
     # nur.repos.forkprince.fluxer-canary-bin

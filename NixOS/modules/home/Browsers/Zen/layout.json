@@ -42,7 +42,8 @@
       "ublock0_raymondhill_net-browser-action",
       "_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action",
       "78272b6fa58f4a1abaac99321d503a20_proton_me-browser-action",
-      "reset-pbm-toolbar-button"
+      "reset-pbm-toolbar-button",
+      "firefox_bramble_app-browser-action"
     ],
     "toolbar-menubar": [
       "menubar-items"
@@ -51,7 +52,8 @@
       "tabbrowser-tabs",
       "zen-media-controls-toolbar",
       "smartwindow-group-tabs-button",
-      "ai-window-toggle"
+      "ai-window-toggle",
+      "customizableui-special-spring9"
     ],
     "vertical-tabs": [],
     "PersonalToolbar": [
@@ -106,7 +108,8 @@
     "moz-addon-prod_7tv_app-browser-action",
     "_60493d8c-aec8-448e-a247-5d2cfa047d69_-browser-action",
     "smartwindow-group-tabs-button",
-    "ai-window-toggle"
+    "ai-window-toggle",
+    "firefox_bramble_app-browser-action"
   ],
   "dirtyAreaCache": [
     "nav-bar",
@@ -118,6 +121,6 @@
     "toolbar-menubar",
     "TabsToolbar"
   ],
-  "currentVersion": 26,
-  "newElementCount": 8
+  "currentVersion": 28,
+  "newElementCount": 9
 }

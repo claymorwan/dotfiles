@@ -15,11 +15,10 @@ in
     inputs.amethyst.packages.${system}.default
     # nur.repos.rogreat.amethyst-mod-manager
     # nur.repos.forkprince.twintaillauncher
-    inputs.nurpkgs.packages.${system}.twintaillauncher
-    # modrinth-app
+    # inputs.nurpkgs.packages.${system}.twintaillauncher
+    nur.repos.claymorwan.twintaillauncher
     prismlauncher
     protonplus
-    # limo
     gale
     olympus
     inputs.prefixer.packages.${system}.default
@@ -29,16 +28,4 @@ in
       nativeWayland = true;
     })
   ];
-
-  xdg = {
-    dataFile = {
-      "twintaillauncher/compatibility/runners/dw-proton".source = inputs.proton-cachyos.packages.${pkgs.stdenv.hostPlatform.system}.default.steamcompattool;
-      "sm64coopdx/mods/character-select-coop" = {
-        source = pkgs.fetchzip {
-          url = "https://github.com/Squishy6094/character-select-coop/releases/download/v1.16.3/character-select-coop.zip";
-          hash = "sha256-zM6gy/+MolJcHn/SxfUyvchUtL4wn0xLolTvIZhUZ+8=";
-        };
-      };
-    };
-  };
 }

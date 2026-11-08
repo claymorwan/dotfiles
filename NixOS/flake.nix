@@ -16,10 +16,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    nurpkgs = {
-      url = "github:claymorwan/nurpkgs";
-      # url = "/mnt/media/Programmation/Nix/nurpkgs";
-    };
+    # nurpkgs = {
+    #   url = "github:claymorwan/nurpkgs";
+    #   # url = "/mnt/media/Programmation/Nix/nurpkgs";
+    # };
     
     nixos-avf = {
       url = "github:nix-community/nixos-avf";

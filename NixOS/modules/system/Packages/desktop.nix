@@ -10,8 +10,8 @@ let
 in 
 {
   imports = [
-    inputs.nurpkgs.nixosModules.pvpn
-    # inputs.nur.repos.claymorwan.nixosModules.pvpn
+    # inputs.nurpkgs.nixosModules.pvpn
+    inputs.nur.repos.claymorwan.nixosModules.pvpn
     ./flatpak.nix
   ];
 
