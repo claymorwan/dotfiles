@@ -29,7 +29,11 @@
         SetEnv.TERM = "xterm-256color";
       };
 
-      "185.174.255.56".SetEnv.TERM = "xterm-256color";
+      "ssh.deadf.org" = {
+        identityFile = "~/.ssh/id_ed25519";
+        user = "root";
+        SetEnv.TERM = "xterm-256color";
+      };
     };
   };
 }

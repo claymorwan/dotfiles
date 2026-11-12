@@ -71,6 +71,8 @@ in
     
       apps = {
 
+        "1500880" = winGameOptions "Random Racing";
+
         "3689210" = winGameOptions "HYPERFIST";
        
         # "4162040" = recursiveUpdate (winGameOptions "Zenless Zone Zero") {
