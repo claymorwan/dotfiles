@@ -379,13 +379,6 @@
             "widgetId": "developerUtilities"
           },
           {
-            "type": "popout",
-            "icon": "",
-            "label": "",
-            "display": "both",
-            "widgetId": "clipboardPlus"
-          },
-          {
             "type": "plugin",
             "icon": "",
             "label": "",
