@@ -1,6 +1,10 @@
-{ pkgs, config, ... }:
+{ inputs, pkgs, config, ... }:
 
 {
+  imports = [
+    inputs.bootvine.nixosModules.default
+  ];
+  
   # Use the GRUB 2 boot loader.
   boot = {
     loader = {
@@ -43,9 +47,11 @@
       options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
     '';
 
-    plymouth.enable = true;
+    # plymouth.enable = true;
     # kernelParams = [ "quiet" ];
   };
+
+  services.bootvine.enable = true;
 
   # console = {
   #   packages = with pkgs; [

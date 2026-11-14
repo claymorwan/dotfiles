@@ -170,6 +170,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    bootvine = {
+      url = "git+https://codeberg.org/wvhulle/bootvine";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Desktop stuffs (WM and shells)  
     niri = {
       url = "github:epireyn/niri-flake";
