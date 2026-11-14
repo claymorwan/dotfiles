@@ -60,7 +60,7 @@ in
     obsidian
     qalculate-gtk
     proton-vpn
-    intiface-central
+    # intiface-central
     polychromatic
     qbittorrent
     fragments
@@ -74,7 +74,7 @@ in
     gpu-screen-recorder-gtk
     handbrake
     # inputs.kopuz.packages.${system}.default
-    kopuz
+    # kopuz
     # nur.repos.forkprince.fluxer-canary-bin
     pwvucontrol
 

@@ -208,10 +208,10 @@ in
         matches = [{ namespace = "^dms-clipboardPlus-panel"; }];
         inherit background-effect;
       }
-      {
-        matches = [{ namespace = "^dms:(notification-.*)"; }];
-        block-out-from = "screen-capture";
-      }
+      # {
+      #   matches = [{ namespace = "^dms:(notification-.*)"; }];
+      #   block-out-from = "screen-capture";
+      # }
       # {
       #   matches = [{ namespace = "dms:(modal|spotlight|polkit|keybinds|notification-center-modal|workspace-overview|color-picker|clipboard|process-list-modal)"; }];
       #   baba-is-float = true;

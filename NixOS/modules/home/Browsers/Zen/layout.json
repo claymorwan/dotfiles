@@ -43,7 +43,8 @@
       "_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action",
       "78272b6fa58f4a1abaac99321d503a20_proton_me-browser-action",
       "reset-pbm-toolbar-button",
-      "firefox_bramble_app-browser-action"
+      "firefox_bramble_app-browser-action",
+      "_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action"
     ],
     "toolbar-menubar": [
       "menubar-items"
@@ -109,7 +110,8 @@
     "_60493d8c-aec8-448e-a247-5d2cfa047d69_-browser-action",
     "smartwindow-group-tabs-button",
     "ai-window-toggle",
-    "firefox_bramble_app-browser-action"
+    "firefox_bramble_app-browser-action",
+    "_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action"
   ],
   "dirtyAreaCache": [
     "nav-bar",

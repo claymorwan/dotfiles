@@ -77,7 +77,7 @@ in
     update-nix-fetchgit
     nixpkgs-review
     inputs.nix-output-monitor.packages.${system}.default
-    inputs.nix-options-doc.packages.${system}.default
+    # inputs.nix-options-doc.packages.${system}.default
     expect
     nix-update
   ];

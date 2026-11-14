@@ -232,6 +232,7 @@ in
           packages = with pkgs.nur.repos.rycee.firefox-addons; [
             stylus
             ublock-origin
+            bitwarden
             proton-pass
             darkreader
             indie-wiki-buddy
@@ -241,7 +242,7 @@ in
 
             control-panel-for-twitter
             control-panel-for-youtube
-            seventv
+            # seventv
             enhancer-for-youtube
             youtube-no-translation
             ambient-light-for-youtube

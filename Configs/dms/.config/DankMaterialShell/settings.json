@@ -775,8 +775,8 @@
         {
           "id": "focusedWindow",
           "enabled": true,
-          "focusedWindowCompactMode": false,
-          "focusedWindowShowIcon": false
+          "focusedWindowShowIcon": false,
+          "focusedWindowShowAppName": true
         },
         {
           "id": "separator",
@@ -1297,6 +1297,6 @@
     }
   },
   "frameEnabled": true,
-  "configVersion": 42,
+  "configVersion": 43,
   "notificationDndWhileScreenSharing": false
 }
