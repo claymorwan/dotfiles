@@ -231,6 +231,7 @@
       "smartAutoHide": true,
       "useOverlayLayer": false,
       "editOnRightClick": false,
+      "showEditWidgetsInContextMenu": true,
       "showOnFullscreen": false,
       "openOnOverview": true,
       "groupByApp": true,
@@ -1297,6 +1298,6 @@
     }
   },
   "frameEnabled": true,
-  "configVersion": 43,
+  "configVersion": 44,
   "notificationDndWhileScreenSharing": false
 }

@@ -7,12 +7,7 @@ in
   programs = {
     steam = {
       enable = true;
-      # package = pkgs.millennium-steam;
-      package = pkgs.millennium-steam.override {
-        extraPkgs = (_prev: ( with pkgs; [
-          ghostty
-        ]));
-      };
+      # package = pkgs.steamWithMillennium;
 
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;

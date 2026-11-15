@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, config, ... }:
 
 {
   imports = [
@@ -17,6 +17,13 @@
       pulse.enable = true;
       jack.enable = true;
     };
+
+    # cloudflared = {
+    #   enable = true;
+    #   tunnels = {
+    #     };
+    #   };
+    # };
 
     libinput.enable = true;
     power-profiles-daemon.enable = true;
