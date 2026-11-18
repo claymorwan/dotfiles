@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -7,6 +7,7 @@
 
   programs.dank-calendar = {
     enable = true;
+    # package = pkgs.dux-calendar;
     systemd.enable = true;
   };
 }

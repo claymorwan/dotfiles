@@ -236,6 +236,7 @@
       "openOnOverview": true,
       "groupByApp": true,
       "separatePinnedAndRunningApps": false,
+      "showRunningApps": true,
       "restoreSpecialWorkspaceOnClick": false,
       "isolateDisplays": false,
       "indicatorStyle": "line",

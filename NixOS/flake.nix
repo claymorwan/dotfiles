@@ -90,7 +90,7 @@
     };
     
     nixcord = {
-      url = "github:4evy/nixcord"; #/5e720f01d326ffd0ca157a3d2456a5d2b490db3d";
+      url = "github:4evy/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
@@ -187,48 +187,37 @@
      inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    # noctalia = {
-    #   url = "github:noctalia-dev/noctalia-shell";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    
-    # caelestia = {
-    #   url = "github:caelestia-dots/shell";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    
-    # caffyne = {
-    #   url = "github:caffyne-org/caffyne-shell";
-    #   # inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    
-    dgop = {
-      url = "github:AvengeMedia/dgop";
+    dux-qt-base = {
+      url = "github:duxlabs-dev/dux-qt-base";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
     dms = {
-      url = "github:AvengeMedia/DankMaterialShell";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:duxlabs-dev/dux-shell";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        dux-qt-base.follows = "dux-qt-base";
+      };
     };
     
     dank-greeter = {
-      url = "github:AvengeMedia/dank-greeter";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
-    dsearch = {
-      url = "github:AvengeMedia/danksearch";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:duxlabs-dev/dux-greeter";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        dux-qt-base.follows = "dux-qt-base";
+      };
     };
     
     dcal = {
       url = "github:AvengeMedia/dankcalendar";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        dux-qt-base.follows = "dux-qt-base";
+      };
     };
     
     dms-plugin-registry = {
-      url = "github:AvengeMedia/dms-plugin-registry";
+      url = "github:duxlabs-dev/dux-plugin-registry";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
@@ -258,7 +247,6 @@
     }:
     let
       username = "claymorwan";
-      # system = "x86_64-linux";
 
       mkNixosConfig =
         host:
@@ -268,7 +256,6 @@
             inherit username;
             inherit host;
             inherit self;
-            # inherit system;
           };
 
           modules = [
