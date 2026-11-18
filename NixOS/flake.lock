@@ -429,11 +429,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794929816,
-        "narHash": "sha256-cL9OYjsgHTAC796j0y7faZqOp4X0TtAwM+/Mh9Uniho=",
+        "lastModified": 1795014866,
+        "narHash": "sha256-zhpTCSUgRti+Y1iQEvHX/8WqGxCbjCQugI+sVkUdaTY=",
         "owner": "duxlabs-dev",
         "repo": "dux-plugin-registry",
-        "rev": "b05315332da378b6b69f4b254b13588200490809",
+        "rev": "cd42fd4609d3ea70924b14f8598f5d4c65a828d3",
         "type": "github"
       },
       "original": {

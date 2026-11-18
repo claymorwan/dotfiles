@@ -755,6 +755,13 @@
       "attachToScreenEdge": false,
       "gothCornersEnabled": true,
       "borderEnabled": true
+    },
+    "dot1795020098367": {
+      "shadowIntensity": 0,
+      "squareCorners": false,
+      "attachToScreenEdge": false,
+      "gothCornersEnabled": false,
+      "borderEnabled": false
     }
   },
   "barConfigs": [
@@ -969,6 +976,119 @@
       "widgetPadding": 8,
       "followInterfaceStyle": false,
       "widgetFollowInterfaceStyle": true
+    },
+    {
+      "id": "dot1795020098367",
+      "name": "Dot",
+      "enabled": false,
+      "position": 0,
+      "screenPreferences": [
+        "all"
+      ],
+      "showOnLastDisplay": true,
+      "leftWidgets": [
+        {
+          "id": "launcherButton",
+          "enabled": true,
+          "launcherLogoMode": "os",
+          "launcherLogoColorOverride": "primary"
+        },
+        {
+          "id": "focusedWindow",
+          "enabled": true,
+          "focusedWindowShowIcon": false,
+          "focusedWindowShowAppName": true
+        },
+        {
+          "id": "separator",
+          "enabled": true
+        }
+      ],
+      "centerWidgets": [
+        {
+          "id": "music",
+          "enabled": true
+        },
+        {
+          "id": "separator",
+          "enabled": true
+        },
+        {
+          "id": "clock",
+          "enabled": true,
+          "clockCompactMode": false
+        },
+        {
+          "id": "separator",
+          "enabled": true
+        },
+        {
+          "id": "nixMonitor",
+          "enabled": true
+        }
+      ],
+      "rightWidgets": [
+        {
+          "id": "discordVoice",
+          "enabled": true
+        },
+        {
+          "id": "separator",
+          "enabled": true
+        },
+        {
+          "id": "cpuUsage",
+          "enabled": true
+        },
+        {
+          "id": "memUsage",
+          "enabled": true,
+          "showSwap": true
+        },
+        {
+          "id": "separator",
+          "enabled": true
+        },
+        {
+          "id": "keyboard_layout_name",
+          "enabled": true,
+          "keyboardLayoutNameCompactMode": true
+        }
+      ],
+      "spacing": 0,
+      "innerPadding": 10,
+      "bottomGap": 0,
+      "transparency": 0.9,
+      "widgetTransparency": 0,
+      "squareCorners": false,
+      "noBackground": false,
+      "gothCornersEnabled": false,
+      "gothCornerRadiusOverride": false,
+      "gothCornerRadiusValue": 23,
+      "borderEnabled": false,
+      "borderColor": "primary",
+      "borderOpacity": 1,
+      "borderThickness": 2,
+      "fontScale": 1,
+      "autoHide": false,
+      "autoHideDelay": 250,
+      "openOnOverview": false,
+      "visible": true,
+      "popupGapsAuto": true,
+      "popupGapsManual": 4,
+      "widgetOutlineEnabled": false,
+      "widgetOutlineColor": "primary",
+      "widgetOutlineOpacity": 1,
+      "widgetOutlineThickness": 2,
+      "maximizeDetection": false,
+      "scrollYBehavior": "workspace",
+      "scrollEnabled": true,
+      "widgetPadding": 8,
+      "shadowIntensity": 0,
+      "followInterfaceStyle": false,
+      "widgetFollowInterfaceStyle": true,
+      "island": false,
+      "dot": true
     }
   ],
   "desktopWidgetInstances": [
