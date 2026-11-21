@@ -188,7 +188,6 @@
   },
   "clockFormat": "24h",
   "showSeconds": true,
-  "animationDuration": 300,
   "useAutoLocation": true,
   "fontFamily": "JetBrainsMono Nerd Font Propo",
   "monoFontFamily": "JetBrainsMono Nerd Font Mono",
@@ -1182,20 +1181,9 @@
           "hslLightness": 1,
           "valid": true
         },
-        "showCpu": true,
-        "showCpuGraph": true,
-        "showCpuTemp": true,
-        "showGpuTemp": true,
-        "gpuPciId": "",
-        "showMemory": true,
-        "showMemoryGraph": true,
-        "showNetwork": true,
-        "showNetworkGraph": true,
-        "showDisk": true,
         "showTopProcesses": true,
         "topProcessCount": 5,
         "topProcessSortBy": "cpu",
-        "layoutMode": "auto",
         "graphInterval": 60,
         "displayPreferences": [
           {
@@ -1208,7 +1196,47 @@
           }
         ],
         "showOnOverlay": false,
-        "syncPositionAcrossScreens": true
+        "syncPositionAcrossScreens": true,
+        "metrics": [
+          {
+            "device": "cpu",
+            "vals": [
+              "usage",
+              "temp"
+            ],
+            "graph": true,
+            "on": true
+          },
+          {
+            "device": "memory",
+            "vals": [
+              "used"
+            ],
+            "graph": true,
+            "on": true
+          },
+          {
+            "device": "net",
+            "vals": [
+              "down",
+              "up"
+            ],
+            "graph": true,
+            "on": true
+          },
+          {
+            "device": "disk",
+            "vals": [
+              "read",
+              "write",
+              "space"
+            ],
+            "graph": true,
+            "on": true
+          }
+        ],
+        "layout": "tiles",
+        "style": "icon"
       }
     },
     {
@@ -1347,20 +1375,9 @@
           "hslLightness": 1,
           "valid": true
         },
-        "showCpu": true,
-        "showCpuGraph": true,
-        "showCpuTemp": true,
-        "showGpuTemp": true,
-        "gpuPciId": "",
-        "showMemory": true,
-        "showMemoryGraph": true,
-        "showNetwork": true,
-        "showNetworkGraph": true,
-        "showDisk": true,
         "showTopProcesses": true,
         "topProcessCount": 5,
         "topProcessSortBy": "cpu",
-        "layoutMode": "auto",
         "graphInterval": 60,
         "displayPreferences": [
           "all"
@@ -1369,7 +1386,47 @@
         "syncPositionAcrossScreens": true,
         "showOnOverview": false,
         "showOnOverviewOnly": false,
-        "clickThrough": false
+        "clickThrough": false,
+        "metrics": [
+          {
+            "device": "cpu",
+            "vals": [
+              "usage",
+              "temp"
+            ],
+            "graph": true,
+            "on": true
+          },
+          {
+            "device": "memory",
+            "vals": [
+              "used"
+            ],
+            "graph": true,
+            "on": true
+          },
+          {
+            "device": "net",
+            "vals": [
+              "down",
+              "up"
+            ],
+            "graph": true,
+            "on": true
+          },
+          {
+            "device": "disk",
+            "vals": [
+              "read",
+              "write",
+              "space"
+            ],
+            "graph": true,
+            "on": true
+          }
+        ],
+        "layout": "tiles",
+        "style": "icon"
       },
       "group": "dwg_1769526213643_u8gd7uarl"
     },
@@ -1419,6 +1476,7 @@
     }
   },
   "frameEnabled": true,
-  "configVersion": 44,
-  "notificationDndWhileScreenSharing": false
+  "configVersion": 46,
+  "notificationDndWhileScreenSharing": false,
+  "motionDuration": 0
 }

@@ -10,9 +10,9 @@
   # DMS
   programs.dank-material-shell = {
     enable = true;
-    package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (_: {
-      vendorHash = "sha256-DinkXtyVURJ5I00B+j/otCcjm2MD9B0vessdqwd8zoU=";
-    });
+    # package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (_: {
+    #   vendorHash = "sha256-DinkXtyVURJ5I00B+j/otCcjm2MD9B0vessdqwd8zoU=";
+    # });
     
     systemd = {
       enable = true; # Systemd service for auto-start

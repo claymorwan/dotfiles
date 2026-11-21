@@ -90,12 +90,7 @@
     };
     
     nixcord = {
-      url = "github:4evy/nixcord";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
-    nixcord-rollback = {
-      url = "github:kaylorben/nixcord/0aef5bd949185a189adb79c886acee1abd64109a";
+      url = "github:4evy/nixcord"; # /af9ba18a522f33edb95b263e878752d9e7590922";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
