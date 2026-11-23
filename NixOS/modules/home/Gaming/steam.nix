@@ -73,7 +73,7 @@ in
 
         "4002270" = gameOptions "FrontWars";
 
-        "1500880" = winGameOptions "Random Racing";
+        "1500880" = winGameOptions "Sumo Cars";
 
         "3689210" = winGameOptions "HYPERFIST";
        

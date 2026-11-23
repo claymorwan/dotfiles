@@ -236,6 +236,7 @@ in
             proton-pass
             darkreader
             indie-wiki-buddy
+            mailvelope
             
             protondb-for-steam
             steam-database
