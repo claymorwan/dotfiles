@@ -74,7 +74,7 @@ in
     gpu-screen-recorder-gtk
     handbrake
     # inputs.kopuz.packages.${system}.default
-    # kopuz
+    kopuz
     # nur.repos.forkprince.fluxer-canary-bin
     pwvucontrol
 

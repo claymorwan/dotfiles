@@ -28,6 +28,7 @@
     ./spotify.nix
     ./stylix.nix
     # ./Theming
+    ./thunderbird.nix
     # ./uwsm.nix
     ./XDG
   ]);
