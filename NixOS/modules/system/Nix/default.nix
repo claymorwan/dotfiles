@@ -18,12 +18,12 @@ in
 
       extra-substituters = [
         "https://nix-community.cachix.org"
-        # "https://cache.garnix.io"
         "https://nixpkgs-python.cachix.org"
         "https://kopuz.cachix.org"
         "https://omikuji.cachix.org"
         "https://nurpkgs-claymorwan.cachix.org"
         "https://nix-cache.duxlabs.dev"
+        "https://veshell.cachix.org"
       ];
       
       extra-trusted-public-keys = [
@@ -34,6 +34,7 @@ in
         "omikuji.cachix.org-1:dS6sbpMxarHWIIk3y0R7KXz3eVHUg1lo/y3gMbv4JhM="
         "nurpkgs-claymorwan.cachix.org-1:kgQdj1q9CuJvKpz0nI1OttuqmfAQE6YmWD25PMLIwp0="
         "dux-1:lrBykuzHKu9F6WsCbK83C9/uOrfqUY1kflRZtrUcMF0="
+        "veshell.cachix.org-1:C8J71PCJ1Fx4+4shICPNsSOnGgijVEHZCTrWhbYyjOI"
       ];
 
       auto-optimise-store = true;

@@ -223,6 +223,8 @@
       flake = false;
     };
 
+    veshell.url = "github:free-explorers/veshell";
+
     # Source codes inputs    
     millennium-material-theme-src = {
       url = "github:kuska1/Material-Theme";

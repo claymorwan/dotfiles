@@ -12,6 +12,7 @@ in
   imports = [
     # inputs.nurpkgs.nixosModules.pvpn
     inputs.nur.repos.claymorwan.nixosModules.pvpn
+    inputs.veshell.nixosModules.default
     ./flatpak.nix
   ];
 
@@ -52,6 +53,7 @@ in
       users = [ username ];
     };
 
+    veshell.enable = true;
     gpu-screen-recorder.enable = true;
     # droidcam.enable = true;
   };
