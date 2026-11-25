@@ -2,7 +2,7 @@
 
 {
   imports = [
-    inputs.dank-greeter.nixosModules.default
+    inputs.dms-greeter.nixosModules.default
   ];
 
   programs.dms-greeter = {

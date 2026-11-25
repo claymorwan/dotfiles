@@ -182,48 +182,22 @@
      inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    dux-qt-base = {
-      url = "github:duxlabs-dev/dux-qt-base";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
-    dms = {
-      url = "github:duxlabs-dev/dux-shell";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        dux-qt-base.follows = "dux-qt-base";
-      };
-    };
-    
-    dank-greeter = {
-      url = "github:duxlabs-dev/dux-greeter";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        dux-qt-base.follows = "dux-qt-base";
-      };
-    };
-    
-    dcal = {
-      url = "github:AvengeMedia/dankcalendar";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        dux-qt-base.follows = "dux-qt-base";
-      };
-    };
-    
+    dms.url = "github:duxlabs-dev/dux-shell";
+    dms-greeter.url = "github:duxlabs-dev/dux-greeter";
+    dcal.url = "github:AvengeMedia/dankcalendar";
+    nix-monitor.url = "github:antonjah/nix-monitor";
+
     dms-plugin-registry = {
       url = "github:duxlabs-dev/dux-plugin-registry";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
-    nix-monitor.url = "github:antonjah/nix-monitor";
+    };    
     
     dms-common = {
       url = "github:hthienloc/dms-common";
       flake = false;
     };
 
-    veshell.url = "github:free-explorers/veshell";
+    veshell.url = "github:free-explorers/veshell/v0.2.7";
 
     # Source codes inputs    
     millennium-material-theme-src = {

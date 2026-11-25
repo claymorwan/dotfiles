@@ -557,32 +557,99 @@
       "row": 3
     },
     {
-      "id": "cpu",
+      "id": "sysmon",
       "w": 1,
       "h": 2,
       "col": 3,
-      "row": 1
+      "row": 1,
+      "instanceId": "cpu-5",
+      "config": {
+        "layout": "tiles",
+        "style": "icon",
+        "graphInterval": 300,
+        "metrics": [
+          {
+            "device": "cpu",
+            "vals": [
+              "usage",
+              "temp"
+            ],
+            "graph": true,
+            "on": true
+          }
+        ]
+      }
     },
     {
-      "id": "memory",
+      "id": "sysmon",
       "w": 1,
       "h": 2,
       "col": 4,
-      "row": 1
+      "row": 1,
+      "instanceId": "memory-6",
+      "config": {
+        "layout": "tiles",
+        "style": "icon",
+        "graphInterval": 300,
+        "metrics": [
+          {
+            "device": "memory",
+            "vals": [
+              "used"
+            ],
+            "graph": true,
+            "on": true
+          }
+        ]
+      }
     },
     {
-      "id": "disk",
+      "id": "sysmon",
       "w": 1,
       "h": 2,
       "col": 5,
-      "row": 1
+      "row": 1,
+      "instanceId": "disk-7",
+      "config": {
+        "layout": "tiles",
+        "style": "icon",
+        "graphInterval": 300,
+        "metrics": [
+          {
+            "device": "disk",
+            "vals": [
+              "space"
+            ],
+            "mount": "/",
+            "graph": true,
+            "on": true
+          }
+        ]
+      }
     },
     {
-      "id": "network",
+      "id": "sysmon",
       "w": 1,
       "h": 2,
       "col": 6,
-      "row": 1
+      "row": 1,
+      "instanceId": "network-8",
+      "config": {
+        "layout": "tiles",
+        "style": "icon",
+        "graphInterval": 300,
+        "metrics": [
+          {
+            "device": "net",
+            "vals": [
+              "down",
+              "up"
+            ],
+            "graph": true,
+            "on": true
+          }
+        ]
+      }
     },
     {
       "id": "wellbeing",
@@ -1476,7 +1543,8 @@
     }
   },
   "frameEnabled": true,
-  "configVersion": 46,
+  "configVersion": 48,
   "notificationDndWhileScreenSharing": false,
-  "motionDuration": 0
+  "motionDuration": 0,
+  "controlCenterColumns": 8
 }
