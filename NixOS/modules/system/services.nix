@@ -25,6 +25,22 @@
     #   };
     # };
 
+    qbittorrent = {
+      enable = true;
+      extraArgs = [ "--confirm-legal-notice" ];
+      serverConfig = {
+        LegalNotice.Accepted = true;
+        Preferences = {
+          WebUI = {
+            Username = "claymorwan";
+            Password_PBKDF2 = "pb8aUAYrlHmB/sI2+qoabw==:LLwmTeuMOzvomc/PuVbSRWzEOVhlYIw0spAHy+LkHsgSQv3Vpd4wOkNff3NVq81WR8KwaYyf5blsHfeYlUkTOQ==";
+          };
+
+          General.Locale = "en";
+        };
+      };
+    };
+    
     libinput.enable = true;
     power-profiles-daemon.enable = true;
     omnisearch.enable = true;

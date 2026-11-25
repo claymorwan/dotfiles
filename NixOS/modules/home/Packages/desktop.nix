@@ -77,9 +77,10 @@ in
     kopuz
     # nur.repos.forkprince.fluxer-canary-bin
     pwvucontrol
+    loupe
 
     # Kde stuff
-    kdePackages.gwenview
+    # kdePackages.gwenview
     kdePackages.ksshaskpass
   ];
 }
