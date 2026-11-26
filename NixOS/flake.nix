@@ -197,7 +197,7 @@
       flake = false;
     };
 
-    veshell.url = "github:free-explorers/veshell/v0.2.7";
+    veshell.url = "github:free-explorers/veshell/nix-build-against-system-nixpkgs";
 
     # Source codes inputs    
     millennium-material-theme-src = {

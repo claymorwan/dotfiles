@@ -2382,16 +2382,16 @@
         "nixpkgs": "nixpkgs_11"
       },
       "locked": {
-        "lastModified": 1795445712,
-        "narHash": "sha256-/YAMJqKIiLuW63KKDDhGZTU/ThBB+Vwfi0awOeznQdc=",
+        "lastModified": 1795648928,
+        "narHash": "sha256-rK1uuIAO69sHD41m3iBqJ+ca8st4LOTj4w9kHqi7MlE=",
         "owner": "free-explorers",
         "repo": "veshell",
-        "rev": "d87111d097f71ad2a98523dc72dc571d6e56beff",
+        "rev": "daad7c61c70e9f96bcb03ae8ec8f8de8b677cb0c",
         "type": "github"
       },
       "original": {
         "owner": "free-explorers",
-        "ref": "v0.2.7",
+        "ref": "nix-build-against-system-nixpkgs",
         "repo": "veshell",
         "type": "github"
       }
