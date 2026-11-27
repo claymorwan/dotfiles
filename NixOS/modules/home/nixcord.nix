@@ -101,7 +101,7 @@
         crashHandler.enable = true;
         decor.enable = true;
         experiments.enable = true;
-        expressionCloner.enable = true;
+        expressionManager.enable = true;
         fakeNitro.enable = true;
         fixSpotifyEmbeds.enable = true;
         # fontLoader = {
