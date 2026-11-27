@@ -44,6 +44,10 @@
 
       # Zig
       zls
+
+      # Webdev
+      vscode-html-languageserver
+      vscode-css-languageserver
     ];
 
     settings = {

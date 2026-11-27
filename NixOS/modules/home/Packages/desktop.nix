@@ -56,7 +56,7 @@ in
     gnome-font-viewer
     gnome-disk-utility
     kooha
-    # bottles
+    bottles
     obsidian
     qalculate-gtk
     proton-vpn

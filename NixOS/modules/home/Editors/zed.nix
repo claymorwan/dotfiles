@@ -2,7 +2,7 @@
 
 {
   programs.zed-editor = {
-    # enable = true;
+    enable = true;
 
     extensions = [
       "nix"
@@ -11,10 +11,9 @@
 
     mutableUserSettings = false;
     userSettings = {
-      base_keymap = "JetBrains";
-
       auto_install_extensions = {
         catppuccin-icons = true;
+
       };
 
       buffer_font_family = osConfig.globVars.font_family;
@@ -23,7 +22,7 @@
 
       theme = {
         dark = "Catppuccin Mocha";
-        light = "Catppuccin Mocha";
+        light = "Catppuccin Frappe";
       };
     };
   };

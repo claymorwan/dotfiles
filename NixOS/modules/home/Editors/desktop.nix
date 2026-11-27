@@ -3,7 +3,7 @@
 {
   imports = [
     ./jetbrains.nix
-    ./zed.nix
+    # ./zed.nix
   ];
 
   programs.godot = {
